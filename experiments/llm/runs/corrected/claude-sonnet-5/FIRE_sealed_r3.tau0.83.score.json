@@ -1,0 +1,1242 @@
+{
+ "meta": {
+  "input": "FIRE_sealed",
+  "repeat": 3,
+  "condition": "corrected",
+  "model_requested": "claude-sonnet-5",
+  "models_used": [
+   "claude-sonnet-5"
+  ],
+  "prompt": "corrected-contract.md",
+  "prompt_sha256": "9dd751c5ec471393b4f36868e793b438e5e7470b80cf15a9e7475503fcee759b",
+  "input_sha256": "22c6babd5f12115036e8adcae460c7a6be734c293310d4d3ba9ec4ff6106461c",
+  "user_sha256": "ad2dd66c1ed8ef9ec18d5347dcc0f03c8b951228ddbc3d221c3abe9d2459cb8c",
+  "runner_sha256": "668572f34df601b1974f920604e58152c826610fc0840a0fe0ed5b39cc377e01",
+  "ok": true,
+  "attempts": 1,
+  "failure": null,
+  "elapsed_s": 547.3,
+  "total_cost_usd": 0.716,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 15793,
+   "output_tokens": 71281,
+   "output_tokens_details": {
+    "thinking_tokens": 43635
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 71281,
+     "cache_read_input_tokens": 15793,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "cli": "claude -p (isolated, experiments/common/claude_cli.py)"
+ },
+ "tau": 0.83,
+ "parse_ok": true,
+ "matcher": "embedding",
+ "scorer_version": "3.1",
+ "slots_tolerant": {
+  "micro": {
+   "gold_coverage": 0.8689,
+   "pred_support": 0.9358,
+   "f1": 0.9011
+  },
+  "per_type": {
+   "scenarios": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 1,
+    "pred": 1
+   },
+   "episodes": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.9,
+    "f1": 0.9474,
+    "gold": 6,
+    "pred": 10
+   },
+   "performers": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 11,
+    "pred": 12
+   },
+   "actions": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.9643,
+    "f1": 0.9818,
+    "gold": 30,
+    "pred": 28
+   },
+   "items": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 5,
+    "pred": 8
+   },
+   "flows": {
+    "gold_coverage": 0.55,
+    "pred_support": 0.7143,
+    "f1": 0.6215,
+    "gold": 20,
+    "pred": 14
+   },
+   "controls": {
+    "gold_coverage": 0.875,
+    "pred_support": 1.0,
+    "f1": 0.9333,
+    "gold": 8,
+    "pred": 4
+   },
+   "situations": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 5,
+    "pred": 2
+   },
+   "state_values": {
+    "gold_coverage": 0.8,
+    "pred_support": 0.8571,
+    "f1": 0.8276,
+    "gold": 5,
+    "pred": 7
+   },
+   "events": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 6,
+    "pred": 7
+   },
+   "transitions": {
+    "gold_coverage": 0.8,
+    "pred_support": 1.0,
+    "f1": 0.8889,
+    "gold": 5,
+    "pred": 3
+   },
+   "constraints": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 7,
+    "pred": 7
+   },
+   "goals": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 2,
+    "pred": 1
+   },
+   "reasons": {
+    "gold_coverage": 0.25,
+    "pred_support": 1.0,
+    "f1": 0.4,
+    "gold": 4,
+    "pred": 1
+   },
+   "observations": {
+    "gold_coverage": 0.8571,
+    "pred_support": 1.0,
+    "f1": 0.9231,
+    "gold": 7,
+    "pred": 4
+   }
+  }
+ },
+ "slots": {
+  "micro": {
+   "tp": 89,
+   "pred": 109,
+   "gold": 122,
+   "precision": 0.8165,
+   "recall": 0.7295,
+   "f1": 0.7706
+  },
+  "per_type": {
+   "scenarios": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "episodes": {
+    "tp": 6,
+    "pred": 10,
+    "gold": 6,
+    "precision": 0.6,
+    "recall": 1.0,
+    "f1": 0.75
+   },
+   "performers": {
+    "tp": 11,
+    "pred": 12,
+    "gold": 11,
+    "precision": 0.9167,
+    "recall": 1.0,
+    "f1": 0.9565
+   },
+   "actions": {
+    "tp": 25,
+    "pred": 28,
+    "gold": 30,
+    "precision": 0.8929,
+    "recall": 0.8333,
+    "f1": 0.8621
+   },
+   "items": {
+    "tp": 5,
+    "pred": 8,
+    "gold": 5,
+    "precision": 0.625,
+    "recall": 1.0,
+    "f1": 0.7692
+   },
+   "flows": {
+    "tp": 10,
+    "pred": 14,
+    "gold": 20,
+    "precision": 0.7143,
+    "recall": 0.5,
+    "f1": 0.5882
+   },
+   "controls": {
+    "tp": 4,
+    "pred": 4,
+    "gold": 8,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "situations": {
+    "tp": 2,
+    "pred": 2,
+    "gold": 5,
+    "precision": 1.0,
+    "recall": 0.4,
+    "f1": 0.5714
+   },
+   "state_values": {
+    "tp": 3,
+    "pred": 7,
+    "gold": 5,
+    "precision": 0.4286,
+    "recall": 0.6,
+    "f1": 0.5
+   },
+   "events": {
+    "tp": 6,
+    "pred": 7,
+    "gold": 6,
+    "precision": 0.8571,
+    "recall": 1.0,
+    "f1": 0.9231
+   },
+   "transitions": {
+    "tp": 3,
+    "pred": 3,
+    "gold": 5,
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1": 0.75
+   },
+   "constraints": {
+    "tp": 7,
+    "pred": 7,
+    "gold": 7,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "goals": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 2,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "reasons": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 4,
+    "precision": 1.0,
+    "recall": 0.25,
+    "f1": 0.4
+   },
+   "observations": {
+    "tp": 4,
+    "pred": 4,
+    "gold": 7,
+    "precision": 1.0,
+    "recall": 0.5714,
+    "f1": 0.7273
+   }
+  },
+  "macro_f1": 0.7421
+ },
+ "alignment_pairs": [
+  {
+   "type": "scenarios",
+   "gold": "R_SCN",
+   "gold_label": "Wildfire spread response",
+   "pred": "SCN_FOREST_DISASTER_RESPONSE",
+   "pred_label": "Forest disaster response",
+   "score": 0.91
+  },
+  {
+   "type": "episodes",
+   "gold": "R_EP_DETECT",
+   "gold_label": "Detection and Level 1 response",
+   "pred": "EP_DETECTION_DISPATCH",
+   "pred_label": "Smoke detection and initial dispatch",
+   "score": 0.866
+  },
+  {
+   "type": "episodes",
+   "gold": "R_EP_TRACK",
+   "gold_label": "Fire line tracking",
+   "pred": "EP_PREDICTION_DECISION",
+   "pred_label": "Fire-line prediction and evacuation-prep decision",
+   "score": 0.886
+  },
+  {
+   "type": "episodes",
+   "gold": "R_EP_ESCALATE",
+   "gold_label": "Level 2 escalation and suppression",
+   "pred": "EP_ESCALATION",
+   "pred_label": "Escalation and helicopter request",
+   "score": 0.866
+  },
+  {
+   "type": "episodes",
+   "gold": "R_EP_EVAC",
+   "gold_label": "Resident evacuation",
+   "pred": "EP_EVACUATION",
+   "pred_label": "Resident evacuation",
+   "score": 1.0
+  },
+  {
+   "type": "episodes",
+   "gold": "R_EP_CONTAIN",
+   "gold_label": "Spread containment and level lowering",
+   "pred": "EP_DEESCALATION",
+   "pred_label": "De-escalation of the wildfire level",
+   "score": 0.87
+  },
+  {
+   "type": "episodes",
+   "gold": "R_EP_CLOSE",
+   "gold_label": "Residual fire cleanup and return home",
+   "pred": "EP_RECOVERY",
+   "pred_label": "Withdrawal, rekindle watch and return home",
+   "score": 0.897
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_SYSTEM",
+   "gold_label": "Forest disaster response system",
+   "pred": "P_DISASTER_SYSTEM",
+   "pred_label": "Forest disaster response system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_ROOM",
+   "gold_label": "Wildfire situation room",
+   "pred": "P_SITUATION_ROOM",
+   "pred_label": "Wildfire situation room",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_FLEET",
+   "gold_label": "Surveillance drone squadron",
+   "pred": "P_DRONE_SQUADRON",
+   "pred_label": "Surveillance drone squadron",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_A1",
+   "gold_label": "Drone A1",
+   "pred": "P_DRONE_A1",
+   "pred_label": "Drone A1",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_A2",
+   "gold_label": "Drone A2",
+   "pred": "P_DRONE_A2",
+   "pred_label": "Drone A2",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_A3",
+   "gold_label": "Drone A3",
+   "pred": "P_DRONE_A3",
+   "pred_label": "Drone A3",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_H1",
+   "gold_label": "Firefighting helicopter H-1",
+   "pred": "P_HELICOPTER_H1",
+   "pred_label": "Firefighting helicopter H-1",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_GROUND",
+   "gold_label": "Ground firefighting crew",
+   "pred": "P_GROUND_CREW",
+   "pred_label": "Ground firefighting crew",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_FIRE_HQ",
+   "gold_label": "Fire headquarters",
+   "pred": "P_FIRE_HQ",
+   "pred_label": "Fire headquarters",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_CHIEF",
+   "gold_label": "Village head",
+   "pred": "P_VILLAGE_HEAD",
+   "pred_label": "Village head",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "R_P_OFFICE",
+   "gold_label": "Town office",
+   "pred": "P_TOWN_OFFICE",
+   "pred_label": "Town office",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "R_I_COORD",
+   "gold_label": "Smoke coordinates and video",
+   "pred": "I_COORDINATES",
+   "pred_label": "Smoke location coordinates",
+   "score": 0.949
+  },
+  {
+   "type": "items",
+   "gold": "R_I_PREDICTION",
+   "gold_label": "Predicted fire line",
+   "pred": "I_FIRE_LINE_PREDICTION",
+   "pred_label": "Predicted fire line (30-min-ahead)",
+   "score": 0.928
+  },
+  {
+   "type": "items",
+   "gold": "R_I_WATER",
+   "gold_label": "Reservoir water",
+   "pred": "I_WATER",
+   "pred_label": "Water load from reservoir",
+   "score": 0.926
+  },
+  {
+   "type": "items",
+   "gold": "R_I_FILM",
+   "gold_label": "Fire intensity change footage",
+   "pred": "I_FIRE_INTENSITY_FOOTAGE",
+   "pred_label": "Fire intensity footage",
+   "score": 0.966
+  },
+  {
+   "type": "items",
+   "gold": "R_I_COUNT_REPORT",
+   "gold_label": "Evacuee count report",
+   "pred": "I_EVACUEE_COUNT",
+   "pred_label": "Evacuee count",
+   "score": 0.976
+  },
+  {
+   "type": "situations",
+   "gold": "R_SIT_STAGE1",
+   "gold_label": "Wildfire Level 1",
+   "pred": "SIT_LEVEL1",
+   "pred_label": "Wildfire Level 1 state",
+   "score": 0.969
+  },
+  {
+   "type": "situations",
+   "gold": "R_SIT_STAGE2",
+   "gold_label": "Wildfire Level 2",
+   "pred": "SIT_LEVEL2",
+   "pred_label": "Wildfire Level 2 state",
+   "score": 0.972
+  },
+  {
+   "type": "state_values",
+   "gold": "R_SV_STAGE1",
+   "gold_label": "Wildfire response level Level Level 1",
+   "pred": "SV_LEVEL1",
+   "pred_label": "wildfire_level=1",
+   "score": 0.923
+  },
+  {
+   "type": "state_values",
+   "gold": "R_SV_STAGE2",
+   "gold_label": "Wildfire response level Level Level 2",
+   "pred": "SV_LEVEL2",
+   "pred_label": "wildfire_level=2",
+   "score": 0.93
+  },
+  {
+   "type": "state_values",
+   "gold": "R_SV_EVAC",
+   "gold_label": "Residents Location Evacuated to village hall",
+   "pred": "SV_PREDICTED_DISTANCE_1",
+   "pred_label": "predicted fire-line distance to village = 1.6 km",
+   "score": 0.862
+  },
+  {
+   "type": "events",
+   "gold": "R_EVT_SMOKE",
+   "gold_label": "Detect smoke on ridge",
+   "pred": "EVT_SMOKE_DETECTED",
+   "pred_label": "Smoke on ridge detected by A1",
+   "score": 0.949
+  },
+  {
+   "type": "events",
+   "gold": "R_EVT_16KM",
+   "gold_label": "Predicted fire line 1.6 km from village",
+   "pred": "EVT_EAST_SPREAD_RAPID",
+   "pred_label": "East fire line spreads rapidly toward the village",
+   "score": 0.897
+  },
+  {
+   "type": "events",
+   "gold": "R_EVT_WIND_SHIFT",
+   "gold_label": "East fire line spreads due to shift to northwest wind",
+   "pred": "EVT_WIND_SHIFT",
+   "pred_label": "Wind direction shifts to northwest",
+   "score": 0.905
+  },
+  {
+   "type": "events",
+   "gold": "R_EVT_09KM",
+   "gold_label": "Predicted fire line approaches to 0.9 km from village boundary",
+   "pred": "EVT_FIRELINE_CLOSE_0_9KM",
+   "pred_label": "Predicted fire line within 1 km of village (0.9 km)",
+   "score": 0.969
+  },
+  {
+   "type": "events",
+   "gold": "R_EVT_SPREAD_STOP",
+   "gold_label": "East fire line spread stops",
+   "pred": "EVT_SPREAD_STOPPED",
+   "pred_label": "East fire line spread stops (at fifth drop)",
+   "score": 0.949
+  },
+  {
+   "type": "events",
+   "gold": "R_EVT_NO_EMBERS",
+   "gold_label": "No residual fire confirmed",
+   "pred": "EVT_NO_RESIDUAL_FIRE",
+   "pred_label": "No residual fire confirmed",
+   "score": 1.0
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_DETECT_SMOKE",
+   "gold_label": "Detect smoke on ridge",
+   "pred": "A_DETECT_SMOKE",
+   "pred_label": "Detect smoke on ridge during patrol",
+   "score": 0.96
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_SEND_COORD",
+   "gold_label": "Transmit coordinates and video",
+   "pred": "A_TRANSMIT_DATA",
+   "pred_label": "Transmit coordinates and video to situation room",
+   "score": 0.924
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_DISPATCH_GROUND",
+   "gold_label": "Dispatch ground firefighting crew",
+   "pred": "A_DISPATCH_GROUND_CREW",
+   "pred_label": "Dispatch ground firefighting crew",
+   "score": 0.974
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_PREDICT",
+   "gold_label": "Calculate fire line 30 min ahead",
+   "pred": "A_PREDICT_FIRE_LINE",
+   "pred_label": "Calculate the fire line 30 min ahead",
+   "score": 0.971
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_REQ_PREP",
+   "gold_label": "Request resident evacuation preparation",
+   "pred": "A_REQUEST_EVAC_PREP",
+   "pred_label": "Request town office to prepare for resident evacuation",
+   "score": 0.937
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_TRACK_EAST",
+   "gold_label": "Track east end of fire line",
+   "pred": "A_TRACK_EAST_UPDATE",
+   "pred_label": "Track east end of fire line and update position every 2 min",
+   "score": 0.912
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_TRACK_WEST",
+   "gold_label": "Track west end of fire line",
+   "pred": "A_TRACK_WEST_UPDATE",
+   "pred_label": "Track west end of fire line and update position every 2 min",
+   "score": 0.913
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_A1_RETURN",
+   "gold_label": "A1 returns to base",
+   "pred": "A_A1_RETURN_BASE",
+   "pred_label": "Return to base for battery replacement",
+   "score": 0.898
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_A1_SOUTH",
+   "gold_label": "Deploy to south valley monitoring",
+   "pred": "A_A1_DEPLOY_SOUTH_VALLEY",
+   "pred_label": "Deploy to monitor the south valley",
+   "score": 0.968
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_REQ_HELI",
+   "gold_label": "Request firefighting helicopter",
+   "pred": "A_REQUEST_HELICOPTER",
+   "pred_label": "Request firefighting helicopter H-1",
+   "score": 0.939
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_FIREBREAK",
+   "gold_label": "Build firebreak in front of east fire line",
+   "pred": "A_BUILD_FIREBREAK",
+   "pred_label": "Build firebreak in front of east fire line on village side",
+   "score": 0.971
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_SCOOP",
+   "gold_label": "Take on reservoir water",
+   "pred": "A_H1_TAKE_WATER",
+   "pred_label": "Take on water from nearby reservoir",
+   "score": 0.951
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_DROP",
+   "gold_label": "Drop water on east fire line",
+   "pred": "A_H1_DROP_WATER",
+   "pred_label": "Drop water on east fire line",
+   "score": 0.98
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_FILM",
+   "gold_label": "Film and send fire intensity change",
+   "pred": "A_A2_FILM_INTENSITY",
+   "pred_label": "Film change in fire intensity and send to situation room",
+   "score": 0.938
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_MOVE_POINT",
+   "gold_label": "Instruct drop point to move forward 50 m",
+   "pred": "A_ADJUST_DROP_POINT",
+   "pred_label": "Instruct drop point moved forward by 50 m",
+   "score": 0.962
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_REPREDICT",
+   "gold_label": "Recalculate predicted fire line",
+   "pred": "A_RECALC_PREDICTION",
+   "pred_label": "Recalculate predicted fire line",
+   "score": 0.973
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_REQ_EVAC",
+   "gold_label": "Request resident evacuation",
+   "pred": "A_REQUEST_EVACUATION",
+   "pred_label": "Request resident evacuation from town office",
+   "score": 0.934
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_EVACUATE",
+   "gold_label": "Evacuate 42 residents to village hall",
+   "pred": "A_EVACUATE_RESIDENTS",
+   "pred_label": "Evacuate 42 residents to village hall",
+   "score": 0.97
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_COUNT",
+   "gold_label": "Confirm number of evacuees",
+   "pred": "A_CONFIRM_EVACUEE_COUNT",
+   "pred_label": "Confirm the number of evacuees",
+   "score": 0.964
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_REPORT_COUNT",
+   "gold_label": "Report number of evacuees to town office",
+   "pred": "A_REPORT_EVACUEE_COUNT",
+   "pred_label": "Report evacuee count to town office",
+   "score": 0.961
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_AMBULANCE",
+   "gold_label": "Transport 3 residents with limited mobility by ambulance",
+   "pred": "A_TRANSPORT_LIMITED_MOBILITY",
+   "pred_label": "Transport residents with limited mobility separately by ambulance",
+   "score": 0.918
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_THERMAL",
+   "gold_label": "Check residual fire by thermal imaging",
+   "pred": "A_A3_CONFIRM_NO_RESIDUAL_FIRE",
+   "pred_label": "Confirm no residual fire by thermal imaging",
+   "score": 0.954
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_WITHDRAW_HELI",
+   "gold_label": "Withdraw H-1",
+   "pred": "A_WITHDRAW_H1",
+   "pred_label": "Withdraw helicopter H-1",
+   "score": 0.943
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_HANDOVER",
+   "gold_label": "Hand rekindle watch over to ground firefighting crew",
+   "pred": "A_HANDOVER_REKINDLE_WATCH",
+   "pred_label": "Hand over rekindle watch to ground firefighting crew",
+   "score": 0.95
+  },
+  {
+   "type": "actions",
+   "gold": "R_A_ALLOW_RETURN",
+   "gold_label": "Allow residents to return home",
+   "pred": "A_ALLOW_RETURN_HOME",
+   "pred_label": "Allow residents to return home",
+   "score": 0.975
+  },
+  {
+   "type": "constraints",
+   "gold": "R_CN_1KM",
+   "gold_label": "Predicted fire line 1 km from village boundary",
+   "pred": "CN_FIRELINE_1KM_THRESHOLD",
+   "pred_label": "Predicted fire line within 1 km of village boundary",
+   "score": 0.99
+  },
+  {
+   "type": "constraints",
+   "gold": "R_CN_2MIN",
+   "gold_label": "Fire line position update interval 2 min",
+   "pred": "CN_UPDATE_INTERVAL_2MIN",
+   "pred_label": "Fire line position updated every 2 min",
+   "score": 0.982
+  },
+  {
+   "type": "constraints",
+   "gold": "R_CN_20MIN",
+   "gold_label": "Helicopter arrival within 20 min after request",
+   "pred": "CN_HELICOPTER_ARRIVAL_TIME",
+   "pred_label": "Helicopter must arrive within 20 min of request",
+   "score": 0.986
+  },
+  {
+   "type": "constraints",
+   "gold": "R_CN_NO_ENTRY",
+   "gold_label": "No entry inside fire line before firebreak completion",
+   "pred": "CN_NO_ENTRY_BEFORE_FIREBREAK",
+   "pred_label": "No entry inside fire line before firebreak completed",
+   "score": 0.997
+  },
+  {
+   "type": "constraints",
+   "gold": "R_CN_50M",
+   "gold_label": "Drop point moves forward 50 m each time",
+   "pred": "CN_DROP_POINT_ADJUSTMENT",
+   "pred_label": "Move drop point forward by 50 m each time intensity does not weaken",
+   "score": 0.937
+  },
+  {
+   "type": "constraints",
+   "gold": "R_CN_EMBERS",
+   "gold_label": "No helicopter withdrawal while residual fire remains",
+   "pred": "CN_NO_WITHDRAWAL_WHILE_RESIDUAL_FIRE",
+   "pred_label": "Helicopter not withdrawn while residual fire remains",
+   "score": 0.98
+  },
+  {
+   "type": "constraints",
+   "gold": "R_CN_UNTIL_AM",
+   "gold_label": "Rekindle watch until next morning",
+   "pred": "CN_REKINDLE_WATCH_DURATION",
+   "pred_label": "Rekindle watch continues until next morning",
+   "score": 0.969
+  },
+  {
+   "type": "goals",
+   "gold": "R_G_BEFORE_VILLAGE",
+   "gold_label": "Stop wildfire spread before it reaches the village",
+   "pred": "G_STOP_SPREAD_NO_CASUALTIES",
+   "pred_label": "Stop the wildfire spread before it reaches the village, with zero casualties",
+   "score": 0.943
+  },
+  {
+   "type": "reasons",
+   "gold": "R_R_BATTERY",
+   "gold_label": "Battery replacement",
+   "pred": "R_BATTERY_REPLACEMENT",
+   "pred_label": "Battery replacement need",
+   "score": 0.978
+  },
+  {
+   "type": "observations",
+   "gold": "R_OBS_SMOKE",
+   "gold_label": "Detect smoke on ridge",
+   "pred": "OBS_SMOKE",
+   "pred_label": "Smoke detection",
+   "score": 0.929
+  },
+  {
+   "type": "observations",
+   "gold": "R_OBS_FILM",
+   "gold_label": "Film fire intensity change",
+   "pred": "OBS_FIRE_INTENSITY",
+   "pred_label": "Fire intensity change filming",
+   "score": 0.968
+  },
+  {
+   "type": "observations",
+   "gold": "R_OBS_COUNT",
+   "gold_label": "Confirm number of evacuees",
+   "pred": "OBS_EVACUEE_COUNT",
+   "pred_label": "Evacuee count confirmation",
+   "score": 0.968
+  },
+  {
+   "type": "observations",
+   "gold": "R_OBS_THERMAL",
+   "gold_label": "Thermal imaging residual fire check",
+   "pred": "OBS_NO_RESIDUAL_FIRE",
+   "pred_label": "No-residual-fire confirmation by thermal imaging",
+   "score": 0.945
+  },
+  {
+   "type": "transitions",
+   "gold": "R_TR_TO1",
+   "gold_label": "From normal to wildfire Level 1",
+   "pred": "TR_ISSUE_LEVEL1",
+   "pred_label": "Transition to wildfire Level 1",
+   "score": 0.957
+  },
+  {
+   "type": "transitions",
+   "gold": "R_TR_TO2",
+   "gold_label": "From wildfire Level 1 to Level 2",
+   "pred": "TR_ESCALATE_LEVEL2",
+   "pred_label": "Escalation from Level 1 to Level 2",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "R_TR_DOWN1",
+   "gold_label": "From wildfire Level 2 to Level 1",
+   "pred": "TR_DEESCALATE_LEVEL1",
+   "pred_label": "De-escalation from Level 2 to Level 1",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "R_F01",
+   "gold_label": "Transmit coordinates after smoke detection",
+   "pred": "F1",
+   "pred_label": "Transmit after detecting smoke",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "R_F04",
+   "gold_label": "Request evacuation preparation if fire line within 1 km",
+   "pred": "F2",
+   "pred_label": "Request evacuation prep after predicting fire line",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "R_F08",
+   "gold_label": "Drop after taking on water",
+   "pred": "F7",
+   "pred_label": "Drop water after taking on water",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "R_F09",
+   "gold_label": "Film fire intensity for each drop",
+   "pred": "F8",
+   "pred_label": "Film intensity after each drop",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "R_F10",
+   "gold_label": "Move drop point forward if fire intensity does not weaken",
+   "pred": "F9",
+   "pred_label": "Adjust drop point after filming, if intensity not weakening",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "R_F12",
+   "gold_label": "Evacuate residents after evacuation request",
+   "pred": "F10",
+   "pred_label": "Evacuate after requesting evacuation",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "R_F13",
+   "gold_label": "Confirm headcount after evacuation is finished",
+   "pred": "F11",
+   "pred_label": "Confirm evacuee count after evacuation finished",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "R_F14",
+   "gold_label": "Report after headcount confirmation",
+   "pred": "F12",
+   "pred_label": "Report count after confirming",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "R_F18",
+   "gold_label": "Hand over rekindle watch after withdrawal",
+   "pred": "F13",
+   "pred_label": "Hand over rekindle watch after withdrawal",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "R_F19",
+   "gold_label": "Allow return home after handover",
+   "pred": "F14",
+   "pred_label": "Allow return home after handover",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "R_C01",
+   "gold_label": "Judge predicted fire line within 1 km",
+   "pred": "C1",
+   "pred_label": "Fire line within 1 km of village decision (prediction 1)",
+   "score": 0.921
+  },
+  {
+   "type": "controls",
+   "gold": "R_C02",
+   "gold_label": "Simultaneous tracking by A2 and A3",
+   "pred": "C2",
+   "pred_label": "Parallel east/west tracking",
+   "score": 0.873
+  },
+  {
+   "type": "controls",
+   "gold": "R_C05",
+   "gold_label": "Repeated filming for each drop",
+   "pred": "C3",
+   "pred_label": "Repeated water drops until spread stops",
+   "score": 0.881
+  },
+  {
+   "type": "controls",
+   "gold": "R_C06",
+   "gold_label": "Judge fire intensity weakening",
+   "pred": "C4",
+   "pred_label": "Fire intensity not weakening decision",
+   "score": 1.0
+  }
+ ],
+ "type_confusion": {
+  "flows->items": 1,
+  "flows->state_values": 1,
+  "flows->events": 1,
+  "controls->actions": 1,
+  "controls->state_values": 1,
+  "situations->performers": 1,
+  "state_values->actions": 1,
+  "transitions->state_values": 1,
+  "reasons->flows": 1,
+  "reasons->state_values": 1,
+  "reasons->episodes": 1,
+  "observations->flows": 1
+ },
+ "source_ref_accuracy": {
+  "correct": 85,
+  "aligned_with_gold_ref": 89,
+  "accuracy": 0.9551
+ },
+ "relations": {
+  "strict": {
+   "tp": 107,
+   "pred": 170,
+   "gold": 173,
+   "precision": 0.6294,
+   "recall": 0.6185,
+   "f1": 0.6239,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 3,
+     "recalled": 2
+    },
+    "constrained_by": {
+     "gold": 7,
+     "recalled": 4
+    },
+    "controls_flow": {
+     "gold": 7,
+     "recalled": 2
+    },
+    "custom/contains_action": {
+     "gold": 30,
+     "recalled": 14
+    },
+    "flow_source": {
+     "gold": 20,
+     "recalled": 10
+    },
+    "flow_target": {
+     "gold": 20,
+     "recalled": 10
+    },
+    "from_situation": {
+     "gold": 5,
+     "recalled": 2
+    },
+    "has_episode": {
+     "gold": 6,
+     "recalled": 6
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 7,
+     "recalled": 7
+    },
+    "has_reason": {
+     "gold": 4,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 5,
+     "recalled": 2
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "performed_by": {
+     "gold": 29,
+     "recalled": 25
+    },
+    "produces_item": {
+     "gold": 5,
+     "recalled": 4
+    },
+    "provided_to": {
+     "gold": 7,
+     "recalled": 6
+    },
+    "to_situation": {
+     "gold": 5,
+     "recalled": 3
+    },
+    "triggers": {
+     "gold": 7,
+     "recalled": 5
+    },
+    "uses_item": {
+     "gold": 2,
+     "recalled": 1
+    }
+   }
+  },
+  "normalized": {
+   "tp": 107,
+   "pred": 170,
+   "gold": 173,
+   "precision": 0.6294,
+   "recall": 0.6185,
+   "f1": 0.6239,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 3,
+     "recalled": 2
+    },
+    "constrained_by": {
+     "gold": 7,
+     "recalled": 4
+    },
+    "contains_action": {
+     "gold": 30,
+     "recalled": 14
+    },
+    "controls_flow": {
+     "gold": 7,
+     "recalled": 2
+    },
+    "flow_source": {
+     "gold": 20,
+     "recalled": 10
+    },
+    "flow_target": {
+     "gold": 20,
+     "recalled": 10
+    },
+    "from_situation": {
+     "gold": 5,
+     "recalled": 2
+    },
+    "has_episode": {
+     "gold": 6,
+     "recalled": 6
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 7,
+     "recalled": 7
+    },
+    "has_reason": {
+     "gold": 4,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 5,
+     "recalled": 2
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "performed_by": {
+     "gold": 29,
+     "recalled": 25
+    },
+    "produces_item": {
+     "gold": 5,
+     "recalled": 4
+    },
+    "provided_to": {
+     "gold": 7,
+     "recalled": 6
+    },
+    "to_situation": {
+     "gold": 5,
+     "recalled": 3
+    },
+    "triggers": {
+     "gold": 7,
+     "recalled": 5
+    },
+    "uses_item": {
+     "gold": 2,
+     "recalled": 1
+    }
+   }
+  },
+  "untyped": {
+   "tp": 109,
+   "pred": 151,
+   "gold": 173,
+   "precision": 0.7219,
+   "recall": 0.6301,
+   "f1": 0.6728
+  }
+ },
+ "atomic_facts": {
+  "found": 0,
+  "total": 0,
+  "missing": []
+ },
+ "required_relations": {
+  "hit": 0,
+  "total": 0
+ },
+ "forbidden_relations": {
+  "violated": 0,
+  "total": 0
+ },
+ "structure": {
+  "actions": 28,
+  "actions_in_episode": 28,
+  "actions_allocated": 28,
+  "nested_mode": true,
+  "dangling_relations": 0,
+  "relations": 170
+ }
+}

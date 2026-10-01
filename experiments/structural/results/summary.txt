@@ -1,0 +1,9 @@
+gold/mumt/mumt.gold.json                 slots 97  relations 127  units 4  edges 224  defects 0  lsp ok err 0  validator 0E/5W  schema 0E/0W
+gold/nghe/nghe.gold.json                 slots 137  relations 178  units 4  edges 315  defects 0  lsp ok err 0  validator 0E/4W  schema 0E/0W
+gold/av/av.gold.json                     slots 91  relations 132  units 14  edges 223  defects 0  lsp ok err 0  validator 0E/2W  schema 0E/0W
+diagnostic/mumt/mumt.nongold.json        slots 90  relations 48  units 11  edges 116  defects 87  lsp ok err 0  validator 0E/15W  schema 1E/23W
+diagnostic/mumt/mumt.exhaustive.json     slots 193  relations 62  units 21  edges 252  defects 219  lsp ok err 0  validator 0E/60W  schema 7E/84W
+diagnostic/nghe/nghe.nongold.json        slots 117  relations 63  units 10  edges 142  defects 106  lsp ok err 0  validator 0E/15W  schema 5E/28W
+diagnostic/nghe/nghe.exhaustive.json     slots 224  relations 68  units 21  edges 289  defects 244  lsp ok err 0  validator 0E/60W  schema 10E/80W
+gold totals: units 22, slots 325, relations 437, edges 762
+all seven: slots 949, relations 678

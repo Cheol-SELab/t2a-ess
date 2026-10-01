@@ -1,0 +1,107 @@
+<!doctype html><html><head><meta charset='utf-8'><style>@page{size:1859.0px 588.0px;margin:0}html,body{margin:0;padding:0}svg{display:block;width:1859.0px;height:588.0px}</style></head><body><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1859 588" role="img" aria-label="state machine"><style>
+    text{font-family:"IBM Plex Sans KR","Noto Sans KR",system-ui,sans-serif;fill:#1E2328}
+    .region-label{font-size:12px;font-style:italic;fill:#6F6C66}
+    .state rect{fill:#FFFFFF;stroke:#4B4F55;stroke-width:1.2;rx:6}
+    .state .sv{font-size:11px;fill:#4B4F55}
+    .region rect.frame{fill:none;stroke:#4B4F55;stroke-width:1.4;rx:10}
+    .region-sep{stroke:#4B4F55;stroke-width:1;stroke-dasharray:6 4}
+    .transition path{fill:none;stroke:#1E6E8C;stroke-width:1.4;marker-end:url(#t2a-arrow)}
+    .transition text{font-size:11px;fill:#1E2328}
+    .transition rect.lbl{fill:#F6F5F0;stroke:#D9D6CE;stroke-width:.6;rx:3}
+    .transition:hover path{stroke-width:2.6}
+    .transition:hover text{font-weight:600}
+    .initial circle{fill:#1E2328}
+    .initial line{stroke:#1E2328;stroke-width:1.4;marker-end:url(#t2a-arrow)}
+    .tab{fill:#F6F5F0;stroke:#4B4F55;stroke-width:1.4}
+    .frame{fill:none;stroke:#4B4F55;stroke-width:1.4;rx:10}
+    @media (prefers-color-scheme: dark){
+      text{fill:#E6E4DE} .region-label{fill:#8B8880}
+      .state rect{fill:#1C2026;stroke:#B8B5AE} .state .sv{fill:#B8B5AE}
+      .region rect.frame,.frame{stroke:#B8B5AE} .region-sep{stroke:#B8B5AE}
+      .transition path{stroke:#5FAFD0} .transition text{fill:#E6E4DE}
+      .transition rect.lbl{fill:#15181C;stroke:#333941}
+      .initial circle{fill:#E6E4DE} .initial line{stroke:#E6E4DE}
+      .tab{fill:#1C2026;stroke:#B8B5AE}
+    }
+  </style>
+<defs><marker id="t2a-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker></defs>
+<rect class="frame" x="28" y="28" width="1802.1499999999992" height="532" rx="10"/>
+<path class="tab" d="M28 28 h246 v26 h-246 z"/>
+<text x="40" y="45" font-size="13" font-weight="600">MUM-T attack operation under EW</text>
+<g class="region" data-id="r0">
+<text class="region-label" x="46" y="96">communication_mode</text>
+<g class="initial"><circle cx="12" cy="199" r="7"/><line x1="19" y1="199" x2="49" y2="199" marker-end="url(#t2a-arrow)"/></g>
+<g class="state" data-id="MUMT_SIT_COMM_NORMAL">
+<rect x="52" y="162" width="196" height="74" rx="6"/>
+<text x="68" y="182" font-size="14">Comms normal</text>
+<line x1="52" y1="192" x2="248" y2="192" stroke="#4B4F55" stroke-width=".8"/>
+<text class="sv" x="68" y="208">communication_mode = normal</text>
+<text class="sv" x="68" y="226">data_mode = video_stream</text>
+</g>
+<g class="state" data-id="MUMT_SIT_COMM_LIMITED">
+<rect x="862.5499999999993" y="162" width="202" height="74" rx="6"/>
+<text x="878.5499999999993" y="182" font-size="14">Comms limited</text>
+<line x1="862.5499999999993" y1="192" x2="1064.5499999999993" y2="192" stroke="#4B4F55" stroke-width=".8"/>
+<text class="sv" x="878.5499999999993" y="208">communication_mode = limited</text>
+<text class="sv" x="878.5499999999993" y="226">data_mode = track_summary</text>
+</g>
+<g class="state" data-id="MUMT_SIT_COMM_DISCONNECTED">
+<rect x="1558.1499999999992" y="162" width="232" height="56" rx="6"/>
+<text x="1574.1499999999992" y="182" font-size="14">Comms disconnected</text>
+<line x1="1558.1499999999992" y1="192" x2="1790.1499999999992" y2="192" stroke="#4B4F55" stroke-width=".8"/>
+<text class="sv" x="1574.1499999999992" y="208">communication_mode = disconnected</text>
+</g>
+<g class="transition" data-id="MUMT_TR_NORMAL_TO_LIMITED">
+<path d="M248 199 C555.2749999999996 199, 555.2749999999996 199, 862.5499999999993 199"/>
+<rect class="lbl" x="274.77499999999964" y="178" width="561" height="18"/>
+<text x="555.2749999999996" y="191" text-anchor="middle">Packet loss above threshold persists [packet_loss_rate &gt; threshold for configured_duration]</text>
+</g>
+<g class="transition" data-id="MUMT_TR_LIMITED_TO_DISCONNECTED">
+<path d="M1064.5499999999993 199 C1311.3499999999992 199, 1311.3499999999992 190, 1558.1499999999992 190"/>
+<rect class="lbl" x="1088.3499999999992" y="173.5" width="446" height="18"/>
+<text x="1311.3499999999992" y="186.5" text-anchor="middle">Heartbeat loss persists [heartbeat_loss_duration &gt;= configured_duration]</text>
+</g>
+<g class="transition" data-id="MUMT_TR_DISCONNECTED_TO_LIMITED">
+<path d="M1674.1499999999992 162 C1674.1499999999992 128, 963.5499999999993 128, 963.5499999999993 162"/>
+<rect class="lbl" x="1116.8499999999992" y="125.5" width="404" height="18"/>
+<text x="1318.8499999999992" y="138.5" text-anchor="middle">Link remains stable [link_stable_duration &gt;= configured_duration]</text>
+</g>
+<g class="transition" data-id="MUMT_TR_LIMITED_TO_NORMAL">
+<path d="M963.5499999999993 162 C963.5499999999993 128, 150 128, 150 162"/>
+<rect class="lbl" x="494.27499999999964" y="125.5" width="125" height="18"/>
+<text x="556.7749999999996" y="138.5" text-anchor="middle">Bandwidth recovered</text>
+</g>
+</g>
+<line class="region-sep" x1="36" y1="259" x2="1822.1499999999992" y2="259"/>
+<g class="region" data-id="r1">
+<text class="region-label" x="46" y="300">combat_power</text>
+<g class="initial"><circle cx="12" cy="348" r="7"/><line x1="19" y1="348" x2="49" y2="348" marker-end="url(#t2a-arrow)"/></g>
+<g class="state" data-id="MUMT_SIT_MISSION_SECURED">
+<rect x="52" y="320" width="184" height="56" rx="6"/>
+<text x="68" y="340" font-size="14">Objective secured</text>
+<line x1="52" y1="350" x2="236" y2="350" stroke="#4B4F55" stroke-width=".8"/>
+<text class="sv" x="68" y="366">combat_power = maintained</text>
+</g>
+</g>
+<line class="region-sep" x1="36" y1="399" x2="1822.1499999999992" y2="399"/>
+<g class="region" data-id="r2">
+<text class="region-label" x="46" y="440">available_drone_count</text>
+<g class="initial"><circle cx="12" cy="488" r="7"/><line x1="19" y1="488" x2="49" y2="488" marker-end="url(#t2a-arrow)"/></g>
+<g class="state" data-id="MUMT_SIT_DRONE_3">
+<rect x="52" y="460" width="202" height="56" rx="6"/>
+<text x="68" y="480" font-size="14">Three drones available</text>
+<line x1="52" y1="490" x2="254" y2="490" stroke="#4B4F55" stroke-width=".8"/>
+<text class="sv" x="68" y="506">available_drone_count = 3</text>
+</g>
+<g class="state" data-id="MUMT_SIT_DRONE_2">
+<rect x="469.55000000000007" y="460" width="187" height="56" rx="6"/>
+<text x="485.55000000000007" y="480" font-size="14">Two drones available</text>
+<line x1="469.55000000000007" y1="490" x2="656.5500000000001" y2="490" stroke="#4B4F55" stroke-width=".8"/>
+<text class="sv" x="485.55000000000007" y="506">available_drone_count = 2</text>
+</g>
+<g class="transition" data-id="MUMT_TR_DRONE_COUNT_REDUCED">
+<path d="M254 488 C361.77500000000003 488, 361.77500000000003 488, 469.55000000000007 488"/>
+<rect class="lbl" x="262.77500000000003" y="467" width="198" height="18"/>
+<text x="361.77500000000003" y="480" text-anchor="middle">Drone 1 battery depleted, lands</text>
+</g>
+</g></svg></body></html>

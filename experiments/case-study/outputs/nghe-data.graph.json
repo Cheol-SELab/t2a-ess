@@ -1,0 +1,1751 @@
+{
+  "nodes": [
+    {
+      "id": "ItemInputEdge",
+      "name": "ItemInputEdge",
+      "kind": "ItemDefinition",
+      "type": "ItemDefinition",
+      "declaredName": "ItemInputEdge",
+      "qualifiedName": "ItemInputEdge"
+    },
+    {
+      "id": "ItemOutputEdge",
+      "name": "ItemOutputEdge",
+      "kind": "ItemDefinition",
+      "type": "ItemDefinition",
+      "declaredName": "ItemOutputEdge",
+      "qualifiedName": "ItemOutputEdge"
+    },
+    {
+      "id": "TriggeringItemInputEdge",
+      "name": "TriggeringItemInputEdge",
+      "kind": "ItemDefinition",
+      "type": "ItemDefinition",
+      "declaredName": "TriggeringItemInputEdge",
+      "qualifiedName": "TriggeringItemInputEdge"
+    },
+    {
+      "id": "Performer",
+      "name": "Performer",
+      "kind": "PartDefinition",
+      "type": "PartDefinition",
+      "declaredName": "Performer",
+      "qualifiedName": "Performer"
+    },
+    {
+      "id": "ICCC",
+      "name": "ICCC",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "ICCC",
+      "qualifiedName": "ICCC",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "AI_ICP",
+      "name": "AI_ICP",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "AI_ICP",
+      "qualifiedName": "AI_ICP",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Remote supervisor",
+      "name": "Remote supervisor",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Remote supervisor",
+      "qualifiedName": "Remote supervisor",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Remote operator",
+      "name": "Remote operator",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Remote operator",
+      "qualifiedName": "Remote operator",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Site supervisor",
+      "name": "Site supervisor",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Site supervisor",
+      "qualifiedName": "Site supervisor",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Site maintenance team",
+      "name": "Site maintenance team",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Site maintenance team",
+      "qualifiedName": "Site maintenance team",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Unmanned equipment fleet",
+      "name": "Unmanned equipment fleet",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Unmanned equipment fleet",
+      "qualifiedName": "Unmanned equipment fleet",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "U-EEX excavator",
+      "name": "U-EEX excavator",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "U-EEX excavator",
+      "qualifiedName": "U-EEX excavator",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "U-EDT dump truck",
+      "name": "U-EDT dump truck",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "U-EDT dump truck",
+      "qualifiedName": "U-EDT dump truck",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "U-EDB bulldozer",
+      "name": "U-EDB bulldozer",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "U-EDB bulldozer",
+      "qualifiedName": "U-EDB bulldozer",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "U-ERC roller",
+      "name": "U-ERC roller",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "U-ERC roller",
+      "qualifiedName": "U-ERC roller",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "BSS_T",
+      "name": "BSS_T",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "BSS_T",
+      "qualifiedName": "BSS_T",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "DMSS",
+      "name": "DMSS",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "DMSS",
+      "qualifiedName": "DMSS",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "ASPCS",
+      "name": "ASPCS",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "ASPCS",
+      "qualifiedName": "ASPCS",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Security system",
+      "name": "Security system",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Security system",
+      "qualifiedName": "Security system",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "U-EEX Unit 1",
+      "name": "U-EEX Unit 1",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "U-EEX Unit 1",
+      "qualifiedName": "U-EEX Unit 1",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "U-EEX Unit 2",
+      "name": "U-EEX Unit 2",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "U-EEX Unit 2",
+      "qualifiedName": "U-EEX Unit 2",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "U-EEX Unit 3",
+      "name": "U-EEX Unit 3",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "U-EEX Unit 3",
+      "qualifiedName": "U-EEX Unit 3",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "U-EDT Unit 7",
+      "name": "U-EDT Unit 7",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "U-EDT Unit 7",
+      "qualifiedName": "U-EDT Unit 7",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response",
+      "name": "NGHE 72 h autonomous construction and contingency response",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "declaredName": "NGHE 72 h autonomous construction and contingency response",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Battery pack",
+              "body": "",
+              "label": "Battery pack"
+            },
+            {
+              "name": "3D point cloud terrain data",
+              "body": "",
+              "label": "3D point cloud terrain data"
+            },
+            {
+              "name": "BIM and digital twin model",
+              "body": "",
+              "label": "BIM and digital twin model"
+            },
+            {
+              "name": "Work routes and bypass routes",
+              "body": "",
+              "label": "Work routes and bypass routes"
+            },
+            {
+              "name": "Security threat log",
+              "body": "",
+              "label": "Security threat log"
+            },
+            {
+              "name": "Comprehensive performance report",
+              "body": "",
+              "label": "Comprehensive performance report"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "name": "Site setup and Level 3 start",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response",
+      "declaredName": "Site setup and Level 3 start",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Energy infrastructure installation and battery pack stockpiling",
+      "name": "Energy infrastructure installation and battery pack stockpiling",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "declaredName": "Energy infrastructure installation and battery pack stockpiling",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Energy infrastructure installation and battery pack stockpiling",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Battery pack",
+              "body": "",
+              "label": "← Battery pack : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation",
+      "name": "RTDD latency and HSM authentication confirmation",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "declaredName": "RTDD latency and HSM authentication confirmation",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction",
+      "name": "3D point cloud scan and reference point correction",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "declaredName": "3D point cloud scan and reference point correction",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "3D point cloud terrain data",
+              "body": "",
+              "label": "← 3D point cloud terrain data : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            },
+            {
+              "name": "BIM and digital twin model",
+              "body": "",
+              "label": "← BIM and digital twin model : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Authentication and calibration of 19 units of equipment",
+      "name": "Authentication and calibration of 19 units of equipment",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "declaredName": "Authentication and calibration of 19 units of equipment",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Authentication and calibration of 19 units of equipment",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1",
+      "name": "New Start Concurrency_1",
+      "kind": "ForkNode",
+      "type": "ForkNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "declaredName": "New Start Concurrency_1",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1",
+      "name": "New End Concurrency_1",
+      "kind": "JoinNode",
+      "type": "JoinNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "declaredName": "New End Concurrency_1",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "name": "Level 4 autonomous construction and productivity maintenance",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response",
+      "declaredName": "Level 4 autonomous construction and productivity maintenance",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "compartments": [
+        {
+          "key": "attributes",
+          "items": [
+            {
+              "name": "Visibility 200 m or less",
+              "body": "",
+              "label": "Visibility 200 m or less : ScalarValues::Boolean"
+            },
+            {
+              "name": "Two or more units do not leave work at the same time",
+              "body": "",
+              "label": "Two or more units do not leave work at the same time : ScalarValues::Boolean"
+            }
+          ],
+          "collapsed": false
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start",
+      "name": "Autonomous construction start",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "Autonomous construction start",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Work routes and bypass routes",
+              "body": "",
+              "label": "→ Work routes and bypass routes : ItemInputEdge",
+              "declaredType": "ItemInputEdge",
+              "direction": "in"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery pack replacement",
+      "name": "Battery pack replacement",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "Battery pack replacement",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery pack replacement",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Battery pack",
+              "body": "",
+              "label": "→ Battery pack : ItemInputEdge",
+              "declaredType": "ItemInputEdge",
+              "direction": "in"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery swap sequence optimization",
+      "name": "Battery swap sequence optimization",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "Battery swap sequence optimization",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery swap sequence optimization",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::U-EDT Unit 7 hydraulic module preventive maintenance",
+      "name": "U-EDT Unit 7 hydraulic module preventive maintenance",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "U-EDT Unit 7 hydraulic module preventive maintenance",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::U-EDT Unit 7 hydraulic module preventive maintenance",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::OTA route optimization patch application",
+      "name": "OTA route optimization patch application",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "OTA route optimization patch application",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::OTA route optimization patch application",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Remote control of unmanned equipment fleet",
+      "name": "Remote control of unmanned equipment fleet",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "Remote control of unmanned equipment fleet",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Remote control of unmanned equipment fleet",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2",
+      "name": "New Start Concurrency_2",
+      "kind": "ForkNode",
+      "type": "ForkNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "New Start Concurrency_2",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_2",
+      "name": "New End Concurrency_2",
+      "kind": "JoinNode",
+      "type": "JoinNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "New End Concurrency_2",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_2"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3",
+      "name": "New End Concurrency_3",
+      "kind": "JoinNode",
+      "type": "JoinNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "New End Concurrency_3",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "name": "Fog and cyber threat response",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response",
+      "declaredName": "Fog and cyber threat response",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog",
+      "name": "Level 3 downgrade proposal and approval due to fog",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "declaredName": "Level 3 downgrade proposal and approval due to fog",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::External public network blocking and switch to internal security network",
+      "name": "External public network blocking and switch to internal security network",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "declaredName": "External public network blocking and switch to internal security network",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::External public network blocking and switch to internal security network",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Security threat log",
+              "body": "",
+              "label": "← Security threat log : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New Start Concurrency_3",
+      "name": "New Start Concurrency_3",
+      "kind": "ForkNode",
+      "type": "ForkNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "declaredName": "New Start Concurrency_3",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New Start Concurrency_3"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New End Concurrency_4",
+      "name": "New End Concurrency_4",
+      "kind": "JoinNode",
+      "type": "JoinNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "declaredName": "New End Concurrency_4",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New End Concurrency_4"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "name": "Heavy rain and work stop",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response",
+      "declaredName": "Heavy rain and work stop",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation",
+      "name": "Forced work stop and safe evacuation",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "declaredName": "Forced work stop and safe evacuation",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::U-EEX Unit 2 pedestrian detection local stop",
+      "name": "U-EEX Unit 2 pedestrian detection local stop",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "declaredName": "U-EEX Unit 2 pedestrian detection local stop",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::U-EEX Unit 2 pedestrian detection local stop",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New Start Concurrency_4",
+      "name": "New Start Concurrency_4",
+      "kind": "ForkNode",
+      "type": "ForkNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "declaredName": "New Start Concurrency_4",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New Start Concurrency_4"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New End Concurrency_5",
+      "name": "New End Concurrency_5",
+      "kind": "JoinNode",
+      "type": "JoinNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "declaredName": "New End Concurrency_5",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New End Concurrency_5"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "name": "Recovery after heavy rain and mission completion",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response",
+      "declaredName": "Recovery after heavy rain and mission completion",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "compartments": [
+        {
+          "key": "attributes",
+          "items": [
+            {
+              "name": "Heavy rain end confirmed",
+              "body": "",
+              "label": "Heavy rain end confirmed : ScalarValues::Boolean"
+            }
+          ],
+          "collapsed": false
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain",
+      "name": "Terrain rescan and reference point re-correction after heavy rain",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "declaredName": "Terrain rescan and reference point re-correction after heavy rain",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Subsidence zone bypass route recalculation",
+      "name": "Subsidence zone bypass route recalculation",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "declaredName": "Subsidence zone bypass route recalculation",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Subsidence zone bypass route recalculation",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Work routes and bypass routes",
+              "body": "",
+              "label": "← Work routes and bypass routes : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4",
+      "name": "Construction resumption and return to Level 4",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "declaredName": "Construction resumption and return to Level 4",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report",
+      "name": "Automatic generation of 72 h mission final report",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "declaredName": "Automatic generation of 72 h mission final report",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Comprehensive performance report",
+              "body": "",
+              "label": "← Comprehensive performance report : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5",
+      "name": "New Start Concurrency_5",
+      "kind": "ForkNode",
+      "type": "ForkNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "declaredName": "New Start Concurrency_5",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6",
+      "name": "New End Concurrency_6",
+      "kind": "JoinNode",
+      "type": "JoinNode",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "declaredName": "New End Concurrency_6",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "declaredName": "start",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::start"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "start",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::start"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "declaredName": "start",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::start"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "declaredName": "start",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::start"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "declaredName": "start",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::start"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response",
+      "declaredName": "start",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::start"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "declaredName": "done",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::done"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "declaredName": "done",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::done"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "declaredName": "done",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::done"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "declaredName": "done",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::done"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "declaredName": "done",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::done"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "NGHE 72 h autonomous construction and contingency response",
+      "declaredName": "done",
+      "qualifiedName": "NGHE 72 h autonomous construction and contingency response::done"
+    }
+  ],
+  "edges": [
+    {
+      "id": "Root->IMMBaseSchema:namespaceimport",
+      "source": "Root",
+      "target": "IMMBaseSchema",
+      "kind": "namespaceimport",
+      "data": {
+        "importsAll": false,
+        "declaredName": null
+      }
+    },
+    {
+      "id": "Root->ScalarValues:namespaceimport",
+      "source": "Root",
+      "target": "ScalarValues",
+      "kind": "namespaceimport",
+      "data": {
+        "importsAll": false,
+        "declaredName": null
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Energy infrastructure installation and battery pack stockpiling:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Energy infrastructure installation and battery pack stockpiling",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Authentication and calibration of 19 units of equipment:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Authentication and calibration of 19 units of equipment",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Energy infrastructure installation and battery pack stockpiling->Site maintenance team:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Energy infrastructure installation and battery pack stockpiling",
+      "target": "Site maintenance team",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation->Site supervisor:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation",
+      "target": "Site supervisor",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation->ICCC:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation",
+      "target": "ICCC",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction->DMSS:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction",
+      "target": "DMSS",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction->ASPCS:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction",
+      "target": "ASPCS",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Authentication and calibration of 19 units of equipment->Unmanned equipment fleet:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Authentication and calibration of 19 units of equipment",
+      "target": "Unmanned equipment fleet",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::start->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Energy infrastructure installation and battery pack stockpiling->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Energy infrastructure installation and battery pack stockpiling",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Authentication and calibration of 19 units of equipment->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Authentication and calibration of 19 units of equipment",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Energy infrastructure installation and battery pack stockpiling:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Energy infrastructure installation and battery pack stockpiling",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::RTDD latency and HSM authentication confirmation",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::3D point cloud scan and reference point correction",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Authentication and calibration of 19 units of equipment:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New Start Concurrency_1",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::Authentication and calibration of 19 units of equipment",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::done:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::New End Concurrency_1",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery pack replacement:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery pack replacement",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery swap sequence optimization:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery swap sequence optimization",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::U-EDT Unit 7 hydraulic module preventive maintenance:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::U-EDT Unit 7 hydraulic module preventive maintenance",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::OTA route optimization patch application:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::OTA route optimization patch application",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Remote control of unmanned equipment fleet:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Remote control of unmanned equipment fleet",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_2:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_2",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start->AI_ICP:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start",
+      "target": "AI_ICP",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start->Unmanned equipment fleet:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start",
+      "target": "Unmanned equipment fleet",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery pack replacement->BSS_T:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery pack replacement",
+      "target": "BSS_T",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery swap sequence optimization->AI_ICP:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery swap sequence optimization",
+      "target": "AI_ICP",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::U-EDT Unit 7 hydraulic module preventive maintenance->Site maintenance team:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::U-EDT Unit 7 hydraulic module preventive maintenance",
+      "target": "Site maintenance team",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::OTA route optimization patch application->Unmanned equipment fleet:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::OTA route optimization patch application",
+      "target": "Unmanned equipment fleet",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Remote control of unmanned equipment fleet->Remote operator:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Remote control of unmanned equipment fleet",
+      "target": "Remote operator",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::start->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_2:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_2",
+      "kind": "succession",
+      "label": "if 'Visibility 200 m or less' == true",
+      "data": {
+        "guardCondition": "'Visibility 200 m or less' == true",
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery swap sequence optimization->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_2:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery swap sequence optimization",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_2",
+      "kind": "succession",
+      "label": "if 'Two or more units do not leave work at the same time' == true",
+      "data": {
+        "guardCondition": "'Two or more units do not leave work at the same time' == true",
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery pack replacement->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery pack replacement",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::U-EDT Unit 7 hydraulic module preventive maintenance->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::U-EDT Unit 7 hydraulic module preventive maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::OTA route optimization patch application->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::OTA route optimization patch application",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Remote control of unmanned equipment fleet->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Remote control of unmanned equipment fleet",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Autonomous construction start",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery swap sequence optimization:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery swap sequence optimization",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::U-EDT Unit 7 hydraulic module preventive maintenance:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::U-EDT Unit 7 hydraulic module preventive maintenance",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::OTA route optimization patch application:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::OTA route optimization patch application",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Remote control of unmanned equipment fleet:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New Start Concurrency_2",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Remote control of unmanned equipment fleet",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_2->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery pack replacement:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_2",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::Battery pack replacement",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::done:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::New End Concurrency_3",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::External public network blocking and switch to internal security network:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::External public network blocking and switch to internal security network",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New Start Concurrency_3:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New Start Concurrency_3",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New End Concurrency_4:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New End Concurrency_4",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog->AI_ICP:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog",
+      "target": "AI_ICP",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog->Remote supervisor:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog",
+      "target": "Remote supervisor",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::External public network blocking and switch to internal security network->Security system:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::External public network blocking and switch to internal security network",
+      "target": "Security system",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::start->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New Start Concurrency_3:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New Start Concurrency_3",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New End Concurrency_4:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New End Concurrency_4",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::External public network blocking and switch to internal security network->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New End Concurrency_4:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::External public network blocking and switch to internal security network",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New End Concurrency_4",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New Start Concurrency_3->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New Start Concurrency_3",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::Level 3 downgrade proposal and approval due to fog",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New Start Concurrency_3->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::External public network blocking and switch to internal security network:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New Start Concurrency_3",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::External public network blocking and switch to internal security network",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New End Concurrency_4->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::done:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::New End Concurrency_4",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::U-EEX Unit 2 pedestrian detection local stop:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::U-EEX Unit 2 pedestrian detection local stop",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New Start Concurrency_4:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New Start Concurrency_4",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New End Concurrency_5:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New End Concurrency_5",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation->Remote supervisor:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation",
+      "target": "Remote supervisor",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation->Unmanned equipment fleet:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation",
+      "target": "Unmanned equipment fleet",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::U-EEX Unit 2 pedestrian detection local stop->U-EEX Unit 2:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::U-EEX Unit 2 pedestrian detection local stop",
+      "target": "U-EEX Unit 2",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::start->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New Start Concurrency_4:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New Start Concurrency_4",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New End Concurrency_5:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New End Concurrency_5",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::U-EEX Unit 2 pedestrian detection local stop->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New End Concurrency_5:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::U-EEX Unit 2 pedestrian detection local stop",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New End Concurrency_5",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New Start Concurrency_4->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New Start Concurrency_4",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::Forced work stop and safe evacuation",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New Start Concurrency_4->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::U-EEX Unit 2 pedestrian detection local stop:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New Start Concurrency_4",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::U-EEX Unit 2 pedestrian detection local stop",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New End Concurrency_5->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::done:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::New End Concurrency_5",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Subsidence zone bypass route recalculation:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Subsidence zone bypass route recalculation",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6:containment",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6",
+      "kind": "containment"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain->DMSS:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain",
+      "target": "DMSS",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain->ASPCS:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain",
+      "target": "ASPCS",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Subsidence zone bypass route recalculation->AI_ICP:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Subsidence zone bypass route recalculation",
+      "target": "AI_ICP",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4->Remote supervisor:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4",
+      "target": "Remote supervisor",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4->Unmanned equipment fleet:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4",
+      "target": "Unmanned equipment fleet",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report->ICCC:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report",
+      "target": "ICCC",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report->AI_ICP:allocation",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report",
+      "target": "AI_ICP",
+      "kind": "allocation"
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::start->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4",
+      "kind": "succession",
+      "label": "if 'Heavy rain end confirmed' == true",
+      "data": {
+        "guardCondition": "'Heavy rain end confirmed' == true",
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Subsidence zone bypass route recalculation->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Subsidence zone bypass route recalculation",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Construction resumption and return to Level 4",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Terrain rescan and reference point re-correction after heavy rain",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Subsidence zone bypass route recalculation:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Subsidence zone bypass route recalculation",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New Start Concurrency_5",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::Automatic generation of 72 h mission final report",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::done:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::New End Concurrency_6",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::start->NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start->NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start",
+      "target": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance->NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+      "target": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response->NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+      "target": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop->NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+      "target": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response"
+      }
+    },
+    {
+      "id": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion->NGHE 72 h autonomous construction and contingency response::done:succession",
+      "source": "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+      "target": "NGHE 72 h autonomous construction and contingency response::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "NGHE 72 h autonomous construction and contingency response"
+      }
+    }
+  ]
+}

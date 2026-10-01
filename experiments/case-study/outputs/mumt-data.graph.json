@@ -1,0 +1,1179 @@
+{
+  "nodes": [
+    {
+      "id": "ItemInputEdge",
+      "name": "ItemInputEdge",
+      "kind": "ItemDefinition",
+      "type": "ItemDefinition",
+      "declaredName": "ItemInputEdge",
+      "qualifiedName": "ItemInputEdge"
+    },
+    {
+      "id": "ItemOutputEdge",
+      "name": "ItemOutputEdge",
+      "kind": "ItemDefinition",
+      "type": "ItemDefinition",
+      "declaredName": "ItemOutputEdge",
+      "qualifiedName": "ItemOutputEdge"
+    },
+    {
+      "id": "TriggeringItemInputEdge",
+      "name": "TriggeringItemInputEdge",
+      "kind": "ItemDefinition",
+      "type": "ItemDefinition",
+      "declaredName": "TriggeringItemInputEdge",
+      "qualifiedName": "TriggeringItemInputEdge"
+    },
+    {
+      "id": "Performer",
+      "name": "Performer",
+      "kind": "PartDefinition",
+      "type": "PartDefinition",
+      "declaredName": "Performer",
+      "qualifiedName": "Performer"
+    },
+    {
+      "id": "Company commander",
+      "name": "Company commander",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Company commander",
+      "qualifiedName": "Company commander",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "TDSS",
+      "name": "TDSS",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "TDSS",
+      "qualifiedName": "TDSS",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Three reconnaissance drones",
+      "name": "Three reconnaissance drones",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Three reconnaissance drones",
+      "qualifiedName": "Three reconnaissance drones",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Drone 1",
+      "name": "Drone 1",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Drone 1",
+      "qualifiedName": "Drone 1",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Drone 2",
+      "name": "Drone 2",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Drone 2",
+      "qualifiedName": "Drone 2",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Drone 3",
+      "name": "Drone 3",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Drone 3",
+      "qualifiedName": "Drone 3",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Subordinate platoons",
+      "name": "Subordinate platoons",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Subordinate platoons",
+      "qualifiedName": "Subordinate platoons",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Battalion server",
+      "name": "Battalion server",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Battalion server",
+      "qualifiedName": "Battalion server",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Enemy",
+      "name": "Enemy",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Enemy",
+      "qualifiedName": "Enemy",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "2nd Platoon",
+      "name": "2nd Platoon",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "2nd Platoon",
+      "qualifiedName": "2nd Platoon",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response",
+      "name": "MUM-T-based attack maneuver and electronic warfare response",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "declaredName": "MUM-T-based attack maneuver and electronic warfare response",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Drone video stream",
+              "body": "",
+              "label": "Drone video stream"
+            },
+            {
+              "name": "Summary track data",
+              "body": "",
+              "label": "Summary track data"
+            },
+            {
+              "name": "Company SA summary information",
+              "body": "",
+              "label": "Company SA summary information"
+            },
+            {
+              "name": "FPV threat alert",
+              "body": "",
+              "label": "FPV threat alert"
+            },
+            {
+              "name": "Drone emergency broadcast message",
+              "body": "",
+              "label": "Drone emergency broadcast message"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "name": "Preparation and normal communication maneuver",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response",
+      "declaredName": "Preparation and normal communication maneuver",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::TDSS self-diagnosis and normal communication confirmation",
+      "name": "TDSS self-diagnosis and normal communication confirmation",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "declaredName": "TDSS self-diagnosis and normal communication confirmation",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::TDSS self-diagnosis and normal communication confirmation",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::Sequential reconnaissance drone launch and surveillance deployment",
+      "name": "Sequential reconnaissance drone launch and surveillance deployment",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "declaredName": "Sequential reconnaissance drone launch and surveillance deployment",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::Sequential reconnaissance drone launch and surveillance deployment",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "name": "Enemy observation post and FPV threat detection response",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response",
+      "declaredName": "Enemy observation post and FPV threat detection response",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Detect suspected enemy observation post heat source",
+      "name": "Detect suspected enemy observation post heat source",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "declaredName": "Detect suspected enemy observation post heat source",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Detect suspected enemy observation post heat source",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Decide right bypass maneuver",
+      "name": "Decide right bypass maneuver",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "declaredName": "Decide right bypass maneuver",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Decide right bypass maneuver",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Provide FPV threat alert",
+      "name": "Provide FPV threat alert",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "declaredName": "Provide FPV threat alert",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Provide FPV threat alert",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "FPV threat alert",
+              "body": "",
+              "label": "← FPV threat alert : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Order dispersed maneuver and air-defense watch",
+      "name": "Order dispersed maneuver and air-defense watch",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "declaredName": "Order dispersed maneuver and air-defense watch",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Order dispersed maneuver and air-defense watch",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::FPV evasive maneuver",
+      "name": "FPV evasive maneuver",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "declaredName": "FPV evasive maneuver",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::FPV evasive maneuver",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1",
+      "name": "New Start Concurrency_1",
+      "kind": "ForkNode",
+      "type": "ForkNode",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "declaredName": "New Start Concurrency_1",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1",
+      "name": "New End Concurrency_1",
+      "kind": "JoinNode",
+      "type": "JoinNode",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "declaredName": "New End Concurrency_1",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "name": "Electronic warfare jamming and communication degradation response",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response",
+      "declaredName": "Electronic warfare jamming and communication degradation response",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "compartments": [
+        {
+          "key": "attributes",
+          "items": [
+            {
+              "name": "While the communication blackout state persists",
+              "body": "",
+              "label": "While the communication blackout state persists : ScalarValues::Boolean"
+            }
+          ],
+          "collapsed": false
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode",
+      "name": "Drone switch to Edge AI analysis mode",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "declaredName": "Drone switch to Edge AI analysis mode",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Drone video stream",
+              "body": "",
+              "label": "→ Drone video stream : ItemInputEdge",
+              "declaredType": "ItemInputEdge",
+              "direction": "in"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function",
+      "borderNodes": [
+        {
+          "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode::Summary track data",
+          "name": "Summary track data",
+          "typeName": "ItemOutputEdge",
+          "type": "ItemUsage",
+          "nodeType": "item",
+          "side": "S",
+          "offset": 0.1,
+          "isParameter": false,
+          "direction": "out"
+        }
+      ]
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Activate local sensor-based survival loop",
+      "name": "Activate local sensor-based survival loop",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "declaredName": "Activate local sensor-based survival loop",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Activate local sensor-based survival loop",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Transmit drone emergency broadcast",
+      "name": "Transmit drone emergency broadcast",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "declaredName": "Transmit drone emergency broadcast",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Transmit drone emergency broadcast",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Drone emergency broadcast message",
+              "body": "",
+              "label": "← Drone emergency broadcast message : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Smoke screen deployment and evasive maneuver after ATGM alert",
+      "name": "Smoke screen deployment and evasive maneuver after ATGM alert",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "declaredName": "Smoke screen deployment and evasive maneuver after ATGM alert",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Smoke screen deployment and evasive maneuver after ATGM alert",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New Start Concurrency_2",
+      "name": "New Start Concurrency_2",
+      "kind": "ForkNode",
+      "type": "ForkNode",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "declaredName": "New Start Concurrency_2",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New Start Concurrency_2"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New End Concurrency_2",
+      "name": "New End Concurrency_2",
+      "kind": "JoinNode",
+      "type": "JoinNode",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "declaredName": "New End Concurrency_2",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New End Concurrency_2"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "name": "Communication recovery and attack resumption",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response",
+      "declaredName": "Communication recovery and attack resumption",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "compartments": [
+        {
+          "key": "attributes",
+          "items": [
+            {
+              "name": "Limited mode after link stability confirmation",
+              "body": "",
+              "label": "Limited mode after link stability confirmation : ScalarValues::Boolean"
+            }
+          ],
+          "collapsed": false
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization",
+      "name": "SA resynchronization",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "declaredName": "SA resynchronization",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Company SA summary information",
+              "body": "",
+              "label": "← Company SA summary information : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function",
+      "borderNodes": [
+        {
+          "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization::Summary track data",
+          "name": "Summary track data",
+          "typeName": "ItemInputEdge",
+          "type": "ItemUsage",
+          "nodeType": "item",
+          "side": "N",
+          "offset": 0.1,
+          "isParameter": false,
+          "direction": "in"
+        }
+      ]
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period",
+      "name": "Comprehensive report on the blackout period",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "declaredName": "Comprehensive report on the blackout period",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function",
+      "borderNodes": [
+        {
+          "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period::Comprehensive report on the blackout period",
+          "name": "Comprehensive report on the blackout period",
+          "typeName": "ItemOutputEdge",
+          "type": "ItemUsage",
+          "nodeType": "item",
+          "side": "S",
+          "offset": 0.1,
+          "isParameter": false,
+          "direction": "out"
+        }
+      ]
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Resume attack maneuver",
+      "name": "Resume attack maneuver",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "declaredName": "Resume attack maneuver",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Resume attack maneuver",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Comprehensive report on the blackout period",
+      "name": "Comprehensive report on the blackout period",
+      "kind": "ItemUsage",
+      "type": "ItemUsage",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response",
+      "declaredName": "Comprehensive report on the blackout period",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Comprehensive report on the blackout period"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "declaredName": "start",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::start"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "declaredName": "start",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::start"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "declaredName": "start",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::start"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "declaredName": "start",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::start"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response",
+      "declaredName": "start",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::start"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "declaredName": "done",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::done"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "declaredName": "done",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::done"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "declaredName": "done",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::done"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "declaredName": "done",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::done"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "MUM-T-based attack maneuver and electronic warfare response",
+      "declaredName": "done",
+      "qualifiedName": "MUM-T-based attack maneuver and electronic warfare response::done"
+    }
+  ],
+  "edges": [
+    {
+      "id": "Root->IMMBaseSchema:namespaceimport",
+      "source": "Root",
+      "target": "IMMBaseSchema",
+      "kind": "namespaceimport",
+      "data": {
+        "importsAll": false,
+        "declaredName": null
+      }
+    },
+    {
+      "id": "Root->ScalarValues:namespaceimport",
+      "source": "Root",
+      "target": "ScalarValues",
+      "kind": "namespaceimport",
+      "data": {
+        "importsAll": false,
+        "declaredName": null
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response->MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver->MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::TDSS self-diagnosis and normal communication confirmation:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::TDSS self-diagnosis and normal communication confirmation",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver->MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::Sequential reconnaissance drone launch and surveillance deployment:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::Sequential reconnaissance drone launch and surveillance deployment",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::TDSS self-diagnosis and normal communication confirmation->TDSS:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::TDSS self-diagnosis and normal communication confirmation",
+      "target": "TDSS",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::Sequential reconnaissance drone launch and surveillance deployment->Three reconnaissance drones:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::Sequential reconnaissance drone launch and surveillance deployment",
+      "target": "Three reconnaissance drones",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::start->MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::TDSS self-diagnosis and normal communication confirmation:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::start",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::TDSS self-diagnosis and normal communication confirmation",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::TDSS self-diagnosis and normal communication confirmation->MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::Sequential reconnaissance drone launch and surveillance deployment:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::TDSS self-diagnosis and normal communication confirmation",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::Sequential reconnaissance drone launch and surveillance deployment",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::Sequential reconnaissance drone launch and surveillance deployment->MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::done:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::Sequential reconnaissance drone launch and surveillance deployment",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Detect suspected enemy observation post heat source:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Detect suspected enemy observation post heat source",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Decide right bypass maneuver:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Decide right bypass maneuver",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Provide FPV threat alert:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Provide FPV threat alert",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Order dispersed maneuver and air-defense watch:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Order dispersed maneuver and air-defense watch",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::FPV evasive maneuver:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::FPV evasive maneuver",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Detect suspected enemy observation post heat source->Drone 1:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Detect suspected enemy observation post heat source",
+      "target": "Drone 1",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Decide right bypass maneuver->Company commander:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Decide right bypass maneuver",
+      "target": "Company commander",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Provide FPV threat alert->TDSS:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Provide FPV threat alert",
+      "target": "TDSS",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Order dispersed maneuver and air-defense watch->Company commander:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Order dispersed maneuver and air-defense watch",
+      "target": "Company commander",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::FPV evasive maneuver->Subordinate platoons:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::FPV evasive maneuver",
+      "target": "Subordinate platoons",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::start->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::start",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Detect suspected enemy observation post heat source->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Decide right bypass maneuver:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Detect suspected enemy observation post heat source",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Decide right bypass maneuver",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Provide FPV threat alert->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Order dispersed maneuver and air-defense watch:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Provide FPV threat alert",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Order dispersed maneuver and air-defense watch",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Decide right bypass maneuver->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Decide right bypass maneuver",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Order dispersed maneuver and air-defense watch->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Order dispersed maneuver and air-defense watch",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::FPV evasive maneuver->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::FPV evasive maneuver",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Detect suspected enemy observation post heat source:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Detect suspected enemy observation post heat source",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Provide FPV threat alert:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::Provide FPV threat alert",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::FPV evasive maneuver:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New Start Concurrency_1",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::FPV evasive maneuver",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::done:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::New End Concurrency_1",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Activate local sensor-based survival loop:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Activate local sensor-based survival loop",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Transmit drone emergency broadcast:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Transmit drone emergency broadcast",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Smoke screen deployment and evasive maneuver after ATGM alert:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Smoke screen deployment and evasive maneuver after ATGM alert",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New Start Concurrency_2:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New Start Concurrency_2",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New End Concurrency_2:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New End Concurrency_2",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode->Three reconnaissance drones:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode",
+      "target": "Three reconnaissance drones",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Activate local sensor-based survival loop->TDSS:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Activate local sensor-based survival loop",
+      "target": "TDSS",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Transmit drone emergency broadcast->Three reconnaissance drones:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Transmit drone emergency broadcast",
+      "target": "Three reconnaissance drones",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Smoke screen deployment and evasive maneuver after ATGM alert->2nd Platoon:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Smoke screen deployment and evasive maneuver after ATGM alert",
+      "target": "2nd Platoon",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::start->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New Start Concurrency_2:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::start",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New Start Concurrency_2",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Activate local sensor-based survival loop->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Transmit drone emergency broadcast:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Activate local sensor-based survival loop",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Transmit drone emergency broadcast",
+      "kind": "succession",
+      "label": "if 'While the communication blackout state persists' == true",
+      "data": {
+        "guardCondition": "'While the communication blackout state persists' == true",
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Transmit drone emergency broadcast->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Smoke screen deployment and evasive maneuver after ATGM alert:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Transmit drone emergency broadcast",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Smoke screen deployment and evasive maneuver after ATGM alert",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New End Concurrency_2:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New End Concurrency_2",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Smoke screen deployment and evasive maneuver after ATGM alert->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New End Concurrency_2:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Smoke screen deployment and evasive maneuver after ATGM alert",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New End Concurrency_2",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New Start Concurrency_2->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New Start Concurrency_2",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New Start Concurrency_2->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Activate local sensor-based survival loop:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New Start Concurrency_2",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Activate local sensor-based survival loop",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New End Concurrency_2->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::done:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::New End Concurrency_2",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response->MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption->MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption->MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption->MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Resume attack maneuver:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Resume attack maneuver",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization->TDSS:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization",
+      "target": "TDSS",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period->Company commander:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period",
+      "target": "Company commander",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Resume attack maneuver->Subordinate platoons:allocation",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Resume attack maneuver",
+      "target": "Subordinate platoons",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::start->MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::start",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization->MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period->MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Resume attack maneuver:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Comprehensive report on the blackout period",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Resume attack maneuver",
+      "kind": "succession",
+      "label": "if 'Limited mode after link stability confirmation' == true",
+      "data": {
+        "guardCondition": "'Limited mode after link stability confirmation' == true",
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Resume attack maneuver->MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::done:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::Resume attack maneuver",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response->MUM-T-based attack maneuver and electronic warfare response::Comprehensive report on the blackout period:containment",
+      "source": "MUM-T-based attack maneuver and electronic warfare response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Comprehensive report on the blackout period",
+      "kind": "composition"
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::start->MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::start",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver->MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response->MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response->MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption->MUM-T-based attack maneuver and electronic warfare response::done:succession",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response"
+      }
+    },
+    {
+      "id": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode::Summary track data->MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization::Summary track data:flow",
+      "source": "MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode::Summary track data",
+      "target": "MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption::SA resynchronization::Summary track data",
+      "kind": "flow",
+      "data": {
+        "ownerQualifiedName": "MUM-T-based attack maneuver and electronic warfare response"
+      }
+    }
+  ]
+}

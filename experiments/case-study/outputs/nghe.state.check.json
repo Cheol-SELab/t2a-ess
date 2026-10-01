@@ -1,0 +1,39 @@
+{
+  "lines": 101,
+  "summary": {
+    "regions": 3,
+    "states": 8,
+    "transitions": 7
+  },
+  "diagnostics": {
+    "hint": 2,
+    "warning": 3
+  },
+  "diagnosticList": [
+    {
+      "severity": "hint",
+      "line": 18,
+      "message": "Unresolved reference: 'Boolean'"
+    },
+    {
+      "severity": "hint",
+      "line": 19,
+      "message": "Unresolved reference: 'Boolean'"
+    },
+    {
+      "severity": "warning",
+      "line": 22,
+      "message": "succession declares only one end; binary connectors need a source and a target"
+    },
+    {
+      "severity": "warning",
+      "line": 74,
+      "message": "succession declares only one end; binary connectors need a source and a target"
+    },
+    {
+      "severity": "warning",
+      "line": 83,
+      "message": "succession declares only one end; binary connectors need a source and a target"
+    }
+  ]
+}

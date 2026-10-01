@@ -1,0 +1,25 @@
+[P1] The smart port terminal operation system consists of the Terminal Operations Center (TOC), the quay cranes QC-3 and QC-4, the automated guided vehicle (AGV) control system, and the weather observation unit. The AGV control system manages 12 AGVs.
+
+[P2] Externally there are the shipping agency and the port authority; crane operation is handled by the crane operator, and on-site safety management is handled by the safety supervisor.
+
+[P3] At 2:00 p.m., when the weather observation unit measures an instantaneous wind speed of 18 m/s and transmits it to the TOC, the TOC issues the high-wind caution stage. When the instantaneous wind speed reaches 20 m/s or more, the TOC escalates to the alert stage, and at 25 m/s or more, to the work-stop stage.
+
+[P4] In the caution stage, the crane operator reduces the hoisting speed of containers by half, and the AGV control system doubles the AGV waiting interval in the zone under the crane. The two measures are applied simultaneously.
+
+[P5] When the wind speed is measured at 21 m/s at 2:25 p.m., the TOC issues the alert stage and notifies the shipping agency of the possibility of cargo-handling delay. In the alert stage, containers stacked 2 tiers or more must not be hoisted.
+
+[P6] The crane operator stops work by setting down the container being held onto the nearest AGV, and moves to the standby position with the boom raised. The safety supervisor inspects the crane rail locking device and confirms its engagement state.
+
+[P7] To predict the wind speed 30 min ahead, the TOC queries the 10-min average value of the weather observation unit every 5 min. If the average wind speed drops below 20 m/s twice in a row, the TOC is to lift the alert stage.
+
+[P8] At 3:10 p.m., because the wind speed was predicted to rise to 26 m/s, the TOC prepared escalation to the work-stop stage and intended to request a vessel departure hold from the port authority. However, at 3:20 the wind speed weakened sharply, and the request was not sent.
+
+[P9] Because the average wind speeds queried at 3:30 and 3:35 were 18 m/s and 17 m/s respectively, below the threshold twice in a row, the TOC lifts the alert stage and returns to the caution stage.
+
+[P10] The crane operator, having received the alert lifting notice, lowers the boom and returns to the working position, and work can resume only after the safety supervisor releases the rail locking device. If the locking device is not released, the crane cannot move.
+
+[P11] When work resumes, the AGV control system recalculates the transfer sequence of the 38 delayed containers and additionally assigns 4 AGVs to QC-3 to meet the vessel departure time.
+
+[P12] If the high-wind caution stage is not lifted by 5:00 p.m., the TOC deploys the night shift 1 h early. On this day the caution stage was lifted at 4:40, so there was no early deployment of the night shift.
+
+[P13] The goal of this response is to keep the vessel departure delay within 30 min without injury to personnel or damage to equipment.

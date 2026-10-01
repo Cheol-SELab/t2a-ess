@@ -1,0 +1,1027 @@
+{
+ "meta": {
+  "input": "TUNNEL_sealed",
+  "repeat": 3,
+  "condition": "con-mix",
+  "parents": [
+   "corrected/claude-sonnet-5/TUNNEL_sealed_r7.json",
+   "corrected/claude-sonnet-5/TUNNEL_sealed_r8.json",
+   "corrected/claude-sonnet-5/TUNNEL_sealed_r9.json",
+   "corrected/claude-opus-5-5/TUNNEL_sealed_r7.json",
+   "corrected/claude-opus-5-5/TUNNEL_sealed_r8.json",
+   "corrected/claude-opus-5-5/TUNNEL_sealed_r9.json"
+  ],
+  "pivot": "corrected/claude-opus-5-5/TUNNEL_sealed_r9.json",
+  "slot_min": 4,
+  "rel_min": 4,
+  "ok": true,
+  "total_cost_usd": 4.1011,
+  "created_utc": "2026-10-01T04:20:47"
+ },
+ "tau": 0.87,
+ "parse_ok": true,
+ "matcher": "embedding",
+ "scorer_version": "3.1",
+ "slots_tolerant": {
+  "micro": {
+   "gold_coverage": 0.8875,
+   "pred_support": 0.8372,
+   "f1": 0.8616
+  },
+  "per_type": {
+   "scenarios": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 1,
+    "pred": 1
+   },
+   "episodes": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.8,
+    "f1": 0.8889,
+    "gold": 4,
+    "pred": 5
+   },
+   "performers": {
+    "gold_coverage": 0.9,
+    "pred_support": 1.0,
+    "f1": 0.9474,
+    "gold": 10,
+    "pred": 10
+   },
+   "actions": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 19,
+    "pred": 21
+   },
+   "items": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.6667,
+    "f1": 0.8,
+    "gold": 6,
+    "pred": 9
+   },
+   "flows": {
+    "gold_coverage": 0.9286,
+    "pred_support": 0.65,
+    "f1": 0.7647,
+    "gold": 14,
+    "pred": 20
+   },
+   "controls": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.75,
+    "f1": 0.8571,
+    "gold": 3,
+    "pred": 4
+   },
+   "situations": {
+    "gold_coverage": 0.5,
+    "pred_support": 1.0,
+    "f1": 0.6667,
+    "gold": 4,
+    "pred": 2
+   },
+   "state_values": {
+    "gold_coverage": 0.5,
+    "pred_support": 0.3333,
+    "f1": 0.4,
+    "gold": 4,
+    "pred": 3
+   },
+   "events": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 4,
+    "pred": 3
+   },
+   "transitions": {
+    "gold_coverage": 0.6667,
+    "pred_support": 1.0,
+    "f1": 0.8,
+    "gold": 3,
+    "pred": 2
+   },
+   "constraints": {
+    "gold_coverage": 0.6667,
+    "pred_support": 1.0,
+    "f1": 0.8,
+    "gold": 3,
+    "pred": 2
+   },
+   "goals": {
+    "gold_coverage": 0.5,
+    "pred_support": 1.0,
+    "f1": 0.6667,
+    "gold": 2,
+    "pred": 1
+   },
+   "reasons": {
+    "gold_coverage": 0.0,
+    "pred_support": 0.0,
+    "f1": 0.0,
+    "gold": 0,
+    "pred": 0
+   },
+   "observations": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 3,
+    "pred": 3
+   }
+  }
+ },
+ "slots": {
+  "micro": {
+   "tp": 69,
+   "pred": 86,
+   "gold": 80,
+   "precision": 0.8023,
+   "recall": 0.8625,
+   "f1": 0.8313
+  },
+  "per_type": {
+   "scenarios": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "episodes": {
+    "tp": 4,
+    "pred": 5,
+    "gold": 4,
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.8889
+   },
+   "performers": {
+    "tp": 9,
+    "pred": 10,
+    "gold": 10,
+    "precision": 0.9,
+    "recall": 0.9,
+    "f1": 0.9
+   },
+   "actions": {
+    "tp": 19,
+    "pred": 21,
+    "gold": 19,
+    "precision": 0.9048,
+    "recall": 1.0,
+    "f1": 0.95
+   },
+   "items": {
+    "tp": 6,
+    "pred": 9,
+    "gold": 6,
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8
+   },
+   "flows": {
+    "tp": 13,
+    "pred": 20,
+    "gold": 14,
+    "precision": 0.65,
+    "recall": 0.9286,
+    "f1": 0.7647
+   },
+   "controls": {
+    "tp": 3,
+    "pred": 4,
+    "gold": 3,
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1": 0.8571
+   },
+   "situations": {
+    "tp": 2,
+    "pred": 2,
+    "gold": 4,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "state_values": {
+    "tp": 1,
+    "pred": 3,
+    "gold": 4,
+    "precision": 0.3333,
+    "recall": 0.25,
+    "f1": 0.2857
+   },
+   "events": {
+    "tp": 3,
+    "pred": 3,
+    "gold": 4,
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571
+   },
+   "transitions": {
+    "tp": 2,
+    "pred": 2,
+    "gold": 3,
+    "precision": 1.0,
+    "recall": 0.6667,
+    "f1": 0.8
+   },
+   "constraints": {
+    "tp": 2,
+    "pred": 2,
+    "gold": 3,
+    "precision": 1.0,
+    "recall": 0.6667,
+    "f1": 0.8
+   },
+   "goals": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 2,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "reasons": {
+    "tp": 0,
+    "pred": 0,
+    "gold": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "observations": {
+    "tp": 3,
+    "pred": 3,
+    "gold": 3,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   }
+  },
+  "macro_f1": 0.8026
+ },
+ "alignment_pairs": [
+  {
+   "type": "scenarios",
+   "gold": "N_SCN",
+   "gold_label": "Expressway tunnel vehicle fire response",
+   "pred": "SCN_TUNNEL_FIRE_RESPONSE",
+   "pred_label": "Expressway tunnel vehicle fire response",
+   "score": 1.0
+  },
+  {
+   "type": "episodes",
+   "gold": "N_EP_DETECT",
+   "gold_label": "Fire detection and confirmation",
+   "pred": "EP_DETECTION",
+   "pred_label": "Fire detection and confirmation",
+   "score": 1.0
+  },
+  {
+   "type": "episodes",
+   "gold": "N_EP_INITIAL",
+   "gold_label": "Initial response",
+   "pred": "u0_EP_INITIAL_RESPONSE",
+   "pred_label": "Initial emergency response and containment",
+   "score": 0.9
+  },
+  {
+   "type": "episodes",
+   "gold": "N_EP_SUPPRESS",
+   "gold_label": "Fire extinguishment and ventilation",
+   "pred": "EP_RESPONSE",
+   "pred_label": "Emergency response and fire suppression",
+   "score": 0.927
+  },
+  {
+   "type": "episodes",
+   "gold": "N_EP_RESTORE",
+   "gold_label": "Traffic resumption and wrap-up",
+   "pred": "EP_RECOVERY",
+   "pred_label": "Recovery and traffic resumption",
+   "score": 0.948
+  },
+  {
+   "type": "performers",
+   "gold": "N_P_SYSTEM",
+   "gold_label": "Expressway tunnel management system",
+   "pred": "P_TUNNEL_MGMT_SYSTEM",
+   "pred_label": "Expressway tunnel management system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "N_P_CONTROL",
+   "gold_label": "Tunnel control room",
+   "pred": "P_CONTROL_ROOM",
+   "pred_label": "Tunnel control room",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "N_P_DETECTOR",
+   "gold_label": "Fire detector",
+   "pred": "P_FIRE_DETECTOR",
+   "pred_label": "Fire detector",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "N_P_FANS",
+   "gold_label": "12 jet fans",
+   "pred": "P_JET_FANS",
+   "pred_label": "Jet fans (12)",
+   "score": 0.949
+  },
+  {
+   "type": "performers",
+   "gold": "N_P_PA",
+   "gold_label": "Emergency broadcast system",
+   "pred": "P_EMERGENCY_BROADCAST",
+   "pred_label": "Emergency broadcast system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "N_P_FIRE",
+   "gold_label": "Fire station",
+   "pred": "P_FIRE_STATION",
+   "pred_label": "Fire station",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "N_P_KEC",
+   "gold_label": "Road corporation situation room",
+   "pred": "P_SITUATION_ROOM",
+   "pred_label": "Road corporation situation room",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "N_P_OPERATOR",
+   "gold_label": "Control operator",
+   "pred": "P_CONTROL_OPERATOR",
+   "pred_label": "Control operator",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "N_P_PATROL",
+   "gold_label": "Patrol team",
+   "pred": "P_PATROL_TEAM",
+   "pred_label": "Patrol team",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "N_I_ALARM",
+   "gold_label": "Fire alarm",
+   "pred": "I_FIRE_ALARM",
+   "pred_label": "Fire alarm",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "N_I_CCTV",
+   "gold_label": "CCTV footage",
+   "pred": "I_CCTV_FOOTAGE",
+   "pred_label": "CCTV footage",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "N_I_EXT",
+   "gold_label": "Fire extinguisher",
+   "pred": "I_FIRE_EXTINGUISHER",
+   "pred_label": "Fire extinguishers",
+   "score": 0.985
+  },
+  {
+   "type": "items",
+   "gold": "N_I_STATUS",
+   "gold_label": "Suppression status report",
+   "pred": "I_SUPPRESSION_STATUS_REPORT",
+   "pred_label": "Suppression status report",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "N_I_DONE",
+   "gold_label": "Extinguishment completion notice",
+   "pred": "I_EXTINGUISH_NOTICE",
+   "pred_label": "Extinguishment completion notice",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "N_I_RECORD",
+   "gold_label": "Incident record",
+   "pred": "I_INCIDENT_RECORD",
+   "pred_label": "Incident record",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "N_SIT_OPEN",
+   "gold_label": "Tunnel open to traffic",
+   "pred": "SIT_TUNNEL_NORMAL",
+   "pred_label": "Tunnel normal operation",
+   "score": 0.927
+  },
+  {
+   "type": "situations",
+   "gold": "N_SIT_CLOSED",
+   "gold_label": "Tunnel closed",
+   "pred": "SIT_FIRE_EMERGENCY",
+   "pred_label": "Tunnel fire emergency",
+   "score": 0.879
+  },
+  {
+   "type": "state_values",
+   "gold": "N_SV_OPEN",
+   "gold_label": "Tunnel Traffic Open",
+   "pred": "SV_TRAFFIC_OPEN",
+   "pred_label": "tunnel traffic=open",
+   "score": 0.958
+  },
+  {
+   "type": "events",
+   "gold": "N_EVT_70",
+   "gold_label": "Detect temperature of 70 °C at tunnel middle point",
+   "pred": "EVT_HIGH_TEMP",
+   "pred_label": "Temperature of 70 °C at tunnel middle point",
+   "score": 0.967
+  },
+  {
+   "type": "events",
+   "gold": "N_EVT_FIRE",
+   "gold_label": "Vehicle fire confirmed",
+   "pred": "EVT_VEHICLE_FIRE",
+   "pred_label": "Vehicle fire confirmed",
+   "score": 1.0
+  },
+  {
+   "type": "events",
+   "gold": "N_EVT_CO",
+   "gold_label": "Carbon monoxide concentration falls below 30 ppm",
+   "pred": "EVT_CO_BELOW_30",
+   "pred_label": "CO concentration falls below 30 ppm",
+   "score": 0.973
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_MONITOR",
+   "gold_label": "Monitor temperature inside the tunnel",
+   "pred": "A_MONITOR_TEMP",
+   "pred_label": "Monitor tunnel temperature",
+   "score": 0.959
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_DETECT",
+   "gold_label": "Detect temperature of 70 °C at tunnel middle point",
+   "pred": "A_DETECT_TEMP",
+   "pred_label": "Detect 70 °C temperature",
+   "score": 0.923
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_SEND_ALARM",
+   "gold_label": "Send fire alarm to control room",
+   "pred": "A_SEND_FIRE_ALARM",
+   "pred_label": "Send fire alarm",
+   "score": 0.939
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_CONFIRM",
+   "gold_label": "Confirm vehicle fire through CCTV footage",
+   "pred": "A_CONFIRM_FIRE",
+   "pred_label": "Confirm vehicle fire via CCTV",
+   "score": 0.991
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_CLOSE_ENTRY",
+   "gold_label": "Lower tunnel entrance barrier",
+   "pred": "A_LOWER_ENTRANCE_BARRIER",
+   "pred_label": "Lower tunnel entrance barrier",
+   "score": 0.974
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_ANNOUNCE",
+   "gold_label": "Evacuation guidance broadcast",
+   "pred": "A_EVAC_BROADCAST",
+   "pred_label": "Make evacuation guidance broadcast",
+   "score": 0.947
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_FANS_SMOKE",
+   "gold_label": "Operate 12 jet fans in smoke exhaust mode",
+   "pred": "A_RUN_FANS_EXHAUST",
+   "pred_label": "Operate jet fans in smoke exhaust mode",
+   "score": 0.964
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_REQ_FIRE",
+   "gold_label": "Request dispatch from fire station",
+   "pred": "A_REQUEST_DISPATCH",
+   "pred_label": "Request fire station dispatch",
+   "score": 0.977
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_EXTINGUISH",
+   "gold_label": "Attempt initial fire suppression with fire extinguishers",
+   "pred": "A_INITIAL_SUPPRESSION",
+   "pred_label": "Attempt initial fire suppression",
+   "score": 0.951
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_REPORT_STATUS",
+   "gold_label": "Report suppression status every 10 min",
+   "pred": "A_REPORT_STATUS",
+   "pred_label": "Report suppression status",
+   "score": 0.921
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_CLOSE_EXIT",
+   "gold_label": "Lower opposite exit barrier",
+   "pred": "A_LOWER_EXIT_BARRIER",
+   "pred_label": "Lower opposite exit barrier (conditional, not executed this day)",
+   "score": 0.92
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_SUPPRESS",
+   "gold_label": "Completely extinguish fire",
+   "pred": "A_EXTINGUISH_FIRE",
+   "pred_label": "Completely extinguish the fire",
+   "score": 0.986
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_NOTIFY_DONE",
+   "gold_label": "Notify control room of extinguishment completion",
+   "pred": "A_NOTIFY_EXTINGUISH",
+   "pred_label": "Notify extinguishment completion",
+   "score": 0.948
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_FANS_VENT",
+   "gold_label": "Switch jet fans to ventilation mode",
+   "pred": "A_SWITCH_FANS_VENT",
+   "pred_label": "Switch jet fans to ventilation mode",
+   "score": 0.996
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_TOW",
+   "gold_label": "Tow accident vehicle",
+   "pred": "A_TOW_VEHICLE",
+   "pred_label": "Tow the accident vehicle",
+   "score": 0.967
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_REOPEN",
+   "gold_label": "Raise entrance barrier and resume traffic",
+   "pred": "A_RAISE_ENTRANCE_BARRIER",
+   "pred_label": "Raise entrance barrier",
+   "score": 0.933
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_NOTIFY_KEC",
+   "gold_label": "Notify road corporation situation room of traffic resumption",
+   "pred": "A_NOTIFY_RESUMPTION",
+   "pred_label": "Notify traffic resumption",
+   "score": 0.908
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_END_PA",
+   "gold_label": "End emergency broadcast",
+   "pred": "A_END_BROADCAST",
+   "pred_label": "End emergency broadcast",
+   "score": 0.973
+  },
+  {
+   "type": "actions",
+   "gold": "N_A_SUBMIT",
+   "gold_label": "Submit incident record",
+   "pred": "A_SUBMIT_RECORD",
+   "pred_label": "Submit incident record",
+   "score": 0.981
+  },
+  {
+   "type": "constraints",
+   "gold": "N_CN_CO30",
+   "gold_label": "Carbon monoxide concentration below 30 ppm",
+   "pred": "CN_CO_THRESHOLD",
+   "pred_label": "CO concentration below 30 ppm",
+   "score": 0.975
+  },
+  {
+   "type": "constraints",
+   "gold": "N_CN_20MIN",
+   "gold_label": "Extinguish fire within 20 min",
+   "pred": "CN_EXTINGUISH_20MIN",
+   "pred_label": "Extinguish the fire within 20 min",
+   "score": 0.993
+  },
+  {
+   "type": "goals",
+   "gold": "N_G_20MIN",
+   "gold_label": "Extinguish fire within 20 min",
+   "pred": "G_EXTINGUISH_NO_CASUALTIES",
+   "pred_label": "Extinguish the fire within 20 min without casualties",
+   "score": 0.966
+  },
+  {
+   "type": "observations",
+   "gold": "N_OBS_TEMP",
+   "gold_label": "Monitor temperature inside the tunnel",
+   "pred": "OBS_TEMP_MONITORING",
+   "pred_label": "Tunnel temperature monitoring",
+   "score": 0.969
+  },
+  {
+   "type": "observations",
+   "gold": "N_OBS_70",
+   "gold_label": "Detect temperature of 70 °C at tunnel middle point",
+   "pred": "OBS_HIGH_TEMP",
+   "pred_label": "70 °C temperature detection",
+   "score": 0.932
+  },
+  {
+   "type": "observations",
+   "gold": "N_OBS_FIRE",
+   "gold_label": "Vehicle fire confirmed",
+   "pred": "OBS_FIRE_CONFIRMATION",
+   "pred_label": "Vehicle fire confirmation via CCTV",
+   "score": 0.94
+  },
+  {
+   "type": "transitions",
+   "gold": "N_TR_CLOSE",
+   "gold_label": "Tunnel from open to closed",
+   "pred": "TR_NORMAL_TO_EMERGENCY",
+   "pred_label": "Transition from normal operation to fire emergency",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "N_TR_FAN",
+   "gold_label": "From smoke exhaust mode to ventilation mode",
+   "pred": "TR_EMERGENCY_TO_EXTINGUISHED",
+   "pred_label": "Transition from fire emergency to fire extinguished",
+   "score": 0.888
+  },
+  {
+   "type": "flows",
+   "gold": "N_F01",
+   "gold_label": "Send fire alarm after detection",
+   "pred": "F_DETECT_TO_ALARM",
+   "pred_label": "Send alarm after detection",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F02",
+   "gold_label": "CCTV confirmation after alarm",
+   "pred": "F_ALARM_TO_CONFIRM",
+   "pred_label": "Fire alarm to control room for confirmation",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F03",
+   "gold_label": "Lower entrance barrier after fire confirmation",
+   "pred": "F_CONFIRM_TO_BARRIER",
+   "pred_label": "Lower entrance barrier when fire confirmed",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F04",
+   "gold_label": "Evacuation broadcast after fire confirmation",
+   "pred": "F_CONFIRM_TO_BROADCAST",
+   "pred_label": "Evacuation broadcast when fire confirmed",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F05",
+   "gold_label": "Smoke exhaust operation after fire confirmation",
+   "pred": "F_BROADCAST_TO_FANS",
+   "pred_label": "Smoke exhaust after evacuation broadcast",
+   "score": 0.933
+  },
+  {
+   "type": "flows",
+   "gold": "N_F06",
+   "gold_label": "Dispatch request after smoke exhaust operation",
+   "pred": "F_FANS_TO_DISPATCH",
+   "pred_label": "Dispatch request after smoke exhaust start",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F07",
+   "gold_label": "Status report after initial fire suppression",
+   "pred": "F_SUPPRESS_TO_REPORT",
+   "pred_label": "Status reporting during suppression",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F08",
+   "gold_label": "Fire extinguishment after dispatch request",
+   "pred": "F_DISPATCH_TO_EXTINGUISH",
+   "pred_label": "Dispatch request to fire station",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F09",
+   "gold_label": "Completion notice after extinguishment",
+   "pred": "F_EXTINGUISH_TO_NOTIFY",
+   "pred_label": "Notify after extinguishment",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F10",
+   "gold_label": "Switch to ventilation mode after extinguishment completion",
+   "pred": "F_NOTICE_TO_VENT",
+   "pred_label": "Ventilation mode after extinguishment notice",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F11",
+   "gold_label": "Vehicle towing after extinguishment completion",
+   "pred": "F_EXTINGUISH_TO_TOW",
+   "pred_label": "Tow vehicle after extinguishment",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F12",
+   "gold_label": "Traffic resumption after ventilation",
+   "pred": "F_VENT_TO_RAISE",
+   "pred_label": "Raise entrance barrier when CO below 30 ppm",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "N_F14",
+   "gold_label": "End broadcast after notice",
+   "pred": "F_NOTIFY_TO_END_BROADCAST",
+   "pred_label": "End emergency broadcast after notification",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "N_C01",
+   "gold_label": "Entrance barrier lowering and evacuation broadcast proceed simultaneously",
+   "pred": "C_PAR_BARRIER_BROADCAST",
+   "pred_label": "Entrance barrier lowering and evacuation broadcast in parallel",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "N_C02",
+   "gold_label": "Report suppression status every 10 min",
+   "pred": "C_REPORT_LOOP",
+   "pred_label": "Periodic suppression status report",
+   "score": 0.915
+  },
+  {
+   "type": "controls",
+   "gold": "N_C03",
+   "gold_label": "Judge smoke spread to evacuation passage",
+   "pred": "C_SMOKE_SPREAD",
+   "pred_label": "Smoke spread to evacuation passage decision",
+   "score": 0.952
+  }
+ ],
+ "type_confusion": {},
+ "source_ref_accuracy": {
+  "correct": 65,
+  "aligned_with_gold_ref": 69,
+  "accuracy": 0.942
+ },
+ "relations": {
+  "strict": {
+   "tp": 91,
+   "pred": 125,
+   "gold": 118,
+   "precision": 0.728,
+   "recall": 0.7712,
+   "f1": 0.749,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 5,
+     "recalled": 2
+    },
+    "constrained_by": {
+     "gold": 3,
+     "recalled": 2
+    },
+    "controls_flow": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "custom/contains_action": {
+     "gold": 19,
+     "recalled": 14
+    },
+    "flow_source": {
+     "gold": 14,
+     "recalled": 12
+    },
+    "flow_target": {
+     "gold": 14,
+     "recalled": 13
+    },
+    "from_situation": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "has_episode": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 5,
+     "recalled": 4
+    },
+    "has_state_value": {
+     "gold": 4,
+     "recalled": 0
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "performed_by": {
+     "gold": 19,
+     "recalled": 19
+    },
+    "produces_item": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "provided_to": {
+     "gold": 6,
+     "recalled": 6
+    },
+    "to_situation": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "triggers": {
+     "gold": 7,
+     "recalled": 3
+    },
+    "uses_item": {
+     "gold": 2,
+     "recalled": 2
+    }
+   }
+  },
+  "normalized": {
+   "tp": 91,
+   "pred": 125,
+   "gold": 118,
+   "precision": 0.728,
+   "recall": 0.7712,
+   "f1": 0.749,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 5,
+     "recalled": 2
+    },
+    "constrained_by": {
+     "gold": 3,
+     "recalled": 2
+    },
+    "contains_action": {
+     "gold": 19,
+     "recalled": 14
+    },
+    "controls_flow": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "flow_source": {
+     "gold": 14,
+     "recalled": 12
+    },
+    "flow_target": {
+     "gold": 14,
+     "recalled": 13
+    },
+    "from_situation": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "has_episode": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 5,
+     "recalled": 4
+    },
+    "has_state_value": {
+     "gold": 4,
+     "recalled": 0
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "performed_by": {
+     "gold": 19,
+     "recalled": 19
+    },
+    "produces_item": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "provided_to": {
+     "gold": 6,
+     "recalled": 6
+    },
+    "to_situation": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "triggers": {
+     "gold": 7,
+     "recalled": 3
+    },
+    "uses_item": {
+     "gold": 2,
+     "recalled": 2
+    }
+   }
+  },
+  "untyped": {
+   "tp": 92,
+   "pred": 119,
+   "gold": 118,
+   "precision": 0.7731,
+   "recall": 0.7797,
+   "f1": 0.7764
+  }
+ },
+ "atomic_facts": {
+  "found": 0,
+  "total": 0,
+  "missing": []
+ },
+ "required_relations": {
+  "hit": 0,
+  "total": 0
+ },
+ "forbidden_relations": {
+  "violated": 0,
+  "total": 0
+ },
+ "structure": {
+  "actions": 21,
+  "actions_in_episode": 19,
+  "actions_allocated": 21,
+  "nested_mode": false,
+  "dangling_relations": 0,
+  "relations": 125
+ }
+}

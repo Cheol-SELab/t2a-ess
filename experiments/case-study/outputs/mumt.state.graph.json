@@ -1,0 +1,224 @@
+{
+  "title": "MUM-T attack operation under EW",
+  "scenario": "MUM-T attack operation under EW",
+  "parallel": true,
+  "events": [
+    {
+      "id": "MUMT_EVT_PACKET_LOSS_PERSISTED",
+      "label": "Packet loss above threshold persists"
+    },
+    {
+      "id": "MUMT_EVT_HEARTBEAT_LOSS_PERSISTED",
+      "label": "Heartbeat loss persists"
+    },
+    {
+      "id": "MUMT_EVT_LINK_STABLE",
+      "label": "Link remains stable"
+    },
+    {
+      "id": "MUMT_EVT_BANDWIDTH_RECOVERED",
+      "label": "Bandwidth recovered"
+    },
+    {
+      "id": "MUMT_EVT_DRONE_BATTERY_DEPLETED",
+      "label": "Drone 1 battery depleted, lands"
+    }
+  ],
+  "guards": [
+    {
+      "id": "MUMT_C_PACKET_LOSS_THRESHOLD",
+      "label": "packet_loss_rate > threshold for configured_duration"
+    },
+    {
+      "id": "MUMT_C_HEARTBEAT_TIMEOUT",
+      "label": "heartbeat_loss_duration >= configured_duration"
+    },
+    {
+      "id": "MUMT_C_LINK_STABILITY",
+      "label": "link_stable_duration >= configured_duration"
+    }
+  ],
+  "regions": [
+    {
+      "states": [
+        {
+          "id": "MUMT_SIT_COMM_NORMAL",
+          "label": "Comms normal",
+          "owners": [
+            "E1 Preparation under normal comms"
+          ],
+          "values": [
+            {
+              "variable": "communication_mode",
+              "value": "normal",
+              "unit": ""
+            },
+            {
+              "variable": "data_mode",
+              "value": "video_stream",
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "id": "MUMT_SIT_COMM_LIMITED",
+          "label": "Comms limited",
+          "owners": [
+            "E3 EW jamming and comms degradation"
+          ],
+          "values": [
+            {
+              "variable": "communication_mode",
+              "value": "limited",
+              "unit": ""
+            },
+            {
+              "variable": "data_mode",
+              "value": "track_summary",
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "id": "MUMT_SIT_COMM_DISCONNECTED",
+          "label": "Comms disconnected",
+          "owners": [
+            "E3 EW jamming and comms degradation"
+          ],
+          "values": [
+            {
+              "variable": "communication_mode",
+              "value": "disconnected",
+              "unit": ""
+            }
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "id": "MUMT_TR_NORMAL_TO_LIMITED",
+          "label": "Normal to limited",
+          "from": "MUMT_SIT_COMM_NORMAL",
+          "to": "MUMT_SIT_COMM_LIMITED",
+          "events": [
+            "Packet loss above threshold persists"
+          ],
+          "guards": [
+            "packet_loss_rate > threshold for configured_duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": "MUMT_TR_LIMITED_TO_DISCONNECTED",
+          "label": "Limited to disconnected",
+          "from": "MUMT_SIT_COMM_LIMITED",
+          "to": "MUMT_SIT_COMM_DISCONNECTED",
+          "events": [
+            "Heartbeat loss persists"
+          ],
+          "guards": [
+            "heartbeat_loss_duration >= configured_duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": "MUMT_TR_DISCONNECTED_TO_LIMITED",
+          "label": "Disconnected to limited",
+          "from": "MUMT_SIT_COMM_DISCONNECTED",
+          "to": "MUMT_SIT_COMM_LIMITED",
+          "events": [
+            "Link remains stable"
+          ],
+          "guards": [
+            "link_stable_duration >= configured_duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": "MUMT_TR_LIMITED_TO_NORMAL",
+          "label": "Limited to normal",
+          "from": "MUMT_SIT_COMM_LIMITED",
+          "to": "MUMT_SIT_COMM_NORMAL",
+          "events": [
+            "Bandwidth recovered"
+          ],
+          "guards": [],
+          "actions": []
+        }
+      ],
+      "initial": "MUMT_SIT_COMM_NORMAL",
+      "id": "r0",
+      "label": "communication_mode"
+    },
+    {
+      "states": [
+        {
+          "id": "MUMT_SIT_MISSION_SECURED",
+          "label": "Objective secured",
+          "owners": [
+            "E4 Comms recovery and attack resumption"
+          ],
+          "values": [
+            {
+              "variable": "combat_power",
+              "value": "maintained",
+              "unit": ""
+            }
+          ]
+        }
+      ],
+      "transitions": [],
+      "initial": "MUMT_SIT_MISSION_SECURED",
+      "id": "r1",
+      "label": "combat_power"
+    },
+    {
+      "states": [
+        {
+          "id": "MUMT_SIT_DRONE_3",
+          "label": "Three drones available",
+          "owners": [
+            "E1 Preparation under normal comms"
+          ],
+          "values": [
+            {
+              "variable": "available_drone_count",
+              "value": 3,
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "id": "MUMT_SIT_DRONE_2",
+          "label": "Two drones available",
+          "owners": [
+            "E4 Comms recovery and attack resumption"
+          ],
+          "values": [
+            {
+              "variable": "available_drone_count",
+              "value": 2,
+              "unit": ""
+            }
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "id": "MUMT_TR_DRONE_COUNT_REDUCED",
+          "label": "Available drones reduced from three to two",
+          "from": "MUMT_SIT_DRONE_3",
+          "to": "MUMT_SIT_DRONE_2",
+          "events": [
+            "Drone 1 battery depleted, lands"
+          ],
+          "guards": [],
+          "actions": []
+        }
+      ],
+      "initial": "MUMT_SIT_DRONE_3",
+      "id": "r2",
+      "label": "available_drone_count"
+    }
+  ]
+}

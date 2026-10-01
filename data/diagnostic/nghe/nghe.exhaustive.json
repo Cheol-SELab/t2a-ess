@@ -1,0 +1,3124 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "T2A_NGHE_UNSTRUCTURED_EXHAUSTIVE_001",
+    "title": "NGHE autonomous construction unstructured test text T2A-ESS exhaustive extraction result",
+    "extraction_schema": "Text2Activity Extraction Slot Schema",
+    "schema_acronym": "T2A-ESS",
+    "target_standard": [
+      "KerML",
+      "SysML v2"
+    ],
+    "extraction_scope": "exhaustive_sentence_clause_level",
+    "source_documents": [
+      {
+        "document_id": "DOC_NGHE_UNSTRUCTURED",
+        "path": "4_researches/text2activity/data/test-t2a/nghe.text.md",
+        "title": "NGHE autonomous construction unstructured test text"
+      }
+    ],
+    "source_units": [
+      {
+        "source_unit_id": "NGHE_L03",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 3,
+        "line_end": 3,
+        "text": "The NGHE site deployment, the 72 h 38,000 m3 target, and the conditions of 25% cost reduction, 30% schedule reduction, zero personnel accidents, and 0 carbon emissions were presented."
+      },
+      {
+        "source_unit_id": "NGHE_L05",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 5,
+        "line_end": 5,
+        "text": "The maintenance team installed BSS_T, ESS_T, and SCS and stockpiled battery packs, and the site supervisor and the ICCC confirmed the RTDD latency and HSM authentication."
+      },
+      {
+        "source_unit_id": "NGHE_L07",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 7,
+        "line_end": 7,
+        "text": "DMSS and ASPCS created the terrain data, the ICCC and AI_ICP reflected it in the BIM/digital twin model, and the remote supervisor approved the Level 3 start."
+      },
+      {
+        "source_unit_id": "NGHE_L09",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 9,
+        "line_end": 9,
+        "text": "The 19 units of U-EEX, U-EDT, U-EDB, and U-ERC equipment were offloaded sequentially and then simultaneously performed authentication and calibration and reported the ready status."
+      },
+      {
+        "source_unit_id": "NGHE_L11",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 11,
+        "line_end": 11,
+        "text": "AI_ICP allocated the excavation points, quotas, and optimal routes to the unloading area, and the equipment started preparing for excavation, hauling, grading, and compaction."
+      },
+      {
+        "source_unit_id": "NGHE_L13",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 13,
+        "line_end": 13,
+        "text": "When the 2 h operation indicators came within the normal range, the remote supervisor approved the transition to Level 4 full autonomy mode."
+      },
+      {
+        "source_unit_id": "NGHE_L15",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 15,
+        "line_end": 15,
+        "text": "At the 6th hour of operation, an output of about 580 m3 per hour was maintained, and the night noise condition of 65 dB or less and operator shift changes were managed."
+      },
+      {
+        "source_unit_id": "NGHE_L17",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 17,
+        "line_end": 17,
+        "text": "After U-EEX Unit 1 SoC reached 15%, Eco Mode, return to BSS_T, battery replacement within 5 min, a 15 min swap cycle, and prevention of 2 or more units leaving simultaneously were performed."
+      },
+      {
+        "source_unit_id": "NGHE_L19",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 19,
+        "line_end": 19,
+        "text": "At the 23 h and 24 h points, automatic performance reports were generated, and the cumulative earthwork volume, zero accidents, 0 carbon emissions, and operating rate were recorded."
+      },
+      {
+        "source_unit_id": "NGHE_L21",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 21,
+        "line_end": 21,
+        "text": "The AI_ICP PHM module detected the hydraulic system anomaly sign of U-EDT Unit 7, and the maintenance team replaced the hydraulic module within 1 h."
+      },
+      {
+        "source_unit_id": "NGHE_L23",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 23,
+        "line_end": 23,
+        "text": "The onboard system applied the OTA route optimization patch in a rolling manner, the output approached about 600 m3, and U-ERC performed compaction work."
+      },
+      {
+        "source_unit_id": "NGHE_L25",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 25,
+        "line_end": 25,
+        "text": "On the morning of D+2, dense fog brought visibility to 200 m or less and the sensor confidence score dropped, so AI_ICP proposed a downgrade from Level 4 to Level 3."
+      },
+      {
+        "source_unit_id": "NGHE_L27",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 27,
+        "line_end": 27,
+        "text": "The U-EEX Unit 3 HSM detected the forged command packet, and the security system blocked the external public network and switched to the internal closed security network."
+      },
+      {
+        "source_unit_id": "NGHE_L29",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 29,
+        "line_end": 29,
+        "text": "When the fog cleared and visibility of 1 km or more and the normal recovery of sensor confidence were confirmed, the remote supervisor approved the return to Level 4."
+      },
+      {
+        "source_unit_id": "NGHE_L31",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 31,
+        "line_end": 31,
+        "text": "When the heavy rain forecast came in on the night of D+2, AI_ICP proposed securing maximum construction volume, completing battery swaps preemptively, and designating safe evacuation positions."
+      },
+      {
+        "source_unit_id": "NGHE_L33",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 33,
+        "line_end": 33,
+        "text": "The U-EEX Unit 2 LiDAR and camera lens were covered 50% or more, and it detected the maintenance worker approach, expanded the Keep-out Zone 2 times, and then came to a full stop."
+      },
+      {
+        "source_unit_id": "NGHE_L35",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 35,
+        "line_end": 35,
+        "text": "When the heavy rain intensified, the remote supervisor issued a forced work stop command, and all equipment switched to Level 1 emergency stop mode and waited at the safe evacuation positions."
+      },
+      {
+        "source_unit_id": "NGHE_L37",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 37,
+        "line_end": 37,
+        "text": "After the heavy rain ended, DMSS and ASPCS performed terrain rescan and reference point re-correction, 2 subsidence zones were identified, and AI_ICP recalculated the bypass routes."
+      },
+      {
+        "source_unit_id": "NGHE_L39",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 39,
+        "line_end": 39,
+        "text": "After the site safety inspection, construction resumed in Level 3, and after about 30 min of normal operation was confirmed, the Level 4 transition was approved again."
+      },
+      {
+        "source_unit_id": "NGHE_L41",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 41,
+        "line_end": 41,
+        "text": "Following the moisture content changes after the heavy rain, the compaction pressure and number of passes were automatically adjusted, and at the 72 h completion point the cumulative earthwork volume became about 38,200 m3."
+      },
+      {
+        "source_unit_id": "NGHE_L43",
+        "document": "DOC_NGHE_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 43,
+        "line_end": 43,
+        "text": "The final report recorded zero personnel accidents, net-zero carbon emissions, an operating rate of 95.2%, availability of 99.1%, construction error of +-3 cm, and route-following precision of +-4.2 cm."
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "NGHE_SCN_EX_72H_AUTONOMOUS_CONSTRUCTION",
+        "label": "NGHE 72 h autonomous construction full scenario",
+        "summary": "The NGHE unmanned equipment fleet performs autonomous construction for 72 h and, through fog, cyber attack, heavy rain, maintenance, battery swap, and recovery, achieves the target earthwork volume and the safety/carbon conditions.",
+        "success_criteria_texts": [
+          "At least 38,000 m3 of earthwork within 72 h",
+          "Zero personnel accidents",
+          "Net-zero carbon emissions",
+          "System availability at the 99% level",
+          "BIM-based construction error within +-3 cm"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.96
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "NGHE_EP_EX_MISSION_CONTEXT",
+        "label": "Mission goals and operating conditions",
+        "order_index": 1,
+        "summary": "The 72 h goal and the cost/schedule/safety/carbon conditions are set.",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.92
+      },
+      {
+        "episode_id": "NGHE_EP_EX_SETUP",
+        "label": "Infrastructure installation and terrain model construction",
+        "order_index": 2,
+        "summary": "BSS_T, ESS_T, SCS, RTDD, HSM, DMSS, ASPCS, and BIM/digital twin are prepared.",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.93
+      },
+      {
+        "episode_id": "NGHE_EP_EX_CALIBRATION",
+        "label": "Equipment offloading, authentication, calibration",
+        "order_index": 3,
+        "summary": "The 19 units of equipment are offloaded and simultaneously perform authentication and calibration.",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.92
+      },
+      {
+        "episode_id": "NGHE_EP_EX_AUTONOMOUS_PRODUCTION",
+        "label": "Level 4 autonomous construction and production operation",
+        "order_index": 4,
+        "summary": "After Level 4 approval, excavation, hauling, grading, compaction, and performance reporting follow.",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.94
+      },
+      {
+        "episode_id": "NGHE_EP_EX_ENERGY_MAINTENANCE",
+        "label": "Energy management, maintenance, OTA update",
+        "order_index": 5,
+        "summary": "Battery swap, PHM maintenance, and OTA update are performed without work stop.",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.94
+      },
+      {
+        "episode_id": "NGHE_EP_EX_FOG_CYBER",
+        "label": "Fog and cyber threat response",
+        "order_index": 6,
+        "summary": "After the Level 3 downgrade due to fog, detects the forged command packet and performs security network isolation.",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.94
+      },
+      {
+        "episode_id": "NGHE_EP_EX_RAIN_STOP",
+        "label": "Heavy rain, sensor contamination, work stop",
+        "order_index": 7,
+        "summary": "Heavy rain and sensor contamination, maintenance worker approach, and Level 1 emergency stop and safe evacuation occur.",
+        "source_ref": {
+          "source_unit_id": "NGHE_L31"
+        },
+        "confidence": 0.94
+      },
+      {
+        "episode_id": "NGHE_EP_EX_RECOVERY_COMPLETE",
+        "label": "Recovery after heavy rain and mission completion",
+        "order_index": 8,
+        "summary": "Rescan, reference point re-correction, route recalculation, Level 3 resumption, return to Level 4, and final goal achievement are performed.",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.94
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "NGHE_SIT_EX_PREPARED_INFRA",
+        "label": "Infrastructure ready state",
+        "description": "State in which BSS_T, ESS_T, SCS, battery packs, RTDD, and HSM authentication are prepared",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "situation_id": "NGHE_SIT_EX_READY_EQUIPMENT",
+        "label": "All equipment ready state",
+        "description": "State in which the 19 units of equipment have completed authentication and calibration",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.92
+      },
+      {
+        "situation_id": "NGHE_SIT_EX_LEVEL3",
+        "label": "Level 3 supervised autonomy mode",
+        "description": "State in which autonomous construction is performed with the remote supervisor's approval and under supervision",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.95
+      },
+      {
+        "situation_id": "NGHE_SIT_EX_LEVEL4",
+        "label": "Level 4 full autonomy mode",
+        "description": "State in which AI_ICP performs most process planning and execution autonomously",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.95
+      },
+      {
+        "situation_id": "NGHE_SIT_EX_ECO_SWAP",
+        "label": "Eco Mode and battery swap state",
+        "description": "State in which Eco Mode, return to BSS_T, and battery replacement are performed after SoC reaches 15%",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.94
+      },
+      {
+        "situation_id": "NGHE_SIT_EX_MAINTENANCE",
+        "label": "Preventive maintenance state",
+        "description": "State in which non-core route reassignment and hydraulic module replacement are performed due to the U-EDT Unit 7 hydraulic system anomaly sign",
+        "source_ref": {
+          "source_unit_id": "NGHE_L21"
+        },
+        "confidence": 0.9
+      },
+      {
+        "situation_id": "NGHE_SIT_EX_CYBER_ISOLATED",
+        "label": "Internal closed security network operation state",
+        "description": "State in which the external public network has been blocked after the forged command packet is detected",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.94
+      },
+      {
+        "situation_id": "NGHE_SIT_EX_LEVEL1_STOP",
+        "label": "Level 1 emergency stop and safe evacuation state",
+        "description": "State in which all equipment has switched to Level 1 during heavy rain and waits at safe evacuation positions",
+        "source_ref": {
+          "source_unit_id": "NGHE_L35"
+        },
+        "confidence": 0.95
+      },
+      {
+        "situation_id": "NGHE_SIT_EX_RECOVERY",
+        "label": "Recovery after heavy rain state",
+        "description": "State in which rescan, reference point re-correction, route recalculation, and Level 3 resumption are performed",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.92
+      },
+      {
+        "situation_id": "NGHE_SIT_EX_MISSION_COMPLETE",
+        "label": "72 h mission completion state",
+        "description": "State in which the target earthwork volume and the safety/carbon/availability indicators are achieved",
+        "source_ref": {
+          "source_unit_id": "NGHE_L43"
+        },
+        "confidence": 0.95
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "NGHE_SV_EX_TARGET_VOLUME",
+        "subject_text": "NGHE mission",
+        "variable": "target_volume",
+        "value": 38000,
+        "unit": "m3",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.96
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_TOTAL_VOLUME",
+        "subject_text": "Entire site construction",
+        "variable": "total_volume",
+        "value": 100000,
+        "unit": "m3",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.94
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_COST_REDUCTION",
+        "subject_text": "NGHE mission",
+        "variable": "cost_reduction_goal",
+        "value": 25,
+        "unit": "percent",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.94
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_SCHEDULE_REDUCTION",
+        "subject_text": "NGHE mission",
+        "variable": "schedule_reduction_goal",
+        "value": 30,
+        "unit": "percent",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.94
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_BATTERY_PACK_COUNT",
+        "subject_text": "BSS_T",
+        "variable": "charged_battery_pack_count",
+        "value": 24,
+        "unit": "pack",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.93
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_RTDD_LATENCY",
+        "subject_text": "RTDD",
+        "variable": "end_to_end_latency",
+        "value": 20,
+        "unit": "ms",
+        "comparator": "lte",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.93
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_ENCRYPTION_DELAY",
+        "subject_text": "HSM authentication",
+        "variable": "encryption_delay",
+        "value": 2,
+        "unit": "ms",
+        "comparator": "lte",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_EQUIPMENT_COUNT",
+        "subject_text": "Unmanned equipment fleet",
+        "variable": "equipment_count",
+        "value": 19,
+        "unit": "equipment",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.96
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_LEVEL3",
+        "subject_text": "Unmanned equipment fleet",
+        "variable": "autonomy_level",
+        "value": "Level 3",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.96
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_LEVEL4",
+        "subject_text": "Unmanned equipment fleet",
+        "variable": "autonomy_level",
+        "value": "Level 4",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.96
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_LEVEL1",
+        "subject_text": "Unmanned equipment fleet",
+        "variable": "autonomy_level",
+        "value": "Level 1",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "NGHE_L35"
+        },
+        "confidence": 0.96
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_PRODUCTION_RATE_580",
+        "subject_text": "NGHE construction",
+        "variable": "production_rate",
+        "value": 580,
+        "unit": "m3/h",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L15"
+        },
+        "confidence": 0.94
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_NOISE_LIMIT",
+        "subject_text": "Electric equipment",
+        "variable": "noise",
+        "value": 65,
+        "unit": "dB",
+        "comparator": "lte",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L15"
+        },
+        "confidence": 0.92
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_SOC_15",
+        "subject_text": "U-EEX Unit 1",
+        "variable": "battery_soc",
+        "value": 15,
+        "unit": "percent",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.96
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_SWAP_DURATION_5",
+        "subject_text": "BSS_T",
+        "variable": "swap_duration",
+        "value": 5,
+        "unit": "minute",
+        "comparator": "lte",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.95
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_VISIBILITY_200",
+        "subject_text": "Site environment",
+        "variable": "visibility",
+        "value": 200,
+        "unit": "m",
+        "comparator": "lte",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.95
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_SPEED_LIMIT_5",
+        "subject_text": "Unmanned equipment fleet",
+        "variable": "speed_limit",
+        "value": 5,
+        "unit": "km/h",
+        "comparator": "lte",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.93
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_RAIN_30",
+        "subject_text": "Site environment",
+        "variable": "rainfall_rate",
+        "value": 30,
+        "unit": "mm/h",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L31"
+        },
+        "confidence": 0.93
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_SENSOR_OCCLUSION_50",
+        "subject_text": "U-EEX Unit 2 sensors",
+        "variable": "lens_occlusion",
+        "value": 50,
+        "unit": "percent",
+        "comparator": "gte",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.93
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_ACTUAL_VOLUME",
+        "subject_text": "NGHE mission",
+        "variable": "actual_volume",
+        "value": 38200,
+        "unit": "m3",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L41"
+        },
+        "confidence": 0.96
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_AVAILABILITY",
+        "subject_text": "NGHE system",
+        "variable": "availability",
+        "value": 99.1,
+        "unit": "percent",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L43"
+        },
+        "confidence": 0.94
+      },
+      {
+        "state_value_id": "NGHE_SV_EX_ZERO_ACCIDENT",
+        "subject_text": "NGHE mission",
+        "variable": "human_accident_count",
+        "value": 0,
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_L43"
+        },
+        "confidence": 0.95
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "NGHE_OBS_EX_RTDD",
+        "label": "Confirm RTDD latency",
+        "observer_text": "Site supervisor and ICCC",
+        "observed_text": "End-to-end latency within 20 ms",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_HSM",
+        "label": "HSM authentication judged normal",
+        "observer_text": "Site supervisor, ICCC",
+        "observed_text": "HSM digital signature and TLS 1.3 connection normal",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_READY",
+        "label": "All equipment ready report",
+        "observer_text": "Unmanned equipment fleet",
+        "observed_text": "Sensor package initialization, GPS-RTK correction, terrain data download completed",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.91
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_LEVEL4_METRICS",
+        "label": "Confirm operation indicators normal for 2 h",
+        "observer_text": "Remote supervisor",
+        "observed_text": "Collision avoidance between equipment, loading precision, route optimization normal",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.92
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_SOC_LOW",
+        "label": "Detect U-EEX Unit 1 SoC 15%",
+        "observer_text": "AI_ICP",
+        "observed_text": "Battery SoC reaches 15%",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.95
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_PHM",
+        "label": "Detect U-EDT Unit 7 hydraulic anomaly sign",
+        "observer_text": "AI_ICP PHM module",
+        "observed_text": "Hydraulic system pressure pattern anomaly",
+        "source_ref": {
+          "source_unit_id": "NGHE_L21"
+        },
+        "confidence": 0.92
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_FOG_CONF",
+        "label": "Detect sensor confidence drop due to fog",
+        "observer_text": "AI_ICP",
+        "observed_text": "Visibility 200 m or less and sensor confidence score drop",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.94
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_FORGED_PACKET",
+        "label": "Detect forged command packet",
+        "observer_text": "U-EEX Unit 3 HSM",
+        "observed_text": "Forged digital signature of received command packet",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.95
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_FOG_CLEAR",
+        "label": "Confirm visibility and sensor confidence recovery",
+        "observer_text": "Remote supervisor",
+        "observed_text": "Visibility 1 km or more, sensor confidence in normal range",
+        "source_ref": {
+          "source_unit_id": "NGHE_L29"
+        },
+        "confidence": 0.91
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_SENSOR_OCCLUSION",
+        "label": "Detect lens covered 50% or more",
+        "observer_text": "U-EEX Unit 2",
+        "observed_text": "LiDAR and camera lens covered 50% or more by sticky soil",
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.94
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_PEDESTRIAN",
+        "label": "Maintenance worker approach detected",
+        "observer_text": "U-EEX Unit 2",
+        "observed_text": "Maintenance team worker approach",
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.93
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_SUBSIDENCE",
+        "label": "Identify 2 ground subsidence zones",
+        "observer_text": "DMSS, ASPCS",
+        "observed_text": "2 ground subsidence zones after heavy rain",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.93
+      },
+      {
+        "observation_id": "NGHE_OBS_EX_FINAL_RESULTS",
+        "label": "Record final performance indicators",
+        "observer_text": "ICCC, AI_ICP",
+        "observed_text": "38,200 m3, zero accidents, net-zero, availability 99.1%",
+        "source_ref": {
+          "source_unit_id": "NGHE_L43"
+        },
+        "confidence": 0.95
+      }
+    ],
+    "events": [
+      {
+        "event_id": "NGHE_EVT_EX_MISSION_START",
+        "label": "NGHE site deployment start",
+        "event_type": "mission_start",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.88
+      },
+      {
+        "event_id": "NGHE_EVT_EX_INFRA_READY",
+        "label": "Energy and communication infrastructure prepared",
+        "event_type": "readiness_event",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "event_id": "NGHE_EVT_EX_EQUIPMENT_READY",
+        "label": "All equipment ready",
+        "event_type": "readiness_event",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.92
+      },
+      {
+        "event_id": "NGHE_EVT_EX_LEVEL4_APPROVED",
+        "label": "Level 4 transition approval",
+        "event_type": "approval_completion",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.95
+      },
+      {
+        "event_id": "NGHE_EVT_EX_SOC_LOW",
+        "label": "SoC reaches 15%",
+        "event_type": "threshold_crossing",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.95
+      },
+      {
+        "event_id": "NGHE_EVT_EX_PHM_WARNING",
+        "label": "PHM preventive maintenance alert",
+        "event_type": "maintenance_warning",
+        "source_ref": {
+          "source_unit_id": "NGHE_L21"
+        },
+        "confidence": 0.92
+      },
+      {
+        "event_id": "NGHE_EVT_EX_OTA_PATCH",
+        "label": "OTA patch applied",
+        "event_type": "software_update",
+        "source_ref": {
+          "source_unit_id": "NGHE_L23"
+        },
+        "confidence": 0.9
+      },
+      {
+        "event_id": "NGHE_EVT_EX_FOG",
+        "label": "Dense fog occurs",
+        "event_type": "weather_event",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.94
+      },
+      {
+        "event_id": "NGHE_EVT_EX_FORGED_COMMAND",
+        "label": "Forged command packet injection attempt",
+        "event_type": "cyber_attack",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.95
+      },
+      {
+        "event_id": "NGHE_EVT_EX_FOG_CLEAR",
+        "label": "Fog clears and confidence recovers",
+        "event_type": "weather_recovery",
+        "source_ref": {
+          "source_unit_id": "NGHE_L29"
+        },
+        "confidence": 0.92
+      },
+      {
+        "event_id": "NGHE_EVT_EX_HEAVY_RAIN_FORECAST",
+        "label": "Heavy rain forecast received",
+        "event_type": "weather_forecast",
+        "source_ref": {
+          "source_unit_id": "NGHE_L31"
+        },
+        "confidence": 0.91
+      },
+      {
+        "event_id": "NGHE_EVT_EX_SENSOR_OCCLUDED",
+        "label": "Sensor lens covering occurs",
+        "event_type": "sensor_degradation",
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.94
+      },
+      {
+        "event_id": "NGHE_EVT_EX_PEDESTRIAN_APPROACH",
+        "label": "Maintenance worker approach",
+        "event_type": "safety_event",
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.93
+      },
+      {
+        "event_id": "NGHE_EVT_EX_HEAVY_RAIN",
+        "label": "Heavy rain intensifies",
+        "event_type": "weather_event",
+        "source_ref": {
+          "source_unit_id": "NGHE_L35"
+        },
+        "confidence": 0.93
+      },
+      {
+        "event_id": "NGHE_EVT_EX_RAIN_END",
+        "label": "Heavy rain end confirmed",
+        "event_type": "weather_recovery",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.91
+      },
+      {
+        "event_id": "NGHE_EVT_EX_RECOVERY_NORMAL_30MIN",
+        "label": "30 min of normal operation confirmed",
+        "event_type": "recovery_condition",
+        "source_ref": {
+          "source_unit_id": "NGHE_L39"
+        },
+        "confidence": 0.91
+      },
+      {
+        "event_id": "NGHE_EVT_EX_MISSION_COMPLETE",
+        "label": "72 h mission completion",
+        "event_type": "mission_completion",
+        "source_ref": {
+          "source_unit_id": "NGHE_L41"
+        },
+        "confidence": 0.96
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "NGHE_TR_EX_SETUP_TO_READY",
+        "label": "Transition from infrastructure ready to equipment ready",
+        "from_situation_text": "Infrastructure ready state",
+        "to_situation_text": "All equipment ready state",
+        "change_kind": [
+          "state_update"
+        ],
+        "trigger_text": "Authentication and calibration of 19 units of equipment completed",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.9
+      },
+      {
+        "transition_id": "NGHE_TR_EX_READY_TO_LEVEL3",
+        "label": "Transition from ready to Level 3 start",
+        "from_situation_text": "All equipment ready state",
+        "to_situation_text": "Level 3 supervised autonomy mode",
+        "change_kind": [
+          "mode_change"
+        ],
+        "trigger_text": "Remote supervisor Level 3 start approval",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.9
+      },
+      {
+        "transition_id": "NGHE_TR_EX_LEVEL3_TO_LEVEL4",
+        "label": "Transition from Level 3 to Level 4",
+        "from_situation_text": "Level 3 supervised autonomy mode",
+        "to_situation_text": "Level 4 full autonomy mode",
+        "change_kind": [
+          "mode_change"
+        ],
+        "trigger_text": "Operation indicators normal for 2 h and approval",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.96
+      },
+      {
+        "transition_id": "NGHE_TR_EX_TO_ECO_SWAP",
+        "label": "Transition from construction operation to Eco Mode battery swap",
+        "from_situation_text": "Level 4 full autonomy mode",
+        "to_situation_text": "Eco Mode and battery swap state",
+        "change_kind": [
+          "mode_change",
+          "resource_change"
+        ],
+        "trigger_text": "U-EEX Unit 1 SoC reaches 15%",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.94
+      },
+      {
+        "transition_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL3_FOG",
+        "label": "Downgrade from Level 4 to Level 3 due to fog",
+        "from_situation_text": "Level 4 full autonomy mode",
+        "to_situation_text": "Level 3 supervised autonomy mode",
+        "change_kind": [
+          "mode_change",
+          "risk_change"
+        ],
+        "trigger_text": "Visibility 200 m or less and sensor confidence score drop",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.96
+      },
+      {
+        "transition_id": "NGHE_TR_EX_TO_CYBER_ISOLATED",
+        "label": "Switch from external network to internal closed security network",
+        "from_situation_text": "External public network use state",
+        "to_situation_text": "Internal closed security network operation state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Detect forged command packet",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.95
+      },
+      {
+        "transition_id": "NGHE_TR_EX_LEVEL3_TO_LEVEL4_FOG_CLEAR",
+        "label": "Return to Level 4 after fog clears",
+        "from_situation_text": "Level 3 supervised autonomy mode",
+        "to_situation_text": "Level 4 full autonomy mode",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Visibility 1 km or more and sensor confidence normal",
+        "source_ref": {
+          "source_unit_id": "NGHE_L29"
+        },
+        "confidence": 0.92
+      },
+      {
+        "transition_id": "NGHE_TR_EX_TO_SENSOR_STOP",
+        "label": "Full stop due to sensor contamination and pedestrian approach",
+        "from_situation_text": "Construction in-progress state",
+        "to_situation_text": "Full stop and Keep-out Zone expansion state",
+        "change_kind": [
+          "capability_change",
+          "risk_change"
+        ],
+        "trigger_text": "Lens 50% covered and maintenance worker approach",
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.93
+      },
+      {
+        "transition_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL1_RAIN",
+        "label": "Transition to Level 1 emergency stop due to heavy rain",
+        "from_situation_text": "Level 4 or Level 3 construction state",
+        "to_situation_text": "Level 1 emergency stop and safe evacuation state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Heavy rain intensification and forced work stop command",
+        "source_ref": {
+          "source_unit_id": "NGHE_L35"
+        },
+        "confidence": 0.95
+      },
+      {
+        "transition_id": "NGHE_TR_EX_LEVEL1_TO_RECOVERY",
+        "label": "Transition from Level 1 waiting to recovery after heavy rain state",
+        "from_situation_text": "Level 1 emergency stop and safe evacuation state",
+        "to_situation_text": "Recovery after heavy rain state",
+        "change_kind": [
+          "mode_change",
+          "information_change"
+        ],
+        "trigger_text": "Heavy rain end confirmed",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.93
+      },
+      {
+        "transition_id": "NGHE_TR_EX_RECOVERY_TO_LEVEL3",
+        "label": "Transition from recovery after heavy rain to Level 3 resumption",
+        "from_situation_text": "Recovery after heavy rain state",
+        "to_situation_text": "Level 3 supervised autonomy mode",
+        "change_kind": [
+          "mode_change"
+        ],
+        "trigger_text": "Site safety inspection completed and resumption approved",
+        "source_ref": {
+          "source_unit_id": "NGHE_L39"
+        },
+        "confidence": 0.93
+      },
+      {
+        "transition_id": "NGHE_TR_EX_RECOVERY_LEVEL3_TO_LEVEL4",
+        "label": "Re-transition from Level 3 to Level 4 after recovery",
+        "from_situation_text": "Level 3 supervised autonomy mode",
+        "to_situation_text": "Level 4 full autonomy mode",
+        "change_kind": [
+          "mode_change"
+        ],
+        "trigger_text": "About 30 min of normal operation confirmed",
+        "source_ref": {
+          "source_unit_id": "NGHE_L39"
+        },
+        "confidence": 0.93
+      },
+      {
+        "transition_id": "NGHE_TR_EX_TO_COMPLETE",
+        "label": "Transition from construction in progress to mission completion",
+        "from_situation_text": "Level 4 full autonomy mode",
+        "to_situation_text": "72 h mission completion state",
+        "change_kind": [
+          "state_update"
+        ],
+        "trigger_text": "Cumulative earthwork volume of about 38,200 m3 achieved",
+        "source_ref": {
+          "source_unit_id": "NGHE_L41"
+        },
+        "confidence": 0.96
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "NGHE_P_EX_A_COMPANY",
+        "label": "Company A",
+        "performer_type": "service_provider",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.86
+      },
+      {
+        "performer_id": "NGHE_P_EX_ICCC",
+        "label": "ICCC",
+        "performer_type": "integrated_control_center",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.95
+      },
+      {
+        "performer_id": "NGHE_P_EX_AI_ICP",
+        "label": "AI_ICP",
+        "performer_type": "autonomous_control_platform",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.96
+      },
+      {
+        "performer_id": "NGHE_P_EX_REMOTE_SUPERVISOR",
+        "label": "Remote supervisor",
+        "performer_type": "human_supervisor",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.95
+      },
+      {
+        "performer_id": "NGHE_P_EX_REMOTE_OPERATOR",
+        "label": "Remote operator",
+        "performer_type": "human_operator",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_L15"
+        },
+        "confidence": 0.9
+      },
+      {
+        "performer_id": "NGHE_P_EX_SITE_SUPERVISOR",
+        "label": "Site supervisor",
+        "performer_type": "human_site_supervisor",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "performer_id": "NGHE_P_EX_MAINT_TEAM",
+        "label": "Site maintenance team",
+        "performer_type": "maintenance_team",
+        "performer_kind": "aggregate",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.93
+      },
+      {
+        "performer_id": "NGHE_P_EX_EQUIPMENT_FLEET",
+        "label": "Unmanned equipment fleet",
+        "performer_type": "unmanned_equipment_fleet",
+        "performer_kind": "aggregate",
+        "part_structure": {
+          "role": "whole",
+          "member_cardinality": {
+            "total_count": 19,
+            "text": "5 U-EEX, 10 U-EDT, 2 U-EDB, 2 U-ERC"
+          }
+        },
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.96
+      },
+      {
+        "performer_id": "NGHE_P_EX_U_EEX",
+        "label": "U-EEX excavator",
+        "performer_type": "unmanned_excavator",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.95
+      },
+      {
+        "performer_id": "NGHE_P_EX_U_EDT",
+        "label": "U-EDT dump truck",
+        "performer_type": "unmanned_dump_truck",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.95
+      },
+      {
+        "performer_id": "NGHE_P_EX_U_EDB",
+        "label": "U-EDB bulldozer",
+        "performer_type": "unmanned_bulldozer",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.94
+      },
+      {
+        "performer_id": "NGHE_P_EX_U_ERC",
+        "label": "U-ERC roller",
+        "performer_type": "unmanned_roller",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "NGHE_L23"
+        },
+        "confidence": 0.94
+      },
+      {
+        "performer_id": "NGHE_P_EX_BSS_T",
+        "label": "BSS_T",
+        "performer_type": "battery_swap_station",
+        "performer_kind": "aggregate",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.95
+      },
+      {
+        "performer_id": "NGHE_P_EX_ESS_T",
+        "label": "ESS_T",
+        "performer_type": "energy_storage_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "performer_id": "NGHE_P_EX_SCS",
+        "label": "SCS",
+        "performer_type": "supplemental_charging_system",
+        "performer_kind": "aggregate",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "performer_id": "NGHE_P_EX_DMSS",
+        "label": "DMSS",
+        "performer_type": "drone_mapping_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.93
+      },
+      {
+        "performer_id": "NGHE_P_EX_ASPCS",
+        "label": "ASPCS",
+        "performer_type": "precision_survey_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.93
+      },
+      {
+        "performer_id": "NGHE_P_EX_SECURITY_SYSTEM",
+        "label": "Security system",
+        "performer_type": "cyber_security_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.9
+      },
+      {
+        "performer_id": "NGHE_P_EX_ONBOARD_SYSTEM",
+        "label": "Onboard system",
+        "performer_type": "embedded_control_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_L23"
+        },
+        "confidence": 0.9
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "NGHE_A_EX_SET_MISSION_GOALS",
+        "label": "Set 72 h mission goals",
+        "primary_actor_text": "ICCC",
+        "verb": "set",
+        "object_text": "At least 38,000 m3 of earthwork, cost/schedule/safety/carbon conditions",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "NGHE_A_EX_INSTALL_ENERGY_INFRA",
+        "label": "Install energy infrastructure",
+        "primary_actor_text": "Site maintenance team",
+        "verb": "install",
+        "object_text": "BSS_T, ESS_T, SCS",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "NGHE_A_EX_STOCK_BATTERY",
+        "label": "Stockpile fully charged battery packs",
+        "primary_actor_text": "Site maintenance team",
+        "verb": "stockpile",
+        "object_text": "24 fully charged battery packs",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_VERIFY_RTDD",
+        "label": "Confirm RTDD latency",
+        "primary_actor_text": "Site supervisor, ICCC",
+        "verb": "confirm",
+        "object_text": "End-to-end latency within 20 ms",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_VERIFY_HSM",
+        "label": "Confirm HSM authentication",
+        "primary_actor_text": "Site supervisor, ICCC",
+        "verb": "confirm",
+        "object_text": "HSM digital signature and TLS 1.3 connection",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "NGHE_A_EX_SCAN_TERRAIN",
+        "label": "3D point cloud terrain scan",
+        "primary_actor_text": "DMSS",
+        "verb": "scan",
+        "object_text": "3D point cloud of the entire work area",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "NGHE_A_EX_CALIBRATE_GPS",
+        "label": "Correct GPS-RTK reference points",
+        "primary_actor_text": "ASPCS",
+        "verb": "correct",
+        "object_text": "GPS-RTK reference points",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_UPDATE_DIGITAL_TWIN",
+        "label": "Reflect in BIM/digital twin initial model",
+        "primary_actor_text": "ICCC, AI_ICP",
+        "verb": "reflect",
+        "object_text": "Terrain data",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "NGHE_A_EX_APPROVE_LEVEL3_START",
+        "label": "Approve Level 3 start",
+        "primary_actor_text": "Remote supervisor",
+        "verb": "approve",
+        "object_text": "Level 3 supervised autonomy mode start",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_UNLOAD_EQUIPMENT",
+        "label": "Sequential offloading of 19 units of equipment",
+        "primary_actor_text": "Site supervisor, unmanned equipment fleet",
+        "verb": "offload",
+        "object_text": "U-EEX, U-EDT, U-EDB, U-ERC",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "NGHE_A_EX_CALIBRATE_EQUIPMENT",
+        "label": "Equipment authentication and calibration",
+        "primary_actor_text": "Unmanned equipment fleet",
+        "verb": "perform",
+        "object_text": "RTDD connection, sensor initialization, GPS-RTK correction, terrain data download",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "NGHE_A_EX_CONFIRM_KEEP_OUT",
+        "label": "Confirm Keep-out Zone",
+        "primary_actor_text": "Site supervisor",
+        "verb": "confirm",
+        "object_text": "Keep-out Zone and sensitive facility protection zones",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.88
+      },
+      {
+        "action_id": "NGHE_A_EX_ASSIGN_WORK",
+        "label": "Allocate excavation points, quotas, optimal routes",
+        "primary_actor_text": "AI_ICP",
+        "verb": "allocate",
+        "object_text": "Excavation points, quotas, optimal routes to the unloading area",
+        "source_ref": {
+          "source_unit_id": "NGHE_L11"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_EXCAVATE_LOAD",
+        "label": "Excavation and loading",
+        "primary_actor_text": "U-EEX",
+        "verb": "excavate",
+        "object_text": "Soil excavation and U-EDT loading",
+        "source_ref": {
+          "source_unit_id": "NGHE_L11"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "NGHE_A_EX_HAUL",
+        "label": "Hauling to the unloading area",
+        "primary_actor_text": "U-EDT",
+        "verb": "haul",
+        "object_text": "Soil",
+        "source_ref": {
+          "source_unit_id": "NGHE_L11"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "NGHE_A_EX_GRADING",
+        "label": "Soil grading",
+        "primary_actor_text": "U-EDB",
+        "verb": "grade",
+        "object_text": "Soil near the unloading area",
+        "source_ref": {
+          "source_unit_id": "NGHE_L11"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "NGHE_A_EX_MONITOR_LEVEL4_METRICS",
+        "label": "Operation data review before Level 4 transition",
+        "primary_actor_text": "Remote supervisor",
+        "verb": "review",
+        "object_text": "Collision avoidance, loading precision, route optimization",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "NGHE_A_EX_APPROVE_LEVEL4",
+        "label": "Level 4 transition approval",
+        "primary_actor_text": "Remote supervisor",
+        "verb": "approve",
+        "object_text": "Transition to Level 4 full autonomy mode",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.95
+      },
+      {
+        "action_id": "NGHE_A_EX_AUTONOMOUS_CONTROL",
+        "label": "Autonomous adjustment of process planning, equipment allocation, route updates",
+        "primary_actor_text": "AI_ICP",
+        "verb": "adjust",
+        "object_text": "Process planning, equipment allocation, route updates, battery swap sequence",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_OPERATOR_HANDOVER",
+        "label": "Remote operator shift handover",
+        "primary_actor_text": "Remote operator",
+        "verb": "hand over",
+        "object_text": "Team A/Team B/Team C shift work",
+        "source_ref": {
+          "source_unit_id": "NGHE_L15"
+        },
+        "confidence": 0.88
+      },
+      {
+        "action_id": "NGHE_A_EX_MONITOR_FATIGUE",
+        "label": "Operator fatigue monitoring",
+        "primary_actor_text": "Auxiliary cognition AI",
+        "verb": "monitor",
+        "object_text": "Fatigue of personnel in continuous control for 4 h or more",
+        "source_ref": {
+          "source_unit_id": "NGHE_L15"
+        },
+        "confidence": 0.86
+      },
+      {
+        "action_id": "NGHE_A_EX_ENTER_ECO_MODE",
+        "label": "Enter Eco Mode",
+        "primary_actor_text": "U-EEX Unit 1",
+        "verb": "enter",
+        "object_text": "Eco Mode",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.95
+      },
+      {
+        "action_id": "NGHE_A_EX_RETURN_BSS",
+        "label": "Autonomous return to BSS_T",
+        "primary_actor_text": "U-EEX Unit 1",
+        "verb": "return",
+        "object_text": "BSS_T",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.95
+      },
+      {
+        "action_id": "NGHE_A_EX_SWAP_BATTERY",
+        "label": "Battery pack replacement",
+        "primary_actor_text": "BSS_T",
+        "verb": "replace",
+        "object_text": "U-EEX Unit 1 battery pack",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.95
+      },
+      {
+        "action_id": "NGHE_A_EX_OPTIMIZE_SWAP",
+        "label": "Swap sequence optimization",
+        "primary_actor_text": "AI_ICP",
+        "verb": "optimize",
+        "object_text": "Swap sequence preventing 2 or more units leaving work simultaneously",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_GENERATE_PROGRESS_REPORT",
+        "label": "Generate automatic performance report",
+        "primary_actor_text": "ICCC, AI_ICP",
+        "verb": "generate",
+        "object_text": "23 h and 24 h performance reports",
+        "source_ref": {
+          "source_unit_id": "NGHE_L19"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "NGHE_A_EX_PHM_DETECT",
+        "label": "PHM anomaly sign detection",
+        "primary_actor_text": "AI_ICP PHM module",
+        "verb": "detect",
+        "object_text": "U-EDT Unit 7 hydraulic system anomaly sign",
+        "source_ref": {
+          "source_unit_id": "NGHE_L21"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_REALLOCATE_EDT",
+        "label": "U-EDT Unit 7 non-core route reassignment",
+        "primary_actor_text": "AI_ICP",
+        "verb": "reassign",
+        "object_text": "U-EDT Unit 7",
+        "source_ref": {
+          "source_unit_id": "NGHE_L21"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "NGHE_A_EX_REPLACE_HYDRAULIC",
+        "label": "Hydraulic module replacement",
+        "primary_actor_text": "Site maintenance team",
+        "verb": "replace",
+        "object_text": "U-EDT Unit 7 hydraulic module",
+        "source_ref": {
+          "source_unit_id": "NGHE_L21"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_APPLY_OTA",
+        "label": "OTA route optimization patch application",
+        "primary_actor_text": "Onboard system",
+        "verb": "apply",
+        "object_text": "Route optimization algorithm patch",
+        "source_ref": {
+          "source_unit_id": "NGHE_L23"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "NGHE_A_EX_COMPACT",
+        "label": "Perform ground compaction",
+        "primary_actor_text": "U-ERC",
+        "verb": "compact",
+        "object_text": "Ground near the unloading area",
+        "source_ref": {
+          "source_unit_id": "NGHE_L23"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "NGHE_A_EX_PROPOSE_LEVEL3",
+        "label": "Level 3 downgrade proposal due to fog",
+        "primary_actor_text": "AI_ICP",
+        "verb": "propose",
+        "object_text": "Downgrade from Level 4 to Level 3",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "NGHE_A_EX_APPROVE_LEVEL3",
+        "label": "Approve Level 3 downgrade",
+        "primary_actor_text": "Remote supervisor",
+        "verb": "approve",
+        "object_text": "Level 3 downgrade",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "NGHE_A_EX_CHANGE_SENSOR_PRIORITY",
+        "label": "Raise radar/ultrasonic sensor priority",
+        "primary_actor_text": "Unmanned equipment fleet",
+        "verb": "switch",
+        "object_text": "From optical sensors to radar/ultrasonic sensor priority mode",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "NGHE_A_EX_DETECT_FORGED_PACKET",
+        "label": "Detect forged command packet",
+        "primary_actor_text": "U-EEX Unit 3 HSM",
+        "verb": "detect",
+        "object_text": "Forged digital signature of received command packet",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.95
+      },
+      {
+        "action_id": "NGHE_A_EX_BLOCK_NETWORK",
+        "label": "Block external public network",
+        "primary_actor_text": "Security system",
+        "verb": "block",
+        "object_text": "External public network",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "NGHE_A_EX_SWITCH_SECURE_NETWORK",
+        "label": "Switch to internal closed security network",
+        "primary_actor_text": "Security system",
+        "verb": "switch",
+        "object_text": "Internal closed security network",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "NGHE_A_EX_APPROVE_LEVEL4_RETURN",
+        "label": "Approve return to Level 4 after fog clears",
+        "primary_actor_text": "Remote supervisor",
+        "verb": "approve",
+        "object_text": "Return to Level 4",
+        "source_ref": {
+          "source_unit_id": "NGHE_L29"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "NGHE_A_EX_PREPARE_RAIN",
+        "label": "Establish heavy rain preparation plan",
+        "primary_actor_text": "AI_ICP",
+        "verb": "propose",
+        "object_text": "Securing maximum construction volume, preemptive swap completion, safe evacuation position designation",
+        "source_ref": {
+          "source_unit_id": "NGHE_L31"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "NGHE_A_EX_CLEAN_SENSOR_AUTO",
+        "label": "Autonomous attempt to remove sensor contamination",
+        "primary_actor_text": "U-EEX Unit 2",
+        "verb": "operate",
+        "object_text": "Air blow and wipers",
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "NGHE_A_EX_STOP_FOR_PEDESTRIAN",
+        "label": "Full stop after pedestrian detection",
+        "primary_actor_text": "U-EEX Unit 2",
+        "verb": "grade",
+        "object_text": "Maintenance worker approach",
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "NGHE_A_EX_COMMAND_STOP",
+        "label": "Issue forced work stop command",
+        "primary_actor_text": "Remote supervisor",
+        "verb": "issue",
+        "object_text": "Forced work stop command",
+        "source_ref": {
+          "source_unit_id": "NGHE_L35"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "NGHE_A_EX_MOVE_SAFE_AREA",
+        "label": "Move to and wait at safe evacuation positions",
+        "primary_actor_text": "Unmanned equipment fleet",
+        "verb": "move",
+        "object_text": "Safe evacuation positions",
+        "source_ref": {
+          "source_unit_id": "NGHE_L35"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_RESCAN_AFTER_RAIN",
+        "label": "Rescan terrain after heavy rain",
+        "primary_actor_text": "DMSS",
+        "verb": "rescan",
+        "object_text": "Terrain changes after heavy rain",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_RECALIBRATE_GPS",
+        "label": "Re-correct GPS-RTK reference points",
+        "primary_actor_text": "ASPCS",
+        "verb": "re-correct",
+        "object_text": "GPS-RTK reference points",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "NGHE_A_EX_RECALC_ROUTE",
+        "label": "Subsidence zone bypass route recalculation",
+        "primary_actor_text": "AI_ICP",
+        "verb": "recalculate",
+        "object_text": "Work routes and subsidence zone bypass routes",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_APPROVE_RESUME_LEVEL3",
+        "label": "Approve Level 3 construction resumption",
+        "primary_actor_text": "Remote supervisor",
+        "verb": "approve",
+        "object_text": "Level 3 construction resumption",
+        "source_ref": {
+          "source_unit_id": "NGHE_L39"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "NGHE_A_EX_RETURN_WORK_AREA",
+        "label": "Return to work area",
+        "primary_actor_text": "Unmanned equipment fleet",
+        "verb": "return",
+        "object_text": "Work area",
+        "source_ref": {
+          "source_unit_id": "NGHE_L39"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "NGHE_A_EX_APPROVE_RECOVERY_LEVEL4",
+        "label": "Approve Level 4 transition after recovery",
+        "primary_actor_text": "Remote supervisor",
+        "verb": "approve",
+        "object_text": "Level 4 transition",
+        "source_ref": {
+          "source_unit_id": "NGHE_L39"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "NGHE_A_EX_ADJUST_COMPACTION",
+        "label": "Adjust compaction pressure and number of passes in moisture content change sections",
+        "primary_actor_text": "AI_ICP, U-ERC",
+        "verb": "adjust",
+        "object_text": "Compaction pressure and number of passes",
+        "source_ref": {
+          "source_unit_id": "NGHE_L41"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "NGHE_A_EX_GENERATE_FINAL_REPORT",
+        "label": "Generate final performance report",
+        "primary_actor_text": "ICCC, AI_ICP",
+        "verb": "generate",
+        "object_text": "72 h comprehensive performance report",
+        "source_ref": {
+          "source_unit_id": "NGHE_L43"
+        },
+        "confidence": 0.94
+      }
+    ],
+    "items": [
+      {
+        "item_id": "NGHE_I_EX_BATTERY_PACK",
+        "label": "Fully charged battery packs",
+        "item_type": "energy_item",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.93
+      },
+      {
+        "item_id": "NGHE_I_EX_RTDD_NETWORK",
+        "label": "RTDD dedicated network",
+        "item_type": "communication_network",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "item_id": "NGHE_I_EX_POINT_CLOUD",
+        "label": "3D point cloud terrain data",
+        "item_type": "terrain_data",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.93
+      },
+      {
+        "item_id": "NGHE_I_EX_BIM_MODEL",
+        "label": "BIM/digital twin model",
+        "item_type": "digital_twin_model",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.92
+      },
+      {
+        "item_id": "NGHE_I_EX_ROUTE_PLAN",
+        "label": "Work routes and bypass routes",
+        "item_type": "route_plan",
+        "source_ref": {
+          "source_unit_id": "NGHE_L11"
+        },
+        "confidence": 0.92
+      },
+      {
+        "item_id": "NGHE_I_EX_PROGRESS_REPORT",
+        "label": "Automatic performance report",
+        "item_type": "performance_report",
+        "source_ref": {
+          "source_unit_id": "NGHE_L19"
+        },
+        "confidence": 0.91
+      },
+      {
+        "item_id": "NGHE_I_EX_HYDRAULIC_MODULE",
+        "label": "Hydraulic module",
+        "item_type": "maintenance_part",
+        "source_ref": {
+          "source_unit_id": "NGHE_L21"
+        },
+        "confidence": 0.91
+      },
+      {
+        "item_id": "NGHE_I_EX_OTA_PATCH",
+        "label": "Route optimization algorithm patch",
+        "item_type": "software_update_package",
+        "source_ref": {
+          "source_unit_id": "NGHE_L23"
+        },
+        "confidence": 0.91
+      },
+      {
+        "item_id": "NGHE_I_EX_COMMAND_PACKET",
+        "label": "Command packet",
+        "item_type": "command_message",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.92
+      },
+      {
+        "item_id": "NGHE_I_EX_SECURITY_LOG",
+        "label": "Security threat log",
+        "item_type": "security_log",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.88
+      },
+      {
+        "item_id": "NGHE_I_EX_RAIN_PLAN",
+        "label": "Heavy rain preparation plan",
+        "item_type": "operation_plan",
+        "source_ref": {
+          "source_unit_id": "NGHE_L31"
+        },
+        "confidence": 0.9
+      },
+      {
+        "item_id": "NGHE_I_EX_SAFE_AREA",
+        "label": "Safe evacuation positions",
+        "item_type": "location",
+        "source_ref": {
+          "source_unit_id": "NGHE_L35"
+        },
+        "confidence": 0.9
+      },
+      {
+        "item_id": "NGHE_I_EX_SUBSIDENCE_AREA",
+        "label": "Ground subsidence zones",
+        "item_type": "terrain_feature",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.92
+      },
+      {
+        "item_id": "NGHE_I_EX_FINAL_REPORT",
+        "label": "Final performance report",
+        "item_type": "performance_report",
+        "source_ref": {
+          "source_unit_id": "NGHE_L43"
+        },
+        "confidence": 0.94
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "NGHE_F_EX_SETUP",
+        "label": "Infrastructure installation -> RTDD/HSM confirmation -> terrain model construction",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "flow_id": "NGHE_F_EX_CALIBRATION",
+        "label": "Equipment offloading -> authentication/calibration -> ready report",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.92
+      },
+      {
+        "flow_id": "NGHE_F_EX_PRODUCTION",
+        "label": "Work allocation -> excavation -> hauling -> grading -> compaction",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L11"
+        },
+        "confidence": 0.91
+      },
+      {
+        "flow_id": "NGHE_F_EX_LEVEL4_APPROVAL",
+        "label": "Operation data review -> Level 4 approval -> AI_ICP autonomous adjustment",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.92
+      },
+      {
+        "flow_id": "NGHE_F_EX_BATTERY_SWAP",
+        "label": "SoC 15% -> Eco Mode -> return to BSS_T -> battery replacement -> return to work",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.94
+      },
+      {
+        "flow_id": "NGHE_F_EX_MAINTENANCE",
+        "label": "PHM anomaly detection -> non-core route reassignment -> hydraulic module replacement",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L21"
+        },
+        "confidence": 0.92
+      },
+      {
+        "flow_id": "NGHE_F_EX_OTA",
+        "label": "OTA patch reception -> rolling update -> output improvement",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L23"
+        },
+        "confidence": 0.88
+      },
+      {
+        "flow_id": "NGHE_F_EX_FOG",
+        "label": "Fog occurrence -> confidence drop -> Level 3 downgrade -> speed limit",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.93
+      },
+      {
+        "flow_id": "NGHE_F_EX_CYBER",
+        "label": "Forged packet detection -> external network blocking -> switch to internal security network -> security log",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.93
+      },
+      {
+        "flow_id": "NGHE_F_EX_FOG_RECOVERY",
+        "label": "Visibility recovery -> Level 4 return approval -> speed limit lifted",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L29"
+        },
+        "confidence": 0.9
+      },
+      {
+        "flow_id": "NGHE_F_EX_RAIN_PREP",
+        "label": "Heavy rain forecast -> advance swap -> safe evacuation position designation",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L31"
+        },
+        "confidence": 0.9
+      },
+      {
+        "flow_id": "NGHE_F_EX_SENSOR_SAFETY",
+        "label": "Sensor covering -> automatic cleaning -> pedestrian detection -> Keep-out Zone expansion -> full stop",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.93
+      },
+      {
+        "flow_id": "NGHE_F_EX_RAIN_STOP",
+        "label": "Heavy rain intensifies -> forced work stop -> Level 1 -> safe evacuation waiting",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L35"
+        },
+        "confidence": 0.94
+      },
+      {
+        "flow_id": "NGHE_F_EX_RAIN_RECOVERY",
+        "label": "Heavy rain ends -> rescan -> reference point re-correction -> subsidence identification -> route recalculation",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.93
+      },
+      {
+        "flow_id": "NGHE_F_EX_RESUME",
+        "label": "Safety inspection -> Level 3 resumption -> return to work area -> 30 min confirmation -> return to Level 4",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L39"
+        },
+        "confidence": 0.93
+      },
+      {
+        "flow_id": "NGHE_F_EX_COMPLETE",
+        "label": "Compaction adjustment -> 72 h completion -> final report",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_L41"
+        },
+        "confidence": 0.9
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "NGHE_CTRL_EX_PARALLEL_CALIBRATION",
+        "label": "Simultaneous authentication/calibration of 19 units of equipment",
+        "control_type": "fork_join",
+        "guard_texts": [
+          "All equipment ready"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.92
+      },
+      {
+        "control_id": "NGHE_CTRL_EX_LEVEL_TRANSITION",
+        "label": "Autonomous operation mode transition decision",
+        "control_type": "decision",
+        "guard_texts": [
+          "Operation indicators normal for 2 h",
+          "Sensor confidence drop",
+          "30 min of normal operation confirmed"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.94
+      },
+      {
+        "control_id": "NGHE_CTRL_EX_SWAP_SCHEDULING",
+        "label": "Battery swap sequence optimization",
+        "control_type": "scheduling_guard",
+        "guard_texts": [
+          "Prevent 2 or more units leaving work simultaneously"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.93
+      },
+      {
+        "control_id": "NGHE_CTRL_EX_ROLLING_UPDATE",
+        "label": "OTA rolling update without operation stop",
+        "control_type": "rolling_sequence",
+        "guard_texts": [
+          "Patch applied without work stop"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L23"
+        },
+        "confidence": 0.88
+      },
+      {
+        "control_id": "NGHE_CTRL_EX_CYBER_ISOLATION",
+        "label": "Security network isolation upon forged command packet detection",
+        "control_type": "decision",
+        "guard_texts": [
+          "Digital signature forgery detection"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.94
+      },
+      {
+        "control_id": "NGHE_CTRL_EX_SENSOR_STOP",
+        "label": "Full stop upon pedestrian approach",
+        "control_type": "decision",
+        "guard_texts": [
+          "Pedestrian detection",
+          "Keep-out Zone expanded 2 times"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.94
+      },
+      {
+        "control_id": "NGHE_CTRL_EX_RAIN_STOP",
+        "label": "Forced work stop during heavy rain",
+        "control_type": "decision",
+        "guard_texts": [
+          "Heavy rain intensifies",
+          "Remote supervisor forced work stop command"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L35"
+        },
+        "confidence": 0.94
+      },
+      {
+        "control_id": "NGHE_CTRL_EX_RECOVERY_GUARD",
+        "label": "Staged recovery guard after heavy rain",
+        "control_type": "guarded_sequence",
+        "guard_texts": [
+          "Heavy rain ends",
+          "Terrain rescan",
+          "Safety inspection completed",
+          "30 min of normal operation confirmed"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.93
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "NGHE_C_EX_TARGET_VOLUME",
+        "label": "72 h target earthwork volume of at least 38,000 m3",
+        "constraint_type": "mission_constraint",
+        "expression_text": "completed_volume >= 38000 m3 within 72 hours",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.96
+      },
+      {
+        "constraint_id": "NGHE_C_EX_COST_REDUCTION",
+        "label": "Cost reduced by 25%",
+        "constraint_type": "business_constraint",
+        "expression_text": "cost_reduction >= 25 percent",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.93
+      },
+      {
+        "constraint_id": "NGHE_C_EX_SCHEDULE_REDUCTION",
+        "label": "Schedule shortened by 30%",
+        "constraint_type": "business_constraint",
+        "expression_text": "schedule_reduction >= 30 percent",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.93
+      },
+      {
+        "constraint_id": "NGHE_C_EX_RTDD_LATENCY",
+        "label": "RTDD end-to-end latency within 20 ms",
+        "constraint_type": "performance_constraint",
+        "expression_text": "rtdd_latency <= 20 ms",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.93
+      },
+      {
+        "constraint_id": "NGHE_C_EX_ENCRYPTION_DELAY",
+        "label": "Encryption latency 2 ms or less",
+        "constraint_type": "performance_constraint",
+        "expression_text": "encryption_delay <= 2 ms",
+        "source_ref": {
+          "source_unit_id": "NGHE_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "constraint_id": "NGHE_C_EX_CALIBRATION_1H",
+        "label": "Equipment calibration within 1 h",
+        "constraint_type": "time_constraint",
+        "expression_text": "equipment_calibration_duration <= 1 hour",
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.88
+      },
+      {
+        "constraint_id": "NGHE_C_EX_NOISE_65",
+        "label": "Night noise 65 dB or less",
+        "constraint_type": "environment_constraint",
+        "expression_text": "noise <= 65 dB",
+        "source_ref": {
+          "source_unit_id": "NGHE_L15"
+        },
+        "confidence": 0.92
+      },
+      {
+        "constraint_id": "NGHE_C_EX_SWAP_5MIN",
+        "label": "Battery replacement within 5 min",
+        "constraint_type": "time_constraint",
+        "expression_text": "battery_swap_duration <= 5 minutes",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.95
+      },
+      {
+        "constraint_id": "NGHE_C_EX_NO_TWO_OUT",
+        "label": "Prevent 2 or more units leaving simultaneously",
+        "constraint_type": "resource_constraint",
+        "expression_text": "simultaneous_out_of_work_equipment_count < 2",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.93
+      },
+      {
+        "constraint_id": "NGHE_C_EX_MTTR_1H",
+        "label": "Maintenance within 1 h",
+        "constraint_type": "maintenance_constraint",
+        "expression_text": "maintenance_duration <= 1 hour",
+        "source_ref": {
+          "source_unit_id": "NGHE_L21"
+        },
+        "confidence": 0.92
+      },
+      {
+        "constraint_id": "NGHE_C_EX_FOG_VISIBILITY",
+        "label": "Fog condition of visibility 200 m or less",
+        "constraint_type": "weather_guard",
+        "expression_text": "visibility <= 200 m",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.94
+      },
+      {
+        "constraint_id": "NGHE_C_EX_SPEED_5",
+        "label": "Speed 5 km/h or less during fog/sensor degradation",
+        "constraint_type": "safety_constraint",
+        "expression_text": "speed <= 5 km/h",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.93
+      },
+      {
+        "constraint_id": "NGHE_C_EX_KEEP_OUT_X2",
+        "label": "Keep-out Zone expanded 2 times",
+        "constraint_type": "safety_constraint",
+        "expression_text": "keep_out_zone = 2 * nominal_keep_out_zone",
+        "source_ref": {
+          "source_unit_id": "NGHE_L33"
+        },
+        "confidence": 0.93
+      },
+      {
+        "constraint_id": "NGHE_C_EX_ZERO_ACCIDENT",
+        "label": "Zero personnel accidents",
+        "constraint_type": "safety_constraint",
+        "expression_text": "human_accident_count == 0",
+        "source_ref": {
+          "source_unit_id": "NGHE_L43"
+        },
+        "confidence": 0.95
+      },
+      {
+        "constraint_id": "NGHE_C_EX_NET_ZERO",
+        "label": "Net-zero carbon emissions",
+        "constraint_type": "environment_constraint",
+        "expression_text": "carbon_emission == net_zero",
+        "source_ref": {
+          "source_unit_id": "NGHE_L43"
+        },
+        "confidence": 0.95
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "NGHE_G_EX_TARGET_VOLUME",
+        "label": "Achieve 72 h target earthwork volume",
+        "goal_type": "mission_objective",
+        "desired_state_text": "Complete at least 38,000 m3 of earthwork within 72 h",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.96
+      },
+      {
+        "goal_id": "NGHE_G_EX_SAFE_NET_ZERO",
+        "label": "Achieve zero accidents and net-zero",
+        "goal_type": "safety_environment_objective",
+        "desired_state_text": "Zero personnel accidents and net-zero carbon emissions",
+        "source_ref": {
+          "source_unit_id": "NGHE_L03"
+        },
+        "confidence": 0.95
+      },
+      {
+        "goal_id": "NGHE_G_EX_CONTINUOUS_OPERATION",
+        "label": "Minimize work stops",
+        "goal_type": "operational_objective",
+        "desired_state_text": "Avoid stopping the entire process even during battery swap, maintenance, and OTA update",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.9
+      },
+      {
+        "goal_id": "NGHE_G_EX_CYBER_INTEGRITY",
+        "label": "Ensure control authority integrity",
+        "goal_type": "security_objective",
+        "desired_state_text": "Maintain normal operation by switching to the internal security network after forged command packet detection",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.92
+      },
+      {
+        "goal_id": "NGHE_G_EX_RECOVERY_RESUME",
+        "label": "Safe construction resumption after heavy rain",
+        "goal_type": "recovery_objective",
+        "desired_state_text": "Level 3 resumption and return to Level 4 after rescan, route recalculation, and safety inspection",
+        "source_ref": {
+          "source_unit_id": "NGHE_L37"
+        },
+        "confidence": 0.92
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "NGHE_R_EX_LEVEL3_START",
+        "label": "Level 3 start because of first-operation safety",
+        "reason_type": "safety_rationale",
+        "rationale_text": "Start in Level 3 under remote supervisor approval because this is the first operation",
+        "source_ref": {
+          "source_unit_id": "NGHE_L07"
+        },
+        "confidence": 0.87
+      },
+      {
+        "reason_id": "NGHE_R_EX_SWAP",
+        "label": "Swap because of battery SoC drop",
+        "reason_type": "resource_rationale",
+        "rationale_text": "U-EEX Unit 1 SoC reached 15%, so Eco Mode and return to BSS_T were performed",
+        "source_ref": {
+          "source_unit_id": "NGHE_L17"
+        },
+        "confidence": 0.93
+      },
+      {
+        "reason_id": "NGHE_R_EX_MAINT",
+        "label": "Preventive maintenance because of hydraulic system anomaly sign",
+        "reason_type": "maintenance_rationale",
+        "rationale_text": "PHM detected the U-EDT Unit 7 hydraulic system pressure pattern anomaly",
+        "source_ref": {
+          "source_unit_id": "NGHE_L21"
+        },
+        "confidence": 0.92
+      },
+      {
+        "reason_id": "NGHE_R_EX_FOG_DOWNGRADE",
+        "label": "Level 3 downgrade because of fog and degraded sensor confidence",
+        "reason_type": "safety_rationale",
+        "rationale_text": "Safe operation required due to visibility of 200 m or less and sensor confidence drop",
+        "source_ref": {
+          "source_unit_id": "NGHE_L25"
+        },
+        "confidence": 0.94
+      },
+      {
+        "reason_id": "NGHE_R_EX_CYBER",
+        "label": "Security network switch because of the forged command packet",
+        "reason_type": "security_rationale",
+        "rationale_text": "The U-EEX Unit 3 HSM detected the digital signature forgery",
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.94
+      },
+      {
+        "reason_id": "NGHE_R_EX_RAIN_STOP",
+        "label": "Work stop because of heavy rain, sensor contamination, and pedestrian approach",
+        "reason_type": "safety_rationale",
+        "rationale_text": "Heavy rain intensified after sensor covering and maintenance worker approach",
+        "source_ref": {
+          "source_unit_id": "NGHE_L35"
+        },
+        "confidence": 0.93
+      }
+    ],
+    "domain_extension_rules": [
+      {
+        "domain_extension_rule_id": "NGHE_DER_EX_AUTONOMY",
+        "label": "Autonomous construction operation mode vocabulary",
+        "domain": "autonomous_construction",
+        "terms": [
+          "Level 1 emergency stop",
+          "Level 3 supervised autonomy",
+          "Level 4 full autonomy",
+          "AI_ICP",
+          "rolling OTA update"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L13"
+        },
+        "confidence": 0.88
+      },
+      {
+        "domain_extension_rule_id": "NGHE_DER_EX_EQUIPMENT",
+        "label": "Unmanned heavy equipment and support system vocabulary",
+        "domain": "construction_equipment",
+        "terms": [
+          "U-EEX",
+          "U-EDT",
+          "U-EDB",
+          "U-ERC",
+          "BSS_T",
+          "ESS_T",
+          "SCS",
+          "DMSS",
+          "ASPCS"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L09"
+        },
+        "confidence": 0.88
+      },
+      {
+        "domain_extension_rule_id": "NGHE_DER_EX_SAFETY_CYBER",
+        "label": "Safety and cyber response vocabulary",
+        "domain": "safety_cyber",
+        "terms": [
+          "HSM",
+          "forged command packet",
+          "closed security network",
+          "Keep-out Zone",
+          "sensor confidence",
+          "Hard-wired Safe Stop"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_L27"
+        },
+        "confidence": 0.88
+      }
+    ],
+    "semantic_bindings": [
+      {
+        "semantic_binding_id": "NGHE_SB_EX_EQUIPMENT_PARTS",
+        "label": "Unmanned equipment fleet to SysML Part",
+        "source_slot_text": "Unmanned equipment fleet and U-EEX/U-EDT/U-EDB/U-ERC",
+        "target_standard_element": "SysML Part",
+        "binding_kind": "performer_to_part",
+        "confidence": 0.88
+      },
+      {
+        "semantic_binding_id": "NGHE_SB_EX_LEVEL_TRANSITIONS",
+        "label": "Autonomous operation mode transition to StateTransitionAction",
+        "source_slot_text": "Level 3/4/1 transitions",
+        "target_standard_element": "SysML StateTransitionAction",
+        "binding_kind": "transition_to_state_transition",
+        "confidence": 0.9
+      },
+      {
+        "semantic_binding_id": "NGHE_SB_EX_ROUTE_ITEM",
+        "label": "Work route to SysML Item",
+        "source_slot_text": "Work routes and bypass routes",
+        "target_standard_element": "SysML Item",
+        "binding_kind": "payload_to_item",
+        "confidence": 0.86
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "NGHE_EX_REL_001",
+        "source_slot_id": "NGHE_SCN_EX_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_EX_MISSION_CONTEXT",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_002",
+        "source_slot_id": "NGHE_SCN_EX_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_EX_SETUP",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_003",
+        "source_slot_id": "NGHE_SCN_EX_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_EX_CALIBRATION",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_004",
+        "source_slot_id": "NGHE_SCN_EX_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_EX_AUTONOMOUS_PRODUCTION",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_005",
+        "source_slot_id": "NGHE_SCN_EX_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_EX_ENERGY_MAINTENANCE",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_006",
+        "source_slot_id": "NGHE_SCN_EX_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_EX_FOG_CYBER",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_007",
+        "source_slot_id": "NGHE_SCN_EX_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_EX_RAIN_STOP",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_008",
+        "source_slot_id": "NGHE_SCN_EX_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_EX_RECOVERY_COMPLETE",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_009",
+        "source_slot_id": "NGHE_P_EX_EQUIPMENT_FLEET",
+        "relation_type": "custom",
+        "custom_relation_type": "contains_performer",
+        "target_slot_id": "NGHE_P_EX_U_EEX",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "NGHE_EX_REL_010",
+        "source_slot_id": "NGHE_P_EX_EQUIPMENT_FLEET",
+        "relation_type": "custom",
+        "custom_relation_type": "contains_performer",
+        "target_slot_id": "NGHE_P_EX_U_EDT",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "NGHE_EX_REL_011",
+        "source_slot_id": "NGHE_P_EX_EQUIPMENT_FLEET",
+        "relation_type": "custom",
+        "custom_relation_type": "contains_performer",
+        "target_slot_id": "NGHE_P_EX_U_EDB",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_012",
+        "source_slot_id": "NGHE_P_EX_EQUIPMENT_FLEET",
+        "relation_type": "custom",
+        "custom_relation_type": "contains_performer",
+        "target_slot_id": "NGHE_P_EX_U_ERC",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_013",
+        "source_slot_id": "NGHE_SIT_EX_LEVEL3",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_EX_LEVEL3",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_014",
+        "source_slot_id": "NGHE_SIT_EX_LEVEL4",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_EX_LEVEL4",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_015",
+        "source_slot_id": "NGHE_SIT_EX_LEVEL1_STOP",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_EX_LEVEL1",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_016",
+        "source_slot_id": "NGHE_TR_EX_LEVEL3_TO_LEVEL4",
+        "relation_type": "from_situation",
+        "target_slot_id": "NGHE_SIT_EX_LEVEL3",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_017",
+        "source_slot_id": "NGHE_TR_EX_LEVEL3_TO_LEVEL4",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_EX_LEVEL4",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_018",
+        "source_slot_id": "NGHE_EVT_EX_LEVEL4_APPROVED",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_EX_LEVEL3_TO_LEVEL4",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_019",
+        "source_slot_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL3_FOG",
+        "relation_type": "from_situation",
+        "target_slot_id": "NGHE_SIT_EX_LEVEL4",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_020",
+        "source_slot_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL3_FOG",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_EX_LEVEL3",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_021",
+        "source_slot_id": "NGHE_EVT_EX_FOG",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL3_FOG",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_022",
+        "source_slot_id": "NGHE_TR_EX_TO_CYBER_ISOLATED",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_EX_CYBER_ISOLATED",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "NGHE_EX_REL_023",
+        "source_slot_id": "NGHE_EVT_EX_FORGED_COMMAND",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_EX_TO_CYBER_ISOLATED",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "NGHE_EX_REL_024",
+        "source_slot_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL1_RAIN",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_EX_LEVEL1_STOP",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "NGHE_EX_REL_025",
+        "source_slot_id": "NGHE_EVT_EX_HEAVY_RAIN",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL1_RAIN",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_026",
+        "source_slot_id": "NGHE_TR_EX_LEVEL1_TO_RECOVERY",
+        "relation_type": "from_situation",
+        "target_slot_id": "NGHE_SIT_EX_LEVEL1_STOP",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "NGHE_EX_REL_027",
+        "source_slot_id": "NGHE_TR_EX_LEVEL1_TO_RECOVERY",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_EX_RECOVERY",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "NGHE_EX_REL_028",
+        "source_slot_id": "NGHE_EVT_EX_RAIN_END",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_EX_LEVEL1_TO_RECOVERY",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "NGHE_EX_REL_029",
+        "source_slot_id": "NGHE_TR_EX_TO_COMPLETE",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_EX_MISSION_COMPLETE",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_030",
+        "source_slot_id": "NGHE_EVT_EX_MISSION_COMPLETE",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_EX_TO_COMPLETE",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_031",
+        "source_slot_id": "NGHE_OBS_EX_FOG_CONF",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_EVT_EX_FOG",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_032",
+        "source_slot_id": "NGHE_OBS_EX_FORGED_PACKET",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_EVT_EX_FORGED_COMMAND",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "NGHE_EX_REL_033",
+        "source_slot_id": "NGHE_OBS_EX_SENSOR_OCCLUSION",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_EVT_EX_SENSOR_OCCLUDED",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_034",
+        "source_slot_id": "NGHE_OBS_EX_PEDESTRIAN",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_EVT_EX_PEDESTRIAN_APPROACH",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "NGHE_EX_REL_035",
+        "source_slot_id": "NGHE_A_EX_STOCK_BATTERY",
+        "relation_type": "uses_item",
+        "target_slot_id": "NGHE_I_EX_BATTERY_PACK",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "NGHE_EX_REL_036",
+        "source_slot_id": "NGHE_A_EX_SCAN_TERRAIN",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_EX_POINT_CLOUD",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "NGHE_EX_REL_037",
+        "source_slot_id": "NGHE_A_EX_UPDATE_DIGITAL_TWIN",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_EX_BIM_MODEL",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "NGHE_EX_REL_038",
+        "source_slot_id": "NGHE_A_EX_ASSIGN_WORK",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_EX_ROUTE_PLAN",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "NGHE_EX_REL_039",
+        "source_slot_id": "NGHE_A_EX_GENERATE_PROGRESS_REPORT",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_EX_PROGRESS_REPORT",
+        "confidence": 0.91
+      },
+      {
+        "relation_id": "NGHE_EX_REL_040",
+        "source_slot_id": "NGHE_A_EX_REPLACE_HYDRAULIC",
+        "relation_type": "uses_item",
+        "target_slot_id": "NGHE_I_EX_HYDRAULIC_MODULE",
+        "confidence": 0.91
+      },
+      {
+        "relation_id": "NGHE_EX_REL_041",
+        "source_slot_id": "NGHE_A_EX_APPLY_OTA",
+        "relation_type": "uses_item",
+        "target_slot_id": "NGHE_I_EX_OTA_PATCH",
+        "confidence": 0.91
+      },
+      {
+        "relation_id": "NGHE_EX_REL_042",
+        "source_slot_id": "NGHE_A_EX_DETECT_FORGED_PACKET",
+        "relation_type": "uses_item",
+        "target_slot_id": "NGHE_I_EX_COMMAND_PACKET",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "NGHE_EX_REL_043",
+        "source_slot_id": "NGHE_A_EX_GENERATE_FINAL_REPORT",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_EX_FINAL_REPORT",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_044",
+        "source_slot_id": "NGHE_F_EX_BATTERY_SWAP",
+        "relation_type": "flow_source",
+        "target_slot_id": "NGHE_A_EX_ENTER_ECO_MODE",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_045",
+        "source_slot_id": "NGHE_F_EX_BATTERY_SWAP",
+        "relation_type": "flow_target",
+        "target_slot_id": "NGHE_A_EX_SWAP_BATTERY",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_046",
+        "source_slot_id": "NGHE_F_EX_CYBER",
+        "relation_type": "flow_source",
+        "target_slot_id": "NGHE_A_EX_DETECT_FORGED_PACKET",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "NGHE_EX_REL_047",
+        "source_slot_id": "NGHE_F_EX_CYBER",
+        "relation_type": "flow_target",
+        "target_slot_id": "NGHE_A_EX_SWITCH_SECURE_NETWORK",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "NGHE_EX_REL_048",
+        "source_slot_id": "NGHE_F_EX_RAIN_STOP",
+        "relation_type": "flow_source",
+        "target_slot_id": "NGHE_A_EX_COMMAND_STOP",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_049",
+        "source_slot_id": "NGHE_F_EX_RAIN_STOP",
+        "relation_type": "flow_target",
+        "target_slot_id": "NGHE_A_EX_MOVE_SAFE_AREA",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_050",
+        "source_slot_id": "NGHE_CTRL_EX_SWAP_SCHEDULING",
+        "relation_type": "controls_flow",
+        "target_slot_id": "NGHE_F_EX_BATTERY_SWAP",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "NGHE_EX_REL_051",
+        "source_slot_id": "NGHE_CTRL_EX_CYBER_ISOLATION",
+        "relation_type": "controls_flow",
+        "target_slot_id": "NGHE_F_EX_CYBER",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_052",
+        "source_slot_id": "NGHE_CTRL_EX_RAIN_STOP",
+        "relation_type": "controls_flow",
+        "target_slot_id": "NGHE_F_EX_RAIN_STOP",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_053",
+        "source_slot_id": "NGHE_CTRL_EX_RECOVERY_GUARD",
+        "relation_type": "controls_flow",
+        "target_slot_id": "NGHE_F_EX_RAIN_RECOVERY",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "NGHE_EX_REL_054",
+        "source_slot_id": "NGHE_A_EX_GENERATE_FINAL_REPORT",
+        "relation_type": "has_goal",
+        "target_slot_id": "NGHE_G_EX_TARGET_VOLUME",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "NGHE_EX_REL_055",
+        "source_slot_id": "NGHE_A_EX_COMMAND_STOP",
+        "relation_type": "has_goal",
+        "target_slot_id": "NGHE_G_EX_SAFE_NET_ZERO",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "NGHE_EX_REL_056",
+        "source_slot_id": "NGHE_A_EX_DETECT_FORGED_PACKET",
+        "relation_type": "has_goal",
+        "target_slot_id": "NGHE_G_EX_CYBER_INTEGRITY",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "NGHE_EX_REL_057",
+        "source_slot_id": "NGHE_A_EX_PROPOSE_LEVEL3",
+        "relation_type": "has_reason",
+        "target_slot_id": "NGHE_R_EX_FOG_DOWNGRADE",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_058",
+        "source_slot_id": "NGHE_A_EX_BLOCK_NETWORK",
+        "relation_type": "has_reason",
+        "target_slot_id": "NGHE_R_EX_CYBER",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_059",
+        "source_slot_id": "NGHE_A_EX_COMMAND_STOP",
+        "relation_type": "has_reason",
+        "target_slot_id": "NGHE_R_EX_RAIN_STOP",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "NGHE_EX_REL_060",
+        "source_slot_id": "NGHE_SB_EX_LEVEL_TRANSITIONS",
+        "relation_type": "binds_to",
+        "target_slot_id": "NGHE_TR_EX_LEVEL3_TO_LEVEL4",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "NGHE_EX_REL_061",
+        "source_slot_id": "NGHE_SB_EX_LEVEL_TRANSITIONS",
+        "relation_type": "binds_to",
+        "target_slot_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL1_RAIN",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "NGHE_EX_REL_062",
+        "source_slot_id": "NGHE_TR_EX_LEVEL3_TO_LEVEL4",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL3_FOG",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_063",
+        "source_slot_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL3_FOG",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_EX_LEVEL3_TO_LEVEL4_FOG_CLEAR",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "NGHE_EX_REL_064",
+        "source_slot_id": "NGHE_TR_EX_LEVEL3_TO_LEVEL4_FOG_CLEAR",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL1_RAIN",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "NGHE_EX_REL_065",
+        "source_slot_id": "NGHE_TR_EX_LEVEL4_TO_LEVEL1_RAIN",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_EX_LEVEL1_TO_RECOVERY",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_066",
+        "source_slot_id": "NGHE_TR_EX_LEVEL1_TO_RECOVERY",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_EX_RECOVERY_TO_LEVEL3",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_067",
+        "source_slot_id": "NGHE_TR_EX_RECOVERY_TO_LEVEL3",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_EX_RECOVERY_LEVEL3_TO_LEVEL4",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "NGHE_EX_REL_068",
+        "source_slot_id": "NGHE_TR_EX_RECOVERY_LEVEL3_TO_LEVEL4",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_EX_TO_COMPLETE",
+        "confidence": 0.94
+      }
+    ],
+    "validation_issues": [
+      {
+        "issue_id": "NGHE_EX_VAL_001",
+        "issue_type": "mapping_gap",
+        "severity": "info",
+        "related_slot_ids": [
+          "NGHE_TR_EX_LEVEL4_TO_LEVEL1_RAIN"
+        ],
+        "message": "In the source text, whether the operation mode just before the heavy rain was Level 4 or Level 3 can vary with context, so from_situation is kept as a candidate."
+      }
+    ],
+    "generated_sysml": {
+      "packages": [],
+      "definitions": [],
+      "usages": []
+    },
+    "generated_views": {
+      "activity_diagrams": [],
+      "effbd_views": [],
+      "state_views": []
+    },
+    "assumptions": [
+      "Exhaustive is an extraction scope that preserves every sentence cue as a slot candidate, and merging of duplicate candidates may be needed in the implementation stage.",
+      "The canonical owner of relations between slots is slot_relations."
+    ]
+  }
+}

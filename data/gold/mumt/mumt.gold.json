@@ -1,0 +1,2744 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "GT_MUMT_001",
+    "title": "MUM-T attack maneuver ground truth (relation closure) scenario",
+    "extraction_schema": "Text2Activity Extraction Slot Schema",
+    "schema_acronym": "T2A-ESS",
+    "target_standard": [
+      "KerML",
+      "SysML v2"
+    ],
+    "extraction_scope": "ground_truth_relation_complete_semantic_audit",
+    "source_documents": [
+      {
+        "document_id": "DOC_GT_MUMT",
+        "path": "4_researches/text2activity/data/ground-truth/mumt/mumt.gold.json",
+        "title": "MUM-T_attack maneuver canonical planned source",
+        "document_role": "canonical_ground_truth_plan"
+      }
+    ],
+    "source_units": [
+      {
+        "source_unit_id": "MUMT_GT_U01",
+        "document": "DOC_GT_MUMT",
+        "unit_type": "paragraph",
+        "order_index": 1,
+        "planned_content": "The tank company prepares the TDSS and Drones 1, 2, and 3, checks normal communication and SA, and then performs surveillance deployment and company SA summary sharing.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "MUMT_GT_U02",
+        "document": "DOC_GT_MUMT",
+        "unit_type": "paragraph",
+        "order_index": 2,
+        "planned_content": "Drone 1 detects the enemy observation post and the FPV threat and provides an estimated time of arrival of about 43 s, so that the company commander orders bypass and dispersed maneuver.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "MUMT_GT_U03",
+        "document": "DOC_GT_MUMT",
+        "unit_type": "paragraph",
+        "order_index": 3,
+        "planned_content": "Electronic warfare jamming causes continued packet loss and heartbeat loss, so normal, limited, and blackout communication transitions occur; during minimum SA maintenance and emergency broadcast, the 2nd Platoon evades according to the ATGM alert from Drone 3, and the loss of Drone 1 reduces the available number from 3 to 2.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "MUMT_GT_U04",
+        "document": "DOC_GT_MUMT",
+        "unit_type": "paragraph",
+        "order_index": 4,
+        "planned_content": "The Drone 2 and Drone 3 links and bandwidth are recovered in stages to resynchronize SA and return to normal communication, and then, through the comprehensive report and resumption of the attack, combat power is maintained and the objective is secured.",
+        "text": ""
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "MUMT_SCN_ATTACK_OPERATION",
+        "label": "MUM-T-based attack maneuver and electronic warfare response",
+        "summary": "The tank company performs the attack maneuver using reconnaissance drones and the TDSS, maintains survivability-focused functions even during electronic warfare jamming, and then recovers communication and secures the objective.",
+        "success_criteria_texts": [
+          "Secure objective",
+          "Maintain all tanks combat-capable",
+          "Maintain survivability-focused functions"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "UseCase",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "MUMT_EP_PREP_NORMAL",
+        "label": "Preparation and normal communication maneuver",
+        "order_index": 1,
+        "summary": "Performs TDSS diagnostics, drone launch, SA sharing, and attack maneuver based on normal communication.",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "MUMT_EP_THREAT_DETOUR",
+        "label": "Enemy observation post and FPV threat detection response",
+        "order_index": 2,
+        "summary": "The drones and the TDSS detect the enemy observation post and the FPV threat, and the company commander orders bypass and dispersed maneuver.",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.89,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "MUMT_EP_EW_DEGRADATION",
+        "label": "Electronic warfare jamming and communication degradation response",
+        "order_index": 3,
+        "summary": "Due to jamming, the communication state transitions from normal to limited and from limited to blackout, and the TDSS and drones maintain survivability-focused functions.",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "MUMT_EP_RECOVERY_RESUME",
+        "label": "Communication recovery and attack resumption",
+        "order_index": 4,
+        "summary": "As the intermittent links stabilize, communication recovers from blackout to limited and from limited to normal, and the company resumes the attack on the objective.",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "MUMT_SIT_COMM_NORMAL",
+        "label": "Normal communication state",
+        "description": "State in which drone video, tank sensor data, and battalion analysis results are exchanged normally",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "MUMT_SIT_COMM_LIMITED",
+        "label": "Limited communication state",
+        "description": "State in which the video stream is stopped and minimum SA based on summary track data is maintained",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "MUMT_SIT_COMM_DISCONNECTED",
+        "label": "Communication blackout state",
+        "description": "State in which external information exchange is blocked and the local sensor-based survival loop and drone emergency broadcast are used",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "MUMT_SIT_MISSION_SECURED",
+        "label": "Objective secured state",
+        "description": "State in which the subordinate platoons have suppressed the remaining enemy positions and secured the objective",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "MUMT_SIT_DRONE_3",
+        "label": "3 drones operable state",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "MUMT_SIT_DRONE_2",
+        "label": "2 drones operable state",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "MUMT_SV_COMM_NORMAL",
+        "subject_text": "MUM-T system",
+        "variable": "communication_mode",
+        "value": "normal",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "MUMT_SV_COMM_LIMITED",
+        "subject_text": "MUM-T system",
+        "variable": "communication_mode",
+        "value": "limited",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "MUMT_SV_COMM_DISCONNECTED",
+        "subject_text": "MUM-T system",
+        "variable": "communication_mode",
+        "value": "disconnected",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "MUMT_SV_DATA_VIDEO",
+        "subject_text": "Reconnaissance drone",
+        "variable": "data_mode",
+        "value": "video_stream",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "MUMT_SV_DATA_TRACK_SUMMARY",
+        "subject_text": "Reconnaissance drone",
+        "variable": "data_mode",
+        "value": "track_summary",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "MUMT_SV_AVAILABLE_DRONES_2",
+        "subject_text": "Reconnaissance drone",
+        "variable": "available_drone_count",
+        "value": 2,
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "MUMT_SV_COMBAT_POWER_MAINTAINED",
+        "subject_text": "Subordinate platoons",
+        "variable": "combat_power",
+        "value": "maintained",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.87,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "MUMT_SV_AVAILABLE_DRONES_3",
+        "label": "3 available drones",
+        "subject_text": "Reconnaissance drone",
+        "variable": "available_drone_count",
+        "value": 3,
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "MUMT_OBS_ENEMY_OP",
+        "label": "Suspected enemy observation post heat source picked up",
+        "observer_text": "Drone 1",
+        "observed_text": "Suspected enemy observation post heat source behind the ridge",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "MUMT_OBS_FPV_DETECTED",
+        "label": "Multiple FPV drones detected",
+        "observer_text": "Drone 1 Edge AI",
+        "observed_text": "Possibility of 3-4 FPV kamikaze drones",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "MUMT_OBS_PACKET_LOSS",
+        "label": "Packet loss rate surge detected",
+        "observer_text": "TDSS",
+        "observed_text": "Packet loss rate persistently above the threshold",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "MUMT_OBS_HEARTBEAT_LOSS",
+        "label": "Heartbeat loss detected",
+        "observer_text": "TDSS",
+        "observed_text": "Persistent heartbeat loss with the drones and higher echelon",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "MUMT_OBS_LINK_RECOVERY",
+        "label": "Drone link recovery detected",
+        "observer_text": "TDSS",
+        "observed_text": "Link with Drone 2 recovered and kept stable",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "MUMT_OBS_BANDWIDTH_RECOVERY",
+        "label": "Bandwidth recovery confirmed",
+        "observer_text": "TDSS",
+        "observed_text": "Gradual recovery of battalion server connection and bandwidth",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "MUMT_EVT_FPV_APPROACH",
+        "label": "Enemy FPV drone approach",
+        "event_type": "threat_occurrence",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "MUMT_EVT_EW_JAMMING_START",
+        "label": "Enemy electronic warfare jamming begins",
+        "event_type": "external_attack",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "MUMT_EVT_PACKET_LOSS_PERSISTED",
+        "label": "Packet loss rate persistently exceeds the threshold",
+        "event_type": "trigger_condition",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "MUMT_EVT_HEARTBEAT_LOSS_PERSISTED",
+        "label": "Persistent heartbeat loss",
+        "event_type": "trigger_condition",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "MUMT_EVT_ATGM_LAUNCH",
+        "label": "Enemy ATGM launch",
+        "event_type": "threat_occurrence",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.89,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "MUMT_EVT_LINK_STABLE",
+        "label": "Link kept stable",
+        "event_type": "recovery_condition",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "MUMT_EVT_BANDWIDTH_RECOVERED",
+        "label": "Bandwidth recovery",
+        "event_type": "recovery_condition",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "MUMT_EVT_DRONE_BATTERY_DEPLETED",
+        "label": "Drone 1 battery depletion and landing",
+        "event_type": "capability_loss",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "MUMT_EVT_ENEMY_OP_HEAT_SIGNATURE",
+        "label": "Appearance of suspected enemy observation post heat source behind the ridge",
+        "event_type": "threat",
+        "trigger_type": "external",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.85,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "MUMT_TR_NORMAL_TO_LIMITED",
+        "label": "Transition from normal communication to limited communication",
+        "from_situation_text": "Normal communication state",
+        "to_situation_text": "Limited communication state",
+        "change_kind": [
+          "mode_change",
+          "information_change"
+        ],
+        "trigger_text": "Packet loss rate persistently exceeds the threshold",
+        "guard": {
+          "text": "The packet loss rate persists above the threshold"
+        },
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "MUMT_TR_LIMITED_TO_DISCONNECTED",
+        "label": "Transition from limited communication to communication blackout",
+        "from_situation_text": "Limited communication state",
+        "to_situation_text": "Communication blackout state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Persistent heartbeat loss",
+        "guard": {
+          "text": "Heartbeat loss persists for a certain time or more"
+        },
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "MUMT_TR_DISCONNECTED_TO_LIMITED",
+        "label": "Transition from communication blackout to limited communication",
+        "from_situation_text": "Communication blackout state",
+        "to_situation_text": "Limited communication state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Drone link kept stable",
+        "guard": {
+          "text": "The link is maintained for a certain time or more"
+        },
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "MUMT_TR_LIMITED_TO_NORMAL",
+        "label": "Transition from limited communication to normal communication",
+        "from_situation_text": "Limited communication state",
+        "to_situation_text": "Normal communication state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Bandwidth recovery and connection kept stable",
+        "guard": {
+          "text": "Connection stability is maintained and bandwidth recovers"
+        },
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "MUMT_TR_DRONE_COUNT_REDUCED",
+        "label": "Available drones decrease from 3 to 2",
+        "from_situation_text": "3 drones operable",
+        "to_situation_text": "2 drones operable",
+        "change_kind": [
+          "capability_change"
+        ],
+        "trigger_text": "Drone 1 battery depletion and landing",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "MUMT_P1_COMMANDER",
+        "label": "Company commander",
+        "performer_type": "human_commander",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "MUMT_P2_TDSS",
+        "label": "TDSS",
+        "performer_type": "decision_support_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.96,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "MUMT_P3_DRONE_TEAM",
+        "label": "Three reconnaissance drones",
+        "performer_type": "unmanned_air_team",
+        "performer_kind": "aggregate",
+        "part_structure": {
+          "role": "whole",
+          "member_cardinality": {
+            "total_count": 3,
+            "text": "Three reconnaissance drones"
+          }
+        },
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "MUMT_P3_1_DRONE",
+        "label": "Drone 1",
+        "performer_type": "recon_drone",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "MUMT_P3_2_DRONE",
+        "label": "Drone 2",
+        "performer_type": "recon_drone",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "MUMT_P3_3_DRONE",
+        "label": "Drone 3",
+        "performer_type": "recon_drone",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "MUMT_P4_PLATOONS",
+        "label": "Subordinate platoons",
+        "performer_type": "tank_platoon_group",
+        "performer_kind": "aggregate",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "MUMT_P5_BATTALION",
+        "label": "Battalion server",
+        "performer_type": "higher_command_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "MUMT_P6_ENEMY",
+        "label": "Enemy",
+        "performer_type": "hostile_force",
+        "performer_kind": "aggregate",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "MUMT_P4_2_PLATOON",
+        "label": "2nd Platoon",
+        "performer_type": [
+          "organization",
+          "military_unit"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "MUMT_A_TDSS_DIAGNOSE",
+        "label": "TDSS self-diagnosis and normal communication confirmation",
+        "primary_actor_text": "TDSS",
+        "verb": "confirm",
+        "object_text": "Normal communication with the battalion server and SA function",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_DRONE_LAUNCH",
+        "label": "Sequential reconnaissance drone launch and surveillance deployment",
+        "primary_actor_text": "Three reconnaissance drones",
+        "verb": "launch",
+        "object_text": "Forward and left and right flank surveillance mission",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_DETECT_OBSERVATION_POST",
+        "label": "Detect suspected enemy observation post heat source",
+        "primary_actor_text": "Drone 1",
+        "verb": "detect",
+        "object_text": "Suspected enemy observation post heat source behind the ridge",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_DECIDE_DETOUR",
+        "label": "Decide right bypass maneuver",
+        "primary_actor_text": "Company commander",
+        "verb": "decide",
+        "object_text": "Right bypass maneuver",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_ALERT_FPV",
+        "label": "Provide FPV threat alert",
+        "primary_actor_text": "TDSS",
+        "verb": "display",
+        "object_text": "Threat direction, approach speed, estimated time of arrival",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_DISPERSE_COMMAND",
+        "label": "Order dispersed maneuver and air-defense watch",
+        "primary_actor_text": "Company commander",
+        "verb": "order",
+        "object_text": "All-platoon dispersed maneuver and air-defense watch",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_SWITCH_EDGE_MODE",
+        "label": "Drone switch to Edge AI analysis mode",
+        "primary_actor_text": "Three reconnaissance drones",
+        "verb": "switch",
+        "object_text": "Stop video transmission and transmit summary track data",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_AVOID_FPV",
+        "label": "FPV evasive maneuver",
+        "primary_actor_text": "Subordinate platoons",
+        "verb": "evade",
+        "object_text": "FPV drone approach threat",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.89,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_ACTIVATE_LOCAL_SURVIVAL",
+        "label": "Activate local sensor-based survival loop",
+        "primary_actor_text": "TDSS",
+        "verb": "activate",
+        "object_text": "Local sensor-based survival loop",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_EMERGENCY_BROADCAST",
+        "label": "Transmit drone emergency broadcast",
+        "primary_actor_text": "Three reconnaissance drones",
+        "verb": "broadcast",
+        "object_text": "Coordinates and type of threat detection data",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_SMOKE_EVASION",
+        "label": "Smoke screen deployment and evasive maneuver after ATGM alert",
+        "primary_actor_text": "2nd Platoon",
+        "verb": "deploy",
+        "object_text": "Smoke screen and evasive maneuver",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_RESYNC_SA",
+        "label": "SA resynchronization",
+        "primary_actor_text": "TDSS",
+        "verb": "resynchronize",
+        "object_text": "Track data accumulated during the blackout period",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_REPORT_BATTALION",
+        "label": "Comprehensive report on the blackout period",
+        "primary_actor_text": "Company commander",
+        "verb": "report",
+        "object_text": "Threat encounters, electronic warfare progress, damage status, drone loss",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "MUMT_A_RESUME_ATTACK",
+        "label": "Resume attack maneuver",
+        "primary_actor_text": "Subordinate platoons",
+        "verb": "resume",
+        "object_text": "Attack toward the objective",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "items": [
+      {
+        "item_id": "MUMT_I_VIDEO_STREAM",
+        "label": "Drone video stream",
+        "item_type": "sensor_stream",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "MUMT_I_TRACK_SUMMARY",
+        "label": "Summary track data",
+        "item_type": "track_payload",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "MUMT_I_SA_SUMMARY",
+        "label": "Company SA summary information",
+        "item_type": "situation_awareness_report",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "MUMT_I_FPV_ALERT",
+        "label": "FPV threat alert",
+        "item_type": "threat_alert",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "MUMT_I_EMERGENCY_BROADCAST",
+        "label": "Drone emergency broadcast message",
+        "item_type": "broadcast_message",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "MUMT_I_BATTLE_REPORT",
+        "label": "Comprehensive report on the blackout period",
+        "item_type": "report",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "MUMT_F_PREP_TO_DRONE_LAUNCH",
+        "label": "Drone launch after TDSS check",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "MUMT_F_OP_DETECT_TO_DETOUR",
+        "label": "Bypass decision after enemy observation post detection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "MUMT_F_FPV_ALERT_TO_DISPERSE",
+        "label": "Dispersed maneuver after FPV alert",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "MUMT_F_EDGE_MODE_TO_TRACK_FLOW",
+        "label": "Summary track transmission after Edge mode switch",
+        "flow_kind": "object_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "MUMT_F_DISCONNECTED_TO_BROADCAST",
+        "label": "Drone emergency broadcast after blackout",
+        "flow_kind": "message_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "MUMT_F_ATGM_ALERT_TO_EVASION",
+        "label": "Smoke screen and evasion after ATGM broadcast alert",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "MUMT_F_LINK_RECOVERY_TO_RESYNC",
+        "label": "SA resynchronization after link recovery",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "MUMT_F_NORMAL_RESTORED_TO_ATTACK",
+        "label": "Attack resumption after normal communication recovery",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "MUMT_CTRL_COMM_MODE_GUARD",
+        "label": "Communication mode transition guard",
+        "control_type": "decision",
+        "guard_texts": [
+          "Packet loss rate persistently exceeds the threshold",
+          "Persistent heartbeat loss",
+          "Link kept stable",
+          "Bandwidth recovery"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "control_id": "MUMT_CTRL_LOCAL_SURVIVAL_LOOP",
+        "label": "Local survival loop during communication blackout",
+        "control_type": "loop",
+        "guard_texts": [
+          "While the communication blackout state persists"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "control_id": "MUMT_CTRL_RECOVERY_STAGED",
+        "label": "Staged recovery control",
+        "control_type": "guarded_sequence",
+        "guard_texts": [
+          "Limited mode after link stability confirmation",
+          "Normal mode after bandwidth recovery"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "MUMT_C_PACKET_LOSS_THRESHOLD",
+        "label": "Condition: packet loss rate persistently exceeds the threshold",
+        "constraint_type": "guard",
+        "expression_text": "packet_loss_rate > threshold for configured_duration",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "MUMT_C_HEARTBEAT_TIMEOUT",
+        "label": "Condition: persistent heartbeat loss",
+        "constraint_type": "guard",
+        "expression_text": "heartbeat_loss_duration >= configured_duration",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "MUMT_C_LINK_STABILITY",
+        "label": "Condition: link kept stable",
+        "constraint_type": "guard",
+        "expression_text": "link_stable_duration >= configured_duration",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "MUMT_C_FPV_ETA",
+        "label": "FPV estimated time of arrival 43 s",
+        "constraint_type": "temporal_warning",
+        "expression_text": "fpv_eta ~= 43 seconds",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "MUMT_C_SURVIVABILITY_PRIORITY",
+        "label": "Maintain survivability-focused functions",
+        "constraint_type": "operational_constraint",
+        "expression_text": "survivability_functions == maintained during degradation",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "MUMT_G_MAINTAIN_MIN_SA",
+        "label": "Maintain minimum SA",
+        "goal_type": "operational_objective",
+        "desired_state_text": "Maintain minimum situational awareness with track data and local sensors even if video is stopped",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "RequirementCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "goal_id": "MUMT_G_MAINTAIN_SURVIVABILITY",
+        "label": "Maintain survivability-focused functions",
+        "goal_type": "safety_objective",
+        "desired_state_text": "Maintain immediate alert, evasion, and local survival functions even during limited communication and blackout",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "RequirementCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "goal_id": "MUMT_G_SECURE_TARGET",
+        "label": "Secure objective",
+        "goal_type": "mission_objective",
+        "desired_state_text": "The subordinate platoons secure the objective and organize defensive positions",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "RequirementCheck",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "MUMT_R_DETOUR",
+        "label": "Bypass because of the possibility of anti-tank position deployment",
+        "reason_type": [
+          "tactical_rationale"
+        ],
+        "rationale_text": "The battalion analysis result shows a high probability that enemy anti-tank positions are deployed in the area of that ridge",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.87,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "reason_id": "MUMT_R_GRACEFUL_DEGRADATION",
+        "label": "Perform graceful degradation because of communication quality degradation",
+        "reason_type": [
+          "operational_rationale"
+        ],
+        "rationale_text": "To maintain survivability-focused functions and minimum SA even if video quality is lowered",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "reason_id": "MUMT_R_INDEPENDENT_SURVIVAL",
+        "label": "Continue independent action because integrated command is impossible",
+        "reason_type": [
+          "command_rationale"
+        ],
+        "rationale_text": "Because integrated company command is impossible in the blackout state, each platoon continues independent action according to existing orders",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U03"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "domain_extension_rules": [
+      {
+        "domain_extension_rule_id": "MUMT_DER_COMM_DEGRADATION",
+        "label": "MUM-T communication degradation vocabulary",
+        "domain": "military_mumt_communications",
+        "terms": [
+          "normal communication mode",
+          "limited communication mode",
+          "disconnected communication mode",
+          "graceful degradation",
+          "emergency broadcast"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U04"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "domain_extension_rule_id": "MUMT_DER_THREAT_TYPES",
+        "label": "MUM-T threat vocabulary",
+        "domain": "military_threat",
+        "terms": [
+          "FPV drone",
+          "ATGM",
+          "electronic warfare jamming",
+          "observation post"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "semantic_bindings": [
+      {
+        "semantic_binding_id": "MUMT_SB_TDSS_PART",
+        "label": "TDSS performer to SysML Part",
+        "source_slot_text": "TDSS",
+        "target_standard_element": "SysML Part",
+        "binding_kind": "performer_to_part",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "semantic_binding_id": "MUMT_SB_COMM_TRANSITIONS",
+        "label": "Binding communication mode transitions as StateTransitionAction",
+        "source_slot_text": "Normal/limited/blackout communication transitions",
+        "target_standard_element": "SysML StateTransitionAction",
+        "binding_kind": "transition_to_state_transition",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "semantic_binding_id": "MUMT_SB_TRACK_DATA_ITEM",
+        "label": "Summary track data to SysML Item",
+        "source_slot_text": "Summary track data",
+        "target_standard_element": "SysML Item",
+        "binding_kind": "payload_to_item",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U01"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "semantic_binding_id": "MUMT_SB_FPV_THREAT",
+        "label": "FPV threat event binding",
+        "source_slot_text": "Enemy FPV drone approach",
+        "target_standard_element": "KerML Occurrence",
+        "binding_kind": "event_to_occurrence",
+        "source_ref": {
+          "source_unit_id": "MUMT_GT_U02"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "MUMT_GT_REL_001",
+        "source_slot_id": "MUMT_P3_DRONE_TEAM",
+        "relation_type": "has_part",
+        "target_slot_id": "MUMT_P3_1_DRONE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_002",
+        "source_slot_id": "MUMT_P3_DRONE_TEAM",
+        "relation_type": "has_part",
+        "target_slot_id": "MUMT_P3_2_DRONE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_003",
+        "source_slot_id": "MUMT_P3_DRONE_TEAM",
+        "relation_type": "has_part",
+        "target_slot_id": "MUMT_P3_3_DRONE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_004",
+        "source_slot_id": "MUMT_SCN_ATTACK_OPERATION",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_PREP_NORMAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_005",
+        "source_slot_id": "MUMT_SCN_ATTACK_OPERATION",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_THREAT_DETOUR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_006",
+        "source_slot_id": "MUMT_SCN_ATTACK_OPERATION",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_EW_DEGRADATION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_007",
+        "source_slot_id": "MUMT_SCN_ATTACK_OPERATION",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_RECOVERY_RESUME",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_008",
+        "source_slot_id": "MUMT_SIT_COMM_NORMAL",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_COMM_NORMAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_009",
+        "source_slot_id": "MUMT_SIT_COMM_NORMAL",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_DATA_VIDEO",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_010",
+        "source_slot_id": "MUMT_SIT_COMM_LIMITED",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_COMM_LIMITED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_011",
+        "source_slot_id": "MUMT_SIT_COMM_LIMITED",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_DATA_TRACK_SUMMARY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_012",
+        "source_slot_id": "MUMT_SIT_COMM_DISCONNECTED",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_COMM_DISCONNECTED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_013",
+        "source_slot_id": "MUMT_SIT_MISSION_SECURED",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_COMBAT_POWER_MAINTAINED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_014",
+        "source_slot_id": "MUMT_SIT_DRONE_3",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_AVAILABLE_DRONES_3",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_015",
+        "source_slot_id": "MUMT_SIT_DRONE_2",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_AVAILABLE_DRONES_2",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_016",
+        "source_slot_id": "MUMT_TR_NORMAL_TO_LIMITED",
+        "relation_type": "from_situation",
+        "target_slot_id": "MUMT_SIT_COMM_NORMAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_017",
+        "source_slot_id": "MUMT_TR_NORMAL_TO_LIMITED",
+        "relation_type": "to_situation",
+        "target_slot_id": "MUMT_SIT_COMM_LIMITED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_018",
+        "source_slot_id": "MUMT_TR_LIMITED_TO_DISCONNECTED",
+        "relation_type": "from_situation",
+        "target_slot_id": "MUMT_SIT_COMM_LIMITED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_019",
+        "source_slot_id": "MUMT_TR_LIMITED_TO_DISCONNECTED",
+        "relation_type": "to_situation",
+        "target_slot_id": "MUMT_SIT_COMM_DISCONNECTED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_020",
+        "source_slot_id": "MUMT_TR_DISCONNECTED_TO_LIMITED",
+        "relation_type": "from_situation",
+        "target_slot_id": "MUMT_SIT_COMM_DISCONNECTED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_021",
+        "source_slot_id": "MUMT_TR_DISCONNECTED_TO_LIMITED",
+        "relation_type": "to_situation",
+        "target_slot_id": "MUMT_SIT_COMM_LIMITED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_022",
+        "source_slot_id": "MUMT_TR_LIMITED_TO_NORMAL",
+        "relation_type": "from_situation",
+        "target_slot_id": "MUMT_SIT_COMM_LIMITED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_023",
+        "source_slot_id": "MUMT_TR_LIMITED_TO_NORMAL",
+        "relation_type": "to_situation",
+        "target_slot_id": "MUMT_SIT_COMM_NORMAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_024",
+        "source_slot_id": "MUMT_TR_DRONE_COUNT_REDUCED",
+        "relation_type": "from_situation",
+        "target_slot_id": "MUMT_SIT_DRONE_3",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_025",
+        "source_slot_id": "MUMT_TR_DRONE_COUNT_REDUCED",
+        "relation_type": "to_situation",
+        "target_slot_id": "MUMT_SIT_DRONE_2",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_026",
+        "source_slot_id": "MUMT_EVT_PACKET_LOSS_PERSISTED",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_TR_NORMAL_TO_LIMITED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_028",
+        "source_slot_id": "MUMT_EVT_HEARTBEAT_LOSS_PERSISTED",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_TR_LIMITED_TO_DISCONNECTED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_029",
+        "source_slot_id": "MUMT_EVT_LINK_STABLE",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_TR_DISCONNECTED_TO_LIMITED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_030",
+        "source_slot_id": "MUMT_EVT_BANDWIDTH_RECOVERED",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_TR_LIMITED_TO_NORMAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_031",
+        "source_slot_id": "MUMT_EVT_DRONE_BATTERY_DEPLETED",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_TR_DRONE_COUNT_REDUCED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_032",
+        "source_slot_id": "MUMT_OBS_FPV_DETECTED",
+        "relation_type": "observes",
+        "target_slot_id": "MUMT_EVT_FPV_APPROACH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_033",
+        "source_slot_id": "MUMT_OBS_PACKET_LOSS",
+        "relation_type": "observes",
+        "target_slot_id": "MUMT_EVT_PACKET_LOSS_PERSISTED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_034",
+        "source_slot_id": "MUMT_OBS_HEARTBEAT_LOSS",
+        "relation_type": "observes",
+        "target_slot_id": "MUMT_EVT_HEARTBEAT_LOSS_PERSISTED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_035",
+        "source_slot_id": "MUMT_OBS_LINK_RECOVERY",
+        "relation_type": "observes",
+        "target_slot_id": "MUMT_EVT_LINK_STABLE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_036",
+        "source_slot_id": "MUMT_OBS_BANDWIDTH_RECOVERY",
+        "relation_type": "observes",
+        "target_slot_id": "MUMT_EVT_BANDWIDTH_RECOVERED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_038",
+        "source_slot_id": "MUMT_EVT_ATGM_LAUNCH",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_A_SMOKE_EVASION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_039",
+        "source_slot_id": "MUMT_P6_ENEMY",
+        "relation_type": "originates_event",
+        "target_slot_id": "MUMT_EVT_ATGM_LAUNCH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_040",
+        "source_slot_id": "MUMT_A_TDSS_DIAGNOSE",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P2_TDSS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_041",
+        "source_slot_id": "MUMT_A_DRONE_LAUNCH",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P3_DRONE_TEAM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_042",
+        "source_slot_id": "MUMT_A_DETECT_OBSERVATION_POST",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P3_1_DRONE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_043",
+        "source_slot_id": "MUMT_A_DECIDE_DETOUR",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P1_COMMANDER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_044",
+        "source_slot_id": "MUMT_A_ALERT_FPV",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P2_TDSS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_045",
+        "source_slot_id": "MUMT_A_DISPERSE_COMMAND",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P1_COMMANDER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_046",
+        "source_slot_id": "MUMT_A_SWITCH_EDGE_MODE",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P3_DRONE_TEAM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_047",
+        "source_slot_id": "MUMT_A_AVOID_FPV",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P4_PLATOONS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_048",
+        "source_slot_id": "MUMT_A_ACTIVATE_LOCAL_SURVIVAL",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P2_TDSS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_049",
+        "source_slot_id": "MUMT_A_EMERGENCY_BROADCAST",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P3_DRONE_TEAM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_051",
+        "source_slot_id": "MUMT_A_RESYNC_SA",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P2_TDSS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_052",
+        "source_slot_id": "MUMT_A_REPORT_BATTALION",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P1_COMMANDER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_053",
+        "source_slot_id": "MUMT_A_RESUME_ATTACK",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P4_PLATOONS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_054",
+        "source_slot_id": "MUMT_A_REPORT_BATTALION",
+        "relation_type": "provided_to",
+        "target_slot_id": "MUMT_P5_BATTALION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_055",
+        "source_slot_id": "MUMT_A_SWITCH_EDGE_MODE",
+        "relation_type": "uses_item",
+        "target_slot_id": "MUMT_I_VIDEO_STREAM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_056",
+        "source_slot_id": "MUMT_A_SWITCH_EDGE_MODE",
+        "relation_type": "produces_item",
+        "target_slot_id": "MUMT_I_TRACK_SUMMARY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_057",
+        "source_slot_id": "MUMT_A_ALERT_FPV",
+        "relation_type": "produces_item",
+        "target_slot_id": "MUMT_I_FPV_ALERT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_058",
+        "source_slot_id": "MUMT_A_EMERGENCY_BROADCAST",
+        "relation_type": "produces_item",
+        "target_slot_id": "MUMT_I_EMERGENCY_BROADCAST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_059",
+        "source_slot_id": "MUMT_A_REPORT_BATTALION",
+        "relation_type": "produces_item",
+        "target_slot_id": "MUMT_I_BATTLE_REPORT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_060",
+        "source_slot_id": "MUMT_A_RESYNC_SA",
+        "relation_type": "produces_item",
+        "target_slot_id": "MUMT_I_SA_SUMMARY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_061",
+        "source_slot_id": "MUMT_F_PREP_TO_DRONE_LAUNCH",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_TDSS_DIAGNOSE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_062",
+        "source_slot_id": "MUMT_F_PREP_TO_DRONE_LAUNCH",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_DRONE_LAUNCH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_063",
+        "source_slot_id": "MUMT_F_OP_DETECT_TO_DETOUR",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_DETECT_OBSERVATION_POST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_064",
+        "source_slot_id": "MUMT_F_OP_DETECT_TO_DETOUR",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_DECIDE_DETOUR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_065",
+        "source_slot_id": "MUMT_F_FPV_ALERT_TO_DISPERSE",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_ALERT_FPV",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_066",
+        "source_slot_id": "MUMT_F_FPV_ALERT_TO_DISPERSE",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_DISPERSE_COMMAND",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_067",
+        "source_slot_id": "MUMT_F_EDGE_MODE_TO_TRACK_FLOW",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_SWITCH_EDGE_MODE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_068",
+        "source_slot_id": "MUMT_F_EDGE_MODE_TO_TRACK_FLOW",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_RESYNC_SA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_069",
+        "source_slot_id": "MUMT_F_EDGE_MODE_TO_TRACK_FLOW",
+        "relation_type": "carries_item",
+        "target_slot_id": "MUMT_I_TRACK_SUMMARY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_070",
+        "source_slot_id": "MUMT_F_DISCONNECTED_TO_BROADCAST",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_ACTIVATE_LOCAL_SURVIVAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_071",
+        "source_slot_id": "MUMT_F_DISCONNECTED_TO_BROADCAST",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_EMERGENCY_BROADCAST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_072",
+        "source_slot_id": "MUMT_F_DISCONNECTED_TO_BROADCAST",
+        "relation_type": "carries_item",
+        "target_slot_id": "MUMT_I_EMERGENCY_BROADCAST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_073",
+        "source_slot_id": "MUMT_F_ATGM_ALERT_TO_EVASION",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_EMERGENCY_BROADCAST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_074",
+        "source_slot_id": "MUMT_F_ATGM_ALERT_TO_EVASION",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_SMOKE_EVASION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_075",
+        "source_slot_id": "MUMT_F_LINK_RECOVERY_TO_RESYNC",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_RESYNC_SA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_076",
+        "source_slot_id": "MUMT_F_LINK_RECOVERY_TO_RESYNC",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_REPORT_BATTALION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_077",
+        "source_slot_id": "MUMT_F_NORMAL_RESTORED_TO_ATTACK",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_REPORT_BATTALION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_078",
+        "source_slot_id": "MUMT_F_NORMAL_RESTORED_TO_ATTACK",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_RESUME_ATTACK",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_079",
+        "source_slot_id": "MUMT_CTRL_COMM_MODE_GUARD",
+        "relation_type": "controls_flow",
+        "target_slot_id": "MUMT_F_EDGE_MODE_TO_TRACK_FLOW",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_080",
+        "source_slot_id": "MUMT_CTRL_LOCAL_SURVIVAL_LOOP",
+        "relation_type": "controls_flow",
+        "target_slot_id": "MUMT_F_DISCONNECTED_TO_BROADCAST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_081",
+        "source_slot_id": "MUMT_CTRL_RECOVERY_STAGED",
+        "relation_type": "controls_flow",
+        "target_slot_id": "MUMT_F_NORMAL_RESTORED_TO_ATTACK",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_082",
+        "source_slot_id": "MUMT_TR_NORMAL_TO_LIMITED",
+        "relation_type": "constrained_by",
+        "target_slot_id": "MUMT_C_PACKET_LOSS_THRESHOLD",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_083",
+        "source_slot_id": "MUMT_TR_LIMITED_TO_DISCONNECTED",
+        "relation_type": "constrained_by",
+        "target_slot_id": "MUMT_C_HEARTBEAT_TIMEOUT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_084",
+        "source_slot_id": "MUMT_TR_DISCONNECTED_TO_LIMITED",
+        "relation_type": "constrained_by",
+        "target_slot_id": "MUMT_C_LINK_STABILITY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_085",
+        "source_slot_id": "MUMT_A_ALERT_FPV",
+        "relation_type": "constrained_by",
+        "target_slot_id": "MUMT_C_FPV_ETA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_086",
+        "source_slot_id": "MUMT_A_ACTIVATE_LOCAL_SURVIVAL",
+        "relation_type": "constrained_by",
+        "target_slot_id": "MUMT_C_SURVIVABILITY_PRIORITY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_087",
+        "source_slot_id": "MUMT_SCN_ATTACK_OPERATION",
+        "relation_type": "has_goal",
+        "target_slot_id": "MUMT_G_SECURE_TARGET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_088",
+        "source_slot_id": "MUMT_A_SWITCH_EDGE_MODE",
+        "relation_type": "has_goal",
+        "target_slot_id": "MUMT_G_MAINTAIN_MIN_SA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_089",
+        "source_slot_id": "MUMT_A_ACTIVATE_LOCAL_SURVIVAL",
+        "relation_type": "has_goal",
+        "target_slot_id": "MUMT_G_MAINTAIN_SURVIVABILITY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_090",
+        "source_slot_id": "MUMT_A_RESUME_ATTACK",
+        "relation_type": "has_goal",
+        "target_slot_id": "MUMT_G_SECURE_TARGET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_091",
+        "source_slot_id": "MUMT_A_DECIDE_DETOUR",
+        "relation_type": "has_reason",
+        "target_slot_id": "MUMT_R_DETOUR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_092",
+        "source_slot_id": "MUMT_A_SWITCH_EDGE_MODE",
+        "relation_type": "has_reason",
+        "target_slot_id": "MUMT_R_GRACEFUL_DEGRADATION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_093",
+        "source_slot_id": "MUMT_A_ACTIVATE_LOCAL_SURVIVAL",
+        "relation_type": "has_reason",
+        "target_slot_id": "MUMT_R_INDEPENDENT_SURVIVAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_094",
+        "source_slot_id": "MUMT_SB_TDSS_PART",
+        "relation_type": "binds_to",
+        "target_slot_id": "MUMT_P2_TDSS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_095",
+        "source_slot_id": "MUMT_SB_COMM_TRANSITIONS",
+        "relation_type": "binds_to",
+        "target_slot_id": "MUMT_TR_NORMAL_TO_LIMITED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_096",
+        "source_slot_id": "MUMT_SB_TRACK_DATA_ITEM",
+        "relation_type": "binds_to",
+        "target_slot_id": "MUMT_I_TRACK_SUMMARY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_097",
+        "source_slot_id": "MUMT_SB_FPV_THREAT",
+        "relation_type": "binds_to",
+        "target_slot_id": "MUMT_EVT_FPV_APPROACH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_098",
+        "source_slot_id": "MUMT_DER_COMM_DEGRADATION",
+        "relation_type": "has_binding",
+        "target_slot_id": "MUMT_SB_COMM_TRANSITIONS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_099",
+        "source_slot_id": "MUMT_DER_COMM_DEGRADATION",
+        "relation_type": "has_binding",
+        "target_slot_id": "MUMT_SB_TRACK_DATA_ITEM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_100",
+        "source_slot_id": "MUMT_DER_THREAT_TYPES",
+        "relation_type": "has_binding",
+        "target_slot_id": "MUMT_SB_FPV_THREAT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_101",
+        "source_slot_id": "MUMT_DER_THREAT_TYPES",
+        "relation_type": "has_binding",
+        "target_slot_id": "MUMT_SB_TDSS_PART",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_102",
+        "source_slot_id": "MUMT_TR_NORMAL_TO_LIMITED",
+        "relation_type": "temporal_before",
+        "target_slot_id": "MUMT_TR_LIMITED_TO_DISCONNECTED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_103",
+        "source_slot_id": "MUMT_TR_LIMITED_TO_DISCONNECTED",
+        "relation_type": "temporal_before",
+        "target_slot_id": "MUMT_TR_DISCONNECTED_TO_LIMITED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_104",
+        "source_slot_id": "MUMT_TR_DISCONNECTED_TO_LIMITED",
+        "relation_type": "temporal_before",
+        "target_slot_id": "MUMT_TR_LIMITED_TO_NORMAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_105",
+        "source_slot_id": "MUMT_EP_PREP_NORMAL",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_TDSS_DIAGNOSE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_106",
+        "source_slot_id": "MUMT_EP_PREP_NORMAL",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_DRONE_LAUNCH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_107",
+        "source_slot_id": "MUMT_EP_THREAT_DETOUR",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_DETECT_OBSERVATION_POST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_108",
+        "source_slot_id": "MUMT_EP_THREAT_DETOUR",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_DECIDE_DETOUR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_109",
+        "source_slot_id": "MUMT_EP_THREAT_DETOUR",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_ALERT_FPV",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_110",
+        "source_slot_id": "MUMT_EP_THREAT_DETOUR",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_DISPERSE_COMMAND",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_111",
+        "source_slot_id": "MUMT_EP_THREAT_DETOUR",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_AVOID_FPV",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_112",
+        "source_slot_id": "MUMT_EP_EW_DEGRADATION",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_SWITCH_EDGE_MODE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_113",
+        "source_slot_id": "MUMT_EP_EW_DEGRADATION",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_ACTIVATE_LOCAL_SURVIVAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_114",
+        "source_slot_id": "MUMT_EP_EW_DEGRADATION",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_EMERGENCY_BROADCAST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_115",
+        "source_slot_id": "MUMT_EP_EW_DEGRADATION",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_SMOKE_EVASION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_116",
+        "source_slot_id": "MUMT_EP_RECOVERY_RESUME",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_RESYNC_SA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_117",
+        "source_slot_id": "MUMT_EP_RECOVERY_RESUME",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_REPORT_BATTALION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_118",
+        "source_slot_id": "MUMT_EP_RECOVERY_RESUME",
+        "relation_type": "contains_action",
+        "target_slot_id": "MUMT_A_RESUME_ATTACK",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_121",
+        "source_slot_id": "MUMT_P4_PLATOONS",
+        "relation_type": "has_part",
+        "target_slot_id": "MUMT_P4_2_PLATOON",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_122",
+        "source_slot_id": "MUMT_A_SMOKE_EVASION",
+        "relation_type": "performed_by",
+        "target_slot_id": "MUMT_P4_2_PLATOON",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_123",
+        "source_slot_id": "MUMT_EVT_EW_JAMMING_START",
+        "relation_type": "causes_event",
+        "target_slot_id": "MUMT_EVT_PACKET_LOSS_PERSISTED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_127",
+        "source_slot_id": "MUMT_EP_PREP_NORMAL",
+        "relation_type": "has_situation",
+        "target_slot_id": "MUMT_SIT_COMM_NORMAL",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_128",
+        "source_slot_id": "MUMT_EP_PREP_NORMAL",
+        "relation_type": "has_situation",
+        "target_slot_id": "MUMT_SIT_DRONE_3",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_129",
+        "source_slot_id": "MUMT_EP_EW_DEGRADATION",
+        "relation_type": "has_situation",
+        "target_slot_id": "MUMT_SIT_COMM_LIMITED",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_130",
+        "source_slot_id": "MUMT_EP_EW_DEGRADATION",
+        "relation_type": "has_situation",
+        "target_slot_id": "MUMT_SIT_COMM_DISCONNECTED",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_131",
+        "source_slot_id": "MUMT_EP_RECOVERY_RESUME",
+        "relation_type": "has_situation",
+        "target_slot_id": "MUMT_SIT_MISSION_SECURED",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_132",
+        "source_slot_id": "MUMT_EP_RECOVERY_RESUME",
+        "relation_type": "has_situation",
+        "target_slot_id": "MUMT_SIT_DRONE_2",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_124",
+        "source_slot_id": "MUMT_R_DETOUR",
+        "relation_type": "has_evidence",
+        "target_slot_id": "MUMT_OBS_ENEMY_OP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_125",
+        "source_slot_id": "MUMT_OBS_ENEMY_OP",
+        "relation_type": "observes",
+        "target_slot_id": "MUMT_EVT_ENEMY_OP_HEAT_SIGNATURE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "MUMT_GT_REL_126",
+        "source_slot_id": "MUMT_EVT_FPV_APPROACH",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_A_ALERT_FPV",
+        "evidence_level": "inferred",
+        "confidence": 0.8
+      }
+    ],
+    "validation_issues": [],
+    "generated_sysml": {
+      "packages": [],
+      "definitions": [],
+      "usages": []
+    },
+    "generated_views": {
+      "activity_diagrams": [],
+      "effbd_views": [],
+      "state_views": []
+    },
+    "assumptions": [
+      "The gold slot graph is fixed first, and the easy, medium, and hard inputs express the same atomic information.",
+      "The difficulty changes only the expression complexity and does not delete numbers, units, individual actors, or state and transition information.",
+      "benchmark_realizations links the input paragraphs for each difficulty to the canonical source units."
+    ],
+    "generation_mode": "ground_truth_reverse",
+    "benchmark_realizations": [
+      {
+        "difficulty": "easy",
+        "document": "mumt.easy.md",
+        "source_unit_map": [
+          {
+            "source_unit_id": "MUMT_GT_U01",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "MUMT_GT_U02",
+            "paragraph_index": [
+              2
+            ]
+          },
+          {
+            "source_unit_id": "MUMT_GT_U03",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "MUMT_GT_U04",
+            "paragraph_index": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "document": "mumt.medium.md",
+        "source_unit_map": [
+          {
+            "source_unit_id": "MUMT_GT_U01",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "MUMT_GT_U02",
+            "paragraph_index": [
+              2
+            ]
+          },
+          {
+            "source_unit_id": "MUMT_GT_U03",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "MUMT_GT_U04",
+            "paragraph_index": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "document": "mumt.hard.md",
+        "source_unit_map": [
+          {
+            "source_unit_id": "MUMT_GT_U01",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "MUMT_GT_U02",
+            "paragraph_index": [
+              2
+            ]
+          },
+          {
+            "source_unit_id": "MUMT_GT_U03",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "MUMT_GT_U04",
+            "paragraph_index": [
+              4
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

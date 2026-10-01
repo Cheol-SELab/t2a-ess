@@ -1,0 +1,997 @@
+{
+ "meta": {
+  "input": "AV_easy",
+  "repeat": 1,
+  "condition": "repository",
+  "model_requested": "claude-sonnet-5",
+  "models_used": [
+   "claude-sonnet-5"
+  ],
+  "prompt": "benchmark-repository.md",
+  "prompt_sha256": "5dd41ce6fef6f6b5d5270d629371cac2814254c5033a13fa8c53bcbcea4903a5",
+  "input_sha256": "f68f5633a054784a80a0560ed31300ded4eac3722e5f567439ca3de051255cf6",
+  "user_sha256": "7975635887f53500c406d5db28383b59a5295061acc81cabff371d64882f5ad8",
+  "runner_sha256": "668572f34df601b1974f920604e58152c826610fc0840a0fe0ed5b39cc377e01",
+  "ok": true,
+  "attempts": 1,
+  "failure": null,
+  "elapsed_s": 278.7,
+  "total_cost_usd": 0.3965,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1321,
+   "cache_read_input_tokens": 11790,
+   "output_tokens": 38882,
+   "output_tokens_details": {
+    "thinking_tokens": 22015
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1321,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 38882,
+     "cache_read_input_tokens": 11790,
+     "cache_creation_input_tokens": 1321,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1321
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "cli": "claude -p (isolated, experiments/common/claude_cli.py)"
+ },
+ "tau": 0.87,
+ "parse_ok": true,
+ "matcher": "embedding",
+ "scorer_version": "3.1",
+ "slots_tolerant": {
+  "micro": {
+   "gold_coverage": 0.6437,
+   "pred_support": 0.873,
+   "f1": 0.741
+  },
+  "per_type": {
+   "scenarios": {
+    "gold_coverage": 0.0,
+    "pred_support": 0.0,
+    "f1": 0.0,
+    "gold": 1,
+    "pred": 1
+   },
+   "episodes": {
+    "gold_coverage": 0.6,
+    "pred_support": 0.6,
+    "f1": 0.6,
+    "gold": 5,
+    "pred": 5
+   },
+   "performers": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 14,
+    "pred": 14
+   },
+   "actions": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.9412,
+    "f1": 0.9697,
+    "gold": 16,
+    "pred": 17
+   },
+   "items": {
+    "gold_coverage": 0.7143,
+    "pred_support": 0.8333,
+    "f1": 0.7692,
+    "gold": 7,
+    "pred": 6
+   },
+   "flows": {
+    "gold_coverage": 0.0,
+    "pred_support": 0.0,
+    "f1": 0.0,
+    "gold": 9,
+    "pred": 0
+   },
+   "controls": {
+    "gold_coverage": 0.0,
+    "pred_support": 0.0,
+    "f1": 0.0,
+    "gold": 3,
+    "pred": 0
+   },
+   "situations": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 5,
+    "pred": 4
+   },
+   "state_values": {
+    "gold_coverage": 0.1429,
+    "pred_support": 1.0,
+    "f1": 0.25,
+    "gold": 7,
+    "pred": 1
+   },
+   "events": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 4,
+    "pred": 4
+   },
+   "transitions": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 3,
+    "pred": 3
+   },
+   "constraints": {
+    "gold_coverage": 0.75,
+    "pred_support": 1.0,
+    "f1": 0.8571,
+    "gold": 4,
+    "pred": 3
+   },
+   "goals": {
+    "gold_coverage": 0.3333,
+    "pred_support": 1.0,
+    "f1": 0.5,
+    "gold": 3,
+    "pred": 1
+   },
+   "reasons": {
+    "gold_coverage": 0.0,
+    "pred_support": 0.0,
+    "f1": 0.0,
+    "gold": 3,
+    "pred": 3
+   },
+   "observations": {
+    "gold_coverage": 0.3333,
+    "pred_support": 1.0,
+    "f1": 0.5,
+    "gold": 3,
+    "pred": 1
+   }
+  }
+ },
+ "slots": {
+  "micro": {
+   "tp": 55,
+   "pred": 63,
+   "gold": 87,
+   "precision": 0.873,
+   "recall": 0.6322,
+   "f1": 0.7333
+  },
+  "per_type": {
+   "scenarios": {
+    "tp": 0,
+    "pred": 1,
+    "gold": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "episodes": {
+    "tp": 3,
+    "pred": 5,
+    "gold": 5,
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1": 0.6
+   },
+   "performers": {
+    "tp": 14,
+    "pred": 14,
+    "gold": 14,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "actions": {
+    "tp": 16,
+    "pred": 17,
+    "gold": 16,
+    "precision": 0.9412,
+    "recall": 1.0,
+    "f1": 0.9697
+   },
+   "items": {
+    "tp": 5,
+    "pred": 6,
+    "gold": 7,
+    "precision": 0.8333,
+    "recall": 0.7143,
+    "f1": 0.7692
+   },
+   "flows": {
+    "tp": 0,
+    "pred": 0,
+    "gold": 9,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "controls": {
+    "tp": 0,
+    "pred": 0,
+    "gold": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "situations": {
+    "tp": 4,
+    "pred": 4,
+    "gold": 5,
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1": 0.8889
+   },
+   "state_values": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 7,
+    "precision": 1.0,
+    "recall": 0.1429,
+    "f1": 0.25
+   },
+   "events": {
+    "tp": 4,
+    "pred": 4,
+    "gold": 4,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "transitions": {
+    "tp": 3,
+    "pred": 3,
+    "gold": 3,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "constraints": {
+    "tp": 3,
+    "pred": 3,
+    "gold": 4,
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571
+   },
+   "goals": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 3,
+    "precision": 1.0,
+    "recall": 0.3333,
+    "f1": 0.5
+   },
+   "reasons": {
+    "tp": 0,
+    "pred": 3,
+    "gold": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "observations": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 3,
+    "precision": 1.0,
+    "recall": 0.3333,
+    "f1": 0.5
+   }
+  },
+  "macro_f1": 0.5557
+ },
+ "alignment_pairs": [
+  {
+   "type": "episodes",
+   "gold": "AV_EP_ACTIVATION",
+   "gold_label": "Autonomous driving start",
+   "pred": "EP_ACTIVATION",
+   "pred_label": "Autonomous driving mode activation",
+   "score": 0.938
+  },
+  {
+   "type": "episodes",
+   "gold": "AV_EP_NORMAL_DRIVING",
+   "gold_label": "Normal autonomous driving",
+   "pred": "EP_NORMAL_OPERATION",
+   "pred_label": "Normal autonomous driving operation loop",
+   "score": 0.956
+  },
+  {
+   "type": "episodes",
+   "gold": "AV_EP_PEDESTRIAN",
+   "gold_label": "Pedestrian detection and avoidance",
+   "pred": "EP_PEDESTRIAN_RESPONSE",
+   "pred_label": "Pedestrian detection and emergency braking",
+   "score": 0.943
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_VEHICLE",
+   "gold_label": "Autonomous vehicle",
+   "pred": "P_VEHICLE",
+   "pred_label": "Autonomous vehicle",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_1_PERCEPTION",
+   "gold_label": "Perception system",
+   "pred": "P_PERCEPTION_SYSTEM",
+   "pred_label": "Perception system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_1_1_LIDAR",
+   "gold_label": "LiDAR sensor",
+   "pred": "P_LIDAR_SENSOR",
+   "pred_label": "LiDAR sensor",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_1_2_CAMERA",
+   "gold_label": "Camera sensor",
+   "pred": "P_CAMERA_SENSOR",
+   "pred_label": "Camera sensor",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_1_3_RADAR",
+   "gold_label": "Radar sensor",
+   "pred": "P_RADAR_SENSOR",
+   "pred_label": "Radar sensor",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_2_PLANNER",
+   "gold_label": "Path planning module",
+   "pred": "P_PATH_PLANNING_MODULE",
+   "pred_label": "Path planning module",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_3_CONTROLLER",
+   "gold_label": "Vehicle control module",
+   "pred": "P_VEHICLE_CONTROL_MODULE",
+   "pred_label": "Vehicle control module",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_4_ACTUATOR",
+   "gold_label": "Drive actuator",
+   "pred": "P_DRIVE_ACTUATOR",
+   "pred_label": "Drive actuator",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_5_V2X",
+   "gold_label": "V2X communication module",
+   "pred": "P_V2X_MODULE",
+   "pred_label": "V2X communication module",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_6_BMS",
+   "gold_label": "Battery management system",
+   "pred": "P_BATTERY_MANAGEMENT_SYSTEM",
+   "pred_label": "Battery management system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P1_7_HMI",
+   "gold_label": "HMI",
+   "pred": "P_HMI",
+   "pred_label": "HMI",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P2_FLEET_SERVER",
+   "gold_label": "Control center server",
+   "pred": "P_CONTROL_CENTER_SERVER",
+   "pred_label": "Control center server",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P3_CHARGER",
+   "gold_label": "Charging station",
+   "pred": "P_CHARGING_STATION",
+   "pred_label": "Charging station",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "AV_P0_DRIVER",
+   "gold_label": "Driver",
+   "pred": "P_DRIVER",
+   "pred_label": "Driver",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "AV_I_SENSOR_DATA",
+   "gold_label": "Raw sensor data",
+   "pred": "I_RAW_SENSOR_DATA",
+   "pred_label": "Raw sensor data",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "AV_I_PERCEPTION_DATA",
+   "gold_label": "Environment perception data",
+   "pred": "I_ENVIRONMENT_PERCEPTION_DATA",
+   "pred_label": "Environment perception data",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "AV_I_PATH",
+   "gold_label": "Driving path",
+   "pred": "I_DRIVING_PATH",
+   "pred_label": "Driving path",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "AV_I_CONTROL_CMD",
+   "gold_label": "Control commands",
+   "pred": "I_CONTROL_COMMANDS",
+   "pred_label": "Steering/acceleration-deceleration control commands",
+   "score": 0.908
+  },
+  {
+   "type": "items",
+   "gold": "AV_I_STATUS_REPORT",
+   "gold_label": "Vehicle status report",
+   "pred": "I_VEHICLE_STATUS_REPORT",
+   "pred_label": "Vehicle status report",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "AV_SIT_MANUAL",
+   "gold_label": "Manual driving state",
+   "pred": "SIT_MANUAL_DRIVING",
+   "pred_label": "Manual driving state",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "AV_SIT_AUTO_NORMAL",
+   "gold_label": "Normal autonomous driving state",
+   "pred": "SIT_NORMAL_AUTONOMOUS_DRIVING",
+   "pred_label": "Normal autonomous driving state",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "AV_SIT_DEGRADED",
+   "gold_label": "Degraded autonomous driving state",
+   "pred": "SIT_DEGRADED_AUTONOMOUS_DRIVING",
+   "pred_label": "Degraded autonomous driving state",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "AV_SIT_CHARGING",
+   "gold_label": "Charging state",
+   "pred": "SIT_CHARGING",
+   "pred_label": "Charging state",
+   "score": 1.0
+  },
+  {
+   "type": "state_values",
+   "gold": "AV_SV_BATTERY_LOW",
+   "gold_label": "Battery SoC is 18%",
+   "pred": "SV_SOC_18",
+   "pred_label": "battery SoC=18%",
+   "score": 0.964
+  },
+  {
+   "type": "events",
+   "gold": "AV_EVT_ACTIVATION_REQUEST",
+   "gold_label": "Autonomous driving activation request",
+   "pred": "EVT_AD_ACTIVATION_REQUESTED",
+   "pred_label": "Driver requests autonomous driving activation",
+   "score": 0.973
+  },
+  {
+   "type": "events",
+   "gold": "AV_EVT_PEDESTRIAN",
+   "gold_label": "Pedestrian detection",
+   "pred": "EVT_PEDESTRIAN_DETECTED",
+   "pred_label": "Pedestrian detection event",
+   "score": 0.972
+  },
+  {
+   "type": "events",
+   "gold": "AV_EVT_LIDAR_FAULT",
+   "gold_label": "LiDAR reliability degradation",
+   "pred": "EVT_LIDAR_FAULT",
+   "pred_label": "LiDAR fault event",
+   "score": 0.901
+  },
+  {
+   "type": "events",
+   "gold": "AV_EVT_LOW_BATTERY",
+   "gold_label": "Battery SoC at or below threshold",
+   "pred": "EVT_LOW_POWER",
+   "pred_label": "Low-power event (SoC <= 20%)",
+   "score": 0.882
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_ACTIVATE_AUTO",
+   "gold_label": "Activate autonomous driving mode",
+   "pred": "A_ACTIVATE_AD_MODE",
+   "pred_label": "Activate autonomous driving mode",
+   "score": 0.981
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_NOTIFY_MODE",
+   "gold_label": "Display mode transition notification",
+   "pred": "A_DISPLAY_AD_TRANSITION",
+   "pred_label": "Display autonomous driving mode transition",
+   "score": 0.909
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_ACQUIRE_SENSOR",
+   "gold_label": "Collect sensor data",
+   "pred": "A_COLLECT_RAW_SENSOR_DATA",
+   "pred_label": "Collect raw sensor data from LiDAR, camera, and radar",
+   "score": 0.904
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_FUSE_SENSOR",
+   "gold_label": "Sensor fusion and environment perception",
+   "pred": "A_FUSE_SENSOR_DATA",
+   "pred_label": "Fuse sensor data to generate environment perception data",
+   "score": 0.913
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_PLAN_PATH",
+   "gold_label": "Generate driving path",
+   "pred": "A_GENERATE_DRIVING_PATH",
+   "pred_label": "Generate driving path",
+   "score": 0.978
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_GENERATE_CONTROL",
+   "gold_label": "Generate control commands",
+   "pred": "A_GENERATE_CONTROL_COMMANDS",
+   "pred_label": "Generate steering/acceleration-deceleration control commands",
+   "score": 0.908
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_ACTUATE",
+   "gold_label": "Execute control commands",
+   "pred": "A_EXECUTE_CONTROL_COMMANDS",
+   "pred_label": "Execute control commands",
+   "score": 0.981
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_REPORT_STATUS",
+   "gold_label": "Transmit vehicle status report",
+   "pred": "A_TRANSMIT_STATUS_REPORT",
+   "pred_label": "Transmit vehicle status report",
+   "score": 0.982
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_MONITOR_FLEET",
+   "gold_label": "Monitor vehicle status",
+   "pred": "A_MONITOR_VEHICLE_STATUS",
+   "pred_label": "Monitor vehicle status",
+   "score": 0.98
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_DETECT_PEDESTRIAN",
+   "gold_label": "Detect pedestrian ahead",
+   "pred": "A_DETECT_PEDESTRIAN",
+   "pred_label": "Detect pedestrian ahead",
+   "score": 0.959
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_EMERGENCY_BRAKE",
+   "gold_label": "Emergency braking",
+   "pred": "A_EMERGENCY_BRAKE",
+   "pred_label": "Perform emergency braking",
+   "score": 0.964
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_MEASURE_BATTERY",
+   "gold_label": "Measure battery SoC",
+   "pred": "A_MEASURE_SOC",
+   "pred_label": "Measure battery SoC",
+   "score": 0.98
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_DEGRADE_MODE",
+   "gold_label": "Switch to degraded mode",
+   "pred": "A_SWITCH_DEGRADED_MODE",
+   "pred_label": "Switch to degraded mode",
+   "score": 0.978
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_REPLAN_TO_STATION",
+   "gold_label": "Replan route to charging station",
+   "pred": "A_REPLAN_ROUTE",
+   "pred_label": "Replan route to charging station",
+   "score": 0.981
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_REQUEST_CHARGE",
+   "gold_label": "Transmit charging request",
+   "pred": "A_REQUEST_CHARGING",
+   "pred_label": "Request charging",
+   "score": 0.934
+  },
+  {
+   "type": "actions",
+   "gold": "AV_A_CHARGE",
+   "gold_label": "Charge vehicle",
+   "pred": "A_CHARGE_VEHICLE",
+   "pred_label": "Charge the vehicle",
+   "score": 0.951
+  },
+  {
+   "type": "constraints",
+   "gold": "AV_C_BRAKE_LATENCY",
+   "gold_label": "Emergency braking reaction time limit",
+   "pred": "CN_EMERGENCY_BRAKE_TIME",
+   "pred_label": "Emergency braking within 200 ms",
+   "score": 0.927
+  },
+  {
+   "type": "constraints",
+   "gold": "AV_C_PERCEPTION_RATE",
+   "gold_label": "Perception cycle 10 Hz",
+   "pred": "CN_PERCEPTION_CYCLE_10HZ",
+   "pred_label": "Perception loop repeats at 10 Hz",
+   "score": 0.947
+  },
+  {
+   "type": "constraints",
+   "gold": "AV_C_SPEED_LIMIT_DEGRADED",
+   "gold_label": "Degraded mode speed limit",
+   "pred": "CN_SPEED_LIMIT_30KMH",
+   "pred_label": "Speed limited to 30 km/h or less",
+   "score": 0.886
+  },
+  {
+   "type": "goals",
+   "gold": "AV_G_SAFE_ARRIVAL",
+   "gold_label": "Safe arrival at destination",
+   "pred": "G_SAFE_ARRIVAL",
+   "pred_label": "Vehicle arrives safely at the destination",
+   "score": 0.951
+  },
+  {
+   "type": "observations",
+   "gold": "AV_OBS_BATTERY",
+   "gold_label": "Measure battery SoC",
+   "pred": "OBS_SOC_READING",
+   "pred_label": "Battery SoC confirmed at 18%",
+   "score": 0.882
+  },
+  {
+   "type": "transitions",
+   "gold": "AV_TR_MANUAL_TO_AUTO",
+   "gold_label": "Transition from manual to autonomous driving",
+   "pred": "TR_MANUAL_TO_NORMAL",
+   "pred_label": "Transition from manual driving to normal autonomous driving",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "AV_TR_NORMAL_TO_DEGRADED",
+   "gold_label": "Transition from normal to degraded autonomous driving",
+   "pred": "TR_NORMAL_TO_DEGRADED",
+   "pred_label": "Transition from normal autonomous driving to degraded autonomous driving",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "AV_TR_AUTO_TO_CHARGING",
+   "gold_label": "Transition from autonomous driving to charging",
+   "pred": "TR_DEGRADED_TO_CHARGING",
+   "pred_label": "Transition from degraded autonomous driving to charging",
+   "score": 1.0
+  }
+ ],
+ "type_confusion": {
+  "episodes->items": 1,
+  "situations->episodes": 1,
+  "reasons->episodes": 1,
+  "observations->actions": 1
+ },
+ "source_ref_accuracy": {
+  "correct": 52,
+  "aligned_with_gold_ref": 55,
+  "accuracy": 0.9455
+ },
+ "relations": {
+  "strict": {
+   "tp": 59,
+   "pred": 103,
+   "gold": 126,
+   "precision": 0.5728,
+   "recall": 0.4683,
+   "f1": 0.5153,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 1,
+     "recalled": 0
+    },
+    "carries_item": {
+     "gold": 6,
+     "recalled": 0
+    },
+    "constrained_by": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "contains_action": {
+     "gold": 16,
+     "recalled": 11
+    },
+    "controls_flow": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "flow_source": {
+     "gold": 9,
+     "recalled": 0
+    },
+    "flow_target": {
+     "gold": 9,
+     "recalled": 0
+    },
+    "from_situation": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "has_episode": {
+     "gold": 5,
+     "recalled": 0
+    },
+    "has_goal": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "has_part": {
+     "gold": 10,
+     "recalled": 10
+    },
+    "has_reason": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "has_situation": {
+     "gold": 5,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 7,
+     "recalled": 0
+    },
+    "observes": {
+     "gold": 4,
+     "recalled": 1
+    },
+    "originates_event": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "performed_by": {
+     "gold": 16,
+     "recalled": 15
+    },
+    "produces_item": {
+     "gold": 7,
+     "recalled": 5
+    },
+    "provided_to": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "temporal_before": {
+     "gold": 2,
+     "recalled": 0
+    },
+    "to_situation": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "triggers": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "uses_item": {
+     "gold": 4,
+     "recalled": 4
+    }
+   }
+  },
+  "normalized": {
+   "tp": 59,
+   "pred": 103,
+   "gold": 126,
+   "precision": 0.5728,
+   "recall": 0.4683,
+   "f1": 0.5153,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 1,
+     "recalled": 0
+    },
+    "carries_item": {
+     "gold": 6,
+     "recalled": 0
+    },
+    "constrained_by": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "contains_action": {
+     "gold": 16,
+     "recalled": 11
+    },
+    "controls_flow": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "flow_source": {
+     "gold": 9,
+     "recalled": 0
+    },
+    "flow_target": {
+     "gold": 9,
+     "recalled": 0
+    },
+    "from_situation": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "has_episode": {
+     "gold": 5,
+     "recalled": 0
+    },
+    "has_goal": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "has_part": {
+     "gold": 10,
+     "recalled": 10
+    },
+    "has_reason": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "has_situation": {
+     "gold": 5,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 7,
+     "recalled": 0
+    },
+    "observes": {
+     "gold": 4,
+     "recalled": 1
+    },
+    "originates_event": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "performed_by": {
+     "gold": 16,
+     "recalled": 15
+    },
+    "produces_item": {
+     "gold": 7,
+     "recalled": 5
+    },
+    "provided_to": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "temporal_before": {
+     "gold": 2,
+     "recalled": 0
+    },
+    "to_situation": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "triggers": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "uses_item": {
+     "gold": 4,
+     "recalled": 4
+    }
+   }
+  },
+  "untyped": {
+   "tp": 60,
+   "pred": 99,
+   "gold": 126,
+   "precision": 0.6061,
+   "recall": 0.4762,
+   "f1": 0.5333
+  }
+ },
+ "atomic_facts": {
+  "found": 9,
+  "total": 11,
+  "missing": [
+   "driver",
+   "charging request"
+  ]
+ },
+ "required_relations": {
+  "hit": 1,
+  "total": 2
+ },
+ "forbidden_relations": {
+  "violated": 0,
+  "total": 2
+ },
+ "structure": {
+  "actions": 17,
+  "actions_in_episode": 17,
+  "actions_allocated": 17,
+  "nested_mode": true,
+  "dangling_relations": 0,
+  "relations": 103
+ }
+}

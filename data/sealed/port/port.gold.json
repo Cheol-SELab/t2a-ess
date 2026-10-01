@@ -1,0 +1,2159 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "T_GOLD",
+    "title": "Smart port high-wind response",
+    "extraction_schema": "T2A-ESS",
+    "generation_mode": "manual_development_reference",
+    "source_units": [
+      {
+        "source_unit_id": "P1",
+        "unit_type": "paragraph",
+        "text": "The smart port terminal operation system consists of the Terminal Operations Center (TOC), the quay cranes QC-3 and QC-4, the automated guided vehicle (AGV) control system, and the weather observation unit. The AGV control system manages 12 AGVs."
+      },
+      {
+        "source_unit_id": "P2",
+        "unit_type": "paragraph",
+        "text": "Externally there are the shipping agency and the port authority; crane operation is handled by the crane operator, and on-site safety management is handled by the safety supervisor."
+      },
+      {
+        "source_unit_id": "P3",
+        "unit_type": "paragraph",
+        "text": "At 2:00 p.m., when the weather observation unit measures an instantaneous wind speed of 18 m/s and transmits it to the TOC, the TOC issues the high-wind caution stage. When the instantaneous wind speed reaches 20 m/s or more, the TOC escalates to the alert stage, and at 25 m/s or more, to the work-stop stage."
+      },
+      {
+        "source_unit_id": "P4",
+        "unit_type": "paragraph",
+        "text": "In the caution stage, the crane operator reduces the hoisting speed of containers by half, and the AGV control system doubles the AGV waiting interval in the zone under the crane. The two measures are applied simultaneously."
+      },
+      {
+        "source_unit_id": "P5",
+        "unit_type": "paragraph",
+        "text": "When the wind speed is measured at 21 m/s at 2:25 p.m., the TOC issues the alert stage and notifies the shipping agency of the possibility of cargo-handling delay. In the alert stage, containers stacked 2 tiers or more must not be hoisted."
+      },
+      {
+        "source_unit_id": "P6",
+        "unit_type": "paragraph",
+        "text": "The crane operator stops work by setting down the container being held onto the nearest AGV, and moves to the standby position with the boom raised. The safety supervisor inspects the crane rail locking device and confirms its engagement state."
+      },
+      {
+        "source_unit_id": "P7",
+        "unit_type": "paragraph",
+        "text": "To predict the wind speed 30 min ahead, the TOC queries the 10-min average value of the weather observation unit every 5 min. If the average wind speed drops below 20 m/s twice in a row, the TOC is to lift the alert stage."
+      },
+      {
+        "source_unit_id": "P8",
+        "unit_type": "paragraph",
+        "text": "At 3:10 p.m., because the wind speed was predicted to rise to 26 m/s, the TOC prepared escalation to the work-stop stage and intended to request a vessel departure hold from the port authority. However, at 3:20 the wind speed weakened sharply, and the request was not sent."
+      },
+      {
+        "source_unit_id": "P9",
+        "unit_type": "paragraph",
+        "text": "Because the average wind speeds queried at 3:30 and 3:35 were 18 m/s and 17 m/s respectively, below the threshold twice in a row, the TOC lifts the alert stage and returns to the caution stage."
+      },
+      {
+        "source_unit_id": "P10",
+        "unit_type": "paragraph",
+        "text": "The crane operator, having received the alert lifting notice, lowers the boom and returns to the working position, and work can resume only after the safety supervisor releases the rail locking device. If the locking device is not released, the crane cannot move."
+      },
+      {
+        "source_unit_id": "P11",
+        "unit_type": "paragraph",
+        "text": "When work resumes, the AGV control system recalculates the transfer sequence of the 38 delayed containers and additionally assigns 4 AGVs to QC-3 to meet the vessel departure time."
+      },
+      {
+        "source_unit_id": "P12",
+        "unit_type": "paragraph",
+        "text": "If the high-wind caution stage is not lifted by 5:00 p.m., the TOC deploys the night shift 1 h early. On this day the caution stage was lifted at 4:40, so there was no early deployment of the night shift."
+      },
+      {
+        "source_unit_id": "P13",
+        "unit_type": "paragraph",
+        "text": "The goal of this response is to keep the vessel departure delay within 30 min without injury to personnel or damage to equipment."
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "T_SCN",
+        "label": "Smart port high-wind response",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "T_EP_CAUTION",
+        "label": "High-wind caution response",
+        "order_index": 1,
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "episode_id": "T_EP_ALERT",
+        "label": "Alert stage response",
+        "order_index": 2,
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "episode_id": "T_EP_MONITOR",
+        "label": "Wind speed tracking and escalation preparation",
+        "order_index": 3,
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "episode_id": "T_EP_RESUME",
+        "label": "Alert lifting and work resumption",
+        "order_index": 4,
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "episode_id": "T_EP_CLOSE",
+        "label": "Caution stage lifting",
+        "order_index": 5,
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "T_P_SYSTEM",
+        "label": "Smart port terminal operation system",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "T_P_TOC",
+        "label": "Terminal Operations Center (TOC)",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "T_P_QC3",
+        "label": "Quay crane QC-3",
+        "performer_kind": "platform",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "T_P_QC4",
+        "label": "Quay crane QC-4",
+        "performer_kind": "platform",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "T_P_AGVCS",
+        "label": "AGV control system",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "T_P_WEATHER",
+        "label": "Weather observation unit",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "T_P_AGV",
+        "label": "12 AGVs",
+        "performer_kind": "group",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "T_P_AGENT",
+        "label": "Shipping agency",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "T_P_PA",
+        "label": "Port authority",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "T_P_OPERATOR",
+        "label": "Crane operator",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "T_P_SAFETY",
+        "label": "Safety supervisor",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "T_P_NIGHT",
+        "label": "Night shift",
+        "performer_kind": "group",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "T_A_MEASURE_WIND",
+        "label": "Measure instantaneous wind speed",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Weather observation unit",
+        "object_text": "Instantaneous wind speed"
+      },
+      {
+        "action_id": "T_A_SEND_WIND",
+        "label": "Transmit wind speed measurement to TOC",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Weather observation unit",
+        "object_text": "Wind speed measurement"
+      },
+      {
+        "action_id": "T_A_CAUTION",
+        "label": "Issue high-wind caution stage",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "TOC",
+        "object_text": "Caution stage"
+      },
+      {
+        "action_id": "T_A_ALERT",
+        "label": "Issue alert stage",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "TOC",
+        "object_text": "Alert stage"
+      },
+      {
+        "action_id": "T_A_STOP_STAGE",
+        "label": "Escalate to work-stop stage",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "TOC",
+        "object_text": "Work-stop stage"
+      },
+      {
+        "action_id": "T_A_SLOW_HOIST",
+        "label": "Reduce hoisting speed by half",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Crane operator",
+        "object_text": "Hoisting speed"
+      },
+      {
+        "action_id": "T_A_WIDEN_GAP",
+        "label": "Double AGV waiting interval",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "AGV control system",
+        "object_text": "AGV waiting interval"
+      },
+      {
+        "action_id": "T_A_NOTIFY_AGENT",
+        "label": "Notify possibility of cargo-handling delay",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "TOC",
+        "object_text": "Possibility of cargo-handling delay"
+      },
+      {
+        "action_id": "T_A_PUT_DOWN",
+        "label": "Stop work by setting down container onto AGV",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Crane operator",
+        "object_text": "Container being held"
+      },
+      {
+        "action_id": "T_A_TO_STANDBY",
+        "label": "Raise boom and move to standby position",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Crane operator",
+        "object_text": "Boom"
+      },
+      {
+        "action_id": "T_A_CHECK_RAIL",
+        "label": "Inspect rail locking device",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Safety supervisor",
+        "object_text": "Rail locking device"
+      },
+      {
+        "action_id": "T_A_QUERY_AVG",
+        "label": "Query 10-min average wind speed",
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "primary_actor_text": "TOC",
+        "object_text": "10-min average wind speed"
+      },
+      {
+        "action_id": "T_A_PREP_STOP",
+        "label": "Prepare escalation to work-stop",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "TOC",
+        "object_text": "Escalate to work-stop stage"
+      },
+      {
+        "action_id": "T_A_REQ_HOLD",
+        "label": "Request vessel departure hold",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "TOC",
+        "object_text": "Vessel departure hold"
+      },
+      {
+        "action_id": "T_A_LIFT_ALERT",
+        "label": "Lift alert stage and return to caution stage",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "TOC",
+        "object_text": "Alert stage"
+      },
+      {
+        "action_id": "T_A_RETURN_WORK",
+        "label": "Lower boom and return to working position",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Crane operator",
+        "object_text": "Boom"
+      },
+      {
+        "action_id": "T_A_RELEASE_RAIL",
+        "label": "Release rail locking device",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Safety supervisor",
+        "object_text": "Rail locking device"
+      },
+      {
+        "action_id": "T_A_RESUME",
+        "label": "Resume work",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "object_text": "Work"
+      },
+      {
+        "action_id": "T_A_RESEQUENCE",
+        "label": "Recalculate transfer sequence of delayed containers",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "AGV control system",
+        "object_text": "Transfer sequence of 38 containers"
+      },
+      {
+        "action_id": "T_A_ASSIGN_AGV",
+        "label": "Additionally assign 4 AGVs to QC-3",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "AGV control system",
+        "object_text": "4 AGVs"
+      },
+      {
+        "action_id": "T_A_EARLY_NIGHT",
+        "label": "Deploy night shift 1 h early",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "TOC",
+        "object_text": "Night shift"
+      },
+      {
+        "action_id": "T_A_LIFT_CAUTION",
+        "label": "High-wind caution stage lifted",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "object_text": "Caution stage"
+      }
+    ],
+    "items": [
+      {
+        "item_id": "T_I_WIND",
+        "label": "Instantaneous wind speed measurement",
+        "item_type": "data",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "item_id": "T_I_DELAY_NOTICE",
+        "label": "Notify possibility of cargo-handling delay",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "item_id": "T_I_CONTAINER",
+        "label": "Container",
+        "item_type": "material",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "item_id": "T_I_AVG",
+        "label": "10-min average wind speed",
+        "item_type": "data",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "item_id": "T_I_HOLD_REQ",
+        "label": "Departure hold request",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "item_id": "T_I_DELAYED",
+        "label": "38 delayed containers",
+        "item_type": "material",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "T_SIT_NORMAL",
+        "label": "Normal stage",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "T_SIT_CAUTION",
+        "label": "High-wind caution stage",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "T_SIT_ALERT",
+        "label": "Alert stage",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "situation_id": "T_SIT_STOP",
+        "label": "Work-stop stage",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "T_SIT_CRANE_WORK",
+        "label": "Crane at working position",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "situation_id": "T_SIT_CRANE_STANDBY",
+        "label": "Crane at standby position",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "T_SV_NORMAL",
+        "subject_text": "High-wind response stage",
+        "variable": "Stage",
+        "value": "Normal",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "T_SV_CAUTION",
+        "subject_text": "High-wind response stage",
+        "variable": "Stage",
+        "value": "Caution",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "T_SV_ALERT",
+        "subject_text": "High-wind response stage",
+        "variable": "Stage",
+        "value": "Alert",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "state_value_id": "T_SV_STOP",
+        "subject_text": "High-wind response stage",
+        "variable": "Stage",
+        "value": "Work stop",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "T_SV_CRANE_WORK",
+        "subject_text": "Crane",
+        "variable": "Position",
+        "value": "Working position",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "state_value_id": "T_SV_CRANE_STANDBY",
+        "subject_text": "Crane",
+        "variable": "Position",
+        "value": "Standby position",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "T_EVT_WIND18",
+        "label": "Instantaneous wind speed of 18 m/s measured",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "event_id": "T_EVT_WIND21",
+        "label": "Wind speed of 21 m/s measured",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "event_id": "T_EVT_FORECAST26",
+        "label": "Predicted wind speed 26 m/s",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "event_id": "T_EVT_WEAKEN",
+        "label": "Wind speed weakened sharply",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "event_id": "T_EVT_TWO_BELOW",
+        "label": "Average wind speed below 20 m/s twice in a row",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "T_TR_CAUTION",
+        "label": "From normal to caution stage",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "transition_id": "T_TR_ALERT",
+        "label": "From caution to alert stage",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "transition_id": "T_TR_STOP",
+        "label": "From alert to work-stop stage",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "transition_id": "T_TR_ALERT_OFF",
+        "label": "Return from alert to caution stage",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "transition_id": "T_TR_CAUTION_OFF",
+        "label": "From caution to normal stage",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      },
+      {
+        "transition_id": "T_TR_CRANE_STANDBY",
+        "label": "Crane from working position to standby position",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "transition_id": "T_TR_CRANE_WORK",
+        "label": "Crane from standby position to working position",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "T_OBS_WIND",
+        "label": "Measure instantaneous wind speed",
+        "observer_text": "Weather observation unit",
+        "observed_text": "Instantaneous wind speed",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "observation_id": "T_OBS_RAIL",
+        "label": "Confirm engagement state of rail locking device",
+        "observer_text": "Safety supervisor",
+        "observed_text": "Engagement state",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "observation_id": "T_OBS_AVG",
+        "label": "Query 10-min average wind speed",
+        "observer_text": "TOC",
+        "observed_text": "10-min average wind speed",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "T_F01",
+        "label": "Transmit after measurement",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "T_F02",
+        "label": "Issue caution stage after transmission",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "T_F03",
+        "label": "Alert stage at 20 m/s or more",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "T_F04",
+        "label": "Work stop at 25 m/s or more",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "T_F05",
+        "label": "Hoisting slowdown after caution stage",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "T_F06",
+        "label": "Waiting interval increase after caution stage",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "T_F07",
+        "label": "Delay notice after alert issued",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "T_F08",
+        "label": "Container set-down after alert issued",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "T_F09",
+        "label": "Move to standby position after work stop",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "T_F10",
+        "label": "Lift alert when below 20 m/s twice in a row",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "flow_id": "T_F11",
+        "label": "Departure hold request after escalation preparation",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "T_F12",
+        "label": "Return to working position after alert lifting notice",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "T_F13",
+        "label": "Resume work after return to working position",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "T_F14",
+        "label": "Resume work after locking device release",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "T_F15",
+        "label": "Recalculate transfer sequence after resumption",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "flow_id": "T_F16",
+        "label": "Additional AGV assignment after recalculation",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "T_C01",
+        "label": "Determine instantaneous wind speed 20 m/s or more",
+        "control_type": "decision",
+        "guard_texts": [
+          "Instantaneous wind speed 20 m/s or more"
+        ],
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "control_id": "T_C02",
+        "label": "Determine instantaneous wind speed 25 m/s or more",
+        "control_type": "decision",
+        "guard_texts": [
+          "Instantaneous wind speed 25 m/s or more"
+        ],
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "control_id": "T_C03",
+        "label": "Hoisting slowdown and waiting interval increase applied simultaneously",
+        "control_type": "fork",
+        "guard_texts": [],
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "control_id": "T_C04",
+        "label": "No hoisting of containers stacked 2 tiers or more in alert stage",
+        "control_type": "temporal_exclusion",
+        "guard_texts": [
+          "In the alert stage, no hoisting of containers stacked 2 tiers or more"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "control_id": "T_C05",
+        "label": "Query average wind speed every 5 min",
+        "control_type": "loop",
+        "guard_texts": [
+          "Every 5 min"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "control_id": "T_C06",
+        "label": "Determine average wind speed below threshold twice in a row",
+        "control_type": "decision",
+        "guard_texts": [
+          "Average wind speed below 20 m/s twice in a row"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "control_id": "T_C07",
+        "label": "Boom return and wait for locking device release",
+        "control_type": "join",
+        "guard_texts": [
+          "Release rail locking device"
+        ],
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "control_id": "T_C08",
+        "label": "Crane cannot move if locking device not released",
+        "control_type": "temporal_exclusion",
+        "guard_texts": [
+          "If the locking device is not released, the crane cannot move"
+        ],
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "control_id": "T_C09",
+        "label": "Determine caution stage not lifted by 5:00 p.m.",
+        "control_type": "decision",
+        "guard_texts": [
+          "High-wind caution stage not lifted by 5:00 p.m."
+        ],
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "T_CN_20",
+        "label": "Alert stage threshold 20 m/s",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "parameter": "Instantaneous wind speed",
+        "operator": ">=",
+        "value": 20,
+        "unit": "m/s"
+      },
+      {
+        "constraint_id": "T_CN_25",
+        "label": "Work-stop threshold 25 m/s",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "parameter": "Instantaneous wind speed",
+        "operator": ">=",
+        "value": 25,
+        "unit": "m/s"
+      },
+      {
+        "constraint_id": "T_CN_HALF",
+        "label": "Hoisting speed halved",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "parameter": "Hoisting speed",
+        "operator": "=",
+        "value": 0.5,
+        "unit": "times"
+      },
+      {
+        "constraint_id": "T_CN_DOUBLE",
+        "label": "AGV waiting interval doubled",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "parameter": "AGV waiting interval",
+        "operator": "=",
+        "value": 2,
+        "unit": "times"
+      },
+      {
+        "constraint_id": "T_CN_TIER",
+        "label": "No hoisting of stacks of 2 tiers or more",
+        "constraint_kind": [
+          "prohibition"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "parameter": "Stacking tiers",
+        "operator": "<",
+        "value": 2,
+        "unit": "tiers"
+      },
+      {
+        "constraint_id": "T_CN_5MIN",
+        "label": "Average wind speed query interval 5 min",
+        "constraint_kind": [
+          "period"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "parameter": "Query interval",
+        "operator": "=",
+        "value": 5,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "T_CN_LIFT",
+        "label": "Average wind speed below 20 m/s twice in a row",
+        "constraint_kind": [
+          "count"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "parameter": "Consecutive below-threshold count",
+        "operator": ">=",
+        "value": 2,
+        "unit": "occurrences"
+      },
+      {
+        "constraint_id": "T_CN_5PM",
+        "label": "Caution stage lifted by 5:00 p.m.",
+        "constraint_kind": [
+          "deadline"
+        ],
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "parameter": "Caution stage lifting time",
+        "operator": "<=",
+        "value": "17:00",
+        "unit": null
+      },
+      {
+        "constraint_id": "T_CN_1H",
+        "label": "Deploy night shift 1 h early",
+        "constraint_kind": [
+          "duration"
+        ],
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "parameter": "Early deployment time",
+        "operator": "=",
+        "value": 1,
+        "unit": "h"
+      },
+      {
+        "constraint_id": "T_CN_30MIN",
+        "label": "Vessel departure delay within 30 min",
+        "constraint_kind": [
+          "deadline"
+        ],
+        "source_ref": {
+          "source_unit_id": "P13"
+        },
+        "parameter": "Departure delay",
+        "operator": "<=",
+        "value": 30,
+        "unit": "min"
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "T_G_SAFE",
+        "label": "No injury to personnel or damage to equipment",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      },
+      {
+        "goal_id": "T_G_DELAY",
+        "label": "Vessel departure delay within 30 min",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "T_R_FORECAST",
+        "label": "Predicted wind speed rise to 26 m/s",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "reason_id": "T_R_WEAKEN",
+        "label": "Wind speed weakened sharply",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "reason_id": "T_R_DEPARTURE",
+        "label": "Meet vessel departure time",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "T_REL_001",
+        "relation_type": "has_episode",
+        "source_slot_id": "T_SCN",
+        "target_slot_id": "T_EP_CAUTION",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "T_REL_002",
+        "relation_type": "has_episode",
+        "source_slot_id": "T_SCN",
+        "target_slot_id": "T_EP_ALERT",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "T_REL_003",
+        "relation_type": "has_episode",
+        "source_slot_id": "T_SCN",
+        "target_slot_id": "T_EP_MONITOR",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "T_REL_004",
+        "relation_type": "has_episode",
+        "source_slot_id": "T_SCN",
+        "target_slot_id": "T_EP_RESUME",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "T_REL_005",
+        "relation_type": "has_episode",
+        "source_slot_id": "T_SCN",
+        "target_slot_id": "T_EP_CLOSE",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "T_REL_006",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_CAUTION",
+        "target_slot_id": "T_A_MEASURE_WIND",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_007",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_CAUTION",
+        "target_slot_id": "T_A_SEND_WIND",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_008",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_CAUTION",
+        "target_slot_id": "T_A_CAUTION",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_009",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_CAUTION",
+        "target_slot_id": "T_A_SLOW_HOIST",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_010",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_CAUTION",
+        "target_slot_id": "T_A_WIDEN_GAP",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_011",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_ALERT",
+        "target_slot_id": "T_A_ALERT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_012",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_ALERT",
+        "target_slot_id": "T_A_NOTIFY_AGENT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_013",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_ALERT",
+        "target_slot_id": "T_A_PUT_DOWN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_014",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_ALERT",
+        "target_slot_id": "T_A_TO_STANDBY",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_015",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_ALERT",
+        "target_slot_id": "T_A_CHECK_RAIL",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_016",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_MONITOR",
+        "target_slot_id": "T_A_QUERY_AVG",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_017",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_MONITOR",
+        "target_slot_id": "T_A_STOP_STAGE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_018",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_MONITOR",
+        "target_slot_id": "T_A_PREP_STOP",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_019",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_MONITOR",
+        "target_slot_id": "T_A_REQ_HOLD",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_020",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_RESUME",
+        "target_slot_id": "T_A_LIFT_ALERT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_021",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_RESUME",
+        "target_slot_id": "T_A_RETURN_WORK",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_022",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_RESUME",
+        "target_slot_id": "T_A_RELEASE_RAIL",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_023",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_RESUME",
+        "target_slot_id": "T_A_RESUME",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_024",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_RESUME",
+        "target_slot_id": "T_A_RESEQUENCE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_025",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_RESUME",
+        "target_slot_id": "T_A_ASSIGN_AGV",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_026",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_CLOSE",
+        "target_slot_id": "T_A_EARLY_NIGHT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_027",
+        "relation_type": "custom",
+        "source_slot_id": "T_EP_CLOSE",
+        "target_slot_id": "T_A_LIFT_CAUTION",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "T_REL_028",
+        "relation_type": "has_part",
+        "source_slot_id": "T_P_SYSTEM",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_029",
+        "relation_type": "has_part",
+        "source_slot_id": "T_P_SYSTEM",
+        "target_slot_id": "T_P_QC3",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_030",
+        "relation_type": "has_part",
+        "source_slot_id": "T_P_SYSTEM",
+        "target_slot_id": "T_P_QC4",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_031",
+        "relation_type": "has_part",
+        "source_slot_id": "T_P_SYSTEM",
+        "target_slot_id": "T_P_AGVCS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_032",
+        "relation_type": "has_part",
+        "source_slot_id": "T_P_SYSTEM",
+        "target_slot_id": "T_P_WEATHER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_033",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_MEASURE_WIND",
+        "target_slot_id": "T_P_WEATHER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_034",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_SEND_WIND",
+        "target_slot_id": "T_P_WEATHER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_035",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_CAUTION",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_036",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_ALERT",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_037",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_STOP_STAGE",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_038",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_SLOW_HOIST",
+        "target_slot_id": "T_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_039",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_WIDEN_GAP",
+        "target_slot_id": "T_P_AGVCS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_040",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_NOTIFY_AGENT",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_041",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_PUT_DOWN",
+        "target_slot_id": "T_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_042",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_TO_STANDBY",
+        "target_slot_id": "T_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_043",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_CHECK_RAIL",
+        "target_slot_id": "T_P_SAFETY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_044",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_QUERY_AVG",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_045",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_PREP_STOP",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_046",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_REQ_HOLD",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_047",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_LIFT_ALERT",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_048",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_RETURN_WORK",
+        "target_slot_id": "T_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_049",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_RELEASE_RAIL",
+        "target_slot_id": "T_P_SAFETY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_050",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_RESEQUENCE",
+        "target_slot_id": "T_P_AGVCS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_051",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_ASSIGN_AGV",
+        "target_slot_id": "T_P_AGVCS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_052",
+        "relation_type": "performed_by",
+        "source_slot_id": "T_A_EARLY_NIGHT",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_053",
+        "relation_type": "produces_item",
+        "source_slot_id": "T_A_SEND_WIND",
+        "target_slot_id": "T_I_WIND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_054",
+        "relation_type": "provided_to",
+        "source_slot_id": "T_A_SEND_WIND",
+        "target_slot_id": "T_P_TOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_055",
+        "relation_type": "produces_item",
+        "source_slot_id": "T_A_NOTIFY_AGENT",
+        "target_slot_id": "T_I_DELAY_NOTICE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_056",
+        "relation_type": "provided_to",
+        "source_slot_id": "T_A_NOTIFY_AGENT",
+        "target_slot_id": "T_P_AGENT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_057",
+        "relation_type": "uses_item",
+        "source_slot_id": "T_A_PUT_DOWN",
+        "target_slot_id": "T_I_CONTAINER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_058",
+        "relation_type": "acts_on",
+        "source_slot_id": "T_A_PUT_DOWN",
+        "target_slot_id": "T_P_AGV",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_059",
+        "relation_type": "uses_item",
+        "source_slot_id": "T_A_QUERY_AVG",
+        "target_slot_id": "T_I_AVG",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_060",
+        "relation_type": "produces_item",
+        "source_slot_id": "T_A_REQ_HOLD",
+        "target_slot_id": "T_I_HOLD_REQ",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_061",
+        "relation_type": "provided_to",
+        "source_slot_id": "T_A_REQ_HOLD",
+        "target_slot_id": "T_P_PA",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_062",
+        "relation_type": "uses_item",
+        "source_slot_id": "T_A_RESEQUENCE",
+        "target_slot_id": "T_I_DELAYED",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_063",
+        "relation_type": "acts_on",
+        "source_slot_id": "T_A_ASSIGN_AGV",
+        "target_slot_id": "T_P_AGV",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_064",
+        "relation_type": "provided_to",
+        "source_slot_id": "T_A_ASSIGN_AGV",
+        "target_slot_id": "T_P_QC3",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_065",
+        "relation_type": "acts_on",
+        "source_slot_id": "T_A_EARLY_NIGHT",
+        "target_slot_id": "T_P_NIGHT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_066",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F01",
+        "target_slot_id": "T_A_MEASURE_WIND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_067",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F01",
+        "target_slot_id": "T_A_SEND_WIND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_068",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F02",
+        "target_slot_id": "T_A_SEND_WIND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_069",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F02",
+        "target_slot_id": "T_A_CAUTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_070",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F03",
+        "target_slot_id": "T_A_CAUTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_071",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F03",
+        "target_slot_id": "T_A_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_072",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F04",
+        "target_slot_id": "T_A_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_073",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F04",
+        "target_slot_id": "T_A_STOP_STAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_074",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F05",
+        "target_slot_id": "T_A_CAUTION",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "T_REL_075",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F05",
+        "target_slot_id": "T_A_SLOW_HOIST",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "T_REL_076",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F06",
+        "target_slot_id": "T_A_CAUTION",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "T_REL_077",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F06",
+        "target_slot_id": "T_A_WIDEN_GAP",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "T_REL_078",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F07",
+        "target_slot_id": "T_A_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_079",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F07",
+        "target_slot_id": "T_A_NOTIFY_AGENT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_080",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F08",
+        "target_slot_id": "T_A_ALERT",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "T_REL_081",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F08",
+        "target_slot_id": "T_A_PUT_DOWN",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "T_REL_082",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F09",
+        "target_slot_id": "T_A_PUT_DOWN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_083",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F09",
+        "target_slot_id": "T_A_TO_STANDBY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_084",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F10",
+        "target_slot_id": "T_A_QUERY_AVG",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_085",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F10",
+        "target_slot_id": "T_A_LIFT_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_086",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F11",
+        "target_slot_id": "T_A_PREP_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_087",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F11",
+        "target_slot_id": "T_A_REQ_HOLD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_088",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F12",
+        "target_slot_id": "T_A_LIFT_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_089",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F12",
+        "target_slot_id": "T_A_RETURN_WORK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_090",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F13",
+        "target_slot_id": "T_A_RETURN_WORK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_091",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F13",
+        "target_slot_id": "T_A_RESUME",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_092",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F14",
+        "target_slot_id": "T_A_RELEASE_RAIL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_093",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F14",
+        "target_slot_id": "T_A_RESUME",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_094",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F15",
+        "target_slot_id": "T_A_RESUME",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_095",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F15",
+        "target_slot_id": "T_A_RESEQUENCE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_096",
+        "relation_type": "flow_source",
+        "source_slot_id": "T_F16",
+        "target_slot_id": "T_A_RESEQUENCE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_097",
+        "relation_type": "flow_target",
+        "source_slot_id": "T_F16",
+        "target_slot_id": "T_A_ASSIGN_AGV",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_098",
+        "relation_type": "controls_flow",
+        "source_slot_id": "T_C01",
+        "target_slot_id": "T_F03",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_099",
+        "relation_type": "controls_flow",
+        "source_slot_id": "T_C02",
+        "target_slot_id": "T_F04",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_100",
+        "relation_type": "controls_flow",
+        "source_slot_id": "T_C03",
+        "target_slot_id": "T_F05",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_101",
+        "relation_type": "controls_flow",
+        "source_slot_id": "T_C03",
+        "target_slot_id": "T_F06",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_102",
+        "relation_type": "controls_flow",
+        "source_slot_id": "T_C06",
+        "target_slot_id": "T_F10",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_103",
+        "relation_type": "controls_flow",
+        "source_slot_id": "T_C07",
+        "target_slot_id": "T_F13",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_104",
+        "relation_type": "controls_flow",
+        "source_slot_id": "T_C07",
+        "target_slot_id": "T_F14",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_105",
+        "relation_type": "has_state_value",
+        "source_slot_id": "T_SIT_NORMAL",
+        "target_slot_id": "T_SV_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_106",
+        "relation_type": "has_state_value",
+        "source_slot_id": "T_SIT_CAUTION",
+        "target_slot_id": "T_SV_CAUTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_107",
+        "relation_type": "has_state_value",
+        "source_slot_id": "T_SIT_ALERT",
+        "target_slot_id": "T_SV_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_108",
+        "relation_type": "has_state_value",
+        "source_slot_id": "T_SIT_STOP",
+        "target_slot_id": "T_SV_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_109",
+        "relation_type": "has_state_value",
+        "source_slot_id": "T_SIT_CRANE_WORK",
+        "target_slot_id": "T_SV_CRANE_WORK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_110",
+        "relation_type": "has_state_value",
+        "source_slot_id": "T_SIT_CRANE_STANDBY",
+        "target_slot_id": "T_SV_CRANE_STANDBY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_111",
+        "relation_type": "from_situation",
+        "source_slot_id": "T_TR_CAUTION",
+        "target_slot_id": "T_SIT_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_112",
+        "relation_type": "to_situation",
+        "source_slot_id": "T_TR_CAUTION",
+        "target_slot_id": "T_SIT_CAUTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_113",
+        "relation_type": "triggers",
+        "source_slot_id": "T_EVT_WIND18",
+        "target_slot_id": "T_TR_CAUTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_114",
+        "relation_type": "from_situation",
+        "source_slot_id": "T_TR_ALERT",
+        "target_slot_id": "T_SIT_CAUTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_115",
+        "relation_type": "to_situation",
+        "source_slot_id": "T_TR_ALERT",
+        "target_slot_id": "T_SIT_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_116",
+        "relation_type": "triggers",
+        "source_slot_id": "T_EVT_WIND21",
+        "target_slot_id": "T_TR_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_117",
+        "relation_type": "from_situation",
+        "source_slot_id": "T_TR_STOP",
+        "target_slot_id": "T_SIT_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_118",
+        "relation_type": "to_situation",
+        "source_slot_id": "T_TR_STOP",
+        "target_slot_id": "T_SIT_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_119",
+        "relation_type": "from_situation",
+        "source_slot_id": "T_TR_ALERT_OFF",
+        "target_slot_id": "T_SIT_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_120",
+        "relation_type": "to_situation",
+        "source_slot_id": "T_TR_ALERT_OFF",
+        "target_slot_id": "T_SIT_CAUTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_121",
+        "relation_type": "triggers",
+        "source_slot_id": "T_EVT_TWO_BELOW",
+        "target_slot_id": "T_TR_ALERT_OFF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_122",
+        "relation_type": "from_situation",
+        "source_slot_id": "T_TR_CAUTION_OFF",
+        "target_slot_id": "T_SIT_CAUTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_123",
+        "relation_type": "to_situation",
+        "source_slot_id": "T_TR_CAUTION_OFF",
+        "target_slot_id": "T_SIT_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_124",
+        "relation_type": "from_situation",
+        "source_slot_id": "T_TR_CRANE_STANDBY",
+        "target_slot_id": "T_SIT_CRANE_WORK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_125",
+        "relation_type": "to_situation",
+        "source_slot_id": "T_TR_CRANE_STANDBY",
+        "target_slot_id": "T_SIT_CRANE_STANDBY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_126",
+        "relation_type": "from_situation",
+        "source_slot_id": "T_TR_CRANE_WORK",
+        "target_slot_id": "T_SIT_CRANE_STANDBY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_127",
+        "relation_type": "to_situation",
+        "source_slot_id": "T_TR_CRANE_WORK",
+        "target_slot_id": "T_SIT_CRANE_WORK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_128",
+        "relation_type": "triggers",
+        "source_slot_id": "T_EVT_WIND18",
+        "target_slot_id": "T_A_CAUTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_129",
+        "relation_type": "triggers",
+        "source_slot_id": "T_EVT_WIND21",
+        "target_slot_id": "T_A_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_130",
+        "relation_type": "triggers",
+        "source_slot_id": "T_EVT_FORECAST26",
+        "target_slot_id": "T_A_PREP_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_131",
+        "relation_type": "triggers",
+        "source_slot_id": "T_EVT_TWO_BELOW",
+        "target_slot_id": "T_A_LIFT_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_132",
+        "relation_type": "observes",
+        "source_slot_id": "T_OBS_WIND",
+        "target_slot_id": "T_EVT_WIND18",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_133",
+        "relation_type": "observes",
+        "source_slot_id": "T_OBS_AVG",
+        "target_slot_id": "T_EVT_TWO_BELOW",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_134",
+        "relation_type": "constrained_by",
+        "source_slot_id": "T_A_ALERT",
+        "target_slot_id": "T_CN_20",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_135",
+        "relation_type": "constrained_by",
+        "source_slot_id": "T_A_STOP_STAGE",
+        "target_slot_id": "T_CN_25",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_136",
+        "relation_type": "constrained_by",
+        "source_slot_id": "T_A_SLOW_HOIST",
+        "target_slot_id": "T_CN_HALF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_137",
+        "relation_type": "constrained_by",
+        "source_slot_id": "T_A_WIDEN_GAP",
+        "target_slot_id": "T_CN_DOUBLE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_138",
+        "relation_type": "constrained_by",
+        "source_slot_id": "T_A_PUT_DOWN",
+        "target_slot_id": "T_CN_TIER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_139",
+        "relation_type": "constrained_by",
+        "source_slot_id": "T_A_QUERY_AVG",
+        "target_slot_id": "T_CN_5MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_140",
+        "relation_type": "constrained_by",
+        "source_slot_id": "T_A_LIFT_ALERT",
+        "target_slot_id": "T_CN_LIFT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_141",
+        "relation_type": "constrained_by",
+        "source_slot_id": "T_A_EARLY_NIGHT",
+        "target_slot_id": "T_CN_5PM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_142",
+        "relation_type": "constrained_by",
+        "source_slot_id": "T_A_EARLY_NIGHT",
+        "target_slot_id": "T_CN_1H",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_143",
+        "relation_type": "constrained_by",
+        "source_slot_id": "T_A_ASSIGN_AGV",
+        "target_slot_id": "T_CN_30MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_144",
+        "relation_type": "has_goal",
+        "source_slot_id": "T_SCN",
+        "target_slot_id": "T_G_SAFE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_145",
+        "relation_type": "has_goal",
+        "source_slot_id": "T_SCN",
+        "target_slot_id": "T_G_DELAY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_146",
+        "relation_type": "has_reason",
+        "source_slot_id": "T_A_PREP_STOP",
+        "target_slot_id": "T_R_FORECAST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_147",
+        "relation_type": "has_reason",
+        "source_slot_id": "T_A_REQ_HOLD",
+        "target_slot_id": "T_R_WEAKEN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "T_REL_148",
+        "relation_type": "has_reason",
+        "source_slot_id": "T_A_ASSIGN_AGV",
+        "target_slot_id": "T_R_DEPARTURE",
+        "evidence_level": "explicit"
+      }
+    ]
+  }
+}

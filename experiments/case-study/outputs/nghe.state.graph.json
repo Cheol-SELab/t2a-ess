@@ -1,0 +1,291 @@
+{
+  "title": "NGHE 72-hour autonomous construction",
+  "scenario": "NGHE 72-hour autonomous construction",
+  "parallel": true,
+  "events": [
+    {
+      "id": "NGHE_EVT_LEVEL4_APPROVED",
+      "label": "Level 4 switch approved"
+    },
+    {
+      "id": "NGHE_EVT_FOG_OCCURS",
+      "label": "Dense fog occurs"
+    },
+    {
+      "id": "NGHE_EVT_FORGED_COMMAND",
+      "label": "Forged command packet injected"
+    },
+    {
+      "id": "NGHE_EVT_HEAVY_RAIN",
+      "label": "Heavy rain sets in"
+    },
+    {
+      "id": "NGHE_EVT_RAIN_END",
+      "label": "End of rain confirmed"
+    },
+    {
+      "id": "NGHE_EVT_MISSION_COMPLETE",
+      "label": "72-hour mission completed"
+    },
+    {
+      "id": "NGHE_EVT_STABLE_OPERATION",
+      "label": "About 30 min of normal operation confirmed"
+    }
+  ],
+  "guards": [
+    {
+      "id": "NGHE_C_TARGET_VOLUME",
+      "label": "completed_volume >= 38000 m3 within 72 hours"
+    },
+    {
+      "id": "NGHE_C_SPEED_LIMIT_FOG",
+      "label": "speed <= 5 km/h during fog degraded mode"
+    }
+  ],
+  "regions": [
+    {
+      "states": [
+        {
+          "id": "NGHE_SIT_LEVEL3",
+          "label": "Level 3 supervised autonomy",
+          "owners": [
+            "E1 Site setup and Level 3 start"
+          ],
+          "values": [
+            {
+              "variable": "autonomy_level",
+              "value": "Level 3",
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "id": "NGHE_SIT_LEVEL4",
+          "label": "Level 4 full autonomy",
+          "owners": [
+            "E2 Level 4 autonomous production"
+          ],
+          "values": [
+            {
+              "variable": "autonomy_level",
+              "value": "Level 4",
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "id": "NGHE_SIT_LEVEL1_STOP",
+          "label": "Level 1 emergency stop",
+          "owners": [
+            "E4 Heavy rain and work stop"
+          ],
+          "values": [
+            {
+              "variable": "autonomy_level",
+              "value": "Level 1",
+              "unit": ""
+            },
+            {
+              "variable": "rainfall_rate",
+              "value": 30,
+              "unit": "mm/h"
+            }
+          ]
+        },
+        {
+          "id": "NGHE_SIT_MISSION_COMPLETE",
+          "label": "72-hour mission complete",
+          "owners": [
+            "E5 Recovery and mission completion"
+          ],
+          "values": [
+            {
+              "variable": "target_volume",
+              "value": 38000,
+              "unit": "m3"
+            },
+            {
+              "variable": "actual_volume",
+              "value": 38200,
+              "unit": "m3"
+            },
+            {
+              "variable": "human_accident_count",
+              "value": 0,
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "id": "NGHE_SIT_LEVEL3_FOG",
+          "label": "Level 3 limited operation in fog",
+          "owners": [
+            "E3 Fog and cyber threat response"
+          ],
+          "values": [
+            {
+              "variable": "autonomy_level",
+              "value": "Level 3",
+              "unit": ""
+            },
+            {
+              "variable": "visibility",
+              "value": 200,
+              "unit": "m"
+            },
+            {
+              "variable": "speed_limit",
+              "value": 5,
+              "unit": "km/h"
+            }
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "id": "NGHE_TR_LEVEL3_TO_LEVEL4",
+          "label": "Level 3 to Level 4",
+          "from": "NGHE_SIT_LEVEL3",
+          "to": "NGHE_SIT_LEVEL4",
+          "events": [
+            "Level 4 switch approved"
+          ],
+          "guards": [],
+          "actions": []
+        },
+        {
+          "id": "NGHE_TR_LEVEL4_TO_LEVEL3_FOG",
+          "label": "Level 4 to Level 3 in fog",
+          "from": "NGHE_SIT_LEVEL4",
+          "to": "NGHE_SIT_LEVEL3_FOG",
+          "events": [
+            "Dense fog occurs"
+          ],
+          "guards": [
+            "speed <= 5 km/h during fog degraded mode"
+          ],
+          "actions": []
+        },
+        {
+          "id": "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN",
+          "label": "Level 3 (fog) to Level 1 stop",
+          "from": "NGHE_SIT_LEVEL3_FOG",
+          "to": "NGHE_SIT_LEVEL1_STOP",
+          "events": [
+            "Heavy rain sets in"
+          ],
+          "guards": [],
+          "actions": []
+        },
+        {
+          "id": "NGHE_TR_LEVEL1_TO_LEVEL3_RECOVERY",
+          "label": "Resume at Level 3 after rain",
+          "from": "NGHE_SIT_LEVEL1_STOP",
+          "to": "NGHE_SIT_LEVEL3",
+          "events": [
+            "End of rain confirmed"
+          ],
+          "guards": [],
+          "actions": []
+        },
+        {
+          "id": "NGHE_TR_RECOVERY_LEVEL3_TO_LEVEL4",
+          "label": "Level 3 to Level 4 after recovery",
+          "from": "NGHE_SIT_LEVEL3",
+          "to": "NGHE_SIT_LEVEL4",
+          "events": [
+            "About 30 min of normal operation confirmed"
+          ],
+          "guards": [],
+          "actions": []
+        },
+        {
+          "id": "NGHE_TR_MISSION_TO_COMPLETE",
+          "label": "Mission in progress to complete",
+          "from": "NGHE_SIT_LEVEL4",
+          "to": "NGHE_SIT_MISSION_COMPLETE",
+          "events": [
+            "72-hour mission completed"
+          ],
+          "guards": [
+            "completed_volume >= 38000 m3 within 72 hours"
+          ],
+          "actions": []
+        }
+      ],
+      "initial": "NGHE_SIT_LEVEL3",
+      "id": "r0",
+      "label": "autonomy_level"
+    },
+    {
+      "states": [
+        {
+          "id": "NGHE_SIT_ECO_SWAP",
+          "label": "Low-power battery swap",
+          "owners": [
+            "E2 Level 4 autonomous production"
+          ],
+          "values": [
+            {
+              "variable": "battery_soc",
+              "value": 15,
+              "unit": "percent"
+            }
+          ]
+        }
+      ],
+      "transitions": [],
+      "initial": "NGHE_SIT_ECO_SWAP",
+      "id": "r1",
+      "label": "battery_soc"
+    },
+    {
+      "states": [
+        {
+          "id": "NGHE_SIT_CYBER_ISOLATED",
+          "label": "Closed security network",
+          "owners": [
+            "E3 Fog and cyber threat response"
+          ],
+          "values": [
+            {
+              "variable": "network_mode",
+              "value": "closed_internal",
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "id": "NGHE_SIT_NETWORK_OPEN",
+          "label": "Public network in use",
+          "owners": [
+            "E3 Fog and cyber threat response"
+          ],
+          "values": [
+            {
+              "variable": "network_mode",
+              "value": "external_public",
+              "unit": ""
+            }
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "id": "NGHE_TR_NETWORK_TO_ISOLATED",
+          "label": "Public to closed network",
+          "from": "NGHE_SIT_NETWORK_OPEN",
+          "to": "NGHE_SIT_CYBER_ISOLATED",
+          "events": [
+            "Forged command packet injected"
+          ],
+          "guards": [],
+          "actions": []
+        }
+      ],
+      "initial": "NGHE_SIT_NETWORK_OPEN",
+      "id": "r2",
+      "label": "network_mode"
+    }
+  ]
+}

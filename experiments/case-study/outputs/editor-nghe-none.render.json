@@ -1,0 +1,25 @@
+{
+  "in": "nghe-en.sysml",
+  "out": "editor-nghe-none.png",
+  "expanded": [],
+  "nodeKinds": {
+    "FunctionNode": 24,
+    "StartConcurrencyNode": 5,
+    "EndConcurrencyNode": 6,
+    "ItemNode": 6,
+    "StartReferenceNode": 6,
+    "EndReferenceNode": 6
+  },
+  "edges": 59,
+  "metrics": [
+    "rootIds",
+    "topologyOf",
+    "step",
+    "lane",
+    "pathPointer",
+    "pair",
+    "slot",
+    "branchStates",
+    "clusterHierarchy"
+  ]
+}

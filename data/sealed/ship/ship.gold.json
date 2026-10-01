@@ -1,0 +1,1783 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "S_GOLD",
+    "title": "Response to passenger ship main engine cooling system failure",
+    "extraction_schema": "T2A-ESS",
+    "generation_mode": "manual_development_reference",
+    "source_units": [
+      {
+        "source_unit_id": "P1",
+        "unit_type": "paragraph",
+        "text": "The passenger ship operation system consists of the bridge, 2 main engines, 2 generators, the engine monitoring system (EMS), and 4 lifeboats. The EMS monitors the coolant temperature of the main engines."
+      },
+      {
+        "source_unit_id": "P2",
+        "unit_type": "paragraph",
+        "text": "Externally there are the Coast Guard and the shipping company operations office; the captain is in charge of ship command, and the chief engineer is in charge of engine maintenance."
+      },
+      {
+        "source_unit_id": "P3",
+        "unit_type": "paragraph",
+        "text": "At 4:00 p.m., the EMS detects a coolant temperature of 95 °C on main engine No. 1 and displays an alarm on the bridge. The captain stops main engine No. 1 and operates at reduced speed with main engine No. 2 only."
+      },
+      {
+        "source_unit_id": "P4",
+        "unit_type": "paragraph",
+        "text": "The chief engineer inspects the coolant pump and confirms damage to the pump impeller. The chief engineer requests parts supply from the shipping company operations office."
+      },
+      {
+        "source_unit_id": "P5",
+        "unit_type": "paragraph",
+        "text": "The captain makes a reduced-speed operation announcement to the passengers and notifies the Coast Guard of the engine failure situation. The two tasks are carried out simultaneously."
+      },
+      {
+        "source_unit_id": "P6",
+        "unit_type": "paragraph",
+        "text": "If the load of main engine No. 2 is 85% or more, the chief engineer stops 1 generator to reduce the load. At 5:00 p.m., when the load rises to 88%, the chief engineer stops generator No. 2."
+      },
+      {
+        "source_unit_id": "P7",
+        "unit_type": "paragraph",
+        "text": "Every 30 min, the chief engineer reports the temperature and load of main engine No. 2 to the bridge."
+      },
+      {
+        "source_unit_id": "P8",
+        "unit_type": "paragraph",
+        "text": "If even main engine No. 2 stops, the captain requests towing from the Coast Guard. On this day, main engine No. 2 did not stop, so towing was not requested."
+      },
+      {
+        "source_unit_id": "P9",
+        "unit_type": "paragraph",
+        "text": "At 7:00 p.m., when the passenger ship enters the destination port, the shipping company operations office delivers the replacement impeller to the ship."
+      },
+      {
+        "source_unit_id": "P10",
+        "unit_type": "paragraph",
+        "text": "The chief engineer replaces the impeller and test-runs main engine No. 1. If the coolant temperature stays at 80 °C or less during the test run, the chief engineer reports repair completion to the captain."
+      },
+      {
+        "source_unit_id": "P11",
+        "unit_type": "paragraph",
+        "text": "The captain instructs that generator No. 2 be restarted and notifies the Coast Guard of the end of the situation."
+      },
+      {
+        "source_unit_id": "P12",
+        "unit_type": "paragraph",
+        "text": "The captain compiles the details of the engine failure and reports them to the shipping company operations office."
+      },
+      {
+        "source_unit_id": "P13",
+        "unit_type": "paragraph",
+        "text": "The goal of this scenario is to enter the scheduled port while keeping the passengers safe."
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "S_SCN",
+        "label": "Response to passenger ship main engine cooling system failure",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "S_EP_DETECT",
+        "label": "Coolant overheating detection and reduced-speed operation",
+        "order_index": 1,
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "episode_id": "S_EP_RESPOND",
+        "label": "Failure diagnosis and external notification",
+        "order_index": 2,
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "episode_id": "S_EP_LOAD",
+        "label": "Load management",
+        "order_index": 3,
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "episode_id": "S_EP_REPAIR",
+        "label": "Repair and recovery after port entry",
+        "order_index": 4,
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "S_P_SYSTEM",
+        "label": "Passenger ship operation system",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "S_P_BRIDGE",
+        "label": "Bridge",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "S_P_ENGINES",
+        "label": "2 main engines",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "S_P_E1",
+        "label": "Main engine No. 1",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "performer_id": "S_P_E2",
+        "label": "Main engine No. 2",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "performer_id": "S_P_GENS",
+        "label": "2 generators",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "S_P_G2",
+        "label": "Generator No. 2",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "performer_id": "S_P_EMS",
+        "label": "Engine monitoring system (EMS)",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "S_P_BOATS",
+        "label": "4 lifeboats",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "S_P_PUMP",
+        "label": "Coolant pump",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "performer_id": "S_P_KCG",
+        "label": "Coast Guard",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "S_P_OPS",
+        "label": "Shipping company operations office",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "S_P_CAPTAIN",
+        "label": "Captain",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "S_P_CHIEF",
+        "label": "Chief engineer",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "S_A_MONITOR",
+        "label": "Monitor main engine coolant temperature",
+        "source_ref": {
+          "source_unit_id": "P1"
+        },
+        "primary_actor_text": "EMS",
+        "object_text": "Main engine coolant temperature"
+      },
+      {
+        "action_id": "S_A_DETECT",
+        "label": "Detect main engine No. 1 coolant temperature of 95 °C",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "EMS",
+        "object_text": "Main engine No. 1 coolant temperature"
+      },
+      {
+        "action_id": "S_A_ALARM",
+        "label": "Display alarm on bridge",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "EMS",
+        "object_text": "Alarm"
+      },
+      {
+        "action_id": "S_A_STOP_E1",
+        "label": "Stop main engine No. 1",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Captain",
+        "object_text": "Main engine No. 1"
+      },
+      {
+        "action_id": "S_A_SLOW",
+        "label": "Operate at reduced speed with main engine No. 2 only",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Captain",
+        "object_text": "Main engine No. 2"
+      },
+      {
+        "action_id": "S_A_INSPECT",
+        "label": "Inspect coolant pump",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Chief engineer",
+        "object_text": "Coolant pump"
+      },
+      {
+        "action_id": "S_A_REQ_PART",
+        "label": "Request parts supply",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Chief engineer",
+        "object_text": "Parts supply"
+      },
+      {
+        "action_id": "S_A_ANNOUNCE",
+        "label": "Reduced-speed operation announcement",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Captain",
+        "object_text": "Reduced-speed operation announcement"
+      },
+      {
+        "action_id": "S_A_NOTIFY_KCG",
+        "label": "Notify Coast Guard of engine failure",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Captain",
+        "object_text": "Engine failure situation"
+      },
+      {
+        "action_id": "S_A_STOP_GEN",
+        "label": "Reduce load by stopping generator No. 2",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Chief engineer",
+        "object_text": "Generator No. 2"
+      },
+      {
+        "action_id": "S_A_REPORT_STATUS",
+        "label": "Report main engine No. 2 temperature and load every 30 min",
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "primary_actor_text": "Chief engineer",
+        "object_text": "Main engine No. 2 temperature and load"
+      },
+      {
+        "action_id": "S_A_REQ_TOW",
+        "label": "Request towing from Coast Guard",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "Captain",
+        "object_text": "Towing"
+      },
+      {
+        "action_id": "S_A_DELIVER",
+        "label": "Deliver replacement impeller to ship",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "Shipping company operations office",
+        "object_text": "Replacement impeller"
+      },
+      {
+        "action_id": "S_A_REPLACE",
+        "label": "Replace impeller",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Chief engineer",
+        "object_text": "Impeller"
+      },
+      {
+        "action_id": "S_A_TEST",
+        "label": "Test-run main engine No. 1",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Chief engineer",
+        "object_text": "Main engine No. 1"
+      },
+      {
+        "action_id": "S_A_REPORT_DONE",
+        "label": "Report repair completion to captain",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Chief engineer",
+        "object_text": "Repair completion"
+      },
+      {
+        "action_id": "S_A_ORDER_GEN",
+        "label": "Instruct restart of generator No. 2",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Captain",
+        "object_text": "Restart of generator No. 2"
+      },
+      {
+        "action_id": "S_A_NOTIFY_END",
+        "label": "Notify Coast Guard of end of situation",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Captain",
+        "object_text": "End of situation"
+      },
+      {
+        "action_id": "S_A_REPORT",
+        "label": "Report details of engine failure",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Captain",
+        "object_text": "Details of engine failure"
+      }
+    ],
+    "items": [
+      {
+        "item_id": "S_I_ALARM",
+        "label": "Alarm",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "item_id": "S_I_STATUS",
+        "label": "Temperature and load report",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "item_id": "S_I_IMPELLER",
+        "label": "Replacement impeller",
+        "item_type": "material",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "item_id": "S_I_DONE",
+        "label": "Repair completion report",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "item_id": "S_I_REPORT",
+        "label": "Report details of engine failure",
+        "item_type": "document",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "S_SIT_E1_RUN",
+        "label": "Main engine No. 1 running state",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "S_SIT_E1_STOP",
+        "label": "Main engine No. 1 stopped state",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "S_SIT_NORMAL",
+        "label": "Normal operation",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "S_SIT_SLOW",
+        "label": "Reduced-speed operation",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "S_SIT_G2_RUN",
+        "label": "Generator No. 2 running state",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "situation_id": "S_SIT_G2_STOP",
+        "label": "Generator No. 2 stopped state",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "S_SV_E1_RUN",
+        "subject_text": "Main engine No. 1",
+        "variable": "State",
+        "value": "Running",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "S_SV_E1_STOP",
+        "subject_text": "Main engine No. 1",
+        "variable": "State",
+        "value": "Stopped",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "S_SV_NORMAL",
+        "subject_text": "Passenger ship",
+        "variable": "Operation mode",
+        "value": "Normal operation",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "S_SV_SLOW",
+        "subject_text": "Passenger ship",
+        "variable": "Operation mode",
+        "value": "Reduced-speed operation",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "S_SV_G2_RUN",
+        "subject_text": "Generator No. 2",
+        "variable": "State",
+        "value": "Running",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "state_value_id": "S_SV_G2_STOP",
+        "subject_text": "Generator No. 2",
+        "variable": "State",
+        "value": "Stopped",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "S_EVT_95",
+        "label": "Detect main engine No. 1 coolant temperature of 95 °C",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "event_id": "S_EVT_88",
+        "label": "Main engine No. 2 load rises to 88%",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "event_id": "S_EVT_ARRIVE",
+        "label": "Enter destination port",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "S_TR_E1_STOP",
+        "label": "Main engine No. 1 from running to stopped",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "transition_id": "S_TR_SLOW",
+        "label": "From normal operation to reduced-speed operation",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "transition_id": "S_TR_G2_STOP",
+        "label": "Generator No. 2 from running to stopped",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "transition_id": "S_TR_E1_RUN",
+        "label": "Main engine No. 1 from stopped to running",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "transition_id": "S_TR_G2_RUN",
+        "label": "Generator No. 2 from stopped to running",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "S_OBS_COOL",
+        "label": "Monitor main engine coolant temperature",
+        "observer_text": "EMS",
+        "observed_text": "Main engine coolant temperature",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "observation_id": "S_OBS_95",
+        "label": "Detect coolant temperature of 95 °C",
+        "observer_text": "EMS",
+        "observed_text": "Main engine No. 1 coolant temperature",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "observation_id": "S_OBS_IMPELLER",
+        "label": "Confirm pump impeller damage",
+        "observer_text": "Chief engineer",
+        "observed_text": "Pump impeller damage",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "S_F01",
+        "label": "Display alarm after detection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "S_F02",
+        "label": "Stop main engine No. 1 after alarm",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "S_F03",
+        "label": "Reduced-speed operation after stop",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "S_F04",
+        "label": "Inspect pump after stop",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "S_F05",
+        "label": "Request parts supply after inspection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "S_F06",
+        "label": "Reduced-speed operation announcement",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "S_F07",
+        "label": "Notify Coast Guard after speed reduction",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "S_F08",
+        "label": "Stop generator when load is 85% or more",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "S_F09",
+        "label": "Deliver impeller after supply request",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "flow_id": "S_F10",
+        "label": "Replace impeller after delivery",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "S_F11",
+        "label": "Test run after replacement",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "S_F12",
+        "label": "Report repair completion when kept at 80 °C or less",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "S_F13",
+        "label": "Instruct generator restart after repair completion",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "flow_id": "S_F14",
+        "label": "Notify end of situation after restart instruction",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "S_C01",
+        "label": "Announcement and Coast Guard notification carried out simultaneously",
+        "control_type": "fork",
+        "guard_texts": [],
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "control_id": "S_C02",
+        "label": "Judge main engine No. 2 load 85% or more",
+        "control_type": "decision",
+        "guard_texts": [
+          "Main engine No. 2 load 85% or more"
+        ],
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "control_id": "S_C03",
+        "label": "Report temperature and load every 30 min",
+        "control_type": "loop",
+        "guard_texts": [
+          "Every 30 min"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "control_id": "S_C04",
+        "label": "Judge main engine No. 2 stop",
+        "control_type": "decision",
+        "guard_texts": [
+          "Even main engine No. 2 stops"
+        ],
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "control_id": "S_C05",
+        "label": "Judge coolant temperature kept at 80 °C or less",
+        "control_type": "decision",
+        "guard_texts": [
+          "Coolant temperature stays at 80 °C or less during test run"
+        ],
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "S_CN_85",
+        "label": "Main engine No. 2 load 85% or more",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "parameter": "Load",
+        "operator": ">=",
+        "value": 85,
+        "unit": "%"
+      },
+      {
+        "constraint_id": "S_CN_30MIN",
+        "label": "Temperature and load reporting interval 30 min",
+        "constraint_kind": [
+          "period"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "parameter": "Reporting interval",
+        "operator": "=",
+        "value": 30,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "S_CN_80",
+        "label": "Coolant temperature 80 °C or less",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "parameter": "Coolant temperature",
+        "operator": "<=",
+        "value": 80,
+        "unit": "℃"
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "S_G_SAFE",
+        "label": "Passenger safety",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      },
+      {
+        "goal_id": "S_G_ARRIVE",
+        "label": "Enter scheduled port",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      }
+    ],
+    "reasons": [],
+    "slot_relations": [
+      {
+        "relation_id": "S_REL_001",
+        "relation_type": "has_episode",
+        "source_slot_id": "S_SCN",
+        "target_slot_id": "S_EP_DETECT",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "S_REL_002",
+        "relation_type": "has_episode",
+        "source_slot_id": "S_SCN",
+        "target_slot_id": "S_EP_RESPOND",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "S_REL_003",
+        "relation_type": "has_episode",
+        "source_slot_id": "S_SCN",
+        "target_slot_id": "S_EP_LOAD",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "S_REL_004",
+        "relation_type": "has_episode",
+        "source_slot_id": "S_SCN",
+        "target_slot_id": "S_EP_REPAIR",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "S_REL_005",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_DETECT",
+        "target_slot_id": "S_A_MONITOR",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_006",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_DETECT",
+        "target_slot_id": "S_A_DETECT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_007",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_DETECT",
+        "target_slot_id": "S_A_ALARM",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_008",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_DETECT",
+        "target_slot_id": "S_A_STOP_E1",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_009",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_DETECT",
+        "target_slot_id": "S_A_SLOW",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_010",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_RESPOND",
+        "target_slot_id": "S_A_INSPECT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_011",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_RESPOND",
+        "target_slot_id": "S_A_REQ_PART",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_012",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_RESPOND",
+        "target_slot_id": "S_A_ANNOUNCE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_013",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_RESPOND",
+        "target_slot_id": "S_A_NOTIFY_KCG",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_014",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_LOAD",
+        "target_slot_id": "S_A_STOP_GEN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_015",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_LOAD",
+        "target_slot_id": "S_A_REPORT_STATUS",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_016",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_LOAD",
+        "target_slot_id": "S_A_REQ_TOW",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_017",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_REPAIR",
+        "target_slot_id": "S_A_DELIVER",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_018",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_REPAIR",
+        "target_slot_id": "S_A_REPLACE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_019",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_REPAIR",
+        "target_slot_id": "S_A_TEST",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_020",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_REPAIR",
+        "target_slot_id": "S_A_REPORT_DONE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_021",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_REPAIR",
+        "target_slot_id": "S_A_ORDER_GEN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_022",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_REPAIR",
+        "target_slot_id": "S_A_NOTIFY_END",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_023",
+        "relation_type": "custom",
+        "source_slot_id": "S_EP_REPAIR",
+        "target_slot_id": "S_A_REPORT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "S_REL_024",
+        "relation_type": "has_part",
+        "source_slot_id": "S_P_SYSTEM",
+        "target_slot_id": "S_P_BRIDGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_025",
+        "relation_type": "has_part",
+        "source_slot_id": "S_P_SYSTEM",
+        "target_slot_id": "S_P_ENGINES",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_026",
+        "relation_type": "has_part",
+        "source_slot_id": "S_P_SYSTEM",
+        "target_slot_id": "S_P_GENS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_027",
+        "relation_type": "has_part",
+        "source_slot_id": "S_P_SYSTEM",
+        "target_slot_id": "S_P_EMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_028",
+        "relation_type": "has_part",
+        "source_slot_id": "S_P_SYSTEM",
+        "target_slot_id": "S_P_BOATS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_029",
+        "relation_type": "has_part",
+        "source_slot_id": "S_P_ENGINES",
+        "target_slot_id": "S_P_E1",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_030",
+        "relation_type": "has_part",
+        "source_slot_id": "S_P_ENGINES",
+        "target_slot_id": "S_P_E2",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_031",
+        "relation_type": "has_part",
+        "source_slot_id": "S_P_GENS",
+        "target_slot_id": "S_P_G2",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_032",
+        "relation_type": "has_part",
+        "source_slot_id": "S_P_E1",
+        "target_slot_id": "S_P_PUMP",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_033",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_MONITOR",
+        "target_slot_id": "S_P_EMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_034",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_DETECT",
+        "target_slot_id": "S_P_EMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_035",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_ALARM",
+        "target_slot_id": "S_P_EMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_036",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_STOP_E1",
+        "target_slot_id": "S_P_CAPTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_037",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_SLOW",
+        "target_slot_id": "S_P_CAPTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_038",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_INSPECT",
+        "target_slot_id": "S_P_CHIEF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_039",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_REQ_PART",
+        "target_slot_id": "S_P_CHIEF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_040",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_ANNOUNCE",
+        "target_slot_id": "S_P_CAPTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_041",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_NOTIFY_KCG",
+        "target_slot_id": "S_P_CAPTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_042",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_STOP_GEN",
+        "target_slot_id": "S_P_CHIEF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_043",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_REPORT_STATUS",
+        "target_slot_id": "S_P_CHIEF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_044",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_REQ_TOW",
+        "target_slot_id": "S_P_CAPTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_045",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_DELIVER",
+        "target_slot_id": "S_P_OPS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_046",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_REPLACE",
+        "target_slot_id": "S_P_CHIEF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_047",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_TEST",
+        "target_slot_id": "S_P_CHIEF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_048",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_REPORT_DONE",
+        "target_slot_id": "S_P_CHIEF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_049",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_ORDER_GEN",
+        "target_slot_id": "S_P_CAPTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_050",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_NOTIFY_END",
+        "target_slot_id": "S_P_CAPTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_051",
+        "relation_type": "performed_by",
+        "source_slot_id": "S_A_REPORT",
+        "target_slot_id": "S_P_CAPTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_052",
+        "relation_type": "produces_item",
+        "source_slot_id": "S_A_ALARM",
+        "target_slot_id": "S_I_ALARM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_053",
+        "relation_type": "provided_to",
+        "source_slot_id": "S_A_ALARM",
+        "target_slot_id": "S_P_BRIDGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_054",
+        "relation_type": "acts_on",
+        "source_slot_id": "S_A_STOP_E1",
+        "target_slot_id": "S_P_E1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_055",
+        "relation_type": "acts_on",
+        "source_slot_id": "S_A_SLOW",
+        "target_slot_id": "S_P_E2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_056",
+        "relation_type": "acts_on",
+        "source_slot_id": "S_A_INSPECT",
+        "target_slot_id": "S_P_PUMP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_057",
+        "relation_type": "provided_to",
+        "source_slot_id": "S_A_REQ_PART",
+        "target_slot_id": "S_P_OPS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_058",
+        "relation_type": "provided_to",
+        "source_slot_id": "S_A_NOTIFY_KCG",
+        "target_slot_id": "S_P_KCG",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_059",
+        "relation_type": "acts_on",
+        "source_slot_id": "S_A_STOP_GEN",
+        "target_slot_id": "S_P_G2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_060",
+        "relation_type": "produces_item",
+        "source_slot_id": "S_A_REPORT_STATUS",
+        "target_slot_id": "S_I_STATUS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_061",
+        "relation_type": "provided_to",
+        "source_slot_id": "S_A_REPORT_STATUS",
+        "target_slot_id": "S_P_BRIDGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_062",
+        "relation_type": "provided_to",
+        "source_slot_id": "S_A_REQ_TOW",
+        "target_slot_id": "S_P_KCG",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_063",
+        "relation_type": "uses_item",
+        "source_slot_id": "S_A_REPLACE",
+        "target_slot_id": "S_I_IMPELLER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_064",
+        "relation_type": "acts_on",
+        "source_slot_id": "S_A_TEST",
+        "target_slot_id": "S_P_E1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_065",
+        "relation_type": "produces_item",
+        "source_slot_id": "S_A_REPORT_DONE",
+        "target_slot_id": "S_I_DONE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_066",
+        "relation_type": "provided_to",
+        "source_slot_id": "S_A_REPORT_DONE",
+        "target_slot_id": "S_P_CAPTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_067",
+        "relation_type": "provided_to",
+        "source_slot_id": "S_A_NOTIFY_END",
+        "target_slot_id": "S_P_KCG",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_068",
+        "relation_type": "produces_item",
+        "source_slot_id": "S_A_REPORT",
+        "target_slot_id": "S_I_REPORT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_069",
+        "relation_type": "provided_to",
+        "source_slot_id": "S_A_REPORT",
+        "target_slot_id": "S_P_OPS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_070",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F01",
+        "target_slot_id": "S_A_DETECT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_071",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F01",
+        "target_slot_id": "S_A_ALARM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_072",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F02",
+        "target_slot_id": "S_A_ALARM",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_073",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F02",
+        "target_slot_id": "S_A_STOP_E1",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_074",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F03",
+        "target_slot_id": "S_A_STOP_E1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_075",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F03",
+        "target_slot_id": "S_A_SLOW",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_076",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F04",
+        "target_slot_id": "S_A_STOP_E1",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_077",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F04",
+        "target_slot_id": "S_A_INSPECT",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_078",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F05",
+        "target_slot_id": "S_A_INSPECT",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_079",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F05",
+        "target_slot_id": "S_A_REQ_PART",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_080",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F06",
+        "target_slot_id": "S_A_SLOW",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_081",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F06",
+        "target_slot_id": "S_A_ANNOUNCE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_082",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F07",
+        "target_slot_id": "S_A_SLOW",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_083",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F07",
+        "target_slot_id": "S_A_NOTIFY_KCG",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_084",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F08",
+        "target_slot_id": "S_A_SLOW",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_085",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F08",
+        "target_slot_id": "S_A_STOP_GEN",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_086",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F09",
+        "target_slot_id": "S_A_REQ_PART",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_087",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F09",
+        "target_slot_id": "S_A_DELIVER",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_088",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F10",
+        "target_slot_id": "S_A_DELIVER",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_089",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F10",
+        "target_slot_id": "S_A_REPLACE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_090",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F11",
+        "target_slot_id": "S_A_REPLACE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_091",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F11",
+        "target_slot_id": "S_A_TEST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_092",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F12",
+        "target_slot_id": "S_A_TEST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_093",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F12",
+        "target_slot_id": "S_A_REPORT_DONE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_094",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F13",
+        "target_slot_id": "S_A_REPORT_DONE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_095",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F13",
+        "target_slot_id": "S_A_ORDER_GEN",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "S_REL_096",
+        "relation_type": "flow_source",
+        "source_slot_id": "S_F14",
+        "target_slot_id": "S_A_ORDER_GEN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_097",
+        "relation_type": "flow_target",
+        "source_slot_id": "S_F14",
+        "target_slot_id": "S_A_NOTIFY_END",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_098",
+        "relation_type": "controls_flow",
+        "source_slot_id": "S_C01",
+        "target_slot_id": "S_F06",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_099",
+        "relation_type": "controls_flow",
+        "source_slot_id": "S_C01",
+        "target_slot_id": "S_F07",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_100",
+        "relation_type": "controls_flow",
+        "source_slot_id": "S_C02",
+        "target_slot_id": "S_F08",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_101",
+        "relation_type": "controls_flow",
+        "source_slot_id": "S_C05",
+        "target_slot_id": "S_F12",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_102",
+        "relation_type": "has_state_value",
+        "source_slot_id": "S_SIT_E1_RUN",
+        "target_slot_id": "S_SV_E1_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_103",
+        "relation_type": "has_state_value",
+        "source_slot_id": "S_SIT_E1_STOP",
+        "target_slot_id": "S_SV_E1_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_104",
+        "relation_type": "has_state_value",
+        "source_slot_id": "S_SIT_NORMAL",
+        "target_slot_id": "S_SV_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_105",
+        "relation_type": "has_state_value",
+        "source_slot_id": "S_SIT_SLOW",
+        "target_slot_id": "S_SV_SLOW",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_106",
+        "relation_type": "has_state_value",
+        "source_slot_id": "S_SIT_G2_RUN",
+        "target_slot_id": "S_SV_G2_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_107",
+        "relation_type": "has_state_value",
+        "source_slot_id": "S_SIT_G2_STOP",
+        "target_slot_id": "S_SV_G2_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_108",
+        "relation_type": "from_situation",
+        "source_slot_id": "S_TR_E1_STOP",
+        "target_slot_id": "S_SIT_E1_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_109",
+        "relation_type": "to_situation",
+        "source_slot_id": "S_TR_E1_STOP",
+        "target_slot_id": "S_SIT_E1_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_110",
+        "relation_type": "triggers",
+        "source_slot_id": "S_EVT_95",
+        "target_slot_id": "S_TR_E1_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_111",
+        "relation_type": "from_situation",
+        "source_slot_id": "S_TR_SLOW",
+        "target_slot_id": "S_SIT_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_112",
+        "relation_type": "to_situation",
+        "source_slot_id": "S_TR_SLOW",
+        "target_slot_id": "S_SIT_SLOW",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_113",
+        "relation_type": "from_situation",
+        "source_slot_id": "S_TR_G2_STOP",
+        "target_slot_id": "S_SIT_G2_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_114",
+        "relation_type": "to_situation",
+        "source_slot_id": "S_TR_G2_STOP",
+        "target_slot_id": "S_SIT_G2_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_115",
+        "relation_type": "triggers",
+        "source_slot_id": "S_EVT_88",
+        "target_slot_id": "S_TR_G2_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_116",
+        "relation_type": "from_situation",
+        "source_slot_id": "S_TR_E1_RUN",
+        "target_slot_id": "S_SIT_E1_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_117",
+        "relation_type": "to_situation",
+        "source_slot_id": "S_TR_E1_RUN",
+        "target_slot_id": "S_SIT_E1_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_118",
+        "relation_type": "from_situation",
+        "source_slot_id": "S_TR_G2_RUN",
+        "target_slot_id": "S_SIT_G2_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_119",
+        "relation_type": "to_situation",
+        "source_slot_id": "S_TR_G2_RUN",
+        "target_slot_id": "S_SIT_G2_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_120",
+        "relation_type": "triggers",
+        "source_slot_id": "S_EVT_95",
+        "target_slot_id": "S_A_STOP_E1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_121",
+        "relation_type": "triggers",
+        "source_slot_id": "S_EVT_88",
+        "target_slot_id": "S_A_STOP_GEN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_122",
+        "relation_type": "triggers",
+        "source_slot_id": "S_EVT_ARRIVE",
+        "target_slot_id": "S_A_DELIVER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_123",
+        "relation_type": "observes",
+        "source_slot_id": "S_OBS_95",
+        "target_slot_id": "S_EVT_95",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_124",
+        "relation_type": "constrained_by",
+        "source_slot_id": "S_A_STOP_GEN",
+        "target_slot_id": "S_CN_85",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_125",
+        "relation_type": "constrained_by",
+        "source_slot_id": "S_A_REPORT_STATUS",
+        "target_slot_id": "S_CN_30MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_126",
+        "relation_type": "constrained_by",
+        "source_slot_id": "S_A_REPORT_DONE",
+        "target_slot_id": "S_CN_80",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_127",
+        "relation_type": "has_goal",
+        "source_slot_id": "S_SCN",
+        "target_slot_id": "S_G_SAFE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "S_REL_128",
+        "relation_type": "has_goal",
+        "source_slot_id": "S_SCN",
+        "target_slot_id": "S_G_ARRIVE",
+        "evidence_level": "explicit"
+      }
+    ]
+  }
+}

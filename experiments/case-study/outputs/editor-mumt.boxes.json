@@ -1,0 +1,305 @@
+{
+  "deviceScaleFactor": 2,
+  "boxes": [
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "x": 160,
+      "y": 354,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "x": 368,
+      "y": 354,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "x": 736,
+      "y": 162,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "x": 944,
+      "y": 162,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "x": 736,
+      "y": 354,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "x": 944,
+      "y": 354,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "x": 736,
+      "y": 546,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "x": 1408,
+      "y": 450,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "x": 1660,
+      "y": 450,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "x": 1868,
+      "y": 450,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "x": 2236,
+      "y": 354,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "x": 2444,
+      "y": 354,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "x": 2693,
+      "y": 354,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "New Start Concurrency_1",
+      "nodeElement": "StartConcurrencyNode",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "x": 640,
+      "y": 394,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "New End Concurrency_1",
+      "nodeElement": "EndConcurrencyNode",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "x": 1152,
+      "y": 394,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "New Start Concurrency_2",
+      "nodeElement": "StartConcurrencyNode",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "x": 1312,
+      "y": 394,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "New End Concurrency_2",
+      "nodeElement": "EndConcurrencyNode",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "x": 2076,
+      "y": 394,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::start(E1 Preparation under normal comms)",
+      "nodeElement": "StartReferenceNode",
+      "parent": "MUM-T attack operation under EW",
+      "x": 48,
+      "y": 402,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::done(E4 Comms recovery and attack resumption)",
+      "nodeElement": "EndReferenceNode",
+      "parent": "MUM-T attack operation under EW",
+      "x": 2933,
+      "y": 394,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis",
+      "nodeElement": "FunctionNode",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "x": 1408,
+      "y": 258,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "item-qn:MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis::Summary track data",
+      "nodeElement": "ItemNode",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis",
+      "x": 1945.1875,
+      "y": 338,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "node",
+      "id": "FPV threat alert",
+      "nodeElement": "ItemNode",
+      "parent": "MUM-T attack operation under EW",
+      "x": 946,
+      "y": 510,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "node",
+      "id": "Drone video stream",
+      "nodeElement": "ItemNode",
+      "parent": "MUM-T attack operation under EW",
+      "x": 1362,
+      "y": 202,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "node",
+      "id": "Emergency broadcast message",
+      "nodeElement": "ItemNode",
+      "parent": "MUM-T attack operation under EW",
+      "x": 1870,
+      "y": 394,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "node",
+      "id": "Company SA summary",
+      "nodeElement": "ItemNode",
+      "parent": "MUM-T attack operation under EW",
+      "x": 2495,
+      "y": 510,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "node",
+      "id": "Disconnection-period report",
+      "nodeElement": "ItemNode",
+      "parent": "MUM-T attack operation under EW",
+      "x": 2599,
+      "y": 566,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "region",
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "x": 128,
+      "y": 322,
+      "width": 432,
+      "height": 192
+    },
+    {
+      "kind": "region",
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "x": 608,
+      "y": 130,
+      "width": 624,
+      "height": 576
+    },
+    {
+      "kind": "region",
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "x": 1280,
+      "y": 226,
+      "width": 876,
+      "height": 384
+    },
+    {
+      "kind": "region",
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "x": 2204,
+      "y": 322,
+      "width": 681,
+      "height": 192
+    },
+    {
+      "kind": "region",
+      "id": "MUM-T attack operation under EW",
+      "x": 16,
+      "y": 98,
+      "width": 2997,
+      "height": 640
+    }
+  ]
+}

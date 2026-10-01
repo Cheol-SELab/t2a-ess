@@ -1,0 +1,170 @@
+{
+ "gold/mumt/mumt.gold.json": {
+  "source_units": 4,
+  "slots": 97,
+  "slot_relations": 127,
+  "graph": {
+   "nodes": 101,
+   "edges": 224
+  },
+  "defects": {
+   "duplicate_ids": 0,
+   "missing_ids": 0,
+   "relation_endpoint_issues": 0,
+   "source_ref_issues": 0,
+   "source_units_without_slots": 0,
+   "slots_without_source_ref": 0,
+   "isolated_slots": 0,
+   "actions_without_performer_relation": 0,
+   "transition_missing_from": 0,
+   "transition_missing_to": 0,
+   "transition_missing_trigger": 0,
+   "flow_missing_source": 0,
+   "flow_missing_target": 0
+  }
+ },
+ "gold/nghe/nghe.gold.json": {
+  "source_units": 4,
+  "slots": 137,
+  "slot_relations": 178,
+  "graph": {
+   "nodes": 141,
+   "edges": 315
+  },
+  "defects": {
+   "duplicate_ids": 0,
+   "missing_ids": 0,
+   "relation_endpoint_issues": 0,
+   "source_ref_issues": 0,
+   "source_units_without_slots": 0,
+   "slots_without_source_ref": 0,
+   "isolated_slots": 0,
+   "actions_without_performer_relation": 0,
+   "transition_missing_from": 0,
+   "transition_missing_to": 0,
+   "transition_missing_trigger": 0,
+   "flow_missing_source": 0,
+   "flow_missing_target": 0
+  }
+ },
+ "gold/av/av.gold.json": {
+  "source_units": 14,
+  "slots": 91,
+  "slot_relations": 132,
+  "graph": {
+   "nodes": 105,
+   "edges": 223
+  },
+  "defects": {
+   "duplicate_ids": 0,
+   "missing_ids": 0,
+   "relation_endpoint_issues": 0,
+   "source_ref_issues": 0,
+   "source_units_without_slots": 0,
+   "slots_without_source_ref": 0,
+   "isolated_slots": 0,
+   "actions_without_performer_relation": 0,
+   "transition_missing_from": 0,
+   "transition_missing_to": 0,
+   "transition_missing_trigger": 0,
+   "flow_missing_source": 0,
+   "flow_missing_target": 0
+  }
+ },
+ "diagnostic/mumt/mumt.nongold.json": {
+  "source_units": 11,
+  "slots": 90,
+  "slot_relations": 48,
+  "graph": {
+   "nodes": 101,
+   "edges": 116
+  },
+  "defects": {
+   "duplicate_ids": 0,
+   "missing_ids": 0,
+   "relation_endpoint_issues": 0,
+   "source_ref_issues": 0,
+   "source_units_without_slots": 0,
+   "slots_without_source_ref": 22,
+   "isolated_slots": 37,
+   "actions_without_performer_relation": 12,
+   "transition_missing_from": 1,
+   "transition_missing_to": 1,
+   "transition_missing_trigger": 1,
+   "flow_missing_source": 6,
+   "flow_missing_target": 7
+  }
+ },
+ "diagnostic/mumt/mumt.exhaustive.json": {
+  "source_units": 21,
+  "slots": 193,
+  "slot_relations": 62,
+  "graph": {
+   "nodes": 214,
+   "edges": 252
+  },
+  "defects": {
+   "duplicate_ids": 0,
+   "missing_ids": 0,
+   "relation_endpoint_issues": 0,
+   "source_ref_issues": 0,
+   "source_units_without_slots": 0,
+   "slots_without_source_ref": 3,
+   "isolated_slots": 118,
+   "actions_without_performer_relation": 55,
+   "transition_missing_from": 7,
+   "transition_missing_to": 7,
+   "transition_missing_trigger": 7,
+   "flow_missing_source": 11,
+   "flow_missing_target": 11
+  }
+ },
+ "diagnostic/nghe/nghe.nongold.json": {
+  "source_units": 10,
+  "slots": 117,
+  "slot_relations": 63,
+  "graph": {
+   "nodes": 127,
+   "edges": 142
+  },
+  "defects": {
+   "duplicate_ids": 0,
+   "missing_ids": 0,
+   "relation_endpoint_issues": 0,
+   "source_ref_issues": 0,
+   "source_units_without_slots": 0,
+   "slots_without_source_ref": 38,
+   "isolated_slots": 45,
+   "actions_without_performer_relation": 11,
+   "transition_missing_from": 3,
+   "transition_missing_to": 0,
+   "transition_missing_trigger": 1,
+   "flow_missing_source": 4,
+   "flow_missing_target": 4
+  }
+ },
+ "diagnostic/nghe/nghe.exhaustive.json": {
+  "source_units": 21,
+  "slots": 224,
+  "slot_relations": 68,
+  "graph": {
+   "nodes": 245,
+   "edges": 289
+  },
+  "defects": {
+   "duplicate_ids": 0,
+   "missing_ids": 0,
+   "relation_endpoint_issues": 0,
+   "source_ref_issues": 0,
+   "source_units_without_slots": 0,
+   "slots_without_source_ref": 3,
+   "isolated_slots": 140,
+   "actions_without_performer_relation": 51,
+   "transition_missing_from": 10,
+   "transition_missing_to": 7,
+   "transition_missing_trigger": 7,
+   "flow_missing_source": 13,
+   "flow_missing_target": 13
+  }
+ }
+}

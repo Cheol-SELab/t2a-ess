@@ -1,0 +1,49 @@
+
+[1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90mG:/SW/SW-SELab/selab-ex-system-modeler/packages/selab-effbd-editor[39m
+
+[90mstdout[2m | ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs[2m > [22m[2mEFFBD editor headless render[2m > [22m[2m01.png
+[22m[39m{"in":"01.sysml","out":"01.png","expanded":["MUM-T-based attack maneuver and electronic warfare response::Communication recovery and attack resumption","MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response","MUM-T-based attack maneuver and electronic warfare response::Enemy observation post and FPV threat detection response","MUM-T-based attack maneuver and electronic warfare response::Preparation and normal communication maneuver","MUM-T-based attack maneuver and electronic warfare response::Electronic warfare jamming and communication degradation response::Drone switch to Edge AI analysis mode"],"nodeKinds":{"FunctionNode":19,"StartConcurrencyNode":2,"EndConcurrencyNode":2,"ItemNode":6,"StartReferenceNode":1,"EndReferenceNode":1},"edges":34,"metrics":["rootIds","topologyOf","step","lane","pathPointer","pair","slot","branchStates","clusterHierarchy"]}
+
+[90mstdout[2m | ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs[2m > [22m[2mEFFBD editor headless render[2m > [22m[2m02.png
+[22m[39m{"in":"02.sysml","out":"02.png","expanded":["NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response","NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop","NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance","NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion","NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"],"nodeKinds":{"FunctionNode":24,"StartConcurrencyNode":5,"EndConcurrencyNode":6,"ItemNode":6,"StartReferenceNode":1,"EndReferenceNode":1},"edges":57,"metrics":["rootIds","topologyOf","step","lane","pathPointer","pair","slot","branchStates","clusterHierarchy"]}
+
+[90mstdout[2m | ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs[2m > [22m[2mEFFBD editor headless render[2m > [22m[2m03.png
+[22m[39m{"in":"03.sysml","out":"03.png","expanded":["Autonomous vehicle autonomous operation scenario::Autonomous driving start","Autonomous vehicle autonomous operation scenario::Normal autonomous driving","Autonomous vehicle autonomous operation scenario::Pedestrian detection and avoidance","Autonomous vehicle autonomous operation scenario::Return to charging station","Autonomous vehicle autonomous operation scenario::Sensor degradation response","Autonomous vehicle autonomous operation scenario::Normal autonomous driving::Collect sensor data","Autonomous vehicle autonomous operation scenario::Normal autonomous driving::Generate control commands","Autonomous vehicle autonomous operation scenario::Normal autonomous driving::Generate driving path","Autonomous vehicle autonomous operation scenario::Normal autonomous driving::Sensor fusion and environment perception"],"nodeKinds":{"FunctionNode":22,"StartConcurrencyNode":3,"EndConcurrencyNode":3,"ItemNode":7,"StartReferenceNode":1,"EndReferenceNode":1},"edges":48,"metrics":["rootIds","topologyOf","step","lane","pathPointer","pair","slot","branchStates","clusterHierarchy"]}
+
+[90mstdout[2m | ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs[2m > [22m[2mEFFBD editor headless render[2m > [22m[2m04.png
+[22m[39m{"in":"04.sysml","out":"04.png","expanded":[],"nodeKinds":{"FunctionNode":15,"StartConcurrencyNode":1,"EndConcurrencyNode":1,"ItemNode":3,"StartReferenceNode":1,"EndReferenceNode":1},"edges":32,"metrics":["rootIds","topologyOf","step","lane","pathPointer","pair","slot","branchStates","clusterHierarchy"]}
+
+[90mstdout[2m | ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs[2m > [22m[2mEFFBD editor headless render[2m > [22m[2m05.png
+[22m[39m{"in":"05.sysml","out":"05.png","expanded":[],"nodeKinds":{"FunctionNode":56,"StartConcurrencyNode":1,"EndConcurrencyNode":1,"ItemNode":5,"StartReferenceNode":1,"EndReferenceNode":1},"edges":113,"metrics":["rootIds","topologyOf","step","lane","pathPointer","pair","slot","branchStates","clusterHierarchy"]}
+
+[90mstdout[2m | ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs[2m > [22m[2mEFFBD editor headless render[2m > [22m[2m06.png
+[22m[39m{"in":"06.sysml","out":"06.png","expanded":[],"nodeKinds":{"FunctionNode":17,"StartConcurrencyNode":1,"EndConcurrencyNode":1,"ItemNode":4,"StartReferenceNode":1,"EndReferenceNode":1},"edges":38,"metrics":["rootIds","topologyOf","step","lane","pathPointer","pair","slot","branchStates","clusterHierarchy"]}
+
+[90mstdout[2m | ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs[2m > [22m[2mEFFBD editor headless render[2m > [22m[2m07.png
+[22m[39m{"in":"07.sysml","out":"07.png","expanded":[],"nodeKinds":{"FunctionNode":52,"StartConcurrencyNode":1,"EndConcurrencyNode":1,"ItemNode":9,"StartReferenceNode":1,"EndReferenceNode":1},"edges":110,"metrics":["rootIds","topologyOf","step","lane","pathPointer","pair","slot","branchStates","clusterHierarchy"]}
+
+[90mstdout[2m | ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs[2m > [22m[2mEFFBD editor headless render[2m > [22m[2m08.png
+[22m[39m{"in":"08.sysml","out":"08.png","expanded":["Coffee order scenario::Beverage preparation","Coffee order scenario::Order taking","Coffee order scenario::Order taking::Order entry"],"nodeKinds":{"FunctionNode":8,"StartConcurrencyNode":1,"EndConcurrencyNode":1,"ItemNode":1,"StartReferenceNode":1,"EndReferenceNode":1},"edges":13,"metrics":["rootIds","topologyOf","step","lane","pathPointer","pair","slot","branchStates","clusterHierarchy"]}
+
+ [32m✓[39m ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs [2m([22m[2m8 tests[22m[2m)[22m[33m 17773[2mms[22m[39m
+   [33m[2m✓[22m[39m EFFBD editor headless render[2m > [22m01.png [33m5406[2mms[22m[39m
+   [33m[2m✓[22m[39m EFFBD editor headless render[2m > [22m02.png [33m2744[2mms[22m[39m
+   [33m[2m✓[22m[39m EFFBD editor headless render[2m > [22m03.png [33m1393[2mms[22m[39m
+   [33m[2m✓[22m[39m EFFBD editor headless render[2m > [22m04.png [33m1345[2mms[22m[39m
+   [33m[2m✓[22m[39m EFFBD editor headless render[2m > [22m05.png [33m2189[2mms[22m[39m
+   [33m[2m✓[22m[39m EFFBD editor headless render[2m > [22m06.png [33m1316[2mms[22m[39m
+   [33m[2m✓[22m[39m EFFBD editor headless render[2m > [22m07.png [33m2220[2mms[22m[39m
+   [33m[2m✓[22m[39m EFFBD editor headless render[2m > [22m08.png [33m1158[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m8 passed[39m[22m[90m (8)[39m
+[2m   Start at [22m 13:16:02
+[2m   Duration [22m 18.87s[2m (transform 554ms, setup 36ms, collect 73ms, tests 17.77s, environment 0ms, prepare 442ms)[22m
+
+
+[90mstderr[2m | ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs[2m > [22m[2mEFFBD editor headless render[2m > [22m[2m01.png
+[22m[39m[selab-image-capture] Playwright 관리 Chromium 실행 파일이 없어 시스템 브라우저(msedge)(으)로 재시도합니다.
+
+[90mstderr[2m | ../../../SELab-Researches/selab-research-papers/2026/publish/[access] 자연어-시나리오-SysML-v2-Activity-EFFBD-변환/evidence/case-study/editor-render/scripts/editor-render.test.mjs[2m > [22m[2mEFFBD editor headless render[2m > [22m[2m02.png
+[22m[39m[provide-effbd-image] 렌더 준비 조건 미충족(800ms) — 종전과 같이 진행
+

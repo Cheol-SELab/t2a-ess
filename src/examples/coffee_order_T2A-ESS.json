@@ -1,0 +1,465 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "EX_COFFEE_001",
+    "title": "Cafe order processing example",
+    "scenarios": [
+      {
+        "scenario_id": "SCN_COFFEE",
+        "label": "Coffee order scenario"
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "EP_ORDER",
+        "label": "Order taking",
+        "order_index": 1
+      },
+      {
+        "episode_id": "EP_MAKE",
+        "label": "Beverage preparation",
+        "order_index": 2
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "P_CUSTOMER",
+        "label": "Customer"
+      },
+      {
+        "performer_id": "P_CASHIER",
+        "label": "Clerk"
+      },
+      {
+        "performer_id": "P_BARISTA",
+        "label": "Barista"
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "A_PLACE_ORDER",
+        "label": "Order entry"
+      },
+      {
+        "action_id": "A_PAY",
+        "label": "Payment"
+      },
+      {
+        "action_id": "A_MAKE_DRINK",
+        "label": "Beverage making"
+      },
+      {
+        "action_id": "A_HEAT_CUP",
+        "label": "Cup preheating"
+      },
+      {
+        "action_id": "A_SERVE",
+        "label": "Serving"
+      }
+    ],
+    "items": [
+      {
+        "item_id": "I_ORDER_TICKET",
+        "label": "Order ticket",
+        "item_type": "document"
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "F_ORDER_TO_PAY",
+        "label": "Payment after order",
+        "flow_kind": "control_flow"
+      },
+      {
+        "flow_id": "F_MAKE_TO_SERVE",
+        "label": "Serving after making",
+        "flow_kind": "control_flow"
+      },
+      {
+        "flow_id": "F_HEAT_TO_SERVE",
+        "label": "Serving after preheating",
+        "flow_kind": "control_flow"
+      },
+      {
+        "flow_id": "F_TICKET",
+        "label": "Order ticket handoff",
+        "flow_kind": "object_flow"
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "C_PAID_GUARD",
+        "label": "Payment completion check",
+        "control_type": "decision",
+        "guard_texts": [
+          "Payment completed"
+        ]
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "SIT_WAITING",
+        "label": "Order waiting state"
+      },
+      {
+        "situation_id": "SIT_PAID",
+        "label": "Payment completed state"
+      },
+      {
+        "situation_id": "SIT_MAKING",
+        "label": "Making state"
+      },
+      {
+        "situation_id": "SIT_SERVED",
+        "label": "Serving completed state"
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "SV_STATUS_WAITING",
+        "subject_text": "Order",
+        "variable": "order_status",
+        "value": "waiting",
+        "value_type": "enum"
+      },
+      {
+        "state_value_id": "SV_STATUS_PAID",
+        "subject_text": "Order",
+        "variable": "order_status",
+        "value": "paid",
+        "value_type": "enum"
+      },
+      {
+        "state_value_id": "SV_STATUS_MAKING",
+        "subject_text": "Order",
+        "variable": "order_status",
+        "value": "making",
+        "value_type": "enum"
+      },
+      {
+        "state_value_id": "SV_STATUS_SERVED",
+        "subject_text": "Order",
+        "variable": "order_status",
+        "value": "served",
+        "value_type": "enum"
+      },
+      {
+        "state_value_id": "SV_QUEUE_LEN",
+        "subject_text": "Queue",
+        "variable": "queue_length",
+        "value": 0,
+        "unit": "orders",
+        "value_type": "quantity"
+      }
+    ],
+    "events": [
+      {
+        "event_id": "EVT_PAYMENT_APPROVED",
+        "label": "Payment approval",
+        "event_type": "business"
+      },
+      {
+        "event_id": "EVT_TICKET_RECEIVED",
+        "label": "Order ticket receipt",
+        "event_type": "business"
+      },
+      {
+        "event_id": "EVT_DRINK_READY",
+        "label": "Beverage completion",
+        "event_type": "business"
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "TR_WAITING_TO_PAID",
+        "label": "Transition from order waiting to payment completed"
+      },
+      {
+        "transition_id": "TR_PAID_TO_MAKING",
+        "label": "Transition from payment completed to making"
+      },
+      {
+        "transition_id": "TR_MAKING_TO_SERVED",
+        "label": "Transition from making to serving completed"
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "K_PAYMENT_TIMEOUT",
+        "label": "Payment within 3 min",
+        "constraint_type": "deadline"
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "r1",
+        "source_slot_id": "SCN_COFFEE",
+        "relation_type": "has_episode",
+        "target_slot_id": "EP_ORDER"
+      },
+      {
+        "relation_id": "r2",
+        "source_slot_id": "SCN_COFFEE",
+        "relation_type": "has_episode",
+        "target_slot_id": "EP_MAKE"
+      },
+      {
+        "relation_id": "r3",
+        "source_slot_id": "EP_ORDER",
+        "relation_type": "contains_action",
+        "target_slot_id": "A_PLACE_ORDER"
+      },
+      {
+        "relation_id": "r4",
+        "source_slot_id": "EP_ORDER",
+        "relation_type": "contains_action",
+        "target_slot_id": "A_PAY"
+      },
+      {
+        "relation_id": "r5",
+        "source_slot_id": "EP_MAKE",
+        "relation_type": "contains_action",
+        "target_slot_id": "A_MAKE_DRINK"
+      },
+      {
+        "relation_id": "r6",
+        "source_slot_id": "EP_MAKE",
+        "relation_type": "contains_action",
+        "target_slot_id": "A_HEAT_CUP"
+      },
+      {
+        "relation_id": "r7",
+        "source_slot_id": "EP_MAKE",
+        "relation_type": "contains_action",
+        "target_slot_id": "A_SERVE"
+      },
+      {
+        "relation_id": "r8",
+        "source_slot_id": "A_PLACE_ORDER",
+        "relation_type": "performed_by",
+        "target_slot_id": "P_CUSTOMER"
+      },
+      {
+        "relation_id": "r9",
+        "source_slot_id": "A_PAY",
+        "relation_type": "performed_by",
+        "target_slot_id": "P_CASHIER"
+      },
+      {
+        "relation_id": "r10",
+        "source_slot_id": "A_MAKE_DRINK",
+        "relation_type": "performed_by",
+        "target_slot_id": "P_BARISTA"
+      },
+      {
+        "relation_id": "r11",
+        "source_slot_id": "A_HEAT_CUP",
+        "relation_type": "performed_by",
+        "target_slot_id": "P_BARISTA"
+      },
+      {
+        "relation_id": "r12",
+        "source_slot_id": "A_SERVE",
+        "relation_type": "performed_by",
+        "target_slot_id": "P_BARISTA"
+      },
+      {
+        "relation_id": "r13",
+        "source_slot_id": "F_ORDER_TO_PAY",
+        "relation_type": "flow_source",
+        "target_slot_id": "A_PLACE_ORDER"
+      },
+      {
+        "relation_id": "r14",
+        "source_slot_id": "F_ORDER_TO_PAY",
+        "relation_type": "flow_target",
+        "target_slot_id": "A_PAY"
+      },
+      {
+        "relation_id": "r15",
+        "source_slot_id": "F_MAKE_TO_SERVE",
+        "relation_type": "flow_source",
+        "target_slot_id": "A_MAKE_DRINK"
+      },
+      {
+        "relation_id": "r16",
+        "source_slot_id": "F_MAKE_TO_SERVE",
+        "relation_type": "flow_target",
+        "target_slot_id": "A_SERVE"
+      },
+      {
+        "relation_id": "r17",
+        "source_slot_id": "F_HEAT_TO_SERVE",
+        "relation_type": "flow_source",
+        "target_slot_id": "A_HEAT_CUP"
+      },
+      {
+        "relation_id": "r18",
+        "source_slot_id": "F_HEAT_TO_SERVE",
+        "relation_type": "flow_target",
+        "target_slot_id": "A_SERVE"
+      },
+      {
+        "relation_id": "r19",
+        "source_slot_id": "A_PLACE_ORDER",
+        "relation_type": "produces_item",
+        "target_slot_id": "I_ORDER_TICKET"
+      },
+      {
+        "relation_id": "r20",
+        "source_slot_id": "A_MAKE_DRINK",
+        "relation_type": "uses_item",
+        "target_slot_id": "I_ORDER_TICKET"
+      },
+      {
+        "relation_id": "r21",
+        "source_slot_id": "F_TICKET",
+        "relation_type": "flow_source",
+        "target_slot_id": "A_PLACE_ORDER"
+      },
+      {
+        "relation_id": "r22",
+        "source_slot_id": "F_TICKET",
+        "relation_type": "flow_target",
+        "target_slot_id": "A_MAKE_DRINK"
+      },
+      {
+        "relation_id": "r23",
+        "source_slot_id": "F_TICKET",
+        "relation_type": "carries_item",
+        "target_slot_id": "I_ORDER_TICKET"
+      },
+      {
+        "relation_id": "r24",
+        "source_slot_id": "C_PAID_GUARD",
+        "relation_type": "controls_flow",
+        "target_slot_id": "F_ORDER_TO_PAY"
+      },
+      {
+        "relation_id": "r25",
+        "source_slot_id": "EP_ORDER",
+        "relation_type": "has_situation",
+        "target_slot_id": "SIT_WAITING"
+      },
+      {
+        "relation_id": "r26",
+        "source_slot_id": "EP_ORDER",
+        "relation_type": "has_situation",
+        "target_slot_id": "SIT_PAID"
+      },
+      {
+        "relation_id": "r27",
+        "source_slot_id": "EP_MAKE",
+        "relation_type": "has_situation",
+        "target_slot_id": "SIT_MAKING"
+      },
+      {
+        "relation_id": "r28",
+        "source_slot_id": "EP_MAKE",
+        "relation_type": "has_situation",
+        "target_slot_id": "SIT_SERVED"
+      },
+      {
+        "relation_id": "r29",
+        "source_slot_id": "SIT_WAITING",
+        "relation_type": "has_state_value",
+        "target_slot_id": "SV_STATUS_WAITING"
+      },
+      {
+        "relation_id": "r30",
+        "source_slot_id": "SIT_WAITING",
+        "relation_type": "has_state_value",
+        "target_slot_id": "SV_QUEUE_LEN"
+      },
+      {
+        "relation_id": "r31",
+        "source_slot_id": "SIT_PAID",
+        "relation_type": "has_state_value",
+        "target_slot_id": "SV_STATUS_PAID"
+      },
+      {
+        "relation_id": "r32",
+        "source_slot_id": "SIT_MAKING",
+        "relation_type": "has_state_value",
+        "target_slot_id": "SV_STATUS_MAKING"
+      },
+      {
+        "relation_id": "r33",
+        "source_slot_id": "SIT_SERVED",
+        "relation_type": "has_state_value",
+        "target_slot_id": "SV_STATUS_SERVED"
+      },
+      {
+        "relation_id": "r34",
+        "source_slot_id": "TR_WAITING_TO_PAID",
+        "relation_type": "from_situation",
+        "target_slot_id": "SIT_WAITING"
+      },
+      {
+        "relation_id": "r35",
+        "source_slot_id": "TR_WAITING_TO_PAID",
+        "relation_type": "to_situation",
+        "target_slot_id": "SIT_PAID"
+      },
+      {
+        "relation_id": "r36",
+        "source_slot_id": "TR_PAID_TO_MAKING",
+        "relation_type": "from_situation",
+        "target_slot_id": "SIT_PAID"
+      },
+      {
+        "relation_id": "r37",
+        "source_slot_id": "TR_PAID_TO_MAKING",
+        "relation_type": "to_situation",
+        "target_slot_id": "SIT_MAKING"
+      },
+      {
+        "relation_id": "r38",
+        "source_slot_id": "TR_MAKING_TO_SERVED",
+        "relation_type": "from_situation",
+        "target_slot_id": "SIT_MAKING"
+      },
+      {
+        "relation_id": "r39",
+        "source_slot_id": "TR_MAKING_TO_SERVED",
+        "relation_type": "to_situation",
+        "target_slot_id": "SIT_SERVED"
+      },
+      {
+        "relation_id": "r40",
+        "source_slot_id": "EVT_PAYMENT_APPROVED",
+        "relation_type": "triggers",
+        "target_slot_id": "TR_WAITING_TO_PAID"
+      },
+      {
+        "relation_id": "r41",
+        "source_slot_id": "EVT_TICKET_RECEIVED",
+        "relation_type": "triggers",
+        "target_slot_id": "TR_PAID_TO_MAKING"
+      },
+      {
+        "relation_id": "r42",
+        "source_slot_id": "EVT_DRINK_READY",
+        "relation_type": "triggers",
+        "target_slot_id": "TR_MAKING_TO_SERVED"
+      },
+      {
+        "relation_id": "r43",
+        "source_slot_id": "TR_WAITING_TO_PAID",
+        "relation_type": "constrained_by",
+        "target_slot_id": "K_PAYMENT_TIMEOUT"
+      },
+      {
+        "relation_id": "r44",
+        "source_slot_id": "A_PAY",
+        "relation_type": "causes",
+        "target_slot_id": "TR_WAITING_TO_PAID"
+      },
+      {
+        "relation_id": "r45",
+        "source_slot_id": "A_SERVE",
+        "relation_type": "causes",
+        "target_slot_id": "TR_MAKING_TO_SERVED"
+      }
+    ]
+  }
+}

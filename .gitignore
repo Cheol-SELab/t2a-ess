@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+node_modules/
+experiments/llm/scoring/cache/
+experiments/llm/runs/_e2e/
+experiments/llm/runs/_infra_failed/
+experiments/llm/logs/
+experiments/structural/editor-render/*.png
+experiments/structural/editor-render/*.boxes.json
+*.tmp.sysml
+experiments/case-study/outputs/render_all.log

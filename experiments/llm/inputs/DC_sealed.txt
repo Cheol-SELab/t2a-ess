@@ -1,0 +1,25 @@
+[P1] The data center operation system consists of the integrated control room (NOC), the building automation control system (BMS), chillers CH-1, CH-2, and CH-3, and the uninterruptible power supply (UPS). The BMS collects the values of 40 server room temperature sensors every 1 min.
+
+[P2] Server room B houses 300 customer servers; customer technical support is handled by the customer support team, and equipment repair by the facilities team. The chiller manufacturer's remote support center is located off-site.
+
+[P3] At 2:10 a.m., when the compressor of CH-2 stops due to overcurrent, the BMS detects the CH-2 stop signal, sends an alarm to the NOC, and automatically starts CH-3, which was on standby.
+
+[P4] After starting, CH-3 takes about 8 min to reach its rated cooling capacity, and during that time the average temperature of server room B keeps rising. When the average temperature exceeds 27 °C, the NOC operator moves the non-critical server load of server room B to another server room.
+
+[P5] At 2:16 a.m., when the average temperature reaches 27.5 °C, the operator, in consultation with the customer support team, migrates the virtual machines of 80 non-critical servers to server room A, and at the same time turns off the lighting and humidifiers of server room B to reduce heat generation.
+
+[P6] Virtual machine migration proceeds 10 servers at a time, and after each migration it is checked whether the service response time is 200 ms or less. If the response time exceeds the threshold, the operator stops the migration, identifies the cause, and then resumes.
+
+[P7] At 2:18 a.m. CH-3 reached its rated capacity, and the average temperature fell below 25 °C at 2:30 a.m. Had the average temperature exceeded 30 °C, the operator would have started the planned shutdown procedure for the critical servers.
+
+[P8] The facilities team, on receiving the NOC's call, arrives on site, inspects the CH-2 compressor, and confirms that the overcurrent relay has tripped. The team shares the symptoms with the manufacturer's remote support center via video call and receives a diagnosis of compressor motor winding damage.
+
+[P9] Because a compressor with damaged windings cannot be repaired on site, the facilities team orders a replacement part from the manufacturer and marks CH-2 as inoperable until the part arrives. Part arrival takes about 3 days.
+
+[P10] Since cooling must meanwhile be done with CH-1 and CH-3 only, the operator raises the setpoint temperature of server room B from 22 °C to 23 °C and establishes a contingency plan for the case where one more chiller stops.
+
+[P11] According to the contingency plan, if only one chiller remains, the operator shuts down all non-critical servers in server room B, notifies the customers, and then keeps only the critical servers running. This plan is discarded once the part replacement is complete.
+
+[P12] At 9:00 a.m. the operator sends the customers a report containing the course of the failure and the results of the actions taken, and the facilities team shares the CH-2 replacement schedule with the NOC.
+
+[P13] The goal of this operation is to keep the server room temperature at 27 °C or less without service interruption and to secure a cooling margin of at least one unit.

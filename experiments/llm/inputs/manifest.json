@@ -1,0 +1,712 @@
+{
+  "MUMT_easy": {
+    "domain": "MUMT",
+    "difficulty": "easy",
+    "gold": "data/gold/mumt/mumt.gold.json",
+    "source_document": "mumt.easy.md",
+    "coverage": "data/gold/coverage_requirements.json",
+    "coverage_key": "mumt",
+    "paragraphs": 4,
+    "paragraph_to_units": {
+      "P1": [
+        "MUMT_GT_U01"
+      ],
+      "P2": [
+        "MUMT_GT_U02"
+      ],
+      "P3": [
+        "MUMT_GT_U03"
+      ],
+      "P4": [
+        "MUMT_GT_U04"
+      ]
+    },
+    "sha256": "3c0f332cfd373930097c854fe9d76a8066e5fe2507e873628a4b04088d40b20a"
+  },
+  "MUMT_medium": {
+    "domain": "MUMT",
+    "difficulty": "medium",
+    "gold": "data/gold/mumt/mumt.gold.json",
+    "source_document": "mumt.medium.md",
+    "coverage": "data/gold/coverage_requirements.json",
+    "coverage_key": "mumt",
+    "paragraphs": 4,
+    "paragraph_to_units": {
+      "P1": [
+        "MUMT_GT_U01"
+      ],
+      "P2": [
+        "MUMT_GT_U02"
+      ],
+      "P3": [
+        "MUMT_GT_U03"
+      ],
+      "P4": [
+        "MUMT_GT_U04"
+      ]
+    },
+    "sha256": "47a7c7ddba998630f7a7f2aeda7b9e2cab7729aa00eb76b222b35889f29af3c0"
+  },
+  "MUMT_hard": {
+    "domain": "MUMT",
+    "difficulty": "hard",
+    "gold": "data/gold/mumt/mumt.gold.json",
+    "source_document": "mumt.hard.md",
+    "coverage": "data/gold/coverage_requirements.json",
+    "coverage_key": "mumt",
+    "paragraphs": 4,
+    "paragraph_to_units": {
+      "P1": [
+        "MUMT_GT_U01"
+      ],
+      "P2": [
+        "MUMT_GT_U02"
+      ],
+      "P3": [
+        "MUMT_GT_U03"
+      ],
+      "P4": [
+        "MUMT_GT_U04"
+      ]
+    },
+    "sha256": "d6f2332a2314d1b88e586fdf21542b2050c66ab8c0b1b9986afb745b3c2b5a3e"
+  },
+  "NGHE_easy": {
+    "domain": "NGHE",
+    "difficulty": "easy",
+    "gold": "data/gold/nghe/nghe.gold.json",
+    "source_document": "nghe.easy.md",
+    "coverage": "data/gold/coverage_requirements.json",
+    "coverage_key": "nghe",
+    "paragraphs": 4,
+    "paragraph_to_units": {
+      "P1": [
+        "NGHE_GT_U01"
+      ],
+      "P2": [
+        "NGHE_GT_U02"
+      ],
+      "P3": [
+        "NGHE_GT_U03"
+      ],
+      "P4": [
+        "NGHE_GT_U04"
+      ]
+    },
+    "sha256": "75af62faf07015f5f0d4c8b3b66f7a1d8a5162fe1d1fcac0c3b52f7fa32c2a87"
+  },
+  "NGHE_medium": {
+    "domain": "NGHE",
+    "difficulty": "medium",
+    "gold": "data/gold/nghe/nghe.gold.json",
+    "source_document": "nghe.medium.md",
+    "coverage": "data/gold/coverage_requirements.json",
+    "coverage_key": "nghe",
+    "paragraphs": 4,
+    "paragraph_to_units": {
+      "P1": [
+        "NGHE_GT_U01"
+      ],
+      "P2": [
+        "NGHE_GT_U02"
+      ],
+      "P3": [
+        "NGHE_GT_U03"
+      ],
+      "P4": [
+        "NGHE_GT_U04"
+      ]
+    },
+    "sha256": "b706693d9710422899f409d66877f4b1c6d9db2d917d9331522cb2d23bcb18d2"
+  },
+  "NGHE_hard": {
+    "domain": "NGHE",
+    "difficulty": "hard",
+    "gold": "data/gold/nghe/nghe.gold.json",
+    "source_document": "nghe.hard.md",
+    "coverage": "data/gold/coverage_requirements.json",
+    "coverage_key": "nghe",
+    "paragraphs": 4,
+    "paragraph_to_units": {
+      "P1": [
+        "NGHE_GT_U01"
+      ],
+      "P2": [
+        "NGHE_GT_U02"
+      ],
+      "P3": [
+        "NGHE_GT_U03"
+      ],
+      "P4": [
+        "NGHE_GT_U04"
+      ]
+    },
+    "sha256": "ebe1d24198ac0525d071a62177fee97d6cfd4211dd613c490005b4f601c2a647"
+  },
+  "AV_easy": {
+    "domain": "AV",
+    "difficulty": "easy",
+    "gold": "data/gold/av/av.gold.json",
+    "source_document": "av.easy.md",
+    "coverage": "data/gold/coverage_requirements.json",
+    "coverage_key": "av",
+    "paragraphs": 14,
+    "paragraph_to_units": {
+      "P1": [
+        "AV_L01"
+      ],
+      "P2": [
+        "AV_L02"
+      ],
+      "P3": [
+        "AV_L03"
+      ],
+      "P4": [
+        "AV_L04"
+      ],
+      "P5": [
+        "AV_L05"
+      ],
+      "P6": [
+        "AV_L06"
+      ],
+      "P7": [
+        "AV_L07"
+      ],
+      "P8": [
+        "AV_L08"
+      ],
+      "P9": [
+        "AV_L09"
+      ],
+      "P10": [
+        "AV_L10"
+      ],
+      "P11": [
+        "AV_L11"
+      ],
+      "P12": [
+        "AV_L12"
+      ],
+      "P13": [
+        "AV_L13"
+      ],
+      "P14": [
+        "AV_L14"
+      ]
+    },
+    "sha256": "5b0464e90c9eea075ba1421cca13404401fd472c57daa2063a1fe5736695eb68"
+  },
+  "AV_medium": {
+    "domain": "AV",
+    "difficulty": "medium",
+    "gold": "data/gold/av/av.gold.json",
+    "source_document": "av.medium.md",
+    "coverage": "data/gold/coverage_requirements.json",
+    "coverage_key": "av",
+    "paragraphs": 7,
+    "paragraph_to_units": {
+      "P1": [
+        "AV_L01",
+        "AV_L02"
+      ],
+      "P2": [
+        "AV_L03"
+      ],
+      "P3": [
+        "AV_L04",
+        "AV_L05",
+        "AV_L06",
+        "AV_L07"
+      ],
+      "P4": [
+        "AV_L08",
+        "AV_L09"
+      ],
+      "P5": [
+        "AV_L10",
+        "AV_L11"
+      ],
+      "P6": [
+        "AV_L12",
+        "AV_L13"
+      ],
+      "P7": [
+        "AV_L14"
+      ]
+    },
+    "sha256": "c32275e87cc428240dac30a83142065486000e323e27194dd0966a2df5056559"
+  },
+  "AV_hard": {
+    "domain": "AV",
+    "difficulty": "hard",
+    "gold": "data/gold/av/av.gold.json",
+    "source_document": "av.hard.md",
+    "coverage": "data/gold/coverage_requirements.json",
+    "coverage_key": "av",
+    "paragraphs": 7,
+    "paragraph_to_units": {
+      "P1": [
+        "AV_L01",
+        "AV_L02"
+      ],
+      "P2": [
+        "AV_L03"
+      ],
+      "P3": [
+        "AV_L04",
+        "AV_L05",
+        "AV_L06",
+        "AV_L07"
+      ],
+      "P4": [
+        "AV_L08",
+        "AV_L09"
+      ],
+      "P5": [
+        "AV_L10",
+        "AV_L11"
+      ],
+      "P6": [
+        "AV_L12",
+        "AV_L13"
+      ],
+      "P7": [
+        "AV_L14"
+      ]
+    },
+    "sha256": "83001a32a75c2dfa1868dd83909d539b56e20fd4d753ba4f53c84b8f5425fa02"
+  },
+  "PORT_sealed": {
+    "domain": "PORT",
+    "difficulty": "sealed",
+    "gold": "data/sealed/port/port.gold.json",
+    "paragraphs": 13,
+    "paragraph_to_units": {
+      "P1": [
+        "P1"
+      ],
+      "P2": [
+        "P2"
+      ],
+      "P3": [
+        "P3"
+      ],
+      "P4": [
+        "P4"
+      ],
+      "P5": [
+        "P5"
+      ],
+      "P6": [
+        "P6"
+      ],
+      "P7": [
+        "P7"
+      ],
+      "P8": [
+        "P8"
+      ],
+      "P9": [
+        "P9"
+      ],
+      "P10": [
+        "P10"
+      ],
+      "P11": [
+        "P11"
+      ],
+      "P12": [
+        "P12"
+      ],
+      "P13": [
+        "P13"
+      ]
+    },
+    "sha256": "5ea97829d8075b2fdb0d931506ce118259b7e216c31939851c50e7bb48ed12e0"
+  },
+  "DC_sealed": {
+    "domain": "DC",
+    "difficulty": "sealed",
+    "gold": "data/sealed/dc/dc.gold.json",
+    "paragraphs": 13,
+    "paragraph_to_units": {
+      "P1": [
+        "P1"
+      ],
+      "P2": [
+        "P2"
+      ],
+      "P3": [
+        "P3"
+      ],
+      "P4": [
+        "P4"
+      ],
+      "P5": [
+        "P5"
+      ],
+      "P6": [
+        "P6"
+      ],
+      "P7": [
+        "P7"
+      ],
+      "P8": [
+        "P8"
+      ],
+      "P9": [
+        "P9"
+      ],
+      "P10": [
+        "P10"
+      ],
+      "P11": [
+        "P11"
+      ],
+      "P12": [
+        "P12"
+      ],
+      "P13": [
+        "P13"
+      ]
+    },
+    "sha256": "d4f29221dfab43d3825a06216f8b699dd14de884225154a51cd5db3f33fedf5e"
+  },
+  "FIRE_sealed": {
+    "domain": "FIRE",
+    "difficulty": "sealed",
+    "gold": "data/sealed/fire/fire.gold.json",
+    "paragraphs": 13,
+    "paragraph_to_units": {
+      "P1": [
+        "P1"
+      ],
+      "P2": [
+        "P2"
+      ],
+      "P3": [
+        "P3"
+      ],
+      "P4": [
+        "P4"
+      ],
+      "P5": [
+        "P5"
+      ],
+      "P6": [
+        "P6"
+      ],
+      "P7": [
+        "P7"
+      ],
+      "P8": [
+        "P8"
+      ],
+      "P9": [
+        "P9"
+      ],
+      "P10": [
+        "P10"
+      ],
+      "P11": [
+        "P11"
+      ],
+      "P12": [
+        "P12"
+      ],
+      "P13": [
+        "P13"
+      ]
+    },
+    "sha256": "22c6babd5f12115036e8adcae460c7a6be734c293310d4d3ba9ec4ff6106461c"
+  },
+  "GREEN_sealed": {
+    "domain": "GREEN",
+    "difficulty": "sealed",
+    "gold": "data/sealed/green/green.gold.json",
+    "paragraphs": 13,
+    "paragraph_to_units": {
+      "P1": [
+        "P1"
+      ],
+      "P2": [
+        "P2"
+      ],
+      "P3": [
+        "P3"
+      ],
+      "P4": [
+        "P4"
+      ],
+      "P5": [
+        "P5"
+      ],
+      "P6": [
+        "P6"
+      ],
+      "P7": [
+        "P7"
+      ],
+      "P8": [
+        "P8"
+      ],
+      "P9": [
+        "P9"
+      ],
+      "P10": [
+        "P10"
+      ],
+      "P11": [
+        "P11"
+      ],
+      "P12": [
+        "P12"
+      ],
+      "P13": [
+        "P13"
+      ]
+    },
+    "sha256": "1d51c5bc42ea9fd3ae41c3a94fc7b8f85a47e22ad86321d59791102b6bfc98d6"
+  },
+  "WATER_sealed": {
+    "domain": "WATER",
+    "difficulty": "sealed",
+    "gold": "data/sealed/water/water.gold.json",
+    "paragraphs": 13,
+    "paragraph_to_units": {
+      "P1": [
+        "P1"
+      ],
+      "P2": [
+        "P2"
+      ],
+      "P3": [
+        "P3"
+      ],
+      "P4": [
+        "P4"
+      ],
+      "P5": [
+        "P5"
+      ],
+      "P6": [
+        "P6"
+      ],
+      "P7": [
+        "P7"
+      ],
+      "P8": [
+        "P8"
+      ],
+      "P9": [
+        "P9"
+      ],
+      "P10": [
+        "P10"
+      ],
+      "P11": [
+        "P11"
+      ],
+      "P12": [
+        "P12"
+      ],
+      "P13": [
+        "P13"
+      ]
+    },
+    "sha256": "4be351d35345becb23778c34674d88610c9d6d1d80dbf0e29ac286d72e238e23"
+  },
+  "BLACKOUT_sealed": {
+    "domain": "BLACKOUT",
+    "difficulty": "sealed",
+    "gold": "data/sealed/blackout/blackout.gold.json",
+    "paragraphs": 13,
+    "paragraph_to_units": {
+      "P1": [
+        "P1"
+      ],
+      "P2": [
+        "P2"
+      ],
+      "P3": [
+        "P3"
+      ],
+      "P4": [
+        "P4"
+      ],
+      "P5": [
+        "P5"
+      ],
+      "P6": [
+        "P6"
+      ],
+      "P7": [
+        "P7"
+      ],
+      "P8": [
+        "P8"
+      ],
+      "P9": [
+        "P9"
+      ],
+      "P10": [
+        "P10"
+      ],
+      "P11": [
+        "P11"
+      ],
+      "P12": [
+        "P12"
+      ],
+      "P13": [
+        "P13"
+      ]
+    },
+    "sha256": "d60ebf7d52b9a78f3c853d3e8e4125e5b7a90204b23d29b3309a858080bf9bcb"
+  },
+  "TUNNEL_sealed": {
+    "domain": "TUNNEL",
+    "difficulty": "sealed",
+    "gold": "data/sealed/tunnel/tunnel.gold.json",
+    "paragraphs": 13,
+    "paragraph_to_units": {
+      "P1": [
+        "P1"
+      ],
+      "P2": [
+        "P2"
+      ],
+      "P3": [
+        "P3"
+      ],
+      "P4": [
+        "P4"
+      ],
+      "P5": [
+        "P5"
+      ],
+      "P6": [
+        "P6"
+      ],
+      "P7": [
+        "P7"
+      ],
+      "P8": [
+        "P8"
+      ],
+      "P9": [
+        "P9"
+      ],
+      "P10": [
+        "P10"
+      ],
+      "P11": [
+        "P11"
+      ],
+      "P12": [
+        "P12"
+      ],
+      "P13": [
+        "P13"
+      ]
+    },
+    "sha256": "ae917b5a36c7fe5b96ab3a19329d75aa9ccbbeaba7cb72bd7086f553ff2a5847"
+  },
+  "COLD_sealed": {
+    "domain": "COLD",
+    "difficulty": "sealed",
+    "gold": "data/sealed/cold/cold.gold.json",
+    "paragraphs": 13,
+    "paragraph_to_units": {
+      "P1": [
+        "P1"
+      ],
+      "P2": [
+        "P2"
+      ],
+      "P3": [
+        "P3"
+      ],
+      "P4": [
+        "P4"
+      ],
+      "P5": [
+        "P5"
+      ],
+      "P6": [
+        "P6"
+      ],
+      "P7": [
+        "P7"
+      ],
+      "P8": [
+        "P8"
+      ],
+      "P9": [
+        "P9"
+      ],
+      "P10": [
+        "P10"
+      ],
+      "P11": [
+        "P11"
+      ],
+      "P12": [
+        "P12"
+      ],
+      "P13": [
+        "P13"
+      ]
+    },
+    "sha256": "02e82687d78e3bbbeab4a30c14c2ea241452268a43676af02e4177c5d2415ff6"
+  },
+  "SHIP_sealed": {
+    "domain": "SHIP",
+    "difficulty": "sealed",
+    "gold": "data/sealed/ship/ship.gold.json",
+    "paragraphs": 13,
+    "paragraph_to_units": {
+      "P1": [
+        "P1"
+      ],
+      "P2": [
+        "P2"
+      ],
+      "P3": [
+        "P3"
+      ],
+      "P4": [
+        "P4"
+      ],
+      "P5": [
+        "P5"
+      ],
+      "P6": [
+        "P6"
+      ],
+      "P7": [
+        "P7"
+      ],
+      "P8": [
+        "P8"
+      ],
+      "P9": [
+        "P9"
+      ],
+      "P10": [
+        "P10"
+      ],
+      "P11": [
+        "P11"
+      ],
+      "P12": [
+        "P12"
+      ],
+      "P13": [
+        "P13"
+      ]
+    },
+    "sha256": "8f587d2e4d858dbaca0f31f811ec217ac5f131f1298dbb678fa4724b1eff3a8e"
+  }
+}

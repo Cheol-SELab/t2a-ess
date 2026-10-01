@@ -1,0 +1,1192 @@
+{
+ "meta": {
+  "input": "WATER_sealed",
+  "repeat": 7,
+  "condition": "corrected",
+  "model_requested": "claude-opus-5-5",
+  "models_used": [
+   "claude-opus-5-5"
+  ],
+  "prompt": "corrected-contract.md",
+  "prompt_sha256": "9dd751c5ec471393b4f36868e793b438e5e7470b80cf15a9e7475503fcee759b",
+  "input_sha256": "4be351d35345becb23778c34674d88610c9d6d1d80dbf0e29ac286d72e238e23",
+  "user_sha256": "eb0d405902a6e54a1a1dee1753ae752df6536a7de9611399bdcec8b6dff292d3",
+  "runner_sha256": "668572f34df601b1974f920604e58152c826610fc0840a0fe0ed5b39cc377e01",
+  "ok": true,
+  "attempts": 1,
+  "failure": null,
+  "elapsed_s": 296.0,
+  "total_cost_usd": 0.7972,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 15475,
+   "output_tokens": 39704,
+   "output_tokens_details": {
+    "thinking_tokens": 8493
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 39704,
+     "cache_read_input_tokens": 15475,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "cli": "claude -p (isolated, experiments/common/claude_cli.py)"
+ },
+ "tau": 0.87,
+ "parse_ok": true,
+ "matcher": "embedding",
+ "scorer_version": "3.1",
+ "slots_tolerant": {
+  "micro": {
+   "gold_coverage": 0.9773,
+   "pred_support": 0.8,
+   "f1": 0.8798
+  },
+  "per_type": {
+   "scenarios": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 1,
+    "pred": 1
+   },
+   "episodes": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 5,
+    "pred": 5
+   },
+   "performers": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 10,
+    "pred": 10
+   },
+   "actions": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 18,
+    "pred": 22
+   },
+   "items": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.5,
+    "f1": 0.6667,
+    "gold": 4,
+    "pred": 8
+   },
+   "flows": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.6842,
+    "f1": 0.8125,
+    "gold": 13,
+    "pred": 19
+   },
+   "controls": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.8889,
+    "f1": 0.9412,
+    "gold": 6,
+    "pred": 9
+   },
+   "situations": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.5,
+    "f1": 0.6667,
+    "gold": 4,
+    "pred": 8
+   },
+   "state_values": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.5,
+    "f1": 0.6667,
+    "gold": 4,
+    "pred": 8
+   },
+   "events": {
+    "gold_coverage": 0.8,
+    "pred_support": 0.8,
+    "f1": 0.8,
+    "gold": 5,
+    "pred": 5
+   },
+   "transitions": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.6667,
+    "f1": 0.8,
+    "gold": 4,
+    "pred": 6
+   },
+   "constraints": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.8889,
+    "f1": 0.9412,
+    "gold": 8,
+    "pred": 9
+   },
+   "goals": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 2,
+    "pred": 2
+   },
+   "reasons": {
+    "gold_coverage": 0.0,
+    "pred_support": 0.0,
+    "f1": 0.0,
+    "gold": 0,
+    "pred": 1
+   },
+   "observations": {
+    "gold_coverage": 0.75,
+    "pred_support": 1.0,
+    "f1": 0.8571,
+    "gold": 4,
+    "pred": 7
+   }
+  }
+ },
+ "slots": {
+  "micro": {
+   "tp": 86,
+   "pred": 120,
+   "gold": 88,
+   "precision": 0.7167,
+   "recall": 0.9773,
+   "f1": 0.8269
+  },
+  "per_type": {
+   "scenarios": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "episodes": {
+    "tp": 5,
+    "pred": 5,
+    "gold": 5,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "performers": {
+    "tp": 10,
+    "pred": 10,
+    "gold": 10,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "actions": {
+    "tp": 18,
+    "pred": 22,
+    "gold": 18,
+    "precision": 0.8182,
+    "recall": 1.0,
+    "f1": 0.9
+   },
+   "items": {
+    "tp": 4,
+    "pred": 8,
+    "gold": 4,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667
+   },
+   "flows": {
+    "tp": 13,
+    "pred": 19,
+    "gold": 13,
+    "precision": 0.6842,
+    "recall": 1.0,
+    "f1": 0.8125
+   },
+   "controls": {
+    "tp": 6,
+    "pred": 9,
+    "gold": 6,
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8
+   },
+   "situations": {
+    "tp": 4,
+    "pred": 8,
+    "gold": 4,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667
+   },
+   "state_values": {
+    "tp": 4,
+    "pred": 8,
+    "gold": 4,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667
+   },
+   "events": {
+    "tp": 4,
+    "pred": 5,
+    "gold": 5,
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1": 0.8
+   },
+   "transitions": {
+    "tp": 4,
+    "pred": 6,
+    "gold": 4,
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8
+   },
+   "constraints": {
+    "tp": 8,
+    "pred": 9,
+    "gold": 8,
+    "precision": 0.8889,
+    "recall": 1.0,
+    "f1": 0.9412
+   },
+   "goals": {
+    "tp": 2,
+    "pred": 2,
+    "gold": 2,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "reasons": {
+    "tp": 0,
+    "pred": 1,
+    "gold": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "observations": {
+    "tp": 3,
+    "pred": 7,
+    "gold": 4,
+    "precision": 0.4286,
+    "recall": 0.75,
+    "f1": 0.5455
+   }
+  },
+  "macro_f1": 0.8285
+ },
+ "alignment_pairs": [
+  {
+   "type": "scenarios",
+   "gold": "W_SCN",
+   "gold_label": "Water treatment plant high-turbidity response",
+   "pred": "SCN_HIGH_TURBIDITY_RESPONSE",
+   "pred_label": "Water treatment plant high-turbidity response",
+   "score": 1.0
+  },
+  {
+   "type": "episodes",
+   "gold": "W_EP_ALERT",
+   "gold_label": "Discharge notification and intensified monitoring",
+   "pred": "EP_WARNING",
+   "pred_label": "Discharge warning and monitoring intensification",
+   "score": 0.957
+  },
+  {
+   "type": "episodes",
+   "gold": "W_EP_HIGH",
+   "gold_label": "High-turbidity response",
+   "pred": "EP_HIGH_TURBIDITY",
+   "pred_label": "High-turbidity detection and response",
+   "score": 0.959
+  },
+  {
+   "type": "episodes",
+   "gold": "W_EP_STOP",
+   "gold_label": "Water intake suspension and water supply adjustment",
+   "pred": "EP_INTAKE_SUSPENSION",
+   "pred_label": "Water intake suspension and supply safeguarding",
+   "score": 0.962
+  },
+  {
+   "type": "episodes",
+   "gold": "W_EP_RECOVER",
+   "gold_label": "Water intake resumption and recovery",
+   "pred": "EP_RECOVERY",
+   "pred_label": "Intake resumption and filter recovery",
+   "score": 0.947
+  },
+  {
+   "type": "episodes",
+   "gold": "W_EP_CLOSE",
+   "gold_label": "Response lifting and reporting",
+   "pred": "EP_COMPLETION",
+   "pred_label": "Response stage lifting and reporting",
+   "score": 0.968
+  },
+  {
+   "type": "performers",
+   "gold": "W_P_SYSTEM",
+   "gold_label": "Water treatment plant operating system",
+   "pred": "P_WTP_OS",
+   "pred_label": "Water treatment plant operating system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "W_P_CONTROL",
+   "gold_label": "Central control room",
+   "pred": "P_CENTRAL_CONTROL_ROOM",
+   "pred_label": "Central control room",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "W_P_METER",
+   "gold_label": "Raw water quality analyzer",
+   "pred": "P_RAW_WATER_ANALYZER",
+   "pred_label": "Raw water quality analyzer",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "W_P_COAG",
+   "gold_label": "Coagulant dosing equipment",
+   "pred": "P_COAGULANT_DOSING_EQUIPMENT",
+   "pred_label": "Coagulant dosing equipment",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "W_P_FILTERS",
+   "gold_label": "6 filters",
+   "pred": "P_FILTERS",
+   "pred_label": "Filters (6)",
+   "score": 0.959
+  },
+  {
+   "type": "performers",
+   "gold": "W_P_CHLORINE",
+   "gold_label": "Chlorinator",
+   "pred": "P_CHLORINATOR",
+   "pred_label": "Chlorinator",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "W_P_DAM",
+   "gold_label": "Upstream dam management office",
+   "pred": "P_DAM_OFFICE",
+   "pred_label": "Upstream dam management office",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "W_P_CITY",
+   "gold_label": "City hall water supply division",
+   "pred": "P_CITY_WATER_DIVISION",
+   "pred_label": "City hall water supply division",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "W_P_OPERATOR",
+   "gold_label": "Operators",
+   "pred": "P_OPERATORS",
+   "pred_label": "Operators",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "W_P_LAB",
+   "gold_label": "Water quality analysis team",
+   "pred": "P_WQ_ANALYSIS_TEAM",
+   "pred_label": "Water quality analysis team",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "W_I_NOTICE",
+   "gold_label": "Discharge rate increase notification",
+   "pred": "I_DISCHARGE_NOTICE",
+   "pred_label": "Discharge increase notice",
+   "score": 0.979
+  },
+  {
+   "type": "items",
+   "gold": "W_I_TURB",
+   "gold_label": "Turbidity measurement",
+   "pred": "I_TURBIDITY_DATA",
+   "pred_label": "Raw water turbidity measurement",
+   "score": 0.956
+  },
+  {
+   "type": "items",
+   "gold": "W_I_REQ",
+   "gold_label": "Request water supply adjustment",
+   "pred": "I_WS_ADJUSTMENT_REQUEST",
+   "pred_label": "Water supply adjustment request",
+   "score": 0.989
+  },
+  {
+   "type": "items",
+   "gold": "W_I_REPORT",
+   "gold_label": "Report incident details",
+   "pred": "I_INCIDENT_REPORT",
+   "pred_label": "Incident report",
+   "score": 0.954
+  },
+  {
+   "type": "situations",
+   "gold": "W_SIT_NORMAL",
+   "gold_label": "Normal stage",
+   "pred": "SIT_NORMAL_STAGE",
+   "pred_label": "Normal operation stage",
+   "score": 0.951
+  },
+  {
+   "type": "situations",
+   "gold": "W_SIT_HIGH",
+   "gold_label": "High-turbidity response stage",
+   "pred": "SIT_HIGH_TURBIDITY_STAGE",
+   "pred_label": "High-turbidity response stage",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "W_SIT_INTAKE_ON",
+   "gold_label": "Water intake in operation state",
+   "pred": "SIT_INTAKE_OPERATING",
+   "pred_label": "Water intake operating",
+   "score": 0.966
+  },
+  {
+   "type": "situations",
+   "gold": "W_SIT_INTAKE_OFF",
+   "gold_label": "Water intake temporarily suspended state",
+   "pred": "SIT_INTAKE_SUSPENDED",
+   "pred_label": "Water intake suspended",
+   "score": 0.961
+  },
+  {
+   "type": "state_values",
+   "gold": "W_SV_NORMAL",
+   "gold_label": "Water treatment plant Response stage Normal",
+   "pred": "SV_STAGE_NORMAL",
+   "pred_label": "response stage=normal",
+   "score": 0.929
+  },
+  {
+   "type": "state_values",
+   "gold": "W_SV_HIGH",
+   "gold_label": "Water treatment plant Response stage High-turbidity response",
+   "pred": "SV_STAGE_HIGH_TURBIDITY",
+   "pred_label": "response stage=high-turbidity",
+   "score": 0.95
+  },
+  {
+   "type": "state_values",
+   "gold": "W_SV_INTAKE_ON",
+   "gold_label": "Water intake State In operation",
+   "pred": "SV_INTAKE_OPERATING",
+   "pred_label": "water intake=operating",
+   "score": 0.901
+  },
+  {
+   "type": "state_values",
+   "gold": "W_SV_INTAKE_OFF",
+   "gold_label": "Water intake State Temporarily suspended",
+   "pred": "SV_INTAKE_SUSPENDED",
+   "pred_label": "water intake=suspended",
+   "score": 0.911
+  },
+  {
+   "type": "events",
+   "gold": "W_EVT_50",
+   "gold_label": "Turbidity measured at 50 NTU",
+   "pred": "EVT_TURB_50",
+   "pred_label": "Raw water turbidity measured at 50 NTU",
+   "score": 0.975
+  },
+  {
+   "type": "events",
+   "gold": "W_EVT_120",
+   "gold_label": "Turbidity measured at 120 NTU",
+   "pred": "EVT_TURB_120",
+   "pred_label": "Raw water turbidity measured at 120 NTU (3:00 p.m.)",
+   "score": 0.939
+  },
+  {
+   "type": "events",
+   "gold": "W_EVT_60",
+   "gold_label": "Turbidity drops to 60 NTU",
+   "pred": "EVT_TURB_60",
+   "pred_label": "Raw water turbidity drops to 60 NTU (6:00 p.m.)",
+   "score": 0.944
+  },
+  {
+   "type": "events",
+   "gold": "W_EVT_BELOW30",
+   "gold_label": "Raw water turbidity below 30 NTU",
+   "pred": "EVT_TURB_BELOW_30",
+   "pred_label": "Raw water turbidity drops below 30 NTU (9:00 p.m.)",
+   "score": 0.957
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_DAM_NOTICE",
+   "gold_label": "Discharge rate increase notification",
+   "pred": "A_NOTIFY_DISCHARGE",
+   "pred_label": "Notify discharge rate increase",
+   "score": 0.969
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_SHORTEN",
+   "gold_label": "Shorten turbidity monitoring interval to 5 min",
+   "pred": "A_SHORTEN_INTERVAL",
+   "pred_label": "Shorten turbidity monitoring interval to 5 min",
+   "score": 0.972
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_MEASURE_TURB",
+   "gold_label": "Measure raw water turbidity",
+   "pred": "A_MEASURE_TURBIDITY_120",
+   "pred_label": "Measure raw water turbidity (120 NTU)",
+   "score": 0.938
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_SEND_TURB",
+   "gold_label": "Transmit turbidity measurement to central control room",
+   "pred": "A_TRANSMIT_TURBIDITY",
+   "pred_label": "Transmit turbidity to central control room",
+   "score": 0.969
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_HIGH_STAGE",
+   "gold_label": "Declare high-turbidity response stage",
+   "pred": "A_DECLARE_HIGH_STAGE",
+   "pred_label": "Declare high-turbidity response stage",
+   "score": 0.975
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_DOUBLE_COAG",
+   "gold_label": "Double coagulant dose",
+   "pred": "A_DOUBLE_COAGULANT",
+   "pred_label": "Double the coagulant dose",
+   "score": 0.955
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_JAR_TEST",
+   "gold_label": "Coagulation test every 1 h",
+   "pred": "A_COAGULATION_TEST",
+   "pred_label": "Perform coagulation test",
+   "score": 0.904
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_STOP_INTAKE",
+   "gold_label": "Temporarily suspend water intake",
+   "pred": "A_SUSPEND_INTAKE",
+   "pred_label": "Temporarily suspend water intake",
+   "score": 0.978
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_REQ_ADJUST",
+   "gold_label": "Request water supply adjustment",
+   "pred": "A_REQUEST_WS_ADJUSTMENT",
+   "pred_label": "Request water supply adjustment",
+   "score": 0.976
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_CHECK_LEVEL",
+   "gold_label": "Check distribution reservoir level every 30 min",
+   "pred": "A_CHECK_RESERVOIR_LEVEL",
+   "pred_label": "Check distribution reservoir level",
+   "score": 0.922
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_OPEN_BYPASS",
+   "gold_label": "Open emergency interconnection pipe",
+   "pred": "A_OPEN_EMERGENCY_PIPE",
+   "pred_label": "Open emergency interconnection pipe",
+   "score": 0.968
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_RESUME_INTAKE",
+   "gold_label": "Resume water intake",
+   "pred": "A_RESUME_INTAKE",
+   "pred_label": "Resume water intake",
+   "score": 0.978
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_BACKWASH",
+   "gold_label": "Backwash 6 filters one after another",
+   "pred": "A_BACKWASH_FILTERS",
+   "pred_label": "Backwash the 6 filters one after another",
+   "score": 0.979
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_CONFIRM_TREATED",
+   "gold_label": "Confirm treated water turbidity 0.5 NTU or less",
+   "pred": "A_CONFIRM_TREATED_TURBIDITY",
+   "pred_label": "Confirm treated water turbidity",
+   "score": 0.942
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_LIFT_ADJUST",
+   "gold_label": "Lift water supply adjustment",
+   "pred": "A_LIFT_WS_ADJUSTMENT",
+   "pred_label": "Lift water supply adjustment",
+   "score": 0.976
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_LIFT_STAGE",
+   "gold_label": "Lift high-turbidity response stage",
+   "pred": "A_LIFT_HIGH_STAGE",
+   "pred_label": "Lift high-turbidity response stage",
+   "score": 0.975
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_RESTORE_PERIOD",
+   "gold_label": "Return monitoring interval to 30 min",
+   "pred": "A_RESTORE_INTERVAL",
+   "pred_label": "Return monitoring interval to 30 min",
+   "score": 0.982
+  },
+  {
+   "type": "actions",
+   "gold": "W_A_REPORT",
+   "gold_label": "Report incident details",
+   "pred": "A_COMPILE_INCIDENT",
+   "pred_label": "Compile incident details",
+   "score": 0.918
+  },
+  {
+   "type": "constraints",
+   "gold": "W_CN_5MIN",
+   "gold_label": "Turbidity monitoring interval 5 min",
+   "pred": "CN_MONITOR_INTERVAL_5",
+   "pred_label": "Monitoring interval 5 min",
+   "score": 0.958
+  },
+  {
+   "type": "constraints",
+   "gold": "W_CN_100",
+   "gold_label": "Raw water turbidity 100 NTU or more",
+   "pred": "CN_TURB_SUSPEND",
+   "pred_label": "Turbidity 100 NTU or more",
+   "score": 0.976
+  },
+  {
+   "type": "constraints",
+   "gold": "W_CN_DOUBLE",
+   "gold_label": "Coagulant dose doubled",
+   "pred": "CN_DOSE_DOUBLE",
+   "pred_label": "Coagulant dose doubled",
+   "score": 1.0
+  },
+  {
+   "type": "constraints",
+   "gold": "W_CN_1H",
+   "gold_label": "Coagulation test interval 1 h",
+   "pred": "CN_COAG_TEST_PERIOD",
+   "pred_label": "Coagulation test every 1 h",
+   "score": 0.97
+  },
+  {
+   "type": "constraints",
+   "gold": "W_CN_30MIN",
+   "gold_label": "Distribution reservoir level check interval 30 min",
+   "pred": "CN_RESERVOIR_CHECK_PERIOD",
+   "pred_label": "Reservoir check every 30 min",
+   "score": 0.955
+  },
+  {
+   "type": "constraints",
+   "gold": "W_CN_40",
+   "gold_label": "Distribution reservoir level below 40%",
+   "pred": "CN_RESERVOIR_40",
+   "pred_label": "Reservoir level below 40%",
+   "score": 0.973
+  },
+  {
+   "type": "constraints",
+   "gold": "W_CN_05",
+   "gold_label": "Treated water turbidity 0.5 NTU or less",
+   "pred": "CN_TREATED_TURB",
+   "pred_label": "Treated water turbidity 0.5 NTU or less",
+   "score": 1.0
+  },
+  {
+   "type": "constraints",
+   "gold": "W_CN_30NTU",
+   "gold_label": "Raw water turbidity below 30 NTU",
+   "pred": "CN_TURB_LIFT",
+   "pred_label": "Raw water turbidity below 30 NTU",
+   "score": 1.0
+  },
+  {
+   "type": "goals",
+   "gold": "W_G_QUALITY",
+   "gold_label": "Meet drinking water quality standards",
+   "pred": "G_DRINKING_WATER_QUALITY",
+   "pred_label": "Meet drinking water quality standards",
+   "score": 1.0
+  },
+  {
+   "type": "goals",
+   "gold": "W_G_NO_OUTAGE",
+   "gold_label": "No water supply interruption",
+   "pred": "G_NO_SUPPLY_INTERRUPTION",
+   "pred_label": "Respond without water supply interruption",
+   "score": 0.93
+  },
+  {
+   "type": "observations",
+   "gold": "W_OBS_TURB",
+   "gold_label": "Measure raw water turbidity",
+   "pred": "OBS_RAW_WQ_CAPABILITY",
+   "pred_label": "Raw water turbidity and pH measurement",
+   "score": 0.961
+  },
+  {
+   "type": "observations",
+   "gold": "W_OBS_LEVEL",
+   "gold_label": "Distribution reservoir level check",
+   "pred": "OBS_RESERVOIR_LEVEL",
+   "pred_label": "Distribution reservoir level check",
+   "score": 0.98
+  },
+  {
+   "type": "observations",
+   "gold": "W_OBS_TREATED",
+   "gold_label": "Treated water turbidity check",
+   "pred": "OBS_TREATED_TURBIDITY",
+   "pred_label": "Treated water turbidity confirmation",
+   "score": 0.964
+  },
+  {
+   "type": "transitions",
+   "gold": "W_TR_HIGH",
+   "gold_label": "From normal to high-turbidity response stage",
+   "pred": "TR_ENTER_HIGH_STAGE",
+   "pred_label": "Enter high-turbidity response stage",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "W_TR_INTAKE_OFF",
+   "gold_label": "Water intake from in operation to temporarily suspended",
+   "pred": "TR_INTAKE_SUSPEND",
+   "pred_label": "Water intake operating to suspended",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "W_TR_INTAKE_ON",
+   "gold_label": "Water intake from temporarily suspended to in operation",
+   "pred": "TR_INTAKE_RESUME",
+   "pred_label": "Water intake suspended to operating",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "W_TR_HIGH_OFF",
+   "gold_label": "From high-turbidity response stage to normal",
+   "pred": "TR_EXIT_HIGH_STAGE",
+   "pred_label": "Lift high-turbidity response stage",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F01",
+   "gold_label": "Shorten monitoring interval after discharge notification",
+   "pred": "F_NOTIFY_TO_SHORTEN",
+   "pred_label": "Shorten interval after discharge notice",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F02",
+   "gold_label": "Transmit after measurement",
+   "pred": "F_MEASURE50_TO_TRANSMIT",
+   "pred_label": "Transmit after measuring",
+   "score": 0.993
+  },
+  {
+   "type": "flows",
+   "gold": "W_F03",
+   "gold_label": "Declare high-turbidity response stage after transmission",
+   "pred": "F_TRANSMIT_TO_DECLARE",
+   "pred_label": "Turbidity data to stage declaration",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F04",
+   "gold_label": "Increase coagulant dose in high-turbidity stage",
+   "pred": "F_DECLARE_TO_DOSE",
+   "pred_label": "Double coagulant dose in high-turbidity stage",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F05",
+   "gold_label": "Coagulation test in high-turbidity stage",
+   "pred": "F_DECLARE_TO_COAG_TEST",
+   "pred_label": "Coagulation testing in high-turbidity stage",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F06",
+   "gold_label": "Suspend water intake at 100 NTU or more",
+   "pred": "F_MEASURE120_TO_SUSPEND",
+   "pred_label": "Suspend intake on turbidity 100 NTU or more",
+   "score": 0.968
+  },
+  {
+   "type": "flows",
+   "gold": "W_F07",
+   "gold_label": "Request water supply adjustment after water intake suspension",
+   "pred": "F_SUSPEND_TO_REQUEST",
+   "pred_label": "Request supply adjustment after suspension",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F08",
+   "gold_label": "Check level while water intake is suspended",
+   "pred": "F_SUSPEND_TO_CHECK",
+   "pred_label": "Reservoir checks while intake is suspended",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F09",
+   "gold_label": "Open interconnection pipe when level is below 40%",
+   "pred": "F_CHECK_TO_OPEN_PIPE",
+   "pred_label": "Open emergency pipe on low reservoir level",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F10",
+   "gold_label": "Backwash after water intake resumption",
+   "pred": "F_RESUME_TO_BACKWASH",
+   "pred_label": "Backwash after intake resumption",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F11",
+   "gold_label": "Lift water supply adjustment after backwashing is completed",
+   "pred": "F_BACKWASH_TO_LIFT_WS",
+   "pred_label": "Lift supply adjustment after backwashing",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F12",
+   "gold_label": "Lift water supply adjustment after treated water check",
+   "pred": "F_CONFIRM_TO_LIFT_WS",
+   "pred_label": "Lift supply adjustment after quality confirmation",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "W_F13",
+   "gold_label": "Return monitoring interval after stage is lifted",
+   "pred": "F_LIFT_STAGE_TO_RESTORE",
+   "pred_label": "Restore interval after lifting stage",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "W_C01",
+   "gold_label": "Coagulant dose increase and coagulation test proceed simultaneously",
+   "pred": "C_PARALLEL_RESPONSE",
+   "pred_label": "Coagulant doubling and coagulation testing in parallel",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "W_C02",
+   "gold_label": "Coagulation test every 1 h",
+   "pred": "C_COAG_TEST_LOOP",
+   "pred_label": "Hourly coagulation test loop",
+   "score": 0.919
+  },
+  {
+   "type": "controls",
+   "gold": "W_C03",
+   "gold_label": "Determine raw water turbidity 100 NTU or more",
+   "pred": "C_TURB_100",
+   "pred_label": "Turbidity 100 NTU or more decision",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "W_C04",
+   "gold_label": "Check distribution reservoir level every 30 min",
+   "pred": "C_RESERVOIR_CHECK_LOOP",
+   "pred_label": "Reservoir level check loop",
+   "score": 0.895
+  },
+  {
+   "type": "controls",
+   "gold": "W_C05",
+   "gold_label": "Determine distribution reservoir level below 40%",
+   "pred": "C_RESERVOIR_LOW",
+   "pred_label": "Reservoir level below 40% decision",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "W_C06",
+   "gold_label": "Wait for backwashing completion and treated water check",
+   "pred": "C_BACKWASH_AND_QUALITY",
+   "pred_label": "Wait for backwash completion and quality confirmation",
+   "score": 1.0
+  }
+ ],
+ "type_confusion": {
+  "events->state_values": 1,
+  "observations->items": 1
+ },
+ "source_ref_accuracy": {
+  "correct": 80,
+  "aligned_with_gold_ref": 86,
+  "accuracy": 0.9302
+ },
+ "relations": {
+  "strict": {
+   "tp": 113,
+   "pred": 184,
+   "gold": 120,
+   "precision": 0.6141,
+   "recall": 0.9417,
+   "f1": 0.7434,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "constrained_by": {
+     "gold": 8,
+     "recalled": 8
+    },
+    "controls_flow": {
+     "gold": 6,
+     "recalled": 6
+    },
+    "custom/contains_action": {
+     "gold": 18,
+     "recalled": 17
+    },
+    "flow_source": {
+     "gold": 13,
+     "recalled": 11
+    },
+    "flow_target": {
+     "gold": 13,
+     "recalled": 13
+    },
+    "from_situation": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "has_episode": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "has_part": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "has_state_value": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 0
+    },
+    "performed_by": {
+     "gold": 18,
+     "recalled": 18
+    },
+    "produces_item": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "provided_to": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "to_situation": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "triggers": {
+     "gold": 8,
+     "recalled": 8
+    }
+   }
+  },
+  "normalized": {
+   "tp": 113,
+   "pred": 184,
+   "gold": 120,
+   "precision": 0.6141,
+   "recall": 0.9417,
+   "f1": 0.7434,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "constrained_by": {
+     "gold": 8,
+     "recalled": 8
+    },
+    "contains_action": {
+     "gold": 18,
+     "recalled": 17
+    },
+    "controls_flow": {
+     "gold": 6,
+     "recalled": 6
+    },
+    "flow_source": {
+     "gold": 13,
+     "recalled": 11
+    },
+    "flow_target": {
+     "gold": 13,
+     "recalled": 13
+    },
+    "from_situation": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "has_episode": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "has_part": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "has_state_value": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 0
+    },
+    "performed_by": {
+     "gold": 18,
+     "recalled": 18
+    },
+    "produces_item": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "provided_to": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "to_situation": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "triggers": {
+     "gold": 8,
+     "recalled": 8
+    }
+   }
+  },
+  "untyped": {
+   "tp": 114,
+   "pred": 160,
+   "gold": 120,
+   "precision": 0.7125,
+   "recall": 0.95,
+   "f1": 0.8143
+  }
+ },
+ "atomic_facts": {
+  "found": 0,
+  "total": 0,
+  "missing": []
+ },
+ "required_relations": {
+  "hit": 0,
+  "total": 0
+ },
+ "forbidden_relations": {
+  "violated": 0,
+  "total": 0
+ },
+ "structure": {
+  "actions": 22,
+  "actions_in_episode": 22,
+  "actions_allocated": 22,
+  "nested_mode": true,
+  "dangling_relations": 0,
+  "relations": 184
+ }
+}

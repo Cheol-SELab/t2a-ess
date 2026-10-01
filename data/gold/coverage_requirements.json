@@ -1,0 +1,186 @@
+{
+  "av": {
+    "required_relations": [
+      [
+        "AV_P0_DRIVER",
+        "originates_event",
+        "AV_EVT_ACTIVATION_REQUEST"
+      ],
+      [
+        "AV_SIT_BATTERY_LOW",
+        "has_state_value",
+        "AV_SV_BATTERY_LOW"
+      ]
+    ],
+    "forbidden_relations": [
+      [
+        "AV_SIT_CHARGING",
+        "has_state_value",
+        "AV_SV_BATTERY_LOW"
+      ],
+      [
+        "AV_A_EMERGENCY_BRAKE",
+        "acts_on",
+        "AV_I_PEDESTRIAN"
+      ]
+    ],
+    "required_text_patterns": {
+      "driver": "driver",
+      "LiDAR": "LiDAR",
+      "camera": "camera",
+      "radar": "radar",
+      "perception cycle": "10\\s*Hz|100\\s*ms|ten times (a|per) second",
+      "emergency braking limit": "200\\s*ms|0\\.2\\s*s",
+      "degraded speed": "30\\s*km/h",
+      "actual SoC": "18\\s*%",
+      "low-power threshold": "20\\s*%",
+      "charging request": "(request|ask)\\w*[^.]*charg|charg\\w*[^.]*request",
+      "safe arrival goal": "destination[^.]*(safe|without mishap)|safe\\w*[^.]*destination"
+    }
+  },
+  "mumt": {
+    "required_relations": [
+      [
+        "MUMT_EVT_EW_JAMMING_START",
+        "causes_event",
+        "MUMT_EVT_PACKET_LOSS_PERSISTED"
+      ],
+      [
+        "MUMT_A_SMOKE_EVASION",
+        "performed_by",
+        "MUMT_P4_2_PLATOON"
+      ]
+    ],
+    "forbidden_relations": [
+      [
+        "MUMT_EVT_EW_JAMMING_START",
+        "triggers",
+        "MUMT_TR_NORMAL_TO_LIMITED"
+      ],
+      [
+        "MUMT_A_SMOKE_EVASION",
+        "performed_by",
+        "MUMT_P4_PLATOONS"
+      ]
+    ],
+    "required_text_patterns": {
+      "drone 1": "Drone 1\\b|Unit 1\\b|No\\. 1\\b",
+      "drone 2": "Drone 2\\b|Unit 2\\b|No\\. 2\\b",
+      "drone 3": "Drone 3\\b|Unit 3\\b|No\\. 3\\b",
+      "TDSS": "TDSS",
+      "battalion server": "battalion\\s+server",
+      "FPV": "FPV",
+      "FPV time of arrival": "43\\s*s",
+      "packet loss": "packet",
+      "heartbeat": "heartbeat",
+      "normal communication": "normal\\s+communication|from\\s+normal|was\\s+normal",
+      "limited communication": "limited\\s+communication",
+      "communication blackout": "communication\\s+blackout|blackout",
+      "minimum SA": "minimum\\s+SA",
+      "video stream": "video\\s+stream",
+      "summary track": "summary\\s+track",
+      "ATGM": "ATGM",
+      "2nd platoon": "2nd\\s+Platoon|Second\\s+Platoon",
+      "available drones decrease": "(3|three)\\s+(to|down to)\\s+(2|two)",
+      "comprehensive report": "comprehensive\\s+report|report\\w*\\s+comprehensively|report\\w*\\s+a\\s+summary",
+      "objective secured": "secur\\w*\\s+(the\\s+)?objective|objective\\s+(is\\s+)?secured"
+    }
+  },
+  "nghe": {
+    "forbidden_slot_ids": [
+      "NGHE_TR_LEVEL4_TO_LEVEL1_RAIN"
+    ],
+    "required_relations": [
+      [
+        "NGHE_TR_LEVEL4_TO_LEVEL3_FOG",
+        "to_situation",
+        "NGHE_SIT_LEVEL3_FOG"
+      ],
+      [
+        "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN",
+        "from_situation",
+        "NGHE_SIT_LEVEL3_FOG"
+      ],
+      [
+        "NGHE_A_ISOLATE_NETWORK",
+        "performed_by",
+        "NGHE_P9_SECURITY_SYSTEM"
+      ],
+      [
+        "NGHE_EVT_PEDESTRIAN_DETECTED",
+        "triggers",
+        "NGHE_A_LOCAL_SAFETY_STOP"
+      ],
+      [
+        "NGHE_A_LOCAL_SAFETY_STOP",
+        "performed_by",
+        "NGHE_P7_1_2_EEX"
+      ],
+      [
+        "NGHE_A_BATTERY_SWAP",
+        "acts_on",
+        "NGHE_P7_1_1_EEX"
+      ],
+      [
+        "NGHE_A_PERFORM_MAINTENANCE",
+        "acts_on",
+        "NGHE_P7_2_7_EDT"
+      ]
+    ],
+    "forbidden_relations": [
+      [
+        "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN",
+        "from_situation",
+        "NGHE_SIT_LEVEL4"
+      ],
+      [
+        "NGHE_EVT_PEDESTRIAN_DETECTED",
+        "triggers",
+        "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN"
+      ],
+      [
+        "NGHE_EVT_PEDESTRIAN_DETECTED",
+        "triggers",
+        "NGHE_A_STOP_WORK"
+      ],
+      [
+        "NGHE_A_ISOLATE_NETWORK",
+        "performed_by",
+        "NGHE_P2_AI_ICP"
+      ]
+    ],
+    "required_text_patterns": {
+      "72 hours": "72\\s*h",
+      "target earthwork": "38,000\\s*m3",
+      "actual earthwork": "38,200\\s*m3",
+      "RTDD": "RTDD",
+      "RTDD latency": "20\\s*ms",
+      "encryption latency": "2\\s*ms",
+      "U-EEX": "U-EEX",
+      "U-EDT": "U-EDT",
+      "U-EDB": "U-EDB",
+      "U-ERC": "U-ERC",
+      "equipment count": "19\\s+units|19\\s+machines|nineteen",
+      "BIM model": "BIM",
+      "Level 3": "Level\\s*3",
+      "Level 4": "Level\\s*4",
+      "Level 1": "Level\\s*1",
+      "battery SoC": "15\\s*%",
+      "battery swap time": "5\\s*min",
+      "preventive maintenance time": "1\\s*h\\b|one hour|an hour",
+      "night noise": "65\\s*dB",
+      "fog visibility": "200\\s*m\\b",
+      "fog speed": "5\\s*km/h",
+      "safety distance": "safety\\s+distance[^.]*(2 times|two times|twice|doubled|double)|(doubl\\w*|twice)[^.]*safety\\s+distance",
+      "U-EEX Unit 3": "U-EEX\\s+Unit\\s+3|Unit\\s+3\\s+of\\s+U-EEX",
+      "security threat log": "security\\s+threat\\s+log",
+      "U-EEX Unit 2": "U-EEX\\s+Unit\\s+2|Unit\\s+2\\s+of\\s+U-EEX",
+      "sensor covered": "50\\s*%",
+      "heavy rain": "30\\s*mm",
+      "subsidence zones": "(2|two)\\s+(ground\\s+)?subsid(ence|ed)",
+      "recovery stability time": "30\\s*min",
+      "personnel accidents": "(zero|no)\\s+personnel\\s+accidents|personnel\\s+accidents\\s+(at|of)\\s+zero|zero\\s+accidents",
+      "final report": "comprehensive\\s+performance\\s+report"
+    }
+  }
+}

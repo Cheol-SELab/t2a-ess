@@ -1,0 +1,104 @@
+{
+  "MUMT_easy": {
+    "domain": "MUMT",
+    "difficulty": "easy",
+    "gold": "data/gold-sg/mumt/mumt.gold-sg.json",
+    "source_document": "mumt.easy.md",
+    "coverage": "data/gold-sg/coverage_requirements.json",
+    "coverage_key": "mumt",
+    "paragraphs": 4,
+    "paragraph_to_units": {
+      "P1": [
+        "MUMT_GT_U01"
+      ],
+      "P2": [
+        "MUMT_GT_U02"
+      ],
+      "P3": [
+        "MUMT_GT_U03"
+      ],
+      "P4": [
+        "MUMT_GT_U04"
+      ]
+    },
+    "sha256": "3c0f332cfd373930097c854fe9d76a8066e5fe2507e873628a4b04088d40b20a"
+  },
+  "NGHE_easy": {
+    "domain": "NGHE",
+    "difficulty": "easy",
+    "gold": "data/gold-sg/nghe/nghe.gold-sg.json",
+    "source_document": "nghe.easy.md",
+    "coverage": "data/gold-sg/coverage_requirements.json",
+    "coverage_key": "nghe",
+    "paragraphs": 4,
+    "paragraph_to_units": {
+      "P1": [
+        "NGHE_GT_U01"
+      ],
+      "P2": [
+        "NGHE_GT_U02"
+      ],
+      "P3": [
+        "NGHE_GT_U03"
+      ],
+      "P4": [
+        "NGHE_GT_U04"
+      ]
+    },
+    "sha256": "75af62faf07015f5f0d4c8b3b66f7a1d8a5162fe1d1fcac0c3b52f7fa32c2a87"
+  },
+  "AV_easy": {
+    "domain": "AV",
+    "difficulty": "easy",
+    "gold": "data/gold-sg/av/av.gold-sg.json",
+    "source_document": "av.easy.md",
+    "coverage": "data/gold-sg/coverage_requirements.json",
+    "coverage_key": "av",
+    "paragraphs": 14,
+    "paragraph_to_units": {
+      "P1": [
+        "AV_L01"
+      ],
+      "P2": [
+        "AV_L02"
+      ],
+      "P3": [
+        "AV_L03"
+      ],
+      "P4": [
+        "AV_L04"
+      ],
+      "P5": [
+        "AV_L05"
+      ],
+      "P6": [
+        "AV_L06"
+      ],
+      "P7": [
+        "AV_L07"
+      ],
+      "P8": [
+        "AV_L08"
+      ],
+      "P9": [
+        "AV_L09"
+      ],
+      "P10": [
+        "AV_L10"
+      ],
+      "P11": [
+        "AV_L11"
+      ],
+      "P12": [
+        "AV_L12"
+      ],
+      "P13": [
+        "AV_L13"
+      ],
+      "P14": [
+        "AV_L14"
+      ]
+    },
+    "sha256": "5b0464e90c9eea075ba1421cca13404401fd472c57daa2063a1fe5736695eb68"
+  }
+}

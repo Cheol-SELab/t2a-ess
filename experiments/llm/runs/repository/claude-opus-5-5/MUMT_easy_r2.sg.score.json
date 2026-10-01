@@ -1,0 +1,1258 @@
+{
+ "meta": {
+  "input": "MUMT_easy",
+  "repeat": 2,
+  "condition": "repository",
+  "model_requested": "claude-opus-5-5",
+  "models_used": [
+   "claude-opus-5-5"
+  ],
+  "prompt": "benchmark-repository.md",
+  "prompt_sha256": "5dd41ce6fef6f6b5d5270d629371cac2814254c5033a13fa8c53bcbcea4903a5",
+  "input_sha256": "e80b6b2690f184abd5253f08ea887988abd20c0685877d7bf0616172cc64996d",
+  "user_sha256": "c6f897431feb5da459afa9f273e841704716275a7f72f096fc2a66b70ae49f41",
+  "runner_sha256": "668572f34df601b1974f920604e58152c826610fc0840a0fe0ed5b39cc377e01",
+  "ok": true,
+  "attempts": 1,
+  "failure": null,
+  "elapsed_s": 358.0,
+  "total_cost_usd": 0.8656,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 13201,
+   "output_tokens": 43150,
+   "output_tokens_details": {
+    "thinking_tokens": 14368
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 43150,
+     "cache_read_input_tokens": 13201,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "cli": "claude -p (isolated, experiments/common/claude_cli.py)"
+ },
+ "tau": 0.87,
+ "parse_ok": true,
+ "matcher": "embedding",
+ "scorer_version": "3.1",
+ "slots_tolerant": {
+  "micro": {
+   "gold_coverage": 0.7965,
+   "pred_support": 0.7982,
+   "f1": 0.7974
+  },
+  "per_type": {
+   "scenarios": {
+    "gold_coverage": 0.0,
+    "pred_support": 0.0,
+    "f1": 0.0,
+    "gold": 1,
+    "pred": 1
+   },
+   "episodes": {
+    "gold_coverage": 0.75,
+    "pred_support": 0.75,
+    "f1": 0.75,
+    "gold": 4,
+    "pred": 4
+   },
+   "performers": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.8667,
+    "f1": 0.9286,
+    "gold": 10,
+    "pred": 15
+   },
+   "actions": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.963,
+    "f1": 0.9811,
+    "gold": 26,
+    "pred": 27
+   },
+   "items": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.6667,
+    "f1": 0.8,
+    "gold": 6,
+    "pred": 9
+   },
+   "flows": {
+    "gold_coverage": 0.5882,
+    "pred_support": 0.75,
+    "f1": 0.6593,
+    "gold": 17,
+    "pred": 12
+   },
+   "controls": {
+    "gold_coverage": 0.0,
+    "pred_support": 0.0,
+    "f1": 0.0,
+    "gold": 3,
+    "pred": 1
+   },
+   "situations": {
+    "gold_coverage": 0.8333,
+    "pred_support": 0.7778,
+    "f1": 0.8046,
+    "gold": 6,
+    "pred": 9
+   },
+   "state_values": {
+    "gold_coverage": 0.875,
+    "pred_support": 0.7778,
+    "f1": 0.8235,
+    "gold": 8,
+    "pred": 9
+   },
+   "events": {
+    "gold_coverage": 0.7778,
+    "pred_support": 0.8333,
+    "f1": 0.8046,
+    "gold": 9,
+    "pred": 6
+   },
+   "transitions": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.8333,
+    "f1": 0.9091,
+    "gold": 5,
+    "pred": 6
+   },
+   "constraints": {
+    "gold_coverage": 0.6,
+    "pred_support": 0.75,
+    "f1": 0.6667,
+    "gold": 5,
+    "pred": 4
+   },
+   "goals": {
+    "gold_coverage": 0.6667,
+    "pred_support": 1.0,
+    "f1": 0.8,
+    "gold": 3,
+    "pred": 1
+   },
+   "reasons": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.5,
+    "f1": 0.6667,
+    "gold": 3,
+    "pred": 6
+   },
+   "observations": {
+    "gold_coverage": 0.4286,
+    "pred_support": 0.75,
+    "f1": 0.5455,
+    "gold": 7,
+    "pred": 4
+   }
+  }
+ },
+ "slots": {
+  "micro": {
+   "tp": 85,
+   "pred": 114,
+   "gold": 113,
+   "precision": 0.7456,
+   "recall": 0.7522,
+   "f1": 0.7489
+  },
+  "per_type": {
+   "scenarios": {
+    "tp": 0,
+    "pred": 1,
+    "gold": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "episodes": {
+    "tp": 3,
+    "pred": 4,
+    "gold": 4,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75
+   },
+   "performers": {
+    "tp": 10,
+    "pred": 15,
+    "gold": 10,
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8
+   },
+   "actions": {
+    "tp": 25,
+    "pred": 27,
+    "gold": 26,
+    "precision": 0.9259,
+    "recall": 0.9615,
+    "f1": 0.9434
+   },
+   "items": {
+    "tp": 6,
+    "pred": 9,
+    "gold": 6,
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8
+   },
+   "flows": {
+    "tp": 9,
+    "pred": 12,
+    "gold": 17,
+    "precision": 0.75,
+    "recall": 0.5294,
+    "f1": 0.6207
+   },
+   "controls": {
+    "tp": 0,
+    "pred": 1,
+    "gold": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "situations": {
+    "tp": 5,
+    "pred": 9,
+    "gold": 6,
+    "precision": 0.5556,
+    "recall": 0.8333,
+    "f1": 0.6667
+   },
+   "state_values": {
+    "tp": 7,
+    "pred": 9,
+    "gold": 8,
+    "precision": 0.7778,
+    "recall": 0.875,
+    "f1": 0.8235
+   },
+   "events": {
+    "tp": 5,
+    "pred": 6,
+    "gold": 9,
+    "precision": 0.8333,
+    "recall": 0.5556,
+    "f1": 0.6667
+   },
+   "transitions": {
+    "tp": 5,
+    "pred": 6,
+    "gold": 5,
+    "precision": 0.8333,
+    "recall": 1.0,
+    "f1": 0.9091
+   },
+   "constraints": {
+    "tp": 3,
+    "pred": 4,
+    "gold": 5,
+    "precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6667
+   },
+   "goals": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 3,
+    "precision": 1.0,
+    "recall": 0.3333,
+    "f1": 0.5
+   },
+   "reasons": {
+    "tp": 3,
+    "pred": 6,
+    "gold": 3,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667
+   },
+   "observations": {
+    "tp": 3,
+    "pred": 4,
+    "gold": 7,
+    "precision": 0.75,
+    "recall": 0.4286,
+    "f1": 0.5455
+   }
+  },
+  "macro_f1": 0.6239
+ },
+ "alignment_pairs": [
+  {
+   "type": "episodes",
+   "gold": "MUMT_EP_THREAT_DETOUR",
+   "gold_label": "Enemy observation post and FPV threat detection response",
+   "pred": "EP_THREAT",
+   "pred_label": "Threat detection, bypass decision and FPV threat response",
+   "score": 0.927
+  },
+  {
+   "type": "episodes",
+   "gold": "MUMT_EP_EW_DEGRADATION",
+   "gold_label": "Electronic warfare jamming and communication degradation response",
+   "pred": "EP_DEGRADE",
+   "pred_label": "Electronic warfare jamming and communication degradation response",
+   "score": 1.0
+  },
+  {
+   "type": "episodes",
+   "gold": "MUMT_EP_RECOVERY_RESUME",
+   "gold_label": "Communication recovery and attack resumption",
+   "pred": "EP_RECOVER",
+   "pred_label": "Communication recovery and mission completion",
+   "score": 0.927
+  },
+  {
+   "type": "performers",
+   "gold": "MUMT_P1_COMMANDER",
+   "gold_label": "Company commander",
+   "pred": "P_COMPANY_COMMANDER",
+   "pred_label": "Company commander",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "MUMT_P2_TDSS",
+   "gold_label": "TDSS",
+   "pred": "P_TDSS",
+   "pred_label": "TDSS",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "MUMT_P3_DRONE_TEAM",
+   "gold_label": "Three reconnaissance drones",
+   "pred": "P_RECON_DRONES",
+   "pred_label": "Three reconnaissance drones",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "MUMT_P3_1_DRONE",
+   "gold_label": "Drone 1",
+   "pred": "P_DRONE1",
+   "pred_label": "Reconnaissance Drone 1",
+   "score": 0.934
+  },
+  {
+   "type": "performers",
+   "gold": "MUMT_P3_2_DRONE",
+   "gold_label": "Drone 2",
+   "pred": "P_DRONE2",
+   "pred_label": "Reconnaissance Drone 2",
+   "score": 0.935
+  },
+  {
+   "type": "performers",
+   "gold": "MUMT_P3_3_DRONE",
+   "gold_label": "Drone 3",
+   "pred": "P_DRONE3",
+   "pred_label": "Reconnaissance Drone 3",
+   "score": 0.94
+  },
+  {
+   "type": "performers",
+   "gold": "MUMT_P4_PLATOONS",
+   "gold_label": "Subordinate platoons",
+   "pred": "P_PLATOONS",
+   "pred_label": "Subordinate platoons",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "MUMT_P5_BATTALION",
+   "gold_label": "Battalion server",
+   "pred": "P_BATTALION_SERVER",
+   "pred_label": "Battalion server",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "MUMT_P6_ENEMY",
+   "gold_label": "Enemy",
+   "pred": "P_ENEMY",
+   "pred_label": "Enemy",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "MUMT_P4_2_PLATOON",
+   "gold_label": "2nd Platoon",
+   "pred": "P_PLATOON2",
+   "pred_label": "2nd Platoon",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "MUMT_I_VIDEO_STREAM",
+   "gold_label": "Drone video stream",
+   "pred": "I_VIDEO_STREAM",
+   "pred_label": "Video stream",
+   "score": 0.938
+  },
+  {
+   "type": "items",
+   "gold": "MUMT_I_TRACK_SUMMARY",
+   "gold_label": "Summary track data",
+   "pred": "I_SUMMARY_TRACK_DATA",
+   "pred_label": "Summary track data",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "MUMT_I_SA_SUMMARY",
+   "gold_label": "Company SA summary information",
+   "pred": "I_COMPANY_SA_SUMMARY",
+   "pred_label": "Company SA summary information",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "MUMT_I_FPV_ALERT",
+   "gold_label": "FPV threat alert",
+   "pred": "I_FPV_THREAT_ALERT",
+   "pred_label": "FPV threat alert",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "MUMT_I_EMERGENCY_BROADCAST",
+   "gold_label": "Drone emergency broadcast message",
+   "pred": "I_EMERGENCY_BROADCAST",
+   "pred_label": "Drone emergency broadcast message",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "MUMT_I_BATTLE_REPORT",
+   "gold_label": "Comprehensive report on the blackout period",
+   "pred": "I_BLACKOUT_REPORT",
+   "pred_label": "Comprehensive report on the blackout period",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "MUMT_SIT_COMM_NORMAL",
+   "gold_label": "Normal communication state",
+   "pred": "SIT_COMM_NORMAL",
+   "pred_label": "Normal communication mode",
+   "score": 0.967
+  },
+  {
+   "type": "situations",
+   "gold": "MUMT_SIT_COMM_LIMITED",
+   "gold_label": "Limited communication state",
+   "pred": "SIT_COMM_LIMITED",
+   "pred_label": "Limited communication mode",
+   "score": 0.961
+  },
+  {
+   "type": "situations",
+   "gold": "MUMT_SIT_COMM_DISCONNECTED",
+   "gold_label": "Communication blackout state",
+   "pred": "SIT_COMM_BLACKOUT",
+   "pred_label": "Communication blackout mode",
+   "score": 0.965
+  },
+  {
+   "type": "situations",
+   "gold": "MUMT_SIT_DRONE_3",
+   "gold_label": "3 drones operable state",
+   "pred": "SIT_DRONES_AVAILABLE_3",
+   "pred_label": "Three drones available",
+   "score": 0.947
+  },
+  {
+   "type": "situations",
+   "gold": "MUMT_SIT_DRONE_2",
+   "gold_label": "2 drones operable state",
+   "pred": "SIT_DRONES_AVAILABLE_2",
+   "pred_label": "Two drones available",
+   "score": 0.947
+  },
+  {
+   "type": "state_values",
+   "gold": "MUMT_SV_COMM_NORMAL",
+   "gold_label": "MUM-T system communication_mode normal",
+   "pred": "SV_COMM_MODE_NORMAL",
+   "pred_label": "communication mode=normal",
+   "score": 0.925
+  },
+  {
+   "type": "state_values",
+   "gold": "MUMT_SV_COMM_LIMITED",
+   "gold_label": "MUM-T system communication_mode limited",
+   "pred": "SV_COMM_MODE_LIMITED",
+   "pred_label": "communication mode=limited",
+   "score": 0.923
+  },
+  {
+   "type": "state_values",
+   "gold": "MUMT_SV_COMM_DISCONNECTED",
+   "gold_label": "MUM-T system communication_mode disconnected",
+   "pred": "SV_COMM_MODE_BLACKOUT",
+   "pred_label": "communication mode=blackout",
+   "score": 0.87
+  },
+  {
+   "type": "state_values",
+   "gold": "MUMT_SV_DATA_VIDEO",
+   "gold_label": "Reconnaissance drone data_mode video_stream",
+   "pred": "SV_DRONE_MODE_VIDEO",
+   "pred_label": "drone mode=video stream",
+   "score": 0.919
+  },
+  {
+   "type": "state_values",
+   "gold": "MUMT_SV_AVAILABLE_DRONES_2",
+   "gold_label": "Reconnaissance drone available_drone_count 2",
+   "pred": "SV_AVAILABLE_DRONES_2",
+   "pred_label": "available drones=2",
+   "score": 0.95
+  },
+  {
+   "type": "state_values",
+   "gold": "MUMT_SV_COMBAT_POWER_MAINTAINED",
+   "gold_label": "Subordinate platoons combat_power maintained",
+   "pred": "SV_COMBAT_POWER_MAINTAINED",
+   "pred_label": "tank combat power=maintained",
+   "score": 0.906
+  },
+  {
+   "type": "state_values",
+   "gold": "MUMT_SV_AVAILABLE_DRONES_3",
+   "gold_label": "3 available drones",
+   "pred": "SV_AVAILABLE_DRONES_3",
+   "pred_label": "available drones=3",
+   "score": 0.968
+  },
+  {
+   "type": "events",
+   "gold": "MUMT_EVT_EW_JAMMING_START",
+   "gold_label": "Enemy electronic warfare jamming begins",
+   "pred": "EVT_JAMMING_START",
+   "pred_label": "Enemy begins electronic warfare jamming",
+   "score": 0.991
+  },
+  {
+   "type": "events",
+   "gold": "MUMT_EVT_PACKET_LOSS_PERSISTED",
+   "gold_label": "Packet loss rate persistently exceeds the threshold",
+   "pred": "EVT_PACKET_LOSS_PERSISTENT",
+   "pred_label": "Packet loss above threshold persists",
+   "score": 0.968
+  },
+  {
+   "type": "events",
+   "gold": "MUMT_EVT_HEARTBEAT_LOSS_PERSISTED",
+   "gold_label": "Persistent heartbeat loss",
+   "pred": "EVT_HEARTBEAT_LOSS_PERSISTENT",
+   "pred_label": "Heartbeat loss persists for a certain time or more",
+   "score": 0.927
+  },
+  {
+   "type": "events",
+   "gold": "MUMT_EVT_ATGM_LAUNCH",
+   "gold_label": "Enemy ATGM launch",
+   "pred": "EVT_ATGM_LAUNCH",
+   "pred_label": "Enemy ATGM launch",
+   "score": 1.0
+  },
+  {
+   "type": "events",
+   "gold": "MUMT_EVT_BANDWIDTH_RECOVERED",
+   "gold_label": "Bandwidth recovery",
+   "pred": "EVT_BANDWIDTH_RECOVERED",
+   "pred_label": "Bandwidth recovers and connection stability is maintained",
+   "score": 0.91
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_TDSS_DIAGNOSE",
+   "gold_label": "Confirm normal communication with the battalion server",
+   "pred": "A_CONFIRM_COMM",
+   "pred_label": "Confirm normal communication with the battalion server",
+   "score": 0.982
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_CHECK_SA",
+   "gold_label": "Check SA function",
+   "pred": "A_CHECK_SA",
+   "pred_label": "Check the SA function",
+   "score": 0.964
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_DRONE_LAUNCH",
+   "gold_label": "Sequential reconnaissance drone launch and surveillance deployment",
+   "pred": "A_LAUNCH_DRONES",
+   "pred_label": "Launch reconnaissance drones sequentially",
+   "score": 0.938
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_DETECT_OBSERVATION_POST",
+   "gold_label": "Detect suspected enemy observation post heat source",
+   "pred": "A_DETECT_HEAT_SOURCE",
+   "pred_label": "Detect suspected enemy observation post heat source",
+   "score": 0.968
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_DECIDE_DETOUR",
+   "gold_label": "Decide right bypass maneuver",
+   "pred": "A_DECIDE_BYPASS",
+   "pred_label": "Decide on right bypass maneuver",
+   "score": 0.972
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_ALERT_FPV",
+   "gold_label": "Provide FPV threat alert",
+   "pred": "A_DISPLAY_FPV_ALERT",
+   "pred_label": "Display FPV threat alert on the HMI",
+   "score": 0.947
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_DISPERSE_COMMAND",
+   "gold_label": "Order dispersed maneuver and air-defense watch",
+   "pred": "A_ORDER_DISPERSAL",
+   "pred_label": "Order dispersed maneuver and air-defense watch",
+   "score": 0.967
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SWITCH_EDGE_MODE",
+   "gold_label": "Switch to Edge AI analysis mode",
+   "pred": "A_SWITCH_EDGE_AI",
+   "pred_label": "Switch to Edge AI analysis mode",
+   "score": 0.98
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_STOP_VIDEO",
+   "gold_label": "Stop video stream transmission",
+   "pred": "A_STOP_VIDEO",
+   "pred_label": "Stop video stream transmission",
+   "score": 0.988
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_SEND_TRACK",
+   "gold_label": "Transmit summary track data",
+   "pred": "A_TRANSMIT_TRACK_DATA",
+   "pred_label": "Transmit summary track data",
+   "score": 0.983
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_AVOID_FPV",
+   "gold_label": "FPV evasive maneuver",
+   "pred": "A_EVADE_FPV",
+   "pred_label": "Evade FPV drones",
+   "score": 0.947
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_ACTIVATE_LOCAL_SURVIVAL",
+   "gold_label": "Activate local sensor-based survival loop",
+   "pred": "A_ACTIVATE_SURVIVAL_LOOP",
+   "pred_label": "Activate the local sensor-based survival loop",
+   "score": 0.966
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_EMERGENCY_BROADCAST",
+   "gold_label": "Transmit drone emergency broadcast",
+   "pred": "A_EMERGENCY_BROADCAST",
+   "pred_label": "Transmit drone emergency broadcast messages",
+   "score": 0.974
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SMOKE_EVASION",
+   "gold_label": "Deploy smoke screen",
+   "pred": "A_DEPLOY_SMOKE",
+   "pred_label": "Deploy smoke screen",
+   "score": 0.977
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_EVADE_ATGM",
+   "gold_label": "Perform evasive maneuver",
+   "pred": "A_EVADE_ATGM",
+   "pred_label": "Perform evasive maneuver",
+   "score": 1.0
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_RESYNC_SA",
+   "gold_label": "SA resynchronization",
+   "pred": "A_RESYNC_SA",
+   "pred_label": "Resynchronize SA with summary track data",
+   "score": 0.904
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_REPORT_BATTALION",
+   "gold_label": "Comprehensive report on the blackout period",
+   "pred": "A_TRANSMIT_BLACKOUT_REPORT",
+   "pred_label": "Transmit comprehensive blackout period report to the battalion server",
+   "score": 0.895
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_RESUME_ATTACK",
+   "gold_label": "Resume attack maneuver",
+   "pred": "A_RESUME_ATTACK",
+   "pred_label": "Resume the attack maneuver",
+   "score": 0.949
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_SUPPRESS",
+   "gold_label": "Suppress remaining enemy positions",
+   "pred": "A_SUPPRESS_ENEMY",
+   "pred_label": "Suppress the remaining enemy positions",
+   "score": 0.972
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_SECURE",
+   "gold_label": "Secure objective",
+   "pred": "A_SECURE_OBJECTIVE",
+   "pred_label": "Secure the objective",
+   "score": 0.962
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_SHARE_SURVEILLANCE",
+   "gold_label": "Share surveillance status with the subordinate platoons",
+   "pred": "A_SHARE_SURVEILLANCE_STATUS",
+   "pred_label": "Share surveillance status with subordinate platoons",
+   "score": 0.973
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_SEND_SA_SUMMARY",
+   "gold_label": "Transmit company SA summary information to the battalion server",
+   "pred": "A_TRANSMIT_SA_SUMMARY",
+   "pred_label": "Transmit company SA summary information to the battalion server",
+   "score": 0.981
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_DETECT_FPV",
+   "gold_label": "Detect possibility of FPV kamikaze drones",
+   "pred": "A_DETECT_FPV",
+   "pred_label": "Detect possibility of 3-4 FPV kamikaze drones",
+   "score": 0.968
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_DETECT_ATGM",
+   "gold_label": "Detect enemy ATGM launch",
+   "pred": "A_DETECT_ATGM",
+   "pred_label": "Detect enemy ATGM launch",
+   "score": 1.0
+  },
+  {
+   "type": "actions",
+   "gold": "MUMT_A_SG_DRONE1_LAND",
+   "gold_label": "Drone 1 landing",
+   "pred": "A_LAND_DRONE1",
+   "pred_label": "Land Drone 1",
+   "score": 0.959
+  },
+  {
+   "type": "constraints",
+   "gold": "MUMT_C_PACKET_LOSS_THRESHOLD",
+   "gold_label": "Condition: packet loss rate persistently exceeds the threshold",
+   "pred": "CN_PACKET_LOSS_THRESHOLD",
+   "pred_label": "Packet loss rate persistently exceeds threshold",
+   "score": 0.968
+  },
+  {
+   "type": "constraints",
+   "gold": "MUMT_C_HEARTBEAT_TIMEOUT",
+   "gold_label": "Condition: persistent heartbeat loss",
+   "pred": "CN_HEARTBEAT_LOSS_DURATION",
+   "pred_label": "Heartbeat loss persists for a certain time or more",
+   "score": 0.922
+  },
+  {
+   "type": "constraints",
+   "gold": "MUMT_C_LINK_STABILITY",
+   "gold_label": "Condition: link kept stable",
+   "pred": "CN_BANDWIDTH_STABILITY",
+   "pred_label": "Bandwidth recovered and connection stability maintained",
+   "score": 0.894
+  },
+  {
+   "type": "goals",
+   "gold": "MUMT_G_MAINTAIN_SURVIVABILITY",
+   "gold_label": "Maintain survivability-focused functions",
+   "pred": "G_SURVIVABILITY_MIN_SA",
+   "pred_label": "Maintain survivability-focused functions and minimum SA",
+   "score": 0.964
+  },
+  {
+   "type": "reasons",
+   "gold": "MUMT_R_DETOUR",
+   "gold_label": "Bypass because of the possibility of anti-tank position deployment",
+   "pred": "RS_ANTITANK_POSITIONS",
+   "pred_label": "High probability of enemy anti-tank positions on the ridge",
+   "score": 0.916
+  },
+  {
+   "type": "reasons",
+   "gold": "MUMT_R_GRACEFUL_DEGRADATION",
+   "gold_label": "Perform graceful degradation because of communication quality degradation",
+   "pred": "RS_GRACEFUL_DEGRADATION",
+   "pred_label": "Graceful degradation based on communication quality degradation",
+   "score": 0.978
+  },
+  {
+   "type": "reasons",
+   "gold": "MUMT_R_INDEPENDENT_SURVIVAL",
+   "gold_label": "Continue independent action because integrated command is impossible",
+   "pred": "RS_COMMAND_IMPOSSIBLE",
+   "pred_label": "Integrated command is impossible",
+   "score": 0.928
+  },
+  {
+   "type": "observations",
+   "gold": "MUMT_OBS_ENEMY_OP",
+   "gold_label": "Suspected enemy observation post heat source picked up",
+   "pred": "OBS_HEAT_SOURCE",
+   "pred_label": "Suspected enemy observation post heat source behind the ridge",
+   "score": 0.932
+  },
+  {
+   "type": "observations",
+   "gold": "MUMT_OBS_FPV_DETECTED",
+   "gold_label": "Multiple FPV drones detected",
+   "pred": "OBS_FPV_POSSIBILITY",
+   "pred_label": "Possibility of 3-4 FPV kamikaze drones",
+   "score": 0.919
+  },
+  {
+   "type": "observations",
+   "gold": "MUMT_OBS_SG_ATGM",
+   "gold_label": "Detect enemy ATGM launch",
+   "pred": "OBS_ATGM_LAUNCH",
+   "pred_label": "Enemy ATGM launch detected",
+   "score": 0.947
+  },
+  {
+   "type": "transitions",
+   "gold": "MUMT_TR_NORMAL_TO_LIMITED",
+   "gold_label": "Transition from normal communication to limited communication",
+   "pred": "TR_COMM_NORMAL_TO_LIMITED",
+   "pred_label": "TDSS transition from normal communication to limited communication",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "MUMT_TR_LIMITED_TO_DISCONNECTED",
+   "gold_label": "Transition from limited communication to communication blackout",
+   "pred": "TR_COMM_LIMITED_TO_BLACKOUT",
+   "pred_label": "TDSS transition from limited communication to communication blackout",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "MUMT_TR_DISCONNECTED_TO_LIMITED",
+   "gold_label": "Transition from communication blackout to limited communication",
+   "pred": "TR_COMM_BLACKOUT_TO_LIMITED",
+   "pred_label": "TDSS transition from communication blackout to limited communication",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "MUMT_TR_LIMITED_TO_NORMAL",
+   "gold_label": "Transition from limited communication to normal communication",
+   "pred": "TR_COMM_LIMITED_TO_NORMAL",
+   "pred_label": "TDSS transition from limited communication to normal communication",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "MUMT_TR_DRONE_COUNT_REDUCED",
+   "gold_label": "Available drones decrease from 3 to 2",
+   "pred": "TR_AVAILABLE_DRONES_3_TO_2",
+   "pred_label": "Available drones decrease from 3 to 2",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "MUMT_F_FPV_ALERT_TO_DISPERSE",
+   "gold_label": "Dispersed maneuver after FPV alert",
+   "pred": "F_ALERT_TO_ORDER",
+   "pred_label": "FPV threat alert to dispersal order",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "MUMT_F_EDGE_MODE_TO_TRACK_FLOW",
+   "gold_label": "Summary track transmission after Edge mode switch",
+   "pred": "F_TRACK_DATA_TO_RESYNC",
+   "pred_label": "Summary track data to SA resynchronization",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SG_STOP_VIDEO_TO_SWITCH_EDGE_MODE",
+   "gold_label": "Switch to Edge AI analysis mode after stopping video stream transmission",
+   "pred": "F_STOP_VIDEO_TO_SWITCH",
+   "pred_label": "Edge AI mode switch after video stop",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SWITCH_EDGE_MODE_TO_SG_SEND_TRACK",
+   "gold_label": "Transmit summary track data after switching to Edge AI analysis mode",
+   "pred": "F_SWITCH_TO_TRANSMIT_TRACK",
+   "pred_label": "Summary track transmission after Edge AI switch",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SMOKE_EVASION_TO_SG_EVADE_ATGM",
+   "gold_label": "Perform evasive maneuver after deploying smoke screen",
+   "pred": "F_SMOKE_TO_EVADE",
+   "pred_label": "Evasive maneuver after smoke screen",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_RESUME_ATTACK_TO_SG_SUPPRESS",
+   "gold_label": "Suppress remaining enemy positions after resuming attack maneuver",
+   "pred": "F_RESUME_TO_SUPPRESS",
+   "pred_label": "Suppression after attack resumption",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SG_SUPPRESS_TO_SG_SECURE",
+   "gold_label": "Secure objective after suppressing remaining enemy positions",
+   "pred": "F_SUPPRESS_TO_SECURE",
+   "pred_label": "Objective securing after suppression",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_DECIDE_DETOUR_TO_SG_DETECT_FPV",
+   "gold_label": "FPV detection after bypass decision",
+   "pred": "F_DECIDE_TO_DETECT_FPV",
+   "pred_label": "FPV detection next after bypass decision",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SG_DETECT_ATGM_TO_SMOKE_EVASION",
+   "gold_label": "Deploy smoke screen after ATGM detection",
+   "pred": "F_DETECT_ATGM_TO_SMOKE",
+   "pred_label": "Smoke screen after ATGM launch detection",
+   "score": 1.0
+  }
+ ],
+ "type_confusion": {
+  "scenarios->actions": 1,
+  "flows->controls": 1,
+  "flows->situations": 1,
+  "flows->reasons": 1,
+  "controls->performers": 1,
+  "events->performers": 1,
+  "events->reasons": 1,
+  "constraints->reasons": 1,
+  "observations->situations": 1
+ },
+ "source_ref_accuracy": {
+  "correct": 78,
+  "aligned_with_gold_ref": 85,
+  "accuracy": 0.9176
+ },
+ "relations": {
+  "strict": {
+   "tp": 105,
+   "pred": 190,
+   "gold": 165,
+   "precision": 0.5526,
+   "recall": 0.6364,
+   "f1": 0.5915,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 1,
+     "recalled": 0
+    },
+    "carries_item": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "causes_event": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "constrained_by": {
+     "gold": 5,
+     "recalled": 2
+    },
+    "contains_action": {
+     "gold": 26,
+     "recalled": 20
+    },
+    "controls_flow": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "flow_source": {
+     "gold": 17,
+     "recalled": 9
+    },
+    "flow_target": {
+     "gold": 17,
+     "recalled": 9
+    },
+    "from_situation": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "has_episode": {
+     "gold": 4,
+     "recalled": 0
+    },
+    "has_evidence": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "has_goal": {
+     "gold": 4,
+     "recalled": 0
+    },
+    "has_part": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "has_reason": {
+     "gold": 3,
+     "recalled": 2
+    },
+    "has_situation": {
+     "gold": 6,
+     "recalled": 3
+    },
+    "has_state_value": {
+     "gold": 8,
+     "recalled": 5
+    },
+    "observes": {
+     "gold": 7,
+     "recalled": 1
+    },
+    "originates_event": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "performed_by": {
+     "gold": 26,
+     "recalled": 24
+    },
+    "produces_item": {
+     "gold": 5,
+     "recalled": 4
+    },
+    "provided_to": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "temporal_before": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "to_situation": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "triggers": {
+     "gold": 7,
+     "recalled": 4
+    },
+    "uses_item": {
+     "gold": 1,
+     "recalled": 0
+    }
+   }
+  },
+  "normalized": {
+   "tp": 105,
+   "pred": 190,
+   "gold": 165,
+   "precision": 0.5526,
+   "recall": 0.6364,
+   "f1": 0.5915,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 1,
+     "recalled": 0
+    },
+    "carries_item": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "causes_event": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "constrained_by": {
+     "gold": 5,
+     "recalled": 2
+    },
+    "contains_action": {
+     "gold": 26,
+     "recalled": 20
+    },
+    "controls_flow": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "flow_source": {
+     "gold": 17,
+     "recalled": 9
+    },
+    "flow_target": {
+     "gold": 17,
+     "recalled": 9
+    },
+    "from_situation": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "has_episode": {
+     "gold": 4,
+     "recalled": 0
+    },
+    "has_evidence": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "has_goal": {
+     "gold": 4,
+     "recalled": 0
+    },
+    "has_part": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "has_reason": {
+     "gold": 3,
+     "recalled": 2
+    },
+    "has_situation": {
+     "gold": 6,
+     "recalled": 3
+    },
+    "has_state_value": {
+     "gold": 8,
+     "recalled": 5
+    },
+    "observes": {
+     "gold": 7,
+     "recalled": 1
+    },
+    "originates_event": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "performed_by": {
+     "gold": 26,
+     "recalled": 24
+    },
+    "produces_item": {
+     "gold": 5,
+     "recalled": 4
+    },
+    "provided_to": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "temporal_before": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "to_situation": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "triggers": {
+     "gold": 7,
+     "recalled": 4
+    },
+    "uses_item": {
+     "gold": 1,
+     "recalled": 0
+    }
+   }
+  },
+  "untyped": {
+   "tp": 107,
+   "pred": 172,
+   "gold": 165,
+   "precision": 0.6221,
+   "recall": 0.6485,
+   "f1": 0.635
+  }
+ },
+ "atomic_facts": {
+  "found": 18,
+  "total": 20,
+  "missing": [
+   "comprehensive report",
+   "objective secured"
+  ]
+ },
+ "required_relations": {
+  "hit": 2,
+  "total": 2
+ },
+ "forbidden_relations": {
+  "violated": 0,
+  "total": 2
+ },
+ "structure": {
+  "actions": 27,
+  "actions_in_episode": 27,
+  "actions_allocated": 27,
+  "nested_mode": true,
+  "dangling_relations": 0,
+  "relations": 190
+ }
+}

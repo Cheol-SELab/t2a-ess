@@ -1,0 +1,25 @@
+[P1] The passenger ship operation system consists of the bridge, 2 main engines, 2 generators, the engine monitoring system (EMS), and 4 lifeboats. The EMS monitors the coolant temperature of the main engines.
+
+[P2] Externally there are the Coast Guard and the shipping company operations office; the captain is in charge of ship command, and the chief engineer is in charge of engine maintenance.
+
+[P3] At 4:00 p.m., the EMS detects a coolant temperature of 95 °C on main engine No. 1 and displays an alarm on the bridge. The captain stops main engine No. 1 and operates at reduced speed with main engine No. 2 only.
+
+[P4] The chief engineer inspects the coolant pump and confirms damage to the pump impeller. The chief engineer requests parts supply from the shipping company operations office.
+
+[P5] The captain makes a reduced-speed operation announcement to the passengers and notifies the Coast Guard of the engine failure situation. The two tasks are carried out simultaneously.
+
+[P6] If the load of main engine No. 2 is 85% or more, the chief engineer stops 1 generator to reduce the load. At 5:00 p.m., when the load rises to 88%, the chief engineer stops generator No. 2.
+
+[P7] Every 30 min, the chief engineer reports the temperature and load of main engine No. 2 to the bridge.
+
+[P8] If even main engine No. 2 stops, the captain requests towing from the Coast Guard. On this day, main engine No. 2 did not stop, so towing was not requested.
+
+[P9] At 7:00 p.m., when the passenger ship enters the destination port, the shipping company operations office delivers the replacement impeller to the ship.
+
+[P10] The chief engineer replaces the impeller and test-runs main engine No. 1. If the coolant temperature stays at 80 °C or less during the test run, the chief engineer reports repair completion to the captain.
+
+[P11] The captain instructs that generator No. 2 be restarted and notifies the Coast Guard of the end of the situation.
+
+[P12] The captain compiles the details of the engine failure and reports them to the shipping company operations office.
+
+[P13] The goal of this scenario is to enter the scheduled port while keeping the passengers safe.

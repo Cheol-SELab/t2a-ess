@@ -1,0 +1,25 @@
+[P1] The forest disaster response system consists of the wildfire situation room, the surveillance drone squadron (drones A1, A2, and A3), firefighting helicopter H-1, and the ground firefighting crew. The wildfire situation room receives drone video and weather data and operates a spread prediction model.
+
+[P2] Outside the system are the fire headquarters and the village head, and the town office is in charge of resident evacuation guidance.
+
+[P3] At 1:05 p.m., when drone A1 detects smoke on a ridge during patrol and transmits the coordinates and video to the situation room, the situation room issues wildfire Level 1 and dispatches the ground firefighting crew.
+
+[P4] The situation room calculates the fire line 30 min ahead with the spread prediction model, and if the predicted fire line comes within 1 km of the village boundary, it requests the town office to prepare for resident evacuation. According to the prediction, the fire line was 1.6 km away from the village.
+
+[P5] Drones A2 and A3 simultaneously track the east and west ends of the fire line and update the fire line position every 2 min, and A1 returns to the base for a battery replacement. When the replacement is finished, A1 is immediately deployed to monitor the south valley.
+
+[P6] At 1:40 p.m., as the wind direction shifts to northwest and the east fire line spreads rapidly toward the village, the situation room escalates to wildfire Level 2 and requests firefighting helicopter H-1. The helicopter must arrive on site within 20 min after the request.
+
+[P7] Until H-1 arrives, the ground firefighting crew builds a firebreak in front of the east fire line on the village side, and before the firebreak is completed, firefighters must not enter inside the fire line.
+
+[P8] H-1, having arrived at 1:58 p.m., takes on water from a nearby reservoir and drops it on the east fire line, and for each drop, A2 films the change in fire intensity and sends it to the situation room. If the fire intensity does not weaken, the situation room instructs that the drop point be moved forward by 50 m each time.
+
+[P9] Because the predicted fire line recalculated at 2:20 p.m. has come as close as 0.9 km to the village boundary, the situation room requests resident evacuation from the town office, and the town office, together with the village head, evacuates 42 residents to the village hall.
+
+[P10] When the evacuation is finished, the village head confirms the number of evacuees and reports it to the town office. 3 residents with limited mobility are transported separately by the fire headquarters' ambulance.
+
+[P11] At 2:50 p.m., when the firebreak is completed and the spread of the east fire line stops with H-1's fifth drop, the situation room lowers the wildfire from Level 2 to Level 1. However, while residual fire remains, the helicopter is not withdrawn.
+
+[P12] At 4:00 p.m., when A3 confirms by thermal imaging that there is no residual fire, the situation room withdraws H-1 and, after handing the rekindle watch over to the ground firefighting crew, allows residents to return home. The rekindle watch continues until the next morning.
+
+[P13] The goal of this response is to stop the spread before the wildfire reaches the village, without casualties.

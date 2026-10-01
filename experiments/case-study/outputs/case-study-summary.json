@@ -1,0 +1,110 @@
+{
+  "mumt": {
+    "stats": {
+      "nodes": 47,
+      "edges": 69,
+      "ItemDefinition": 3,
+      "PartDefinition": 1,
+      "PartUsage": 10,
+      "ActionUsage": 19,
+      "ForkNode": 2,
+      "JoinNode": 2,
+      "StartAction": 5,
+      "DoneAction": 5,
+      "succession": 30,
+      "flow": 1,
+      "allocation": 14,
+      "diagnostics": {
+        "hint": 10
+      }
+    },
+    "validator": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 5
+    },
+    "lsp_ok": true,
+    "identical_to_data_labels": true,
+    "data_item_action_label_collisions": [
+      "Comprehensive report on the blackout period"
+    ],
+    "state_view": {
+      "lines": 85,
+      "summary": {
+        "regions": 3,
+        "states": 6,
+        "transitions": 5
+      },
+      "diagnostics": {
+        "hint": 3,
+        "warning": 3
+      }
+    },
+    "slots": {
+      "scenarios": 1,
+      "episodes": 4,
+      "performers": 10,
+      "actions": 14,
+      "items": 6,
+      "flows": 8,
+      "controls": 3,
+      "situations": 6,
+      "events": 9,
+      "transitions": 5
+    },
+    "relations": 127
+  },
+  "nghe": {
+    "stats": {
+      "nodes": 70,
+      "edges": 113,
+      "ItemDefinition": 3,
+      "PartDefinition": 1,
+      "PartUsage": 19,
+      "ActionUsage": 24,
+      "ForkNode": 5,
+      "JoinNode": 6,
+      "StartAction": 6,
+      "DoneAction": 6,
+      "succession": 51,
+      "flow": 0,
+      "allocation": 26,
+      "diagnostics": {
+        "hint": 12
+      }
+    },
+    "validator": {
+      "ok": true,
+      "errors": 0,
+      "warnings": 4
+    },
+    "lsp_ok": true,
+    "identical_to_data_labels": true,
+    "data_item_action_label_collisions": [],
+    "state_view": {
+      "lines": 101,
+      "summary": {
+        "regions": 3,
+        "states": 8,
+        "transitions": 7
+      },
+      "diagnostics": {
+        "hint": 2,
+        "warning": 3
+      }
+    },
+    "slots": {
+      "scenarios": 1,
+      "episodes": 5,
+      "performers": 19,
+      "actions": 18,
+      "items": 7,
+      "flows": 6,
+      "controls": 6,
+      "situations": 8,
+      "events": 11,
+      "transitions": 7
+    },
+    "relations": 178
+  }
+}

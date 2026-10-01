@@ -1,0 +1,31 @@
+{
+  "in": "nghe-en.sysml",
+  "out": "editor-nghe.png",
+  "expanded": [
+    "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start",
+    "NGHE 72-hour autonomous construction::E2 Level 4 autonomous production",
+    "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response",
+    "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop",
+    "NGHE 72-hour autonomous construction::E5 Recovery and mission completion"
+  ],
+  "nodeKinds": {
+    "FunctionNode": 24,
+    "StartConcurrencyNode": 5,
+    "EndConcurrencyNode": 6,
+    "ItemNode": 6,
+    "StartReferenceNode": 1,
+    "EndReferenceNode": 1
+  },
+  "edges": 57,
+  "metrics": [
+    "rootIds",
+    "topologyOf",
+    "step",
+    "lane",
+    "pathPointer",
+    "pair",
+    "slot",
+    "branchStates",
+    "clusterHierarchy"
+  ]
+}

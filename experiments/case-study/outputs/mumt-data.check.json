@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "problems": [],
+  "stats": {
+    "nodes": 48,
+    "edges": 70,
+    "ItemDefinition": 3,
+    "PartDefinition": 1,
+    "PartUsage": 10,
+    "ActionUsage": 19,
+    "ForkNode": 2,
+    "JoinNode": 2,
+    "ItemUsage": 1,
+    "StartAction": 5,
+    "DoneAction": 5,
+    "succession": 30,
+    "flow": 1,
+    "allocation": 14,
+    "diagnostics": {
+      "hint": 10
+    }
+  },
+  "diagnostics": [
+    {
+      "severity": "hint",
+      "line": 47,
+      "message": "Unresolved reference: 'start'"
+    },
+    {
+      "severity": "hint",
+      "line": 49,
+      "message": "Unresolved reference: 'done'"
+    },
+    {
+      "severity": "hint",
+      "line": 75,
+      "message": "Unresolved reference: 'start'"
+    },
+    {
+      "severity": "hint",
+      "line": 84,
+      "message": "Unresolved reference: 'done'"
+    },
+    {
+      "severity": "hint",
+      "line": 112,
+      "message": "Unresolved reference: 'start'"
+    },
+    {
+      "severity": "hint",
+      "line": 119,
+      "message": "Unresolved reference: 'done'"
+    },
+    {
+      "severity": "hint",
+      "line": 141,
+      "message": "Unresolved reference: 'start'"
+    },
+    {
+      "severity": "hint",
+      "line": 144,
+      "message": "Unresolved reference: 'done'"
+    },
+    {
+      "severity": "hint",
+      "line": 154,
+      "message": "Unresolved reference: 'start'"
+    },
+    {
+      "severity": "hint",
+      "line": 158,
+      "message": "Unresolved reference: 'done'"
+    }
+  ],
+  "validator": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 5
+  }
+}

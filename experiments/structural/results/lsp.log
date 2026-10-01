@@ -1,0 +1,15 @@
+LSP: G:\SW\SW-SELab\selab-ex-system-modeler\packages\selab-rust-lsp\target\release\sysml-lsp.exe
+mumt.gold           ok  lines=162  nodes=48  succ=30  fork=2  join=2  flow=1  alloc=14  diag=0/0/10  validator=0E/5W  schema=0E/0W  state=85l 0/3/3
+    validator codes {"ITEM_NO_PRODUCER":1,"ITEM_NO_CONSUMER":4}  schema codes {}
+nghe.gold           ok  lines=238  nodes=70  succ=51  fork=5  join=6  flow=0  alloc=26  diag=0/0/12  validator=0E/4W  schema=0E/0W  state=101l 0/3/2
+    validator codes {"ITEM_NO_CONSUMER":4}  schema codes {}
+av.gold             ok  lines=200  nodes=58  succ=36  fork=3  join=3  flow=4  alloc=16  diag=0/0/12  validator=0E/2W  schema=0E/0W  state=63l 0/2/2
+    validator codes {"ITEM_NO_CONSUMER":2}  schema codes {}
+mumt.nongold        ok  lines=110  nodes=32  succ=29  fork=1  join=1  flow=0  alloc=2  diag=0/0/2  validator=0E/15W  schema=1E/23W  state=52l 0/2/0
+    validator codes {"ITEM_NO_CONSUMER":3,"ACTION_NO_PERFORMER":12}  schema codes {"warning:CUSTOM_TYPE_NOT_REGISTERED":3,"error:TRANSITION_ENDPOINTS":1,"warning:SITUATION_NO_STATE_VALUE":1,"warning:OBSERVATION_NO_OBSERVES":2,"warning:ISOLATED_EVENT":3,"warning:ACTION_NO_EPISODE":14}
+mumt.exhaustive     ok  lines=288  nodes=78  succ=108  fork=1  join=1  flow=0  alloc=0  diag=0/0/2  validator=0E/60W  schema=7E/84W  state=84l 0/7/0
+    validator codes {"ITEM_NO_CONSUMER":4,"ITEM_NO_PRODUCER":1,"ACTION_NO_PERFORMER":55}  schema codes {"warning:CUSTOM_TYPE_NOT_REGISTERED":6,"error:TRANSITION_ENDPOINTS":7,"warning:SITUATION_NO_STATE_VALUE":5,"warning:OBSERVATION_NO_OBSERVES":8,"warning:ISOLATED_EVENT":10,"warning:ACTION_NO_EPISODE":55}
+nghe.nongold        ok  lines=135  nodes=39  succ=34  fork=1  join=1  flow=0  alloc=5  diag=0/0/2  validator=0E/15W  schema=5E/28W  state=62l 0/4/0
+    validator codes {"ITEM_NO_PRODUCER":1,"ITEM_NO_CONSUMER":3,"ACTION_NO_PERFORMER":11}  schema codes {"warning:CUSTOM_TYPE_NOT_REGISTERED":4,"error:RELATION_ENDPOINT_TYPE":2,"error:TRANSITION_ENDPOINTS":3,"warning:SITUATION_NO_STATE_VALUE":3,"warning:OBSERVATION_NO_OBSERVES":4,"warning:ISOLATED_EVENT":1,"warning:ACTION_NO_EPISODE":16}
+nghe.exhaustive     ok  lines=296  nodes=79  succ=101  fork=1  join=1  flow=0  alloc=0  diag=0/0/2  validator=0E/60W  schema=10E/80W  state=84l 0/8/0
+    validator codes {"ITEM_NO_PRODUCER":4,"ITEM_NO_CONSUMER":5,"ACTION_NO_PERFORMER":51}  schema codes {"warning:CUSTOM_TYPE_NOT_REGISTERED":4,"error:TRANSITION_ENDPOINTS":10,"warning:SITUATION_NO_STATE_VALUE":7,"warning:OBSERVATION_NO_OBSERVES":9,"warning:ISOLATED_EVENT":9,"warning:ACTION_NO_EPISODE":51}

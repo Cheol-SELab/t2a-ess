@@ -1,0 +1,2405 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "R_GOLD",
+    "title": "Wildfire spread response",
+    "extraction_schema": "T2A-ESS",
+    "generation_mode": "manual_development_reference",
+    "source_units": [
+      {
+        "source_unit_id": "P1",
+        "unit_type": "paragraph",
+        "text": "The forest disaster response system consists of the wildfire situation room, the surveillance drone squadron (drones A1, A2, and A3), firefighting helicopter H-1, and the ground firefighting crew. The wildfire situation room receives drone video and weather data and operates a spread prediction model."
+      },
+      {
+        "source_unit_id": "P2",
+        "unit_type": "paragraph",
+        "text": "Outside the system are the fire headquarters and the village head, and the town office is in charge of resident evacuation guidance."
+      },
+      {
+        "source_unit_id": "P3",
+        "unit_type": "paragraph",
+        "text": "At 1:05 p.m., when drone A1 detects smoke on a ridge during patrol and transmits the coordinates and video to the situation room, the situation room issues wildfire Level 1 and dispatches the ground firefighting crew."
+      },
+      {
+        "source_unit_id": "P4",
+        "unit_type": "paragraph",
+        "text": "The situation room calculates the fire line 30 min ahead with the spread prediction model, and if the predicted fire line comes within 1 km of the village boundary, it requests the town office to prepare for resident evacuation. According to the prediction, the fire line was 1.6 km away from the village."
+      },
+      {
+        "source_unit_id": "P5",
+        "unit_type": "paragraph",
+        "text": "Drones A2 and A3 simultaneously track the east and west ends of the fire line and update the fire line position every 2 min, and A1 returns to the base for a battery replacement. When the replacement is finished, A1 is immediately deployed to monitor the south valley."
+      },
+      {
+        "source_unit_id": "P6",
+        "unit_type": "paragraph",
+        "text": "At 1:40 p.m., as the wind direction shifts to northwest and the east fire line spreads rapidly toward the village, the situation room escalates to wildfire Level 2 and requests firefighting helicopter H-1. The helicopter must arrive on site within 20 min after the request."
+      },
+      {
+        "source_unit_id": "P7",
+        "unit_type": "paragraph",
+        "text": "Until H-1 arrives, the ground firefighting crew builds a firebreak in front of the east fire line on the village side, and before the firebreak is completed, firefighters must not enter inside the fire line."
+      },
+      {
+        "source_unit_id": "P8",
+        "unit_type": "paragraph",
+        "text": "H-1, having arrived at 1:58 p.m., takes on water from a nearby reservoir and drops it on the east fire line, and for each drop, A2 films the change in fire intensity and sends it to the situation room. If the fire intensity does not weaken, the situation room instructs that the drop point be moved forward by 50 m each time."
+      },
+      {
+        "source_unit_id": "P9",
+        "unit_type": "paragraph",
+        "text": "Because the predicted fire line recalculated at 2:20 p.m. has come as close as 0.9 km to the village boundary, the situation room requests resident evacuation from the town office, and the town office, together with the village head, evacuates 42 residents to the village hall."
+      },
+      {
+        "source_unit_id": "P10",
+        "unit_type": "paragraph",
+        "text": "When the evacuation is finished, the village head confirms the number of evacuees and reports it to the town office. 3 residents with limited mobility are transported separately by the fire headquarters' ambulance."
+      },
+      {
+        "source_unit_id": "P11",
+        "unit_type": "paragraph",
+        "text": "At 2:50 p.m., when the firebreak is completed and the spread of the east fire line stops with H-1's fifth drop, the situation room lowers the wildfire from Level 2 to Level 1. However, while residual fire remains, the helicopter is not withdrawn."
+      },
+      {
+        "source_unit_id": "P12",
+        "unit_type": "paragraph",
+        "text": "At 4:00 p.m., when A3 confirms by thermal imaging that there is no residual fire, the situation room withdraws H-1 and, after handing the rekindle watch over to the ground firefighting crew, allows residents to return home. The rekindle watch continues until the next morning."
+      },
+      {
+        "source_unit_id": "P13",
+        "unit_type": "paragraph",
+        "text": "The goal of this response is to stop the spread before the wildfire reaches the village, without casualties."
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "R_SCN",
+        "label": "Wildfire spread response",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "R_EP_DETECT",
+        "label": "Detection and Level 1 response",
+        "order_index": 1,
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "episode_id": "R_EP_TRACK",
+        "label": "Fire line tracking",
+        "order_index": 2,
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "episode_id": "R_EP_ESCALATE",
+        "label": "Level 2 escalation and suppression",
+        "order_index": 3,
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "episode_id": "R_EP_EVAC",
+        "label": "Resident evacuation",
+        "order_index": 4,
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "episode_id": "R_EP_CONTAIN",
+        "label": "Spread containment and level lowering",
+        "order_index": 5,
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "episode_id": "R_EP_CLOSE",
+        "label": "Residual fire cleanup and return home",
+        "order_index": 6,
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "R_P_SYSTEM",
+        "label": "Forest disaster response system",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "R_P_ROOM",
+        "label": "Wildfire situation room",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "R_P_FLEET",
+        "label": "Surveillance drone squadron",
+        "performer_kind": "group",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "R_P_A1",
+        "label": "Drone A1",
+        "performer_kind": "platform",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "R_P_A2",
+        "label": "Drone A2",
+        "performer_kind": "platform",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "R_P_A3",
+        "label": "Drone A3",
+        "performer_kind": "platform",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "R_P_H1",
+        "label": "Firefighting helicopter H-1",
+        "performer_kind": "platform",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "R_P_GROUND",
+        "label": "Ground firefighting crew",
+        "performer_kind": "group",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "R_P_FIRE_HQ",
+        "label": "Fire headquarters",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "R_P_CHIEF",
+        "label": "Village head",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "R_P_OFFICE",
+        "label": "Town office",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "R_A_DETECT_SMOKE",
+        "label": "Detect smoke on ridge",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Drone A1",
+        "object_text": "Smoke"
+      },
+      {
+        "action_id": "R_A_SEND_COORD",
+        "label": "Transmit coordinates and video",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Drone A1",
+        "object_text": "Coordinates and video"
+      },
+      {
+        "action_id": "R_A_STAGE1",
+        "label": "Issue wildfire Level 1",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Wildfire Level 1"
+      },
+      {
+        "action_id": "R_A_DISPATCH_GROUND",
+        "label": "Dispatch ground firefighting crew",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Ground firefighting crew"
+      },
+      {
+        "action_id": "R_A_PREDICT",
+        "label": "Calculate fire line 30 min ahead",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Predicted fire line"
+      },
+      {
+        "action_id": "R_A_REQ_PREP",
+        "label": "Request resident evacuation preparation",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Resident evacuation preparation"
+      },
+      {
+        "action_id": "R_A_TRACK_EAST",
+        "label": "Track east end of fire line",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Drone A2",
+        "object_text": "East end of fire line"
+      },
+      {
+        "action_id": "R_A_TRACK_WEST",
+        "label": "Track west end of fire line",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Drone A3",
+        "object_text": "West end of fire line"
+      },
+      {
+        "action_id": "R_A_A1_RETURN",
+        "label": "A1 returns to base",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Drone A1",
+        "object_text": "Base"
+      },
+      {
+        "action_id": "R_A_BATTERY",
+        "label": "A1 battery replacement",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "object_text": "Battery"
+      },
+      {
+        "action_id": "R_A_A1_SOUTH",
+        "label": "Deploy to south valley monitoring",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Drone A1",
+        "object_text": "South valley"
+      },
+      {
+        "action_id": "R_A_STAGE2",
+        "label": "Escalate to wildfire Level 2",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Wildfire Level 2"
+      },
+      {
+        "action_id": "R_A_REQ_HELI",
+        "label": "Request firefighting helicopter",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Firefighting helicopter H-1"
+      },
+      {
+        "action_id": "R_A_FIREBREAK",
+        "label": "Build firebreak in front of east fire line",
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "primary_actor_text": "Ground firefighting crew",
+        "object_text": "Firebreak"
+      },
+      {
+        "action_id": "R_A_SCOOP",
+        "label": "Take on reservoir water",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "H-1",
+        "object_text": "Reservoir water"
+      },
+      {
+        "action_id": "R_A_DROP",
+        "label": "Drop water on east fire line",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "H-1",
+        "object_text": "Water"
+      },
+      {
+        "action_id": "R_A_FILM",
+        "label": "Film and send fire intensity change",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "Drone A2",
+        "object_text": "Change in fire intensity"
+      },
+      {
+        "action_id": "R_A_MOVE_POINT",
+        "label": "Instruct drop point to move forward 50 m",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Drop point"
+      },
+      {
+        "action_id": "R_A_REPREDICT",
+        "label": "Recalculate predicted fire line",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Predicted fire line"
+      },
+      {
+        "action_id": "R_A_REQ_EVAC",
+        "label": "Request resident evacuation",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Resident evacuation"
+      },
+      {
+        "action_id": "R_A_EVACUATE",
+        "label": "Evacuate 42 residents to village hall",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "Town office",
+        "object_text": "42 residents"
+      },
+      {
+        "action_id": "R_A_COUNT",
+        "label": "Confirm number of evacuees",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Village head",
+        "object_text": "Number of evacuees"
+      },
+      {
+        "action_id": "R_A_REPORT_COUNT",
+        "label": "Report number of evacuees to town office",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Village head",
+        "object_text": "Number of evacuees"
+      },
+      {
+        "action_id": "R_A_AMBULANCE",
+        "label": "Transport 3 residents with limited mobility by ambulance",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "object_text": "3 residents with limited mobility"
+      },
+      {
+        "action_id": "R_A_STAGE_DOWN",
+        "label": "Lower wildfire from Level 2 to Level 1",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Wildfire level"
+      },
+      {
+        "action_id": "R_A_THERMAL",
+        "label": "Check residual fire by thermal imaging",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Drone A3",
+        "object_text": "Residual fire"
+      },
+      {
+        "action_id": "R_A_WITHDRAW_HELI",
+        "label": "Withdraw H-1",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "H-1"
+      },
+      {
+        "action_id": "R_A_HANDOVER",
+        "label": "Hand rekindle watch over to ground firefighting crew",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Rekindle watch"
+      },
+      {
+        "action_id": "R_A_ALLOW_RETURN",
+        "label": "Allow residents to return home",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Situation room",
+        "object_text": "Residents' return home"
+      },
+      {
+        "action_id": "R_A_AFTERWATCH",
+        "label": "Rekindle watch",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Ground firefighting crew",
+        "object_text": "Rekindle"
+      }
+    ],
+    "items": [
+      {
+        "item_id": "R_I_COORD",
+        "label": "Smoke coordinates and video",
+        "item_type": "data",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "item_id": "R_I_PREDICTION",
+        "label": "Predicted fire line",
+        "item_type": "data",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "item_id": "R_I_WATER",
+        "label": "Reservoir water",
+        "item_type": "material",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "item_id": "R_I_FILM",
+        "label": "Fire intensity change footage",
+        "item_type": "data",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "item_id": "R_I_COUNT_REPORT",
+        "label": "Evacuee count report",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "R_SIT_NONE",
+        "label": "Wildfire response normal state",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "R_SIT_STAGE1",
+        "label": "Wildfire Level 1",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "R_SIT_STAGE2",
+        "label": "Wildfire Level 2",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "situation_id": "R_SIT_HOME",
+        "label": "Residents at home state",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "situation_id": "R_SIT_EVAC",
+        "label": "Residents evacuated state",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "R_SV_NONE",
+        "subject_text": "Wildfire response level",
+        "variable": "Level",
+        "value": "Normal",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "R_SV_STAGE1",
+        "subject_text": "Wildfire response level",
+        "variable": "Level",
+        "value": "Level 1",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "R_SV_STAGE2",
+        "subject_text": "Wildfire response level",
+        "variable": "Level",
+        "value": "Level 2",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "state_value_id": "R_SV_HOME",
+        "subject_text": "Residents",
+        "variable": "Location",
+        "value": "Home",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "state_value_id": "R_SV_EVAC",
+        "subject_text": "Residents",
+        "variable": "Location",
+        "value": "Evacuated to village hall",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "R_EVT_SMOKE",
+        "label": "Detect smoke on ridge",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "event_id": "R_EVT_16KM",
+        "label": "Predicted fire line 1.6 km from village",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "event_id": "R_EVT_WIND_SHIFT",
+        "label": "East fire line spreads due to shift to northwest wind",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "event_id": "R_EVT_09KM",
+        "label": "Predicted fire line approaches to 0.9 km from village boundary",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "event_id": "R_EVT_SPREAD_STOP",
+        "label": "East fire line spread stops",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "event_id": "R_EVT_NO_EMBERS",
+        "label": "No residual fire confirmed",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "R_TR_TO1",
+        "label": "From normal to wildfire Level 1",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "transition_id": "R_TR_TO2",
+        "label": "From wildfire Level 1 to Level 2",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "transition_id": "R_TR_DOWN1",
+        "label": "From wildfire Level 2 to Level 1",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "transition_id": "R_TR_EVAC",
+        "label": "Residents from at home to evacuated",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "transition_id": "R_TR_RETURN",
+        "label": "Residents from evacuated to returned home",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "R_OBS_SMOKE",
+        "label": "Detect smoke on ridge",
+        "observer_text": "Drone A1",
+        "observed_text": "Smoke",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "observation_id": "R_OBS_TRACK",
+        "label": "Track fire line position",
+        "observer_text": "Drones A2 and A3",
+        "observed_text": "Fire line position",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "observation_id": "R_OBS_SOUTH",
+        "label": "South valley monitoring",
+        "observer_text": "Drone A1",
+        "observed_text": "South valley",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "observation_id": "R_OBS_FILM",
+        "label": "Film fire intensity change",
+        "observer_text": "Drone A2",
+        "observed_text": "Change in fire intensity",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "observation_id": "R_OBS_COUNT",
+        "label": "Confirm number of evacuees",
+        "observer_text": "Village head",
+        "observed_text": "Number of evacuees",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "observation_id": "R_OBS_THERMAL",
+        "label": "Thermal imaging residual fire check",
+        "observer_text": "Drone A3",
+        "observed_text": "Residual fire",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      },
+      {
+        "observation_id": "R_OBS_AFTER",
+        "label": "Rekindle watch",
+        "observer_text": "Ground firefighting crew",
+        "observed_text": "Rekindle",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "R_F01",
+        "label": "Transmit coordinates after smoke detection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "R_F02",
+        "label": "Issue Level 1 after transmission",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "R_F03",
+        "label": "Dispatch firefighting crew after issuance",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "R_F04",
+        "label": "Request evacuation preparation if fire line within 1 km",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "R_F05",
+        "label": "Replace battery after returning to base",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "R_F06",
+        "label": "Monitor south valley after replacement",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "R_F07",
+        "label": "Request helicopter after Level 2 escalation",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "R_F08",
+        "label": "Drop after taking on water",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "R_F09",
+        "label": "Film fire intensity for each drop",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "R_F10",
+        "label": "Move drop point forward if fire intensity does not weaken",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "R_F11",
+        "label": "Request evacuation due to approach to 0.9 km",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "flow_id": "R_F12",
+        "label": "Evacuate residents after evacuation request",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "flow_id": "R_F13",
+        "label": "Confirm headcount after evacuation is finished",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "R_F14",
+        "label": "Report after headcount confirmation",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "R_F15",
+        "label": "Lower level after firebreak completion",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "flow_id": "R_F16",
+        "label": "Lower level after spread stops",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "flow_id": "R_F17",
+        "label": "Withdraw helicopter after confirming no residual fire",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      },
+      {
+        "flow_id": "R_F18",
+        "label": "Hand over rekindle watch after withdrawal",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      },
+      {
+        "flow_id": "R_F19",
+        "label": "Allow return home after handover",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      },
+      {
+        "flow_id": "R_F20",
+        "label": "Rekindle watch after handover",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "R_C01",
+        "label": "Judge predicted fire line within 1 km",
+        "control_type": "decision",
+        "guard_texts": [
+          "Predicted fire line within 1 km of village boundary"
+        ],
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "control_id": "R_C02",
+        "label": "Simultaneous tracking by A2 and A3",
+        "control_type": "fork",
+        "guard_texts": [],
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "control_id": "R_C03",
+        "label": "Update fire line position every 2 min",
+        "control_type": "loop",
+        "guard_texts": [
+          "Every 2 min"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "control_id": "R_C04",
+        "label": "No entry inside fire line before firebreak completion",
+        "control_type": "temporal_exclusion",
+        "guard_texts": [
+          "No entry inside the fire line before the firebreak is completed"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "control_id": "R_C05",
+        "label": "Repeated filming for each drop",
+        "control_type": "loop",
+        "guard_texts": [
+          "For each drop"
+        ],
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "control_id": "R_C06",
+        "label": "Judge fire intensity weakening",
+        "control_type": "decision",
+        "guard_texts": [
+          "Fire intensity does not weaken"
+        ],
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "control_id": "R_C07",
+        "label": "Wait for firebreak completion and spread stop",
+        "control_type": "join",
+        "guard_texts": [
+          "Firebreak completed and east fire line spread stopped"
+        ],
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "control_id": "R_C08",
+        "label": "No helicopter withdrawal during residual fire",
+        "control_type": "temporal_exclusion",
+        "guard_texts": [
+          "No helicopter withdrawal while residual fire remains"
+        ],
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "R_CN_1KM",
+        "label": "Predicted fire line 1 km from village boundary",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "parameter": "Predicted fire line distance",
+        "operator": "<=",
+        "value": 1,
+        "unit": "km"
+      },
+      {
+        "constraint_id": "R_CN_2MIN",
+        "label": "Fire line position update interval 2 min",
+        "constraint_kind": [
+          "period"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "parameter": "Update interval",
+        "operator": "=",
+        "value": 2,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "R_CN_20MIN",
+        "label": "Helicopter arrival within 20 min after request",
+        "constraint_kind": [
+          "deadline"
+        ],
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "parameter": "Helicopter arrival time",
+        "operator": "<=",
+        "value": 20,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "R_CN_NO_ENTRY",
+        "label": "No entry inside fire line before firebreak completion",
+        "constraint_kind": [
+          "prohibition"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "parameter": "Entry inside fire line",
+        "operator": "=",
+        "value": "After firebreak completion",
+        "unit": null
+      },
+      {
+        "constraint_id": "R_CN_50M",
+        "label": "Drop point moves forward 50 m each time",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "parameter": "Drop point movement",
+        "operator": "=",
+        "value": 50,
+        "unit": "m"
+      },
+      {
+        "constraint_id": "R_CN_EMBERS",
+        "label": "No helicopter withdrawal while residual fire remains",
+        "constraint_kind": [
+          "prohibition"
+        ],
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "parameter": "Helicopter withdrawal",
+        "operator": "=",
+        "value": "After residual fire is extinguished",
+        "unit": null
+      },
+      {
+        "constraint_id": "R_CN_UNTIL_AM",
+        "label": "Rekindle watch until next morning",
+        "constraint_kind": [
+          "duration"
+        ],
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "parameter": "Rekindle watch period",
+        "operator": "=",
+        "value": "Until next morning",
+        "unit": null
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "R_G_NO_CASUALTY",
+        "label": "No casualties",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      },
+      {
+        "goal_id": "R_G_BEFORE_VILLAGE",
+        "label": "Stop wildfire spread before it reaches the village",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "R_R_BATTERY",
+        "label": "Battery replacement",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "reason_id": "R_R_WIND",
+        "label": "East fire line spreads due to wind direction shift",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "reason_id": "R_R_CLOSE",
+        "label": "Predicted fire line approaches to 0.9 km",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "reason_id": "R_R_SPREAD_STOP",
+        "label": "Firebreak completion and spread stop",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "R_REL_001",
+        "relation_type": "has_episode",
+        "source_slot_id": "R_SCN",
+        "target_slot_id": "R_EP_DETECT",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "R_REL_002",
+        "relation_type": "has_episode",
+        "source_slot_id": "R_SCN",
+        "target_slot_id": "R_EP_TRACK",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "R_REL_003",
+        "relation_type": "has_episode",
+        "source_slot_id": "R_SCN",
+        "target_slot_id": "R_EP_ESCALATE",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "R_REL_004",
+        "relation_type": "has_episode",
+        "source_slot_id": "R_SCN",
+        "target_slot_id": "R_EP_EVAC",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "R_REL_005",
+        "relation_type": "has_episode",
+        "source_slot_id": "R_SCN",
+        "target_slot_id": "R_EP_CONTAIN",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "R_REL_006",
+        "relation_type": "has_episode",
+        "source_slot_id": "R_SCN",
+        "target_slot_id": "R_EP_CLOSE",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "R_REL_007",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_DETECT",
+        "target_slot_id": "R_A_DETECT_SMOKE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_008",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_DETECT",
+        "target_slot_id": "R_A_SEND_COORD",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_009",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_DETECT",
+        "target_slot_id": "R_A_STAGE1",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_010",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_DETECT",
+        "target_slot_id": "R_A_DISPATCH_GROUND",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_011",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_DETECT",
+        "target_slot_id": "R_A_PREDICT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_012",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_DETECT",
+        "target_slot_id": "R_A_REQ_PREP",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_013",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_TRACK",
+        "target_slot_id": "R_A_TRACK_EAST",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_014",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_TRACK",
+        "target_slot_id": "R_A_TRACK_WEST",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_015",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_TRACK",
+        "target_slot_id": "R_A_A1_RETURN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_016",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_TRACK",
+        "target_slot_id": "R_A_BATTERY",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_017",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_TRACK",
+        "target_slot_id": "R_A_A1_SOUTH",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_018",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_ESCALATE",
+        "target_slot_id": "R_A_STAGE2",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_019",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_ESCALATE",
+        "target_slot_id": "R_A_REQ_HELI",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_020",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_ESCALATE",
+        "target_slot_id": "R_A_FIREBREAK",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_021",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_ESCALATE",
+        "target_slot_id": "R_A_SCOOP",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_022",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_ESCALATE",
+        "target_slot_id": "R_A_DROP",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_023",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_ESCALATE",
+        "target_slot_id": "R_A_FILM",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_024",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_ESCALATE",
+        "target_slot_id": "R_A_MOVE_POINT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_025",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_EVAC",
+        "target_slot_id": "R_A_REPREDICT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_026",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_EVAC",
+        "target_slot_id": "R_A_REQ_EVAC",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_027",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_EVAC",
+        "target_slot_id": "R_A_EVACUATE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_028",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_EVAC",
+        "target_slot_id": "R_A_COUNT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_029",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_EVAC",
+        "target_slot_id": "R_A_REPORT_COUNT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_030",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_EVAC",
+        "target_slot_id": "R_A_AMBULANCE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_031",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_CONTAIN",
+        "target_slot_id": "R_A_STAGE_DOWN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_032",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_CLOSE",
+        "target_slot_id": "R_A_THERMAL",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_033",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_CLOSE",
+        "target_slot_id": "R_A_WITHDRAW_HELI",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_034",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_CLOSE",
+        "target_slot_id": "R_A_HANDOVER",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_035",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_CLOSE",
+        "target_slot_id": "R_A_ALLOW_RETURN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_036",
+        "relation_type": "custom",
+        "source_slot_id": "R_EP_CLOSE",
+        "target_slot_id": "R_A_AFTERWATCH",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "R_REL_037",
+        "relation_type": "has_part",
+        "source_slot_id": "R_P_SYSTEM",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_038",
+        "relation_type": "has_part",
+        "source_slot_id": "R_P_SYSTEM",
+        "target_slot_id": "R_P_FLEET",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_039",
+        "relation_type": "has_part",
+        "source_slot_id": "R_P_SYSTEM",
+        "target_slot_id": "R_P_H1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_040",
+        "relation_type": "has_part",
+        "source_slot_id": "R_P_SYSTEM",
+        "target_slot_id": "R_P_GROUND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_041",
+        "relation_type": "has_part",
+        "source_slot_id": "R_P_FLEET",
+        "target_slot_id": "R_P_A1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_042",
+        "relation_type": "has_part",
+        "source_slot_id": "R_P_FLEET",
+        "target_slot_id": "R_P_A2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_043",
+        "relation_type": "has_part",
+        "source_slot_id": "R_P_FLEET",
+        "target_slot_id": "R_P_A3",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_044",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_DETECT_SMOKE",
+        "target_slot_id": "R_P_A1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_045",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_SEND_COORD",
+        "target_slot_id": "R_P_A1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_046",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_STAGE1",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_047",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_DISPATCH_GROUND",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_048",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_PREDICT",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_049",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_REQ_PREP",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_050",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_TRACK_EAST",
+        "target_slot_id": "R_P_A2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_051",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_TRACK_WEST",
+        "target_slot_id": "R_P_A3",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_052",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_A1_RETURN",
+        "target_slot_id": "R_P_A1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_053",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_A1_SOUTH",
+        "target_slot_id": "R_P_A1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_054",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_STAGE2",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_055",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_REQ_HELI",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_056",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_FIREBREAK",
+        "target_slot_id": "R_P_GROUND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_057",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_SCOOP",
+        "target_slot_id": "R_P_H1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_058",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_DROP",
+        "target_slot_id": "R_P_H1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_059",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_FILM",
+        "target_slot_id": "R_P_A2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_060",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_MOVE_POINT",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_061",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_REPREDICT",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_062",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_REQ_EVAC",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_063",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_EVACUATE",
+        "target_slot_id": "R_P_OFFICE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_064",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_EVACUATE",
+        "target_slot_id": "R_P_CHIEF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_065",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_COUNT",
+        "target_slot_id": "R_P_CHIEF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_066",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_REPORT_COUNT",
+        "target_slot_id": "R_P_CHIEF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_067",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_STAGE_DOWN",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_068",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_THERMAL",
+        "target_slot_id": "R_P_A3",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_069",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_WITHDRAW_HELI",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_070",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_HANDOVER",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_071",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_ALLOW_RETURN",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_072",
+        "relation_type": "performed_by",
+        "source_slot_id": "R_A_AFTERWATCH",
+        "target_slot_id": "R_P_GROUND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_073",
+        "relation_type": "produces_item",
+        "source_slot_id": "R_A_SEND_COORD",
+        "target_slot_id": "R_I_COORD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_074",
+        "relation_type": "provided_to",
+        "source_slot_id": "R_A_SEND_COORD",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_075",
+        "relation_type": "acts_on",
+        "source_slot_id": "R_A_DISPATCH_GROUND",
+        "target_slot_id": "R_P_GROUND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_076",
+        "relation_type": "produces_item",
+        "source_slot_id": "R_A_PREDICT",
+        "target_slot_id": "R_I_PREDICTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_077",
+        "relation_type": "provided_to",
+        "source_slot_id": "R_A_REQ_PREP",
+        "target_slot_id": "R_P_OFFICE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_078",
+        "relation_type": "acts_on",
+        "source_slot_id": "R_A_REQ_HELI",
+        "target_slot_id": "R_P_H1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_079",
+        "relation_type": "uses_item",
+        "source_slot_id": "R_A_SCOOP",
+        "target_slot_id": "R_I_WATER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_080",
+        "relation_type": "uses_item",
+        "source_slot_id": "R_A_DROP",
+        "target_slot_id": "R_I_WATER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_081",
+        "relation_type": "produces_item",
+        "source_slot_id": "R_A_FILM",
+        "target_slot_id": "R_I_FILM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_082",
+        "relation_type": "provided_to",
+        "source_slot_id": "R_A_FILM",
+        "target_slot_id": "R_P_ROOM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_083",
+        "relation_type": "provided_to",
+        "source_slot_id": "R_A_MOVE_POINT",
+        "target_slot_id": "R_P_H1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_084",
+        "relation_type": "provided_to",
+        "source_slot_id": "R_A_REQ_EVAC",
+        "target_slot_id": "R_P_OFFICE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_085",
+        "relation_type": "produces_item",
+        "source_slot_id": "R_A_REPORT_COUNT",
+        "target_slot_id": "R_I_COUNT_REPORT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_086",
+        "relation_type": "provided_to",
+        "source_slot_id": "R_A_REPORT_COUNT",
+        "target_slot_id": "R_P_OFFICE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_087",
+        "relation_type": "acts_on",
+        "source_slot_id": "R_A_WITHDRAW_HELI",
+        "target_slot_id": "R_P_H1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_088",
+        "relation_type": "provided_to",
+        "source_slot_id": "R_A_HANDOVER",
+        "target_slot_id": "R_P_GROUND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_089",
+        "relation_type": "produces_item",
+        "source_slot_id": "R_A_REPREDICT",
+        "target_slot_id": "R_I_PREDICTION",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_090",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F01",
+        "target_slot_id": "R_A_DETECT_SMOKE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_091",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F01",
+        "target_slot_id": "R_A_SEND_COORD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_092",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F02",
+        "target_slot_id": "R_A_SEND_COORD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_093",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F02",
+        "target_slot_id": "R_A_STAGE1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_094",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F03",
+        "target_slot_id": "R_A_STAGE1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_095",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F03",
+        "target_slot_id": "R_A_DISPATCH_GROUND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_096",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F04",
+        "target_slot_id": "R_A_PREDICT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_097",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F04",
+        "target_slot_id": "R_A_REQ_PREP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_098",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F05",
+        "target_slot_id": "R_A_A1_RETURN",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "R_REL_099",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F05",
+        "target_slot_id": "R_A_BATTERY",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "R_REL_100",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F06",
+        "target_slot_id": "R_A_BATTERY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_101",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F06",
+        "target_slot_id": "R_A_A1_SOUTH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_102",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F07",
+        "target_slot_id": "R_A_STAGE2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_103",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F07",
+        "target_slot_id": "R_A_REQ_HELI",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_104",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F08",
+        "target_slot_id": "R_A_SCOOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_105",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F08",
+        "target_slot_id": "R_A_DROP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_106",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F09",
+        "target_slot_id": "R_A_DROP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_107",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F09",
+        "target_slot_id": "R_A_FILM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_108",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F10",
+        "target_slot_id": "R_A_FILM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_109",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F10",
+        "target_slot_id": "R_A_MOVE_POINT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_110",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F11",
+        "target_slot_id": "R_A_REPREDICT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_111",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F11",
+        "target_slot_id": "R_A_REQ_EVAC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_112",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F12",
+        "target_slot_id": "R_A_REQ_EVAC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_113",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F12",
+        "target_slot_id": "R_A_EVACUATE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_114",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F13",
+        "target_slot_id": "R_A_EVACUATE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_115",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F13",
+        "target_slot_id": "R_A_COUNT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_116",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F14",
+        "target_slot_id": "R_A_COUNT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_117",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F14",
+        "target_slot_id": "R_A_REPORT_COUNT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_118",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F15",
+        "target_slot_id": "R_A_FIREBREAK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_119",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F15",
+        "target_slot_id": "R_A_STAGE_DOWN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_120",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F16",
+        "target_slot_id": "R_A_DROP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_121",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F16",
+        "target_slot_id": "R_A_STAGE_DOWN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_122",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F17",
+        "target_slot_id": "R_A_THERMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_123",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F17",
+        "target_slot_id": "R_A_WITHDRAW_HELI",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_124",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F18",
+        "target_slot_id": "R_A_WITHDRAW_HELI",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_125",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F18",
+        "target_slot_id": "R_A_HANDOVER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_126",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F19",
+        "target_slot_id": "R_A_HANDOVER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_127",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F19",
+        "target_slot_id": "R_A_ALLOW_RETURN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_128",
+        "relation_type": "flow_source",
+        "source_slot_id": "R_F20",
+        "target_slot_id": "R_A_HANDOVER",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "R_REL_129",
+        "relation_type": "flow_target",
+        "source_slot_id": "R_F20",
+        "target_slot_id": "R_A_AFTERWATCH",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "R_REL_130",
+        "relation_type": "controls_flow",
+        "source_slot_id": "R_C01",
+        "target_slot_id": "R_F04",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_131",
+        "relation_type": "controls_flow",
+        "source_slot_id": "R_C01",
+        "target_slot_id": "R_F11",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_132",
+        "relation_type": "controls_flow",
+        "source_slot_id": "R_C05",
+        "target_slot_id": "R_F09",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_133",
+        "relation_type": "controls_flow",
+        "source_slot_id": "R_C06",
+        "target_slot_id": "R_F10",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_134",
+        "relation_type": "controls_flow",
+        "source_slot_id": "R_C07",
+        "target_slot_id": "R_F15",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_135",
+        "relation_type": "controls_flow",
+        "source_slot_id": "R_C07",
+        "target_slot_id": "R_F16",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_136",
+        "relation_type": "controls_flow",
+        "source_slot_id": "R_C08",
+        "target_slot_id": "R_F17",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_137",
+        "relation_type": "has_state_value",
+        "source_slot_id": "R_SIT_NONE",
+        "target_slot_id": "R_SV_NONE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_138",
+        "relation_type": "has_state_value",
+        "source_slot_id": "R_SIT_STAGE1",
+        "target_slot_id": "R_SV_STAGE1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_139",
+        "relation_type": "has_state_value",
+        "source_slot_id": "R_SIT_STAGE2",
+        "target_slot_id": "R_SV_STAGE2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_140",
+        "relation_type": "has_state_value",
+        "source_slot_id": "R_SIT_HOME",
+        "target_slot_id": "R_SV_HOME",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_141",
+        "relation_type": "has_state_value",
+        "source_slot_id": "R_SIT_EVAC",
+        "target_slot_id": "R_SV_EVAC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_142",
+        "relation_type": "from_situation",
+        "source_slot_id": "R_TR_TO1",
+        "target_slot_id": "R_SIT_NONE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_143",
+        "relation_type": "to_situation",
+        "source_slot_id": "R_TR_TO1",
+        "target_slot_id": "R_SIT_STAGE1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_144",
+        "relation_type": "triggers",
+        "source_slot_id": "R_EVT_SMOKE",
+        "target_slot_id": "R_TR_TO1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_145",
+        "relation_type": "from_situation",
+        "source_slot_id": "R_TR_TO2",
+        "target_slot_id": "R_SIT_STAGE1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_146",
+        "relation_type": "to_situation",
+        "source_slot_id": "R_TR_TO2",
+        "target_slot_id": "R_SIT_STAGE2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_147",
+        "relation_type": "triggers",
+        "source_slot_id": "R_EVT_WIND_SHIFT",
+        "target_slot_id": "R_TR_TO2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_148",
+        "relation_type": "from_situation",
+        "source_slot_id": "R_TR_DOWN1",
+        "target_slot_id": "R_SIT_STAGE2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_149",
+        "relation_type": "to_situation",
+        "source_slot_id": "R_TR_DOWN1",
+        "target_slot_id": "R_SIT_STAGE1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_150",
+        "relation_type": "triggers",
+        "source_slot_id": "R_EVT_SPREAD_STOP",
+        "target_slot_id": "R_TR_DOWN1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_151",
+        "relation_type": "from_situation",
+        "source_slot_id": "R_TR_EVAC",
+        "target_slot_id": "R_SIT_HOME",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_152",
+        "relation_type": "to_situation",
+        "source_slot_id": "R_TR_EVAC",
+        "target_slot_id": "R_SIT_EVAC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_153",
+        "relation_type": "from_situation",
+        "source_slot_id": "R_TR_RETURN",
+        "target_slot_id": "R_SIT_EVAC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_154",
+        "relation_type": "to_situation",
+        "source_slot_id": "R_TR_RETURN",
+        "target_slot_id": "R_SIT_HOME",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_155",
+        "relation_type": "triggers",
+        "source_slot_id": "R_EVT_WIND_SHIFT",
+        "target_slot_id": "R_A_STAGE2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_156",
+        "relation_type": "triggers",
+        "source_slot_id": "R_EVT_09KM",
+        "target_slot_id": "R_A_REQ_EVAC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_157",
+        "relation_type": "triggers",
+        "source_slot_id": "R_EVT_SPREAD_STOP",
+        "target_slot_id": "R_A_STAGE_DOWN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_158",
+        "relation_type": "triggers",
+        "source_slot_id": "R_EVT_NO_EMBERS",
+        "target_slot_id": "R_A_WITHDRAW_HELI",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_159",
+        "relation_type": "observes",
+        "source_slot_id": "R_OBS_SMOKE",
+        "target_slot_id": "R_EVT_SMOKE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_160",
+        "relation_type": "observes",
+        "source_slot_id": "R_OBS_THERMAL",
+        "target_slot_id": "R_EVT_NO_EMBERS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_161",
+        "relation_type": "constrained_by",
+        "source_slot_id": "R_A_REQ_PREP",
+        "target_slot_id": "R_CN_1KM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_162",
+        "relation_type": "constrained_by",
+        "source_slot_id": "R_A_TRACK_EAST",
+        "target_slot_id": "R_CN_2MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_163",
+        "relation_type": "constrained_by",
+        "source_slot_id": "R_A_REQ_HELI",
+        "target_slot_id": "R_CN_20MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_164",
+        "relation_type": "constrained_by",
+        "source_slot_id": "R_A_FIREBREAK",
+        "target_slot_id": "R_CN_NO_ENTRY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_165",
+        "relation_type": "constrained_by",
+        "source_slot_id": "R_A_MOVE_POINT",
+        "target_slot_id": "R_CN_50M",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_166",
+        "relation_type": "constrained_by",
+        "source_slot_id": "R_A_WITHDRAW_HELI",
+        "target_slot_id": "R_CN_EMBERS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_167",
+        "relation_type": "constrained_by",
+        "source_slot_id": "R_A_AFTERWATCH",
+        "target_slot_id": "R_CN_UNTIL_AM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_168",
+        "relation_type": "has_goal",
+        "source_slot_id": "R_SCN",
+        "target_slot_id": "R_G_NO_CASUALTY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_169",
+        "relation_type": "has_goal",
+        "source_slot_id": "R_SCN",
+        "target_slot_id": "R_G_BEFORE_VILLAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_170",
+        "relation_type": "has_reason",
+        "source_slot_id": "R_A_A1_RETURN",
+        "target_slot_id": "R_R_BATTERY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_171",
+        "relation_type": "has_reason",
+        "source_slot_id": "R_A_STAGE2",
+        "target_slot_id": "R_R_WIND",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_172",
+        "relation_type": "has_reason",
+        "source_slot_id": "R_A_REQ_EVAC",
+        "target_slot_id": "R_R_CLOSE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "R_REL_173",
+        "relation_type": "has_reason",
+        "source_slot_id": "R_A_STAGE_DOWN",
+        "target_slot_id": "R_R_SPREAD_STOP",
+        "evidence_level": "explicit"
+      }
+    ]
+  }
+}

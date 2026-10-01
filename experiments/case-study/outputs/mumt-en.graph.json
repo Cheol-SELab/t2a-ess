@@ -1,0 +1,1172 @@
+{
+  "nodes": [
+    {
+      "id": "ItemInputEdge",
+      "name": "ItemInputEdge",
+      "kind": "ItemDefinition",
+      "type": "ItemDefinition",
+      "declaredName": "ItemInputEdge",
+      "qualifiedName": "ItemInputEdge"
+    },
+    {
+      "id": "ItemOutputEdge",
+      "name": "ItemOutputEdge",
+      "kind": "ItemDefinition",
+      "type": "ItemDefinition",
+      "declaredName": "ItemOutputEdge",
+      "qualifiedName": "ItemOutputEdge"
+    },
+    {
+      "id": "TriggeringItemInputEdge",
+      "name": "TriggeringItemInputEdge",
+      "kind": "ItemDefinition",
+      "type": "ItemDefinition",
+      "declaredName": "TriggeringItemInputEdge",
+      "qualifiedName": "TriggeringItemInputEdge"
+    },
+    {
+      "id": "Performer",
+      "name": "Performer",
+      "kind": "PartDefinition",
+      "type": "PartDefinition",
+      "declaredName": "Performer",
+      "qualifiedName": "Performer"
+    },
+    {
+      "id": "Company commander",
+      "name": "Company commander",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Company commander",
+      "qualifiedName": "Company commander",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "TDSS",
+      "name": "TDSS",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "TDSS",
+      "qualifiedName": "TDSS",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Recon drone team",
+      "name": "Recon drone team",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Recon drone team",
+      "qualifiedName": "Recon drone team",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Drone 1",
+      "name": "Drone 1",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Drone 1",
+      "qualifiedName": "Drone 1",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Drone 2",
+      "name": "Drone 2",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Drone 2",
+      "qualifiedName": "Drone 2",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Drone 3",
+      "name": "Drone 3",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Drone 3",
+      "qualifiedName": "Drone 3",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Platoons",
+      "name": "Platoons",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Platoons",
+      "qualifiedName": "Platoons",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Battalion server",
+      "name": "Battalion server",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Battalion server",
+      "qualifiedName": "Battalion server",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Enemy",
+      "name": "Enemy",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Enemy",
+      "qualifiedName": "Enemy",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "Platoon 2",
+      "name": "Platoon 2",
+      "kind": "PartUsage",
+      "type": "PartUsage",
+      "declaredName": "Platoon 2",
+      "qualifiedName": "Platoon 2",
+      "declaredType": "Performer",
+      "metadataTag": "Performer",
+      "declaredShortName": "#Performer"
+    },
+    {
+      "id": "MUM-T attack operation under EW",
+      "name": "MUM-T attack operation under EW",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "declaredName": "MUM-T attack operation under EW",
+      "qualifiedName": "MUM-T attack operation under EW",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Drone video stream",
+              "body": "",
+              "label": "Drone video stream"
+            },
+            {
+              "name": "Summary track data",
+              "body": "",
+              "label": "Summary track data"
+            },
+            {
+              "name": "Company SA summary",
+              "body": "",
+              "label": "Company SA summary"
+            },
+            {
+              "name": "FPV threat alert",
+              "body": "",
+              "label": "FPV threat alert"
+            },
+            {
+              "name": "Emergency broadcast message",
+              "body": "",
+              "label": "Emergency broadcast message"
+            },
+            {
+              "name": "Disconnection-period report",
+              "body": "",
+              "label": "Disconnection-period report"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "name": "E1 Preparation under normal comms",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW",
+      "declaredName": "E1 Preparation under normal comms",
+      "qualifiedName": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms",
+      "name": "Run TDSS self-test and check comms",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "declaredName": "Run TDSS self-test and check comms",
+      "qualifiedName": "MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance",
+      "name": "Launch drones and deploy for surveillance",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "declaredName": "Launch drones and deploy for surveillance",
+      "qualifiedName": "MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "name": "E2 Observation post and FPV threat",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW",
+      "declaredName": "E2 Observation post and FPV threat",
+      "qualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP",
+      "name": "Detect heat source of enemy OP",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "declaredName": "Detect heat source of enemy OP",
+      "qualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour",
+      "name": "Decide right-flank detour",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "declaredName": "Decide right-flank detour",
+      "qualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert",
+      "name": "Issue FPV threat alert",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "declaredName": "Issue FPV threat alert",
+      "qualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "FPV threat alert",
+              "body": "",
+              "label": "← FPV threat alert : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch",
+      "name": "Order dispersion and air watch",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "declaredName": "Order dispersion and air watch",
+      "qualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV",
+      "name": "Evade FPV",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "declaredName": "Evade FPV",
+      "qualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1",
+      "name": "New Start Concurrency_1",
+      "kind": "ForkNode",
+      "type": "ForkNode",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "declaredName": "New Start Concurrency_1",
+      "qualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1",
+      "name": "New End Concurrency_1",
+      "kind": "JoinNode",
+      "type": "JoinNode",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "declaredName": "New End Concurrency_1",
+      "qualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "name": "E3 EW jamming and comms degradation",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW",
+      "declaredName": "E3 EW jamming and comms degradation",
+      "qualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "compartments": [
+        {
+          "key": "attributes",
+          "items": [
+            {
+              "name": "while comms remain disconnected",
+              "body": "",
+              "label": "while comms remain disconnected : ScalarValues::Boolean"
+            }
+          ],
+          "collapsed": false
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis",
+      "name": "Switch drones to edge-AI analysis",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "declaredName": "Switch drones to edge-AI analysis",
+      "qualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Drone video stream",
+              "body": "",
+              "label": "→ Drone video stream : ItemInputEdge",
+              "declaredType": "ItemInputEdge",
+              "direction": "in"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function",
+      "borderNodes": [
+        {
+          "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis::Summary track data",
+          "name": "Summary track data",
+          "typeName": "ItemOutputEdge",
+          "type": "ItemUsage",
+          "nodeType": "item",
+          "side": "S",
+          "offset": 0.1,
+          "isParameter": false,
+          "direction": "out"
+        }
+      ]
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop",
+      "name": "Activate local-sensor survival loop",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "declaredName": "Activate local-sensor survival loop",
+      "qualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast",
+      "name": "Transmit drone emergency broadcast",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "declaredName": "Transmit drone emergency broadcast",
+      "qualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Emergency broadcast message",
+              "body": "",
+              "label": "← Emergency broadcast message : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert",
+      "name": "Deploy smoke and evade after ATGM alert",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "declaredName": "Deploy smoke and evade after ATGM alert",
+      "qualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New Start Concurrency_2",
+      "name": "New Start Concurrency_2",
+      "kind": "ForkNode",
+      "type": "ForkNode",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "declaredName": "New Start Concurrency_2",
+      "qualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New Start Concurrency_2"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New End Concurrency_2",
+      "name": "New End Concurrency_2",
+      "kind": "JoinNode",
+      "type": "JoinNode",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "declaredName": "New End Concurrency_2",
+      "qualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New End Concurrency_2"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "name": "E4 Comms recovery and attack resumption",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW",
+      "declaredName": "E4 Comms recovery and attack resumption",
+      "qualifiedName": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "compartments": [
+        {
+          "key": "attributes",
+          "items": [
+            {
+              "name": "limited mode after link is stable",
+              "body": "",
+              "label": "limited mode after link is stable : ScalarValues::Boolean"
+            }
+          ],
+          "collapsed": false
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA",
+      "name": "Resynchronize SA",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "declaredName": "Resynchronize SA",
+      "qualifiedName": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Company SA summary",
+              "body": "",
+              "label": "← Company SA summary : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function",
+      "borderNodes": [
+        {
+          "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA::Summary track data",
+          "name": "Summary track data",
+          "typeName": "ItemInputEdge",
+          "type": "ItemUsage",
+          "nodeType": "item",
+          "side": "N",
+          "offset": 0.1,
+          "isParameter": false,
+          "direction": "in"
+        }
+      ]
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period",
+      "name": "Report disconnection period",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "declaredName": "Report disconnection period",
+      "qualifiedName": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period",
+      "compartments": [
+        {
+          "key": "items",
+          "items": [
+            {
+              "name": "Disconnection-period report",
+              "body": "",
+              "label": "← Disconnection-period report : ItemOutputEdge",
+              "declaredType": "ItemOutputEdge",
+              "direction": "out"
+            }
+          ],
+          "collapsed": false,
+          "layout": "freeform"
+        }
+      ],
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver",
+      "name": "Resume attack maneuver",
+      "kind": "ActionUsage",
+      "type": "ActionUsage",
+      "parent": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "declaredName": "Resume attack maneuver",
+      "qualifiedName": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver",
+      "metadataTag": "Function",
+      "declaredShortName": "#Function"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "declaredName": "start",
+      "qualifiedName": "MUM-T attack operation under EW::E1 Preparation under normal comms::start"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "declaredName": "start",
+      "qualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat::start"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "declaredName": "start",
+      "qualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::start"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "declaredName": "start",
+      "qualifiedName": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::start"
+    },
+    {
+      "id": "MUM-T attack operation under EW::start",
+      "name": "start",
+      "kind": "StartAction",
+      "type": "StartAction",
+      "parent": "MUM-T attack operation under EW",
+      "declaredName": "start",
+      "qualifiedName": "MUM-T attack operation under EW::start"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "declaredName": "done",
+      "qualifiedName": "MUM-T attack operation under EW::E1 Preparation under normal comms::done"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "declaredName": "done",
+      "qualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat::done"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "declaredName": "done",
+      "qualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::done"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "declaredName": "done",
+      "qualifiedName": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::done"
+    },
+    {
+      "id": "MUM-T attack operation under EW::done",
+      "name": "done",
+      "kind": "DoneAction",
+      "type": "DoneAction",
+      "parent": "MUM-T attack operation under EW",
+      "declaredName": "done",
+      "qualifiedName": "MUM-T attack operation under EW::done"
+    }
+  ],
+  "edges": [
+    {
+      "id": "Root->IMMBaseSchema:namespaceimport",
+      "source": "Root",
+      "target": "IMMBaseSchema",
+      "kind": "namespaceimport",
+      "data": {
+        "importsAll": false,
+        "declaredName": null
+      }
+    },
+    {
+      "id": "Root->ScalarValues:namespaceimport",
+      "source": "Root",
+      "target": "ScalarValues",
+      "kind": "namespaceimport",
+      "data": {
+        "importsAll": false,
+        "declaredName": null
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW->MUM-T attack operation under EW::E1 Preparation under normal comms:containment",
+      "source": "MUM-T attack operation under EW",
+      "target": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms->MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms:containment",
+      "source": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "target": "MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms->MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance:containment",
+      "source": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "target": "MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms->TDSS:allocation",
+      "source": "MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms",
+      "target": "TDSS",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance->Recon drone team:allocation",
+      "source": "MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance",
+      "target": "Recon drone team",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::start->MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms:succession",
+      "source": "MUM-T attack operation under EW::E1 Preparation under normal comms::start",
+      "target": "MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E1 Preparation under normal comms"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms->MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance:succession",
+      "source": "MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms",
+      "target": "MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E1 Preparation under normal comms"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance->MUM-T attack operation under EW::E1 Preparation under normal comms::done:succession",
+      "source": "MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance",
+      "target": "MUM-T attack operation under EW::E1 Preparation under normal comms::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E1 Preparation under normal comms"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW->MUM-T attack operation under EW::E2 Observation post and FPV threat:containment",
+      "source": "MUM-T attack operation under EW",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat->MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP:containment",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat->MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour:containment",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat->MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert:containment",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat->MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch:containment",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat->MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV:containment",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat->MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1:containment",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat->MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1:containment",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP->Drone 1:allocation",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP",
+      "target": "Drone 1",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour->Company commander:allocation",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour",
+      "target": "Company commander",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert->TDSS:allocation",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert",
+      "target": "TDSS",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch->Company commander:allocation",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch",
+      "target": "Company commander",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV->Platoons:allocation",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV",
+      "target": "Platoons",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::start->MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::start",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP->MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert->MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour->MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Decide right-flank detour",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch->MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Order dispersion and air watch",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV->MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1->MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Detect heat source of enemy OP",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1->MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Issue FPV threat alert",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1->MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New Start Concurrency_1",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::Evade FPV",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1->MUM-T attack operation under EW::E2 Observation post and FPV threat::done:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat::New End Concurrency_1",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E2 Observation post and FPV threat"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW->MUM-T attack operation under EW::E3 EW jamming and comms degradation:containment",
+      "source": "MUM-T attack operation under EW",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation->MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis:containment",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation->MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop:containment",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation->MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast:containment",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation->MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert:containment",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation->MUM-T attack operation under EW::E3 EW jamming and comms degradation::New Start Concurrency_2:containment",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New Start Concurrency_2",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation->MUM-T attack operation under EW::E3 EW jamming and comms degradation::New End Concurrency_2:containment",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New End Concurrency_2",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis->Recon drone team:allocation",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis",
+      "target": "Recon drone team",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop->TDSS:allocation",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop",
+      "target": "TDSS",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast->Recon drone team:allocation",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast",
+      "target": "Recon drone team",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert->Platoon 2:allocation",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert",
+      "target": "Platoon 2",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::start->MUM-T attack operation under EW::E3 EW jamming and comms degradation::New Start Concurrency_2:succession",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::start",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New Start Concurrency_2",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop->MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast:succession",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast",
+      "kind": "succession",
+      "label": "if 'while comms remain disconnected' == true",
+      "data": {
+        "guardCondition": "'while comms remain disconnected' == true",
+        "ownerQualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast->MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert:succession",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Transmit drone emergency broadcast",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis->MUM-T attack operation under EW::E3 EW jamming and comms degradation::New End Concurrency_2:succession",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New End Concurrency_2",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert->MUM-T attack operation under EW::E3 EW jamming and comms degradation::New End Concurrency_2:succession",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Deploy smoke and evade after ATGM alert",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New End Concurrency_2",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New Start Concurrency_2->MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis:succession",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New Start Concurrency_2",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New Start Concurrency_2->MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop:succession",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New Start Concurrency_2",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Activate local-sensor survival loop",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New End Concurrency_2->MUM-T attack operation under EW::E3 EW jamming and comms degradation::done:succession",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::New End Concurrency_2",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E3 EW jamming and comms degradation"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW->MUM-T attack operation under EW::E4 Comms recovery and attack resumption:containment",
+      "source": "MUM-T attack operation under EW",
+      "target": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption->MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA:containment",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "target": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption->MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period:containment",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "target": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption->MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver:containment",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "target": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver",
+      "kind": "containment"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA->TDSS:allocation",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA",
+      "target": "TDSS",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period->Company commander:allocation",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period",
+      "target": "Company commander",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver->Platoons:allocation",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver",
+      "target": "Platoons",
+      "kind": "allocation"
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::start->MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA:succession",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::start",
+      "target": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA->MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period:succession",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA",
+      "target": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period->MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver:succession",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Report disconnection period",
+      "target": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver",
+      "kind": "succession",
+      "label": "if 'limited mode after link is stable' == true",
+      "data": {
+        "guardCondition": "'limited mode after link is stable' == true",
+        "ownerQualifiedName": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver->MUM-T attack operation under EW::E4 Comms recovery and attack resumption::done:succession",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resume attack maneuver",
+      "target": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::start->MUM-T attack operation under EW::E1 Preparation under normal comms:succession",
+      "source": "MUM-T attack operation under EW::start",
+      "target": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E1 Preparation under normal comms->MUM-T attack operation under EW::E2 Observation post and FPV threat:succession",
+      "source": "MUM-T attack operation under EW::E1 Preparation under normal comms",
+      "target": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E2 Observation post and FPV threat->MUM-T attack operation under EW::E3 EW jamming and comms degradation:succession",
+      "source": "MUM-T attack operation under EW::E2 Observation post and FPV threat",
+      "target": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation->MUM-T attack operation under EW::E4 Comms recovery and attack resumption:succession",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation",
+      "target": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption->MUM-T attack operation under EW::done:succession",
+      "source": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption",
+      "target": "MUM-T attack operation under EW::done",
+      "kind": "succession",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW"
+      }
+    },
+    {
+      "id": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis::Summary track data->MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA::Summary track data:flow",
+      "source": "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis::Summary track data",
+      "target": "MUM-T attack operation under EW::E4 Comms recovery and attack resumption::Resynchronize SA::Summary track data",
+      "kind": "flow",
+      "data": {
+        "ownerQualifiedName": "MUM-T attack operation under EW"
+      }
+    }
+  ]
+}

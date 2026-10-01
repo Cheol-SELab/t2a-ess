@@ -1,0 +1,1713 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "K_GOLD",
+    "title": "High-rise building power outage response",
+    "extraction_schema": "T2A-ESS",
+    "generation_mode": "manual_development_reference",
+    "source_units": [
+      {
+        "source_unit_id": "P1",
+        "unit_type": "paragraph",
+        "text": "The high-rise building operation system consists of the disaster prevention center, the building energy management system (BEMS), 2 emergency generators, 24 elevators, and the emergency broadcast system. The BEMS monitors power usage by floor."
+      },
+      {
+        "source_unit_id": "P2",
+        "unit_type": "paragraph",
+        "text": "Externally there are KEPCO and the fire station; facility operation is handled by the facility manager, and elevator rescue by the elevator maintenance team."
+      },
+      {
+        "source_unit_id": "P3",
+        "unit_type": "paragraph",
+        "text": "At 6:10 p.m., when the external power supply is cut off, the BEMS detects the power outage and automatically starts emergency generator No. 1. The disaster prevention center inquires with KEPCO about the cause of the power outage."
+      },
+      {
+        "source_unit_id": "P4",
+        "unit_type": "paragraph",
+        "text": "When emergency generator No. 1 is started, the BEMS switches power so that only emergency loads are supplied, and cuts off general lighting and air conditioning."
+      },
+      {
+        "source_unit_id": "P5",
+        "unit_type": "paragraph",
+        "text": "The disaster prevention center queries the status of the 24 elevators and identifies 3 stopped elevators. The disaster prevention center requests rescue from the elevator maintenance team and makes a guidance announcement to the trapped passengers through the emergency broadcast system."
+      },
+      {
+        "source_unit_id": "P6",
+        "unit_type": "paragraph",
+        "text": "The elevator maintenance team manually lowers the 3 elevators one after another to the nearest floor, opens the doors, and rescues the passengers. Each time a rescue is finished, the maintenance team reports the result to the disaster prevention center."
+      },
+      {
+        "source_unit_id": "P7",
+        "unit_type": "paragraph",
+        "text": "If the load factor of emergency generator No. 1 is 90% or more, the BEMS additionally starts emergency generator No. 2. At 6:40 p.m., when the load factor rises to 92%, the BEMS starts emergency generator No. 2."
+      },
+      {
+        "source_unit_id": "P8",
+        "unit_type": "paragraph",
+        "text": "KEPCO replies to the disaster prevention center that a circuit breaker failure at a nearby substation is the cause and that restoration will take about 1 h."
+      },
+      {
+        "source_unit_id": "P9",
+        "unit_type": "paragraph",
+        "text": "If the power outage exceeds 1 h 30 min, the facility manager notifies the tenant companies of an advisory to leave work. On this day the power outage ended after 1 h 10 min, so the advisory to leave work was not issued."
+      },
+      {
+        "source_unit_id": "P10",
+        "unit_type": "paragraph",
+        "text": "At 7:20 p.m., when external power is restored, the BEMS returns the load to external power and stops the 2 emergency generators."
+      },
+      {
+        "source_unit_id": "P11",
+        "unit_type": "paragraph",
+        "text": "The facility manager restarts the 24 elevators one after another, and the disaster prevention center ends the emergency broadcast after confirming that all elevators are operating normally."
+      },
+      {
+        "source_unit_id": "P12",
+        "unit_type": "paragraph",
+        "text": "The disaster prevention center compiles the power outage response record and submits it to the fire station."
+      },
+      {
+        "source_unit_id": "P13",
+        "unit_type": "paragraph",
+        "text": "The goal of this scenario is to rescue all trapped passengers within 30 min without casualties."
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "K_SCN",
+        "label": "High-rise building power outage response",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "K_EP_OUTAGE",
+        "label": "Power outage detection and switchover to emergency power",
+        "order_index": 1,
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "episode_id": "K_EP_RESCUE",
+        "label": "Rescue from elevator entrapment",
+        "order_index": 2,
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "episode_id": "K_EP_LOAD",
+        "label": "Load management and cause identification",
+        "order_index": 3,
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "episode_id": "K_EP_RESTORE",
+        "label": "Power restoration and normalization",
+        "order_index": 4,
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "K_P_SYSTEM",
+        "label": "High-rise building operation system",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "K_P_CENTER",
+        "label": "Disaster prevention center",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "K_P_BEMS",
+        "label": "Building energy management system (BEMS)",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "K_P_GENS",
+        "label": "2 emergency generators",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "K_P_GEN1",
+        "label": "Emergency generator No. 1",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "performer_id": "K_P_GEN2",
+        "label": "Emergency generator No. 2",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "performer_id": "K_P_ELEV",
+        "label": "24 elevators",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "K_P_PA",
+        "label": "Emergency broadcast system",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "K_P_KEPCO",
+        "label": "KEPCO",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "K_P_FIRE",
+        "label": "Fire station",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "K_P_FM",
+        "label": "Facility manager",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "K_P_LIFT",
+        "label": "Elevator maintenance team",
+        "performer_kind": "group",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "K_P_TENANTS",
+        "label": "Tenant companies",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "K_A_MONITOR",
+        "label": "Monitor power usage by floor",
+        "source_ref": {
+          "source_unit_id": "P1"
+        },
+        "primary_actor_text": "BEMS",
+        "object_text": "Power usage by floor"
+      },
+      {
+        "action_id": "K_A_DETECT_OUTAGE",
+        "label": "Detect power outage",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "BEMS",
+        "object_text": "Power outage"
+      },
+      {
+        "action_id": "K_A_START_GEN1",
+        "label": "Automatically start emergency generator No. 1",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "BEMS",
+        "object_text": "Emergency generator No. 1"
+      },
+      {
+        "action_id": "K_A_ASK_CAUSE",
+        "label": "Inquire with KEPCO about cause of power outage",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Disaster prevention center",
+        "object_text": "Cause of power outage"
+      },
+      {
+        "action_id": "K_A_SWITCH_LOAD",
+        "label": "Switch power to emergency loads only",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "BEMS",
+        "object_text": "Power"
+      },
+      {
+        "action_id": "K_A_CUT_GENERAL",
+        "label": "Cut off general lighting and air conditioning",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "BEMS",
+        "object_text": "General lighting and air conditioning"
+      },
+      {
+        "action_id": "K_A_QUERY_ELEV",
+        "label": "Query status of 24 elevators",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Disaster prevention center",
+        "object_text": "Elevator status"
+      },
+      {
+        "action_id": "K_A_REQ_RESCUE",
+        "label": "Request rescue from elevator maintenance team",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Disaster prevention center",
+        "object_text": "Rescue"
+      },
+      {
+        "action_id": "K_A_ANNOUNCE",
+        "label": "Guidance announcement to trapped passengers",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Disaster prevention center",
+        "object_text": "Guidance announcement"
+      },
+      {
+        "action_id": "K_A_LOWER",
+        "label": "Manually lower elevator to nearest floor",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Elevator maintenance team",
+        "object_text": "3 elevators"
+      },
+      {
+        "action_id": "K_A_RESCUE",
+        "label": "Rescue passengers after opening doors",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Elevator maintenance team",
+        "object_text": "Trapped passengers"
+      },
+      {
+        "action_id": "K_A_REPORT_RESCUE",
+        "label": "Report rescue result to disaster prevention center",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Elevator maintenance team",
+        "object_text": "Rescue result"
+      },
+      {
+        "action_id": "K_A_START_GEN2",
+        "label": "Additionally start emergency generator No. 2",
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "primary_actor_text": "BEMS",
+        "object_text": "Emergency generator No. 2"
+      },
+      {
+        "action_id": "K_A_KEPCO_REPLY",
+        "label": "Reply with cause of power outage and expected restoration time",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "KEPCO",
+        "object_text": "Cause and expected restoration time"
+      },
+      {
+        "action_id": "K_A_ADVISE",
+        "label": "Notify tenant companies of advisory to leave work",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "Facility manager",
+        "object_text": "Advisory to leave work"
+      },
+      {
+        "action_id": "K_A_RETURN_LOAD",
+        "label": "Return load to external power",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "BEMS",
+        "object_text": "Load"
+      },
+      {
+        "action_id": "K_A_STOP_GENS",
+        "label": "Stop 2 emergency generators",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "BEMS",
+        "object_text": "2 emergency generators"
+      },
+      {
+        "action_id": "K_A_RESTART_ELEV",
+        "label": "Restart 24 elevators one after another",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Facility manager",
+        "object_text": "24 elevators"
+      },
+      {
+        "action_id": "K_A_CONFIRM_ELEV",
+        "label": "Confirm normal elevator operation",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Disaster prevention center",
+        "object_text": "Elevator operation"
+      },
+      {
+        "action_id": "K_A_END_BROADCAST",
+        "label": "End emergency broadcast",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Disaster prevention center",
+        "object_text": "Emergency broadcast"
+      },
+      {
+        "action_id": "K_A_SUBMIT",
+        "label": "Submit power outage response record to fire station",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Disaster prevention center",
+        "object_text": "Power outage response record"
+      }
+    ],
+    "items": [
+      {
+        "item_id": "K_I_INQUIRY",
+        "label": "Inquiry about cause of power outage",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "item_id": "K_I_RESULT",
+        "label": "Rescue result report",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "item_id": "K_I_REPLY",
+        "label": "Reply with cause of power outage and expected restoration time",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "item_id": "K_I_RECORD",
+        "label": "Power outage response record",
+        "item_type": "document",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "K_SIT_GRID",
+        "label": "External power supply state",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "K_SIT_EMERGENCY",
+        "label": "Emergency generation state",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "situation_id": "K_SIT_ELEV_HALT",
+        "label": "Elevator stopped state",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "situation_id": "K_SIT_ELEV_RUN",
+        "label": "Elevator normal operation state",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "K_SV_GRID",
+        "subject_text": "Building power",
+        "variable": "Supply source",
+        "value": "External power",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "K_SV_EMERGENCY",
+        "subject_text": "Building power",
+        "variable": "Supply source",
+        "value": "Emergency generator",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "state_value_id": "K_SV_ELEV_HALT",
+        "subject_text": "Elevator",
+        "variable": "Operation status",
+        "value": "Stopped",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "state_value_id": "K_SV_ELEV_RUN",
+        "subject_text": "Elevator",
+        "variable": "Operation status",
+        "value": "Normal",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "K_EVT_OUTAGE",
+        "label": "External power supply cut off",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "event_id": "K_EVT_STUCK",
+        "label": "3 elevators stopped",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "event_id": "K_EVT_92",
+        "label": "Generator No. 1 load factor rises to 92%",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "event_id": "K_EVT_BREAKER",
+        "label": "Circuit breaker failure at nearby substation",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "event_id": "K_EVT_RESTORED",
+        "label": "External power restored",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "K_TR_TO_EMERGENCY",
+        "label": "From external power to emergency generation",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "transition_id": "K_TR_ELEV_HALT",
+        "label": "From elevator operation to stopped",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "transition_id": "K_TR_TO_GRID",
+        "label": "From emergency generation to external power",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "transition_id": "K_TR_ELEV_RUN",
+        "label": "From elevator stopped to normal operation",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "K_OBS_USAGE",
+        "label": "Monitor power usage by floor",
+        "observer_text": "BEMS",
+        "observed_text": "Power usage by floor",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "observation_id": "K_OBS_OUTAGE",
+        "label": "Detect power outage",
+        "observer_text": "BEMS",
+        "observed_text": "External power supply cut off",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "observation_id": "K_OBS_ELEV",
+        "label": "Identify 3 stopped elevators",
+        "observer_text": "Disaster prevention center",
+        "observed_text": "3 stopped elevators",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "observation_id": "K_OBS_NORMAL",
+        "label": "Confirm normal elevator operation",
+        "observer_text": "Disaster prevention center",
+        "observed_text": "Normal elevator operation",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "K_F01",
+        "label": "Start generator No. 1 after power outage detection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "K_F02",
+        "label": "Switch to emergency loads after generator start",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "K_F03",
+        "label": "Cut off general loads after load switchover",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "K_F04",
+        "label": "Request rescue after status query",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "K_F05",
+        "label": "Guidance announcement after rescue request",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "K_F06",
+        "label": "Manual lowering after rescue request",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "K_F07",
+        "label": "Door-opening rescue after lowering",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "K_F08",
+        "label": "Result report after rescue",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "K_F09",
+        "label": "Start generator No. 2 when load factor is 90% or more",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "flow_id": "K_F10",
+        "label": "Reply after inquiry",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "K_F11",
+        "label": "Stop generators after load return",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "K_F12",
+        "label": "Confirm normal operation after restart",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "flow_id": "K_F13",
+        "label": "End broadcast after confirming normal operation",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "K_C01",
+        "label": "Determine generator No. 1 load factor is 90% or more",
+        "control_type": "decision",
+        "guard_texts": [
+          "Generator No. 1 load factor 90% or more"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "control_id": "K_C02",
+        "label": "Repeat rescue for 3 elevators one after another",
+        "control_type": "loop",
+        "guard_texts": [
+          "3 elevators one after another, each time a rescue is finished"
+        ],
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "control_id": "K_C03",
+        "label": "Determine power outage exceeds 1 h 30 min",
+        "control_type": "decision",
+        "guard_texts": [
+          "Power outage more than 1 h 30 min"
+        ],
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "control_id": "K_C04",
+        "label": "Restart 24 elevators one after another",
+        "control_type": "loop",
+        "guard_texts": [
+          "24 elevators one after another"
+        ],
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "K_CN_90",
+        "label": "Generator No. 1 load factor 90% or more",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "parameter": "Load factor",
+        "operator": ">=",
+        "value": 90,
+        "unit": "%"
+      },
+      {
+        "constraint_id": "K_CN_90MIN",
+        "label": "Power outage more than 1 h 30 min",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "parameter": "Power outage duration",
+        "operator": ">",
+        "value": 90,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "K_CN_30MIN",
+        "label": "Rescue of all within 30 min",
+        "constraint_kind": [
+          "deadline"
+        ],
+        "source_ref": {
+          "source_unit_id": "P13"
+        },
+        "parameter": "Rescue completion time",
+        "operator": "<=",
+        "value": 30,
+        "unit": "min"
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "K_G_NO_CASUALTY",
+        "label": "No casualties",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      },
+      {
+        "goal_id": "K_G_RESCUE_30",
+        "label": "Rescue of all trapped passengers within 30 min",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "K_R_BREAKER",
+        "label": "Circuit breaker failure at nearby substation",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "K_REL_001",
+        "relation_type": "has_episode",
+        "source_slot_id": "K_SCN",
+        "target_slot_id": "K_EP_OUTAGE",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "K_REL_002",
+        "relation_type": "has_episode",
+        "source_slot_id": "K_SCN",
+        "target_slot_id": "K_EP_RESCUE",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "K_REL_003",
+        "relation_type": "has_episode",
+        "source_slot_id": "K_SCN",
+        "target_slot_id": "K_EP_LOAD",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "K_REL_004",
+        "relation_type": "has_episode",
+        "source_slot_id": "K_SCN",
+        "target_slot_id": "K_EP_RESTORE",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "K_REL_005",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_OUTAGE",
+        "target_slot_id": "K_A_MONITOR",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_006",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_OUTAGE",
+        "target_slot_id": "K_A_DETECT_OUTAGE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_007",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_OUTAGE",
+        "target_slot_id": "K_A_START_GEN1",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_008",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_OUTAGE",
+        "target_slot_id": "K_A_ASK_CAUSE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_009",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_OUTAGE",
+        "target_slot_id": "K_A_SWITCH_LOAD",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_010",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_OUTAGE",
+        "target_slot_id": "K_A_CUT_GENERAL",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_011",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESCUE",
+        "target_slot_id": "K_A_QUERY_ELEV",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_012",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESCUE",
+        "target_slot_id": "K_A_REQ_RESCUE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_013",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESCUE",
+        "target_slot_id": "K_A_ANNOUNCE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_014",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESCUE",
+        "target_slot_id": "K_A_LOWER",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_015",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESCUE",
+        "target_slot_id": "K_A_RESCUE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_016",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESCUE",
+        "target_slot_id": "K_A_REPORT_RESCUE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_017",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_LOAD",
+        "target_slot_id": "K_A_START_GEN2",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_018",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_LOAD",
+        "target_slot_id": "K_A_KEPCO_REPLY",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_019",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_LOAD",
+        "target_slot_id": "K_A_ADVISE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_020",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESTORE",
+        "target_slot_id": "K_A_RETURN_LOAD",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_021",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESTORE",
+        "target_slot_id": "K_A_STOP_GENS",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_022",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESTORE",
+        "target_slot_id": "K_A_RESTART_ELEV",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_023",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESTORE",
+        "target_slot_id": "K_A_CONFIRM_ELEV",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_024",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESTORE",
+        "target_slot_id": "K_A_END_BROADCAST",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_025",
+        "relation_type": "custom",
+        "source_slot_id": "K_EP_RESTORE",
+        "target_slot_id": "K_A_SUBMIT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "K_REL_026",
+        "relation_type": "has_part",
+        "source_slot_id": "K_P_SYSTEM",
+        "target_slot_id": "K_P_CENTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_027",
+        "relation_type": "has_part",
+        "source_slot_id": "K_P_SYSTEM",
+        "target_slot_id": "K_P_BEMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_028",
+        "relation_type": "has_part",
+        "source_slot_id": "K_P_SYSTEM",
+        "target_slot_id": "K_P_GENS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_029",
+        "relation_type": "has_part",
+        "source_slot_id": "K_P_SYSTEM",
+        "target_slot_id": "K_P_ELEV",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_030",
+        "relation_type": "has_part",
+        "source_slot_id": "K_P_SYSTEM",
+        "target_slot_id": "K_P_PA",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_031",
+        "relation_type": "has_part",
+        "source_slot_id": "K_P_GENS",
+        "target_slot_id": "K_P_GEN1",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_032",
+        "relation_type": "has_part",
+        "source_slot_id": "K_P_GENS",
+        "target_slot_id": "K_P_GEN2",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_033",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_MONITOR",
+        "target_slot_id": "K_P_BEMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_034",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_DETECT_OUTAGE",
+        "target_slot_id": "K_P_BEMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_035",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_START_GEN1",
+        "target_slot_id": "K_P_BEMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_036",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_ASK_CAUSE",
+        "target_slot_id": "K_P_CENTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_037",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_SWITCH_LOAD",
+        "target_slot_id": "K_P_BEMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_038",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_CUT_GENERAL",
+        "target_slot_id": "K_P_BEMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_039",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_QUERY_ELEV",
+        "target_slot_id": "K_P_CENTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_040",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_REQ_RESCUE",
+        "target_slot_id": "K_P_CENTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_041",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_ANNOUNCE",
+        "target_slot_id": "K_P_CENTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_042",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_LOWER",
+        "target_slot_id": "K_P_LIFT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_043",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_RESCUE",
+        "target_slot_id": "K_P_LIFT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_044",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_REPORT_RESCUE",
+        "target_slot_id": "K_P_LIFT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_045",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_START_GEN2",
+        "target_slot_id": "K_P_BEMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_046",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_KEPCO_REPLY",
+        "target_slot_id": "K_P_KEPCO",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_047",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_ADVISE",
+        "target_slot_id": "K_P_FM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_048",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_RETURN_LOAD",
+        "target_slot_id": "K_P_BEMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_049",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_STOP_GENS",
+        "target_slot_id": "K_P_BEMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_050",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_RESTART_ELEV",
+        "target_slot_id": "K_P_FM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_051",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_CONFIRM_ELEV",
+        "target_slot_id": "K_P_CENTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_052",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_END_BROADCAST",
+        "target_slot_id": "K_P_CENTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_053",
+        "relation_type": "performed_by",
+        "source_slot_id": "K_A_SUBMIT",
+        "target_slot_id": "K_P_CENTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_054",
+        "relation_type": "acts_on",
+        "source_slot_id": "K_A_START_GEN1",
+        "target_slot_id": "K_P_GEN1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_055",
+        "relation_type": "produces_item",
+        "source_slot_id": "K_A_ASK_CAUSE",
+        "target_slot_id": "K_I_INQUIRY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_056",
+        "relation_type": "provided_to",
+        "source_slot_id": "K_A_ASK_CAUSE",
+        "target_slot_id": "K_P_KEPCO",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_057",
+        "relation_type": "provided_to",
+        "source_slot_id": "K_A_REQ_RESCUE",
+        "target_slot_id": "K_P_LIFT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_058",
+        "relation_type": "acts_on",
+        "source_slot_id": "K_A_LOWER",
+        "target_slot_id": "K_P_ELEV",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_059",
+        "relation_type": "produces_item",
+        "source_slot_id": "K_A_REPORT_RESCUE",
+        "target_slot_id": "K_I_RESULT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_060",
+        "relation_type": "provided_to",
+        "source_slot_id": "K_A_REPORT_RESCUE",
+        "target_slot_id": "K_P_CENTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_061",
+        "relation_type": "acts_on",
+        "source_slot_id": "K_A_START_GEN2",
+        "target_slot_id": "K_P_GEN2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_062",
+        "relation_type": "produces_item",
+        "source_slot_id": "K_A_KEPCO_REPLY",
+        "target_slot_id": "K_I_REPLY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_063",
+        "relation_type": "provided_to",
+        "source_slot_id": "K_A_KEPCO_REPLY",
+        "target_slot_id": "K_P_CENTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_064",
+        "relation_type": "provided_to",
+        "source_slot_id": "K_A_ADVISE",
+        "target_slot_id": "K_P_TENANTS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_065",
+        "relation_type": "acts_on",
+        "source_slot_id": "K_A_STOP_GENS",
+        "target_slot_id": "K_P_GENS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_066",
+        "relation_type": "acts_on",
+        "source_slot_id": "K_A_RESTART_ELEV",
+        "target_slot_id": "K_P_ELEV",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_067",
+        "relation_type": "produces_item",
+        "source_slot_id": "K_A_SUBMIT",
+        "target_slot_id": "K_I_RECORD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_068",
+        "relation_type": "provided_to",
+        "source_slot_id": "K_A_SUBMIT",
+        "target_slot_id": "K_P_FIRE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_069",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F01",
+        "target_slot_id": "K_A_DETECT_OUTAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_070",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F01",
+        "target_slot_id": "K_A_START_GEN1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_071",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F02",
+        "target_slot_id": "K_A_START_GEN1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_072",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F02",
+        "target_slot_id": "K_A_SWITCH_LOAD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_073",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F03",
+        "target_slot_id": "K_A_SWITCH_LOAD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_074",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F03",
+        "target_slot_id": "K_A_CUT_GENERAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_075",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F04",
+        "target_slot_id": "K_A_QUERY_ELEV",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_076",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F04",
+        "target_slot_id": "K_A_REQ_RESCUE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_077",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F05",
+        "target_slot_id": "K_A_REQ_RESCUE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_078",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F05",
+        "target_slot_id": "K_A_ANNOUNCE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_079",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F06",
+        "target_slot_id": "K_A_REQ_RESCUE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_080",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F06",
+        "target_slot_id": "K_A_LOWER",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_081",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F07",
+        "target_slot_id": "K_A_LOWER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_082",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F07",
+        "target_slot_id": "K_A_RESCUE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_083",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F08",
+        "target_slot_id": "K_A_RESCUE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_084",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F08",
+        "target_slot_id": "K_A_REPORT_RESCUE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_085",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F09",
+        "target_slot_id": "K_A_START_GEN1",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_086",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F09",
+        "target_slot_id": "K_A_START_GEN2",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_087",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F10",
+        "target_slot_id": "K_A_ASK_CAUSE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_088",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F10",
+        "target_slot_id": "K_A_KEPCO_REPLY",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_089",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F11",
+        "target_slot_id": "K_A_RETURN_LOAD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_090",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F11",
+        "target_slot_id": "K_A_STOP_GENS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_091",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F12",
+        "target_slot_id": "K_A_RESTART_ELEV",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_092",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F12",
+        "target_slot_id": "K_A_CONFIRM_ELEV",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "K_REL_093",
+        "relation_type": "flow_source",
+        "source_slot_id": "K_F13",
+        "target_slot_id": "K_A_CONFIRM_ELEV",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_094",
+        "relation_type": "flow_target",
+        "source_slot_id": "K_F13",
+        "target_slot_id": "K_A_END_BROADCAST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_095",
+        "relation_type": "controls_flow",
+        "source_slot_id": "K_C01",
+        "target_slot_id": "K_F09",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_096",
+        "relation_type": "has_state_value",
+        "source_slot_id": "K_SIT_GRID",
+        "target_slot_id": "K_SV_GRID",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_097",
+        "relation_type": "has_state_value",
+        "source_slot_id": "K_SIT_EMERGENCY",
+        "target_slot_id": "K_SV_EMERGENCY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_098",
+        "relation_type": "has_state_value",
+        "source_slot_id": "K_SIT_ELEV_HALT",
+        "target_slot_id": "K_SV_ELEV_HALT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_099",
+        "relation_type": "has_state_value",
+        "source_slot_id": "K_SIT_ELEV_RUN",
+        "target_slot_id": "K_SV_ELEV_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_100",
+        "relation_type": "from_situation",
+        "source_slot_id": "K_TR_TO_EMERGENCY",
+        "target_slot_id": "K_SIT_GRID",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_101",
+        "relation_type": "to_situation",
+        "source_slot_id": "K_TR_TO_EMERGENCY",
+        "target_slot_id": "K_SIT_EMERGENCY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_102",
+        "relation_type": "triggers",
+        "source_slot_id": "K_EVT_OUTAGE",
+        "target_slot_id": "K_TR_TO_EMERGENCY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_103",
+        "relation_type": "from_situation",
+        "source_slot_id": "K_TR_ELEV_HALT",
+        "target_slot_id": "K_SIT_ELEV_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_104",
+        "relation_type": "to_situation",
+        "source_slot_id": "K_TR_ELEV_HALT",
+        "target_slot_id": "K_SIT_ELEV_HALT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_105",
+        "relation_type": "triggers",
+        "source_slot_id": "K_EVT_STUCK",
+        "target_slot_id": "K_TR_ELEV_HALT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_106",
+        "relation_type": "from_situation",
+        "source_slot_id": "K_TR_TO_GRID",
+        "target_slot_id": "K_SIT_EMERGENCY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_107",
+        "relation_type": "to_situation",
+        "source_slot_id": "K_TR_TO_GRID",
+        "target_slot_id": "K_SIT_GRID",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_108",
+        "relation_type": "triggers",
+        "source_slot_id": "K_EVT_RESTORED",
+        "target_slot_id": "K_TR_TO_GRID",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_109",
+        "relation_type": "from_situation",
+        "source_slot_id": "K_TR_ELEV_RUN",
+        "target_slot_id": "K_SIT_ELEV_HALT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_110",
+        "relation_type": "to_situation",
+        "source_slot_id": "K_TR_ELEV_RUN",
+        "target_slot_id": "K_SIT_ELEV_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_111",
+        "relation_type": "triggers",
+        "source_slot_id": "K_EVT_OUTAGE",
+        "target_slot_id": "K_A_DETECT_OUTAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_112",
+        "relation_type": "triggers",
+        "source_slot_id": "K_EVT_92",
+        "target_slot_id": "K_A_START_GEN2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_113",
+        "relation_type": "triggers",
+        "source_slot_id": "K_EVT_RESTORED",
+        "target_slot_id": "K_A_RETURN_LOAD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_114",
+        "relation_type": "observes",
+        "source_slot_id": "K_OBS_OUTAGE",
+        "target_slot_id": "K_EVT_OUTAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_115",
+        "relation_type": "observes",
+        "source_slot_id": "K_OBS_ELEV",
+        "target_slot_id": "K_EVT_STUCK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_116",
+        "relation_type": "constrained_by",
+        "source_slot_id": "K_A_START_GEN2",
+        "target_slot_id": "K_CN_90",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_117",
+        "relation_type": "constrained_by",
+        "source_slot_id": "K_A_ADVISE",
+        "target_slot_id": "K_CN_90MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_118",
+        "relation_type": "constrained_by",
+        "source_slot_id": "K_A_RESCUE",
+        "target_slot_id": "K_CN_30MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_119",
+        "relation_type": "has_goal",
+        "source_slot_id": "K_SCN",
+        "target_slot_id": "K_G_NO_CASUALTY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_120",
+        "relation_type": "has_goal",
+        "source_slot_id": "K_SCN",
+        "target_slot_id": "K_G_RESCUE_30",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "K_REL_121",
+        "relation_type": "has_reason",
+        "source_slot_id": "K_TR_TO_EMERGENCY",
+        "target_slot_id": "K_R_BREAKER",
+        "evidence_level": "explicit"
+      }
+    ]
+  }
+}

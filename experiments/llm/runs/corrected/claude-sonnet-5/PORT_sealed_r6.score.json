@@ -1,0 +1,1179 @@
+{
+ "meta": {
+  "input": "PORT_sealed",
+  "repeat": 6,
+  "condition": "corrected",
+  "model_requested": "claude-sonnet-5",
+  "models_used": [
+   "claude-sonnet-5"
+  ],
+  "prompt": "corrected-contract.md",
+  "prompt_sha256": "9dd751c5ec471393b4f36868e793b438e5e7470b80cf15a9e7475503fcee759b",
+  "input_sha256": "5ea97829d8075b2fdb0d931506ce118259b7e216c31939851c50e7bb48ed12e0",
+  "user_sha256": "f917f0311db10ab645522acb3f1fd38153b1bb4ccd183907319c583bdb006b05",
+  "runner_sha256": "668572f34df601b1974f920604e58152c826610fc0840a0fe0ed5b39cc377e01",
+  "ok": true,
+  "attempts": 1,
+  "failure": null,
+  "elapsed_s": 570.1,
+  "total_cost_usd": 0.7564,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 15768,
+   "output_tokens": 75321,
+   "output_tokens_details": {
+    "thinking_tokens": 48097
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 75321,
+     "cache_read_input_tokens": 15768,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "cli": "claude -p (isolated, experiments/common/claude_cli.py)"
+ },
+ "tau": 0.87,
+ "parse_ok": true,
+ "matcher": "embedding",
+ "scorer_version": "3.1",
+ "slots_tolerant": {
+  "micro": {
+   "gold_coverage": 0.7522,
+   "pred_support": 0.7632,
+   "f1": 0.7576
+  },
+  "per_type": {
+   "scenarios": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 1,
+    "pred": 1
+   },
+   "episodes": {
+    "gold_coverage": 0.8,
+    "pred_support": 0.6,
+    "f1": 0.6857,
+    "gold": 5,
+    "pred": 5
+   },
+   "performers": {
+    "gold_coverage": 0.9167,
+    "pred_support": 1.0,
+    "f1": 0.9565,
+    "gold": 12,
+    "pred": 11
+   },
+   "actions": {
+    "gold_coverage": 0.9545,
+    "pred_support": 0.96,
+    "f1": 0.9573,
+    "gold": 22,
+    "pred": 25
+   },
+   "items": {
+    "gold_coverage": 0.3333,
+    "pred_support": 0.4,
+    "f1": 0.3636,
+    "gold": 6,
+    "pred": 5
+   },
+   "flows": {
+    "gold_coverage": 0.5625,
+    "pred_support": 0.4737,
+    "f1": 0.5143,
+    "gold": 16,
+    "pred": 19
+   },
+   "controls": {
+    "gold_coverage": 0.5556,
+    "pred_support": 0.8333,
+    "f1": 0.6667,
+    "gold": 9,
+    "pred": 6
+   },
+   "situations": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 6,
+    "pred": 6
+   },
+   "state_values": {
+    "gold_coverage": 0.5,
+    "pred_support": 0.25,
+    "f1": 0.3333,
+    "gold": 6,
+    "pred": 12
+   },
+   "events": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.8,
+    "f1": 0.8889,
+    "gold": 5,
+    "pred": 5
+   },
+   "transitions": {
+    "gold_coverage": 0.8571,
+    "pred_support": 1.0,
+    "f1": 0.9231,
+    "gold": 7,
+    "pred": 6
+   },
+   "constraints": {
+    "gold_coverage": 0.6,
+    "pred_support": 1.0,
+    "f1": 0.75,
+    "gold": 10,
+    "pred": 5
+   },
+   "goals": {
+    "gold_coverage": 0.5,
+    "pred_support": 1.0,
+    "f1": 0.6667,
+    "gold": 2,
+    "pred": 1
+   },
+   "reasons": {
+    "gold_coverage": 0.6667,
+    "pred_support": 1.0,
+    "f1": 0.8,
+    "gold": 3,
+    "pred": 3
+   },
+   "observations": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 3,
+    "pred": 4
+   }
+  }
+ },
+ "slots": {
+  "micro": {
+   "tp": 81,
+   "pred": 114,
+   "gold": 113,
+   "precision": 0.7105,
+   "recall": 0.7168,
+   "f1": 0.7137
+  },
+  "per_type": {
+   "scenarios": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "episodes": {
+    "tp": 3,
+    "pred": 5,
+    "gold": 5,
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1": 0.6
+   },
+   "performers": {
+    "tp": 11,
+    "pred": 11,
+    "gold": 12,
+    "precision": 1.0,
+    "recall": 0.9167,
+    "f1": 0.9565
+   },
+   "actions": {
+    "tp": 20,
+    "pred": 25,
+    "gold": 22,
+    "precision": 0.8,
+    "recall": 0.9091,
+    "f1": 0.8511
+   },
+   "items": {
+    "tp": 2,
+    "pred": 5,
+    "gold": 6,
+    "precision": 0.4,
+    "recall": 0.3333,
+    "f1": 0.3636
+   },
+   "flows": {
+    "tp": 9,
+    "pred": 19,
+    "gold": 16,
+    "precision": 0.4737,
+    "recall": 0.5625,
+    "f1": 0.5143
+   },
+   "controls": {
+    "tp": 5,
+    "pred": 6,
+    "gold": 9,
+    "precision": 0.8333,
+    "recall": 0.5556,
+    "f1": 0.6667
+   },
+   "situations": {
+    "tp": 6,
+    "pred": 6,
+    "gold": 6,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "state_values": {
+    "tp": 3,
+    "pred": 12,
+    "gold": 6,
+    "precision": 0.25,
+    "recall": 0.5,
+    "f1": 0.3333
+   },
+   "events": {
+    "tp": 4,
+    "pred": 5,
+    "gold": 5,
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1": 0.8
+   },
+   "transitions": {
+    "tp": 6,
+    "pred": 6,
+    "gold": 7,
+    "precision": 1.0,
+    "recall": 0.8571,
+    "f1": 0.9231
+   },
+   "constraints": {
+    "tp": 5,
+    "pred": 5,
+    "gold": 10,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "goals": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 2,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "reasons": {
+    "tp": 2,
+    "pred": 3,
+    "gold": 3,
+    "precision": 0.6667,
+    "recall": 0.6667,
+    "f1": 0.6667
+   },
+   "observations": {
+    "tp": 3,
+    "pred": 4,
+    "gold": 3,
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1": 0.8571
+   }
+  },
+  "macro_f1": 0.7244
+ },
+ "alignment_pairs": [
+  {
+   "type": "scenarios",
+   "gold": "T_SCN",
+   "gold_label": "Smart port high-wind response",
+   "pred": "SCN_PORT_WIND_RESPONSE",
+   "pred_label": "Port terminal high-wind response operation",
+   "score": 0.944
+  },
+  {
+   "type": "episodes",
+   "gold": "T_EP_CAUTION",
+   "gold_label": "High-wind caution response",
+   "pred": "EP1_CAUTION",
+   "pred_label": "High-wind caution stage onset and response measures",
+   "score": 0.949
+  },
+  {
+   "type": "episodes",
+   "gold": "T_EP_ALERT",
+   "gold_label": "Alert stage response",
+   "pred": "EP2_ALERT",
+   "pred_label": "Alert-stage escalation and crane response",
+   "score": 0.906
+  },
+  {
+   "type": "episodes",
+   "gold": "T_EP_RESUME",
+   "gold_label": "Alert lifting and work resumption",
+   "pred": "EP4_DEESCALATE",
+   "pred_label": "De-escalation and work resumption",
+   "score": 0.907
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_SYSTEM",
+   "gold_label": "Smart port terminal operation system",
+   "pred": "P_TERMINAL_SYSTEM",
+   "pred_label": "Smart port terminal operation system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_TOC",
+   "gold_label": "Terminal Operations Center (TOC)",
+   "pred": "P_TOC",
+   "pred_label": "Terminal Operations Center",
+   "score": 0.953
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_QC3",
+   "gold_label": "Quay crane QC-3",
+   "pred": "P_QC3",
+   "pred_label": "Quay crane QC-3",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_QC4",
+   "gold_label": "Quay crane QC-4",
+   "pred": "P_QC4",
+   "pred_label": "Quay crane QC-4",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_AGVCS",
+   "gold_label": "AGV control system",
+   "pred": "P_AGV_CONTROL",
+   "pred_label": "AGV control system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_WEATHER",
+   "gold_label": "Weather observation unit",
+   "pred": "P_WEATHER_UNIT",
+   "pred_label": "Weather observation unit",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_AGV",
+   "gold_label": "12 AGVs",
+   "pred": "P_AGV_FLEET",
+   "pred_label": "AGV fleet (12 AGVs)",
+   "score": 0.959
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_AGENT",
+   "gold_label": "Shipping agency",
+   "pred": "P_SHIPPING_AGENCY",
+   "pred_label": "Shipping agency",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_PA",
+   "gold_label": "Port authority",
+   "pred": "P_PORT_AUTHORITY",
+   "pred_label": "Port authority",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_OPERATOR",
+   "gold_label": "Crane operator",
+   "pred": "P_CRANE_OPERATOR",
+   "pred_label": "Crane operator",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "T_P_SAFETY",
+   "gold_label": "Safety supervisor",
+   "pred": "P_SAFETY_SUPERVISOR",
+   "pred_label": "Safety supervisor",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "T_I_CONTAINER",
+   "gold_label": "Container",
+   "pred": "I_CONTAINER",
+   "pred_label": "Container(s)",
+   "score": 0.96
+  },
+  {
+   "type": "items",
+   "gold": "T_I_DELAYED",
+   "gold_label": "38 delayed containers",
+   "pred": "I_CONTAINER_DELAYED_38",
+   "pred_label": "38 delayed containers",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "T_SIT_NORMAL",
+   "gold_label": "Normal stage",
+   "pred": "SIT_NORMAL",
+   "pred_label": "Normal operation state",
+   "score": 0.914
+  },
+  {
+   "type": "situations",
+   "gold": "T_SIT_CAUTION",
+   "gold_label": "High-wind caution stage",
+   "pred": "SIT_CAUTION",
+   "pred_label": "High-wind caution stage",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "T_SIT_ALERT",
+   "gold_label": "Alert stage",
+   "pred": "SIT_ALERT",
+   "pred_label": "Alert stage",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "T_SIT_STOP",
+   "gold_label": "Work-stop stage",
+   "pred": "SIT_WORK_STOP",
+   "pred_label": "Work-stop stage",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "T_SIT_CRANE_WORK",
+   "gold_label": "Crane at working position",
+   "pred": "SIT_RAIL_LOCKED",
+   "pred_label": "Crane rail locking device engaged state",
+   "score": 0.888
+  },
+  {
+   "type": "situations",
+   "gold": "T_SIT_CRANE_STANDBY",
+   "gold_label": "Crane at standby position",
+   "pred": "SIT_RAIL_UNLOCKED",
+   "pred_label": "Crane rail locking device released state",
+   "score": 0.88
+  },
+  {
+   "type": "state_values",
+   "gold": "T_SV_CAUTION",
+   "gold_label": "High-wind response stage Stage Caution",
+   "pred": "SV_CAUTION_LIFT_DEADLINE",
+   "pred_label": "high-wind caution stage lift deadline=5:00 p.m.",
+   "score": 0.872
+  },
+  {
+   "type": "state_values",
+   "gold": "T_SV_ALERT",
+   "gold_label": "High-wind response stage Stage Alert",
+   "pred": "SV_WIND_20_THRESHOLD",
+   "pred_label": "alert-stage wind speed threshold",
+   "score": 0.883
+  },
+  {
+   "type": "state_values",
+   "gold": "T_SV_STOP",
+   "gold_label": "High-wind response stage Stage Work stop",
+   "pred": "SV_WIND_25_THRESHOLD",
+   "pred_label": "work-stop-stage wind speed threshold",
+   "score": 0.882
+  },
+  {
+   "type": "events",
+   "gold": "T_EVT_WIND18",
+   "gold_label": "Instantaneous wind speed of 18 m/s measured",
+   "pred": "EVT_WIND_18_MEASURED",
+   "pred_label": "Instantaneous wind speed measured at 18 m/s (2:00 p.m.)",
+   "score": 0.954
+  },
+  {
+   "type": "events",
+   "gold": "T_EVT_WIND21",
+   "gold_label": "Wind speed of 21 m/s measured",
+   "pred": "EVT_WIND_21_MEASURED",
+   "pred_label": "Instantaneous wind speed measured at 21 m/s (2:25 p.m.)",
+   "score": 0.934
+  },
+  {
+   "type": "events",
+   "gold": "T_EVT_WEAKEN",
+   "gold_label": "Wind speed weakened sharply",
+   "pred": "EVT_WIND_WEAKENED_320",
+   "pred_label": "Wind speed weakens sharply (3:20 p.m.)",
+   "score": 0.927
+  },
+  {
+   "type": "events",
+   "gold": "T_EVT_TWO_BELOW",
+   "gold_label": "Average wind speed below 20 m/s twice in a row",
+   "pred": "EVT_AVG_BELOW_20_TWICE",
+   "pred_label": "10-min average wind speed below 20 m/s twice in a row (3:30, 3:35 p.m.)",
+   "score": 0.921
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_MEASURE_WIND",
+   "gold_label": "Measure instantaneous wind speed",
+   "pred": "A_MEASURE_WIND_18",
+   "pred_label": "Measure instantaneous wind speed at 18 m/s",
+   "score": 0.931
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_SEND_WIND",
+   "gold_label": "Transmit wind speed measurement to TOC",
+   "pred": "A_TRANSMIT_WIND_DATA",
+   "pred_label": "Transmit wind speed data to TOC",
+   "score": 0.964
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_CAUTION",
+   "gold_label": "Issue high-wind caution stage",
+   "pred": "A_ISSUE_CAUTION",
+   "pred_label": "Issue the high-wind caution stage",
+   "score": 0.966
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_ALERT",
+   "gold_label": "Issue alert stage",
+   "pred": "A_ISSUE_ALERT",
+   "pred_label": "Issue the alert stage",
+   "score": 0.932
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_STOP_STAGE",
+   "gold_label": "Escalate to work-stop stage",
+   "pred": "A_PREPARE_ESCALATION",
+   "pred_label": "Prepare escalation to the work-stop stage",
+   "score": 0.95
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_SLOW_HOIST",
+   "gold_label": "Reduce hoisting speed by half",
+   "pred": "A_REDUCE_HOISTING_SPEED",
+   "pred_label": "Reduce hoisting speed of containers by half",
+   "score": 0.95
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_WIDEN_GAP",
+   "gold_label": "Double AGV waiting interval",
+   "pred": "A_DOUBLE_AGV_INTERVAL",
+   "pred_label": "Double the AGV waiting interval in the zone under the crane",
+   "score": 0.924
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_NOTIFY_AGENT",
+   "gold_label": "Notify possibility of cargo-handling delay",
+   "pred": "A_NOTIFY_SHIPPING_AGENCY",
+   "pred_label": "Notify the shipping agency of possible cargo-handling delay",
+   "score": 0.94
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_PUT_DOWN",
+   "gold_label": "Stop work by setting down container onto AGV",
+   "pred": "A_SET_DOWN_CONTAINER",
+   "pred_label": "Set down the held container onto the nearest AGV",
+   "score": 0.928
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_TO_STANDBY",
+   "gold_label": "Raise boom and move to standby position",
+   "pred": "A_MOVE_TO_STANDBY",
+   "pred_label": "Move to the standby position with the boom raised",
+   "score": 0.964
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_CHECK_RAIL",
+   "gold_label": "Inspect rail locking device",
+   "pred": "A_INSPECT_RAIL_LOCK",
+   "pred_label": "Inspect the crane rail locking device",
+   "score": 0.961
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_QUERY_AVG",
+   "gold_label": "Query 10-min average wind speed",
+   "pred": "A_QUERY_AVG_WIND",
+   "pred_label": "Query the 10-min average wind speed value every 5 min",
+   "score": 0.955
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_REQ_HOLD",
+   "gold_label": "Request vessel departure hold",
+   "pred": "A_REQUEST_DEPARTURE_HOLD",
+   "pred_label": "Request a vessel departure hold from the port authority",
+   "score": 0.939
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_LIFT_ALERT",
+   "gold_label": "Lift alert stage and return to caution stage",
+   "pred": "A_LIFT_ALERT",
+   "pred_label": "Lift the alert stage and return to the caution stage",
+   "score": 0.966
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_RETURN_WORK",
+   "gold_label": "Lower boom and return to working position",
+   "pred": "A_LOWER_BOOM",
+   "pred_label": "Lower the boom",
+   "score": 0.892
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_RELEASE_RAIL",
+   "gold_label": "Release rail locking device",
+   "pred": "A_RELEASE_RAIL_LOCK",
+   "pred_label": "Release the rail locking device",
+   "score": 0.967
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_RESEQUENCE",
+   "gold_label": "Recalculate transfer sequence of delayed containers",
+   "pred": "A_RECALC_TRANSFER_SEQUENCE",
+   "pred_label": "Recalculate the transfer sequence of the delayed containers",
+   "score": 0.986
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_ASSIGN_AGV",
+   "gold_label": "Additionally assign 4 AGVs to QC-3",
+   "pred": "A_ASSIGN_AGVS_TO_QC3",
+   "pred_label": "Assign 4 additional AGVs to QC-3",
+   "score": 0.984
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_EARLY_NIGHT",
+   "gold_label": "Deploy night shift 1 h early",
+   "pred": "A_DEPLOY_NIGHT_SHIFT_EARLY",
+   "pred_label": "Deploy the night shift 1 h early",
+   "score": 0.975
+  },
+  {
+   "type": "actions",
+   "gold": "T_A_LIFT_CAUTION",
+   "gold_label": "High-wind caution stage lifted",
+   "pred": "A_LIFT_CAUTION_STAGE",
+   "pred_label": "Lift the high-wind caution stage",
+   "score": 0.914
+  },
+  {
+   "type": "constraints",
+   "gold": "T_CN_20",
+   "gold_label": "Alert stage threshold 20 m/s",
+   "pred": "CN_ALERT_THRESHOLD",
+   "pred_label": "Instantaneous wind speed reaches 20 m/s or more (alert threshold)",
+   "score": 0.94
+  },
+  {
+   "type": "constraints",
+   "gold": "T_CN_25",
+   "gold_label": "Work-stop threshold 25 m/s",
+   "pred": "CN_WORKSTOP_THRESHOLD",
+   "pred_label": "Instantaneous wind speed reaches 25 m/s or more (work-stop threshold)",
+   "score": 0.945
+  },
+  {
+   "type": "constraints",
+   "gold": "T_CN_TIER",
+   "gold_label": "No hoisting of stacks of 2 tiers or more",
+   "pred": "CN_NO_HOIST_2TIERS",
+   "pred_label": "Containers stacked 2 tiers or more must not be hoisted during alert stage",
+   "score": 0.93
+  },
+  {
+   "type": "constraints",
+   "gold": "T_CN_LIFT",
+   "gold_label": "Average wind speed below 20 m/s twice in a row",
+   "pred": "CN_LIFT_ALERT_THRESHOLD",
+   "pred_label": "10-min average wind speed below 20 m/s twice in a row (alert-lift threshold)",
+   "score": 0.952
+  },
+  {
+   "type": "constraints",
+   "gold": "T_CN_5PM",
+   "gold_label": "Caution stage lifted by 5:00 p.m.",
+   "pred": "CN_CAUTION_LIFT_DEADLINE",
+   "pred_label": "High-wind caution stage must be lifted by 5:00 p.m.",
+   "score": 0.936
+  },
+  {
+   "type": "goals",
+   "gold": "T_G_DELAY",
+   "gold_label": "Vessel departure delay within 30 min",
+   "pred": "G_RESPONSE_GOAL",
+   "pred_label": "Keep vessel departure delay within 30 min without injury to personnel or damage to equipment",
+   "score": 0.934
+  },
+  {
+   "type": "reasons",
+   "gold": "T_R_FORECAST",
+   "gold_label": "Predicted wind speed rise to 26 m/s",
+   "pred": "R_PREPARE_ESCALATION_REASON",
+   "pred_label": "Wind speed was predicted to rise to 26 m/s",
+   "score": 0.978
+  },
+  {
+   "type": "reasons",
+   "gold": "T_R_DEPARTURE",
+   "gold_label": "Meet vessel departure time",
+   "pred": "R_MEET_DEPARTURE_TIME",
+   "pred_label": "To meet the vessel departure time",
+   "score": 0.973
+  },
+  {
+   "type": "observations",
+   "gold": "T_OBS_WIND",
+   "gold_label": "Measure instantaneous wind speed",
+   "pred": "OBS_WIND_18",
+   "pred_label": "Instantaneous wind speed detection (18 m/s)",
+   "score": 0.914
+  },
+  {
+   "type": "observations",
+   "gold": "T_OBS_RAIL",
+   "gold_label": "Confirm engagement state of rail locking device",
+   "pred": "OBS_RAIL_LOCK_ENGAGED",
+   "pred_label": "Rail lock engagement confirmation",
+   "score": 0.934
+  },
+  {
+   "type": "observations",
+   "gold": "T_OBS_AVG",
+   "gold_label": "Query 10-min average wind speed",
+   "pred": "OBS_PREDICT_WIND_RISE",
+   "pred_label": "Wind speed rise prediction",
+   "score": 0.887
+  },
+  {
+   "type": "transitions",
+   "gold": "T_TR_CAUTION",
+   "gold_label": "From normal to caution stage",
+   "pred": "TR_NORMAL_TO_CAUTION",
+   "pred_label": "Transition from normal operation to caution stage",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "T_TR_ALERT",
+   "gold_label": "From caution to alert stage",
+   "pred": "TR_CAUTION_TO_ALERT",
+   "pred_label": "Transition from caution stage to alert stage",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "T_TR_STOP",
+   "gold_label": "From alert to work-stop stage",
+   "pred": "TR_ALERT_TO_WORKSTOP",
+   "pred_label": "Transition from alert stage to work-stop stage (rule, not exercised)",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "T_TR_ALERT_OFF",
+   "gold_label": "Return from alert to caution stage",
+   "pred": "TR_ALERT_TO_CAUTION",
+   "pred_label": "Transition from alert stage back to caution stage",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "T_TR_CAUTION_OFF",
+   "gold_label": "From caution to normal stage",
+   "pred": "TR_CAUTION_TO_NORMAL",
+   "pred_label": "Transition from caution stage to normal operation",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "T_TR_CRANE_STANDBY",
+   "gold_label": "Crane from working position to standby position",
+   "pred": "TR_RAIL_LOCK_RELEASE",
+   "pred_label": "Transition from rail lock engaged to released",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "T_F01",
+   "gold_label": "Transmit after measurement",
+   "pred": "F01",
+   "pred_label": "Wind measurement then transmission to TOC",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "T_F05",
+   "gold_label": "Hoisting slowdown after caution stage",
+   "pred": "F02",
+   "pred_label": "Caution issued then hoisting speed reduced",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "T_F06",
+   "gold_label": "Waiting interval increase after caution stage",
+   "pred": "F03",
+   "pred_label": "Caution issued then AGV interval doubled",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "T_F07",
+   "gold_label": "Delay notice after alert issued",
+   "pred": "F04",
+   "pred_label": "Alert issued then shipping agency notified",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "T_F08",
+   "gold_label": "Container set-down after alert issued",
+   "pred": "F05",
+   "pred_label": "Alert issued then crane operator sets down container",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "T_F09",
+   "gold_label": "Move to standby position after work stop",
+   "pred": "F06",
+   "pred_label": "Container set down then move to standby",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "T_F10",
+   "gold_label": "Lift alert when below 20 m/s twice in a row",
+   "pred": "F10",
+   "pred_label": "Average query then lift alert stage",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "T_F11",
+   "gold_label": "Departure hold request after escalation preparation",
+   "pred": "F12",
+   "pred_label": "Escalation preparation then departure-hold request (not executed)",
+   "score": 0.951
+  },
+  {
+   "type": "flows",
+   "gold": "T_F16",
+   "gold_label": "Additional AGV assignment after recalculation",
+   "pred": "F18",
+   "pred_label": "Transfer sequence recalculated then AGVs assigned",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "T_C03",
+   "gold_label": "Hoisting slowdown and waiting interval increase applied simultaneously",
+   "pred": "C01",
+   "pred_label": "Simultaneous caution-stage response measures",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "T_C05",
+   "gold_label": "Query average wind speed every 5 min",
+   "pred": "C02",
+   "pred_label": "Periodic 5-minute wind average query loop",
+   "score": 0.935
+  },
+  {
+   "type": "controls",
+   "gold": "T_C06",
+   "gold_label": "Determine average wind speed below threshold twice in a row",
+   "pred": "C03",
+   "pred_label": "Alert-lift decision on consecutive low averages",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "T_C07",
+   "gold_label": "Boom return and wait for locking device release",
+   "pred": "C05",
+   "pred_label": "Rail-lock release gate for work resumption",
+   "score": 0.872
+  },
+  {
+   "type": "controls",
+   "gold": "T_C09",
+   "gold_label": "Determine caution stage not lifted by 5:00 p.m.",
+   "pred": "C06",
+   "pred_label": "Night-shift early-deployment decision on 5:00 p.m. deadline",
+   "score": 0.901
+  }
+ ],
+ "type_confusion": {
+  "episodes->flows": 1,
+  "performers->items": 1,
+  "actions->episodes": 1,
+  "items->observations": 1,
+  "items->state_values": 1,
+  "flows->actions": 3,
+  "controls->state_values": 2,
+  "controls->items": 1,
+  "events->state_values": 1,
+  "constraints->flows": 1,
+  "constraints->episodes": 1,
+  "constraints->reasons": 1,
+  "reasons->controls": 1
+ },
+ "source_ref_accuracy": {
+  "correct": 71,
+  "aligned_with_gold_ref": 81,
+  "accuracy": 0.8765
+ },
+ "relations": {
+  "strict": {
+   "tp": 88,
+   "pred": 158,
+   "gold": 148,
+   "precision": 0.557,
+   "recall": 0.5946,
+   "f1": 0.5752,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "constrained_by": {
+     "gold": 10,
+     "recalled": 1
+    },
+    "controls_flow": {
+     "gold": 7,
+     "recalled": 3
+    },
+    "custom/contains_action": {
+     "gold": 22,
+     "recalled": 15
+    },
+    "flow_source": {
+     "gold": 16,
+     "recalled": 8
+    },
+    "flow_target": {
+     "gold": 16,
+     "recalled": 9
+    },
+    "from_situation": {
+     "gold": 7,
+     "recalled": 6
+    },
+    "has_episode": {
+     "gold": 5,
+     "recalled": 3
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "has_reason": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 6,
+     "recalled": 0
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "performed_by": {
+     "gold": 20,
+     "recalled": 19
+    },
+    "produces_item": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "provided_to": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "to_situation": {
+     "gold": 7,
+     "recalled": 6
+    },
+    "triggers": {
+     "gold": 7,
+     "recalled": 6
+    },
+    "uses_item": {
+     "gold": 3,
+     "recalled": 0
+    }
+   }
+  },
+  "normalized": {
+   "tp": 88,
+   "pred": 158,
+   "gold": 148,
+   "precision": 0.557,
+   "recall": 0.5946,
+   "f1": 0.5752,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "constrained_by": {
+     "gold": 10,
+     "recalled": 1
+    },
+    "contains_action": {
+     "gold": 22,
+     "recalled": 15
+    },
+    "controls_flow": {
+     "gold": 7,
+     "recalled": 3
+    },
+    "flow_source": {
+     "gold": 16,
+     "recalled": 8
+    },
+    "flow_target": {
+     "gold": 16,
+     "recalled": 9
+    },
+    "from_situation": {
+     "gold": 7,
+     "recalled": 6
+    },
+    "has_episode": {
+     "gold": 5,
+     "recalled": 3
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "has_reason": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 6,
+     "recalled": 0
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "performed_by": {
+     "gold": 20,
+     "recalled": 19
+    },
+    "produces_item": {
+     "gold": 3,
+     "recalled": 0
+    },
+    "provided_to": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "to_situation": {
+     "gold": 7,
+     "recalled": 6
+    },
+    "triggers": {
+     "gold": 7,
+     "recalled": 6
+    },
+    "uses_item": {
+     "gold": 3,
+     "recalled": 0
+    }
+   }
+  },
+  "untyped": {
+   "tp": 91,
+   "pred": 138,
+   "gold": 148,
+   "precision": 0.6594,
+   "recall": 0.6149,
+   "f1": 0.6364
+  }
+ },
+ "atomic_facts": {
+  "found": 0,
+  "total": 0,
+  "missing": []
+ },
+ "required_relations": {
+  "hit": 0,
+  "total": 0
+ },
+ "forbidden_relations": {
+  "violated": 0,
+  "total": 0
+ },
+ "structure": {
+  "actions": 25,
+  "actions_in_episode": 25,
+  "actions_allocated": 25,
+  "nested_mode": true,
+  "dangling_relations": 0,
+  "relations": 158
+ }
+}

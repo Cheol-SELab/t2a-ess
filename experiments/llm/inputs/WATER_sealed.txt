@@ -1,0 +1,25 @@
+[P1] The water treatment plant operating system consists of the central control room, the raw water quality analyzer, the coagulant dosing equipment, 6 filters, and the chlorinator. The raw water quality analyzer measures turbidity and pH.
+
+[P2] Externally, there are the upstream dam management office and the city hall water supply division; equipment operation is handled by the operators, and water quality analysis by the water quality analysis team.
+
+[P3] At 1:00 p.m., the upstream dam management office notifies the central control room that it will increase the discharge rate. The central control room shortens the raw water turbidity monitoring interval from 30 min to 5 min.
+
+[P4] When the raw water quality analyzer measures a turbidity of 50 NTU and transmits it to the central control room, the central control room declares the high-turbidity response stage. If the turbidity is 100 NTU or more, the central control room temporarily suspends water intake.
+
+[P5] In the high-turbidity response stage, the operators double the coagulant dose, and the water quality analysis team performs a coagulation test every 1 h. The two tasks proceed simultaneously.
+
+[P6] At 3:00 p.m., when the turbidity is measured at 120 NTU, the central control room temporarily suspends water intake and requests a water supply adjustment from the city hall water supply division.
+
+[P7] While water intake is suspended, the operators check the distribution reservoir level every 30 min. If the distribution reservoir level falls below 40%, the operators open the emergency interconnection pipe.
+
+[P8] At 5:00 p.m., the distribution reservoir level was checked at 42%, so the emergency interconnection pipe was not opened.
+
+[P9] At 6:00 p.m., when the turbidity drops to 60 NTU, the central control room resumes water intake. When water intake is resumed, the operators backwash the 6 filters one after another.
+
+[P10] When the backwashing is all finished and the water quality analysis team confirms that the treated water turbidity is 0.5 NTU or less, the central control room lifts the water supply adjustment.
+
+[P11] At 9:00 p.m., when the raw water turbidity drops below 30 NTU, the central control room lifts the high-turbidity response stage and returns the monitoring interval to 30 min.
+
+[P12] The central control room compiles the incident details and reports them to the city hall water supply division.
+
+[P13] The goal of this scenario is to respond without a water supply interruption while meeting the drinking water quality standards.

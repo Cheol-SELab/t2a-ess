@@ -1,0 +1,27 @@
+{
+  "in": "mumt-en.sysml",
+  "out": "editor-mumt-none.png",
+  "expanded": [
+    "MUM-T attack operation under EW::E3 EW jamming and comms degradation::Switch drones to edge-AI analysis"
+  ],
+  "nodeKinds": {
+    "FunctionNode": 19,
+    "StartConcurrencyNode": 2,
+    "EndConcurrencyNode": 2,
+    "ItemNode": 6,
+    "StartReferenceNode": 5,
+    "EndReferenceNode": 5
+  },
+  "edges": 37,
+  "metrics": [
+    "rootIds",
+    "topologyOf",
+    "step",
+    "lane",
+    "pathPointer",
+    "pair",
+    "slot",
+    "branchStates",
+    "clusterHierarchy"
+  ]
+}

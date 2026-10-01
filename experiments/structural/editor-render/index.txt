@@ -1,0 +1,8 @@
+01 data/gold/mumt/mumt.gold.json
+02 data/gold/nghe/nghe.gold.json
+03 data/gold/av/av.gold.json
+04 data/diagnostic/mumt/mumt.nongold.json
+05 data/diagnostic/mumt/mumt.exhaustive.json
+06 data/diagnostic/nghe/nghe.nongold.json
+07 data/diagnostic/nghe/nghe.exhaustive.json
+08 src/examples/coffee_order_T2A-ESS.json

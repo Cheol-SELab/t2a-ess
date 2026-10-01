@@ -1,0 +1,16 @@
+digraph G { rankdir=LR; nodesep=0.22; ranksep=0.32; bgcolor="white"; compound=true;
+node [fontname="Arial", fontsize=10]; edge [fontname="Arial", fontsize=9, color="#444444", arrowsize=0.7];
+label=<<B>Lv.1 E3 Fog and cyber threat response</B>>; labelloc=t; labeljust=l; fontname="Arial"; fontsize=12;
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::Propose and approve Level 3 in fog" [shape=box, style="rounded", margin=0.04, label=<<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7" COLOR="#777777">Lv.2</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="7" COLOR="#777777">#Function</FONT></TD></TR><TR><TD COLSPAN="2"><B>Propose and approve<BR/>Level 3 in fog</B></TD></TR><TR><TD COLSPAN="2"><FONT POINT-SIZE="8"><I>AI_ICP, Remote supervisor</I></FONT></TD></TR></TABLE>>];
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::Cut public network, switch to closed net" [shape=box, style="rounded", margin=0.04, label=<<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7" COLOR="#777777">Lv.2</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="7" COLOR="#777777">#Function</FONT></TD></TR><TR><TD COLSPAN="2"><B>Cut public network,<BR/>switch to closed net</B></TD></TR><TR><TD COLSPAN="2"><FONT POINT-SIZE="7" COLOR="#1f5fa8">out: Security threat log</FONT></TD></TR><TR><TD COLSPAN="2"><FONT POINT-SIZE="8"><I>Security system</I></FONT></TD></TR></TABLE>>];
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::New Start Concurrency_3" [shape=circle, label="AND", fontsize=8, width=0.42, fixedsize=true, penwidth=1.2];
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::New End Concurrency_4" [shape=circle, label="AND", fontsize=8, width=0.42, fixedsize=true, penwidth=1.2];
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::start" [shape=circle, style=filled, fillcolor=black, label="", width=0.16];
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::done" [shape=doublecircle, style=filled, fillcolor=black, label="", width=0.11];
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::start" -> "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::New Start Concurrency_3";
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::Propose and approve Level 3 in fog" -> "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::New End Concurrency_4";
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::Cut public network, switch to closed net" -> "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::New End Concurrency_4";
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::New Start Concurrency_3" -> "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::Propose and approve Level 3 in fog";
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::New Start Concurrency_3" -> "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::Cut public network, switch to closed net";
+"NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::New End Concurrency_4" -> "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::done";
+}

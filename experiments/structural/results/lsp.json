@@ -1,0 +1,411 @@
+[
+  {
+    "file": "gold/mumt/mumt.gold.json",
+    "lspOk": true,
+    "problems": [],
+    "stats": {
+      "nodes": 48,
+      "edges": 70,
+      "ItemDefinition": 3,
+      "PartDefinition": 1,
+      "PartUsage": 10,
+      "ActionUsage": 19,
+      "ForkNode": 2,
+      "JoinNode": 2,
+      "ItemUsage": 1,
+      "StartAction": 5,
+      "DoneAction": 5,
+      "succession": 30,
+      "flow": 1,
+      "allocation": 14,
+      "diagnostics": {
+        "hint": 10
+      }
+    },
+    "validator": {
+      "errors": 0,
+      "warnings": 5,
+      "codes": {
+        "ITEM_NO_PRODUCER": 1,
+        "ITEM_NO_CONSUMER": 4
+      }
+    },
+    "schema": {
+      "errors": 0,
+      "warnings": 0,
+      "codes": {}
+    },
+    "state": {
+      "lines": 85,
+      "diagnostics": {
+        "error": 0,
+        "warning": 3,
+        "hint": 3
+      }
+    },
+    "sysmlLines": 162,
+    "nestedEpisodeBlocks": 4,
+    "counts": {
+      "episodes": 4,
+      "performers": 10,
+      "actions": 14,
+      "items": 6,
+      "flows": 8,
+      "controls": 3
+    }
+  },
+  {
+    "file": "gold/nghe/nghe.gold.json",
+    "lspOk": true,
+    "problems": [],
+    "stats": {
+      "nodes": 70,
+      "edges": 113,
+      "ItemDefinition": 3,
+      "PartDefinition": 1,
+      "PartUsage": 19,
+      "ActionUsage": 24,
+      "ForkNode": 5,
+      "JoinNode": 6,
+      "StartAction": 6,
+      "DoneAction": 6,
+      "succession": 51,
+      "flow": 0,
+      "allocation": 26,
+      "diagnostics": {
+        "hint": 12
+      }
+    },
+    "validator": {
+      "errors": 0,
+      "warnings": 4,
+      "codes": {
+        "ITEM_NO_CONSUMER": 4
+      }
+    },
+    "schema": {
+      "errors": 0,
+      "warnings": 0,
+      "codes": {}
+    },
+    "state": {
+      "lines": 101,
+      "diagnostics": {
+        "error": 0,
+        "warning": 3,
+        "hint": 2
+      }
+    },
+    "sysmlLines": 238,
+    "nestedEpisodeBlocks": 5,
+    "counts": {
+      "episodes": 5,
+      "performers": 19,
+      "actions": 18,
+      "items": 7,
+      "flows": 6,
+      "controls": 6
+    }
+  },
+  {
+    "file": "gold/av/av.gold.json",
+    "lspOk": true,
+    "problems": [],
+    "stats": {
+      "nodes": 58,
+      "edges": 85,
+      "ItemDefinition": 3,
+      "PartDefinition": 1,
+      "PartUsage": 14,
+      "ActionUsage": 22,
+      "ForkNode": 3,
+      "JoinNode": 3,
+      "StartAction": 6,
+      "DoneAction": 6,
+      "succession": 36,
+      "flow": 4,
+      "allocation": 16,
+      "diagnostics": {
+        "hint": 12
+      }
+    },
+    "validator": {
+      "errors": 0,
+      "warnings": 2,
+      "codes": {
+        "ITEM_NO_CONSUMER": 2
+      }
+    },
+    "schema": {
+      "errors": 0,
+      "warnings": 0,
+      "codes": {}
+    },
+    "state": {
+      "lines": 63,
+      "diagnostics": {
+        "error": 0,
+        "warning": 2,
+        "hint": 2
+      }
+    },
+    "sysmlLines": 200,
+    "nestedEpisodeBlocks": 5,
+    "counts": {
+      "episodes": 5,
+      "performers": 14,
+      "actions": 16,
+      "items": 7,
+      "flows": 9,
+      "controls": 3
+    }
+  },
+  {
+    "file": "diagnostic/mumt/mumt.nongold.json",
+    "lspOk": true,
+    "problems": [],
+    "stats": {
+      "nodes": 32,
+      "edges": 49,
+      "ItemDefinition": 3,
+      "PartDefinition": 1,
+      "PartUsage": 9,
+      "ActionUsage": 15,
+      "ForkNode": 1,
+      "JoinNode": 1,
+      "StartAction": 1,
+      "DoneAction": 1,
+      "succession": 29,
+      "flow": 0,
+      "allocation": 2,
+      "diagnostics": {
+        "hint": 2
+      }
+    },
+    "validator": {
+      "errors": 0,
+      "warnings": 15,
+      "codes": {
+        "ITEM_NO_CONSUMER": 3,
+        "ACTION_NO_PERFORMER": 12
+      }
+    },
+    "schema": {
+      "errors": 1,
+      "warnings": 23,
+      "codes": {
+        "warning:CUSTOM_TYPE_NOT_REGISTERED": 3,
+        "error:TRANSITION_ENDPOINTS": 1,
+        "warning:SITUATION_NO_STATE_VALUE": 1,
+        "warning:OBSERVATION_NO_OBSERVES": 2,
+        "warning:ISOLATED_EVENT": 3,
+        "warning:ACTION_NO_EPISODE": 14
+      }
+    },
+    "state": {
+      "lines": 52,
+      "diagnostics": {
+        "error": 0,
+        "warning": 2,
+        "hint": 0
+      }
+    },
+    "sysmlLines": 110,
+    "nestedEpisodeBlocks": 14,
+    "counts": {
+      "episodes": 4,
+      "performers": 9,
+      "actions": 14,
+      "items": 6,
+      "flows": 8,
+      "controls": 3
+    }
+  },
+  {
+    "file": "diagnostic/mumt/mumt.exhaustive.json",
+    "lspOk": true,
+    "problems": [],
+    "stats": {
+      "nodes": 78,
+      "edges": 167,
+      "ItemDefinition": 3,
+      "PartDefinition": 1,
+      "PartUsage": 14,
+      "ActionUsage": 56,
+      "ForkNode": 1,
+      "JoinNode": 1,
+      "StartAction": 1,
+      "DoneAction": 1,
+      "succession": 108,
+      "flow": 0,
+      "allocation": 0,
+      "diagnostics": {
+        "hint": 2
+      }
+    },
+    "validator": {
+      "errors": 0,
+      "warnings": 60,
+      "codes": {
+        "ITEM_NO_CONSUMER": 4,
+        "ITEM_NO_PRODUCER": 1,
+        "ACTION_NO_PERFORMER": 55
+      }
+    },
+    "schema": {
+      "errors": 7,
+      "warnings": 84,
+      "codes": {
+        "warning:CUSTOM_TYPE_NOT_REGISTERED": 6,
+        "error:TRANSITION_ENDPOINTS": 7,
+        "warning:SITUATION_NO_STATE_VALUE": 5,
+        "warning:OBSERVATION_NO_OBSERVES": 8,
+        "warning:ISOLATED_EVENT": 10,
+        "warning:ACTION_NO_EPISODE": 55
+      }
+    },
+    "state": {
+      "lines": 84,
+      "diagnostics": {
+        "error": 0,
+        "warning": 7,
+        "hint": 0
+      }
+    },
+    "sysmlLines": 288,
+    "nestedEpisodeBlocks": 55,
+    "counts": {
+      "episodes": 8,
+      "performers": 14,
+      "actions": 55,
+      "items": 12,
+      "flows": 15,
+      "controls": 5
+    }
+  },
+  {
+    "file": "diagnostic/nghe/nghe.nongold.json",
+    "lspOk": true,
+    "problems": [],
+    "stats": {
+      "nodes": 39,
+      "edges": 59,
+      "ItemDefinition": 3,
+      "PartDefinition": 1,
+      "PartUsage": 14,
+      "ActionUsage": 17,
+      "ForkNode": 1,
+      "JoinNode": 1,
+      "StartAction": 1,
+      "DoneAction": 1,
+      "succession": 34,
+      "flow": 0,
+      "allocation": 5,
+      "diagnostics": {
+        "hint": 2
+      }
+    },
+    "validator": {
+      "errors": 0,
+      "warnings": 15,
+      "codes": {
+        "ITEM_NO_PRODUCER": 1,
+        "ITEM_NO_CONSUMER": 3,
+        "ACTION_NO_PERFORMER": 11
+      }
+    },
+    "schema": {
+      "errors": 5,
+      "warnings": 28,
+      "codes": {
+        "warning:CUSTOM_TYPE_NOT_REGISTERED": 4,
+        "error:RELATION_ENDPOINT_TYPE": 2,
+        "error:TRANSITION_ENDPOINTS": 3,
+        "warning:SITUATION_NO_STATE_VALUE": 3,
+        "warning:OBSERVATION_NO_OBSERVES": 4,
+        "warning:ISOLATED_EVENT": 1,
+        "warning:ACTION_NO_EPISODE": 16
+      }
+    },
+    "state": {
+      "lines": 62,
+      "diagnostics": {
+        "error": 0,
+        "warning": 4,
+        "hint": 0
+      }
+    },
+    "sysmlLines": 135,
+    "nestedEpisodeBlocks": 16,
+    "counts": {
+      "episodes": 5,
+      "performers": 14,
+      "actions": 16,
+      "items": 7,
+      "flows": 6,
+      "controls": 6
+    }
+  },
+  {
+    "file": "diagnostic/nghe/nghe.exhaustive.json",
+    "lspOk": true,
+    "problems": [],
+    "stats": {
+      "nodes": 79,
+      "edges": 156,
+      "ItemDefinition": 3,
+      "PartDefinition": 1,
+      "PartUsage": 19,
+      "ActionUsage": 52,
+      "ForkNode": 1,
+      "JoinNode": 1,
+      "StartAction": 1,
+      "DoneAction": 1,
+      "succession": 101,
+      "flow": 0,
+      "allocation": 0,
+      "diagnostics": {
+        "hint": 2
+      }
+    },
+    "validator": {
+      "errors": 0,
+      "warnings": 60,
+      "codes": {
+        "ITEM_NO_PRODUCER": 4,
+        "ITEM_NO_CONSUMER": 5,
+        "ACTION_NO_PERFORMER": 51
+      }
+    },
+    "schema": {
+      "errors": 10,
+      "warnings": 80,
+      "codes": {
+        "warning:CUSTOM_TYPE_NOT_REGISTERED": 4,
+        "error:TRANSITION_ENDPOINTS": 10,
+        "warning:SITUATION_NO_STATE_VALUE": 7,
+        "warning:OBSERVATION_NO_OBSERVES": 9,
+        "warning:ISOLATED_EVENT": 9,
+        "warning:ACTION_NO_EPISODE": 51
+      }
+    },
+    "state": {
+      "lines": 84,
+      "diagnostics": {
+        "error": 0,
+        "warning": 8,
+        "hint": 0
+      }
+    },
+    "sysmlLines": 296,
+    "nestedEpisodeBlocks": 51,
+    "counts": {
+      "episodes": 8,
+      "performers": 19,
+      "actions": 51,
+      "items": 14,
+      "flows": 16,
+      "controls": 8
+    }
+  }
+]

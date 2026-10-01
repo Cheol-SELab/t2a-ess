@@ -1,0 +1,1132 @@
+{
+ "meta": {
+  "input": "BLACKOUT_sealed",
+  "repeat": 8,
+  "condition": "corrected",
+  "model_requested": "claude-opus-5-5",
+  "models_used": [
+   "claude-opus-5-5"
+  ],
+  "prompt": "corrected-contract.md",
+  "prompt_sha256": "9dd751c5ec471393b4f36868e793b438e5e7470b80cf15a9e7475503fcee759b",
+  "input_sha256": "d60ebf7d52b9a78f3c853d3e8e4125e5b7a90204b23d29b3309a858080bf9bcb",
+  "user_sha256": "2c2ca2e5e14e120172e5736d56af1c097568e02be81b16ac3760c8aa67922a90",
+  "runner_sha256": "668572f34df601b1974f920604e58152c826610fc0840a0fe0ed5b39cc377e01",
+  "ok": true,
+  "attempts": 1,
+  "failure": null,
+  "elapsed_s": 261.3,
+  "total_cost_usd": 0.7503,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 15495,
+   "output_tokens": 37358,
+   "output_tokens_details": {
+    "thinking_tokens": 9932
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 37358,
+     "cache_read_input_tokens": 15495,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "cli": "claude -p (isolated, experiments/common/claude_cli.py)"
+ },
+ "tau": 0.87,
+ "parse_ok": true,
+ "matcher": "embedding",
+ "scorer_version": "3.1",
+ "slots_tolerant": {
+  "micro": {
+   "gold_coverage": 0.9195,
+   "pred_support": 0.7545,
+   "f1": 0.8289
+  },
+  "per_type": {
+   "scenarios": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 1,
+    "pred": 1
+   },
+   "episodes": {
+    "gold_coverage": 0.75,
+    "pred_support": 0.5714,
+    "f1": 0.6486,
+    "gold": 4,
+    "pred": 7
+   },
+   "performers": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.9231,
+    "f1": 0.96,
+    "gold": 13,
+    "pred": 13
+   },
+   "actions": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.9583,
+    "f1": 0.9787,
+    "gold": 21,
+    "pred": 24
+   },
+   "items": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.4167,
+    "f1": 0.5882,
+    "gold": 4,
+    "pred": 12
+   },
+   "flows": {
+    "gold_coverage": 0.9231,
+    "pred_support": 0.619,
+    "f1": 0.7411,
+    "gold": 13,
+    "pred": 21
+   },
+   "controls": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 4,
+    "pred": 4
+   },
+   "situations": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 4,
+    "pred": 4
+   },
+   "state_values": {
+    "gold_coverage": 0.75,
+    "pred_support": 0.5,
+    "f1": 0.6,
+    "gold": 4,
+    "pred": 6
+   },
+   "events": {
+    "gold_coverage": 0.8,
+    "pred_support": 1.0,
+    "f1": 0.8889,
+    "gold": 5,
+    "pred": 3
+   },
+   "transitions": {
+    "gold_coverage": 0.5,
+    "pred_support": 1.0,
+    "f1": 0.6667,
+    "gold": 4,
+    "pred": 2
+   },
+   "constraints": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.6,
+    "f1": 0.75,
+    "gold": 3,
+    "pred": 5
+   },
+   "goals": {
+    "gold_coverage": 0.5,
+    "pred_support": 1.0,
+    "f1": 0.6667,
+    "gold": 2,
+    "pred": 1
+   },
+   "reasons": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.5,
+    "f1": 0.6667,
+    "gold": 1,
+    "pred": 2
+   },
+   "observations": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.8,
+    "f1": 0.8889,
+    "gold": 4,
+    "pred": 5
+   }
+  }
+ },
+ "slots": {
+  "micro": {
+   "tp": 77,
+   "pred": 110,
+   "gold": 87,
+   "precision": 0.7,
+   "recall": 0.8851,
+   "f1": 0.7817
+  },
+  "per_type": {
+   "scenarios": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "episodes": {
+    "tp": 3,
+    "pred": 7,
+    "gold": 4,
+    "precision": 0.4286,
+    "recall": 0.75,
+    "f1": 0.5455
+   },
+   "performers": {
+    "tp": 12,
+    "pred": 13,
+    "gold": 13,
+    "precision": 0.9231,
+    "recall": 0.9231,
+    "f1": 0.9231
+   },
+   "actions": {
+    "tp": 21,
+    "pred": 24,
+    "gold": 21,
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1": 0.9333
+   },
+   "items": {
+    "tp": 4,
+    "pred": 12,
+    "gold": 4,
+    "precision": 0.3333,
+    "recall": 1.0,
+    "f1": 0.5
+   },
+   "flows": {
+    "tp": 12,
+    "pred": 21,
+    "gold": 13,
+    "precision": 0.5714,
+    "recall": 0.9231,
+    "f1": 0.7059
+   },
+   "controls": {
+    "tp": 4,
+    "pred": 4,
+    "gold": 4,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "situations": {
+    "tp": 3,
+    "pred": 4,
+    "gold": 4,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75
+   },
+   "state_values": {
+    "tp": 3,
+    "pred": 6,
+    "gold": 4,
+    "precision": 0.5,
+    "recall": 0.75,
+    "f1": 0.6
+   },
+   "events": {
+    "tp": 3,
+    "pred": 3,
+    "gold": 5,
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1": 0.75
+   },
+   "transitions": {
+    "tp": 2,
+    "pred": 2,
+    "gold": 4,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "constraints": {
+    "tp": 3,
+    "pred": 5,
+    "gold": 3,
+    "precision": 0.6,
+    "recall": 1.0,
+    "f1": 0.75
+   },
+   "goals": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 2,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "reasons": {
+    "tp": 1,
+    "pred": 2,
+    "gold": 1,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667
+   },
+   "observations": {
+    "tp": 4,
+    "pred": 5,
+    "gold": 4,
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.8889
+   }
+  },
+  "macro_f1": 0.7565
+ },
+ "alignment_pairs": [
+  {
+   "type": "scenarios",
+   "gold": "K_SCN",
+   "gold_label": "High-rise building power outage response",
+   "pred": "SCN_HIGHRISE_POWER_OUTAGE",
+   "pred_label": "High-rise building power outage response",
+   "score": 1.0
+  },
+  {
+   "type": "episodes",
+   "gold": "K_EP_OUTAGE",
+   "gold_label": "Power outage detection and switchover to emergency power",
+   "pred": "EP_EMERGENCY_POWER",
+   "pred_label": "Outage detection and emergency power supply",
+   "score": 0.956
+  },
+  {
+   "type": "episodes",
+   "gold": "K_EP_RESCUE",
+   "gold_label": "Rescue from elevator entrapment",
+   "pred": "EP_ELEVATOR_RESCUE",
+   "pred_label": "Trapped passenger rescue",
+   "score": 0.91
+  },
+  {
+   "type": "episodes",
+   "gold": "K_EP_RESTORE",
+   "gold_label": "Power restoration and normalization",
+   "pred": "EP_RESTORATION",
+   "pred_label": "Power restoration and elevator recovery",
+   "score": 0.91
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_SYSTEM",
+   "gold_label": "High-rise building operation system",
+   "pred": "P_BUILDING_SYSTEM",
+   "pred_label": "High-rise building operation system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_CENTER",
+   "gold_label": "Disaster prevention center",
+   "pred": "P_DISASTER_CENTER",
+   "pred_label": "Disaster prevention center",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_BEMS",
+   "gold_label": "Building energy management system (BEMS)",
+   "pred": "P_BEMS",
+   "pred_label": "Building energy management system (BEMS)",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_GEN1",
+   "gold_label": "Emergency generator No. 1",
+   "pred": "P_GEN1",
+   "pred_label": "Emergency generator No. 1",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_GEN2",
+   "gold_label": "Emergency generator No. 2",
+   "pred": "P_GEN2",
+   "pred_label": "Emergency generator No. 2",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_ELEV",
+   "gold_label": "24 elevators",
+   "pred": "P_ELEVATORS",
+   "pred_label": "Elevators (24)",
+   "score": 0.945
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_PA",
+   "gold_label": "Emergency broadcast system",
+   "pred": "P_EMERGENCY_BROADCAST",
+   "pred_label": "Emergency broadcast system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_KEPCO",
+   "gold_label": "KEPCO",
+   "pred": "P_KEPCO",
+   "pred_label": "KEPCO",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_FIRE",
+   "gold_label": "Fire station",
+   "pred": "P_FIRE_STATION",
+   "pred_label": "Fire station",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_FM",
+   "gold_label": "Facility manager",
+   "pred": "P_FACILITY_MANAGER",
+   "pred_label": "Facility manager",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_LIFT",
+   "gold_label": "Elevator maintenance team",
+   "pred": "P_ELEVATOR_MAINT_TEAM",
+   "pred_label": "Elevator maintenance team",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "K_P_TENANTS",
+   "gold_label": "Tenant companies",
+   "pred": "P_TENANT_COMPANIES",
+   "pred_label": "Tenant companies",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "K_I_INQUIRY",
+   "gold_label": "Inquiry about cause of power outage",
+   "pred": "I_CAUSE_INQUIRY",
+   "pred_label": "Outage cause inquiry",
+   "score": 0.96
+  },
+  {
+   "type": "items",
+   "gold": "K_I_RESULT",
+   "gold_label": "Rescue result report",
+   "pred": "I_RESCUE_REPORT",
+   "pred_label": "Rescue result report",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "K_I_REPLY",
+   "gold_label": "Reply with cause of power outage and expected restoration time",
+   "pred": "I_CAUSE_REPLY",
+   "pred_label": "Outage cause reply (substation breaker failure, about 1 h to restore)",
+   "score": 0.916
+  },
+  {
+   "type": "items",
+   "gold": "K_I_RECORD",
+   "gold_label": "Power outage response record",
+   "pred": "I_RESPONSE_RECORD",
+   "pred_label": "Power outage response record",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "K_SIT_GRID",
+   "gold_label": "External power supply state",
+   "pred": "SIT_NORMAL_POWER",
+   "pred_label": "External power supplied state",
+   "score": 0.983
+  },
+  {
+   "type": "situations",
+   "gold": "K_SIT_EMERGENCY",
+   "gold_label": "Emergency generation state",
+   "pred": "SIT_POWER_OUTAGE",
+   "pred_label": "Power outage state",
+   "score": 0.908
+  },
+  {
+   "type": "situations",
+   "gold": "K_SIT_ELEV_RUN",
+   "gold_label": "Elevator normal operation state",
+   "pred": "SIT_ELEVATORS_NORMAL",
+   "pred_label": "All elevators operating normally",
+   "score": 0.933
+  },
+  {
+   "type": "state_values",
+   "gold": "K_SV_GRID",
+   "gold_label": "Building power Supply source External power",
+   "pred": "SV_EXT_POWER_SUPPLIED",
+   "pred_label": "external power=supplied",
+   "score": 0.902
+  },
+  {
+   "type": "state_values",
+   "gold": "K_SV_ELEV_HALT",
+   "gold_label": "Elevator Operation status Stopped",
+   "pred": "SV_ELEVATORS_STOPPED",
+   "pred_label": "stopped elevators=3",
+   "score": 0.898
+  },
+  {
+   "type": "state_values",
+   "gold": "K_SV_ELEV_RUN",
+   "gold_label": "Elevator Operation status Normal",
+   "pred": "SV_ELEVATORS_NORMAL",
+   "pred_label": "elevator operation=normal (all)",
+   "score": 0.943
+  },
+  {
+   "type": "events",
+   "gold": "K_EVT_OUTAGE",
+   "gold_label": "External power supply cut off",
+   "pred": "EVT_EXT_POWER_CUT",
+   "pred_label": "External power supply cut off",
+   "score": 1.0
+  },
+  {
+   "type": "events",
+   "gold": "K_EVT_92",
+   "gold_label": "Generator No. 1 load factor rises to 92%",
+   "pred": "EVT_GEN1_LOAD_92",
+   "pred_label": "Generator No. 1 load factor rises to 92%",
+   "score": 1.0
+  },
+  {
+   "type": "events",
+   "gold": "K_EVT_RESTORED",
+   "gold_label": "External power restored",
+   "pred": "EVT_EXT_POWER_RESTORED",
+   "pred_label": "External power restored",
+   "score": 1.0
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_MONITOR",
+   "gold_label": "Monitor power usage by floor",
+   "pred": "A_MONITOR_POWER_USAGE",
+   "pred_label": "Monitor power usage by floor",
+   "score": 0.999
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_DETECT_OUTAGE",
+   "gold_label": "Detect power outage",
+   "pred": "A_DETECT_OUTAGE",
+   "pred_label": "Detect power outage",
+   "score": 0.98
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_START_GEN1",
+   "gold_label": "Automatically start emergency generator No. 1",
+   "pred": "A_START_GEN1",
+   "pred_label": "Start emergency generator No. 1",
+   "score": 0.976
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_ASK_CAUSE",
+   "gold_label": "Inquire with KEPCO about cause of power outage",
+   "pred": "A_INQUIRE_KEPCO",
+   "pred_label": "Inquire with KEPCO about outage cause",
+   "score": 0.971
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_SWITCH_LOAD",
+   "gold_label": "Switch power to emergency loads only",
+   "pred": "A_SWITCH_TO_EMERGENCY_LOADS",
+   "pred_label": "Switch power to emergency loads only",
+   "score": 0.988
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_CUT_GENERAL",
+   "gold_label": "Cut off general lighting and air conditioning",
+   "pred": "A_CUT_GENERAL_LOADS",
+   "pred_label": "Cut off general lighting and air conditioning",
+   "score": 0.999
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_QUERY_ELEV",
+   "gold_label": "Query status of 24 elevators",
+   "pred": "A_QUERY_ELEVATOR_STATUS",
+   "pred_label": "Query status of 24 elevators",
+   "score": 0.985
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_REQ_RESCUE",
+   "gold_label": "Request rescue from elevator maintenance team",
+   "pred": "A_REQUEST_RESCUE",
+   "pred_label": "Request rescue from elevator maintenance team",
+   "score": 0.985
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_ANNOUNCE",
+   "gold_label": "Guidance announcement to trapped passengers",
+   "pred": "A_ANNOUNCE_GUIDANCE",
+   "pred_label": "Make guidance announcement to trapped passengers",
+   "score": 0.96
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_LOWER",
+   "gold_label": "Manually lower elevator to nearest floor",
+   "pred": "A_LOWER_ELEVATOR",
+   "pred_label": "Manually lower elevator to nearest floor",
+   "score": 0.996
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_RESCUE",
+   "gold_label": "Rescue passengers after opening doors",
+   "pred": "A_RESCUE_PASSENGERS",
+   "pred_label": "Rescue passengers",
+   "score": 0.947
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_REPORT_RESCUE",
+   "gold_label": "Report rescue result to disaster prevention center",
+   "pred": "A_REPORT_RESCUE_RESULT",
+   "pred_label": "Report rescue result",
+   "score": 0.922
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_START_GEN2",
+   "gold_label": "Additionally start emergency generator No. 2",
+   "pred": "A_START_GEN2",
+   "pred_label": "Start emergency generator No. 2",
+   "score": 0.982
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_KEPCO_REPLY",
+   "gold_label": "Reply with cause of power outage and expected restoration time",
+   "pred": "A_REPLY_CAUSE",
+   "pred_label": "Reply with outage cause and restoration estimate",
+   "score": 0.946
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_ADVISE",
+   "gold_label": "Notify tenant companies of advisory to leave work",
+   "pred": "A_NOTIFY_LEAVE_ADVISORY",
+   "pred_label": "Notify tenant companies of advisory to leave work",
+   "score": 0.974
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_RETURN_LOAD",
+   "gold_label": "Return load to external power",
+   "pred": "A_RETURN_LOAD_TO_EXTERNAL",
+   "pred_label": "Return load to external power",
+   "score": 0.984
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_STOP_GENS",
+   "gold_label": "Stop 2 emergency generators",
+   "pred": "A_STOP_GENERATORS",
+   "pred_label": "Stop the 2 emergency generators",
+   "score": 0.992
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_RESTART_ELEV",
+   "gold_label": "Restart 24 elevators one after another",
+   "pred": "A_RESTART_ELEVATORS",
+   "pred_label": "Restart elevators",
+   "score": 0.937
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_CONFIRM_ELEV",
+   "gold_label": "Confirm normal elevator operation",
+   "pred": "A_CONFIRM_ELEVATORS_NORMAL",
+   "pred_label": "Confirm all elevators operating normally",
+   "score": 0.955
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_END_BROADCAST",
+   "gold_label": "End emergency broadcast",
+   "pred": "A_END_EMERGENCY_BROADCAST",
+   "pred_label": "End emergency broadcast",
+   "score": 0.979
+  },
+  {
+   "type": "actions",
+   "gold": "K_A_SUBMIT",
+   "gold_label": "Submit power outage response record to fire station",
+   "pred": "A_SUBMIT_RECORD",
+   "pred_label": "Submit response record to fire station",
+   "score": 0.94
+  },
+  {
+   "type": "constraints",
+   "gold": "K_CN_90",
+   "gold_label": "Generator No. 1 load factor 90% or more",
+   "pred": "CN_GEN1_LOAD_THRESHOLD",
+   "pred_label": "Generator No. 1 load factor 90% or more",
+   "score": 1.0
+  },
+  {
+   "type": "constraints",
+   "gold": "K_CN_90MIN",
+   "gold_label": "Power outage more than 1 h 30 min",
+   "pred": "CN_OUTAGE_ADVISORY_THRESHOLD",
+   "pred_label": "Power outage exceeds 1 h 30 min",
+   "score": 0.994
+  },
+  {
+   "type": "constraints",
+   "gold": "K_CN_30MIN",
+   "gold_label": "Rescue of all within 30 min",
+   "pred": "CN_RESCUE_WITHIN_30MIN",
+   "pred_label": "Rescue all trapped passengers within 30 min",
+   "score": 0.952
+  },
+  {
+   "type": "goals",
+   "gold": "K_G_RESCUE_30",
+   "gold_label": "Rescue of all trapped passengers within 30 min",
+   "pred": "G_RESCUE_ALL_NO_CASUALTIES",
+   "pred_label": "Rescue all trapped passengers within 30 min without casualties",
+   "score": 0.979
+  },
+  {
+   "type": "reasons",
+   "gold": "K_R_BREAKER",
+   "gold_label": "Circuit breaker failure at nearby substation",
+   "pred": "RS_SUBSTATION_BREAKER_FAILURE",
+   "pred_label": "Circuit breaker failure at a nearby substation",
+   "score": 0.998
+  },
+  {
+   "type": "observations",
+   "gold": "K_OBS_USAGE",
+   "gold_label": "Monitor power usage by floor",
+   "pred": "OBS_FLOOR_POWER_USAGE",
+   "pred_label": "Power usage monitoring by floor",
+   "score": 0.988
+  },
+  {
+   "type": "observations",
+   "gold": "K_OBS_OUTAGE",
+   "gold_label": "Detect power outage",
+   "pred": "OBS_POWER_OUTAGE",
+   "pred_label": "Power outage detection",
+   "score": 0.975
+  },
+  {
+   "type": "observations",
+   "gold": "K_OBS_ELEV",
+   "gold_label": "Identify 3 stopped elevators",
+   "pred": "OBS_STOPPED_ELEVATORS",
+   "pred_label": "Stopped elevator identification",
+   "score": 0.932
+  },
+  {
+   "type": "observations",
+   "gold": "K_OBS_NORMAL",
+   "gold_label": "Confirm normal elevator operation",
+   "pred": "OBS_ELEVATORS_NORMAL",
+   "pred_label": "Normal elevator operation confirmation",
+   "score": 0.968
+  },
+  {
+   "type": "transitions",
+   "gold": "K_TR_TO_EMERGENCY",
+   "gold_label": "From external power to emergency generation",
+   "pred": "TR_NORMAL_TO_OUTAGE",
+   "pred_label": "Transition from external power supplied to power outage",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "K_TR_TO_GRID",
+   "gold_label": "From emergency generation to external power",
+   "pred": "TR_OUTAGE_TO_NORMAL",
+   "pred_label": "Transition from power outage to external power supplied",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F01",
+   "gold_label": "Start generator No. 1 after power outage detection",
+   "pred": "F_DETECT_TO_START_GEN1",
+   "pred_label": "Start generator No. 1 after outage detection",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F02",
+   "gold_label": "Switch to emergency loads after generator start",
+   "pred": "F_START_GEN1_TO_SWITCH",
+   "pred_label": "Switch to emergency loads after generator No. 1 start",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F03",
+   "gold_label": "Cut off general loads after load switchover",
+   "pred": "F_SWITCH_TO_CUT",
+   "pred_label": "Cut general loads after switching",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F05",
+   "gold_label": "Guidance announcement after rescue request",
+   "pred": "F_REQUEST_TO_ANNOUNCE",
+   "pred_label": "Guidance announcement after rescue request",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F06",
+   "gold_label": "Manual lowering after rescue request",
+   "pred": "F_REQUEST_TO_LOWER",
+   "pred_label": "Rescue request handoff to maintenance team",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F07",
+   "gold_label": "Door-opening rescue after lowering",
+   "pred": "F_LOWER_TO_OPEN",
+   "pred_label": "Open doors after lowering",
+   "score": 0.943
+  },
+  {
+   "type": "flows",
+   "gold": "K_F08",
+   "gold_label": "Result report after rescue",
+   "pred": "F_RESCUE_TO_REPORT",
+   "pred_label": "Report result after each rescue",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F09",
+   "gold_label": "Start generator No. 2 when load factor is 90% or more",
+   "pred": "F_START_GEN1_TO_START_GEN2",
+   "pred_label": "Start generator No. 2 on high generator No. 1 load",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F10",
+   "gold_label": "Reply after inquiry",
+   "pred": "F_INQUIRY_TO_REPLY",
+   "pred_label": "Outage cause inquiry to KEPCO reply",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F11",
+   "gold_label": "Stop generators after load return",
+   "pred": "F_RETURN_TO_STOP",
+   "pred_label": "Stop generators after returning load",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F12",
+   "gold_label": "Confirm normal operation after restart",
+   "pred": "F_RESTART_TO_CONFIRM",
+   "pred_label": "Confirm normal operation after restarts",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "K_F13",
+   "gold_label": "End broadcast after confirming normal operation",
+   "pred": "F_CONFIRM_TO_END_BROADCAST",
+   "pred_label": "End broadcast after confirmation",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "K_C01",
+   "gold_label": "Determine generator No. 1 load factor is 90% or more",
+   "pred": "C_GEN1_LOAD_HIGH",
+   "pred_label": "Generator No. 1 load factor decision",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "K_C02",
+   "gold_label": "Repeat rescue for 3 elevators one after another",
+   "pred": "C_RESCUE_LOOP",
+   "pred_label": "Rescue stopped elevators one after another",
+   "score": 0.934
+  },
+  {
+   "type": "controls",
+   "gold": "K_C03",
+   "gold_label": "Determine power outage exceeds 1 h 30 min",
+   "pred": "C_OUTAGE_OVER_90MIN",
+   "pred_label": "Outage duration decision",
+   "score": 0.918
+  },
+  {
+   "type": "controls",
+   "gold": "K_C04",
+   "gold_label": "Restart 24 elevators one after another",
+   "pred": "C_RESTART_LOOP",
+   "pred_label": "Restart elevators one after another",
+   "score": 0.953
+  }
+ ],
+ "type_confusion": {
+  "performers->items": 1,
+  "flows->items": 1,
+  "situations->flows": 1,
+  "events->actions": 1,
+  "transitions->flows": 2,
+  "goals->constraints": 1
+ },
+ "source_ref_accuracy": {
+  "correct": 75,
+  "aligned_with_gold_ref": 77,
+  "accuracy": 0.974
+ },
+ "relations": {
+  "strict": {
+   "tp": 97,
+   "pred": 185,
+   "gold": 121,
+   "precision": 0.5243,
+   "recall": 0.8017,
+   "f1": 0.634,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 5,
+     "recalled": 4
+    },
+    "constrained_by": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "controls_flow": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "custom/contains_action": {
+     "gold": 21,
+     "recalled": 15
+    },
+    "flow_source": {
+     "gold": 13,
+     "recalled": 12
+    },
+    "flow_target": {
+     "gold": 13,
+     "recalled": 11
+    },
+    "from_situation": {
+     "gold": 4,
+     "recalled": 2
+    },
+    "has_episode": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 7,
+     "recalled": 4
+    },
+    "has_reason": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 4,
+     "recalled": 2
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "performed_by": {
+     "gold": 21,
+     "recalled": 21
+    },
+    "produces_item": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "provided_to": {
+     "gold": 6,
+     "recalled": 6
+    },
+    "to_situation": {
+     "gold": 4,
+     "recalled": 2
+    },
+    "triggers": {
+     "gold": 6,
+     "recalled": 5
+    }
+   }
+  },
+  "normalized": {
+   "tp": 97,
+   "pred": 185,
+   "gold": 121,
+   "precision": 0.5243,
+   "recall": 0.8017,
+   "f1": 0.634,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 5,
+     "recalled": 4
+    },
+    "constrained_by": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "contains_action": {
+     "gold": 21,
+     "recalled": 15
+    },
+    "controls_flow": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "flow_source": {
+     "gold": 13,
+     "recalled": 12
+    },
+    "flow_target": {
+     "gold": 13,
+     "recalled": 11
+    },
+    "from_situation": {
+     "gold": 4,
+     "recalled": 2
+    },
+    "has_episode": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 7,
+     "recalled": 4
+    },
+    "has_reason": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 4,
+     "recalled": 2
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "performed_by": {
+     "gold": 21,
+     "recalled": 21
+    },
+    "produces_item": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "provided_to": {
+     "gold": 6,
+     "recalled": 6
+    },
+    "to_situation": {
+     "gold": 4,
+     "recalled": 2
+    },
+    "triggers": {
+     "gold": 6,
+     "recalled": 5
+    }
+   }
+  },
+  "untyped": {
+   "tp": 98,
+   "pred": 162,
+   "gold": 121,
+   "precision": 0.6049,
+   "recall": 0.8099,
+   "f1": 0.6926
+  }
+ },
+ "atomic_facts": {
+  "found": 0,
+  "total": 0,
+  "missing": []
+ },
+ "required_relations": {
+  "hit": 0,
+  "total": 0
+ },
+ "forbidden_relations": {
+  "violated": 0,
+  "total": 0
+ },
+ "structure": {
+  "actions": 24,
+  "actions_in_episode": 24,
+  "actions_allocated": 24,
+  "nested_mode": true,
+  "dangling_relations": 0,
+  "relations": 185
+ }
+}

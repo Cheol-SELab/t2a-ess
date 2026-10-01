@@ -1,0 +1,25 @@
+{
+  "in": "07.sysml",
+  "out": "07.png",
+  "expanded": [],
+  "nodeKinds": {
+    "FunctionNode": 52,
+    "StartConcurrencyNode": 1,
+    "EndConcurrencyNode": 1,
+    "ItemNode": 9,
+    "StartReferenceNode": 1,
+    "EndReferenceNode": 1
+  },
+  "edges": 110,
+  "metrics": [
+    "rootIds",
+    "topologyOf",
+    "step",
+    "lane",
+    "pathPointer",
+    "pair",
+    "slot",
+    "branchStates",
+    "clusterHierarchy"
+  ]
+}

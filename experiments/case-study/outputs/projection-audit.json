@@ -1,0 +1,257 @@
+{
+ "mumt": {
+  "controls": [
+   {
+    "control": "MUMT_CTRL_COMM_MODE_GUARD",
+    "type": "decision",
+    "flow": "MUMT_F_EDGE_MODE_TO_TRACK_FLOW",
+    "src_ep": "MUMT_EP_EW_DEGRADATION",
+    "dst_ep": "MUMT_EP_RECOVERY_RESUME",
+    "cross_episode": true,
+    "guard_texts": 4,
+    "guard_texts_emitted": 0
+   },
+   {
+    "control": "MUMT_CTRL_LOCAL_SURVIVAL_LOOP",
+    "type": "loop",
+    "flow": "MUMT_F_DISCONNECTED_TO_BROADCAST",
+    "src_ep": "MUMT_EP_EW_DEGRADATION",
+    "dst_ep": "MUMT_EP_EW_DEGRADATION",
+    "cross_episode": false,
+    "guard_texts": 1,
+    "guard_texts_emitted": 1
+   },
+   {
+    "control": "MUMT_CTRL_RECOVERY_STAGED",
+    "type": "guarded_sequence",
+    "flow": "MUMT_F_NORMAL_RESTORED_TO_ATTACK",
+    "src_ep": "MUMT_EP_RECOVERY_RESUME",
+    "dst_ep": "MUMT_EP_RECOVERY_RESUME",
+    "cross_episode": false,
+    "guard_texts": 2,
+    "guard_texts_emitted": 1
+   }
+  ],
+  "flows": [
+   {
+    "flow": "MUMT_F_PREP_TO_DRONE_LAUNCH",
+    "kind": "control_flow",
+    "cross_episode": false,
+    "carries_item": false
+   },
+   {
+    "flow": "MUMT_F_OP_DETECT_TO_DETOUR",
+    "kind": "control_flow",
+    "cross_episode": false,
+    "carries_item": false
+   },
+   {
+    "flow": "MUMT_F_FPV_ALERT_TO_DISPERSE",
+    "kind": "control_flow",
+    "cross_episode": false,
+    "carries_item": false
+   },
+   {
+    "flow": "MUMT_F_EDGE_MODE_TO_TRACK_FLOW",
+    "kind": "object_flow",
+    "cross_episode": true,
+    "carries_item": true
+   },
+   {
+    "flow": "MUMT_F_DISCONNECTED_TO_BROADCAST",
+    "kind": "message_flow",
+    "cross_episode": false,
+    "carries_item": true
+   },
+   {
+    "flow": "MUMT_F_ATGM_ALERT_TO_EVASION",
+    "kind": "control_flow",
+    "cross_episode": false,
+    "carries_item": false
+   },
+   {
+    "flow": "MUMT_F_LINK_RECOVERY_TO_RESYNC",
+    "kind": "control_flow",
+    "cross_episode": false,
+    "carries_item": false
+   },
+   {
+    "flow": "MUMT_F_NORMAL_RESTORED_TO_ATTACK",
+    "kind": "control_flow",
+    "cross_episode": false,
+    "carries_item": false
+   }
+  ],
+  "episodes": [
+   {
+    "episode": "E1 Preparation under normal comms",
+    "actions": 2,
+    "intra_episode_flows": 1,
+    "forks": 0,
+    "joins": 0
+   },
+   {
+    "episode": "E2 Observation post and FPV threat",
+    "actions": 5,
+    "intra_episode_flows": 2,
+    "forks": 1,
+    "joins": 1
+   },
+   {
+    "episode": "E3 EW jamming and comms degradation",
+    "actions": 4,
+    "intra_episode_flows": 2,
+    "forks": 1,
+    "joins": 1
+   },
+   {
+    "episode": "E4 Comms recovery and attack resumption",
+    "actions": 3,
+    "intra_episode_flows": 2,
+    "forks": 0,
+    "joins": 0
+   }
+  ],
+  "guarded_edges_into_join": 0
+ },
+ "nghe": {
+  "controls": [
+   {
+    "control": "NGHE_CTRL_PARALLEL_CALIBRATION",
+    "type": "fork_join",
+    "flow": "NGHE_F_SETUP_SEQUENCE",
+    "src_ep": "NGHE_EP_SETUP",
+    "dst_ep": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+    "cross_episode": true,
+    "guard_texts": 1,
+    "guard_texts_emitted": 0
+   },
+   {
+    "control": "NGHE_CTRL_SWAP_SCHEDULING",
+    "type": "scheduling_guard",
+    "flow": "NGHE_F_BATTERY_SWAP",
+    "src_ep": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+    "dst_ep": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+    "cross_episode": false,
+    "guard_texts": 1,
+    "guard_texts_emitted": 1
+   },
+   {
+    "control": "NGHE_CTRL_FOG_DOWNGRADE",
+    "type": "decision",
+    "flow": "NGHE_F_CONSTRUCTION_PRODUCTION",
+    "src_ep": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+    "dst_ep": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+    "cross_episode": false,
+    "guard_texts": 2,
+    "guard_texts_emitted": 1
+   },
+   {
+    "control": "NGHE_CTRL_CYBER_ISOLATION",
+    "type": "decision",
+    "flow": "NGHE_F_CYBER_RESPONSE",
+    "src_ep": "NGHE_EP_FOG_CYBER",
+    "dst_ep": "NGHE_EP_RECOVERY_COMPLETE",
+    "cross_episode": true,
+    "guard_texts": 1,
+    "guard_texts_emitted": 0
+   },
+   {
+    "control": "NGHE_CTRL_RAIN_STOP",
+    "type": "decision",
+    "flow": "NGHE_F_RAIN_STOP",
+    "src_ep": "NGHE_EP_RAIN_STOP",
+    "dst_ep": "NGHE_EP_RECOVERY_COMPLETE",
+    "cross_episode": true,
+    "guard_texts": 2,
+    "guard_texts_emitted": 0
+   },
+   {
+    "control": "NGHE_CTRL_RECOVERY_GUARD",
+    "type": "guarded_sequence",
+    "flow": "NGHE_F_RAIN_RECOVERY",
+    "src_ep": "NGHE_EP_RECOVERY_COMPLETE",
+    "dst_ep": "NGHE_EP_RECOVERY_COMPLETE",
+    "cross_episode": false,
+    "guard_texts": 4,
+    "guard_texts_emitted": 1
+   }
+  ],
+  "flows": [
+   {
+    "flow": "NGHE_F_SETUP_SEQUENCE",
+    "kind": "control_flow",
+    "cross_episode": true,
+    "carries_item": false
+   },
+   {
+    "flow": "NGHE_F_CONSTRUCTION_PRODUCTION",
+    "kind": "control_flow",
+    "cross_episode": false,
+    "carries_item": true
+   },
+   {
+    "flow": "NGHE_F_BATTERY_SWAP",
+    "kind": "control_flow",
+    "cross_episode": false,
+    "carries_item": true
+   },
+   {
+    "flow": "NGHE_F_CYBER_RESPONSE",
+    "kind": "control_flow",
+    "cross_episode": true,
+    "carries_item": false
+   },
+   {
+    "flow": "NGHE_F_RAIN_STOP",
+    "kind": "control_flow",
+    "cross_episode": true,
+    "carries_item": false
+   },
+   {
+    "flow": "NGHE_F_RAIN_RECOVERY",
+    "kind": "control_flow",
+    "cross_episode": false,
+    "carries_item": false
+   }
+  ],
+  "episodes": [
+   {
+    "episode": "E1 Site setup and Level 3 start",
+    "actions": 4,
+    "intra_episode_flows": 0,
+    "forks": 1,
+    "joins": 1
+   },
+   {
+    "episode": "E2 Level 4 autonomous production",
+    "actions": 6,
+    "intra_episode_flows": 2,
+    "forks": 1,
+    "joins": 2
+   },
+   {
+    "episode": "E3 Fog and cyber threat response",
+    "actions": 2,
+    "intra_episode_flows": 0,
+    "forks": 1,
+    "joins": 1
+   },
+   {
+    "episode": "E4 Heavy rain and work stop",
+    "actions": 2,
+    "intra_episode_flows": 0,
+    "forks": 1,
+    "joins": 1
+   },
+   {
+    "episode": "E5 Recovery and mission completion",
+    "actions": 4,
+    "intra_episode_flows": 1,
+    "forks": 1,
+    "joins": 1
+   }
+  ],
+  "guarded_edges_into_join": 2
+ }
+}

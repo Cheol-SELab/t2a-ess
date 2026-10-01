@@ -1,0 +1,2752 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "T2A_MUMT_UNSTRUCTURED_EXHAUSTIVE_001",
+    "title": "MUM-T attack maneuver unstructured test text T2A-ESS exhaustive extraction result",
+    "extraction_schema": "Text2Activity Extraction Slot Schema",
+    "schema_acronym": "T2A-ESS",
+    "target_standard": [
+      "KerML",
+      "SysML v2"
+    ],
+    "extraction_scope": "exhaustive_sentence_clause_level",
+    "source_documents": [
+      {
+        "document_id": "DOC_MUMT_UNSTRUCTURED",
+        "path": "4_researches/text2activity/data/test-t2a/mumt.text.md",
+        "title": "MUM-T attack maneuver unstructured test text"
+      }
+    ],
+    "source_units": [
+      {
+        "source_unit_id": "MUMT_L03",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 3,
+        "line_end": 3,
+        "text": "Ahead of an attack maneuver in inland hilly terrain, the tank company activated a MUM-T system combining three reconnaissance drones and a lightweight TDSS."
+      },
+      {
+        "source_unit_id": "MUMT_L05",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 5,
+        "line_end": 5,
+        "text": "TDSS self-diagnosis, normal communication confirmation, launch of 3 drones, and HMI integrated SA display were performed."
+      },
+      {
+        "source_unit_id": "MUMT_L07",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 7,
+        "line_end": 7,
+        "text": "The company commander shared the surveillance status with each platoon, and the TDSS made the initial transmission of company SA summary information to the battalion server."
+      },
+      {
+        "source_unit_id": "MUMT_L09",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 9,
+        "line_end": 9,
+        "text": "The 1st Platoon moved in wedge formation and the drones surveilled forward and the left and right flanks."
+      },
+      {
+        "source_unit_id": "MUMT_L11",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 11,
+        "line_end": 11,
+        "text": "Drone 1 picked up the suspected enemy observation post heat source and the company commander decided on the right bypass maneuver."
+      },
+      {
+        "source_unit_id": "MUMT_L13",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 13,
+        "line_end": 13,
+        "text": "When the bypass maneuver started, Drone 3 was redeployed ahead of the bypass axis and the TDSS updated SA."
+      },
+      {
+        "source_unit_id": "MUMT_L15",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 15,
+        "line_end": 15,
+        "text": "Drone 1 Edge AI detected the possibility of 3-4 FPV drones and the TDSS displayed the approach speed and time of arrival on the HMI."
+      },
+      {
+        "source_unit_id": "MUMT_L17",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 17,
+        "line_end": 17,
+        "text": "The enemy began electronic warfare jamming, and the packet loss rate persisted above the threshold, so the TDSS began the transition from normal to limited."
+      },
+      {
+        "source_unit_id": "MUMT_L19",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 19,
+        "line_end": 19,
+        "text": "Even in limited communication mode, the TDSS updated minimum SA with summary track data and performed graceful degradation."
+      },
+      {
+        "source_unit_id": "MUMT_L21",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 21,
+        "line_end": 21,
+        "text": "During limited mode, FPV drones approached toward the 1st Platoon and the 2nd Platoon, and the platoons performed alert-based evasive and dispersed maneuvers."
+      },
+      {
+        "source_unit_id": "MUMT_L23",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 23,
+        "line_end": 23,
+        "text": "The electronic warfare attack intensity increased, and after confirming the disappearance of the remaining FPV threat, the company commander ordered assembly and damage check."
+      },
+      {
+        "source_unit_id": "MUMT_L25",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 25,
+        "line_end": 25,
+        "text": "GPS reliability and heartbeat degraded, and the TDSS declared the transition from limited mode to communication blackout mode."
+      },
+      {
+        "source_unit_id": "MUMT_L27",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 27,
+        "line_end": 27,
+        "text": "The reconnaissance drones detected the heartbeat dropout, switched to emergency broadcast mode, and transmitted threat data directly."
+      },
+      {
+        "source_unit_id": "MUMT_L29",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 29,
+        "line_end": 29,
+        "text": "In the blackout state, additional FPV and ATGM threats occurred, and each platoon performed evasive actions based on broadcast alerts and its own sensors."
+      },
+      {
+        "source_unit_id": "MUMT_L31",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 31,
+        "line_end": 31,
+        "text": "The company commander's tank maintained minimum SA, and Drone 1 landed due to battery depletion, so the surveillance area was reduced."
+      },
+      {
+        "source_unit_id": "MUMT_L33",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 33,
+        "line_end": 33,
+        "text": "When intermittent communication signals were picked up again and the Drone 2 link was kept stable, the TDSS began the transition from blackout to limited."
+      },
+      {
+        "source_unit_id": "MUMT_L35",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 35,
+        "line_end": 35,
+        "text": "Voice communication between the company commander and the subordinate platoons, the connection between the TDSS and the battalion server, and bandwidth recovered, and the transition to normal mode began."
+      },
+      {
+        "source_unit_id": "MUMT_L37",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 37,
+        "line_end": 37,
+        "text": "The company commander sent the comprehensive report on the blackout period to the battalion, and the battalion server judged that the enemy electronic warfare unit had withdrawn and the remaining threat was small-scale."
+      },
+      {
+        "source_unit_id": "MUMT_L39",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 39,
+        "line_end": 39,
+        "text": "The TDSS confirmed stabilization of normal communication mode and reactivated the operational activity groups, and the company commander ordered maneuver resumption."
+      },
+      {
+        "source_unit_id": "MUMT_L41",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 41,
+        "line_end": 41,
+        "text": "Drone 2 confirmed the remaining force, and the subordinate platoons suppressed the remaining enemy positions and then organized defensive positions."
+      },
+      {
+        "source_unit_id": "MUMT_L43",
+        "document": "DOC_MUMT_UNSTRUCTURED",
+        "unit_type": "paragraph",
+        "line_start": 43,
+        "line_end": 43,
+        "text": "The company commander reported the objective secured, and the key transitions proceeded in the order normal-limited-blackout-limited-normal."
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "MUMT_SCN_EX_ATTACK_EW",
+        "label": "MUM-T attack maneuver and electronic warfare response full scenario",
+        "summary": "The tank company performs the attack maneuver using reconnaissance drones and the TDSS and, going through the enemy observation post, FPV/ATGM threats, electronic warfare jamming, communication blackout, and recovery, secures the objective.",
+        "success_criteria_texts": [
+          "Secure objective",
+          "Maintain all tanks combat-capable",
+          "Maintain survivability-focused functions during limited and blackout communication",
+          "Attack resumption after communication recovery"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.95
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "MUMT_EP_EX_CONTEXT",
+        "label": "Operation environment and MUM-T system activation",
+        "order_index": 1,
+        "summary": "In the inland hilly terrain environment, the company commander prepares to use the TDSS and drone ISR.",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.9
+      },
+      {
+        "episode_id": "MUMT_EP_EX_PREP",
+        "label": "TDSS diagnostics, drone launch, SA sharing",
+        "order_index": 2,
+        "summary": "The TDSS confirms normal communication and functions, and the 3 drones begin mission deployment.",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "episode_id": "MUMT_EP_EX_NORMAL_ATTACK",
+        "label": "Normal communication attack maneuver",
+        "order_index": 3,
+        "summary": "The platoons perform the attack maneuver in wedge formation, and the TDSS updates SA.",
+        "source_ref": {
+          "source_unit_id": "MUMT_L09"
+        },
+        "confidence": 0.91
+      },
+      {
+        "episode_id": "MUMT_EP_EX_OBS_DETOUR",
+        "label": "Enemy observation post detection and bypass maneuver",
+        "order_index": 4,
+        "summary": "Based on Drone 1 and the battalion analysis, the company commander decides on the right bypass maneuver.",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.9
+      },
+      {
+        "episode_id": "MUMT_EP_EX_FPV",
+        "label": "FPV threat detection and dispersed response",
+        "order_index": 5,
+        "summary": "The FPV drone approach is detected, the TDSS provides an HMI alert, and the platoons perform dispersed maneuver.",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.91
+      },
+      {
+        "episode_id": "MUMT_EP_EX_LIMITED",
+        "label": "Electronic warfare jamming and limited communication mode",
+        "order_index": 6,
+        "summary": "Due to the increased packet loss rate, communication transitions from normal communication to limited communication, and the drones switch to Edge AI mode.",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.94
+      },
+      {
+        "episode_id": "MUMT_EP_EX_DISCONNECTED",
+        "label": "Communication blackout and local survival",
+        "order_index": 7,
+        "summary": "Due to heartbeat loss, communication blackout mode is declared, and the drone emergency broadcast and local survival loop operate.",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.94
+      },
+      {
+        "episode_id": "MUMT_EP_EX_RECOVERY",
+        "label": "Communication recovery and mission resumption",
+        "order_index": 8,
+        "summary": "Communication recovers from blackout to limited and from limited to normal, and the company resumes the attack and secures the objective.",
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.93
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "MUMT_SIT_EX_PRE_OPERATION",
+        "label": "Attack maneuver preparation state",
+        "description": "State in which the tank company prepares before activating the MUM-T system",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.86
+      },
+      {
+        "situation_id": "MUMT_SIT_EX_NORMAL_COMM",
+        "label": "Normal communication state",
+        "description": "State in which drone video, detection metadata, and battalion analysis results are exchanged without delay",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.95
+      },
+      {
+        "situation_id": "MUMT_SIT_EX_ATTACK_MOVING",
+        "label": "Wedge formation attack maneuver state",
+        "description": "State in which the 1st Platoon moves in the lead and the drones surveil forward and the flanks",
+        "source_ref": {
+          "source_unit_id": "MUMT_L09"
+        },
+        "confidence": 0.89
+      },
+      {
+        "situation_id": "MUMT_SIT_EX_DETOUR",
+        "label": "Right bypass maneuver state",
+        "description": "State of maneuvering on the right bypass axis because of the possibility of an enemy observation post",
+        "source_ref": {
+          "source_unit_id": "MUMT_L13"
+        },
+        "confidence": 0.88
+      },
+      {
+        "situation_id": "MUMT_SIT_EX_FPV_THREAT",
+        "label": "FPV threat approach state",
+        "description": "State in which the possibility of 3-4 FPV drones has been detected and the estimated time of arrival is displayed",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.91
+      },
+      {
+        "situation_id": "MUMT_SIT_EX_LIMITED_COMM",
+        "label": "Limited communication state",
+        "description": "State in which minimum SA is maintained with summary track data instead of the video stream",
+        "source_ref": {
+          "source_unit_id": "MUMT_L19"
+        },
+        "confidence": 0.95
+      },
+      {
+        "situation_id": "MUMT_SIT_EX_DISCONNECTED_COMM",
+        "label": "Communication blackout state",
+        "description": "State in which external information exchange is blocked and the local sensor-based survival loop operates",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.95
+      },
+      {
+        "situation_id": "MUMT_SIT_EX_RECOVERING",
+        "label": "Communication recovering state",
+        "description": "State in which intermittent links and bandwidth gradually recover",
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.9
+      },
+      {
+        "situation_id": "MUMT_SIT_EX_TARGET_SECURED",
+        "label": "Objective secured state",
+        "description": "State in which the remaining enemy positions have been suppressed and defensive positions organized",
+        "source_ref": {
+          "source_unit_id": "MUMT_L43"
+        },
+        "confidence": 0.9
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "MUMT_SV_EX_COMM_NORMAL",
+        "subject_text": "MUM-T system",
+        "variable": "communication_mode",
+        "value": "normal",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.96
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_COMM_LIMITED",
+        "subject_text": "MUM-T system",
+        "variable": "communication_mode",
+        "value": "limited",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_L19"
+        },
+        "confidence": 0.96
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_COMM_DISCONNECTED",
+        "subject_text": "MUM-T system",
+        "variable": "communication_mode",
+        "value": "disconnected",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.96
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_DRONE_COUNT_TOTAL",
+        "subject_text": "Reconnaissance drone",
+        "variable": "total_drone_count",
+        "value": 3,
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.95
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_DRONE_AVAILABLE_2",
+        "subject_text": "Reconnaissance drone",
+        "variable": "available_drone_count",
+        "value": 2,
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "MUMT_L39"
+        },
+        "confidence": 0.9
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_VISIBILITY_LIMIT",
+        "subject_text": "Tank",
+        "variable": "line_of_sight",
+        "value": "1-2",
+        "unit": "km",
+        "value_type": "range",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.82
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_DRONE_FORWARD_DISTANCE",
+        "subject_text": "Drone 1",
+        "variable": "forward_surveillance_distance",
+        "value": "2-3",
+        "unit": "km",
+        "value_type": "range",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_FPV_COUNT",
+        "subject_text": "Enemy FPV drone",
+        "variable": "estimated_count",
+        "value": "3-4",
+        "value_type": "range",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.9
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_FPV_SPEED",
+        "subject_text": "Enemy FPV drone",
+        "variable": "approach_speed",
+        "value": 35,
+        "unit": "m/s",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.92
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_FPV_ETA",
+        "subject_text": "Enemy FPV drone",
+        "variable": "estimated_time_to_arrival",
+        "value": 43,
+        "unit": "second",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.92
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_DATA_VIDEO",
+        "subject_text": "Reconnaissance drone",
+        "variable": "data_mode",
+        "value": "video_stream",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_DATA_TRACK",
+        "subject_text": "Reconnaissance drone",
+        "variable": "data_mode",
+        "value": "track_summary",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.92
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_GPS_RELIABILITY_LOW",
+        "subject_text": "GPS",
+        "variable": "reliability",
+        "value": "low",
+        "value_type": "qualitative",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.88
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_COMBAT_POWER_MAINTAINED",
+        "subject_text": "Subordinate platoons",
+        "variable": "combat_power",
+        "value": "maintained",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_L35"
+        },
+        "confidence": 0.9
+      },
+      {
+        "state_value_id": "MUMT_SV_EX_DRONE1_LOST",
+        "subject_text": "Drone 1",
+        "variable": "availability",
+        "value": "lost_or_inactive",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "MUMT_L31"
+        },
+        "confidence": 0.9
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "MUMT_OBS_EX_TDSS_NORMAL",
+        "label": "Battalion server communication confirmed normal",
+        "observer_text": "TDSS",
+        "observed_text": "Normal communication with the battalion server",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_OP_HEAT",
+        "label": "Suspected enemy observation post heat source picked up",
+        "observer_text": "Drone 1",
+        "observed_text": "Suspected enemy observation post heat source behind the forward ridge",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.9
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_BATTALION_AT_POSITION",
+        "label": "Battalion analysis result reception",
+        "observer_text": "TDSS, company commander",
+        "observed_text": "High probability of enemy anti-tank position deployment",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.88
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_FPV",
+        "label": "Multiple FPV drones detected",
+        "observer_text": "Drone 1 Edge AI",
+        "observed_text": "Possibility of 3-4 FPV kamikaze drones",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.92
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_PACKET_LOSS",
+        "label": "Packet loss rate surge detected",
+        "observer_text": "TDSS",
+        "observed_text": "Packet loss rate persistently exceeds the threshold",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.95
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_DATA_LINK_UNSTABLE",
+        "label": "Drone-tank data link instability detected",
+        "observer_text": "TDSS",
+        "observed_text": "Data link instability due to increased electronic warfare attack intensity",
+        "source_ref": {
+          "source_unit_id": "MUMT_L23"
+        },
+        "confidence": 0.9
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_HEARTBEAT_LOSS",
+        "label": "Heartbeat loss detected",
+        "observer_text": "TDSS",
+        "observed_text": "Persistent drone and higher echelon heartbeat loss",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.95
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_DRONE_HEARTBEAT_LOSS",
+        "label": "Drone detection of heartbeat dropout with the company commander's tank",
+        "observer_text": "Three reconnaissance drones",
+        "observed_text": "Heartbeat dropout with the company commander's tank",
+        "source_ref": {
+          "source_unit_id": "MUMT_L27"
+        },
+        "confidence": 0.93
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_ATGM",
+        "label": "ATGM launch detected",
+        "observer_text": "Drone 3 Edge AI",
+        "observed_text": "Enemy ATGM launch, direction southwest",
+        "source_ref": {
+          "source_unit_id": "MUMT_L29"
+        },
+        "confidence": 0.9
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_LINK_RECOVERY",
+        "label": "Drone 2 link recovery detected",
+        "observer_text": "TDSS",
+        "observed_text": "Intermittent communication signals and Drone 2 link kept stable",
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.92
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_BANDWIDTH_RECOVERY",
+        "label": "Bandwidth recovery detected",
+        "observer_text": "TDSS",
+        "observed_text": "Gradual recovery of battalion server connection and bandwidth",
+        "source_ref": {
+          "source_unit_id": "MUMT_L35"
+        },
+        "confidence": 0.92
+      },
+      {
+        "observation_id": "MUMT_OBS_EX_RESIDUAL_ENEMY",
+        "label": "Remaining enemy force confirmed",
+        "observer_text": "Drone 2",
+        "observed_text": "Small-scale remaining enemy force on the outskirts of the objective",
+        "source_ref": {
+          "source_unit_id": "MUMT_L41"
+        },
+        "confidence": 0.88
+      }
+    ],
+    "events": [
+      {
+        "event_id": "MUMT_EVT_EX_MUMT_START",
+        "label": "MUM-T system activation",
+        "event_type": "operation_start",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.88
+      },
+      {
+        "event_id": "MUMT_EVT_EX_DRONES_LAUNCHED",
+        "label": "Sequential launch of three reconnaissance drones",
+        "event_type": "launch_event",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "event_id": "MUMT_EVT_EX_ATTACK_START",
+        "label": "Attack maneuver start",
+        "event_type": "mission_phase_start",
+        "source_ref": {
+          "source_unit_id": "MUMT_L09"
+        },
+        "confidence": 0.9
+      },
+      {
+        "event_id": "MUMT_EVT_EX_OP_DETECTED",
+        "label": "Enemy observation post candidate appears",
+        "event_type": "threat_occurrence",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.88
+      },
+      {
+        "event_id": "MUMT_EVT_EX_FPV_APPROACH",
+        "label": "FPV drone approach",
+        "event_type": "threat_occurrence",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.92
+      },
+      {
+        "event_id": "MUMT_EVT_EX_EW_JAMMING",
+        "label": "Electronic warfare jamming begins",
+        "event_type": "external_attack",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.9
+      },
+      {
+        "event_id": "MUMT_EVT_EX_PACKET_LOSS_PERSISTED",
+        "label": "Packet loss rate persistently exceeds the threshold",
+        "event_type": "trigger_condition",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.95
+      },
+      {
+        "event_id": "MUMT_EVT_EX_ANTENNA_DAMAGED",
+        "label": "Minor damage to 2nd Platoon Tank 2 external antenna",
+        "event_type": "damage_event",
+        "source_ref": {
+          "source_unit_id": "MUMT_L21"
+        },
+        "confidence": 0.88
+      },
+      {
+        "event_id": "MUMT_EVT_EX_HEARTBEAT_LOSS_PERSISTED",
+        "label": "Persistent heartbeat loss",
+        "event_type": "trigger_condition",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.95
+      },
+      {
+        "event_id": "MUMT_EVT_EX_ATGM_LAUNCH",
+        "label": "Enemy ATGM launch",
+        "event_type": "threat_occurrence",
+        "source_ref": {
+          "source_unit_id": "MUMT_L29"
+        },
+        "confidence": 0.91
+      },
+      {
+        "event_id": "MUMT_EVT_EX_DRONE1_LANDING",
+        "label": "Drone 1 battery depletion landing",
+        "event_type": "asset_degradation",
+        "source_ref": {
+          "source_unit_id": "MUMT_L31"
+        },
+        "confidence": 0.9
+      },
+      {
+        "event_id": "MUMT_EVT_EX_LINK_STABLE",
+        "label": "Drone 2 link kept stable",
+        "event_type": "recovery_condition",
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.92
+      },
+      {
+        "event_id": "MUMT_EVT_EX_BANDWIDTH_RECOVERED",
+        "label": "Bandwidth recovery",
+        "event_type": "recovery_condition",
+        "source_ref": {
+          "source_unit_id": "MUMT_L35"
+        },
+        "confidence": 0.92
+      },
+      {
+        "event_id": "MUMT_EVT_EX_TARGET_SECURED",
+        "label": "Secure objective",
+        "event_type": "mission_success",
+        "source_ref": {
+          "source_unit_id": "MUMT_L43"
+        },
+        "confidence": 0.9
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "MUMT_TR_EX_PREP_TO_NORMAL",
+        "label": "Transition from preparation state to normal attack maneuver state",
+        "from_situation_text": "Attack maneuver preparation state",
+        "to_situation_text": "Wedge formation attack maneuver state",
+        "change_kind": [
+          "mode_change"
+        ],
+        "trigger_text": "Crossing the line of departure and attack maneuver start",
+        "source_ref": {
+          "source_unit_id": "MUMT_L09"
+        },
+        "confidence": 0.86
+      },
+      {
+        "transition_id": "MUMT_TR_EX_NORMAL_TO_DETOUR",
+        "label": "Transition from normal attack maneuver to bypass maneuver",
+        "from_situation_text": "Wedge formation attack maneuver state",
+        "to_situation_text": "Right bypass maneuver state",
+        "change_kind": [
+          "location_change",
+          "information_change"
+        ],
+        "trigger_text": "Possibility of enemy observation post and possibility of anti-tank position deployment",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.88
+      },
+      {
+        "transition_id": "MUMT_TR_EX_DETOUR_TO_FPV_THREAT",
+        "label": "Transition from bypass maneuver to FPV threat response state",
+        "from_situation_text": "Right bypass maneuver state",
+        "to_situation_text": "FPV threat approach state",
+        "change_kind": [
+          "risk_change",
+          "information_change"
+        ],
+        "trigger_text": "Possibility of 3-4 FPV drones detected",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.89
+      },
+      {
+        "transition_id": "MUMT_TR_EX_NORMAL_TO_LIMITED",
+        "label": "Transition from normal communication to limited communication",
+        "from_situation_text": "Normal communication state",
+        "to_situation_text": "Limited communication state",
+        "change_kind": [
+          "mode_change",
+          "information_change"
+        ],
+        "trigger_text": "Packet loss rate persistently exceeds the threshold",
+        "guard": {
+          "text": "The packet loss rate persists above the threshold"
+        },
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.96
+      },
+      {
+        "transition_id": "MUMT_TR_EX_VIDEO_TO_TRACK",
+        "label": "Switch from video stream to summary track data",
+        "from_situation_text": "Video stream-based SA",
+        "to_situation_text": "Summary track data-based minimum SA",
+        "change_kind": [
+          "information_change",
+          "capability_change"
+        ],
+        "trigger_text": "Limited communication mode transition",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.93
+      },
+      {
+        "transition_id": "MUMT_TR_EX_LIMITED_TO_DISCONNECTED",
+        "label": "Transition from limited communication to communication blackout",
+        "from_situation_text": "Limited communication state",
+        "to_situation_text": "Communication blackout state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Persistent heartbeat loss",
+        "guard": {
+          "text": "The loss persists for a certain time or more"
+        },
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.96
+      },
+      {
+        "transition_id": "MUMT_TR_EX_TO_EMERGENCY_BROADCAST",
+        "label": "Drone switch from general communication to emergency broadcast mode",
+        "from_situation_text": "Information transmission via the company commander's tank",
+        "to_situation_text": "Drone direct emergency broadcast",
+        "change_kind": [
+          "mode_change",
+          "flow_change"
+        ],
+        "trigger_text": "Heartbeat dropout with the company commander's tank",
+        "source_ref": {
+          "source_unit_id": "MUMT_L27"
+        },
+        "confidence": 0.93
+      },
+      {
+        "transition_id": "MUMT_TR_EX_DRONE_COUNT_REDUCED",
+        "label": "Available drones decrease from 3 to 2",
+        "from_situation_text": "3 drones surveillance-capable",
+        "to_situation_text": "2 drones surveillance-capable",
+        "change_kind": [
+          "capability_change"
+        ],
+        "trigger_text": "Drone 1 battery depletion landing",
+        "source_ref": {
+          "source_unit_id": "MUMT_L31"
+        },
+        "confidence": 0.9
+      },
+      {
+        "transition_id": "MUMT_TR_EX_DISCONNECTED_TO_LIMITED",
+        "label": "Transition from communication blackout to limited communication",
+        "from_situation_text": "Communication blackout state",
+        "to_situation_text": "Limited communication state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Drone 2 link kept stable",
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.94
+      },
+      {
+        "transition_id": "MUMT_TR_EX_LIMITED_TO_NORMAL",
+        "label": "Transition from limited communication to normal communication",
+        "from_situation_text": "Limited communication state",
+        "to_situation_text": "Normal communication state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Battalion server connection and bandwidth recovery",
+        "source_ref": {
+          "source_unit_id": "MUMT_L35"
+        },
+        "confidence": 0.94
+      },
+      {
+        "transition_id": "MUMT_TR_EX_NORMAL_TO_TARGET_SECURED",
+        "label": "Transition from maneuver resumption to objective secured",
+        "from_situation_text": "Maneuver resumption state after normal communication recovery",
+        "to_situation_text": "Objective secured state",
+        "change_kind": [
+          "state_update"
+        ],
+        "trigger_text": "Suppress remaining enemy positions",
+        "source_ref": {
+          "source_unit_id": "MUMT_L41"
+        },
+        "confidence": 0.89
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "MUMT_P_EX_COMPANY",
+        "label": "Tank company",
+        "performer_type": "military_unit",
+        "performer_kind": "aggregate",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.9
+      },
+      {
+        "performer_id": "MUMT_P_EX_COMMANDER",
+        "label": "Company commander",
+        "performer_type": "human_commander",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.95
+      },
+      {
+        "performer_id": "MUMT_P_EX_TDSS",
+        "label": "TDSS",
+        "performer_type": "decision_support_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.96
+      },
+      {
+        "performer_id": "MUMT_P_EX_HMI",
+        "label": "HMI",
+        "performer_type": "human_machine_interface",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.88
+      },
+      {
+        "performer_id": "MUMT_P_EX_DRONES",
+        "label": "Three reconnaissance drones",
+        "performer_type": "unmanned_air_team",
+        "performer_kind": "aggregate",
+        "part_structure": {
+          "role": "whole",
+          "member_cardinality": {
+            "total_count": 3,
+            "text": "Three reconnaissance drones"
+          }
+        },
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.96
+      },
+      {
+        "performer_id": "MUMT_P_EX_DRONE1",
+        "label": "Drone 1",
+        "performer_type": "recon_drone",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.96
+      },
+      {
+        "performer_id": "MUMT_P_EX_DRONE2",
+        "label": "Drone 2",
+        "performer_type": "recon_drone",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.96
+      },
+      {
+        "performer_id": "MUMT_P_EX_DRONE3",
+        "label": "Drone 3",
+        "performer_type": "recon_drone",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.96
+      },
+      {
+        "performer_id": "MUMT_P_EX_PLATOONS",
+        "label": "Subordinate platoons",
+        "performer_type": "tank_platoon_group",
+        "performer_kind": "aggregate",
+        "source_ref": {
+          "source_unit_id": "MUMT_L07"
+        },
+        "confidence": 0.94
+      },
+      {
+        "performer_id": "MUMT_P_EX_PLATOON1",
+        "label": "1st Platoon",
+        "performer_type": "tank_platoon",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "MUMT_L07"
+        },
+        "confidence": 0.93
+      },
+      {
+        "performer_id": "MUMT_P_EX_PLATOON2",
+        "label": "2nd Platoon",
+        "performer_type": "tank_platoon",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "MUMT_L07"
+        },
+        "confidence": 0.93
+      },
+      {
+        "performer_id": "MUMT_P_EX_PLATOON3",
+        "label": "3rd Platoon",
+        "performer_type": "tank_platoon",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "MUMT_L07"
+        },
+        "confidence": 0.93
+      },
+      {
+        "performer_id": "MUMT_P_EX_BATTALION",
+        "label": "Battalion server",
+        "performer_type": "higher_command_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "performer_id": "MUMT_P_EX_ENEMY",
+        "label": "Enemy",
+        "performer_type": "hostile_force",
+        "performer_kind": "aggregate",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.92
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "MUMT_A_EX_ACTIVATE_SYSTEM",
+        "label": "MUM-T system activation",
+        "primary_actor_text": "Tank company",
+        "verb": "activate",
+        "object_text": "MUM-T system combining three reconnaissance drones and a lightweight TDSS",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_FUSE_ISR",
+        "label": "Fuse drone ISR and tank sensor cues",
+        "primary_actor_text": "TDSS",
+        "verb": "fuse",
+        "object_text": "Drone ISR and tank sensor cues",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_TDSS_DIAG",
+        "label": "Perform TDSS self-diagnosis",
+        "primary_actor_text": "TDSS",
+        "verb": "diagnose",
+        "object_text": "TDSS own status",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "MUMT_A_EX_VERIFY_BATTALION_LINK",
+        "label": "Battalion server communication confirmed normal",
+        "primary_actor_text": "TDSS",
+        "verb": "confirm",
+        "object_text": "Communication with the battalion server",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "MUMT_A_EX_ASSIGN_DRONE_AREAS",
+        "label": "Deploy drone surveillance zones",
+        "primary_actor_text": "Company commander, TDSS",
+        "verb": "deploy",
+        "object_text": "Forward, left flank, and right flank surveillance missions",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_LAUNCH_DRONES",
+        "label": "Sequential reconnaissance drone launch",
+        "primary_actor_text": "Three reconnaissance drones",
+        "verb": "launch",
+        "object_text": "Forward and flank surveillance mission",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "MUMT_A_EX_DISPLAY_SA",
+        "label": "HMI integrated SA display",
+        "primary_actor_text": "HMI",
+        "verb": "display",
+        "object_text": "Integrated SA screen",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_SHARE_TO_PLATOONS",
+        "label": "Share drone surveillance status and expected enemy positions",
+        "primary_actor_text": "Company commander",
+        "verb": "share",
+        "object_text": "Drone surveillance status and expected enemy positions",
+        "target_text": "Tank commanders of each platoon",
+        "source_ref": {
+          "source_unit_id": "MUMT_L07"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_SEND_SA_SUMMARY",
+        "label": "Initial transmission of company SA summary information",
+        "primary_actor_text": "TDSS",
+        "verb": "transmit",
+        "object_text": "Company SA summary information",
+        "target_text": "Battalion server",
+        "source_ref": {
+          "source_unit_id": "MUMT_L07"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "MUMT_A_EX_WEDGE_MOVE",
+        "label": "Wedge formation lead maneuver",
+        "primary_actor_text": "1st Platoon",
+        "verb": "move",
+        "object_text": "Head of the wedge formation",
+        "source_ref": {
+          "source_unit_id": "MUMT_L09"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_WIDE_SURVEIL",
+        "label": "Forward and left and right flank surveillance",
+        "primary_actor_text": "Three reconnaissance drones",
+        "verb": "surveil",
+        "object_text": "Forward and left and right flanks",
+        "source_ref": {
+          "source_unit_id": "MUMT_L09"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "MUMT_A_EX_UPDATE_PRIORITY",
+        "label": "Update threat priorities",
+        "primary_actor_text": "TDSS",
+        "verb": "update",
+        "object_text": "Threat priorities",
+        "source_ref": {
+          "source_unit_id": "MUMT_L09"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_DETECT_OP",
+        "label": "Detect suspected enemy observation post heat source",
+        "primary_actor_text": "Drone 1",
+        "verb": "detect",
+        "object_text": "Suspected enemy observation post heat source behind the forward ridge",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "MUMT_A_EX_ALERT_OP",
+        "label": "Enemy observation post possibility alert",
+        "primary_actor_text": "TDSS",
+        "verb": "alert",
+        "object_text": "High possibility of enemy observation post",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_DECIDE_DETOUR",
+        "label": "Decide right bypass maneuver",
+        "primary_actor_text": "Company commander",
+        "verb": "decide",
+        "object_text": "Right bypass maneuver",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_LINK_TARGET_INFO",
+        "label": "Link target information to the battalion",
+        "primary_actor_text": "TDSS",
+        "verb": "link",
+        "object_text": "Target information",
+        "target_text": "Battalion",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.88
+      },
+      {
+        "action_id": "MUMT_A_EX_REDEPLOY_DRONE3",
+        "label": "Redeploy Drone 3 ahead of the bypass axis",
+        "primary_actor_text": "Drone 3",
+        "verb": "redeploy",
+        "object_text": "Ahead of the bypass axis",
+        "source_ref": {
+          "source_unit_id": "MUMT_L13"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_REPORT_CONTROL_POINT",
+        "label": "Report progress when passing the control point",
+        "primary_actor_text": "Company commander",
+        "verb": "report",
+        "object_text": "Progress",
+        "target_text": "Battalion",
+        "source_ref": {
+          "source_unit_id": "MUMT_L13"
+        },
+        "confidence": 0.86
+      },
+      {
+        "action_id": "MUMT_A_EX_DETECT_FPV",
+        "label": "Multiple FPV drones detected",
+        "primary_actor_text": "Drone 1 Edge AI",
+        "verb": "detect",
+        "object_text": "Possibility of 3-4 FPV kamikaze drones",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "MUMT_A_EX_DISPLAY_FPV",
+        "label": "Display FPV threat direction, speed, ETA",
+        "primary_actor_text": "TDSS",
+        "verb": "display",
+        "object_text": "Threat direction, approach speed of about 35 m/s, estimated time of arrival of about 43 s",
+        "target_text": "Company commander's HMI",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "MUMT_A_EX_COMMAND_DISPERSE",
+        "label": "Order dispersed maneuver and air-defense watch",
+        "primary_actor_text": "Company commander",
+        "verb": "order",
+        "object_text": "Dispersed maneuver and air-defense watch",
+        "target_text": "All platoons",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "MUMT_A_EX_SHARE_FPV_TO_BATTALION",
+        "label": "Urgent sharing of FPV threat information",
+        "primary_actor_text": "TDSS",
+        "verb": "share",
+        "object_text": "Enemy drone threat information",
+        "target_text": "Battalion server",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_START_JAMMING",
+        "label": "Electronic warfare jamming begins",
+        "primary_actor_text": "Enemy",
+        "verb": "begin",
+        "object_text": "Electronic warfare jamming",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "MUMT_A_EX_SWITCH_LIMITED",
+        "label": "Start limited communication mode transition",
+        "primary_actor_text": "TDSS",
+        "verb": "transition",
+        "object_text": "From normal communication to limited communication mode",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.95
+      },
+      {
+        "action_id": "MUMT_A_EX_COMMAND_EDGE_MODE",
+        "label": "Command to stop video transmission and switch to Edge AI mode",
+        "primary_actor_text": "TDSS",
+        "verb": "command",
+        "object_text": "Stop video transmission and switch to Edge AI analysis mode",
+        "target_text": "Three drones",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "MUMT_A_EX_SEND_TRACK_SUMMARY",
+        "label": "Transmit summary track data",
+        "primary_actor_text": "Three reconnaissance drones",
+        "verb": "transmit",
+        "object_text": "Summarized track data",
+        "target_text": "TDSS",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "MUMT_A_EX_UPDATE_MIN_SA",
+        "label": "Update minimum SA",
+        "primary_actor_text": "TDSS",
+        "verb": "update",
+        "object_text": "Summary track data-based minimum SA",
+        "source_ref": {
+          "source_unit_id": "MUMT_L19"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "MUMT_A_EX_AVOID_FPV_P1",
+        "label": "1st Platoon Tank 3 FPV evasive maneuver",
+        "primary_actor_text": "1st Platoon Tank 3",
+        "verb": "evade",
+        "object_text": "FPV drone",
+        "source_ref": {
+          "source_unit_id": "MUMT_L21"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "MUMT_A_EX_DISPERSE_P2",
+        "label": "2nd Platoon air-defense watch and dispersed maneuver",
+        "primary_actor_text": "2nd Platoon",
+        "verb": "carry out",
+        "object_text": "Air-defense watch and dispersed maneuver",
+        "source_ref": {
+          "source_unit_id": "MUMT_L21"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "MUMT_A_EX_ASSEMBLE_DAMAGE_CHECK",
+        "label": "Order company assembly and damage check",
+        "primary_actor_text": "Company commander",
+        "verb": "order",
+        "object_text": "Company assembly and damage check",
+        "source_ref": {
+          "source_unit_id": "MUMT_L23"
+        },
+        "confidence": 0.89
+      },
+      {
+        "action_id": "MUMT_A_EX_DECLARE_DISCONNECTED",
+        "label": "Declare communication blackout mode transition",
+        "primary_actor_text": "TDSS",
+        "verb": "declare",
+        "object_text": "Transition from limited mode to communication blackout mode",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.95
+      },
+      {
+        "action_id": "MUMT_A_EX_BLOCK_EXTERNAL_EXCHANGE",
+        "label": "Logically block external information exchange",
+        "primary_actor_text": "TDSS",
+        "verb": "block",
+        "object_text": "External information exchange",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "MUMT_A_EX_ACTIVATE_SURVIVAL_LOOP",
+        "label": "Activate local sensor-based survival loop",
+        "primary_actor_text": "TDSS",
+        "verb": "activate",
+        "object_text": "Local sensor-based survival loop",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "MUMT_A_EX_SWITCH_EMERGENCY_BROADCAST",
+        "label": "Drone switch to emergency broadcast mode",
+        "primary_actor_text": "Three reconnaissance drones",
+        "verb": "switch",
+        "object_text": "Emergency broadcast mode",
+        "source_ref": {
+          "source_unit_id": "MUMT_L27"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "MUMT_A_EX_BROADCAST_THREAT",
+        "label": "Direct broadcast of threat detection data",
+        "primary_actor_text": "Three reconnaissance drones",
+        "verb": "broadcast",
+        "object_text": "Coordinates and type of threat detection data",
+        "target_text": "Nearby friendly tanks",
+        "source_ref": {
+          "source_unit_id": "MUMT_L27"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "MUMT_A_EX_INDEPENDENT_SURVIVAL",
+        "label": "Perform individual survival actions",
+        "primary_actor_text": "Subordinate platoons",
+        "verb": "perform",
+        "object_text": "Individual survival actions",
+        "source_ref": {
+          "source_unit_id": "MUMT_L27"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_DRONE2_BROADCAST_FPV",
+        "label": "Drone 2 FPV broadcast alert",
+        "primary_actor_text": "Drone 2 Edge AI",
+        "verb": "transmit",
+        "object_text": "FPV approach alert",
+        "source_ref": {
+          "source_unit_id": "MUMT_L29"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "MUMT_A_EX_P3_EVADE",
+        "label": "3rd Platoon evasive maneuver",
+        "primary_actor_text": "3rd Platoon tanks",
+        "verb": "evade",
+        "object_text": "FPV drone approach",
+        "source_ref": {
+          "source_unit_id": "MUMT_L29"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_DRONE3_BROADCAST_ATGM",
+        "label": "Drone 3 ATGM alert broadcast",
+        "primary_actor_text": "Drone 3 Edge AI",
+        "verb": "broadcast",
+        "object_text": "ATGM launch, direction southwest",
+        "source_ref": {
+          "source_unit_id": "MUMT_L29"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "MUMT_A_EX_P2_SMOKE_EVADE",
+        "label": "2nd Platoon smoke screen deployment and evasive maneuver",
+        "primary_actor_text": "2nd Platoon",
+        "verb": "deploy",
+        "object_text": "Smoke screen and evasive maneuver",
+        "source_ref": {
+          "source_unit_id": "MUMT_L29"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_MAINTAIN_MIN_SA",
+        "label": "Maintain minimum SA",
+        "primary_actor_text": "Company commander's tank",
+        "verb": "maintain",
+        "object_text": "Minimum SA based on the last received SA information and own sensor cues",
+        "source_ref": {
+          "source_unit_id": "MUMT_L31"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "MUMT_A_EX_DRONE1_LAND",
+        "label": "Drone 1 battery depletion landing",
+        "primary_actor_text": "Drone 1",
+        "verb": "land",
+        "object_text": "Final position",
+        "source_ref": {
+          "source_unit_id": "MUMT_L31"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "MUMT_A_EX_SWITCH_LIMITED_RECOVERY",
+        "label": "Begin transition from blackout to limited mode",
+        "primary_actor_text": "TDSS",
+        "verb": "transition",
+        "object_text": "From blackout mode to limited mode",
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.93
+      },
+      {
+        "action_id": "MUMT_A_EX_RESYNC_SA",
+        "label": "SA resynchronization",
+        "primary_actor_text": "TDSS",
+        "verb": "resynchronize",
+        "object_text": "Track data accumulated during the blackout period",
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.92
+      },
+      {
+        "action_id": "MUMT_A_EX_REALLOCATE_SURVEILLANCE",
+        "label": "Attempt surveillance area reallocation",
+        "primary_actor_text": "TDSS",
+        "verb": "reallocate",
+        "object_text": "Drone surveillance area",
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.88
+      },
+      {
+        "action_id": "MUMT_A_EX_SWITCH_NORMAL_RECOVERY",
+        "label": "Transition from limited to normal communication mode",
+        "primary_actor_text": "TDSS",
+        "verb": "transition",
+        "object_text": "From limited mode to normal communication mode",
+        "source_ref": {
+          "source_unit_id": "MUMT_L35"
+        },
+        "confidence": 0.94
+      },
+      {
+        "action_id": "MUMT_A_EX_REOPEN_INFO_EXCHANGE",
+        "label": "Resume SA sharing, target information linking, and battalion analysis reception",
+        "primary_actor_text": "TDSS",
+        "verb": "resume",
+        "object_text": "SA sharing, target information linking, battalion analysis result reception",
+        "source_ref": {
+          "source_unit_id": "MUMT_L35"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_REPORT_BLACKOUT",
+        "label": "Comprehensive report on the blackout period",
+        "primary_actor_text": "Company commander",
+        "verb": "report",
+        "object_text": "Threat encounters, electronic warfare progress, damage status, Drone 1 loss",
+        "target_text": "Battalion",
+        "source_ref": {
+          "source_unit_id": "MUMT_L37"
+        },
+        "confidence": 0.91
+      },
+      {
+        "action_id": "MUMT_A_EX_REACTIVATE_GROUPS",
+        "label": "Reactivate operational activity groups",
+        "primary_actor_text": "TDSS",
+        "verb": "reactivate",
+        "object_text": "Operational activity groups",
+        "source_ref": {
+          "source_unit_id": "MUMT_L39"
+        },
+        "confidence": 0.89
+      },
+      {
+        "action_id": "MUMT_A_EX_DECIDE_REDUCED_SURVEIL",
+        "label": "Decide on reduced surveillance toward the objective based on 2 drones",
+        "primary_actor_text": "Company commander",
+        "verb": "decide",
+        "object_text": "Reduced surveillance toward the objective based on Drone 2 and Drone 3",
+        "source_ref": {
+          "source_unit_id": "MUMT_L39"
+        },
+        "confidence": 0.89
+      },
+      {
+        "action_id": "MUMT_A_EX_ORDER_RESUME",
+        "label": "Order maneuver resumption",
+        "primary_actor_text": "Company commander",
+        "verb": "order",
+        "object_text": "Maneuver resumption",
+        "target_text": "Subordinate platoons",
+        "source_ref": {
+          "source_unit_id": "MUMT_L39"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_DETECT_RESIDUAL",
+        "label": "Remaining enemy force confirmed",
+        "primary_actor_text": "Drone 2",
+        "verb": "confirm",
+        "object_text": "Small-scale remaining enemy force on the outskirts of the objective",
+        "source_ref": {
+          "source_unit_id": "MUMT_L41"
+        },
+        "confidence": 0.89
+      },
+      {
+        "action_id": "MUMT_A_EX_ATTACK_REMAINING",
+        "label": "Suppress remaining enemy positions",
+        "primary_actor_text": "Subordinate platoons",
+        "verb": "suppress",
+        "object_text": "Remaining enemy positions",
+        "source_ref": {
+          "source_unit_id": "MUMT_L41"
+        },
+        "confidence": 0.9
+      },
+      {
+        "action_id": "MUMT_A_EX_FORM_DEFENSE",
+        "label": "Organize defensive positions",
+        "primary_actor_text": "Subordinate platoons",
+        "verb": "organize",
+        "object_text": "Defensive positions by platoon",
+        "source_ref": {
+          "source_unit_id": "MUMT_L41"
+        },
+        "confidence": 0.89
+      },
+      {
+        "action_id": "MUMT_A_EX_REPORT_TARGET_SECURED",
+        "label": "Report objective secured",
+        "primary_actor_text": "Company commander",
+        "verb": "report",
+        "object_text": "Secure objective",
+        "target_text": "Battalion",
+        "source_ref": {
+          "source_unit_id": "MUMT_L43"
+        },
+        "confidence": 0.9
+      }
+    ],
+    "items": [
+      {
+        "item_id": "MUMT_I_EX_ISR_DATA",
+        "label": "Drone ISR information",
+        "item_type": "sensor_data",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.88
+      },
+      {
+        "item_id": "MUMT_I_EX_TANK_SENSOR_CUES",
+        "label": "Tank sensor cues",
+        "item_type": "sensor_data",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.88
+      },
+      {
+        "item_id": "MUMT_I_EX_SA",
+        "label": "Integrated SA",
+        "item_type": "situation_awareness",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.92
+      },
+      {
+        "item_id": "MUMT_I_EX_VIDEO_STREAM",
+        "label": "Drone video stream",
+        "item_type": "sensor_stream",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "item_id": "MUMT_I_EX_DETECTION_METADATA",
+        "label": "Detection metadata",
+        "item_type": "metadata",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.88
+      },
+      {
+        "item_id": "MUMT_I_EX_SA_SUMMARY",
+        "label": "Company SA summary information",
+        "item_type": "report",
+        "source_ref": {
+          "source_unit_id": "MUMT_L07"
+        },
+        "confidence": 0.9
+      },
+      {
+        "item_id": "MUMT_I_EX_TACTICAL_ANALYSIS",
+        "label": "Battalion tactical analysis results",
+        "item_type": "analysis_result",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.88
+      },
+      {
+        "item_id": "MUMT_I_EX_TARGET_INFO",
+        "label": "Target information",
+        "item_type": "target_information",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.86
+      },
+      {
+        "item_id": "MUMT_I_EX_FPV_ALERT",
+        "label": "FPV threat alert",
+        "item_type": "threat_alert",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.92
+      },
+      {
+        "item_id": "MUMT_I_EX_TRACK_SUMMARY",
+        "label": "Summary track data",
+        "item_type": "track_payload",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.92
+      },
+      {
+        "item_id": "MUMT_I_EX_EMERGENCY_BROADCAST",
+        "label": "Emergency broadcast threat data",
+        "item_type": "broadcast_message",
+        "source_ref": {
+          "source_unit_id": "MUMT_L27"
+        },
+        "confidence": 0.92
+      },
+      {
+        "item_id": "MUMT_I_EX_BLACKOUT_REPORT",
+        "label": "Comprehensive report on the blackout period",
+        "item_type": "battle_report",
+        "source_ref": {
+          "source_unit_id": "MUMT_L37"
+        },
+        "confidence": 0.9
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "MUMT_F_EX_PREP_FLOW",
+        "label": "TDSS diagnostics -> communication confirmation -> drone launch -> HMI SA display",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.9
+      },
+      {
+        "flow_id": "MUMT_F_EX_SA_TO_BATTALION",
+        "label": "Transmission of company SA summary information to the battalion",
+        "flow_kind": "message_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L07"
+        },
+        "confidence": 0.9
+      },
+      {
+        "flow_id": "MUMT_F_EX_SURVEIL_TO_PRIORITY",
+        "label": "Drone surveillance and sensor cues -> threat priority update",
+        "flow_kind": "object_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L09"
+        },
+        "confidence": 0.88
+      },
+      {
+        "flow_id": "MUMT_F_EX_OP_TO_DETOUR",
+        "label": "Observation post detection -> alert -> bypass decision",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.9
+      },
+      {
+        "flow_id": "MUMT_F_EX_DETOUR_SURVEIL",
+        "label": "Bypass start -> Drone 3 redeployment -> SA update",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L13"
+        },
+        "confidence": 0.88
+      },
+      {
+        "flow_id": "MUMT_F_EX_FPV_TO_DISPERSE",
+        "label": "FPV detection -> HMI alert -> dispersal order -> platoons spread out",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.92
+      },
+      {
+        "flow_id": "MUMT_F_EX_EW_TO_EDGE",
+        "label": "Jamming -> packet loss -> limited transition -> Edge mode switch",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.94
+      },
+      {
+        "flow_id": "MUMT_F_EX_TRACK_TO_MIN_SA",
+        "label": "Summary track data -> minimum SA update",
+        "flow_kind": "object_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L19"
+        },
+        "confidence": 0.92
+      },
+      {
+        "flow_id": "MUMT_F_EX_FPV_LIMITED_RESPONSE",
+        "label": "Limited mode FPV alert -> evasive/dispersed maneuver",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L21"
+        },
+        "confidence": 0.9
+      },
+      {
+        "flow_id": "MUMT_F_EX_DISCONNECT_TO_SURVIVAL",
+        "label": "Heartbeat loss -> blackout declaration -> survival loop activation",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.94
+      },
+      {
+        "flow_id": "MUMT_F_EX_EMERGENCY_BROADCAST",
+        "label": "Drone heartbeat dropout -> emergency broadcast -> individual survival actions",
+        "flow_kind": "message_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L27"
+        },
+        "confidence": 0.93
+      },
+      {
+        "flow_id": "MUMT_F_EX_ATGM_RESPONSE",
+        "label": "ATGM broadcast alert -> smoke screen deployment -> evasion",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L29"
+        },
+        "confidence": 0.9
+      },
+      {
+        "flow_id": "MUMT_F_EX_LINK_TO_RESYNC",
+        "label": "Link recovery -> limited transition -> SA resynchronization",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.92
+      },
+      {
+        "flow_id": "MUMT_F_EX_NORMAL_REOPEN",
+        "label": "Bandwidth recovery -> normal transition -> information exchange resumption",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L35"
+        },
+        "confidence": 0.92
+      },
+      {
+        "flow_id": "MUMT_F_EX_RESUME_ATTACK",
+        "label": "Normal stabilization -> activity reactivation -> maneuver resumption -> objective secured",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "MUMT_L39"
+        },
+        "confidence": 0.88
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "MUMT_CTRL_EX_COMM_MODE",
+        "label": "Communication mode transition decision",
+        "control_type": "decision",
+        "guard_texts": [
+          "Packet loss rate persistently exceeds the threshold",
+          "Persistent heartbeat loss",
+          "Link kept stable",
+          "Bandwidth recovery"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_L43"
+        },
+        "confidence": 0.95
+      },
+      {
+        "control_id": "MUMT_CTRL_EX_DRONE_DISTRIBUTION",
+        "label": "Drone forward/flank dispersed surveillance",
+        "control_type": "parallel",
+        "guard_texts": [
+          "Sharing of forward, left flank, and right flank surveillance areas"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_L05"
+        },
+        "confidence": 0.88
+      },
+      {
+        "control_id": "MUMT_CTRL_EX_FPV_BRANCH",
+        "label": "Immediate response branch when an FPV threat occurs",
+        "control_type": "decision",
+        "guard_texts": [
+          "FPV drone approach",
+          "Estimated time of arrival about 43 s"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.9
+      },
+      {
+        "control_id": "MUMT_CTRL_EX_LOCAL_SURVIVAL_LOOP",
+        "label": "Local survival loop during blackout",
+        "control_type": "loop",
+        "guard_texts": [
+          "While the communication blackout state persists"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.92
+      },
+      {
+        "control_id": "MUMT_CTRL_EX_STAGED_RECOVERY",
+        "label": "Staged communication recovery sequence",
+        "control_type": "guarded_sequence",
+        "guard_texts": [
+          "Limited mode after link kept stable",
+          "Normal mode after bandwidth recovery"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.92
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "MUMT_C_EX_PACKET_LOSS",
+        "label": "Packet loss rate persistently exceeds the threshold",
+        "constraint_type": "guard",
+        "expression_text": "packet_loss_rate > threshold for configured_duration",
+        "source_ref": {
+          "source_unit_id": "MUMT_L17"
+        },
+        "confidence": 0.88
+      },
+      {
+        "constraint_id": "MUMT_C_EX_HEARTBEAT_LOSS",
+        "label": "Persistent heartbeat loss",
+        "constraint_type": "guard",
+        "expression_text": "heartbeat_loss_duration >= configured_duration",
+        "source_ref": {
+          "source_unit_id": "MUMT_L25"
+        },
+        "confidence": 0.88
+      },
+      {
+        "constraint_id": "MUMT_C_EX_LINK_STABLE",
+        "label": "Link kept stable",
+        "constraint_type": "guard",
+        "expression_text": "link_stable_duration >= configured_duration",
+        "source_ref": {
+          "source_unit_id": "MUMT_L33"
+        },
+        "confidence": 0.86
+      },
+      {
+        "constraint_id": "MUMT_C_EX_BANDWIDTH_RECOVERY",
+        "label": "Bandwidth recovery and connection stability maintained",
+        "constraint_type": "guard",
+        "expression_text": "bandwidth_recovered == true and connection_stable == true",
+        "source_ref": {
+          "source_unit_id": "MUMT_L35"
+        },
+        "confidence": 0.86
+      },
+      {
+        "constraint_id": "MUMT_C_EX_FPV_ETA",
+        "label": "FPV estimated time of arrival 43 s",
+        "constraint_type": "temporal_warning",
+        "expression_text": "fpv_eta ~= 43 seconds",
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.9
+      },
+      {
+        "constraint_id": "MUMT_C_EX_SURVIVABILITY",
+        "label": "Maintain survivability-focused functions",
+        "constraint_type": "operational_constraint",
+        "expression_text": "survivability_functions == maintained during limited_or_disconnected_modes",
+        "source_ref": {
+          "source_unit_id": "MUMT_L19"
+        },
+        "confidence": 0.89
+      },
+      {
+        "constraint_id": "MUMT_C_EX_MIN_SA",
+        "label": "Maintain minimum SA",
+        "constraint_type": "operational_constraint",
+        "expression_text": "minimum_situation_awareness == maintained",
+        "source_ref": {
+          "source_unit_id": "MUMT_L31"
+        },
+        "confidence": 0.88
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "MUMT_G_EX_UNIFIED_SA",
+        "label": "Create integrated situational awareness",
+        "goal_type": "operational_objective",
+        "desired_state_text": "Create integrated SA based on drone ISR and tank sensor cues",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.9
+      },
+      {
+        "goal_id": "MUMT_G_EX_DETOUR_SURVIVAL",
+        "label": "Avoid anti-tank risk",
+        "goal_type": "tactical_objective",
+        "desired_state_text": "Bypass maneuver avoiding the possibility of enemy observation posts and anti-tank positions",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.86
+      },
+      {
+        "goal_id": "MUMT_G_EX_SURVIVE_FPV",
+        "label": "Minimize FPV damage",
+        "goal_type": "safety_objective",
+        "desired_state_text": "Maintain combat capability through dispersed maneuver and evasion when FPVs approach",
+        "source_ref": {
+          "source_unit_id": "MUMT_L21"
+        },
+        "confidence": 0.9
+      },
+      {
+        "goal_id": "MUMT_G_EX_MAINTAIN_MIN_SA",
+        "label": "Maintain minimum SA during limited/blackout",
+        "goal_type": "operational_objective",
+        "desired_state_text": "Maintain minimum situational awareness even if video and the higher echelon connection are lost",
+        "source_ref": {
+          "source_unit_id": "MUMT_L31"
+        },
+        "confidence": 0.92
+      },
+      {
+        "goal_id": "MUMT_G_EX_SECURE_TARGET",
+        "label": "Secure objective",
+        "goal_type": "mission_objective",
+        "desired_state_text": "Suppress the remaining enemy positions and secure the objective",
+        "source_ref": {
+          "source_unit_id": "MUMT_L43"
+        },
+        "confidence": 0.9
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "MUMT_R_EX_TERRAIN_LIMITATION",
+        "label": "Drone ISR needed because of limited line of sight in hilly terrain",
+        "reason_type": "operational_rationale",
+        "rationale_text": "Tank line of sight is limited to 1-2 km by ridges and valleys",
+        "source_ref": {
+          "source_unit_id": "MUMT_L03"
+        },
+        "confidence": 0.85
+      },
+      {
+        "reason_id": "MUMT_R_EX_DETOUR",
+        "label": "Bypass because of the possibility of anti-tank positions",
+        "reason_type": "tactical_rationale",
+        "rationale_text": "The possibility of an enemy observation post and the probability of anti-tank position deployment are high",
+        "source_ref": {
+          "source_unit_id": "MUMT_L11"
+        },
+        "confidence": 0.88
+      },
+      {
+        "reason_id": "MUMT_R_EX_GRACEFUL",
+        "label": "Graceful degradation because of communication quality degradation",
+        "reason_type": "operational_rationale",
+        "rationale_text": "To maintain immediate alerts and threat priority refinement despite video quality degradation",
+        "source_ref": {
+          "source_unit_id": "MUMT_L19"
+        },
+        "confidence": 0.9
+      },
+      {
+        "reason_id": "MUMT_R_EX_INDEPENDENT",
+        "label": "Continue independent action because integrated command is impossible",
+        "reason_type": "command_rationale",
+        "rationale_text": "Integrated company command is difficult in the blackout state",
+        "source_ref": {
+          "source_unit_id": "MUMT_L27"
+        },
+        "confidence": 0.86
+      },
+      {
+        "reason_id": "MUMT_R_EX_REDUCED_SURVEIL",
+        "label": "Decision on reduced surveillance due to Drone 1 loss",
+        "reason_type": "resource_rationale",
+        "rationale_text": "The available drones are reduced to 2, so the surveillance area sharing capability is reduced",
+        "source_ref": {
+          "source_unit_id": "MUMT_L39"
+        },
+        "confidence": 0.88
+      }
+    ],
+    "domain_extension_rules": [
+      {
+        "domain_extension_rule_id": "MUMT_DER_EX_COMM",
+        "label": "MUM-T communication degradation vocabulary",
+        "domain": "military_mumt_communications",
+        "terms": [
+          "normal communication mode",
+          "limited communication mode",
+          "disconnected communication mode",
+          "graceful degradation",
+          "heartbeat",
+          "emergency broadcast"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_L43"
+        },
+        "confidence": 0.88
+      },
+      {
+        "domain_extension_rule_id": "MUMT_DER_EX_THREAT",
+        "label": "MUM-T threat vocabulary",
+        "domain": "military_threat",
+        "terms": [
+          "FPV drone",
+          "ATGM",
+          "electronic warfare jamming",
+          "observation post",
+          "anti-tank position"
+        ],
+        "source_ref": {
+          "source_unit_id": "MUMT_L15"
+        },
+        "confidence": 0.88
+      }
+    ],
+    "semantic_bindings": [
+      {
+        "semantic_binding_id": "MUMT_SB_EX_PERFORMERS",
+        "label": "MUM-T performers to SysML Parts",
+        "source_slot_text": "Company commander, TDSS, reconnaissance drones, subordinate platoons, battalion",
+        "target_standard_element": "SysML Part",
+        "binding_kind": "performer_to_part",
+        "confidence": 0.88
+      },
+      {
+        "semantic_binding_id": "MUMT_SB_EX_COMM_TRANSITIONS",
+        "label": "Communication mode transition to StateTransitionAction",
+        "source_slot_text": "Normal-limited-blackout-limited-normal communication transitions",
+        "target_standard_element": "SysML StateTransitionAction",
+        "binding_kind": "transition_to_state_transition",
+        "confidence": 0.9
+      },
+      {
+        "semantic_binding_id": "MUMT_SB_EX_TRACK_ITEM",
+        "label": "Summary track data to SysML Item",
+        "source_slot_text": "Summary track data",
+        "target_standard_element": "SysML Item",
+        "binding_kind": "payload_to_item",
+        "confidence": 0.86
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "MUMT_EX_REL_001",
+        "source_slot_id": "MUMT_SCN_EX_ATTACK_EW",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_EX_CONTEXT",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_002",
+        "source_slot_id": "MUMT_SCN_EX_ATTACK_EW",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_EX_PREP",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_003",
+        "source_slot_id": "MUMT_SCN_EX_ATTACK_EW",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_EX_NORMAL_ATTACK",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_004",
+        "source_slot_id": "MUMT_SCN_EX_ATTACK_EW",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_EX_OBS_DETOUR",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_005",
+        "source_slot_id": "MUMT_SCN_EX_ATTACK_EW",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_EX_FPV",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_006",
+        "source_slot_id": "MUMT_SCN_EX_ATTACK_EW",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_EX_LIMITED",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_007",
+        "source_slot_id": "MUMT_SCN_EX_ATTACK_EW",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_EX_DISCONNECTED",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_008",
+        "source_slot_id": "MUMT_SCN_EX_ATTACK_EW",
+        "relation_type": "has_episode",
+        "target_slot_id": "MUMT_EP_EX_RECOVERY",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_009",
+        "source_slot_id": "MUMT_P_EX_DRONES",
+        "relation_type": "custom",
+        "custom_relation_type": "contains_performer",
+        "target_slot_id": "MUMT_P_EX_DRONE1",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_010",
+        "source_slot_id": "MUMT_P_EX_DRONES",
+        "relation_type": "custom",
+        "custom_relation_type": "contains_performer",
+        "target_slot_id": "MUMT_P_EX_DRONE2",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_011",
+        "source_slot_id": "MUMT_P_EX_DRONES",
+        "relation_type": "custom",
+        "custom_relation_type": "contains_performer",
+        "target_slot_id": "MUMT_P_EX_DRONE3",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_012",
+        "source_slot_id": "MUMT_P_EX_PLATOONS",
+        "relation_type": "custom",
+        "custom_relation_type": "contains_performer",
+        "target_slot_id": "MUMT_P_EX_PLATOON1",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_013",
+        "source_slot_id": "MUMT_P_EX_PLATOONS",
+        "relation_type": "custom",
+        "custom_relation_type": "contains_performer",
+        "target_slot_id": "MUMT_P_EX_PLATOON2",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_014",
+        "source_slot_id": "MUMT_P_EX_PLATOONS",
+        "relation_type": "custom",
+        "custom_relation_type": "contains_performer",
+        "target_slot_id": "MUMT_P_EX_PLATOON3",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_015",
+        "source_slot_id": "MUMT_SIT_EX_NORMAL_COMM",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_EX_COMM_NORMAL",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_016",
+        "source_slot_id": "MUMT_SIT_EX_LIMITED_COMM",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_EX_COMM_LIMITED",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_017",
+        "source_slot_id": "MUMT_SIT_EX_DISCONNECTED_COMM",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_EX_COMM_DISCONNECTED",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_018",
+        "source_slot_id": "MUMT_SIT_EX_FPV_THREAT",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_EX_FPV_SPEED",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_019",
+        "source_slot_id": "MUMT_SIT_EX_FPV_THREAT",
+        "relation_type": "has_state_value",
+        "target_slot_id": "MUMT_SV_EX_FPV_ETA",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_020",
+        "source_slot_id": "MUMT_TR_EX_NORMAL_TO_LIMITED",
+        "relation_type": "from_situation",
+        "target_slot_id": "MUMT_SIT_EX_NORMAL_COMM",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_021",
+        "source_slot_id": "MUMT_TR_EX_NORMAL_TO_LIMITED",
+        "relation_type": "to_situation",
+        "target_slot_id": "MUMT_SIT_EX_LIMITED_COMM",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_022",
+        "source_slot_id": "MUMT_EVT_EX_PACKET_LOSS_PERSISTED",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_TR_EX_NORMAL_TO_LIMITED",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_023",
+        "source_slot_id": "MUMT_TR_EX_LIMITED_TO_DISCONNECTED",
+        "relation_type": "from_situation",
+        "target_slot_id": "MUMT_SIT_EX_LIMITED_COMM",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_024",
+        "source_slot_id": "MUMT_TR_EX_LIMITED_TO_DISCONNECTED",
+        "relation_type": "to_situation",
+        "target_slot_id": "MUMT_SIT_EX_DISCONNECTED_COMM",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_025",
+        "source_slot_id": "MUMT_EVT_EX_HEARTBEAT_LOSS_PERSISTED",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_TR_EX_LIMITED_TO_DISCONNECTED",
+        "confidence": 0.96
+      },
+      {
+        "relation_id": "MUMT_EX_REL_026",
+        "source_slot_id": "MUMT_TR_EX_DISCONNECTED_TO_LIMITED",
+        "relation_type": "from_situation",
+        "target_slot_id": "MUMT_SIT_EX_DISCONNECTED_COMM",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_027",
+        "source_slot_id": "MUMT_TR_EX_DISCONNECTED_TO_LIMITED",
+        "relation_type": "to_situation",
+        "target_slot_id": "MUMT_SIT_EX_LIMITED_COMM",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_028",
+        "source_slot_id": "MUMT_EVT_EX_LINK_STABLE",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_TR_EX_DISCONNECTED_TO_LIMITED",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_029",
+        "source_slot_id": "MUMT_TR_EX_LIMITED_TO_NORMAL",
+        "relation_type": "from_situation",
+        "target_slot_id": "MUMT_SIT_EX_LIMITED_COMM",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_030",
+        "source_slot_id": "MUMT_TR_EX_LIMITED_TO_NORMAL",
+        "relation_type": "to_situation",
+        "target_slot_id": "MUMT_SIT_EX_NORMAL_COMM",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_031",
+        "source_slot_id": "MUMT_EVT_EX_BANDWIDTH_RECOVERED",
+        "relation_type": "triggers",
+        "target_slot_id": "MUMT_TR_EX_LIMITED_TO_NORMAL",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_032",
+        "source_slot_id": "MUMT_OBS_EX_PACKET_LOSS",
+        "relation_type": "observes",
+        "target_slot_id": "MUMT_EVT_EX_PACKET_LOSS_PERSISTED",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "MUMT_EX_REL_033",
+        "source_slot_id": "MUMT_OBS_EX_HEARTBEAT_LOSS",
+        "relation_type": "observes",
+        "target_slot_id": "MUMT_EVT_EX_HEARTBEAT_LOSS_PERSISTED",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "MUMT_EX_REL_034",
+        "source_slot_id": "MUMT_OBS_EX_LINK_RECOVERY",
+        "relation_type": "observes",
+        "target_slot_id": "MUMT_EVT_EX_LINK_STABLE",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_035",
+        "source_slot_id": "MUMT_OBS_EX_BANDWIDTH_RECOVERY",
+        "relation_type": "observes",
+        "target_slot_id": "MUMT_EVT_EX_BANDWIDTH_RECOVERED",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_036",
+        "source_slot_id": "MUMT_A_EX_FUSE_ISR",
+        "relation_type": "produces_item",
+        "target_slot_id": "MUMT_I_EX_SA",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "MUMT_EX_REL_037",
+        "source_slot_id": "MUMT_A_EX_SEND_SA_SUMMARY",
+        "relation_type": "uses_item",
+        "target_slot_id": "MUMT_I_EX_SA_SUMMARY",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "MUMT_EX_REL_038",
+        "source_slot_id": "MUMT_A_EX_DISPLAY_FPV",
+        "relation_type": "produces_item",
+        "target_slot_id": "MUMT_I_EX_FPV_ALERT",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_039",
+        "source_slot_id": "MUMT_A_EX_SEND_TRACK_SUMMARY",
+        "relation_type": "produces_item",
+        "target_slot_id": "MUMT_I_EX_TRACK_SUMMARY",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_040",
+        "source_slot_id": "MUMT_A_EX_BROADCAST_THREAT",
+        "relation_type": "produces_item",
+        "target_slot_id": "MUMT_I_EX_EMERGENCY_BROADCAST",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_041",
+        "source_slot_id": "MUMT_F_EX_FPV_TO_DISPERSE",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_EX_DISPLAY_FPV",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_042",
+        "source_slot_id": "MUMT_F_EX_FPV_TO_DISPERSE",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_EX_COMMAND_DISPERSE",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_043",
+        "source_slot_id": "MUMT_F_EX_EW_TO_EDGE",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_EX_START_JAMMING",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "MUMT_EX_REL_044",
+        "source_slot_id": "MUMT_F_EX_EW_TO_EDGE",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_EX_COMMAND_EDGE_MODE",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "MUMT_EX_REL_045",
+        "source_slot_id": "MUMT_F_EX_TRACK_TO_MIN_SA",
+        "relation_type": "carries_item",
+        "target_slot_id": "MUMT_I_EX_TRACK_SUMMARY",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_046",
+        "source_slot_id": "MUMT_F_EX_DISCONNECT_TO_SURVIVAL",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_EX_DECLARE_DISCONNECTED",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_047",
+        "source_slot_id": "MUMT_F_EX_DISCONNECT_TO_SURVIVAL",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_EX_ACTIVATE_SURVIVAL_LOOP",
+        "confidence": 0.94
+      },
+      {
+        "relation_id": "MUMT_EX_REL_048",
+        "source_slot_id": "MUMT_F_EX_EMERGENCY_BROADCAST",
+        "relation_type": "flow_source",
+        "target_slot_id": "MUMT_A_EX_SWITCH_EMERGENCY_BROADCAST",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "MUMT_EX_REL_049",
+        "source_slot_id": "MUMT_F_EX_EMERGENCY_BROADCAST",
+        "relation_type": "flow_target",
+        "target_slot_id": "MUMT_A_EX_INDEPENDENT_SURVIVAL",
+        "confidence": 0.93
+      },
+      {
+        "relation_id": "MUMT_EX_REL_050",
+        "source_slot_id": "MUMT_CTRL_EX_COMM_MODE",
+        "relation_type": "controls_flow",
+        "target_slot_id": "MUMT_F_EX_EW_TO_EDGE",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "MUMT_EX_REL_051",
+        "source_slot_id": "MUMT_CTRL_EX_LOCAL_SURVIVAL_LOOP",
+        "relation_type": "controls_flow",
+        "target_slot_id": "MUMT_F_EX_EMERGENCY_BROADCAST",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "MUMT_EX_REL_052",
+        "source_slot_id": "MUMT_CTRL_EX_STAGED_RECOVERY",
+        "relation_type": "controls_flow",
+        "target_slot_id": "MUMT_F_EX_LINK_TO_RESYNC",
+        "confidence": 0.91
+      },
+      {
+        "relation_id": "MUMT_EX_REL_053",
+        "source_slot_id": "MUMT_A_EX_UPDATE_MIN_SA",
+        "relation_type": "has_goal",
+        "target_slot_id": "MUMT_G_EX_MAINTAIN_MIN_SA",
+        "confidence": 0.92
+      },
+      {
+        "relation_id": "MUMT_EX_REL_054",
+        "source_slot_id": "MUMT_A_EX_ATTACK_REMAINING",
+        "relation_type": "has_goal",
+        "target_slot_id": "MUMT_G_EX_SECURE_TARGET",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "MUMT_EX_REL_055",
+        "source_slot_id": "MUMT_A_EX_DECIDE_DETOUR",
+        "relation_type": "has_reason",
+        "target_slot_id": "MUMT_R_EX_DETOUR",
+        "confidence": 0.88
+      },
+      {
+        "relation_id": "MUMT_EX_REL_056",
+        "source_slot_id": "MUMT_A_EX_COMMAND_EDGE_MODE",
+        "relation_type": "has_reason",
+        "target_slot_id": "MUMT_R_EX_GRACEFUL",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "MUMT_EX_REL_057",
+        "source_slot_id": "MUMT_A_EX_DECIDE_REDUCED_SURVEIL",
+        "relation_type": "has_reason",
+        "target_slot_id": "MUMT_R_EX_REDUCED_SURVEIL",
+        "confidence": 0.88
+      },
+      {
+        "relation_id": "MUMT_EX_REL_058",
+        "source_slot_id": "MUMT_SB_EX_COMM_TRANSITIONS",
+        "relation_type": "binds_to",
+        "target_slot_id": "MUMT_TR_EX_NORMAL_TO_LIMITED",
+        "confidence": 0.9
+      },
+      {
+        "relation_id": "MUMT_EX_REL_059",
+        "source_slot_id": "MUMT_TR_EX_NORMAL_TO_LIMITED",
+        "relation_type": "temporal_before",
+        "target_slot_id": "MUMT_TR_EX_LIMITED_TO_DISCONNECTED",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "MUMT_EX_REL_060",
+        "source_slot_id": "MUMT_TR_EX_LIMITED_TO_DISCONNECTED",
+        "relation_type": "temporal_before",
+        "target_slot_id": "MUMT_TR_EX_DISCONNECTED_TO_LIMITED",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "MUMT_EX_REL_061",
+        "source_slot_id": "MUMT_TR_EX_DISCONNECTED_TO_LIMITED",
+        "relation_type": "temporal_before",
+        "target_slot_id": "MUMT_TR_EX_LIMITED_TO_NORMAL",
+        "confidence": 0.95
+      },
+      {
+        "relation_id": "MUMT_EX_REL_062",
+        "source_slot_id": "MUMT_TR_EX_LIMITED_TO_NORMAL",
+        "relation_type": "temporal_before",
+        "target_slot_id": "MUMT_TR_EX_NORMAL_TO_TARGET_SECURED",
+        "confidence": 0.9
+      }
+    ],
+    "validation_issues": [
+      {
+        "issue_id": "MUMT_EX_VAL_001",
+        "issue_type": "mapping_gap",
+        "severity": "info",
+        "related_slot_ids": [
+          "MUMT_C_EX_PACKET_LOSS",
+          "MUMT_C_EX_HEARTBEAT_LOSS",
+          "MUMT_C_EX_LINK_STABLE"
+        ],
+        "message": "The threshold and duration are qualitative expressions in the source text, so implementation parameters are needed."
+      }
+    ],
+    "generated_sysml": {
+      "packages": [],
+      "definitions": [],
+      "usages": []
+    },
+    "generated_views": {
+      "activity_diagrams": [],
+      "effbd_views": [],
+      "state_views": []
+    },
+    "assumptions": [
+      "Exhaustive is an extraction scope that preserves every sentence cue as a slot candidate, and merging duplicate candidates may be needed at the implementation stage.",
+      "The canonical owner of relations between slots is slot_relations."
+    ]
+  }
+}

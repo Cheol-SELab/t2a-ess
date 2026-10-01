@@ -1,0 +1,1170 @@
+{
+ "meta": {
+  "input": "GREEN_sealed",
+  "repeat": 7,
+  "condition": "corrected",
+  "model_requested": "claude-sonnet-5",
+  "models_used": [
+   "claude-sonnet-5"
+  ],
+  "prompt": "corrected-contract.md",
+  "prompt_sha256": "9dd751c5ec471393b4f36868e793b438e5e7470b80cf15a9e7475503fcee759b",
+  "input_sha256": "1d51c5bc42ea9fd3ae41c3a94fc7b8f85a47e22ad86321d59791102b6bfc98d6",
+  "user_sha256": "5ff6a89982f7a3bf2cefd8eb4a5aac4d832ddb77afcacc8d9fa7bb6383930130",
+  "runner_sha256": "668572f34df601b1974f920604e58152c826610fc0840a0fe0ed5b39cc377e01",
+  "ok": true,
+  "attempts": 1,
+  "failure": null,
+  "elapsed_s": 401.4,
+  "total_cost_usd": 0.5819,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 15620,
+   "output_tokens": 57873,
+   "output_tokens_details": {
+    "thinking_tokens": 30244
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 57873,
+     "cache_read_input_tokens": 15620,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "cli": "claude -p (isolated, experiments/common/claude_cli.py)"
+ },
+ "tau": 0.87,
+ "parse_ok": true,
+ "matcher": "embedding",
+ "scorer_version": "3.1",
+ "slots_tolerant": {
+  "micro": {
+   "gold_coverage": 0.9121,
+   "pred_support": 0.8148,
+   "f1": 0.8607
+  },
+  "per_type": {
+   "scenarios": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 1,
+    "pred": 1
+   },
+   "episodes": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.7143,
+    "f1": 0.8333,
+    "gold": 4,
+    "pred": 7
+   },
+   "performers": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 12,
+    "pred": 11
+   },
+   "actions": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.8182,
+    "f1": 0.9,
+    "gold": 17,
+    "pred": 22
+   },
+   "items": {
+    "gold_coverage": 0.75,
+    "pred_support": 0.6667,
+    "f1": 0.7059,
+    "gold": 4,
+    "pred": 6
+   },
+   "flows": {
+    "gold_coverage": 0.9091,
+    "pred_support": 0.625,
+    "f1": 0.7407,
+    "gold": 11,
+    "pred": 16
+   },
+   "controls": {
+    "gold_coverage": 0.8333,
+    "pred_support": 0.7143,
+    "f1": 0.7692,
+    "gold": 6,
+    "pred": 7
+   },
+   "situations": {
+    "gold_coverage": 0.8333,
+    "pred_support": 1.0,
+    "f1": 0.9091,
+    "gold": 6,
+    "pred": 6
+   },
+   "state_values": {
+    "gold_coverage": 0.6667,
+    "pred_support": 0.6667,
+    "f1": 0.6667,
+    "gold": 6,
+    "pred": 6
+   },
+   "events": {
+    "gold_coverage": 0.8,
+    "pred_support": 1.0,
+    "f1": 0.8889,
+    "gold": 5,
+    "pred": 5
+   },
+   "transitions": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 6,
+    "pred": 6
+   },
+   "constraints": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 7,
+    "pred": 8
+   },
+   "goals": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 2,
+    "pred": 1
+   },
+   "reasons": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.5,
+    "f1": 0.6667,
+    "gold": 1,
+    "pred": 2
+   },
+   "observations": {
+    "gold_coverage": 0.6667,
+    "pred_support": 0.75,
+    "f1": 0.7059,
+    "gold": 3,
+    "pred": 4
+   }
+  }
+ },
+ "slots": {
+  "micro": {
+   "tp": 81,
+   "pred": 108,
+   "gold": 91,
+   "precision": 0.75,
+   "recall": 0.8901,
+   "f1": 0.8141
+  },
+  "per_type": {
+   "scenarios": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "episodes": {
+    "tp": 4,
+    "pred": 7,
+    "gold": 4,
+    "precision": 0.5714,
+    "recall": 1.0,
+    "f1": 0.7273
+   },
+   "performers": {
+    "tp": 11,
+    "pred": 11,
+    "gold": 12,
+    "precision": 1.0,
+    "recall": 0.9167,
+    "f1": 0.9565
+   },
+   "actions": {
+    "tp": 17,
+    "pred": 22,
+    "gold": 17,
+    "precision": 0.7727,
+    "recall": 1.0,
+    "f1": 0.8718
+   },
+   "items": {
+    "tp": 3,
+    "pred": 6,
+    "gold": 4,
+    "precision": 0.5,
+    "recall": 0.75,
+    "f1": 0.6
+   },
+   "flows": {
+    "tp": 10,
+    "pred": 16,
+    "gold": 11,
+    "precision": 0.625,
+    "recall": 0.9091,
+    "f1": 0.7407
+   },
+   "controls": {
+    "tp": 5,
+    "pred": 7,
+    "gold": 6,
+    "precision": 0.7143,
+    "recall": 0.8333,
+    "f1": 0.7692
+   },
+   "situations": {
+    "tp": 5,
+    "pred": 6,
+    "gold": 6,
+    "precision": 0.8333,
+    "recall": 0.8333,
+    "f1": 0.8333
+   },
+   "state_values": {
+    "tp": 4,
+    "pred": 6,
+    "gold": 6,
+    "precision": 0.6667,
+    "recall": 0.6667,
+    "f1": 0.6667
+   },
+   "events": {
+    "tp": 4,
+    "pred": 5,
+    "gold": 5,
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1": 0.8
+   },
+   "transitions": {
+    "tp": 6,
+    "pred": 6,
+    "gold": 6,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "constraints": {
+    "tp": 7,
+    "pred": 8,
+    "gold": 7,
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1": 0.9333
+   },
+   "goals": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 2,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "reasons": {
+    "tp": 1,
+    "pred": 2,
+    "gold": 1,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667
+   },
+   "observations": {
+    "tp": 2,
+    "pred": 4,
+    "gold": 3,
+    "precision": 0.5,
+    "recall": 0.6667,
+    "f1": 0.5714
+   }
+  },
+  "macro_f1": 0.7869
+ },
+ "alignment_pairs": [
+  {
+   "type": "scenarios",
+   "gold": "G_SCN",
+   "gold_label": "Smart greenhouse cold-wave response",
+   "pred": "SCN_GREENHOUSE_COLDWAVE",
+   "pred_label": "Smart greenhouse cold-wave response operation",
+   "score": 0.987
+  },
+  {
+   "type": "episodes",
+   "gold": "G_EP_DECLARE",
+   "gold_label": "Cold-wave alert issuance",
+   "pred": "EP_ALERT_ISSUANCE",
+   "pred_label": "Cold-wave forecast and alert issuance",
+   "score": 0.971
+  },
+  {
+   "type": "episodes",
+   "gold": "G_EP_MONITOR",
+   "gold_label": "Indoor temperature monitoring and additional boiler operation",
+   "pred": "EP_MONITORING_BOILER2",
+   "pred_label": "Temperature monitoring and Boiler 2 activation",
+   "score": 0.924
+  },
+  {
+   "type": "episodes",
+   "gold": "G_EP_FAULT",
+   "gold_label": "Boiler 1 failure response",
+   "pred": "EP_BOILER1_FAILURE_REPAIR",
+   "pred_label": "Boiler 1 failure and repair",
+   "score": 0.958
+  },
+  {
+   "type": "episodes",
+   "gold": "G_EP_RECOVER",
+   "gold_label": "Recovery and cold-wave release",
+   "pred": "EP_ALERT_RELEASE",
+   "pred_label": "Cold-wave alert release",
+   "score": 0.907
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_SYSTEM",
+   "gold_label": "smart greenhouse operation system",
+   "pred": "P_GREENHOUSE_SYSTEM",
+   "pred_label": "Smart greenhouse operation system",
+   "score": 0.984
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_GMS",
+   "gold_label": "greenhouse management server (GMS)",
+   "pred": "P_GMS",
+   "pred_label": "Greenhouse management server (GMS)",
+   "score": 0.997
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_B1",
+   "gold_label": "Boiler 1",
+   "pred": "P_BOILER1",
+   "pred_label": "Boiler 1",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_B2",
+   "gold_label": "Boiler 2",
+   "pred": "P_BOILER2",
+   "pred_label": "Boiler 2",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_CURTAIN",
+   "gold_label": "thermal curtain unit",
+   "pred": "P_CURTAIN_UNIT",
+   "pred_label": "Thermal curtain unit",
+   "score": 0.983
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_SENSORS",
+   "gold_label": "30 environmental sensors",
+   "pred": "P_ENV_SENSORS",
+   "pred_label": "Environmental sensors (30 units)",
+   "score": 0.965
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_NUTRIENT",
+   "gold_label": "nutrient solution supplier",
+   "pred": "P_NUTRIENT_SUPPLIER",
+   "pred_label": "Nutrient solution supplier",
+   "score": 0.98
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_KMA",
+   "gold_label": "meteorological agency forecast service",
+   "pred": "P_FORECAST_SERVICE",
+   "pred_label": "Meteorological agency forecast service",
+   "score": 0.98
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_POWER",
+   "gold_label": "power company",
+   "pred": "P_POWER_COMPANY",
+   "pred_label": "Power company",
+   "score": 0.982
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_MANAGER",
+   "gold_label": "cultivation manager",
+   "pred": "P_MANAGER",
+   "pred_label": "Cultivation manager",
+   "score": 0.965
+  },
+  {
+   "type": "performers",
+   "gold": "G_P_TECH",
+   "gold_label": "equipment technician",
+   "pred": "P_TECHNICIAN",
+   "pred_label": "Equipment technician",
+   "score": 0.974
+  },
+  {
+   "type": "items",
+   "gold": "G_I_FORECAST",
+   "gold_label": "early-morning minimum temperature forecast",
+   "pred": "I_FORECAST_DATA",
+   "pred_label": "Early-morning minimum temperature forecast (-12 °C)",
+   "score": 0.937
+  },
+  {
+   "type": "items",
+   "gold": "G_I_TEMP",
+   "gold_label": "indoor temperature measurement",
+   "pred": "I_TEMPERATURE_READING",
+   "pred_label": "Indoor temperature reading",
+   "score": 0.953
+  },
+  {
+   "type": "items",
+   "gold": "G_I_FILTER",
+   "gold_label": "fuel filter",
+   "pred": "I_FUEL_FILTER",
+   "pred_label": "Clogged fuel filter",
+   "score": 0.932
+  },
+  {
+   "type": "situations",
+   "gold": "G_SIT_COLD",
+   "gold_label": "cold-wave alert mode",
+   "pred": "SIT_COLDWAVE_ALERT",
+   "pred_label": "Cold-wave alert mode state",
+   "score": 0.971
+  },
+  {
+   "type": "situations",
+   "gold": "G_SIT_B1_RUN",
+   "gold_label": "Boiler 1 operating state",
+   "pred": "SIT_BOILER1_OPERATIONAL",
+   "pred_label": "Boiler 1 operational state",
+   "score": 0.996
+  },
+  {
+   "type": "situations",
+   "gold": "G_SIT_B1_STOP",
+   "gold_label": "Boiler 1 stopped state",
+   "pred": "SIT_BOILER1_FAILURE",
+   "pred_label": "Boiler 1 failure state",
+   "score": 0.946
+  },
+  {
+   "type": "situations",
+   "gold": "G_SIT_FEED_ON",
+   "gold_label": "nutrient solution supply state",
+   "pred": "SIT_NUTRIENT_ACTIVE",
+   "pred_label": "Nutrient solution supply active state",
+   "score": 0.946
+  },
+  {
+   "type": "situations",
+   "gold": "G_SIT_FEED_OFF",
+   "gold_label": "nutrient solution supply stopped state",
+   "pred": "SIT_NUTRIENT_STOPPED",
+   "pred_label": "Nutrient solution supply stopped state",
+   "score": 0.981
+  },
+  {
+   "type": "state_values",
+   "gold": "G_SV_B1_RUN",
+   "gold_label": "Boiler 1 state operating",
+   "pred": "SV_BOILER1_OPERATING",
+   "pred_label": "boiler1_status=operating",
+   "score": 0.929
+  },
+  {
+   "type": "state_values",
+   "gold": "G_SV_B1_STOP",
+   "gold_label": "Boiler 1 state stopped",
+   "pred": "SV_BOILER1_STOPPED",
+   "pred_label": "boiler1_status=stopped",
+   "score": 0.936
+  },
+  {
+   "type": "state_values",
+   "gold": "G_SV_FEED_ON",
+   "gold_label": "nutrient solution supply state supplying",
+   "pred": "SV_NUTRIENT_ACTIVE",
+   "pred_label": "nutrient_supply=active",
+   "score": 0.88
+  },
+  {
+   "type": "state_values",
+   "gold": "G_SV_FEED_OFF",
+   "gold_label": "nutrient solution supply state stopped",
+   "pred": "SV_NUTRIENT_STOPPED",
+   "pred_label": "nutrient_supply=stopped",
+   "score": 0.926
+  },
+  {
+   "type": "events",
+   "gold": "G_EVT_115",
+   "gold_label": "Indoor temperature 11.5 °C measured",
+   "pred": "EVT_INDOOR_TEMP_11_5",
+   "pred_label": "Indoor temperature measured at 11.5 °C at 2:00 a.m.",
+   "score": 0.956
+  },
+  {
+   "type": "events",
+   "gold": "G_EVT_B1_STOP",
+   "gold_label": "Boiler 1 stops due to combustion failure",
+   "pred": "EVT_BOILER1_STOP",
+   "pred_label": "Boiler 1 stops due to combustion failure",
+   "score": 1.0
+  },
+  {
+   "type": "events",
+   "gold": "G_EVT_RECOVERED",
+   "gold_label": "Indoor temperature recovers to 15 °C",
+   "pred": "EVT_INDOOR_TEMP_RECOVERED_15",
+   "pred_label": "Indoor temperature recovers to 15 °C",
+   "score": 1.0
+  },
+  {
+   "type": "events",
+   "gold": "G_EVT_WARM",
+   "gold_label": "Outdoor temperature rises to -5 °C or more",
+   "pred": "EVT_OUTDOOR_TEMP_RISE",
+   "pred_label": "Outdoor temperature rises to -5 °C or more",
+   "score": 1.0
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_DECLARE",
+   "gold_label": "Issue cold-wave alert mode",
+   "pred": "A_ISSUE_COLDWAVE_ALERT",
+   "pred_label": "Issue cold-wave alert mode",
+   "score": 0.97
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_NOTIFY",
+   "gold_label": "Send cold-wave notification to cultivation manager",
+   "pred": "A_NOTIFY_MANAGER",
+   "pred_label": "Send cold-wave alert notification to cultivation manager",
+   "score": 0.978
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_CLOSE_CURTAIN",
+   "gold_label": "Close thermal curtain",
+   "pred": "A_CLOSE_CURTAIN",
+   "pred_label": "Close the thermal curtain",
+   "score": 0.988
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_B1_HOLD",
+   "gold_label": "Maintain target temperature at 15 °C",
+   "pred": "A_MAINTAIN_TEMP_15",
+   "pred_label": "Maintain greenhouse target temperature at 15 °C",
+   "score": 0.946
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_MEASURE",
+   "gold_label": "Measure indoor temperature every 10 min",
+   "pred": "A_MEASURE_INDOOR_TEMP",
+   "pred_label": "Measure indoor temperature",
+   "score": 0.925
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_SEND_TEMP",
+   "gold_label": "Transmit temperature measurement to GMS",
+   "pred": "A_TRANSMIT_TEMP_DATA",
+   "pred_label": "Transmit indoor temperature reading to GMS",
+   "score": 0.949
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_START_B2",
+   "gold_label": "Additionally operate Boiler 2",
+   "pred": "A_OPERATE_BOILER2",
+   "pred_label": "Operate Boiler 2",
+   "score": 0.967
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_DETECT_B1",
+   "gold_label": "Detect Boiler 1 stop",
+   "pred": "A_DETECT_BOILER1_STOP",
+   "pred_label": "Detect Boiler 1 stop",
+   "score": 0.973
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_REQ_TECH",
+   "gold_label": "Request emergency dispatch from equipment technician",
+   "pred": "A_REQUEST_EMERGENCY_DISPATCH",
+   "pred_label": "Request emergency dispatch from equipment technician",
+   "score": 0.979
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_CHECK_IGNITER",
+   "gold_label": "Inspect ignition device",
+   "pred": "A_INSPECT_IGNITION",
+   "pred_label": "Inspect the ignition device",
+   "score": 0.996
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_REPLACE_FILTER",
+   "gold_label": "Replace clogged fuel filter",
+   "pred": "A_REPLACE_FUEL_FILTER",
+   "pred_label": "Replace the clogged fuel filter",
+   "score": 0.986
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_RELIGHT",
+   "gold_label": "Reignite Boiler 1",
+   "pred": "A_REIGNITE_BOILER1",
+   "pred_label": "Reignite Boiler 1",
+   "score": 1.0
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_STOP_FEED",
+   "gold_label": "Stop nutrient solution supply",
+   "pred": "A_STOP_NUTRIENT_SUPPLY",
+   "pred_label": "Stop the nutrient solution supply",
+   "score": 0.993
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_RESUME_FEED",
+   "gold_label": "Resume nutrient solution supply",
+   "pred": "A_RESUME_NUTRIENT_SUPPLY",
+   "pred_label": "Resume the nutrient solution supply",
+   "score": 0.966
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_LIFT",
+   "gold_label": "Release cold-wave alert mode",
+   "pred": "A_RELEASE_COLDWAVE_ALERT",
+   "pred_label": "Release the cold-wave alert mode",
+   "score": 0.965
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_STOP_B2",
+   "gold_label": "Stop Boiler 2",
+   "pred": "A_STOP_BOILER2",
+   "pred_label": "Stop Boiler 2",
+   "score": 1.0
+  },
+  {
+   "type": "actions",
+   "gold": "G_A_OPEN_VENT",
+   "gold_label": "Open vent window for 5 min",
+   "pred": "A_OPEN_VENT_WINDOW",
+   "pred_label": "Open the vent window for 5 min",
+   "score": 0.975
+  },
+  {
+   "type": "constraints",
+   "gold": "G_CN_M10",
+   "gold_label": "Forecast minimum temperature -10 °C or less",
+   "pred": "CN_FORECAST_THRESHOLD",
+   "pred_label": "Forecast temperature -10 °C or less",
+   "score": 0.992
+  },
+  {
+   "type": "constraints",
+   "gold": "G_CN_15",
+   "gold_label": "Greenhouse target temperature 15 °C",
+   "pred": "CN_TARGET_TEMP_15",
+   "pred_label": "Greenhouse target temperature 15 °C",
+   "score": 1.0
+  },
+  {
+   "type": "constraints",
+   "gold": "G_CN_10MIN",
+   "gold_label": "Indoor temperature measurement interval 10 min",
+   "pred": "CN_INDOOR_TEMP_RECOVERY_15",
+   "pred_label": "Indoor temperature recovers to 15 °C",
+   "score": 0.896
+  },
+  {
+   "type": "constraints",
+   "gold": "G_CN_12",
+   "gold_label": "Indoor temperature below 12 °C",
+   "pred": "CN_INDOOR_TEMP_LOW_12",
+   "pred_label": "Indoor temperature below 12 °C",
+   "score": 1.0
+  },
+  {
+   "type": "constraints",
+   "gold": "G_CN_M5",
+   "gold_label": "Outdoor temperature -5 °C or more",
+   "pred": "CN_OUTDOOR_TEMP_THRESHOLD",
+   "pred_label": "Outdoor temperature -5 °C or more",
+   "score": 1.0
+  },
+  {
+   "type": "constraints",
+   "gold": "G_CN_90",
+   "gold_label": "Indoor humidity 90% or more",
+   "pred": "CN_HUMIDITY_THRESHOLD",
+   "pred_label": "Indoor humidity 90% or more",
+   "score": 1.0
+  },
+  {
+   "type": "constraints",
+   "gold": "G_CN_5MIN",
+   "gold_label": "Vent window opening 5 min",
+   "pred": "CN_VENT_DURATION",
+   "pred_label": "Vent window opened for 5 min",
+   "score": 0.988
+  },
+  {
+   "type": "goals",
+   "gold": "G_G_TEMP12",
+   "gold_label": "Maintain indoor temperature at 12 °C or more",
+   "pred": "G_MAINTAIN_TEMP_NO_FROST",
+   "pred_label": "Maintain indoor temperature at 12 °C or more without crop frost damage",
+   "score": 0.939
+  },
+  {
+   "type": "reasons",
+   "gold": "G_R_ROOT",
+   "gold_label": "Root damage due to low nutrient solution temperature",
+   "pred": "REASON_ROOT_DAMAGE",
+   "pred_label": "Low nutrient solution temperature causes root damage",
+   "score": 0.982
+  },
+  {
+   "type": "observations",
+   "gold": "G_OBS_TEMP",
+   "gold_label": "Indoor temperature measurement",
+   "pred": "OBS_INDOOR_TEMP_11_5",
+   "pred_label": "Indoor temperature detection at 11.5 °C",
+   "score": 0.926
+  },
+  {
+   "type": "observations",
+   "gold": "G_OBS_B1",
+   "gold_label": "Detect Boiler 1 stop",
+   "pred": "OBS_BOILER1_STOP_DETECTED",
+   "pred_label": "Boiler 1 stop detection",
+   "score": 0.985
+  },
+  {
+   "type": "transitions",
+   "gold": "G_TR_COLD",
+   "gold_label": "From normal mode to cold-wave alert mode",
+   "pred": "TR_TO_COLDWAVE_ALERT",
+   "pred_label": "Transition to cold-wave alert mode",
+   "score": 0.972
+  },
+  {
+   "type": "transitions",
+   "gold": "G_TR_B1_STOP",
+   "gold_label": "Boiler 1 from operating to stopped",
+   "pred": "TR_BOILER1_FAILURE",
+   "pred_label": "Transition to Boiler 1 failure state",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "G_TR_FEED_OFF",
+   "gold_label": "From nutrient solution supplying to supply stopped",
+   "pred": "TR_NUTRIENT_STOP",
+   "pred_label": "Transition to nutrient supply stopped state",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "G_TR_B1_RUN",
+   "gold_label": "Boiler 1 from stopped to operating",
+   "pred": "TR_BOILER1_REIGNITE",
+   "pred_label": "Transition to Boiler 1 operational state",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "G_TR_FEED_ON",
+   "gold_label": "From nutrient solution supply stopped to supplying",
+   "pred": "TR_NUTRIENT_RESUME",
+   "pred_label": "Transition to nutrient supply active state",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "G_TR_COLD_OFF",
+   "gold_label": "From cold-wave alert mode to normal mode",
+   "pred": "TR_RELEASE_ALERT",
+   "pred_label": "Transition to normal state (alert released)",
+   "score": 0.902
+  },
+  {
+   "type": "flows",
+   "gold": "G_F01",
+   "gold_label": "Send notification after issuance",
+   "pred": "F_ISSUE_ALERT_TO_NOTIFY",
+   "pred_label": "Notification after alert issuance",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "G_F02",
+   "gold_label": "Close thermal curtain in cold-wave alert mode",
+   "pred": "F_ALERT_TO_CURTAIN",
+   "pred_label": "Curtain closing on alert entry",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "G_F03",
+   "gold_label": "Maintain target temperature in cold-wave alert mode",
+   "pred": "F_ALERT_TO_MAINTAIN",
+   "pred_label": "Boiler 1 temperature maintenance on alert entry",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "G_F04",
+   "gold_label": "Transmit after measurement",
+   "pred": "F_MEASURE_TO_TRANSMIT",
+   "pred_label": "Temperature reading transmitted after measurement",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "G_F05",
+   "gold_label": "Operate Boiler 2 when below 12 °C",
+   "pred": "F_TRANSMIT_TO_OPERATE_BOILER2",
+   "pred_label": "Boiler 2 activation after temperature transmission",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "G_F06",
+   "gold_label": "Request dispatch after stop detection",
+   "pred": "F_DETECT_TO_REQUEST",
+   "pred_label": "Dispatch request after stop detection",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "G_F08",
+   "gold_label": "Replace filter after inspection",
+   "pred": "F_INSPECT_TO_REPLACE",
+   "pred_label": "Filter replacement after inspection",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "G_F09",
+   "gold_label": "Reignite after filter replacement",
+   "pred": "F_REPLACE_TO_REIGNITE",
+   "pred_label": "Reignition after filter replacement",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "G_F10",
+   "gold_label": "Resume nutrient solution after reignition and temperature recovery",
+   "pred": "F_REIGNITE_TO_RESUME",
+   "pred_label": "Nutrient supply resumption after reignition and temperature recovery",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "G_F11",
+   "gold_label": "Stop Boiler 2 after mode release",
+   "pred": "F_RELEASE_TO_STOP_BOILER2",
+   "pred_label": "Boiler 2 stop after alert release",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "G_C01",
+   "gold_label": "Determine forecast temperature -10 °C or less",
+   "pred": "C_FORECAST_THRESHOLD",
+   "pred_label": "Forecast temperature threshold decision",
+   "score": 0.911
+  },
+  {
+   "type": "controls",
+   "gold": "G_C02",
+   "gold_label": "Simultaneous start of closing thermal curtain and maintaining target temperature",
+   "pred": "C_PARALLEL_MEASURES",
+   "pred_label": "Simultaneous curtain closing and boiler temperature maintenance",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "G_C03",
+   "gold_label": "Measure indoor temperature every 10 min",
+   "pred": "C_MEASURE_LOOP",
+   "pred_label": "Periodic temperature measurement loop",
+   "score": 0.901
+  },
+  {
+   "type": "controls",
+   "gold": "G_C04",
+   "gold_label": "Determine indoor temperature below 12 °C",
+   "pred": "C_INDOOR_TEMP_LOW",
+   "pred_label": "Indoor temperature low decision",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "G_C06",
+   "gold_label": "Determine indoor humidity 90% or more",
+   "pred": "C_HUMIDITY_THRESHOLD",
+   "pred_label": "Indoor humidity threshold decision",
+   "score": 0.924
+  }
+ ],
+ "type_confusion": {
+  "controls->episodes": 1,
+  "state_values->episodes": 1,
+  "events->actions": 1,
+  "observations->items": 1
+ },
+ "source_ref_accuracy": {
+  "correct": 71,
+  "aligned_with_gold_ref": 81,
+  "accuracy": 0.8765
+ },
+ "relations": {
+  "strict": {
+   "tp": 92,
+   "pred": 158,
+   "gold": 120,
+   "precision": 0.5823,
+   "recall": 0.7667,
+   "f1": 0.6619,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "constrained_by": {
+     "gold": 7,
+     "recalled": 4
+    },
+    "controls_flow": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "custom/contains_action": {
+     "gold": 17,
+     "recalled": 12
+    },
+    "flow_source": {
+     "gold": 11,
+     "recalled": 10
+    },
+    "flow_target": {
+     "gold": 11,
+     "recalled": 10
+    },
+    "from_situation": {
+     "gold": 6,
+     "recalled": 5
+    },
+    "has_episode": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 7,
+     "recalled": 4
+    },
+    "has_reason": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 6,
+     "recalled": 4
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "performed_by": {
+     "gold": 17,
+     "recalled": 17
+    },
+    "produces_item": {
+     "gold": 2,
+     "recalled": 0
+    },
+    "provided_to": {
+     "gold": 3,
+     "recalled": 2
+    },
+    "to_situation": {
+     "gold": 6,
+     "recalled": 5
+    },
+    "triggers": {
+     "gold": 8,
+     "recalled": 3
+    },
+    "uses_item": {
+     "gold": 2,
+     "recalled": 0
+    }
+   }
+  },
+  "normalized": {
+   "tp": 92,
+   "pred": 158,
+   "gold": 120,
+   "precision": 0.5823,
+   "recall": 0.7667,
+   "f1": 0.6619,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "constrained_by": {
+     "gold": 7,
+     "recalled": 4
+    },
+    "contains_action": {
+     "gold": 17,
+     "recalled": 12
+    },
+    "controls_flow": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "flow_source": {
+     "gold": 11,
+     "recalled": 10
+    },
+    "flow_target": {
+     "gold": 11,
+     "recalled": 10
+    },
+    "from_situation": {
+     "gold": 6,
+     "recalled": 5
+    },
+    "has_episode": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 7,
+     "recalled": 4
+    },
+    "has_reason": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 6,
+     "recalled": 4
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 2
+    },
+    "performed_by": {
+     "gold": 17,
+     "recalled": 17
+    },
+    "produces_item": {
+     "gold": 2,
+     "recalled": 0
+    },
+    "provided_to": {
+     "gold": 3,
+     "recalled": 2
+    },
+    "to_situation": {
+     "gold": 6,
+     "recalled": 5
+    },
+    "triggers": {
+     "gold": 8,
+     "recalled": 3
+    },
+    "uses_item": {
+     "gold": 2,
+     "recalled": 0
+    }
+   }
+  },
+  "untyped": {
+   "tp": 95,
+   "pred": 140,
+   "gold": 120,
+   "precision": 0.6786,
+   "recall": 0.7917,
+   "f1": 0.7308
+  }
+ },
+ "atomic_facts": {
+  "found": 0,
+  "total": 0,
+  "missing": []
+ },
+ "required_relations": {
+  "hit": 0,
+  "total": 0
+ },
+ "forbidden_relations": {
+  "violated": 0,
+  "total": 0
+ },
+ "structure": {
+  "actions": 22,
+  "actions_in_episode": 22,
+  "actions_allocated": 22,
+  "nested_mode": true,
+  "dangling_relations": 0,
+  "relations": 158
+ }
+}

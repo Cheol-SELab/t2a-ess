@@ -1,0 +1,1599 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "Q_GOLD",
+    "title": "Cold-storage logistics center refrigeration unit failure response",
+    "extraction_schema": "T2A-ESS",
+    "generation_mode": "manual_development_reference",
+    "source_units": [
+      {
+        "source_unit_id": "P1",
+        "unit_type": "paragraph",
+        "text": "The cold-storage logistics center operations system consists of a warehouse management system (WMS), 3 refrigeration units, 40 temperature sensors, a door controller, and an emergency generator. The temperature sensors measure the freezer room temperature every 5 min."
+      },
+      {
+        "source_unit_id": "P2",
+        "unit_type": "paragraph",
+        "text": "Externally, there are the refrigeration unit manufacturer's service center and the shipper; facility operation is handled by the facility manager, and inventory management by the logistics manager."
+      },
+      {
+        "source_unit_id": "P3",
+        "unit_type": "paragraph",
+        "text": "At 2:00 a.m., when Refrigeration Unit 2 stops due to compressor overheating, the WMS detects the refrigeration unit stop and sends an alarm to the facility manager."
+      },
+      {
+        "source_unit_id": "P4",
+        "unit_type": "paragraph",
+        "text": "The facility manager raises the output of Refrigeration Units 1 and 3 to maximum and requests a repair from the refrigeration unit manufacturer's service center."
+      },
+      {
+        "source_unit_id": "P5",
+        "unit_type": "paragraph",
+        "text": "When the freezer room temperature rises above -18 °C, the WMS restricts freezer room access through the door controller. At 3:00 a.m., when the freezer room temperature is measured at -17 °C, the WMS restricts freezer room access."
+      },
+      {
+        "source_unit_id": "P6",
+        "unit_type": "paragraph",
+        "text": "While access is restricted, the logistics manager moves the cargo scheduled for shipment to the backup freezer room and notifies the shipper of the shipment delay. The two tasks proceed simultaneously."
+      },
+      {
+        "source_unit_id": "P7",
+        "unit_type": "paragraph",
+        "text": "When the freezer room temperature rises above -15 °C, the logistics manager delivers the cargo temperature records to the shipper. On this day, the temperature did not rise to -15 °C, so the records were not delivered."
+      },
+      {
+        "source_unit_id": "P8",
+        "unit_type": "paragraph",
+        "text": "At 5:00 a.m., the service center replaces the compressor cooling fan and restarts Refrigeration Unit 2."
+      },
+      {
+        "source_unit_id": "P9",
+        "unit_type": "paragraph",
+        "text": "When Refrigeration Unit 2 is restarted, the facility manager returns the output of Refrigeration Units 1 and 3 to normal."
+      },
+      {
+        "source_unit_id": "P10",
+        "unit_type": "paragraph",
+        "text": "At 6:00 a.m., when the freezer room temperature recovers to -20 °C, the WMS lifts the freezer room access restriction."
+      },
+      {
+        "source_unit_id": "P11",
+        "unit_type": "paragraph",
+        "text": "The logistics manager returns the cargo in the backup freezer room to its original locations one after another and resumes shipment."
+      },
+      {
+        "source_unit_id": "P12",
+        "unit_type": "paragraph",
+        "text": "The facility manager compiles the failure circumstances and reports them to the shipper."
+      },
+      {
+        "source_unit_id": "P13",
+        "unit_type": "paragraph",
+        "text": "The goal of this scenario is to keep the freezer room temperature at -15 °C or less without cargo damage."
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "Q_SCN",
+        "label": "Cold-storage logistics center refrigeration unit failure response",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "Q_EP_FAULT",
+        "label": "Refrigeration unit failure detection and initial response",
+        "order_index": 1,
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "episode_id": "Q_EP_RESTRICT",
+        "label": "Access restriction and cargo protection",
+        "order_index": 2,
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "episode_id": "Q_EP_REPAIR",
+        "label": "Repair and output normalization",
+        "order_index": 3,
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "episode_id": "Q_EP_RESTORE",
+        "label": "Access resumption and wrap-up",
+        "order_index": 4,
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "Q_P_SYSTEM",
+        "label": "Cold-storage logistics center operations system",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "Q_P_WMS",
+        "label": "Warehouse management system (WMS)",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "Q_P_CHILLERS",
+        "label": "3 refrigeration units",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "Q_P_C1",
+        "label": "Refrigeration Unit 1",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "performer_id": "Q_P_C2",
+        "label": "Refrigeration Unit 2",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "performer_id": "Q_P_C3",
+        "label": "Refrigeration Unit 3",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "performer_id": "Q_P_SENSORS",
+        "label": "40 temperature sensors",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "Q_P_DOOR",
+        "label": "Door controller",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "Q_P_GEN",
+        "label": "Emergency generator",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "Q_P_SERVICE",
+        "label": "Refrigeration unit manufacturer's service center",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "Q_P_SHIPPER",
+        "label": "Shipper",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "Q_P_FACILITY",
+        "label": "Facility manager",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "Q_P_LOGI",
+        "label": "Logistics manager",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "Q_A_MEASURE",
+        "label": "Measure freezer room temperature every 5 min",
+        "source_ref": {
+          "source_unit_id": "P1"
+        },
+        "primary_actor_text": "Temperature sensors",
+        "object_text": "Freezer room temperature"
+      },
+      {
+        "action_id": "Q_A_DETECT",
+        "label": "Detect Refrigeration Unit 2 stop",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "WMS",
+        "object_text": "Refrigeration Unit 2 stop"
+      },
+      {
+        "action_id": "Q_A_ALARM",
+        "label": "Send alarm to facility manager",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "WMS",
+        "object_text": "Alarm"
+      },
+      {
+        "action_id": "Q_A_BOOST",
+        "label": "Raise Refrigeration Units 1 and 3 output to maximum",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Facility manager",
+        "object_text": "Output of Refrigeration Units 1 and 3"
+      },
+      {
+        "action_id": "Q_A_REQ_REPAIR",
+        "label": "Request repair from service center",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Facility manager",
+        "object_text": "Repair"
+      },
+      {
+        "action_id": "Q_A_RESTRICT",
+        "label": "Restrict freezer room access",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "WMS",
+        "object_text": "Freezer room access"
+      },
+      {
+        "action_id": "Q_A_MOVE",
+        "label": "Move cargo scheduled for shipment to backup freezer room",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Logistics manager",
+        "object_text": "Cargo scheduled for shipment"
+      },
+      {
+        "action_id": "Q_A_NOTIFY_DELAY",
+        "label": "Notify shipper of shipment delay",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Logistics manager",
+        "object_text": "Shipment delay"
+      },
+      {
+        "action_id": "Q_A_SEND_LOG",
+        "label": "Deliver cargo temperature records to shipper",
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "primary_actor_text": "Logistics manager",
+        "object_text": "Cargo temperature records"
+      },
+      {
+        "action_id": "Q_A_REPLACE_FAN",
+        "label": "Replace compressor cooling fan",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "Service center",
+        "object_text": "Compressor cooling fan"
+      },
+      {
+        "action_id": "Q_A_RESTART",
+        "label": "Restart Refrigeration Unit 2",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "Service center",
+        "object_text": "Refrigeration Unit 2"
+      },
+      {
+        "action_id": "Q_A_NORMALIZE",
+        "label": "Return Refrigeration Units 1 and 3 output to normal",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "Facility manager",
+        "object_text": "Output of Refrigeration Units 1 and 3"
+      },
+      {
+        "action_id": "Q_A_LIFT",
+        "label": "Lift freezer room access restriction",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "WMS",
+        "object_text": "Restrict freezer room access"
+      },
+      {
+        "action_id": "Q_A_RETURN",
+        "label": "Return cargo to original locations",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Logistics manager",
+        "object_text": "Cargo in the backup freezer room"
+      },
+      {
+        "action_id": "Q_A_RESUME",
+        "label": "Resume shipment",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Logistics manager",
+        "object_text": "Shipment"
+      },
+      {
+        "action_id": "Q_A_REPORT",
+        "label": "Report failure circumstances to shipper",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Facility manager",
+        "object_text": "Failure circumstances"
+      }
+    ],
+    "items": [
+      {
+        "item_id": "Q_I_ALARM",
+        "label": "Alarm",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "item_id": "Q_I_CARGO",
+        "label": "Cargo scheduled for shipment",
+        "item_type": "material",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "item_id": "Q_I_DELAY",
+        "label": "Shipment delay notification",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "item_id": "Q_I_LOG",
+        "label": "Cargo temperature records",
+        "item_type": "document",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "item_id": "Q_I_FAN",
+        "label": "Compressor cooling fan",
+        "item_type": "material",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "item_id": "Q_I_REPORT",
+        "label": "Failure circumstances report",
+        "item_type": "document",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "Q_SIT_C2_RUN",
+        "label": "Refrigeration Unit 2 running state",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "Q_SIT_C2_STOP",
+        "label": "Refrigeration Unit 2 stopped state",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "Q_SIT_OPEN",
+        "label": "Freezer room access permitted state",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "situation_id": "Q_SIT_RESTRICT",
+        "label": "Freezer room access restricted state",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "Q_SV_C2_RUN",
+        "subject_text": "Refrigeration Unit 2",
+        "variable": "State",
+        "value": "Running",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "Q_SV_C2_STOP",
+        "subject_text": "Refrigeration Unit 2",
+        "variable": "State",
+        "value": "Stopped",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "Q_SV_OPEN",
+        "subject_text": "Freezer room",
+        "variable": "Access",
+        "value": "Permitted",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "state_value_id": "Q_SV_RESTRICT",
+        "subject_text": "Freezer room",
+        "variable": "Access",
+        "value": "Restricted",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "Q_EVT_C2_STOP",
+        "label": "Refrigeration Unit 2 stop due to compressor overheating",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "event_id": "Q_EVT_M17",
+        "label": "Freezer room temperature measured at -17 °C",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "event_id": "Q_EVT_M20",
+        "label": "Freezer room temperature recovered to -20 °C",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "Q_TR_C2_STOP",
+        "label": "Refrigeration Unit 2 from running to stopped",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "transition_id": "Q_TR_RESTRICT",
+        "label": "Freezer room access from permitted to restricted",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "transition_id": "Q_TR_C2_RUN",
+        "label": "Refrigeration Unit 2 from stopped to running",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "transition_id": "Q_TR_OPEN",
+        "label": "Freezer room access from restricted to permitted",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "Q_OBS_TEMP",
+        "label": "Freezer room temperature measurement",
+        "observer_text": "Temperature sensors",
+        "observed_text": "Freezer room temperature",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "observation_id": "Q_OBS_STOP",
+        "label": "Detect Refrigeration Unit 2 stop",
+        "observer_text": "WMS",
+        "observed_text": "Refrigeration Unit 2 stop",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "Q_F01",
+        "label": "Send alarm after stop detection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "Q_F02",
+        "label": "Raise output after alarm",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "Q_F03",
+        "label": "Request repair after output increase",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "Q_F04",
+        "label": "Restrict access when above -18 °C",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "Q_F05",
+        "label": "Move cargo during access restriction",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "Q_F06",
+        "label": "Notify delay during access restriction",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "Q_F07",
+        "label": "Replace cooling fan after repair request",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "Q_F08",
+        "label": "Restart after fan replacement",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "Q_F09",
+        "label": "Return output to normal after restart",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "flow_id": "Q_F10",
+        "label": "Lift access restriction after output normalization",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "Q_F11",
+        "label": "Return cargo after restriction is lifted",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "flow_id": "Q_F12",
+        "label": "Resume shipment after cargo return",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "Q_C01",
+        "label": "Measure freezer room temperature every 5 min",
+        "control_type": "loop",
+        "guard_texts": [
+          "Every 5 min"
+        ],
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "control_id": "Q_C02",
+        "label": "Determine freezer room temperature above -18 °C",
+        "control_type": "decision",
+        "guard_texts": [
+          "Freezer room temperature higher than -18 °C"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "control_id": "Q_C03",
+        "label": "Cargo move and delay notification proceed simultaneously",
+        "control_type": "fork",
+        "guard_texts": [],
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "control_id": "Q_C04",
+        "label": "Determine freezer room temperature above -15 °C",
+        "control_type": "decision",
+        "guard_texts": [
+          "Freezer room temperature higher than -15 °C"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "control_id": "Q_C05",
+        "label": "Return cargo to original locations one after another",
+        "control_type": "loop",
+        "guard_texts": [
+          "The cargo in the backup freezer room one after another"
+        ],
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "Q_CN_5MIN",
+        "label": "Freezer room temperature measurement interval 5 min",
+        "constraint_kind": [
+          "period"
+        ],
+        "source_ref": {
+          "source_unit_id": "P1"
+        },
+        "parameter": "Measurement interval",
+        "operator": "=",
+        "value": 5,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "Q_CN_M18",
+        "label": "Freezer room temperature above -18 °C",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "parameter": "Freezer room temperature",
+        "operator": ">",
+        "value": -18,
+        "unit": "℃"
+      },
+      {
+        "constraint_id": "Q_CN_M15",
+        "label": "Freezer room temperature above -15 °C",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "parameter": "Freezer room temperature",
+        "operator": ">",
+        "value": -15,
+        "unit": "℃"
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "Q_G_NO_DAMAGE",
+        "label": "No cargo damage",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      },
+      {
+        "goal_id": "Q_G_M15",
+        "label": "Keep freezer room temperature at -15 °C or less",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "Q_R_OVERHEAT",
+        "label": "Compressor overheating",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "Q_REL_001",
+        "relation_type": "has_episode",
+        "source_slot_id": "Q_SCN",
+        "target_slot_id": "Q_EP_FAULT",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "Q_REL_002",
+        "relation_type": "has_episode",
+        "source_slot_id": "Q_SCN",
+        "target_slot_id": "Q_EP_RESTRICT",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "Q_REL_003",
+        "relation_type": "has_episode",
+        "source_slot_id": "Q_SCN",
+        "target_slot_id": "Q_EP_REPAIR",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "Q_REL_004",
+        "relation_type": "has_episode",
+        "source_slot_id": "Q_SCN",
+        "target_slot_id": "Q_EP_RESTORE",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "Q_REL_005",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_FAULT",
+        "target_slot_id": "Q_A_MEASURE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_006",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_FAULT",
+        "target_slot_id": "Q_A_DETECT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_007",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_FAULT",
+        "target_slot_id": "Q_A_ALARM",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_008",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_FAULT",
+        "target_slot_id": "Q_A_BOOST",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_009",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_FAULT",
+        "target_slot_id": "Q_A_REQ_REPAIR",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_010",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_RESTRICT",
+        "target_slot_id": "Q_A_RESTRICT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_011",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_RESTRICT",
+        "target_slot_id": "Q_A_MOVE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_012",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_RESTRICT",
+        "target_slot_id": "Q_A_NOTIFY_DELAY",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_013",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_RESTRICT",
+        "target_slot_id": "Q_A_SEND_LOG",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_014",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_REPAIR",
+        "target_slot_id": "Q_A_REPLACE_FAN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_015",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_REPAIR",
+        "target_slot_id": "Q_A_RESTART",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_016",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_REPAIR",
+        "target_slot_id": "Q_A_NORMALIZE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_017",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_RESTORE",
+        "target_slot_id": "Q_A_LIFT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_018",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_RESTORE",
+        "target_slot_id": "Q_A_RETURN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_019",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_RESTORE",
+        "target_slot_id": "Q_A_RESUME",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_020",
+        "relation_type": "custom",
+        "source_slot_id": "Q_EP_RESTORE",
+        "target_slot_id": "Q_A_REPORT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "Q_REL_021",
+        "relation_type": "has_part",
+        "source_slot_id": "Q_P_SYSTEM",
+        "target_slot_id": "Q_P_WMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_022",
+        "relation_type": "has_part",
+        "source_slot_id": "Q_P_SYSTEM",
+        "target_slot_id": "Q_P_CHILLERS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_023",
+        "relation_type": "has_part",
+        "source_slot_id": "Q_P_SYSTEM",
+        "target_slot_id": "Q_P_SENSORS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_024",
+        "relation_type": "has_part",
+        "source_slot_id": "Q_P_SYSTEM",
+        "target_slot_id": "Q_P_DOOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_025",
+        "relation_type": "has_part",
+        "source_slot_id": "Q_P_SYSTEM",
+        "target_slot_id": "Q_P_GEN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_026",
+        "relation_type": "has_part",
+        "source_slot_id": "Q_P_CHILLERS",
+        "target_slot_id": "Q_P_C1",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_027",
+        "relation_type": "has_part",
+        "source_slot_id": "Q_P_CHILLERS",
+        "target_slot_id": "Q_P_C2",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_028",
+        "relation_type": "has_part",
+        "source_slot_id": "Q_P_CHILLERS",
+        "target_slot_id": "Q_P_C3",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_029",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_MEASURE",
+        "target_slot_id": "Q_P_SENSORS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_030",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_DETECT",
+        "target_slot_id": "Q_P_WMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_031",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_ALARM",
+        "target_slot_id": "Q_P_WMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_032",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_BOOST",
+        "target_slot_id": "Q_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_033",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_REQ_REPAIR",
+        "target_slot_id": "Q_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_034",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_RESTRICT",
+        "target_slot_id": "Q_P_WMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_035",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_MOVE",
+        "target_slot_id": "Q_P_LOGI",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_036",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_NOTIFY_DELAY",
+        "target_slot_id": "Q_P_LOGI",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_037",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_SEND_LOG",
+        "target_slot_id": "Q_P_LOGI",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_038",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_REPLACE_FAN",
+        "target_slot_id": "Q_P_SERVICE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_039",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_RESTART",
+        "target_slot_id": "Q_P_SERVICE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_040",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_NORMALIZE",
+        "target_slot_id": "Q_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_041",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_LIFT",
+        "target_slot_id": "Q_P_WMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_042",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_RETURN",
+        "target_slot_id": "Q_P_LOGI",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_043",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_RESUME",
+        "target_slot_id": "Q_P_LOGI",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_044",
+        "relation_type": "performed_by",
+        "source_slot_id": "Q_A_REPORT",
+        "target_slot_id": "Q_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_045",
+        "relation_type": "produces_item",
+        "source_slot_id": "Q_A_ALARM",
+        "target_slot_id": "Q_I_ALARM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_046",
+        "relation_type": "provided_to",
+        "source_slot_id": "Q_A_ALARM",
+        "target_slot_id": "Q_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_047",
+        "relation_type": "acts_on",
+        "source_slot_id": "Q_A_BOOST",
+        "target_slot_id": "Q_P_C1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_048",
+        "relation_type": "acts_on",
+        "source_slot_id": "Q_A_BOOST",
+        "target_slot_id": "Q_P_C3",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_049",
+        "relation_type": "provided_to",
+        "source_slot_id": "Q_A_REQ_REPAIR",
+        "target_slot_id": "Q_P_SERVICE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_050",
+        "relation_type": "acts_on",
+        "source_slot_id": "Q_A_RESTRICT",
+        "target_slot_id": "Q_P_DOOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_051",
+        "relation_type": "produces_item",
+        "source_slot_id": "Q_A_NOTIFY_DELAY",
+        "target_slot_id": "Q_I_DELAY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_052",
+        "relation_type": "provided_to",
+        "source_slot_id": "Q_A_NOTIFY_DELAY",
+        "target_slot_id": "Q_P_SHIPPER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_053",
+        "relation_type": "produces_item",
+        "source_slot_id": "Q_A_SEND_LOG",
+        "target_slot_id": "Q_I_LOG",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_054",
+        "relation_type": "provided_to",
+        "source_slot_id": "Q_A_SEND_LOG",
+        "target_slot_id": "Q_P_SHIPPER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_055",
+        "relation_type": "uses_item",
+        "source_slot_id": "Q_A_REPLACE_FAN",
+        "target_slot_id": "Q_I_FAN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_056",
+        "relation_type": "acts_on",
+        "source_slot_id": "Q_A_RESTART",
+        "target_slot_id": "Q_P_C2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_057",
+        "relation_type": "acts_on",
+        "source_slot_id": "Q_A_NORMALIZE",
+        "target_slot_id": "Q_P_C1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_058",
+        "relation_type": "acts_on",
+        "source_slot_id": "Q_A_NORMALIZE",
+        "target_slot_id": "Q_P_C3",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_059",
+        "relation_type": "acts_on",
+        "source_slot_id": "Q_A_LIFT",
+        "target_slot_id": "Q_P_DOOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_060",
+        "relation_type": "produces_item",
+        "source_slot_id": "Q_A_REPORT",
+        "target_slot_id": "Q_I_REPORT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_061",
+        "relation_type": "provided_to",
+        "source_slot_id": "Q_A_REPORT",
+        "target_slot_id": "Q_P_SHIPPER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_062",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F01",
+        "target_slot_id": "Q_A_DETECT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_063",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F01",
+        "target_slot_id": "Q_A_ALARM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_064",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F02",
+        "target_slot_id": "Q_A_ALARM",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_065",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F02",
+        "target_slot_id": "Q_A_BOOST",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_066",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F03",
+        "target_slot_id": "Q_A_BOOST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_067",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F03",
+        "target_slot_id": "Q_A_REQ_REPAIR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_068",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F04",
+        "target_slot_id": "Q_A_MEASURE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_069",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F04",
+        "target_slot_id": "Q_A_RESTRICT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_070",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F05",
+        "target_slot_id": "Q_A_RESTRICT",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_071",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F05",
+        "target_slot_id": "Q_A_MOVE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_072",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F06",
+        "target_slot_id": "Q_A_RESTRICT",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_073",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F06",
+        "target_slot_id": "Q_A_NOTIFY_DELAY",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_074",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F07",
+        "target_slot_id": "Q_A_REQ_REPAIR",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_075",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F07",
+        "target_slot_id": "Q_A_REPLACE_FAN",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_076",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F08",
+        "target_slot_id": "Q_A_REPLACE_FAN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_077",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F08",
+        "target_slot_id": "Q_A_RESTART",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_078",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F09",
+        "target_slot_id": "Q_A_RESTART",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_079",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F09",
+        "target_slot_id": "Q_A_NORMALIZE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_080",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F10",
+        "target_slot_id": "Q_A_NORMALIZE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_081",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F10",
+        "target_slot_id": "Q_A_LIFT",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_082",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F11",
+        "target_slot_id": "Q_A_LIFT",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_083",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F11",
+        "target_slot_id": "Q_A_RETURN",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "Q_REL_084",
+        "relation_type": "flow_source",
+        "source_slot_id": "Q_F12",
+        "target_slot_id": "Q_A_RETURN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_085",
+        "relation_type": "flow_target",
+        "source_slot_id": "Q_F12",
+        "target_slot_id": "Q_A_RESUME",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_086",
+        "relation_type": "controls_flow",
+        "source_slot_id": "Q_C02",
+        "target_slot_id": "Q_F04",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_087",
+        "relation_type": "controls_flow",
+        "source_slot_id": "Q_C03",
+        "target_slot_id": "Q_F05",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_088",
+        "relation_type": "controls_flow",
+        "source_slot_id": "Q_C03",
+        "target_slot_id": "Q_F06",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_089",
+        "relation_type": "has_state_value",
+        "source_slot_id": "Q_SIT_C2_RUN",
+        "target_slot_id": "Q_SV_C2_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_090",
+        "relation_type": "has_state_value",
+        "source_slot_id": "Q_SIT_C2_STOP",
+        "target_slot_id": "Q_SV_C2_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_091",
+        "relation_type": "has_state_value",
+        "source_slot_id": "Q_SIT_OPEN",
+        "target_slot_id": "Q_SV_OPEN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_092",
+        "relation_type": "has_state_value",
+        "source_slot_id": "Q_SIT_RESTRICT",
+        "target_slot_id": "Q_SV_RESTRICT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_093",
+        "relation_type": "from_situation",
+        "source_slot_id": "Q_TR_C2_STOP",
+        "target_slot_id": "Q_SIT_C2_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_094",
+        "relation_type": "to_situation",
+        "source_slot_id": "Q_TR_C2_STOP",
+        "target_slot_id": "Q_SIT_C2_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_095",
+        "relation_type": "triggers",
+        "source_slot_id": "Q_EVT_C2_STOP",
+        "target_slot_id": "Q_TR_C2_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_096",
+        "relation_type": "from_situation",
+        "source_slot_id": "Q_TR_RESTRICT",
+        "target_slot_id": "Q_SIT_OPEN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_097",
+        "relation_type": "to_situation",
+        "source_slot_id": "Q_TR_RESTRICT",
+        "target_slot_id": "Q_SIT_RESTRICT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_098",
+        "relation_type": "triggers",
+        "source_slot_id": "Q_EVT_M17",
+        "target_slot_id": "Q_TR_RESTRICT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_099",
+        "relation_type": "from_situation",
+        "source_slot_id": "Q_TR_C2_RUN",
+        "target_slot_id": "Q_SIT_C2_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_100",
+        "relation_type": "to_situation",
+        "source_slot_id": "Q_TR_C2_RUN",
+        "target_slot_id": "Q_SIT_C2_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_101",
+        "relation_type": "from_situation",
+        "source_slot_id": "Q_TR_OPEN",
+        "target_slot_id": "Q_SIT_RESTRICT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_102",
+        "relation_type": "to_situation",
+        "source_slot_id": "Q_TR_OPEN",
+        "target_slot_id": "Q_SIT_OPEN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_103",
+        "relation_type": "triggers",
+        "source_slot_id": "Q_EVT_M20",
+        "target_slot_id": "Q_TR_OPEN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_104",
+        "relation_type": "triggers",
+        "source_slot_id": "Q_EVT_C2_STOP",
+        "target_slot_id": "Q_A_DETECT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_105",
+        "relation_type": "triggers",
+        "source_slot_id": "Q_EVT_M17",
+        "target_slot_id": "Q_A_RESTRICT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_106",
+        "relation_type": "triggers",
+        "source_slot_id": "Q_EVT_M20",
+        "target_slot_id": "Q_A_LIFT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_107",
+        "relation_type": "observes",
+        "source_slot_id": "Q_OBS_TEMP",
+        "target_slot_id": "Q_EVT_M17",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_108",
+        "relation_type": "observes",
+        "source_slot_id": "Q_OBS_STOP",
+        "target_slot_id": "Q_EVT_C2_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_109",
+        "relation_type": "constrained_by",
+        "source_slot_id": "Q_A_MEASURE",
+        "target_slot_id": "Q_CN_5MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_110",
+        "relation_type": "constrained_by",
+        "source_slot_id": "Q_A_RESTRICT",
+        "target_slot_id": "Q_CN_M18",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_111",
+        "relation_type": "constrained_by",
+        "source_slot_id": "Q_A_SEND_LOG",
+        "target_slot_id": "Q_CN_M15",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_112",
+        "relation_type": "has_goal",
+        "source_slot_id": "Q_SCN",
+        "target_slot_id": "Q_G_NO_DAMAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_113",
+        "relation_type": "has_goal",
+        "source_slot_id": "Q_SCN",
+        "target_slot_id": "Q_G_M15",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "Q_REL_114",
+        "relation_type": "has_reason",
+        "source_slot_id": "Q_TR_C2_STOP",
+        "target_slot_id": "Q_R_OVERHEAT",
+        "evidence_level": "explicit"
+      }
+    ]
+  }
+}

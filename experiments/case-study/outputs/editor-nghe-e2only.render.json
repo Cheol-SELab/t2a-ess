@@ -1,0 +1,27 @@
+{
+  "in": "nghe-en.sysml",
+  "out": "editor-nghe-e2only.png",
+  "expanded": [
+    "NGHE 72-hour autonomous construction::E2 Level 4 autonomous production"
+  ],
+  "nodeKinds": {
+    "FunctionNode": 24,
+    "StartConcurrencyNode": 5,
+    "EndConcurrencyNode": 6,
+    "ItemNode": 6,
+    "StartReferenceNode": 5,
+    "EndReferenceNode": 5
+  },
+  "edges": 59,
+  "metrics": [
+    "rootIds",
+    "topologyOf",
+    "step",
+    "lane",
+    "pathPointer",
+    "pair",
+    "slot",
+    "branchStates",
+    "clusterHierarchy"
+  ]
+}

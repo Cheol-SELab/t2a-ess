@@ -1,0 +1,25 @@
+[P1] The smart greenhouse operation system consists of a greenhouse management server (GMS), 2 heating boilers, a thermal curtain unit, 30 environmental sensors, and a nutrient solution supplier. The environmental sensors measure temperature, humidity, and CO2 concentration.
+
+[P2] Externally, there are the meteorological agency forecast service and the power company; the cultivation manager handles equipment operation, and the equipment technician handles equipment repair.
+
+[P3] At 10:00 p.m., the GMS receives a forecast of an early-morning minimum temperature of -12 °C from the meteorological agency forecast service. If the forecast temperature is -10 °C or less, the GMS issues the cold-wave alert mode. The GMS issues the cold-wave alert mode and sends a notification to the cultivation manager.
+
+[P4] In the cold-wave alert mode, the thermal curtain unit closes the thermal curtain, and Boiler 1 maintains the greenhouse target temperature at 15 °C. The two measures start simultaneously.
+
+[P5] The environmental sensors measure the indoor temperature every 10 min and transmit it to the GMS. If the indoor temperature drops below 12 °C, the GMS additionally operates Boiler 2.
+
+[P6] At 2:00 a.m., when the environmental sensors measure an indoor temperature of 11.5 °C, the GMS operates Boiler 2.
+
+[P7] At 3:00 a.m., Boiler 1 stops due to a combustion failure. The GMS detects the Boiler 1 stop and requests an emergency dispatch from the equipment technician.
+
+[P8] After arriving, the equipment technician inspects the ignition device and replaces the clogged fuel filter. When the filter replacement is finished, the equipment technician reignites Boiler 1.
+
+[P9] Until Boiler 1 is reignited, the cultivation manager stops the nutrient solution supply. This is because a low nutrient solution temperature causes root damage.
+
+[P10] At 4:20 a.m., when Boiler 1 is reignited and the indoor temperature recovers to 15 °C, the cultivation manager resumes the nutrient solution supply.
+
+[P11] At 7:00 a.m., when the outdoor temperature rises to -5 °C or more, the GMS releases the cold-wave alert mode and stops Boiler 2.
+
+[P12] If the indoor humidity is 90% or more, the cultivation manager opens the vent window for 5 min. On this day, the humidity stayed at 85%, so the vent window was not opened.
+
+[P13] The goal of this scenario is to maintain the indoor temperature at 12 °C or more without crop frost damage.

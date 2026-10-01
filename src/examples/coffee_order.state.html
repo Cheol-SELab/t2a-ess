@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Cafe order processing example — State View</title>
+<style>
+:root{
+  --bg:#F6F5F0; --bg2:#FFFFFF; --bg3:#ECEAE3; --ink:#1E2328; --ink2:#4B4F55; --mute:#6F6C66; --line:#D9D6CE;
+  --accent:#1E6E8C; --pass:#2C7A4B;
+}
+@media (prefers-color-scheme: dark){ :root{
+  --bg:#15181C; --bg2:#1C2026; --bg3:#232830; --ink:#E6E4DE; --ink2:#B8B5AE; --mute:#8B8880; --line:#333941;
+  --accent:#5FAFD0; --pass:#6CC38F;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "IBM Plex Sans KR","Noto Sans KR",system-ui,sans-serif}
+.mono,pre{font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+.wrap{max-width:1240px;margin:0 auto;padding:32px 24px 72px}
+h1{font-size:24px;margin:0} h2{font-size:17px;margin:0 0 12px}
+.eyebrow{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.meta{font-size:13px;color:var(--mute);margin-top:6px}
+.tiles{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 28px}
+.tile{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:10px 16px}
+.tile .k{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+.tile .v{font-size:20px;font-weight:600}
+.diagram{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:16px;overflow:auto;margin-bottom:28px}
+table{width:100%;border-collapse:collapse;background:var(--bg2);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:28px}
+th,td{text-align:left;padding:8px 12px;border-top:1px solid var(--line);font-size:13px}
+thead th{border-top:0;background:var(--bg3);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
+details{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:12px 16px}
+summary{cursor:pointer;color:var(--accent);font-weight:500}
+pre{margin:12px 0 0;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:12.5px;line-height:1.5;overflow:auto}
+section.block{margin-bottom:28px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="eyebrow">T2A-ESS State View · t2a_sysml.state.v0.1</p>
+  <h1>Coffee order scenario</h1>
+  <p class="meta">Cafe order processing example</p>
+</header>
+<div class="tiles">
+  <div class="tile"><div class="k">regions</div><div class="v">1</div></div>
+  <div class="tile"><div class="k">states</div><div class="v">4</div></div>
+  <div class="tile"><div class="k">transitions</div><div class="v">3</div></div>
+  <div class="tile"><div class="k">events</div><div class="v">3</div></div>
+  <div class="tile"><div class="k">guards</div><div class="v">1</div></div>
+</div>
+<section class="block">
+  <h2>State Machine Diagram</h2>
+  <div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1637 248" role="img" aria-label="state machine"><style>
+    text{font-family:"IBM Plex Sans KR","Noto Sans KR",system-ui,sans-serif;fill:#1E2328}
+    .region-label{font-size:12px;font-style:italic;fill:#6F6C66}
+    .state rect{fill:#FFFFFF;stroke:#4B4F55;stroke-width:1.2;rx:6}
+    .state .sv{font-size:11px;fill:#4B4F55}
+    .region rect.frame{fill:none;stroke:#4B4F55;stroke-width:1.4;rx:10}
+    .region-sep{stroke:#4B4F55;stroke-width:1;stroke-dasharray:6 4}
+    .transition path{fill:none;stroke:#1E6E8C;stroke-width:1.4;marker-end:url(#t2a-arrow)}
+    .transition text{font-size:11px;fill:#1E2328}
+    .transition rect.lbl{fill:#F6F5F0;stroke:#D9D6CE;stroke-width:.6;rx:3}
+    .transition:hover path{stroke-width:2.6}
+    .transition:hover text{font-weight:600}
+    .initial circle{fill:#1E2328}
+    .initial line{stroke:#1E2328;stroke-width:1.4;marker-end:url(#t2a-arrow)}
+    .tab{fill:#F6F5F0;stroke:#4B4F55;stroke-width:1.4}
+    .frame{fill:none;stroke:#4B4F55;stroke-width:1.4;rx:10}
+    @media (prefers-color-scheme: dark){
+      text{fill:#E6E4DE} .region-label{fill:#8B8880}
+      .state rect{fill:#1C2026;stroke:#B8B5AE} .state .sv{fill:#B8B5AE}
+      .region rect.frame,.frame{stroke:#B8B5AE} .region-sep{stroke:#B8B5AE}
+      .transition path{stroke:#5FAFD0} .transition text{fill:#E6E4DE}
+      .transition rect.lbl{fill:#15181C;stroke:#333941}
+      .initial circle{fill:#E6E4DE} .initial line{stroke:#E6E4DE}
+      .tab{fill:#1C2026;stroke:#B8B5AE}
+    }
+  </style>
+<defs><marker id="t2a-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker></defs>
+<rect class="frame" x="28" y="28" width="1580.9000000000003" height="192" rx="10"/>
+<path class="tab" d="M28 28 h175 v26 h-175 z"/>
+<text x="40" y="45" font-size="13" font-weight="600">Coffee order scenario</text>
+<g class="region" data-id="r0">
+<text class="region-label" x="46" y="96">order_status</text>
+<g class="initial"><circle cx="12" cy="153" r="7"/><line x1="19" y1="153" x2="49" y2="153" marker-end="url(#t2a-arrow)"/></g>
+<g class="state" data-id="SIT_WAITING">
+<rect x="52" y="116" width="179" height="74" rx="6"/>
+<text x="68" y="136" font-size="14">Order waiting state</text>
+<line x1="52" y1="146" x2="231" y2="146" stroke="#4B4F55" stroke-width=".8"/>
+<text class="sv" x="68" y="162">order_status = waiting</text>
+<text class="sv" x="68" y="180">queue_length = 0 orders</text>
+</g>
+<g class="state" data-id="SIT_PAID">
+<rect x="586.4500000000003" y="116" width="210" height="56" rx="6"/>
+<text x="602.4500000000003" y="136" font-size="14">Payment completed state</text>
+<line x1="586.4500000000003" y1="146" x2="796.4500000000003" y2="146" stroke="#4B4F55" stroke-width=".8"/>
+<text class="sv" x="602.4500000000003" y="162">order_status = paid</text>
+</g>
+<g class="state" data-id="SIT_MAKING">
+<rect x="945.4500000000003" y="116" width="160" height="56" rx="6"/>
+<text x="961.4500000000003" y="136" font-size="14">Making state</text>
+<line x1="945.4500000000003" y1="146" x2="1105.4500000000003" y2="146" stroke="#4B4F55" stroke-width=".8"/>
+<text class="sv" x="961.4500000000003" y="162">order_status = making</text>
+</g>
+<g class="state" data-id="SIT_SERVED">
+<rect x="1358.9000000000003" y="116" width="210" height="56" rx="6"/>
+<text x="1374.9000000000003" y="136" font-size="14">Serving completed state</text>
+<line x1="1358.9000000000003" y1="146" x2="1568.9000000000003" y2="146" stroke="#4B4F55" stroke-width=".8"/>
+<text class="sv" x="1374.9000000000003" y="162">order_status = served</text>
+</g>
+<g class="transition" data-id="TR_WAITING_TO_PAID">
+<path d="M231 153 C408.72500000000014 153, 408.72500000000014 144, 586.4500000000003 144"/>
+<rect class="lbl" x="255.22500000000014" y="127.5" width="307" height="18"/>
+<text x="408.72500000000014" y="140.5" text-anchor="middle">Payment approval [Payment within 3 min] / Payment</text>
+</g>
+<g class="transition" data-id="TR_PAID_TO_MAKING">
+<path d="M796.4500000000003 144 C870.9500000000003 144, 870.9500000000003 144, 945.4500000000003 144"/>
+<rect class="lbl" x="804.9500000000003" y="123" width="132" height="18"/>
+<text x="870.9500000000003" y="136" text-anchor="middle">Order ticket receipt</text>
+</g>
+<g class="transition" data-id="TR_MAKING_TO_SERVED">
+<path d="M1105.4500000000003 144 C1232.1750000000002 144, 1232.1750000000002 144, 1358.9000000000003 144"/>
+<rect class="lbl" x="1139.175" y="123" width="186" height="18"/>
+<text x="1232.175" y="136" text-anchor="middle">Beverage completion / Serving</text>
+</g>
+</g></svg></div>
+</section>
+<section class="block">
+  <h2>Transitions</h2>
+  <table>
+    <thead><tr><th>from</th><th>to</th><th>events</th><th>guards</th><th>actions</th><th>transition</th></tr></thead>
+    <tbody><tr><td>Order waiting state</td><td>→ Payment completed state</td><td>Payment approval</td><td>Payment within 3 min</td><td>Payment</td><td class="mono">Transition from order waiting to payment completed</td></tr>
+<tr><td>Payment completed state</td><td>→ Making state</td><td>Order ticket receipt</td><td></td><td></td><td class="mono">Transition from payment completed to making</td></tr>
+<tr><td>Making state</td><td>→ Serving completed state</td><td>Beverage completion</td><td></td><td>Serving</td><td class="mono">Transition from making to serving completed</td></tr></tbody>
+  </table>
+</section>
+<details><summary>Generated SysML v2 (state def)</summary><pre>package &#39;Cafe order processing example&#39; {
+    private import ScalarValues::*;
+
+    // Cafe order processing example
+    // Generated from T2A-ESS by t2a_sysml.state.v0.1
+
+    // events that trigger transitions (accept payloads)
+    attribute def &#39;Payment approval&#39;;
+    attribute def &#39;Order ticket receipt&#39;;
+    attribute def &#39;Beverage completion&#39;;
+
+    state def &#39;Coffee order scenario&#39; {
+        // guards (constrained_by on transitions)
+        attribute &#39;Payment within 3 min&#39; : Boolean;
+
+        state &#39;order_status&#39; {
+            entry; then &#39;Order waiting state&#39;;
+
+            // has_situation: Order taking
+            state &#39;Order waiting state&#39; {
+                doc /* order_status = waiting; queue_length = 0 orders */
+            }
+            // has_situation: Order taking
+            state &#39;Payment completed state&#39; {
+                doc /* order_status = paid */
+            }
+            // has_situation: Beverage preparation
+            state &#39;Making state&#39; {
+                doc /* order_status = making */
+            }
+            // has_situation: Beverage preparation
+            state &#39;Serving completed state&#39; {
+                doc /* order_status = served */
+            }
+
+            transition &#39;Transition from order waiting to payment completed&#39;
+                first &#39;Order waiting state&#39;
+                accept &#39;Payment approval&#39;
+                if &#39;Payment within 3 min&#39;
+                do action &#39;Payment&#39;
+                then &#39;Payment completed state&#39;;
+            transition &#39;Transition from payment completed to making&#39;
+                first &#39;Payment completed state&#39;
+                accept &#39;Order ticket receipt&#39;
+                then &#39;Making state&#39;;
+            transition &#39;Transition from making to serving completed&#39;
+                first &#39;Making state&#39;
+                accept &#39;Beverage completion&#39;
+                do action &#39;Serving&#39;
+                then &#39;Serving completed state&#39;;
+        }
+    }
+}
+</pre></details>
+</div>
+</body>
+</html>

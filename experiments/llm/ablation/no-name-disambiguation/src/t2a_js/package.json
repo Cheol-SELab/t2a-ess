@@ -1,0 +1,15 @@
+{
+  "name": "t2a-sysml",
+  "version": "0.2.0",
+  "private": true,
+  "description": "T2A-ESS slot JSON -> EFFBD SysML converter (JS port of text2activity/src/t2a_sysml)",
+  "type": "module",
+  "main": "t2a_sysml/index.js",
+  "bin": { "convert-t2a-to-sysml": "convert_t2a_to_sysml.js" },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\"",
+    "report": "node tools/build_report.js",
+    "lsp": "node tools/lsp_check.js"
+  },
+  "engines": { "node": ">=20" }
+}

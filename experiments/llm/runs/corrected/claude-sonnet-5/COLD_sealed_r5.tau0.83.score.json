@@ -1,0 +1,1070 @@
+{
+ "meta": {
+  "input": "COLD_sealed",
+  "repeat": 5,
+  "condition": "corrected",
+  "model_requested": "claude-sonnet-5",
+  "models_used": [
+   "claude-sonnet-5"
+  ],
+  "prompt": "corrected-contract.md",
+  "prompt_sha256": "9dd751c5ec471393b4f36868e793b438e5e7470b80cf15a9e7475503fcee759b",
+  "input_sha256": "02e82687d78e3bbbeab4a30c14c2ea241452268a43676af02e4177c5d2415ff6",
+  "user_sha256": "e63ea0c5dbf7225c87a56ef15459009044382a288982e47aa669d935d08b514c",
+  "runner_sha256": "668572f34df601b1974f920604e58152c826610fc0840a0fe0ed5b39cc377e01",
+  "ok": true,
+  "attempts": 1,
+  "failure": null,
+  "elapsed_s": 353.4,
+  "total_cost_usd": 0.4825,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 15484,
+   "output_tokens": 47940,
+   "output_tokens_details": {
+    "thinking_tokens": 27112
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 47940,
+     "cache_read_input_tokens": 15484,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "cli": "claude -p (isolated, experiments/common/claude_cli.py)"
+ },
+ "tau": 0.83,
+ "parse_ok": true,
+ "matcher": "embedding",
+ "scorer_version": "3.1",
+ "slots_tolerant": {
+  "micro": {
+   "gold_coverage": 0.9125,
+   "pred_support": 0.939,
+   "f1": 0.9256
+  },
+  "per_type": {
+   "scenarios": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 1,
+    "pred": 1
+   },
+   "episodes": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.8333,
+    "f1": 0.9091,
+    "gold": 4,
+    "pred": 6
+   },
+   "performers": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 13,
+    "pred": 12
+   },
+   "actions": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 16,
+    "pred": 17
+   },
+   "items": {
+    "gold_coverage": 0.6667,
+    "pred_support": 1.0,
+    "f1": 0.8,
+    "gold": 6,
+    "pred": 3
+   },
+   "flows": {
+    "gold_coverage": 0.8333,
+    "pred_support": 0.7692,
+    "f1": 0.8,
+    "gold": 12,
+    "pred": 13
+   },
+   "controls": {
+    "gold_coverage": 0.8,
+    "pred_support": 1.0,
+    "f1": 0.8889,
+    "gold": 5,
+    "pred": 5
+   },
+   "situations": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 4,
+    "pred": 6
+   },
+   "state_values": {
+    "gold_coverage": 0.5,
+    "pred_support": 1.0,
+    "f1": 0.6667,
+    "gold": 4,
+    "pred": 3
+   },
+   "events": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 3,
+    "pred": 4
+   },
+   "transitions": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 4,
+    "pred": 5
+   },
+   "constraints": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 3,
+    "pred": 1
+   },
+   "goals": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 2,
+    "pred": 1
+   },
+   "reasons": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.5,
+    "f1": 0.6667,
+    "gold": 1,
+    "pred": 2
+   },
+   "observations": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 2,
+    "pred": 3
+   }
+  }
+ },
+ "slots": {
+  "micro": {
+   "tp": 68,
+   "pred": 82,
+   "gold": 80,
+   "precision": 0.8293,
+   "recall": 0.85,
+   "f1": 0.8395
+  },
+  "per_type": {
+   "scenarios": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "episodes": {
+    "tp": 4,
+    "pred": 6,
+    "gold": 4,
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8
+   },
+   "performers": {
+    "tp": 12,
+    "pred": 12,
+    "gold": 13,
+    "precision": 1.0,
+    "recall": 0.9231,
+    "f1": 0.96
+   },
+   "actions": {
+    "tp": 16,
+    "pred": 17,
+    "gold": 16,
+    "precision": 0.9412,
+    "recall": 1.0,
+    "f1": 0.9697
+   },
+   "items": {
+    "tp": 3,
+    "pred": 3,
+    "gold": 6,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "flows": {
+    "tp": 10,
+    "pred": 13,
+    "gold": 12,
+    "precision": 0.7692,
+    "recall": 0.8333,
+    "f1": 0.8
+   },
+   "controls": {
+    "tp": 4,
+    "pred": 5,
+    "gold": 5,
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1": 0.8
+   },
+   "situations": {
+    "tp": 4,
+    "pred": 6,
+    "gold": 4,
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8
+   },
+   "state_values": {
+    "tp": 2,
+    "pred": 3,
+    "gold": 4,
+    "precision": 0.6667,
+    "recall": 0.5,
+    "f1": 0.5714
+   },
+   "events": {
+    "tp": 3,
+    "pred": 4,
+    "gold": 3,
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1": 0.8571
+   },
+   "transitions": {
+    "tp": 4,
+    "pred": 5,
+    "gold": 4,
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.8889
+   },
+   "constraints": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 3,
+    "precision": 1.0,
+    "recall": 0.3333,
+    "f1": 0.5
+   },
+   "goals": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 2,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "reasons": {
+    "tp": 1,
+    "pred": 2,
+    "gold": 1,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667
+   },
+   "observations": {
+    "tp": 2,
+    "pred": 3,
+    "gold": 2,
+    "precision": 0.6667,
+    "recall": 1.0,
+    "f1": 0.8
+   }
+  },
+  "macro_f1": 0.7831
+ },
+ "alignment_pairs": [
+  {
+   "type": "scenarios",
+   "gold": "Q_SCN",
+   "gold_label": "Cold-storage logistics center refrigeration unit failure response",
+   "pred": "SCN_COLD_STORAGE",
+   "pred_label": "Cold-storage logistics center refrigeration failure response",
+   "score": 0.99
+  },
+  {
+   "type": "episodes",
+   "gold": "Q_EP_FAULT",
+   "gold_label": "Refrigeration unit failure detection and initial response",
+   "pred": "EP_FAILURE_ALERT",
+   "pred_label": "Refrigeration failure detection and alarm",
+   "score": 0.956
+  },
+  {
+   "type": "episodes",
+   "gold": "Q_EP_RESTRICT",
+   "gold_label": "Access restriction and cargo protection",
+   "pred": "EP_MITIGATION",
+   "pred_label": "Cargo mitigation during restricted access",
+   "score": 0.931
+  },
+  {
+   "type": "episodes",
+   "gold": "Q_EP_REPAIR",
+   "gold_label": "Repair and output normalization",
+   "pred": "EP_RECOVERY",
+   "pred_label": "Repair, restart and return to normal operation",
+   "score": 0.892
+  },
+  {
+   "type": "episodes",
+   "gold": "Q_EP_RESTORE",
+   "gold_label": "Access resumption and wrap-up",
+   "pred": "EP_SETUP",
+   "pred_label": "System setup and stakeholder roles",
+   "score": 0.833
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_SYSTEM",
+   "gold_label": "Cold-storage logistics center operations system",
+   "pred": "P_OPS_SYSTEM",
+   "pred_label": "Cold-storage logistics center operations system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_WMS",
+   "gold_label": "Warehouse management system (WMS)",
+   "pred": "P_WMS",
+   "pred_label": "Warehouse management system (WMS)",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_C1",
+   "gold_label": "Refrigeration Unit 1",
+   "pred": "P_REFRIGERATION_UNIT_1",
+   "pred_label": "Refrigeration Unit 1",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_C2",
+   "gold_label": "Refrigeration Unit 2",
+   "pred": "P_REFRIGERATION_UNIT_2",
+   "pred_label": "Refrigeration Unit 2",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_C3",
+   "gold_label": "Refrigeration Unit 3",
+   "pred": "P_REFRIGERATION_UNIT_3",
+   "pred_label": "Refrigeration Unit 3",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_SENSORS",
+   "gold_label": "40 temperature sensors",
+   "pred": "P_TEMP_SENSORS",
+   "pred_label": "Temperature sensors (40 units)",
+   "score": 0.964
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_DOOR",
+   "gold_label": "Door controller",
+   "pred": "P_DOOR_CONTROLLER",
+   "pred_label": "Door controller",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_GEN",
+   "gold_label": "Emergency generator",
+   "pred": "P_EMERGENCY_GENERATOR",
+   "pred_label": "Emergency generator",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_SERVICE",
+   "gold_label": "Refrigeration unit manufacturer's service center",
+   "pred": "P_SERVICE_CENTER",
+   "pred_label": "Refrigeration unit manufacturer's service center",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_SHIPPER",
+   "gold_label": "Shipper",
+   "pred": "P_SHIPPER",
+   "pred_label": "Shipper",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_FACILITY",
+   "gold_label": "Facility manager",
+   "pred": "P_FACILITY_MANAGER",
+   "pred_label": "Facility manager",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "Q_P_LOGI",
+   "gold_label": "Logistics manager",
+   "pred": "P_LOGISTICS_MANAGER",
+   "pred_label": "Logistics manager",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "Q_I_CARGO",
+   "gold_label": "Cargo scheduled for shipment",
+   "pred": "I_CARGO",
+   "pred_label": "Cargo scheduled for shipment",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "Q_I_LOG",
+   "gold_label": "Cargo temperature records",
+   "pred": "I_TEMP_RECORDS",
+   "pred_label": "Cargo temperature records",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "Q_I_FAN",
+   "gold_label": "Compressor cooling fan",
+   "pred": "I_COOLING_FAN",
+   "pred_label": "Compressor cooling fan",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "Q_SIT_C2_RUN",
+   "gold_label": "Refrigeration Unit 2 running state",
+   "pred": "SIT_UNIT2_RUNNING",
+   "pred_label": "Refrigeration Unit 2 running state",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "Q_SIT_C2_STOP",
+   "gold_label": "Refrigeration Unit 2 stopped state",
+   "pred": "SIT_UNIT2_STOPPED",
+   "pred_label": "Refrigeration Unit 2 stopped state",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "Q_SIT_OPEN",
+   "gold_label": "Freezer room access permitted state",
+   "pred": "SIT_ACCESS_NORMAL",
+   "pred_label": "Freezer room access normal state",
+   "score": 0.945
+  },
+  {
+   "type": "situations",
+   "gold": "Q_SIT_RESTRICT",
+   "gold_label": "Freezer room access restricted state",
+   "pred": "SIT_ACCESS_RESTRICTED",
+   "pred_label": "Freezer room access restricted state",
+   "score": 1.0
+  },
+  {
+   "type": "state_values",
+   "gold": "Q_SV_OPEN",
+   "gold_label": "Freezer room Access Permitted",
+   "pred": "SV_TEMP_NORMAL",
+   "pred_label": "freezer room temperature<=-18°C",
+   "score": 0.87
+  },
+  {
+   "type": "state_values",
+   "gold": "Q_SV_RESTRICT",
+   "gold_label": "Freezer room Access Restricted",
+   "pred": "SV_TEMP_WARN",
+   "pred_label": "freezer room temperature=-17°C",
+   "score": 0.869
+  },
+  {
+   "type": "events",
+   "gold": "Q_EVT_C2_STOP",
+   "gold_label": "Refrigeration Unit 2 stop due to compressor overheating",
+   "pred": "EVT_UNIT2_STOP",
+   "pred_label": "Refrigeration Unit 2 stops due to compressor overheating",
+   "score": 0.998
+  },
+  {
+   "type": "events",
+   "gold": "Q_EVT_M17",
+   "gold_label": "Freezer room temperature measured at -17 °C",
+   "pred": "EVT_TEMP_ABOVE_18",
+   "pred_label": "Freezer room temperature rises above -18 °C (measured -17 °C at 3:00 a.m.)",
+   "score": 0.931
+  },
+  {
+   "type": "events",
+   "gold": "Q_EVT_M20",
+   "gold_label": "Freezer room temperature recovered to -20 °C",
+   "pred": "EVT_TEMP_RECOVER_20",
+   "pred_label": "Freezer room temperature recovers to -20 °C",
+   "score": 0.992
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_MEASURE",
+   "gold_label": "Measure freezer room temperature every 5 min",
+   "pred": "A_MEASURE_TEMP",
+   "pred_label": "Measure freezer room temperature",
+   "score": 0.934
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_DETECT",
+   "gold_label": "Detect Refrigeration Unit 2 stop",
+   "pred": "A_DETECT_UNIT2_STOP",
+   "pred_label": "Detect refrigeration unit stop",
+   "score": 0.94
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_ALARM",
+   "gold_label": "Send alarm to facility manager",
+   "pred": "A_SEND_ALARM",
+   "pred_label": "Send alarm to facility manager",
+   "score": 0.982
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_BOOST",
+   "gold_label": "Raise Refrigeration Units 1 and 3 output to maximum",
+   "pred": "A_RAISE_OUTPUT",
+   "pred_label": "Raise output of Refrigeration Units 1 and 3 to maximum",
+   "score": 0.987
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_REQ_REPAIR",
+   "gold_label": "Request repair from service center",
+   "pred": "A_REQUEST_REPAIR",
+   "pred_label": "Request repair from service center",
+   "score": 0.981
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_RESTRICT",
+   "gold_label": "Restrict freezer room access",
+   "pred": "A_RESTRICT_ACCESS",
+   "pred_label": "Restrict freezer room access",
+   "score": 0.978
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_MOVE",
+   "gold_label": "Move cargo scheduled for shipment to backup freezer room",
+   "pred": "A_MOVE_CARGO",
+   "pred_label": "Move cargo to backup freezer room",
+   "score": 0.979
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_NOTIFY_DELAY",
+   "gold_label": "Notify shipper of shipment delay",
+   "pred": "A_NOTIFY_SHIPPER_DELAY",
+   "pred_label": "Notify shipper of shipment delay",
+   "score": 0.982
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_SEND_LOG",
+   "gold_label": "Deliver cargo temperature records to shipper",
+   "pred": "A_DELIVER_RECORDS",
+   "pred_label": "Deliver cargo temperature records to shipper",
+   "score": 0.976
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_REPLACE_FAN",
+   "gold_label": "Replace compressor cooling fan",
+   "pred": "A_REPLACE_FAN",
+   "pred_label": "Replace compressor cooling fan",
+   "score": 0.996
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_RESTART",
+   "gold_label": "Restart Refrigeration Unit 2",
+   "pred": "A_RESTART_UNIT2",
+   "pred_label": "Restart Refrigeration Unit 2",
+   "score": 0.998
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_NORMALIZE",
+   "gold_label": "Return Refrigeration Units 1 and 3 output to normal",
+   "pred": "A_RESTORE_OUTPUT",
+   "pred_label": "Return output of Refrigeration Units 1 and 3 to normal",
+   "score": 0.988
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_LIFT",
+   "gold_label": "Lift freezer room access restriction",
+   "pred": "A_LIFT_RESTRICTION",
+   "pred_label": "Lift freezer room access restriction",
+   "score": 0.974
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_RETURN",
+   "gold_label": "Return cargo to original locations",
+   "pred": "A_RETURN_CARGO",
+   "pred_label": "Return cargo in backup freezer room to original locations",
+   "score": 0.923
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_RESUME",
+   "gold_label": "Resume shipment",
+   "pred": "A_RESUME_SHIPMENT",
+   "pred_label": "Resume shipment",
+   "score": 0.99
+  },
+  {
+   "type": "actions",
+   "gold": "Q_A_REPORT",
+   "gold_label": "Report failure circumstances to shipper",
+   "pred": "A_REPORT_TO_SHIPPER",
+   "pred_label": "Report failure circumstances to shipper",
+   "score": 0.978
+  },
+  {
+   "type": "constraints",
+   "gold": "Q_CN_M15",
+   "gold_label": "Freezer room temperature above -15 °C",
+   "pred": "CN_TEMP_MAX",
+   "pred_label": "Freezer room temperature at -15 °C or less",
+   "score": 0.975
+  },
+  {
+   "type": "goals",
+   "gold": "Q_G_M15",
+   "gold_label": "Keep freezer room temperature at -15 °C or less",
+   "pred": "G_TEMP_GOAL",
+   "pred_label": "Keep freezer room temperature at -15 °C or less without cargo damage",
+   "score": 0.957
+  },
+  {
+   "type": "reasons",
+   "gold": "Q_R_OVERHEAT",
+   "gold_label": "Compressor overheating",
+   "pred": "R_COMPRESSOR_OVERHEAT",
+   "pred_label": "Compressor overheating",
+   "score": 1.0
+  },
+  {
+   "type": "observations",
+   "gold": "Q_OBS_TEMP",
+   "gold_label": "Freezer room temperature measurement",
+   "pred": "OBS_TEMP_PERIODIC",
+   "pred_label": "Periodic freezer room temperature measurement",
+   "score": 0.97
+  },
+  {
+   "type": "observations",
+   "gold": "Q_OBS_STOP",
+   "gold_label": "Detect Refrigeration Unit 2 stop",
+   "pred": "OBS_UNIT2_STOP_DETECT",
+   "pred_label": "Detection of Refrigeration Unit 2 stop",
+   "score": 0.987
+  },
+  {
+   "type": "transitions",
+   "gold": "Q_TR_C2_STOP",
+   "gold_label": "Refrigeration Unit 2 from running to stopped",
+   "pred": "TR_UNIT2_RUN_TO_STOP",
+   "pred_label": "Transition from Refrigeration Unit 2 running to stopped",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "Q_TR_RESTRICT",
+   "gold_label": "Freezer room access from permitted to restricted",
+   "pred": "TR_ACCESS_NORMAL_TO_RESTRICTED",
+   "pred_label": "Transition from access normal to access restricted",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "Q_TR_C2_RUN",
+   "gold_label": "Refrigeration Unit 2 from stopped to running",
+   "pred": "TR_TEMP_WARN_TO_NORMAL",
+   "pred_label": "Transition from above -18 °C to temperature normal",
+   "score": 0.839
+  },
+  {
+   "type": "transitions",
+   "gold": "Q_TR_OPEN",
+   "gold_label": "Freezer room access from restricted to permitted",
+   "pred": "TR_ACCESS_RESTRICTED_TO_NORMAL",
+   "pred_label": "Transition from access restricted to access normal",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "Q_F01",
+   "gold_label": "Send alarm after stop detection",
+   "pred": "F_DETECT_TO_ALARM",
+   "pred_label": "Send alarm after detecting unit stop",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "Q_F02",
+   "gold_label": "Raise output after alarm",
+   "pred": "F_ALARM_TO_RAISE",
+   "pred_label": "Facility manager raises output after receiving alarm",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "Q_F03",
+   "gold_label": "Request repair after output increase",
+   "pred": "F_RAISE_TO_REQUEST",
+   "pred_label": "Request repair after raising output",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "Q_F04",
+   "gold_label": "Restrict access when above -18 °C",
+   "pred": "F_MEASURE_TO_RESTRICT",
+   "pred_label": "Restrict access after temperature exceeds -18 °C",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "Q_F05",
+   "gold_label": "Move cargo during access restriction",
+   "pred": "F_RESTRICT_TO_MOVE",
+   "pred_label": "Move cargo after access restricted",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "Q_F06",
+   "gold_label": "Notify delay during access restriction",
+   "pred": "F_RESTRICT_TO_NOTIFY",
+   "pred_label": "Notify shipper after access restricted",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "Q_F08",
+   "gold_label": "Restart after fan replacement",
+   "pred": "F_REPLACE_TO_RESTART",
+   "pred_label": "Restart unit after replacing fan",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "Q_F09",
+   "gold_label": "Return output to normal after restart",
+   "pred": "F_RESTART_TO_RESTORE",
+   "pred_label": "Restore output after unit restarted",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "Q_F11",
+   "gold_label": "Return cargo after restriction is lifted",
+   "pred": "F_LIFT_TO_RETURN",
+   "pred_label": "Return cargo after restriction lifted",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "Q_F12",
+   "gold_label": "Resume shipment after cargo return",
+   "pred": "F_RETURN_TO_RESUME",
+   "pred_label": "Resume shipment after cargo returned",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "Q_C02",
+   "gold_label": "Determine freezer room temperature above -18 °C",
+   "pred": "C_TEMP_ABOVE_18",
+   "pred_label": "Temperature above -18 °C decision",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "Q_C03",
+   "gold_label": "Cargo move and delay notification proceed simultaneously",
+   "pred": "C_PARALLEL_LOGISTICS",
+   "pred_label": "Move cargo and notify shipper in parallel",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "Q_C04",
+   "gold_label": "Determine freezer room temperature above -15 °C",
+   "pred": "C_TEMP_ABOVE_15",
+   "pred_label": "Temperature above -15 °C decision",
+   "score": 0.923
+  },
+  {
+   "type": "controls",
+   "gold": "Q_C05",
+   "gold_label": "Return cargo to original locations one after another",
+   "pred": "C_LOOP_RETURN_CARGO",
+   "pred_label": "Repeated return of cargo items",
+   "score": 0.915
+  }
+ ],
+ "type_confusion": {
+  "performers->observations": 1,
+  "items->flows": 1,
+  "items->actions": 1,
+  "controls->situations": 1,
+  "state_values->controls": 1,
+  "state_values->events": 1,
+  "constraints->state_values": 1,
+  "constraints->situations": 1
+ },
+ "source_ref_accuracy": {
+  "correct": 61,
+  "aligned_with_gold_ref": 68,
+  "accuracy": 0.8971
+ },
+ "relations": {
+  "strict": {
+   "tp": 83,
+   "pred": 127,
+   "gold": 114,
+   "precision": 0.6535,
+   "recall": 0.7281,
+   "f1": 0.6888,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 7,
+     "recalled": 7
+    },
+    "constrained_by": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "controls_flow": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "custom/contains_action": {
+     "gold": 16,
+     "recalled": 8
+    },
+    "flow_source": {
+     "gold": 12,
+     "recalled": 10
+    },
+    "flow_target": {
+     "gold": 12,
+     "recalled": 10
+    },
+    "from_situation": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "has_episode": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 8,
+     "recalled": 4
+    },
+    "has_reason": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 4,
+     "recalled": 0
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "performed_by": {
+     "gold": 16,
+     "recalled": 16
+    },
+    "produces_item": {
+     "gold": 4,
+     "recalled": 0
+    },
+    "provided_to": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "to_situation": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "triggers": {
+     "gold": 6,
+     "recalled": 6
+    },
+    "uses_item": {
+     "gold": 1,
+     "recalled": 0
+    }
+   }
+  },
+  "normalized": {
+   "tp": 83,
+   "pred": 127,
+   "gold": 114,
+   "precision": 0.6535,
+   "recall": 0.7281,
+   "f1": 0.6888,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 7,
+     "recalled": 7
+    },
+    "constrained_by": {
+     "gold": 3,
+     "recalled": 1
+    },
+    "contains_action": {
+     "gold": 16,
+     "recalled": 8
+    },
+    "controls_flow": {
+     "gold": 3,
+     "recalled": 3
+    },
+    "flow_source": {
+     "gold": 12,
+     "recalled": 10
+    },
+    "flow_target": {
+     "gold": 12,
+     "recalled": 10
+    },
+    "from_situation": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "has_episode": {
+     "gold": 4,
+     "recalled": 4
+    },
+    "has_goal": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "has_part": {
+     "gold": 8,
+     "recalled": 4
+    },
+    "has_reason": {
+     "gold": 1,
+     "recalled": 1
+    },
+    "has_state_value": {
+     "gold": 4,
+     "recalled": 0
+    },
+    "observes": {
+     "gold": 2,
+     "recalled": 1
+    },
+    "performed_by": {
+     "gold": 16,
+     "recalled": 16
+    },
+    "produces_item": {
+     "gold": 4,
+     "recalled": 0
+    },
+    "provided_to": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "to_situation": {
+     "gold": 4,
+     "recalled": 3
+    },
+    "triggers": {
+     "gold": 6,
+     "recalled": 6
+    },
+    "uses_item": {
+     "gold": 1,
+     "recalled": 0
+    }
+   }
+  },
+  "untyped": {
+   "tp": 85,
+   "pred": 118,
+   "gold": 114,
+   "precision": 0.7203,
+   "recall": 0.7456,
+   "f1": 0.7328
+  }
+ },
+ "atomic_facts": {
+  "found": 0,
+  "total": 0,
+  "missing": []
+ },
+ "required_relations": {
+  "hit": 0,
+  "total": 0
+ },
+ "forbidden_relations": {
+  "violated": 0,
+  "total": 0
+ },
+ "structure": {
+  "actions": 17,
+  "actions_in_episode": 17,
+  "actions_allocated": 17,
+  "nested_mode": true,
+  "dangling_relations": 0,
+  "relations": 127
+ }
+}

@@ -1,0 +1,3799 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "GT_NGHE_001",
+    "title": "NGHE autonomous construction ground truth (relation closure) scenario",
+    "extraction_schema": "Text2Activity Extraction Slot Schema",
+    "schema_acronym": "T2A-ESS",
+    "target_standard": [
+      "KerML",
+      "SysML v2"
+    ],
+    "extraction_scope": "ground_truth_relation_complete_semantic_audit",
+    "source_documents": [
+      {
+        "document_id": "DOC_GT_NGHE",
+        "path": "4_researches/text2activity/data/ground-truth/nghe/nghe.gold.json",
+        "title": "NGHE_autonomous construction canonical planned source",
+        "document_role": "canonical_ground_truth_plan"
+      }
+    ],
+    "source_units": [
+      {
+        "source_unit_id": "NGHE_GT_U01",
+        "document": "DOC_GT_NGHE",
+        "unit_type": "paragraph",
+        "order_index": 1,
+        "planned_content": "The ICCC sets the goals of at least 38,000 m3 within 72 h and zero personnel accidents, and after confirming the infrastructure, RTDD, and HSM, completes the DMSS/ASPCS terrain model and the calibration of 19 units of equipment and starts in Level 3.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "NGHE_GT_U02",
+        "document": "DOC_GT_NGHE",
+        "unit_type": "paragraph",
+        "order_index": 2,
+        "planned_content": "After 2 h of stable operation, it transitions to Level 4 and performs excavation, hauling, grading, and compaction, and the remote operator controls the equipment fleet without direct operation. It maintains the battery replacement of U-EEX Unit 1, preventive maintenance following the PHM module's detection of the hydraulic anomaly sign of U-EDT Unit 7, OTA application, and night operation at 65 dB or less.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "NGHE_GT_U03",
+        "document": "DOC_GT_NGHE",
+        "unit_type": "paragraph",
+        "order_index": 3,
+        "planned_content": "Around 48 h, fog degrades visibility and sensor confidence, so operation is restricted to Level 3, 5 km/h or less, and 2 times the safety distance, and following the forged packet detection by U-EEX Unit 3, the security system switches to the internal closed network and leaves a log.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "NGHE_GT_U04",
+        "document": "DOC_GT_NGHE",
+        "unit_type": "paragraph",
+        "order_index": 4,
+        "planned_content": "After U-EEX Unit 2 performs a local stop due to contamination and pedestrian approach, all equipment transitions to Level 1 due to 30 mm heavy rain, and after the heavy rain ends, through rescanning, bypassing of 2 subsidence zones, and recovery to Level 3 and to Level 4 after 30 min, a comprehensive report of 38,200 m3 and zero accidents is generated at 72 h.",
+        "text": ""
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "NGHE_SCN_72H_AUTONOMOUS_CONSTRUCTION",
+        "label": "NGHE 72 h autonomous construction and contingency response",
+        "summary": "The unmanned equipment fleet performs autonomous construction for 72 h and, through fog, cyber threat, and heavy rain situations, achieves the target earthwork volume.",
+        "success_criteria_texts": [
+          "At least 38,000 m3 of earthwork within 72 h",
+          "Zero personnel accidents",
+          "Net-zero carbon emissions",
+          "Maintain system availability at the 99% level"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "UseCase",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "NGHE_EP_SETUP",
+        "label": "Site setup and Level 3 start",
+        "order_index": 1,
+        "summary": "Prepares the energy infrastructure, communication network, terrain model, and equipment calibration and starts in Level 3 supervised autonomy mode.",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+        "label": "Level 4 autonomous construction and productivity maintenance",
+        "order_index": 2,
+        "summary": "After the Level 4 transition, performs excavation, hauling, grading, compaction, battery swap, maintenance, and OTA update.",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "NGHE_EP_FOG_CYBER",
+        "label": "Fog and cyber threat response",
+        "order_index": 3,
+        "summary": "Downgrades to Level 3 due to fog, and switches to the internal closed security network after detecting the forged command packet.",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "NGHE_EP_RAIN_STOP",
+        "label": "Heavy rain and work stop",
+        "order_index": 4,
+        "summary": "After heavy rain, sensor contamination, and pedestrian approach, performs Level 1 emergency stop and safe evacuation.",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "NGHE_EP_RECOVERY_COMPLETE",
+        "label": "Recovery after heavy rain and mission completion",
+        "order_index": 5,
+        "summary": "Achieves the target earthwork volume after terrain rescan, route recalculation, Level 3 resumption, and return to Level 4.",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "NGHE_SIT_LEVEL3",
+        "label": "Initial Level 3 supervised autonomy mode",
+        "description": "State in which autonomous construction is performed with the remote supervisor's approval and under supervision",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "NGHE_SIT_LEVEL4",
+        "label": "Level 4 full autonomy mode",
+        "description": "State in which AI_ICP performs most process planning and execution autonomously",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "NGHE_SIT_ECO_SWAP",
+        "label": "Low-power battery swap state",
+        "description": "State in which Eco Mode and autonomous return to BSS_T are performed after SoC reaches 15%",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "NGHE_SIT_CYBER_ISOLATED",
+        "label": "Internal closed security network operation state",
+        "description": "State in which the external public network is blocked after the forged command packet is detected",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "NGHE_SIT_LEVEL1_STOP",
+        "label": "Level 1 emergency stop and safe evacuation state",
+        "description": "State in which all equipment waits at safe evacuation positions after the forced work stop during heavy rain",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "NGHE_SIT_MISSION_COMPLETE",
+        "label": "72 h mission completion state",
+        "description": "State in which the target earthwork volume is exceeded and the zero-accident and net-zero conditions are recorded",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "NGHE_SIT_NETWORK_OPEN",
+        "label": "External public network use state",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "NGHE_SIT_LEVEL3_FOG",
+        "label": "Level 3 restricted operation in fog state",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "NGHE_SV_TARGET_VOLUME",
+        "subject_text": "NGHE mission",
+        "variable": "target_volume",
+        "value": 38000,
+        "unit": "m3",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_ACTUAL_VOLUME",
+        "subject_text": "NGHE mission",
+        "variable": "actual_volume",
+        "value": 38200,
+        "unit": "m3",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_AUTONOMY_LEVEL3",
+        "subject_text": "Unmanned equipment fleet",
+        "variable": "autonomy_level",
+        "value": "Level 3",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_AUTONOMY_LEVEL4",
+        "subject_text": "Unmanned equipment fleet",
+        "variable": "autonomy_level",
+        "value": "Level 4",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_AUTONOMY_LEVEL1",
+        "subject_text": "Unmanned equipment fleet",
+        "variable": "autonomy_level",
+        "value": "Level 1",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_SOC_15",
+        "subject_text": "U-EEX Unit 1",
+        "variable": "battery_soc",
+        "value": 15,
+        "unit": "percent",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_VISIBILITY_200M",
+        "subject_text": "Site environment",
+        "variable": "visibility",
+        "value": 200,
+        "unit": "m",
+        "comparator": "lte",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_SPEED_LIMIT_5",
+        "subject_text": "Unmanned equipment fleet",
+        "variable": "speed_limit",
+        "value": 5,
+        "unit": "km/h",
+        "comparator": "lte",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_RAIN_30MM",
+        "subject_text": "Site environment",
+        "variable": "rainfall_rate",
+        "value": 30,
+        "unit": "mm/h",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_ZERO_ACCIDENT",
+        "subject_text": "NGHE mission",
+        "variable": "human_accident_count",
+        "value": 0,
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_NETWORK_OPEN",
+        "label": "Network mode is external public",
+        "subject_text": "Security system",
+        "variable": "network_mode",
+        "value": "external_public",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_NETWORK_ISOLATED",
+        "label": "Network mode is internal closed",
+        "subject_text": "Security system",
+        "variable": "network_mode",
+        "value": "closed_internal",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_RTDD_LATENCY_20MS",
+        "label": "RTDD end-to-end latency is within 20 ms",
+        "subject_text": "RTDD",
+        "variable": "rtdd_latency",
+        "value": 20,
+        "unit": "ms",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "NGHE_SV_SENSOR_OCCLUSION_50",
+        "label": "Sensor lens coverage ratio is 50% or more",
+        "subject_text": "U-EEX Unit 2",
+        "variable": "sensor_occlusion_ratio",
+        "value": 50,
+        "unit": "%",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "NGHE_OBS_LATENCY_OK",
+        "label": "Confirm RTDD latency within 20 ms",
+        "observer_text": "Site supervisor and ICCC",
+        "observed_text": "End-to-end latency within 20 ms",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "NGHE_OBS_SOC_LOW",
+        "label": "Detect battery SoC reaching 15%",
+        "observer_text": "AI_ICP",
+        "observed_text": "U-EEX Unit 1 battery SoC 15%",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "NGHE_OBS_PHM_WARNING",
+        "label": "Detect hydraulic system anomaly sign",
+        "observer_text": "AI_ICP PHM module",
+        "observed_text": "U-EDT Unit 7 hydraulic system pressure pattern anomaly",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "NGHE_OBS_SENSOR_CONF_DROP",
+        "label": "Detect sensor confidence score drop",
+        "observer_text": "AI_ICP",
+        "observed_text": "Sensor confidence score drop due to fog",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "NGHE_OBS_FORGED_PACKET",
+        "label": "Detect forged command packet",
+        "observer_text": "U-EEX Unit 3 HSM",
+        "observed_text": "Forged digital signature of received command packet",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "NGHE_OBS_SENSOR_OCCLUSION",
+        "label": "LiDAR/camera lens covered 50% or more",
+        "observer_text": "U-EEX Unit 2 onboard system",
+        "observed_text": "Sensor lens covered 50% or more by sticky soil",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "NGHE_OBS_TERRAIN_SUBSIDENCE",
+        "label": "Identify 2 ground subsidence zones",
+        "observer_text": "ASPCS, DMSS",
+        "observed_text": "2 ground subsidence zones after heavy rain",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "NGHE_EVT_LEVEL4_APPROVED",
+        "label": "Level 4 transition approval",
+        "event_type": "approval_completion",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "NGHE_EVT_BATTERY_LOW",
+        "label": "Battery SoC reaches 15%",
+        "event_type": "threshold_crossing",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "NGHE_EVT_FOG_OCCURS",
+        "label": "Dense fog occurs",
+        "event_type": "weather_event",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "NGHE_EVT_FORGED_COMMAND",
+        "label": "Forged command packet injection attempt",
+        "event_type": "cyber_attack",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "NGHE_EVT_HEAVY_RAIN",
+        "label": "Heavy rain intensifies",
+        "event_type": "weather_event",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "NGHE_EVT_PEDESTRIAN_DETECTED",
+        "label": "Maintenance worker approach detected",
+        "event_type": "safety_event",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "NGHE_EVT_RAIN_END",
+        "label": "Heavy rain end confirmed",
+        "event_type": "weather_recovery",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "NGHE_EVT_MISSION_COMPLETE",
+        "label": "72 h mission completion",
+        "event_type": "mission_completion",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "NGHE_EVT_STABLE_OPERATION",
+        "label": "About 30 min of normal operation confirmed",
+        "event_type": "recovery_condition",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "NGHE_EVT_HYDRAULIC_ANOMALY",
+        "label": "U-EDT Unit 7 hydraulic system anomaly sign occurs",
+        "event_type": "equipment",
+        "trigger_type": "internal",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "NGHE_EVT_TERRAIN_SUBSIDENCE",
+        "label": "2 ground subsidence zones occur after heavy rain",
+        "event_type": "environment",
+        "trigger_type": "external",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "NGHE_TR_LEVEL3_TO_LEVEL4",
+        "label": "Transition from Level 3 to Level 4",
+        "from_situation_text": "Level 3 supervised autonomy mode",
+        "to_situation_text": "Level 4 full autonomy mode",
+        "change_kind": [
+          "mode_change"
+        ],
+        "trigger_text": "Operation indicators normal for 2 h and remote supervisor approval",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "NGHE_TR_LEVEL4_TO_LEVEL3_FOG",
+        "label": "Downgrade from Level 4 to Level 3 due to fog",
+        "from_situation_text": "Level 4 full autonomy mode",
+        "to_situation_text": "Level 3 supervised autonomy mode",
+        "change_kind": [
+          "mode_change",
+          "risk_change"
+        ],
+        "trigger_text": "Visibility 200 m or less and sensor confidence score drop",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "NGHE_TR_NETWORK_TO_ISOLATED",
+        "label": "Switch from external network to internal closed security network",
+        "from_situation_text": "External public network use state",
+        "to_situation_text": "Internal closed security network operation state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Detect forged command packet",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN",
+        "label": "Transition from Level 3 during fog to Level 1 emergency stop",
+        "from_situation_text": "Level 3 restricted operation in fog state",
+        "to_situation_text": "Level 1 emergency stop and safe evacuation state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Heavy rain intensification and forced work stop command",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "NGHE_TR_LEVEL1_TO_LEVEL3_RECOVERY",
+        "label": "Resume construction in Level 3 after heavy rain",
+        "from_situation_text": "Level 1 emergency stop and safe evacuation state",
+        "to_situation_text": "Level 3 supervised autonomy mode",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "Heavy rain ended, safety inspection completed, construction resumption approved",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "NGHE_TR_RECOVERY_LEVEL3_TO_LEVEL4",
+        "label": "Re-transition from Level 3 to Level 4 after recovery",
+        "from_situation_text": "Level 3 supervised autonomy mode",
+        "to_situation_text": "Level 4 full autonomy mode",
+        "change_kind": [
+          "mode_change"
+        ],
+        "trigger_text": "About 30 min of normal operation confirmed",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "NGHE_TR_MISSION_TO_COMPLETE",
+        "label": "Transition from mission in progress to mission completion",
+        "from_situation_text": "72 h construction in-progress state",
+        "to_situation_text": "72 h mission completion state",
+        "change_kind": [
+          "state_update"
+        ],
+        "trigger_text": "Cumulative earthwork volume of about 38,200 m3 achieved",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "NGHE_P1_ICCC",
+        "label": "ICCC",
+        "performer_type": "integrated_control_center",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P2_AI_ICP",
+        "label": "AI_ICP",
+        "performer_type": "autonomous_control_platform",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.96,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P3_REMOTE_SUPERVISOR",
+        "label": "Remote supervisor",
+        "performer_type": "human_supervisor",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P4_REMOTE_OPERATOR",
+        "label": "Remote operator",
+        "performer_type": "human_operator",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P5_SITE_SUPERVISOR",
+        "label": "Site supervisor",
+        "performer_type": "human_site_supervisor",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P6_MAINT_TEAM",
+        "label": "Site maintenance team",
+        "performer_type": "maintenance_team",
+        "performer_kind": "aggregate",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "label": "Unmanned equipment fleet",
+        "performer_type": "unmanned_equipment_fleet",
+        "performer_kind": "aggregate",
+        "part_structure": {
+          "role": "whole",
+          "member_cardinality": {
+            "total_count": 19,
+            "text": "5 U-EEX, 10 U-EDT, 2 U-EDB, 2 U-ERC"
+          }
+        },
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P7_1_EEX",
+        "label": "U-EEX excavator",
+        "performer_type": "unmanned_excavator",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P7_2_EDT",
+        "label": "U-EDT dump truck",
+        "performer_type": "unmanned_dump_truck",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P7_3_EDB",
+        "label": "U-EDB bulldozer",
+        "performer_type": "unmanned_bulldozer",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P7_4_ERC",
+        "label": "U-ERC roller",
+        "performer_type": "unmanned_roller",
+        "performer_kind": "component",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P8_BSS_T",
+        "label": "BSS_T",
+        "performer_type": "battery_swap_station",
+        "performer_kind": "aggregate",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P8_DMSS",
+        "label": "DMSS",
+        "performer_type": "drone_mapping_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P8_ASPCS",
+        "label": "ASPCS",
+        "performer_type": "precision_survey_system",
+        "performer_kind": "individual",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P9_SECURITY_SYSTEM",
+        "label": "Security system",
+        "performer_type": [
+          "system"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P7_1_1_EEX",
+        "label": "U-EEX Unit 1",
+        "performer_type": [
+          "equipment"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P7_1_2_EEX",
+        "label": "U-EEX Unit 2",
+        "performer_type": [
+          "equipment"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P7_1_3_EEX",
+        "label": "U-EEX Unit 3",
+        "performer_type": [
+          "equipment"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "NGHE_P7_2_7_EDT",
+        "label": "U-EDT Unit 7",
+        "performer_type": [
+          "equipment"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "NGHE_A_INSTALL_INFRA",
+        "label": "Energy infrastructure installation and battery pack stockpiling",
+        "primary_actor_text": "Site maintenance team",
+        "verb": "install",
+        "object_text": "BSS_T, ESS_T, SCS, fully charged battery packs",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_VERIFY_RTDD",
+        "label": "RTDD latency and HSM authentication confirmation",
+        "primary_actor_text": "Site supervisor, ICCC",
+        "verb": "confirm",
+        "object_text": "Latency within 20 ms, encryption latency of 2 ms or less, HSM authentication",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_SCAN_TERRAIN",
+        "label": "3D point cloud scan and reference point correction",
+        "primary_actor_text": "DMSS, ASPCS",
+        "verb": "scan",
+        "object_text": "Work area 3D point cloud and GPS-RTK reference points",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_CALIBRATE_EQUIPMENT",
+        "label": "Authentication and calibration of 19 units of equipment",
+        "primary_actor_text": "Unmanned equipment fleet",
+        "verb": "calibrate",
+        "object_text": "Sensor package, GPS-RTK, terrain data",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_START_CONSTRUCTION",
+        "label": "Autonomous construction start",
+        "primary_actor_text": "AI_ICP, unmanned equipment fleet",
+        "verb": "start",
+        "object_text": "Excavation, hauling, unloading, compaction processes",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_BATTERY_SWAP",
+        "label": "Battery pack replacement",
+        "primary_actor_text": "BSS_T",
+        "verb": "replace",
+        "object_text": "U-EEX Unit 1 battery pack",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_OPTIMIZE_SWAP",
+        "label": "Battery swap sequence optimization",
+        "primary_actor_text": "AI_ICP",
+        "verb": "optimize",
+        "object_text": "Swap sequence preventing 2 or more units leaving simultaneously",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_PERFORM_MAINTENANCE",
+        "label": "U-EDT Unit 7 hydraulic module preventive maintenance",
+        "primary_actor_text": "Site maintenance team",
+        "verb": "replace",
+        "object_text": "Hydraulic module",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_APPLY_OTA",
+        "label": "OTA route optimization patch application",
+        "primary_actor_text": "Onboard system",
+        "verb": "apply",
+        "object_text": "Route optimization algorithm patch",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_DOWNGRADE_LEVEL3",
+        "label": "Level 3 downgrade proposal and approval due to fog",
+        "primary_actor_text": "AI_ICP, remote supervisor",
+        "verb": "downgrade",
+        "object_text": "Operation mode from Level 4 to Level 3",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_ISOLATE_NETWORK",
+        "label": "External public network blocking and switch to internal security network",
+        "primary_actor_text": "Security system",
+        "verb": "block",
+        "object_text": "External public network",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_STOP_WORK",
+        "label": "Forced work stop and safe evacuation",
+        "primary_actor_text": "Remote supervisor, unmanned equipment fleet",
+        "verb": "stop",
+        "object_text": "Construction work and equipment operation",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_RESCAN_TERRAIN",
+        "label": "Terrain rescan and reference point re-correction after heavy rain",
+        "primary_actor_text": "DMSS, ASPCS",
+        "verb": "rescan",
+        "object_text": "Terrain changes after heavy rain and GPS-RTK reference points",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_RECALC_ROUTE",
+        "label": "Subsidence zone bypass route recalculation",
+        "primary_actor_text": "AI_ICP",
+        "verb": "recalculate",
+        "object_text": "Work routes and subsidence zone bypass routes",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_RESUME_CONSTRUCTION",
+        "label": "Construction resumption and return to Level 4",
+        "primary_actor_text": "Remote supervisor, unmanned equipment fleet",
+        "verb": "resume",
+        "object_text": "Excavation, hauling, grading, compaction work",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_GENERATE_FINAL_REPORT",
+        "label": "Automatic generation of 72 h mission final report",
+        "primary_actor_text": "ICCC, AI_ICP",
+        "verb": "generate",
+        "object_text": "Comprehensive performance report",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_LOCAL_SAFETY_STOP",
+        "label": "U-EEX Unit 2 pedestrian detection local stop",
+        "action_type": [
+          "safety_response"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "NGHE_A_MONITOR_FLEET",
+        "label": "Remote control of unmanned equipment fleet",
+        "primary_actor_text": "Remote operator",
+        "verb": "control",
+        "object_text": "Unmanned equipment fleet (no direct operation)",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "items": [
+      {
+        "item_id": "NGHE_I_BATTERY_PACK",
+        "label": "Battery pack",
+        "item_type": "energy_item",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "NGHE_I_TERRAIN_POINT_CLOUD",
+        "label": "3D point cloud terrain data",
+        "item_type": "terrain_data",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "NGHE_I_BIM_MODEL",
+        "label": "BIM and digital twin model",
+        "item_type": "digital_twin_model",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "NGHE_I_ROUTE_PLAN",
+        "label": "Work routes and bypass routes",
+        "item_type": "route_plan",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "NGHE_I_COMMAND_PACKET",
+        "label": "Command packet",
+        "item_type": "command_message",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "NGHE_I_SECURITY_LOG",
+        "label": "Security threat log",
+        "item_type": "security_log",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "NGHE_I_FINAL_REPORT",
+        "label": "Comprehensive performance report",
+        "item_type": "performance_report",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "NGHE_F_SETUP_SEQUENCE",
+        "label": "From infrastructure installation to Level 3 start",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "NGHE_F_CONSTRUCTION_PRODUCTION",
+        "label": "Excavation-hauling-grading-compaction process flow",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "NGHE_F_BATTERY_SWAP",
+        "label": "Return to BSS_T and battery replacement after SoC drop",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "NGHE_F_CYBER_RESPONSE",
+        "label": "Switch to security network after forged packet detection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "NGHE_F_RAIN_STOP",
+        "label": "Forced work stop after heavy rain intensifies",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "NGHE_F_RAIN_RECOVERY",
+        "label": "Rescan, route recalculation, and construction resumption after heavy rain ends",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "NGHE_CTRL_PARALLEL_CALIBRATION",
+        "label": "Simultaneous authentication and calibration of 19 units of equipment",
+        "control_type": "fork_join",
+        "guard_texts": [
+          "All equipment ready within 1 h"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "control_id": "NGHE_CTRL_SWAP_SCHEDULING",
+        "label": "Swap scheduling preventing 2 or more units leaving work simultaneously",
+        "control_type": "scheduling_guard",
+        "guard_texts": [
+          "Two or more units do not leave work at the same time"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "control_id": "NGHE_CTRL_FOG_DOWNGRADE",
+        "label": "Level 3 downgrade guard in fog",
+        "control_type": "decision",
+        "guard_texts": [
+          "Visibility 200 m or less",
+          "Sensor confidence score drop"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "control_id": "NGHE_CTRL_CYBER_ISOLATION",
+        "label": "Security network isolation upon forged command packet detection",
+        "control_type": "decision",
+        "guard_texts": [
+          "Digital signature forgery detection"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "control_id": "NGHE_CTRL_RAIN_STOP",
+        "label": "Forced work stop during heavy rain",
+        "control_type": "decision",
+        "guard_texts": [
+          "Heavy rain intensifies",
+          "Remote supervisor forced work stop command"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "control_id": "NGHE_CTRL_RECOVERY_GUARD",
+        "label": "Staged recovery guard after heavy rain",
+        "control_type": "guarded_sequence",
+        "guard_texts": [
+          "Heavy rain end confirmed",
+          "Terrain rescan",
+          "Safety inspection completed",
+          "30 min of normal operation confirmed"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "NGHE_C_TARGET_VOLUME",
+        "label": "72 h target earthwork volume of at least 38,000 m3",
+        "constraint_type": "mission_constraint",
+        "expression_text": "completed_volume >= 38000 m3 within 72 hours",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "NGHE_C_RTDD_LATENCY",
+        "label": "RTDD end-to-end latency within 20 ms",
+        "constraint_type": "performance_constraint",
+        "expression_text": "rtdd_latency <= 20 ms",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "NGHE_C_ENCRYPTION_DELAY",
+        "label": "Encryption latency 2 ms or less",
+        "constraint_type": "performance_constraint",
+        "expression_text": "encryption_delay <= 2 ms",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "NGHE_C_SWAP_TIME",
+        "label": "Battery pack replacement within 5 min",
+        "constraint_type": "time_constraint",
+        "expression_text": "battery_swap_duration <= 5 minutes",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.94,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "NGHE_C_NO_TWO_EQUIPMENT_OUT",
+        "label": "Prevent 2 or more units leaving work simultaneously",
+        "constraint_type": "resource_constraint",
+        "expression_text": "simultaneous_out_of_work_equipment_count < 2",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "NGHE_C_SPEED_LIMIT_FOG",
+        "label": "Speed 5 km/h or less during fog",
+        "constraint_type": "safety_constraint",
+        "expression_text": "speed <= 5 km/h during fog degraded mode",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "NGHE_C_SAFETY_DISTANCE_X2",
+        "label": "Safety distance expanded 2 times",
+        "constraint_type": "safety_constraint",
+        "expression_text": "safety_distance = 2 * nominal_safety_distance",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "NGHE_C_MTTR_1H",
+        "label": "Preventive maintenance within 1 h",
+        "constraint_type": "maintenance_constraint",
+        "expression_text": "maintenance_duration <= 1 hour",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "NGHE_C_NOISE_65DB",
+        "label": "Night noise 65 dB or less",
+        "constraint_type": "environment_constraint",
+        "expression_text": "noise <= 65 dB",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "NGHE_C_ZERO_ACCIDENT",
+        "label": "Zero personnel accidents",
+        "constraint_type": "safety_constraint",
+        "expression_text": "human_accident_count == 0",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "NGHE_G_COMPLETE_VOLUME",
+        "label": "Achieve 72 h target earthwork volume",
+        "goal_type": "mission_objective",
+        "desired_state_text": "Complete at least 38,000 m3 of earthwork within 72 h",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.95,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "RequirementCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "goal_id": "NGHE_G_KEEP_SAFE",
+        "label": "Maintain zero-accident and safety conditions",
+        "goal_type": "safety_objective",
+        "desired_state_text": "Maintain zero personnel accidents and safe evacuation conditions",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "RequirementCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "goal_id": "NGHE_G_MAINTAIN_PRODUCTIVITY",
+        "label": "Minimize work stops and maintain productivity",
+        "goal_type": "operational_objective",
+        "desired_state_text": "Avoid stopping the entire process even during battery swap, maintenance, and OTA update",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "RequirementCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "goal_id": "NGHE_G_CYBER_INTEGRITY",
+        "label": "Ensure control authority integrity",
+        "goal_type": "security_objective",
+        "desired_state_text": "After forged command packet detection, confirm control authority integrity and return to normal operation",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.91,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "RequirementCheck",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "NGHE_R_LEVEL3_START",
+        "label": "Start in Level 3 to ensure first-operation safety",
+        "reason_type": [
+          "safety_rationale"
+        ],
+        "rationale_text": "Start in supervised autonomy mode because this is the first operation",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "reason_id": "NGHE_R_FOG_DOWNGRADE",
+        "label": "Level 3 downgrade because of degraded sensor confidence",
+        "reason_type": [
+          "safety_rationale"
+        ],
+        "rationale_text": "Prioritize safety conditions due to visibility of 200 m or less and confidence score drop",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "reason_id": "NGHE_R_CYBER_ISOLATION",
+        "label": "Network isolation because of the forged command packet",
+        "reason_type": [
+          "security_rationale"
+        ],
+        "rationale_text": "Block the external public network in response to a command injection attempt from an unauthorized external IP",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.93,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "reason_id": "NGHE_R_RAIN_STOP",
+        "label": "Work stop because of heavy rain and sensor contamination",
+        "reason_type": [
+          "safety_rationale"
+        ],
+        "rationale_text": "Level 1 emergency stop because of 30 mm/h heavy rain, sensor covering, and pedestrian approach risk",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 0.92,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "reason_id": "NGHE_R_PHM_MAINTENANCE",
+        "label": "Preventive maintenance following hydraulic anomaly sign detection",
+        "reason_type": [
+          "evidence",
+          "cause"
+        ],
+        "rationale_text": "The PHM module detected the U-EDT Unit 7 hydraulic system pressure pattern anomaly",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U02"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "reason_id": "NGHE_R_SUBSIDENCE_REROUTE",
+        "label": "Bypass route recalculation because of ground subsidence zones",
+        "reason_type": [
+          "evidence",
+          "cause"
+        ],
+        "rationale_text": "2 ground subsidence zones were identified after heavy rain",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "reason_id": "NGHE_R_LOCAL_STOP_SAFETY",
+        "label": "Local safety stop due to sensor covering and pedestrian approach",
+        "reason_type": [
+          "evidence",
+          "safety_rationale"
+        ],
+        "rationale_text": "Maintenance worker approach was detected while the LiDAR/camera lens was covered 50% or more",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "domain_extension_rules": [
+      {
+        "domain_extension_rule_id": "NGHE_DER_AUTONOMY",
+        "label": "Autonomous construction operation mode vocabulary",
+        "domain": "autonomous_construction",
+        "terms": [
+          "Level 1 emergency stop",
+          "Level 3 supervised autonomy",
+          "Level 4 full autonomy",
+          "AI_ICP"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "domain_extension_rule_id": "NGHE_DER_EQUIPMENT",
+        "label": "Unmanned heavy equipment and support system vocabulary",
+        "domain": "construction_equipment",
+        "terms": [
+          "U-EEX",
+          "U-EDT",
+          "U-EDB",
+          "U-ERC",
+          "BSS_T",
+          "DMSS",
+          "ASPCS"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "domain_extension_rule_id": "NGHE_DER_CYBER_SAFETY",
+        "label": "Cyber and safety response vocabulary",
+        "domain": "cyber_safety",
+        "terms": [
+          "HSM",
+          "forged command packet",
+          "closed security network",
+          "Keep-out Zone",
+          "Hard-wired Safe Stop"
+        ],
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 0.87,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "semantic_bindings": [
+      {
+        "semantic_binding_id": "NGHE_SB_EQUIPMENT_TO_PART",
+        "label": "Unmanned equipment fleet to SysML Part",
+        "source_slot_text": "Unmanned equipment fleet",
+        "target_standard_element": "SysML Part",
+        "binding_kind": "performer_to_part",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.88,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "semantic_binding_id": "NGHE_SB_LEVEL_TRANSITIONS",
+        "label": "Autonomous operation mode transition to StateTransitionAction",
+        "source_slot_text": "Level 3/4/1 transitions",
+        "target_standard_element": "SysML StateTransitionAction",
+        "binding_kind": "transition_to_state_transition",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.9,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "semantic_binding_id": "NGHE_SB_ROUTE_PLAN_ITEM",
+        "label": "Work route to SysML Item",
+        "source_slot_text": "Work routes and bypass routes",
+        "target_standard_element": "SysML Item",
+        "binding_kind": "payload_to_item",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U01"
+        },
+        "confidence_by_llm": 0.86,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "semantic_binding_id": "NGHE_SB_CYBER_ISOLATION",
+        "label": "Network isolation transition binding",
+        "source_slot_text": "External→internal closed network switch",
+        "target_standard_element": "SysML StateTransitionAction",
+        "binding_kind": "transition_to_state_transition",
+        "source_ref": {
+          "source_unit_id": "NGHE_GT_U03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "NGHE_GT_REL_001",
+        "source_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "relation_type": "has_part",
+        "target_slot_id": "NGHE_P7_1_EEX",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_002",
+        "source_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "relation_type": "has_part",
+        "target_slot_id": "NGHE_P7_2_EDT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_003",
+        "source_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "relation_type": "has_part",
+        "target_slot_id": "NGHE_P7_3_EDB",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_004",
+        "source_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "relation_type": "has_part",
+        "target_slot_id": "NGHE_P7_4_ERC",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_005",
+        "source_slot_id": "NGHE_SCN_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_SETUP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_006",
+        "source_slot_id": "NGHE_SCN_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_007",
+        "source_slot_id": "NGHE_SCN_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_FOG_CYBER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_008",
+        "source_slot_id": "NGHE_SCN_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_RAIN_STOP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_009",
+        "source_slot_id": "NGHE_SCN_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_episode",
+        "target_slot_id": "NGHE_EP_RECOVERY_COMPLETE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_010",
+        "source_slot_id": "NGHE_SIT_LEVEL3",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_AUTONOMY_LEVEL3",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_013",
+        "source_slot_id": "NGHE_SIT_LEVEL4",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_AUTONOMY_LEVEL4",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_014",
+        "source_slot_id": "NGHE_SIT_ECO_SWAP",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_SOC_15",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_015",
+        "source_slot_id": "NGHE_SIT_CYBER_ISOLATED",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_NETWORK_ISOLATED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_016",
+        "source_slot_id": "NGHE_SIT_NETWORK_OPEN",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_NETWORK_OPEN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_017",
+        "source_slot_id": "NGHE_SIT_LEVEL1_STOP",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_AUTONOMY_LEVEL1",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_018",
+        "source_slot_id": "NGHE_SIT_LEVEL1_STOP",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_RAIN_30MM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_019",
+        "source_slot_id": "NGHE_SIT_MISSION_COMPLETE",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_TARGET_VOLUME",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_020",
+        "source_slot_id": "NGHE_SIT_MISSION_COMPLETE",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_ACTUAL_VOLUME",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_021",
+        "source_slot_id": "NGHE_SIT_MISSION_COMPLETE",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_ZERO_ACCIDENT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_022",
+        "source_slot_id": "NGHE_TR_LEVEL3_TO_LEVEL4",
+        "relation_type": "from_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL3",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_023",
+        "source_slot_id": "NGHE_TR_LEVEL3_TO_LEVEL4",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL4",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_024",
+        "source_slot_id": "NGHE_TR_LEVEL4_TO_LEVEL3_FOG",
+        "relation_type": "from_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL4",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_026",
+        "source_slot_id": "NGHE_TR_NETWORK_TO_ISOLATED",
+        "relation_type": "from_situation",
+        "target_slot_id": "NGHE_SIT_NETWORK_OPEN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_027",
+        "source_slot_id": "NGHE_TR_NETWORK_TO_ISOLATED",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_CYBER_ISOLATED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_029",
+        "source_slot_id": "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL1_STOP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_030",
+        "source_slot_id": "NGHE_TR_LEVEL1_TO_LEVEL3_RECOVERY",
+        "relation_type": "from_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL1_STOP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_031",
+        "source_slot_id": "NGHE_TR_LEVEL1_TO_LEVEL3_RECOVERY",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL3",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_032",
+        "source_slot_id": "NGHE_TR_RECOVERY_LEVEL3_TO_LEVEL4",
+        "relation_type": "from_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL3",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_033",
+        "source_slot_id": "NGHE_TR_RECOVERY_LEVEL3_TO_LEVEL4",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL4",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_034",
+        "source_slot_id": "NGHE_TR_MISSION_TO_COMPLETE",
+        "relation_type": "from_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL4",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_035",
+        "source_slot_id": "NGHE_TR_MISSION_TO_COMPLETE",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_MISSION_COMPLETE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_036",
+        "source_slot_id": "NGHE_EVT_LEVEL4_APPROVED",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_LEVEL3_TO_LEVEL4",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_037",
+        "source_slot_id": "NGHE_EVT_FOG_OCCURS",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_LEVEL4_TO_LEVEL3_FOG",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_038",
+        "source_slot_id": "NGHE_EVT_FORGED_COMMAND",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_NETWORK_TO_ISOLATED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_039",
+        "source_slot_id": "NGHE_EVT_HEAVY_RAIN",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_041",
+        "source_slot_id": "NGHE_EVT_RAIN_END",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_LEVEL1_TO_LEVEL3_RECOVERY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_042",
+        "source_slot_id": "NGHE_EVT_STABLE_OPERATION",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_RECOVERY_LEVEL3_TO_LEVEL4",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_043",
+        "source_slot_id": "NGHE_EVT_MISSION_COMPLETE",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_TR_MISSION_TO_COMPLETE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_044",
+        "source_slot_id": "NGHE_OBS_SOC_LOW",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_EVT_BATTERY_LOW",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_045",
+        "source_slot_id": "NGHE_OBS_SENSOR_CONF_DROP",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_EVT_FOG_OCCURS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_046",
+        "source_slot_id": "NGHE_OBS_FORGED_PACKET",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_EVT_FORGED_COMMAND",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_051",
+        "source_slot_id": "NGHE_A_INSTALL_INFRA",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P6_MAINT_TEAM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_052",
+        "source_slot_id": "NGHE_A_VERIFY_RTDD",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P5_SITE_SUPERVISOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_053",
+        "source_slot_id": "NGHE_A_VERIFY_RTDD",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P1_ICCC",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_054",
+        "source_slot_id": "NGHE_A_SCAN_TERRAIN",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P8_DMSS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_055",
+        "source_slot_id": "NGHE_A_SCAN_TERRAIN",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P8_ASPCS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_056",
+        "source_slot_id": "NGHE_A_CALIBRATE_EQUIPMENT",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_057",
+        "source_slot_id": "NGHE_A_START_CONSTRUCTION",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P2_AI_ICP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_058",
+        "source_slot_id": "NGHE_A_START_CONSTRUCTION",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_059",
+        "source_slot_id": "NGHE_A_BATTERY_SWAP",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P8_BSS_T",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_060",
+        "source_slot_id": "NGHE_A_OPTIMIZE_SWAP",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P2_AI_ICP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_061",
+        "source_slot_id": "NGHE_A_PERFORM_MAINTENANCE",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P6_MAINT_TEAM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_062",
+        "source_slot_id": "NGHE_A_APPLY_OTA",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_063",
+        "source_slot_id": "NGHE_A_DOWNGRADE_LEVEL3",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P2_AI_ICP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_064",
+        "source_slot_id": "NGHE_A_DOWNGRADE_LEVEL3",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P3_REMOTE_SUPERVISOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_066",
+        "source_slot_id": "NGHE_A_STOP_WORK",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P3_REMOTE_SUPERVISOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_067",
+        "source_slot_id": "NGHE_A_STOP_WORK",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_068",
+        "source_slot_id": "NGHE_A_RESCAN_TERRAIN",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P8_DMSS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_069",
+        "source_slot_id": "NGHE_A_RESCAN_TERRAIN",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P8_ASPCS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_070",
+        "source_slot_id": "NGHE_A_RECALC_ROUTE",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P2_AI_ICP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_071",
+        "source_slot_id": "NGHE_A_RESUME_CONSTRUCTION",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P3_REMOTE_SUPERVISOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_072",
+        "source_slot_id": "NGHE_A_RESUME_CONSTRUCTION",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_073",
+        "source_slot_id": "NGHE_A_GENERATE_FINAL_REPORT",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P1_ICCC",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_074",
+        "source_slot_id": "NGHE_A_GENERATE_FINAL_REPORT",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P2_AI_ICP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_076",
+        "source_slot_id": "NGHE_A_INSTALL_INFRA",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_BATTERY_PACK",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_077",
+        "source_slot_id": "NGHE_A_BATTERY_SWAP",
+        "relation_type": "uses_item",
+        "target_slot_id": "NGHE_I_BATTERY_PACK",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_078",
+        "source_slot_id": "NGHE_A_SCAN_TERRAIN",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_TERRAIN_POINT_CLOUD",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_079",
+        "source_slot_id": "NGHE_A_SCAN_TERRAIN",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_BIM_MODEL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_080",
+        "source_slot_id": "NGHE_A_START_CONSTRUCTION",
+        "relation_type": "uses_item",
+        "target_slot_id": "NGHE_I_ROUTE_PLAN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_081",
+        "source_slot_id": "NGHE_A_RECALC_ROUTE",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_ROUTE_PLAN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_082",
+        "source_slot_id": "NGHE_A_ISOLATE_NETWORK",
+        "relation_type": "acts_on",
+        "target_slot_id": "NGHE_I_COMMAND_PACKET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_083",
+        "source_slot_id": "NGHE_A_ISOLATE_NETWORK",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_SECURITY_LOG",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_084",
+        "source_slot_id": "NGHE_A_GENERATE_FINAL_REPORT",
+        "relation_type": "produces_item",
+        "target_slot_id": "NGHE_I_FINAL_REPORT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_085",
+        "source_slot_id": "NGHE_F_SETUP_SEQUENCE",
+        "relation_type": "flow_source",
+        "target_slot_id": "NGHE_A_INSTALL_INFRA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_086",
+        "source_slot_id": "NGHE_F_SETUP_SEQUENCE",
+        "relation_type": "flow_target",
+        "target_slot_id": "NGHE_A_START_CONSTRUCTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_087",
+        "source_slot_id": "NGHE_F_CONSTRUCTION_PRODUCTION",
+        "relation_type": "flow_source",
+        "target_slot_id": "NGHE_A_START_CONSTRUCTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_088",
+        "source_slot_id": "NGHE_F_CONSTRUCTION_PRODUCTION",
+        "relation_type": "flow_target",
+        "target_slot_id": "NGHE_A_BATTERY_SWAP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_089",
+        "source_slot_id": "NGHE_F_CONSTRUCTION_PRODUCTION",
+        "relation_type": "carries_item",
+        "target_slot_id": "NGHE_I_ROUTE_PLAN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_090",
+        "source_slot_id": "NGHE_F_BATTERY_SWAP",
+        "relation_type": "flow_source",
+        "target_slot_id": "NGHE_A_OPTIMIZE_SWAP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_091",
+        "source_slot_id": "NGHE_F_BATTERY_SWAP",
+        "relation_type": "flow_target",
+        "target_slot_id": "NGHE_A_BATTERY_SWAP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_092",
+        "source_slot_id": "NGHE_F_BATTERY_SWAP",
+        "relation_type": "carries_item",
+        "target_slot_id": "NGHE_I_BATTERY_PACK",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_093",
+        "source_slot_id": "NGHE_F_CYBER_RESPONSE",
+        "relation_type": "flow_source",
+        "target_slot_id": "NGHE_A_ISOLATE_NETWORK",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_094",
+        "source_slot_id": "NGHE_F_CYBER_RESPONSE",
+        "relation_type": "flow_target",
+        "target_slot_id": "NGHE_A_RESUME_CONSTRUCTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_095",
+        "source_slot_id": "NGHE_F_RAIN_STOP",
+        "relation_type": "flow_source",
+        "target_slot_id": "NGHE_A_STOP_WORK",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_096",
+        "source_slot_id": "NGHE_F_RAIN_STOP",
+        "relation_type": "flow_target",
+        "target_slot_id": "NGHE_A_RESCAN_TERRAIN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_097",
+        "source_slot_id": "NGHE_F_RAIN_RECOVERY",
+        "relation_type": "flow_source",
+        "target_slot_id": "NGHE_A_RESCAN_TERRAIN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_098",
+        "source_slot_id": "NGHE_F_RAIN_RECOVERY",
+        "relation_type": "flow_target",
+        "target_slot_id": "NGHE_A_RESUME_CONSTRUCTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_099",
+        "source_slot_id": "NGHE_CTRL_PARALLEL_CALIBRATION",
+        "relation_type": "controls_flow",
+        "target_slot_id": "NGHE_F_SETUP_SEQUENCE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_100",
+        "source_slot_id": "NGHE_CTRL_SWAP_SCHEDULING",
+        "relation_type": "controls_flow",
+        "target_slot_id": "NGHE_F_BATTERY_SWAP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_101",
+        "source_slot_id": "NGHE_CTRL_FOG_DOWNGRADE",
+        "relation_type": "controls_flow",
+        "target_slot_id": "NGHE_F_CONSTRUCTION_PRODUCTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_102",
+        "source_slot_id": "NGHE_CTRL_CYBER_ISOLATION",
+        "relation_type": "controls_flow",
+        "target_slot_id": "NGHE_F_CYBER_RESPONSE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_103",
+        "source_slot_id": "NGHE_CTRL_RAIN_STOP",
+        "relation_type": "controls_flow",
+        "target_slot_id": "NGHE_F_RAIN_STOP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_104",
+        "source_slot_id": "NGHE_CTRL_RECOVERY_GUARD",
+        "relation_type": "controls_flow",
+        "target_slot_id": "NGHE_F_RAIN_RECOVERY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_105",
+        "source_slot_id": "NGHE_TR_MISSION_TO_COMPLETE",
+        "relation_type": "constrained_by",
+        "target_slot_id": "NGHE_C_TARGET_VOLUME",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_106",
+        "source_slot_id": "NGHE_A_VERIFY_RTDD",
+        "relation_type": "constrained_by",
+        "target_slot_id": "NGHE_C_RTDD_LATENCY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_107",
+        "source_slot_id": "NGHE_A_VERIFY_RTDD",
+        "relation_type": "constrained_by",
+        "target_slot_id": "NGHE_C_ENCRYPTION_DELAY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_108",
+        "source_slot_id": "NGHE_A_BATTERY_SWAP",
+        "relation_type": "constrained_by",
+        "target_slot_id": "NGHE_C_SWAP_TIME",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_109",
+        "source_slot_id": "NGHE_A_OPTIMIZE_SWAP",
+        "relation_type": "constrained_by",
+        "target_slot_id": "NGHE_C_NO_TWO_EQUIPMENT_OUT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_110",
+        "source_slot_id": "NGHE_TR_LEVEL4_TO_LEVEL3_FOG",
+        "relation_type": "constrained_by",
+        "target_slot_id": "NGHE_C_SPEED_LIMIT_FOG",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_111",
+        "source_slot_id": "NGHE_A_DOWNGRADE_LEVEL3",
+        "relation_type": "constrained_by",
+        "target_slot_id": "NGHE_C_SAFETY_DISTANCE_X2",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_112",
+        "source_slot_id": "NGHE_A_PERFORM_MAINTENANCE",
+        "relation_type": "constrained_by",
+        "target_slot_id": "NGHE_C_MTTR_1H",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_113",
+        "source_slot_id": "NGHE_A_START_CONSTRUCTION",
+        "relation_type": "constrained_by",
+        "target_slot_id": "NGHE_C_NOISE_65DB",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_114",
+        "source_slot_id": "NGHE_A_STOP_WORK",
+        "relation_type": "constrained_by",
+        "target_slot_id": "NGHE_C_ZERO_ACCIDENT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_115",
+        "source_slot_id": "NGHE_SCN_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_goal",
+        "target_slot_id": "NGHE_G_COMPLETE_VOLUME",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_116",
+        "source_slot_id": "NGHE_SCN_72H_AUTONOMOUS_CONSTRUCTION",
+        "relation_type": "has_goal",
+        "target_slot_id": "NGHE_G_KEEP_SAFE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_117",
+        "source_slot_id": "NGHE_A_OPTIMIZE_SWAP",
+        "relation_type": "has_goal",
+        "target_slot_id": "NGHE_G_MAINTAIN_PRODUCTIVITY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_118",
+        "source_slot_id": "NGHE_A_ISOLATE_NETWORK",
+        "relation_type": "has_goal",
+        "target_slot_id": "NGHE_G_CYBER_INTEGRITY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_119",
+        "source_slot_id": "NGHE_A_START_CONSTRUCTION",
+        "relation_type": "has_reason",
+        "target_slot_id": "NGHE_R_LEVEL3_START",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_120",
+        "source_slot_id": "NGHE_A_DOWNGRADE_LEVEL3",
+        "relation_type": "has_reason",
+        "target_slot_id": "NGHE_R_FOG_DOWNGRADE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_121",
+        "source_slot_id": "NGHE_A_ISOLATE_NETWORK",
+        "relation_type": "has_reason",
+        "target_slot_id": "NGHE_R_CYBER_ISOLATION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_122",
+        "source_slot_id": "NGHE_A_STOP_WORK",
+        "relation_type": "has_reason",
+        "target_slot_id": "NGHE_R_RAIN_STOP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_123",
+        "source_slot_id": "NGHE_SB_EQUIPMENT_TO_PART",
+        "relation_type": "binds_to",
+        "target_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_124",
+        "source_slot_id": "NGHE_SB_LEVEL_TRANSITIONS",
+        "relation_type": "binds_to",
+        "target_slot_id": "NGHE_TR_LEVEL3_TO_LEVEL4",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_125",
+        "source_slot_id": "NGHE_SB_ROUTE_PLAN_ITEM",
+        "relation_type": "binds_to",
+        "target_slot_id": "NGHE_I_ROUTE_PLAN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_126",
+        "source_slot_id": "NGHE_SB_CYBER_ISOLATION",
+        "relation_type": "binds_to",
+        "target_slot_id": "NGHE_TR_NETWORK_TO_ISOLATED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_127",
+        "source_slot_id": "NGHE_DER_AUTONOMY",
+        "relation_type": "has_binding",
+        "target_slot_id": "NGHE_SB_LEVEL_TRANSITIONS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_128",
+        "source_slot_id": "NGHE_DER_EQUIPMENT",
+        "relation_type": "has_binding",
+        "target_slot_id": "NGHE_SB_EQUIPMENT_TO_PART",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_129",
+        "source_slot_id": "NGHE_DER_EQUIPMENT",
+        "relation_type": "has_binding",
+        "target_slot_id": "NGHE_SB_ROUTE_PLAN_ITEM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_130",
+        "source_slot_id": "NGHE_DER_CYBER_SAFETY",
+        "relation_type": "has_binding",
+        "target_slot_id": "NGHE_SB_CYBER_ISOLATION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_131",
+        "source_slot_id": "NGHE_TR_LEVEL3_TO_LEVEL4",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_LEVEL4_TO_LEVEL3_FOG",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_132",
+        "source_slot_id": "NGHE_TR_LEVEL4_TO_LEVEL3_FOG",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_NETWORK_TO_ISOLATED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_133",
+        "source_slot_id": "NGHE_TR_NETWORK_TO_ISOLATED",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_134",
+        "source_slot_id": "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_LEVEL1_TO_LEVEL3_RECOVERY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_135",
+        "source_slot_id": "NGHE_TR_LEVEL1_TO_LEVEL3_RECOVERY",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_RECOVERY_LEVEL3_TO_LEVEL4",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_136",
+        "source_slot_id": "NGHE_TR_RECOVERY_LEVEL3_TO_LEVEL4",
+        "relation_type": "temporal_before",
+        "target_slot_id": "NGHE_TR_MISSION_TO_COMPLETE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_137",
+        "source_slot_id": "NGHE_EP_SETUP",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_INSTALL_INFRA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_138",
+        "source_slot_id": "NGHE_EP_SETUP",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_VERIFY_RTDD",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_139",
+        "source_slot_id": "NGHE_EP_SETUP",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_SCAN_TERRAIN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_140",
+        "source_slot_id": "NGHE_EP_SETUP",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_CALIBRATE_EQUIPMENT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_141",
+        "source_slot_id": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_START_CONSTRUCTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_142",
+        "source_slot_id": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_BATTERY_SWAP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_143",
+        "source_slot_id": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_OPTIMIZE_SWAP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_144",
+        "source_slot_id": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_PERFORM_MAINTENANCE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_145",
+        "source_slot_id": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_APPLY_OTA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_146",
+        "source_slot_id": "NGHE_EP_FOG_CYBER",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_DOWNGRADE_LEVEL3",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_147",
+        "source_slot_id": "NGHE_EP_FOG_CYBER",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_ISOLATE_NETWORK",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_148",
+        "source_slot_id": "NGHE_EP_RAIN_STOP",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_STOP_WORK",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_149",
+        "source_slot_id": "NGHE_EP_RECOVERY_COMPLETE",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_RESCAN_TERRAIN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_150",
+        "source_slot_id": "NGHE_EP_RECOVERY_COMPLETE",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_RECALC_ROUTE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_151",
+        "source_slot_id": "NGHE_EP_RECOVERY_COMPLETE",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_RESUME_CONSTRUCTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_152",
+        "source_slot_id": "NGHE_EP_RECOVERY_COMPLETE",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_GENERATE_FINAL_REPORT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_PART_NGHE_P7_1_1_EEX",
+        "source_slot_id": "NGHE_P7_1_EEX",
+        "relation_type": "has_part",
+        "target_slot_id": "NGHE_P7_1_1_EEX",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_PART_NGHE_P7_1_2_EEX",
+        "source_slot_id": "NGHE_P7_1_EEX",
+        "relation_type": "has_part",
+        "target_slot_id": "NGHE_P7_1_2_EEX",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_PART_NGHE_P7_1_3_EEX",
+        "source_slot_id": "NGHE_P7_1_EEX",
+        "relation_type": "has_part",
+        "target_slot_id": "NGHE_P7_1_3_EEX",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_PART_NGHE_P7_2_7_EDT",
+        "source_slot_id": "NGHE_P7_2_EDT",
+        "relation_type": "has_part",
+        "target_slot_id": "NGHE_P7_2_7_EDT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_154",
+        "source_slot_id": "NGHE_SIT_LEVEL3_FOG",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_AUTONOMY_LEVEL3",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_155",
+        "source_slot_id": "NGHE_SIT_LEVEL3_FOG",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_VISIBILITY_200M",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_156",
+        "source_slot_id": "NGHE_SIT_LEVEL3_FOG",
+        "relation_type": "has_state_value",
+        "target_slot_id": "NGHE_SV_SPEED_LIMIT_5",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_157",
+        "source_slot_id": "NGHE_TR_LEVEL4_TO_LEVEL3_FOG",
+        "relation_type": "to_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL3_FOG",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_158",
+        "source_slot_id": "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN",
+        "relation_type": "from_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL3_FOG",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_159",
+        "source_slot_id": "NGHE_EVT_PEDESTRIAN_DETECTED",
+        "relation_type": "triggers",
+        "target_slot_id": "NGHE_A_LOCAL_SAFETY_STOP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_162",
+        "source_slot_id": "NGHE_A_LOCAL_SAFETY_STOP",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P7_1_2_EEX",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_163",
+        "source_slot_id": "NGHE_EP_RAIN_STOP",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_LOCAL_SAFETY_STOP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_164",
+        "source_slot_id": "NGHE_A_BATTERY_SWAP",
+        "relation_type": "acts_on",
+        "target_slot_id": "NGHE_P7_1_1_EEX",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_165",
+        "source_slot_id": "NGHE_A_PERFORM_MAINTENANCE",
+        "relation_type": "acts_on",
+        "target_slot_id": "NGHE_P7_2_7_EDT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_160",
+        "source_slot_id": "NGHE_A_ISOLATE_NETWORK",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P9_SECURITY_SYSTEM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_177",
+        "source_slot_id": "NGHE_EP_SETUP",
+        "relation_type": "has_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL3",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_178",
+        "source_slot_id": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+        "relation_type": "has_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL4",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_179",
+        "source_slot_id": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+        "relation_type": "has_situation",
+        "target_slot_id": "NGHE_SIT_ECO_SWAP",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_180",
+        "source_slot_id": "NGHE_EP_FOG_CYBER",
+        "relation_type": "has_situation",
+        "target_slot_id": "NGHE_SIT_CYBER_ISOLATED",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_181",
+        "source_slot_id": "NGHE_EP_FOG_CYBER",
+        "relation_type": "has_situation",
+        "target_slot_id": "NGHE_SIT_NETWORK_OPEN",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_182",
+        "source_slot_id": "NGHE_EP_FOG_CYBER",
+        "relation_type": "has_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL3_FOG",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_183",
+        "source_slot_id": "NGHE_EP_RAIN_STOP",
+        "relation_type": "has_situation",
+        "target_slot_id": "NGHE_SIT_LEVEL1_STOP",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_184",
+        "source_slot_id": "NGHE_EP_RECOVERY_COMPLETE",
+        "relation_type": "has_situation",
+        "target_slot_id": "NGHE_SIT_MISSION_COMPLETE",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_167",
+        "source_slot_id": "NGHE_OBS_LATENCY_OK",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_SV_RTDD_LATENCY_20MS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_168",
+        "source_slot_id": "NGHE_A_PERFORM_MAINTENANCE",
+        "relation_type": "has_reason",
+        "target_slot_id": "NGHE_R_PHM_MAINTENANCE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_169",
+        "source_slot_id": "NGHE_R_PHM_MAINTENANCE",
+        "relation_type": "has_evidence",
+        "target_slot_id": "NGHE_OBS_PHM_WARNING",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_170",
+        "source_slot_id": "NGHE_OBS_PHM_WARNING",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_EVT_HYDRAULIC_ANOMALY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_171",
+        "source_slot_id": "NGHE_A_RECALC_ROUTE",
+        "relation_type": "has_reason",
+        "target_slot_id": "NGHE_R_SUBSIDENCE_REROUTE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_172",
+        "source_slot_id": "NGHE_R_SUBSIDENCE_REROUTE",
+        "relation_type": "has_evidence",
+        "target_slot_id": "NGHE_OBS_TERRAIN_SUBSIDENCE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_173",
+        "source_slot_id": "NGHE_OBS_TERRAIN_SUBSIDENCE",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_EVT_TERRAIN_SUBSIDENCE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_174",
+        "source_slot_id": "NGHE_A_LOCAL_SAFETY_STOP",
+        "relation_type": "has_reason",
+        "target_slot_id": "NGHE_R_LOCAL_STOP_SAFETY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_175",
+        "source_slot_id": "NGHE_R_LOCAL_STOP_SAFETY",
+        "relation_type": "has_evidence",
+        "target_slot_id": "NGHE_OBS_SENSOR_OCCLUSION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_176",
+        "source_slot_id": "NGHE_OBS_SENSOR_OCCLUSION",
+        "relation_type": "observes",
+        "target_slot_id": "NGHE_SV_SENSOR_OCCLUSION_50",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_185",
+        "source_slot_id": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+        "relation_type": "contains_action",
+        "target_slot_id": "NGHE_A_MONITOR_FLEET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_186",
+        "source_slot_id": "NGHE_A_MONITOR_FLEET",
+        "relation_type": "performed_by",
+        "target_slot_id": "NGHE_P4_REMOTE_OPERATOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_187",
+        "source_slot_id": "NGHE_A_MONITOR_FLEET",
+        "relation_type": "acts_on",
+        "target_slot_id": "NGHE_P7_EQUIPMENT_FLEET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "NGHE_GT_REL_188",
+        "source_slot_id": "NGHE_A_MONITOR_FLEET",
+        "relation_type": "temporal_during",
+        "target_slot_id": "NGHE_A_START_CONSTRUCTION",
+        "evidence_level": "inferred",
+        "confidence": 0.85
+      }
+    ],
+    "validation_issues": [],
+    "generated_sysml": {
+      "packages": [],
+      "definitions": [],
+      "usages": []
+    },
+    "generated_views": {
+      "activity_diagrams": [],
+      "effbd_views": [],
+      "state_views": []
+    },
+    "assumptions": [
+      "The gold slot graph is fixed first, and the easy, medium, and hard inputs express the same atomic information.",
+      "Difficulty changes only expression complexity and does not delete numbers, units, individual actors, or state and transition information.",
+      "benchmark_realizations links the per-difficulty input paragraphs to the canonical source units."
+    ],
+    "generation_mode": "ground_truth_reverse",
+    "benchmark_realizations": [
+      {
+        "difficulty": "easy",
+        "document": "nghe.easy.md",
+        "source_unit_map": [
+          {
+            "source_unit_id": "NGHE_GT_U01",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "NGHE_GT_U02",
+            "paragraph_index": [
+              2
+            ]
+          },
+          {
+            "source_unit_id": "NGHE_GT_U03",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "NGHE_GT_U04",
+            "paragraph_index": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "document": "nghe.medium.md",
+        "source_unit_map": [
+          {
+            "source_unit_id": "NGHE_GT_U01",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "NGHE_GT_U02",
+            "paragraph_index": [
+              2
+            ]
+          },
+          {
+            "source_unit_id": "NGHE_GT_U03",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "NGHE_GT_U04",
+            "paragraph_index": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "document": "nghe.hard.md",
+        "source_unit_map": [
+          {
+            "source_unit_id": "NGHE_GT_U01",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "NGHE_GT_U02",
+            "paragraph_index": [
+              2
+            ]
+          },
+          {
+            "source_unit_id": "NGHE_GT_U03",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "NGHE_GT_U04",
+            "paragraph_index": [
+              4
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

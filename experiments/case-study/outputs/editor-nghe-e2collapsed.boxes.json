@@ -1,0 +1,335 @@
+{
+  "deviceScaleFactor": 2,
+  "boxes": [
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start::Install energy infrastructure, stock packs",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start",
+      "x": 256,
+      "y": 80,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start::Verify RTDD latency and HSM auth",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start",
+      "x": 256,
+      "y": 272,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start::Scan 3D point cloud, correct datums",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start",
+      "x": 256,
+      "y": 464,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start::Authenticate and calibrate 19 machines",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start",
+      "x": 256,
+      "y": 656,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E2 Level 4 autonomous production",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction",
+      "x": 592,
+      "y": 368,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::Propose and approve Level 3 in fog",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response",
+      "x": 928,
+      "y": 272,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response::Cut public network, switch to closed net",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response",
+      "x": 928,
+      "y": 464,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::Force work stop and evacuate",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop",
+      "x": 1392,
+      "y": 272,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::Local stop of U-EEX 2 on pedestrian",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop",
+      "x": 1392,
+      "y": 464,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion::Rescan terrain after rain",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion",
+      "x": 1856,
+      "y": 176,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion::Recompute detour around subsidence",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion",
+      "x": 1856,
+      "y": 368,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion::Resume construction, return to Level 4",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion",
+      "x": 2094,
+      "y": 176,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion::Generate 72-hour final report",
+      "nodeElement": "FunctionNode",
+      "parent": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion",
+      "x": 1856,
+      "y": 560,
+      "width": 160,
+      "height": 128
+    },
+    {
+      "kind": "node",
+      "id": "New Start Concurrency_1",
+      "nodeElement": "StartConcurrencyNode",
+      "parent": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start",
+      "x": 160,
+      "y": 408,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "New End Concurrency_1",
+      "nodeElement": "EndConcurrencyNode",
+      "parent": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start",
+      "x": 464,
+      "y": 408,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "New Start Concurrency_3",
+      "nodeElement": "StartConcurrencyNode",
+      "parent": "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response",
+      "x": 832,
+      "y": 408,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "New End Concurrency_4",
+      "nodeElement": "EndConcurrencyNode",
+      "parent": "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response",
+      "x": 1136,
+      "y": 408,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "New Start Concurrency_4",
+      "nodeElement": "StartConcurrencyNode",
+      "parent": "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop",
+      "x": 1296,
+      "y": 408,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "New End Concurrency_5",
+      "nodeElement": "EndConcurrencyNode",
+      "parent": "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop",
+      "x": 1600,
+      "y": 408,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "New Start Concurrency_5",
+      "nodeElement": "StartConcurrencyNode",
+      "parent": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion",
+      "x": 1760,
+      "y": 408,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "New End Concurrency_6",
+      "nodeElement": "EndConcurrencyNode",
+      "parent": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion",
+      "x": 2302,
+      "y": 408,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::start(E1 Site setup and Level 3 start)",
+      "nodeElement": "StartReferenceNode",
+      "parent": "NGHE 72-hour autonomous construction",
+      "x": 48,
+      "y": 416,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "kind": "node",
+      "id": "NGHE 72-hour autonomous construction::done(E5 Recovery and mission completion)",
+      "nodeElement": "EndReferenceNode",
+      "parent": "NGHE 72-hour autonomous construction",
+      "x": 2430,
+      "y": 408,
+      "width": 48,
+      "height": 48
+    },
+    {
+      "kind": "node",
+      "id": "Battery pack",
+      "nodeElement": "ItemNode",
+      "parent": "NGHE 72-hour autonomous construction",
+      "x": 462.515625,
+      "y": 323.5,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "node",
+      "id": "3D point-cloud terrain data",
+      "nodeElement": "ItemNode",
+      "parent": "NGHE 72-hour autonomous construction",
+      "x": 304,
+      "y": 800,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "node",
+      "id": "BIM and digital-twin model",
+      "nodeElement": "ItemNode",
+      "parent": "NGHE 72-hour autonomous construction",
+      "x": 420,
+      "y": 800,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "node",
+      "id": "Work and detour routes",
+      "nodeElement": "ItemNode",
+      "parent": "NGHE 72-hour autonomous construction",
+      "x": 1595,
+      "y": 524,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "node",
+      "id": "Security threat log",
+      "nodeElement": "ItemNode",
+      "parent": "NGHE 72-hour autonomous construction",
+      "x": 1034,
+      "y": 608,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "node",
+      "id": "Final performance report",
+      "nodeElement": "ItemNode",
+      "parent": "NGHE 72-hour autonomous construction",
+      "x": 2081,
+      "y": 508,
+      "width": 100,
+      "height": 40
+    },
+    {
+      "kind": "region",
+      "id": "NGHE 72-hour autonomous construction::E1 Site setup and Level 3 start",
+      "x": 128,
+      "y": 48,
+      "width": 416,
+      "height": 768
+    },
+    {
+      "kind": "region",
+      "id": "NGHE 72-hour autonomous construction::E3 Fog and cyber threat response",
+      "x": 800,
+      "y": 240,
+      "width": 416,
+      "height": 384
+    },
+    {
+      "kind": "region",
+      "id": "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop",
+      "x": 1264,
+      "y": 240,
+      "width": 416,
+      "height": 384
+    },
+    {
+      "kind": "region",
+      "id": "NGHE 72-hour autonomous construction::E5 Recovery and mission completion",
+      "x": 1728,
+      "y": 144,
+      "width": 654,
+      "height": 576
+    },
+    {
+      "kind": "region",
+      "id": "NGHE 72-hour autonomous construction",
+      "x": 16,
+      "y": 16,
+      "width": 2494,
+      "height": 832
+    }
+  ]
+}

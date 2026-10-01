@@ -1,0 +1,34 @@
+digraph S { rankdir=LR; newrank=true; nodesep=0.3; ranksep=0.55; bgcolor="white"; compound=true; pad=0.05;
+node [fontname="Arial", fontsize=10, shape=plain]; edge [fontname="Arial", fontsize=8, color="#1E6E8C", arrowsize=0.6];
+label=<<B>NGHE 72-hour autonomous construction</B>>; labelloc=t; labeljust=l; fontname="Arial"; fontsize=11;
+subgraph "cluster_r2" { label=<<I>network_mode</I>>; labeljust=l; fontsize=9; fontcolor="#6F6C66"; style="dashed,rounded"; color="#8A8F96";
+"NGHE_SIT_CYBER_ISOLATED" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Closed security<BR/>network</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">network_mode = closed_internal</FONT></TD></TR></TABLE>>];
+"NGHE_SIT_NETWORK_OPEN" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Public network in use</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">network_mode = external_public</FONT></TD></TR></TABLE>>];
+"init_r2" [shape=circle, style=filled, fillcolor=black, label="", width=0.12, fixedsize=true];
+"init_r2" -> "NGHE_SIT_NETWORK_OPEN" [color=black];
+"NGHE_SIT_NETWORK_OPEN" -> "NGHE_SIT_CYBER_ISOLATED" [label=<Forged command packet<BR/>injected>];
+}
+subgraph "cluster_r1" { label=<<I>battery_soc</I>>; labeljust=l; fontsize=9; fontcolor="#6F6C66"; style="dashed,rounded"; color="#8A8F96";
+"NGHE_SIT_ECO_SWAP" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Low-power battery swap</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">battery_soc = 15 percent</FONT></TD></TR></TABLE>>];
+"init_r1" [shape=circle, style=filled, fillcolor=black, label="", width=0.12, fixedsize=true];
+"init_r1" -> "NGHE_SIT_ECO_SWAP" [color=black];
+}
+subgraph "cluster_r0" { label=<<I>autonomy_level</I>>; labeljust=l; fontsize=9; fontcolor="#6F6C66"; style="dashed,rounded"; color="#8A8F96";
+"NGHE_SIT_LEVEL3" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Level 3 supervised<BR/>autonomy</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">autonomy_level = Level 3</FONT></TD></TR></TABLE>>];
+"NGHE_SIT_LEVEL4" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Level 4 full autonomy</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">autonomy_level = Level 4</FONT></TD></TR></TABLE>>];
+"NGHE_SIT_LEVEL1_STOP" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Level 1 emergency stop</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">autonomy_level = Level 1</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">rainfall_rate = 30 mm/h</FONT></TD></TR></TABLE>>];
+"NGHE_SIT_MISSION_COMPLETE" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>72-hour mission<BR/>complete</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">target_volume = 38000 m3</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">actual_volume = 38200 m3</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">human_accident_count = 0</FONT></TD></TR></TABLE>>];
+"NGHE_SIT_LEVEL3_FOG" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Level 3 limited<BR/>operation in fog</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">autonomy_level = Level 3</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">visibility = 200 m</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">speed_limit = 5 km/h</FONT></TD></TR></TABLE>>];
+"init_r0" [shape=circle, style=filled, fillcolor=black, label="", width=0.12, fixedsize=true];
+"init_r0" -> "NGHE_SIT_LEVEL3" [color=black];
+"NGHE_SIT_LEVEL3" -> "NGHE_SIT_LEVEL4" [label=<Level 4 switch approved>];
+"NGHE_SIT_LEVEL4" -> "NGHE_SIT_LEVEL3_FOG" [label=<Dense fog occurs<BR/><FONT COLOR="#9a3c00">[speed &lt;= 5 km/h during fog<BR/>degraded mode]</FONT>>];
+"NGHE_SIT_LEVEL3_FOG" -> "NGHE_SIT_LEVEL1_STOP" [label=<Heavy rain sets in>];
+"NGHE_SIT_LEVEL1_STOP" -> "NGHE_SIT_LEVEL3" [label=<End of rain confirmed>];
+"NGHE_SIT_LEVEL3" -> "NGHE_SIT_LEVEL4" [label=<About 30 min of normal<BR/>operation confirmed>];
+"NGHE_SIT_LEVEL4" -> "NGHE_SIT_MISSION_COMPLETE" [label=<72-hour mission<BR/>completed<BR/><FONT COLOR="#9a3c00">[completed_volume &gt;= 38000<BR/>m3 within 72 hours]</FONT>>];
+}
+{ rank=same; "init_r2"; "init_r1"; "init_r0"; }
+"init_r2" -> "init_r1" [style=invis];
+"init_r1" -> "init_r0" [style=invis];
+}

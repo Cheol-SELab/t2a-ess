@@ -1,0 +1,5 @@
+# LF everywhere: tests compare generated text byte for byte
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.jpg binary

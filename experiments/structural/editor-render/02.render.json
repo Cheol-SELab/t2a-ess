@@ -1,0 +1,31 @@
+{
+  "in": "02.sysml",
+  "out": "02.png",
+  "expanded": [
+    "NGHE 72 h autonomous construction and contingency response::Fog and cyber threat response",
+    "NGHE 72 h autonomous construction and contingency response::Heavy rain and work stop",
+    "NGHE 72 h autonomous construction and contingency response::Level 4 autonomous construction and productivity maintenance",
+    "NGHE 72 h autonomous construction and contingency response::Recovery after heavy rain and mission completion",
+    "NGHE 72 h autonomous construction and contingency response::Site setup and Level 3 start"
+  ],
+  "nodeKinds": {
+    "FunctionNode": 24,
+    "StartConcurrencyNode": 5,
+    "EndConcurrencyNode": 6,
+    "ItemNode": 6,
+    "StartReferenceNode": 1,
+    "EndReferenceNode": 1
+  },
+  "edges": 57,
+  "metrics": [
+    "rootIds",
+    "topologyOf",
+    "step",
+    "lane",
+    "pathPointer",
+    "pair",
+    "slot",
+    "branchStates",
+    "clusterHierarchy"
+  ]
+}

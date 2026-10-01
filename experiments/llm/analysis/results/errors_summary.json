@@ -1,0 +1,73 @@
+{
+ "slot_FN": {
+  "per_run": 15.518518518518519,
+  "errors_in_sample": 16,
+  "ci": [
+   0.44518154601046633,
+   0.7975234356826436
+  ],
+  "errors_per_run": 9.931851851851853,
+  "cats": {
+   "missing/E": 5,
+   "type/D": 8,
+   "endpoint/E": 6,
+   "edge/E": 5,
+   "near/D": 1
+  }
+ },
+ "slot_FP": {
+  "per_run": 29.30246913580247,
+  "errors_in_sample": 3,
+  "ci": [
+   0.04166741357068093,
+   0.29956192183373487
+  ],
+  "errors_per_run": 3.516296296296296,
+  "cats": {
+   "endpoint/D": 1,
+   "supported/D": 10,
+   "type/D": 2,
+   "unsupported/D": 2,
+   "edge/D": 2,
+   "near/D": 2,
+   "unsupported/E": 2,
+   "endpoint/E": 1,
+   "granular/D": 3
+  }
+ },
+ "rel_FN": {
+  "per_run": 34.25925925925926,
+  "errors_in_sample": 7,
+  "ci": [
+   0.14283673837381572,
+   0.47576971896558296
+  ],
+  "errors_per_run": 9.592592592592592,
+  "cats": {
+   "other/E": 2,
+   "endpoint/D": 16,
+   "type/E": 4,
+   "endpoint/E": 1,
+   "other/D": 2
+  }
+ },
+ "rel_FP": {
+  "per_run": 74.87037037037037,
+  "errors_in_sample": 1,
+  "ci": [
+   0.007096050386699169,
+   0.19544472405022525
+  ],
+  "errors_per_run": 2.9948148148148146,
+  "cats": {
+   "endpoint/D": 17,
+   "other/D": 7,
+   "other/E": 1
+  }
+ },
+ "all": {
+  "unmatched_per_run": 153.95061728395063,
+  "errors_per_run": 26.035555555555554,
+  "error_share": 0.16911627906976742
+ }
+}

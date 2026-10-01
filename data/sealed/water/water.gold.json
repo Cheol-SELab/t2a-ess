@@ -1,0 +1,1742 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "W_GOLD",
+    "title": "Water treatment plant high-turbidity response",
+    "extraction_schema": "T2A-ESS",
+    "generation_mode": "manual_development_reference",
+    "source_units": [
+      {
+        "source_unit_id": "P1",
+        "unit_type": "paragraph",
+        "text": "The water treatment plant operating system consists of the central control room, the raw water quality analyzer, the coagulant dosing equipment, 6 filters, and the chlorinator. The raw water quality analyzer measures turbidity and pH."
+      },
+      {
+        "source_unit_id": "P2",
+        "unit_type": "paragraph",
+        "text": "Externally, there are the upstream dam management office and the city hall water supply division; equipment operation is handled by the operators, and water quality analysis by the water quality analysis team."
+      },
+      {
+        "source_unit_id": "P3",
+        "unit_type": "paragraph",
+        "text": "At 1:00 p.m., the upstream dam management office notifies the central control room that it will increase the discharge rate. The central control room shortens the raw water turbidity monitoring interval from 30 min to 5 min."
+      },
+      {
+        "source_unit_id": "P4",
+        "unit_type": "paragraph",
+        "text": "When the raw water quality analyzer measures a turbidity of 50 NTU and transmits it to the central control room, the central control room declares the high-turbidity response stage. If the turbidity is 100 NTU or more, the central control room temporarily suspends water intake."
+      },
+      {
+        "source_unit_id": "P5",
+        "unit_type": "paragraph",
+        "text": "In the high-turbidity response stage, the operators double the coagulant dose, and the water quality analysis team performs a coagulation test every 1 h. The two tasks proceed simultaneously."
+      },
+      {
+        "source_unit_id": "P6",
+        "unit_type": "paragraph",
+        "text": "At 3:00 p.m., when the turbidity is measured at 120 NTU, the central control room temporarily suspends water intake and requests a water supply adjustment from the city hall water supply division."
+      },
+      {
+        "source_unit_id": "P7",
+        "unit_type": "paragraph",
+        "text": "While water intake is suspended, the operators check the distribution reservoir level every 30 min. If the distribution reservoir level falls below 40%, the operators open the emergency interconnection pipe."
+      },
+      {
+        "source_unit_id": "P8",
+        "unit_type": "paragraph",
+        "text": "At 5:00 p.m., the distribution reservoir level was checked at 42%, so the emergency interconnection pipe was not opened."
+      },
+      {
+        "source_unit_id": "P9",
+        "unit_type": "paragraph",
+        "text": "At 6:00 p.m., when the turbidity drops to 60 NTU, the central control room resumes water intake. When water intake is resumed, the operators backwash the 6 filters one after another."
+      },
+      {
+        "source_unit_id": "P10",
+        "unit_type": "paragraph",
+        "text": "When the backwashing is all finished and the water quality analysis team confirms that the treated water turbidity is 0.5 NTU or less, the central control room lifts the water supply adjustment."
+      },
+      {
+        "source_unit_id": "P11",
+        "unit_type": "paragraph",
+        "text": "At 9:00 p.m., when the raw water turbidity drops below 30 NTU, the central control room lifts the high-turbidity response stage and returns the monitoring interval to 30 min."
+      },
+      {
+        "source_unit_id": "P12",
+        "unit_type": "paragraph",
+        "text": "The central control room compiles the incident details and reports them to the city hall water supply division."
+      },
+      {
+        "source_unit_id": "P13",
+        "unit_type": "paragraph",
+        "text": "The goal of this scenario is to respond without a water supply interruption while meeting the drinking water quality standards."
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "W_SCN",
+        "label": "Water treatment plant high-turbidity response",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "W_EP_ALERT",
+        "label": "Discharge notification and intensified monitoring",
+        "order_index": 1,
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "episode_id": "W_EP_HIGH",
+        "label": "High-turbidity response",
+        "order_index": 2,
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "episode_id": "W_EP_STOP",
+        "label": "Water intake suspension and water supply adjustment",
+        "order_index": 3,
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "episode_id": "W_EP_RECOVER",
+        "label": "Water intake resumption and recovery",
+        "order_index": 4,
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "episode_id": "W_EP_CLOSE",
+        "label": "Response lifting and reporting",
+        "order_index": 5,
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "W_P_SYSTEM",
+        "label": "Water treatment plant operating system",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "W_P_CONTROL",
+        "label": "Central control room",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "W_P_METER",
+        "label": "Raw water quality analyzer",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "W_P_COAG",
+        "label": "Coagulant dosing equipment",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "W_P_FILTERS",
+        "label": "6 filters",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "W_P_CHLORINE",
+        "label": "Chlorinator",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "W_P_DAM",
+        "label": "Upstream dam management office",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "W_P_CITY",
+        "label": "City hall water supply division",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "W_P_OPERATOR",
+        "label": "Operators",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "W_P_LAB",
+        "label": "Water quality analysis team",
+        "performer_kind": "group",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "W_A_DAM_NOTICE",
+        "label": "Discharge rate increase notification",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Upstream dam management office",
+        "object_text": "Discharge rate increase"
+      },
+      {
+        "action_id": "W_A_SHORTEN",
+        "label": "Shorten turbidity monitoring interval to 5 min",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "Central control room",
+        "object_text": "Raw water turbidity monitoring interval"
+      },
+      {
+        "action_id": "W_A_MEASURE_TURB",
+        "label": "Measure raw water turbidity",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Raw water quality analyzer",
+        "object_text": "Turbidity"
+      },
+      {
+        "action_id": "W_A_SEND_TURB",
+        "label": "Transmit turbidity measurement to central control room",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Raw water quality analyzer",
+        "object_text": "Turbidity measurement"
+      },
+      {
+        "action_id": "W_A_HIGH_STAGE",
+        "label": "Declare high-turbidity response stage",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Central control room",
+        "object_text": "High-turbidity response stage"
+      },
+      {
+        "action_id": "W_A_DOUBLE_COAG",
+        "label": "Double coagulant dose",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Operators",
+        "object_text": "Coagulant dose"
+      },
+      {
+        "action_id": "W_A_JAR_TEST",
+        "label": "Coagulation test every 1 h",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Water quality analysis team",
+        "object_text": "Coagulation test"
+      },
+      {
+        "action_id": "W_A_STOP_INTAKE",
+        "label": "Temporarily suspend water intake",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Central control room",
+        "object_text": "Water intake"
+      },
+      {
+        "action_id": "W_A_REQ_ADJUST",
+        "label": "Request water supply adjustment",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Central control room",
+        "object_text": "Water supply adjustment"
+      },
+      {
+        "action_id": "W_A_CHECK_LEVEL",
+        "label": "Check distribution reservoir level every 30 min",
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "primary_actor_text": "Operators",
+        "object_text": "Distribution reservoir level"
+      },
+      {
+        "action_id": "W_A_OPEN_BYPASS",
+        "label": "Open emergency interconnection pipe",
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "primary_actor_text": "Operators",
+        "object_text": "Emergency interconnection pipe"
+      },
+      {
+        "action_id": "W_A_RESUME_INTAKE",
+        "label": "Resume water intake",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "Central control room",
+        "object_text": "Water intake"
+      },
+      {
+        "action_id": "W_A_BACKWASH",
+        "label": "Backwash 6 filters one after another",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "Operators",
+        "object_text": "6 filters"
+      },
+      {
+        "action_id": "W_A_CONFIRM_TREATED",
+        "label": "Confirm treated water turbidity 0.5 NTU or less",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Water quality analysis team",
+        "object_text": "Treated water turbidity"
+      },
+      {
+        "action_id": "W_A_LIFT_ADJUST",
+        "label": "Lift water supply adjustment",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Central control room",
+        "object_text": "Water supply adjustment"
+      },
+      {
+        "action_id": "W_A_LIFT_STAGE",
+        "label": "Lift high-turbidity response stage",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Central control room",
+        "object_text": "High-turbidity response stage"
+      },
+      {
+        "action_id": "W_A_RESTORE_PERIOD",
+        "label": "Return monitoring interval to 30 min",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Central control room",
+        "object_text": "Monitoring interval"
+      },
+      {
+        "action_id": "W_A_REPORT",
+        "label": "Report incident details",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Central control room",
+        "object_text": "Incident details"
+      }
+    ],
+    "items": [
+      {
+        "item_id": "W_I_NOTICE",
+        "label": "Discharge rate increase notification",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "item_id": "W_I_TURB",
+        "label": "Turbidity measurement",
+        "item_type": "data",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "item_id": "W_I_REQ",
+        "label": "Request water supply adjustment",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "item_id": "W_I_REPORT",
+        "label": "Report incident details",
+        "item_type": "document",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "W_SIT_NORMAL",
+        "label": "Normal stage",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "W_SIT_HIGH",
+        "label": "High-turbidity response stage",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "situation_id": "W_SIT_INTAKE_ON",
+        "label": "Water intake in operation state",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "situation_id": "W_SIT_INTAKE_OFF",
+        "label": "Water intake temporarily suspended state",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "W_SV_NORMAL",
+        "subject_text": "Water treatment plant",
+        "variable": "Response stage",
+        "value": "Normal",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "W_SV_HIGH",
+        "subject_text": "Water treatment plant",
+        "variable": "Response stage",
+        "value": "High-turbidity response",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "state_value_id": "W_SV_INTAKE_ON",
+        "subject_text": "Water intake",
+        "variable": "State",
+        "value": "In operation",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "state_value_id": "W_SV_INTAKE_OFF",
+        "subject_text": "Water intake",
+        "variable": "State",
+        "value": "Temporarily suspended",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "W_EVT_50",
+        "label": "Turbidity measured at 50 NTU",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "event_id": "W_EVT_120",
+        "label": "Turbidity measured at 120 NTU",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "event_id": "W_EVT_42",
+        "label": "Distribution reservoir level checked at 42%",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "event_id": "W_EVT_60",
+        "label": "Turbidity drops to 60 NTU",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "event_id": "W_EVT_BELOW30",
+        "label": "Raw water turbidity below 30 NTU",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "W_TR_HIGH",
+        "label": "From normal to high-turbidity response stage",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "transition_id": "W_TR_INTAKE_OFF",
+        "label": "Water intake from in operation to temporarily suspended",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "transition_id": "W_TR_INTAKE_ON",
+        "label": "Water intake from temporarily suspended to in operation",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "transition_id": "W_TR_HIGH_OFF",
+        "label": "From high-turbidity response stage to normal",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "W_OBS_TURB",
+        "label": "Measure raw water turbidity",
+        "observer_text": "Raw water quality analyzer",
+        "observed_text": "Raw water turbidity",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "observation_id": "W_OBS_JAR",
+        "label": "Coagulation test",
+        "observer_text": "Water quality analysis team",
+        "observed_text": "Coagulation effect",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "observation_id": "W_OBS_LEVEL",
+        "label": "Distribution reservoir level check",
+        "observer_text": "Operators",
+        "observed_text": "Distribution reservoir level",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "observation_id": "W_OBS_TREATED",
+        "label": "Treated water turbidity check",
+        "observer_text": "Water quality analysis team",
+        "observed_text": "Treated water turbidity",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "W_F01",
+        "label": "Shorten monitoring interval after discharge notification",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "W_F02",
+        "label": "Transmit after measurement",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "W_F03",
+        "label": "Declare high-turbidity response stage after transmission",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "W_F04",
+        "label": "Increase coagulant dose in high-turbidity stage",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "W_F05",
+        "label": "Coagulation test in high-turbidity stage",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "W_F06",
+        "label": "Suspend water intake at 100 NTU or more",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "W_F07",
+        "label": "Request water supply adjustment after water intake suspension",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "W_F08",
+        "label": "Check level while water intake is suspended",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "flow_id": "W_F09",
+        "label": "Open interconnection pipe when level is below 40%",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "flow_id": "W_F10",
+        "label": "Backwash after water intake resumption",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "flow_id": "W_F11",
+        "label": "Lift water supply adjustment after backwashing is completed",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "W_F12",
+        "label": "Lift water supply adjustment after treated water check",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "W_F13",
+        "label": "Return monitoring interval after stage is lifted",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "W_C01",
+        "label": "Coagulant dose increase and coagulation test proceed simultaneously",
+        "control_type": "fork",
+        "guard_texts": [],
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "control_id": "W_C02",
+        "label": "Coagulation test every 1 h",
+        "control_type": "loop",
+        "guard_texts": [
+          "Every 1 h"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "control_id": "W_C03",
+        "label": "Determine raw water turbidity 100 NTU or more",
+        "control_type": "decision",
+        "guard_texts": [
+          "Raw water turbidity 100 NTU or more"
+        ],
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "control_id": "W_C04",
+        "label": "Check distribution reservoir level every 30 min",
+        "control_type": "loop",
+        "guard_texts": [
+          "Every 30 min"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "control_id": "W_C05",
+        "label": "Determine distribution reservoir level below 40%",
+        "control_type": "decision",
+        "guard_texts": [
+          "Distribution reservoir level below 40%"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "control_id": "W_C06",
+        "label": "Wait for backwashing completion and treated water check",
+        "control_type": "join",
+        "guard_texts": [
+          "Backwashing completed and treated water turbidity confirmed 0.5 NTU or less"
+        ],
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "W_CN_5MIN",
+        "label": "Turbidity monitoring interval 5 min",
+        "constraint_kind": [
+          "period"
+        ],
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "parameter": "Monitoring interval",
+        "operator": "=",
+        "value": 5,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "W_CN_100",
+        "label": "Raw water turbidity 100 NTU or more",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "parameter": "Raw water turbidity",
+        "operator": ">=",
+        "value": 100,
+        "unit": "NTU"
+      },
+      {
+        "constraint_id": "W_CN_DOUBLE",
+        "label": "Coagulant dose doubled",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "parameter": "Coagulant dose",
+        "operator": "=",
+        "value": 2,
+        "unit": "times"
+      },
+      {
+        "constraint_id": "W_CN_1H",
+        "label": "Coagulation test interval 1 h",
+        "constraint_kind": [
+          "period"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "parameter": "Test interval",
+        "operator": "=",
+        "value": 1,
+        "unit": "h"
+      },
+      {
+        "constraint_id": "W_CN_30MIN",
+        "label": "Distribution reservoir level check interval 30 min",
+        "constraint_kind": [
+          "period"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "parameter": "Check interval",
+        "operator": "=",
+        "value": 30,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "W_CN_40",
+        "label": "Distribution reservoir level below 40%",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "parameter": "Distribution reservoir level",
+        "operator": "<",
+        "value": 40,
+        "unit": "%"
+      },
+      {
+        "constraint_id": "W_CN_05",
+        "label": "Treated water turbidity 0.5 NTU or less",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "parameter": "Treated water turbidity",
+        "operator": "<=",
+        "value": 0.5,
+        "unit": "NTU"
+      },
+      {
+        "constraint_id": "W_CN_30NTU",
+        "label": "Raw water turbidity below 30 NTU",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "parameter": "Raw water turbidity",
+        "operator": "<",
+        "value": 30,
+        "unit": "NTU"
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "W_G_QUALITY",
+        "label": "Meet drinking water quality standards",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      },
+      {
+        "goal_id": "W_G_NO_OUTAGE",
+        "label": "No water supply interruption",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      }
+    ],
+    "reasons": [],
+    "slot_relations": [
+      {
+        "relation_id": "W_REL_001",
+        "relation_type": "has_episode",
+        "source_slot_id": "W_SCN",
+        "target_slot_id": "W_EP_ALERT",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "W_REL_002",
+        "relation_type": "has_episode",
+        "source_slot_id": "W_SCN",
+        "target_slot_id": "W_EP_HIGH",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "W_REL_003",
+        "relation_type": "has_episode",
+        "source_slot_id": "W_SCN",
+        "target_slot_id": "W_EP_STOP",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "W_REL_004",
+        "relation_type": "has_episode",
+        "source_slot_id": "W_SCN",
+        "target_slot_id": "W_EP_RECOVER",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "W_REL_005",
+        "relation_type": "has_episode",
+        "source_slot_id": "W_SCN",
+        "target_slot_id": "W_EP_CLOSE",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "W_REL_006",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_ALERT",
+        "target_slot_id": "W_A_DAM_NOTICE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_007",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_ALERT",
+        "target_slot_id": "W_A_SHORTEN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_008",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_HIGH",
+        "target_slot_id": "W_A_MEASURE_TURB",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_009",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_HIGH",
+        "target_slot_id": "W_A_SEND_TURB",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_010",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_HIGH",
+        "target_slot_id": "W_A_HIGH_STAGE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_011",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_HIGH",
+        "target_slot_id": "W_A_DOUBLE_COAG",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_012",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_HIGH",
+        "target_slot_id": "W_A_JAR_TEST",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_013",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_STOP",
+        "target_slot_id": "W_A_STOP_INTAKE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_014",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_STOP",
+        "target_slot_id": "W_A_REQ_ADJUST",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_015",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_STOP",
+        "target_slot_id": "W_A_CHECK_LEVEL",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_016",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_STOP",
+        "target_slot_id": "W_A_OPEN_BYPASS",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_017",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_RECOVER",
+        "target_slot_id": "W_A_RESUME_INTAKE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_018",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_RECOVER",
+        "target_slot_id": "W_A_BACKWASH",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_019",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_RECOVER",
+        "target_slot_id": "W_A_CONFIRM_TREATED",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_020",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_RECOVER",
+        "target_slot_id": "W_A_LIFT_ADJUST",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_021",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_CLOSE",
+        "target_slot_id": "W_A_LIFT_STAGE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_022",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_CLOSE",
+        "target_slot_id": "W_A_RESTORE_PERIOD",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_023",
+        "relation_type": "custom",
+        "source_slot_id": "W_EP_CLOSE",
+        "target_slot_id": "W_A_REPORT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "W_REL_024",
+        "relation_type": "has_part",
+        "source_slot_id": "W_P_SYSTEM",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_025",
+        "relation_type": "has_part",
+        "source_slot_id": "W_P_SYSTEM",
+        "target_slot_id": "W_P_METER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_026",
+        "relation_type": "has_part",
+        "source_slot_id": "W_P_SYSTEM",
+        "target_slot_id": "W_P_COAG",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_027",
+        "relation_type": "has_part",
+        "source_slot_id": "W_P_SYSTEM",
+        "target_slot_id": "W_P_FILTERS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_028",
+        "relation_type": "has_part",
+        "source_slot_id": "W_P_SYSTEM",
+        "target_slot_id": "W_P_CHLORINE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_029",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_DAM_NOTICE",
+        "target_slot_id": "W_P_DAM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_030",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_SHORTEN",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_031",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_MEASURE_TURB",
+        "target_slot_id": "W_P_METER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_032",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_SEND_TURB",
+        "target_slot_id": "W_P_METER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_033",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_HIGH_STAGE",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_034",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_DOUBLE_COAG",
+        "target_slot_id": "W_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_035",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_JAR_TEST",
+        "target_slot_id": "W_P_LAB",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_036",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_STOP_INTAKE",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_037",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_REQ_ADJUST",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_038",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_CHECK_LEVEL",
+        "target_slot_id": "W_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_039",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_OPEN_BYPASS",
+        "target_slot_id": "W_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_040",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_RESUME_INTAKE",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_041",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_BACKWASH",
+        "target_slot_id": "W_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_042",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_CONFIRM_TREATED",
+        "target_slot_id": "W_P_LAB",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_043",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_LIFT_ADJUST",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_044",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_LIFT_STAGE",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_045",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_RESTORE_PERIOD",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_046",
+        "relation_type": "performed_by",
+        "source_slot_id": "W_A_REPORT",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_047",
+        "relation_type": "produces_item",
+        "source_slot_id": "W_A_DAM_NOTICE",
+        "target_slot_id": "W_I_NOTICE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_048",
+        "relation_type": "provided_to",
+        "source_slot_id": "W_A_DAM_NOTICE",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_049",
+        "relation_type": "produces_item",
+        "source_slot_id": "W_A_SEND_TURB",
+        "target_slot_id": "W_I_TURB",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_050",
+        "relation_type": "provided_to",
+        "source_slot_id": "W_A_SEND_TURB",
+        "target_slot_id": "W_P_CONTROL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_051",
+        "relation_type": "acts_on",
+        "source_slot_id": "W_A_DOUBLE_COAG",
+        "target_slot_id": "W_P_COAG",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_052",
+        "relation_type": "produces_item",
+        "source_slot_id": "W_A_REQ_ADJUST",
+        "target_slot_id": "W_I_REQ",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_053",
+        "relation_type": "provided_to",
+        "source_slot_id": "W_A_REQ_ADJUST",
+        "target_slot_id": "W_P_CITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_054",
+        "relation_type": "acts_on",
+        "source_slot_id": "W_A_BACKWASH",
+        "target_slot_id": "W_P_FILTERS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_055",
+        "relation_type": "produces_item",
+        "source_slot_id": "W_A_REPORT",
+        "target_slot_id": "W_I_REPORT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_056",
+        "relation_type": "provided_to",
+        "source_slot_id": "W_A_REPORT",
+        "target_slot_id": "W_P_CITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_057",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F01",
+        "target_slot_id": "W_A_DAM_NOTICE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "W_REL_058",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F01",
+        "target_slot_id": "W_A_SHORTEN",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "W_REL_059",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F02",
+        "target_slot_id": "W_A_MEASURE_TURB",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_060",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F02",
+        "target_slot_id": "W_A_SEND_TURB",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_061",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F03",
+        "target_slot_id": "W_A_SEND_TURB",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_062",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F03",
+        "target_slot_id": "W_A_HIGH_STAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_063",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F04",
+        "target_slot_id": "W_A_HIGH_STAGE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "W_REL_064",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F04",
+        "target_slot_id": "W_A_DOUBLE_COAG",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "W_REL_065",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F05",
+        "target_slot_id": "W_A_HIGH_STAGE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "W_REL_066",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F05",
+        "target_slot_id": "W_A_JAR_TEST",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "W_REL_067",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F06",
+        "target_slot_id": "W_A_HIGH_STAGE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "W_REL_068",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F06",
+        "target_slot_id": "W_A_STOP_INTAKE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "W_REL_069",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F07",
+        "target_slot_id": "W_A_STOP_INTAKE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_070",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F07",
+        "target_slot_id": "W_A_REQ_ADJUST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_071",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F08",
+        "target_slot_id": "W_A_STOP_INTAKE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "W_REL_072",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F08",
+        "target_slot_id": "W_A_CHECK_LEVEL",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "W_REL_073",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F09",
+        "target_slot_id": "W_A_CHECK_LEVEL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_074",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F09",
+        "target_slot_id": "W_A_OPEN_BYPASS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_075",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F10",
+        "target_slot_id": "W_A_RESUME_INTAKE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_076",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F10",
+        "target_slot_id": "W_A_BACKWASH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_077",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F11",
+        "target_slot_id": "W_A_BACKWASH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_078",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F11",
+        "target_slot_id": "W_A_LIFT_ADJUST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_079",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F12",
+        "target_slot_id": "W_A_CONFIRM_TREATED",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_080",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F12",
+        "target_slot_id": "W_A_LIFT_ADJUST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_081",
+        "relation_type": "flow_source",
+        "source_slot_id": "W_F13",
+        "target_slot_id": "W_A_LIFT_STAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_082",
+        "relation_type": "flow_target",
+        "source_slot_id": "W_F13",
+        "target_slot_id": "W_A_RESTORE_PERIOD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_083",
+        "relation_type": "controls_flow",
+        "source_slot_id": "W_C01",
+        "target_slot_id": "W_F04",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_084",
+        "relation_type": "controls_flow",
+        "source_slot_id": "W_C01",
+        "target_slot_id": "W_F05",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_085",
+        "relation_type": "controls_flow",
+        "source_slot_id": "W_C03",
+        "target_slot_id": "W_F06",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_086",
+        "relation_type": "controls_flow",
+        "source_slot_id": "W_C05",
+        "target_slot_id": "W_F09",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_087",
+        "relation_type": "controls_flow",
+        "source_slot_id": "W_C06",
+        "target_slot_id": "W_F11",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_088",
+        "relation_type": "controls_flow",
+        "source_slot_id": "W_C06",
+        "target_slot_id": "W_F12",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_089",
+        "relation_type": "has_state_value",
+        "source_slot_id": "W_SIT_NORMAL",
+        "target_slot_id": "W_SV_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_090",
+        "relation_type": "has_state_value",
+        "source_slot_id": "W_SIT_HIGH",
+        "target_slot_id": "W_SV_HIGH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_091",
+        "relation_type": "has_state_value",
+        "source_slot_id": "W_SIT_INTAKE_ON",
+        "target_slot_id": "W_SV_INTAKE_ON",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_092",
+        "relation_type": "has_state_value",
+        "source_slot_id": "W_SIT_INTAKE_OFF",
+        "target_slot_id": "W_SV_INTAKE_OFF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_093",
+        "relation_type": "from_situation",
+        "source_slot_id": "W_TR_HIGH",
+        "target_slot_id": "W_SIT_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_094",
+        "relation_type": "to_situation",
+        "source_slot_id": "W_TR_HIGH",
+        "target_slot_id": "W_SIT_HIGH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_095",
+        "relation_type": "triggers",
+        "source_slot_id": "W_EVT_50",
+        "target_slot_id": "W_TR_HIGH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_096",
+        "relation_type": "from_situation",
+        "source_slot_id": "W_TR_INTAKE_OFF",
+        "target_slot_id": "W_SIT_INTAKE_ON",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_097",
+        "relation_type": "to_situation",
+        "source_slot_id": "W_TR_INTAKE_OFF",
+        "target_slot_id": "W_SIT_INTAKE_OFF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_098",
+        "relation_type": "triggers",
+        "source_slot_id": "W_EVT_120",
+        "target_slot_id": "W_TR_INTAKE_OFF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_099",
+        "relation_type": "from_situation",
+        "source_slot_id": "W_TR_INTAKE_ON",
+        "target_slot_id": "W_SIT_INTAKE_OFF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_100",
+        "relation_type": "to_situation",
+        "source_slot_id": "W_TR_INTAKE_ON",
+        "target_slot_id": "W_SIT_INTAKE_ON",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_101",
+        "relation_type": "triggers",
+        "source_slot_id": "W_EVT_60",
+        "target_slot_id": "W_TR_INTAKE_ON",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_102",
+        "relation_type": "from_situation",
+        "source_slot_id": "W_TR_HIGH_OFF",
+        "target_slot_id": "W_SIT_HIGH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_103",
+        "relation_type": "to_situation",
+        "source_slot_id": "W_TR_HIGH_OFF",
+        "target_slot_id": "W_SIT_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_104",
+        "relation_type": "triggers",
+        "source_slot_id": "W_EVT_BELOW30",
+        "target_slot_id": "W_TR_HIGH_OFF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_105",
+        "relation_type": "triggers",
+        "source_slot_id": "W_EVT_50",
+        "target_slot_id": "W_A_HIGH_STAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_106",
+        "relation_type": "triggers",
+        "source_slot_id": "W_EVT_120",
+        "target_slot_id": "W_A_STOP_INTAKE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_107",
+        "relation_type": "triggers",
+        "source_slot_id": "W_EVT_60",
+        "target_slot_id": "W_A_RESUME_INTAKE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_108",
+        "relation_type": "triggers",
+        "source_slot_id": "W_EVT_BELOW30",
+        "target_slot_id": "W_A_LIFT_STAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_109",
+        "relation_type": "observes",
+        "source_slot_id": "W_OBS_TURB",
+        "target_slot_id": "W_EVT_50",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_110",
+        "relation_type": "observes",
+        "source_slot_id": "W_OBS_LEVEL",
+        "target_slot_id": "W_EVT_42",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_111",
+        "relation_type": "constrained_by",
+        "source_slot_id": "W_A_SHORTEN",
+        "target_slot_id": "W_CN_5MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_112",
+        "relation_type": "constrained_by",
+        "source_slot_id": "W_A_STOP_INTAKE",
+        "target_slot_id": "W_CN_100",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_113",
+        "relation_type": "constrained_by",
+        "source_slot_id": "W_A_DOUBLE_COAG",
+        "target_slot_id": "W_CN_DOUBLE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_114",
+        "relation_type": "constrained_by",
+        "source_slot_id": "W_A_JAR_TEST",
+        "target_slot_id": "W_CN_1H",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_115",
+        "relation_type": "constrained_by",
+        "source_slot_id": "W_A_CHECK_LEVEL",
+        "target_slot_id": "W_CN_30MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_116",
+        "relation_type": "constrained_by",
+        "source_slot_id": "W_A_OPEN_BYPASS",
+        "target_slot_id": "W_CN_40",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_117",
+        "relation_type": "constrained_by",
+        "source_slot_id": "W_A_LIFT_ADJUST",
+        "target_slot_id": "W_CN_05",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_118",
+        "relation_type": "constrained_by",
+        "source_slot_id": "W_A_LIFT_STAGE",
+        "target_slot_id": "W_CN_30NTU",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_119",
+        "relation_type": "has_goal",
+        "source_slot_id": "W_SCN",
+        "target_slot_id": "W_G_QUALITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "W_REL_120",
+        "relation_type": "has_goal",
+        "source_slot_id": "W_SCN",
+        "target_slot_id": "W_G_NO_OUTAGE",
+        "evidence_level": "explicit"
+      }
+    ]
+  }
+}

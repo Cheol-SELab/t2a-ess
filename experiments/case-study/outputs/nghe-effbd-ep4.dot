@@ -1,0 +1,16 @@
+digraph G { rankdir=LR; nodesep=0.22; ranksep=0.32; bgcolor="white"; compound=true;
+node [fontname="Arial", fontsize=10]; edge [fontname="Arial", fontsize=9, color="#444444", arrowsize=0.7];
+label=<<B>Lv.1 E4 Heavy rain and work stop</B>>; labelloc=t; labeljust=l; fontname="Arial"; fontsize=12;
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::Force work stop and evacuate" [shape=box, style="rounded", margin=0.04, label=<<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7" COLOR="#777777">Lv.2</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="7" COLOR="#777777">#Function</FONT></TD></TR><TR><TD COLSPAN="2"><B>Force work stop and<BR/>evacuate</B></TD></TR><TR><TD COLSPAN="2"><FONT POINT-SIZE="8"><I>Remote supervisor, Unmanned equipment fleet</I></FONT></TD></TR></TABLE>>];
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::Local stop of U-EEX 2 on pedestrian" [shape=box, style="rounded", margin=0.04, label=<<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7" COLOR="#777777">Lv.2</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="7" COLOR="#777777">#Function</FONT></TD></TR><TR><TD COLSPAN="2"><B>Local stop of U-EEX 2<BR/>on pedestrian</B></TD></TR><TR><TD COLSPAN="2"><FONT POINT-SIZE="8"><I>U-EEX 2</I></FONT></TD></TR></TABLE>>];
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::New Start Concurrency_4" [shape=circle, label="AND", fontsize=8, width=0.42, fixedsize=true, penwidth=1.2];
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::New End Concurrency_5" [shape=circle, label="AND", fontsize=8, width=0.42, fixedsize=true, penwidth=1.2];
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::start" [shape=circle, style=filled, fillcolor=black, label="", width=0.16];
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::done" [shape=doublecircle, style=filled, fillcolor=black, label="", width=0.11];
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::start" -> "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::New Start Concurrency_4";
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::Force work stop and evacuate" -> "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::New End Concurrency_5";
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::Local stop of U-EEX 2 on pedestrian" -> "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::New End Concurrency_5";
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::New Start Concurrency_4" -> "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::Force work stop and evacuate";
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::New Start Concurrency_4" -> "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::Local stop of U-EEX 2 on pedestrian";
+"NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::New End Concurrency_5" -> "NGHE 72-hour autonomous construction::E4 Heavy rain and work stop::done";
+}

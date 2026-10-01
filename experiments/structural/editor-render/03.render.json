@@ -1,0 +1,35 @@
+{
+  "in": "03.sysml",
+  "out": "03.png",
+  "expanded": [
+    "Autonomous vehicle autonomous operation scenario::Autonomous driving start",
+    "Autonomous vehicle autonomous operation scenario::Normal autonomous driving",
+    "Autonomous vehicle autonomous operation scenario::Pedestrian detection and avoidance",
+    "Autonomous vehicle autonomous operation scenario::Return to charging station",
+    "Autonomous vehicle autonomous operation scenario::Sensor degradation response",
+    "Autonomous vehicle autonomous operation scenario::Normal autonomous driving::Collect sensor data",
+    "Autonomous vehicle autonomous operation scenario::Normal autonomous driving::Generate control commands",
+    "Autonomous vehicle autonomous operation scenario::Normal autonomous driving::Generate driving path",
+    "Autonomous vehicle autonomous operation scenario::Normal autonomous driving::Sensor fusion and environment perception"
+  ],
+  "nodeKinds": {
+    "FunctionNode": 22,
+    "StartConcurrencyNode": 3,
+    "EndConcurrencyNode": 3,
+    "ItemNode": 7,
+    "StartReferenceNode": 1,
+    "EndReferenceNode": 1
+  },
+  "edges": 48,
+  "metrics": [
+    "rootIds",
+    "topologyOf",
+    "step",
+    "lane",
+    "pathPointer",
+    "pair",
+    "slot",
+    "branchStates",
+    "clusterHierarchy"
+  ]
+}

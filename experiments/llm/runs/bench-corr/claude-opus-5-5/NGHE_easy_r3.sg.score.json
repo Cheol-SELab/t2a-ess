@@ -1,0 +1,1494 @@
+{
+ "meta": {
+  "input": "NGHE_easy",
+  "repeat": 3,
+  "condition": "bench-corr",
+  "model_requested": "claude-opus-5-5",
+  "models_used": [
+   "claude-opus-5-5"
+  ],
+  "prompt": "benchmark-corrected.md",
+  "prompt_sha256": "9bf4cb70dc151cf1559e9ff5819e4eb9a43117adf9616a420a6a064a28ba1991",
+  "input_sha256": "c371666afebaddbb24201bb0112f85129f0289b7fe6328d513985eb720344f55",
+  "user_sha256": "80709ed1869b6189cc285145746eae194f15bbc5441d390db6d6ceaecd019acf",
+  "runner_sha256": "668572f34df601b1974f920604e58152c826610fc0840a0fe0ed5b39cc377e01",
+  "ok": true,
+  "attempts": 1,
+  "failure": null,
+  "elapsed_s": 378.2,
+  "total_cost_usd": 1.1077,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 16577,
+   "output_tokens": 55220,
+   "output_tokens_details": {
+    "thinking_tokens": 11471
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 55220,
+     "cache_read_input_tokens": 16577,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "cli": "claude -p (isolated, experiments/common/claude_cli.py)"
+ },
+ "tau": 0.87,
+ "parse_ok": true,
+ "matcher": "embedding",
+ "scorer_version": "3.1",
+ "slots_tolerant": {
+  "micro": {
+   "gold_coverage": 0.7597,
+   "pred_support": 0.6944,
+   "f1": 0.7256
+  },
+  "per_type": {
+   "scenarios": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 1,
+    "pred": 1
+   },
+   "episodes": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.7143,
+    "f1": 0.8333,
+    "gold": 5,
+    "pred": 7
+   },
+   "performers": {
+    "gold_coverage": 1.0,
+    "pred_support": 1.0,
+    "f1": 1.0,
+    "gold": 19,
+    "pred": 23
+   },
+   "actions": {
+    "gold_coverage": 0.9333,
+    "pred_support": 0.775,
+    "f1": 0.8468,
+    "gold": 30,
+    "pred": 40
+   },
+   "items": {
+    "gold_coverage": 1.0,
+    "pred_support": 0.4118,
+    "f1": 0.5833,
+    "gold": 7,
+    "pred": 17
+   },
+   "flows": {
+    "gold_coverage": 0.6471,
+    "pred_support": 0.4231,
+    "f1": 0.5116,
+    "gold": 17,
+    "pred": 26
+   },
+   "controls": {
+    "gold_coverage": 0.3333,
+    "pred_support": 0.3333,
+    "f1": 0.3333,
+    "gold": 6,
+    "pred": 6
+   },
+   "situations": {
+    "gold_coverage": 0.625,
+    "pred_support": 0.625,
+    "f1": 0.625,
+    "gold": 8,
+    "pred": 8
+   },
+   "state_values": {
+    "gold_coverage": 0.4286,
+    "pred_support": 0.7778,
+    "f1": 0.5526,
+    "gold": 14,
+    "pred": 9
+   },
+   "events": {
+    "gold_coverage": 0.7273,
+    "pred_support": 1.0,
+    "f1": 0.8421,
+    "gold": 11,
+    "pred": 9
+   },
+   "transitions": {
+    "gold_coverage": 0.8571,
+    "pred_support": 1.0,
+    "f1": 0.9231,
+    "gold": 7,
+    "pred": 6
+   },
+   "constraints": {
+    "gold_coverage": 0.8,
+    "pred_support": 0.6154,
+    "f1": 0.6957,
+    "gold": 10,
+    "pred": 13
+   },
+   "goals": {
+    "gold_coverage": 0.75,
+    "pred_support": 1.0,
+    "f1": 0.8571,
+    "gold": 4,
+    "pred": 2
+   },
+   "reasons": {
+    "gold_coverage": 0.4286,
+    "pred_support": 0.5,
+    "f1": 0.4615,
+    "gold": 7,
+    "pred": 6
+   },
+   "observations": {
+    "gold_coverage": 0.625,
+    "pred_support": 0.7143,
+    "f1": 0.6667,
+    "gold": 8,
+    "pred": 7
+   }
+  }
+ },
+ "slots": {
+  "micro": {
+   "tp": 115,
+   "pred": 180,
+   "gold": 154,
+   "precision": 0.6389,
+   "recall": 0.7468,
+   "f1": 0.6886
+  },
+  "per_type": {
+   "scenarios": {
+    "tp": 1,
+    "pred": 1,
+    "gold": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "episodes": {
+    "tp": 5,
+    "pred": 7,
+    "gold": 5,
+    "precision": 0.7143,
+    "recall": 1.0,
+    "f1": 0.8333
+   },
+   "performers": {
+    "tp": 19,
+    "pred": 23,
+    "gold": 19,
+    "precision": 0.8261,
+    "recall": 1.0,
+    "f1": 0.9048
+   },
+   "actions": {
+    "tp": 28,
+    "pred": 40,
+    "gold": 30,
+    "precision": 0.7,
+    "recall": 0.9333,
+    "f1": 0.8
+   },
+   "items": {
+    "tp": 7,
+    "pred": 17,
+    "gold": 7,
+    "precision": 0.4118,
+    "recall": 1.0,
+    "f1": 0.5833
+   },
+   "flows": {
+    "tp": 11,
+    "pred": 26,
+    "gold": 17,
+    "precision": 0.4231,
+    "recall": 0.6471,
+    "f1": 0.5116
+   },
+   "controls": {
+    "tp": 2,
+    "pred": 6,
+    "gold": 6,
+    "precision": 0.3333,
+    "recall": 0.3333,
+    "f1": 0.3333
+   },
+   "situations": {
+    "tp": 5,
+    "pred": 8,
+    "gold": 8,
+    "precision": 0.625,
+    "recall": 0.625,
+    "f1": 0.625
+   },
+   "state_values": {
+    "tp": 6,
+    "pred": 9,
+    "gold": 14,
+    "precision": 0.6667,
+    "recall": 0.4286,
+    "f1": 0.5217
+   },
+   "events": {
+    "tp": 8,
+    "pred": 9,
+    "gold": 11,
+    "precision": 0.8889,
+    "recall": 0.7273,
+    "f1": 0.8
+   },
+   "transitions": {
+    "tp": 5,
+    "pred": 6,
+    "gold": 7,
+    "precision": 0.8333,
+    "recall": 0.7143,
+    "f1": 0.7692
+   },
+   "constraints": {
+    "tp": 8,
+    "pred": 13,
+    "gold": 10,
+    "precision": 0.6154,
+    "recall": 0.8,
+    "f1": 0.6957
+   },
+   "goals": {
+    "tp": 2,
+    "pred": 2,
+    "gold": 4,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667
+   },
+   "reasons": {
+    "tp": 3,
+    "pred": 6,
+    "gold": 7,
+    "precision": 0.5,
+    "recall": 0.4286,
+    "f1": 0.4615
+   },
+   "observations": {
+    "tp": 5,
+    "pred": 7,
+    "gold": 8,
+    "precision": 0.7143,
+    "recall": 0.625,
+    "f1": 0.6667
+   }
+  },
+  "macro_f1": 0.6782
+ },
+ "alignment_pairs": [
+  {
+   "type": "scenarios",
+   "gold": "NGHE_SCN_72H_AUTONOMOUS_CONSTRUCTION",
+   "gold_label": "NGHE 72 h autonomous construction and contingency response",
+   "pred": "SCN_UNMANNED_EARTHWORK_72H",
+   "pred_label": "72 h unmanned autonomous earthwork operation",
+   "score": 0.906
+  },
+  {
+   "type": "episodes",
+   "gold": "NGHE_EP_SETUP",
+   "gold_label": "Site setup and Level 3 start",
+   "pred": "EP_PREP",
+   "pred_label": "Site preparation and Level 3 start approval",
+   "score": 0.96
+  },
+  {
+   "type": "episodes",
+   "gold": "NGHE_EP_AUTONOMOUS_PRODUCTION",
+   "gold_label": "Level 4 autonomous construction and productivity maintenance",
+   "pred": "EP_AUTONOMY",
+   "pred_label": "Level 4 autonomous earthwork operation",
+   "score": 0.937
+  },
+  {
+   "type": "episodes",
+   "gold": "NGHE_EP_FOG_CYBER",
+   "gold_label": "Fog and cyber threat response",
+   "pred": "EP_FOG_DOWNGRADE",
+   "pred_label": "Fog response and downgrade to Level 3",
+   "score": 0.888
+  },
+  {
+   "type": "episodes",
+   "gold": "NGHE_EP_RAIN_STOP",
+   "gold_label": "Heavy rain and work stop",
+   "pred": "EP_EMERGENCY",
+   "pred_label": "Local stop and heavy rain emergency stop",
+   "score": 0.935
+  },
+  {
+   "type": "episodes",
+   "gold": "NGHE_EP_RECOVERY_COMPLETE",
+   "gold_label": "Recovery after heavy rain and mission completion",
+   "pred": "EP_COMPLETION",
+   "pred_label": "Goal achievement and mission completion",
+   "score": 0.879
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P1_ICCC",
+   "gold_label": "ICCC",
+   "pred": "P_ICCC",
+   "pred_label": "Integrated control center (ICCC)",
+   "score": 0.915
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P2_AI_ICP",
+   "gold_label": "AI_ICP",
+   "pred": "P_AI_ICP",
+   "pred_label": "AI_ICP",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P3_REMOTE_SUPERVISOR",
+   "gold_label": "Remote supervisor",
+   "pred": "P_REMOTE_SUPERVISOR",
+   "pred_label": "Remote supervisor",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P4_REMOTE_OPERATOR",
+   "gold_label": "Remote operator",
+   "pred": "P_REMOTE_OPERATOR",
+   "pred_label": "Remote operator",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P5_SITE_SUPERVISOR",
+   "gold_label": "Site supervisor",
+   "pred": "P_SITE_SUPERVISOR",
+   "pred_label": "Site supervisor",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P6_MAINT_TEAM",
+   "gold_label": "Site maintenance team",
+   "pred": "P_MAINT_TEAM",
+   "pred_label": "Site maintenance team",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P7_EQUIPMENT_FLEET",
+   "gold_label": "Unmanned equipment fleet",
+   "pred": "P_FLEET",
+   "pred_label": "Unmanned equipment fleet (19 units)",
+   "score": 0.924
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P7_1_EEX",
+   "gold_label": "U-EEX excavator",
+   "pred": "P_U_EEX",
+   "pred_label": "U-EEX excavators (5 units)",
+   "score": 0.94
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P7_2_EDT",
+   "gold_label": "U-EDT dump truck",
+   "pred": "P_U_EDT",
+   "pred_label": "U-EDT dump trucks (10 units)",
+   "score": 0.942
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P7_3_EDB",
+   "gold_label": "U-EDB bulldozer",
+   "pred": "P_U_EDB",
+   "pred_label": "U-EDB bulldozers (2 units)",
+   "score": 0.946
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P7_4_ERC",
+   "gold_label": "U-ERC roller",
+   "pred": "P_U_ERC",
+   "pred_label": "U-ERC rollers (2 units)",
+   "score": 0.939
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P8_BSS_T",
+   "gold_label": "BSS_T",
+   "pred": "P_BSS_T",
+   "pred_label": "Battery swap station (BSS_T)",
+   "score": 0.886
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P8_DMSS",
+   "gold_label": "DMSS",
+   "pred": "P_DMSS",
+   "pred_label": "DMSS",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P8_ASPCS",
+   "gold_label": "ASPCS",
+   "pred": "P_ASPCS",
+   "pred_label": "ASPCS",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P9_SECURITY_SYSTEM",
+   "gold_label": "Security system",
+   "pred": "P_SECURITY_SYSTEM",
+   "pred_label": "Security system",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P7_1_1_EEX",
+   "gold_label": "U-EEX Unit 1",
+   "pred": "P_U_EEX_1",
+   "pred_label": "U-EEX Unit 1",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P7_1_2_EEX",
+   "gold_label": "U-EEX Unit 2",
+   "pred": "P_U_EEX_2",
+   "pred_label": "U-EEX Unit 2",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P7_1_3_EEX",
+   "gold_label": "U-EEX Unit 3",
+   "pred": "P_U_EEX_3",
+   "pred_label": "U-EEX Unit 3",
+   "score": 1.0
+  },
+  {
+   "type": "performers",
+   "gold": "NGHE_P7_2_7_EDT",
+   "gold_label": "U-EDT Unit 7",
+   "pred": "P_U_EDT_7",
+   "pred_label": "U-EDT Unit 7",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "NGHE_I_BATTERY_PACK",
+   "gold_label": "Battery pack",
+   "pred": "I_BATTERY_PACK",
+   "pred_label": "Fully charged battery pack",
+   "score": 0.925
+  },
+  {
+   "type": "items",
+   "gold": "NGHE_I_TERRAIN_POINT_CLOUD",
+   "gold_label": "3D point cloud terrain data",
+   "pred": "I_POINT_CLOUD",
+   "pred_label": "3D point cloud terrain data",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "NGHE_I_BIM_MODEL",
+   "gold_label": "BIM and digital twin model",
+   "pred": "I_BIM_DIGITAL_TWIN",
+   "pred_label": "BIM and digital twin model",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "NGHE_I_ROUTE_PLAN",
+   "gold_label": "Work routes and bypass routes",
+   "pred": "I_ROUTES",
+   "pred_label": "Bypass routes",
+   "score": 0.937
+  },
+  {
+   "type": "items",
+   "gold": "NGHE_I_COMMAND_PACKET",
+   "gold_label": "Command packet",
+   "pred": "I_COMMAND_PACKET",
+   "pred_label": "Received command packet (forged signature)",
+   "score": 0.875
+  },
+  {
+   "type": "items",
+   "gold": "NGHE_I_SECURITY_LOG",
+   "gold_label": "Security threat log",
+   "pred": "I_THREAT_LOG",
+   "pred_label": "Security threat log",
+   "score": 1.0
+  },
+  {
+   "type": "items",
+   "gold": "NGHE_I_FINAL_REPORT",
+   "gold_label": "Comprehensive performance report",
+   "pred": "I_PERFORMANCE_REPORT",
+   "pred_label": "Comprehensive performance report",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "NGHE_SIT_LEVEL3",
+   "gold_label": "Initial Level 3 supervised autonomy mode",
+   "pred": "SIT_L3_SUPERVISED",
+   "pred_label": "Level 3 supervised autonomy mode",
+   "score": 0.982
+  },
+  {
+   "type": "situations",
+   "gold": "NGHE_SIT_LEVEL4",
+   "gold_label": "Level 4 full autonomy mode",
+   "pred": "SIT_L4_FULL_AUTONOMY",
+   "pred_label": "Level 4 full autonomy mode",
+   "score": 1.0
+  },
+  {
+   "type": "situations",
+   "gold": "NGHE_SIT_LEVEL1_STOP",
+   "gold_label": "Level 1 emergency stop and safe evacuation state",
+   "pred": "SIT_L1_EMERGENCY",
+   "pred_label": "Level 1 emergency stop and safe evacuation",
+   "score": 0.979
+  },
+  {
+   "type": "situations",
+   "gold": "NGHE_SIT_MISSION_COMPLETE",
+   "gold_label": "72 h mission completion state",
+   "pred": "SIT_GOAL_MET",
+   "pred_label": "Earthwork goal achieved at 72 h",
+   "score": 0.888
+  },
+  {
+   "type": "situations",
+   "gold": "NGHE_SIT_LEVEL3_FOG",
+   "gold_label": "Level 3 restricted operation in fog state",
+   "pred": "SIT_L3_FOG",
+   "pred_label": "Level 3 restricted operation in fog",
+   "score": 0.985
+  },
+  {
+   "type": "state_values",
+   "gold": "NGHE_SV_ACTUAL_VOLUME",
+   "gold_label": "NGHE mission actual_volume 38200 m3",
+   "pred": "SV_EARTHWORK_38200",
+   "pred_label": "cumulative earthwork volume=about 38,200 m3",
+   "score": 0.881
+  },
+  {
+   "type": "state_values",
+   "gold": "NGHE_SV_AUTONOMY_LEVEL3",
+   "gold_label": "Unmanned equipment fleet autonomy_level Level 3",
+   "pred": "SV_MODE_L3",
+   "pred_label": "autonomy level=Level 3 supervised",
+   "score": 0.929
+  },
+  {
+   "type": "state_values",
+   "gold": "NGHE_SV_AUTONOMY_LEVEL4",
+   "gold_label": "Unmanned equipment fleet autonomy_level Level 4",
+   "pred": "SV_MODE_L4",
+   "pred_label": "autonomy level=Level 4",
+   "score": 0.938
+  },
+  {
+   "type": "state_values",
+   "gold": "NGHE_SV_AUTONOMY_LEVEL1",
+   "gold_label": "Unmanned equipment fleet autonomy_level Level 1",
+   "pred": "SV_MODE_L1",
+   "pred_label": "autonomy level=Level 1 emergency stop",
+   "score": 0.918
+  },
+  {
+   "type": "state_values",
+   "gold": "NGHE_SV_VISIBILITY_200M",
+   "gold_label": "Site environment visibility 200 m",
+   "pred": "SV_VISIBILITY_LOW",
+   "pred_label": "visibility<=200 m",
+   "score": 0.949
+  },
+  {
+   "type": "state_values",
+   "gold": "NGHE_SV_RAIN_30MM",
+   "gold_label": "Site environment rainfall_rate 30 mm/h",
+   "pred": "SV_RAIN_30",
+   "pred_label": "rain intensity=30 mm/h",
+   "score": 0.939
+  },
+  {
+   "type": "events",
+   "gold": "NGHE_EVT_BATTERY_LOW",
+   "gold_label": "Battery SoC reaches 15%",
+   "pred": "EVT_SOC_15",
+   "pred_label": "Battery SoC of U-EEX Unit 1 reaches 15%",
+   "score": 0.941
+  },
+  {
+   "type": "events",
+   "gold": "NGHE_EVT_FOG_OCCURS",
+   "gold_label": "Dense fog occurs",
+   "pred": "EVT_DENSE_FOG",
+   "pred_label": "Dense fog occurs about 48 h after start",
+   "score": 0.908
+  },
+  {
+   "type": "events",
+   "gold": "NGHE_EVT_FORGED_COMMAND",
+   "gold_label": "Forged command packet injection attempt",
+   "pred": "EVT_FORGED_PACKET",
+   "pred_label": "Forged command packet injection attempt",
+   "score": 1.0
+  },
+  {
+   "type": "events",
+   "gold": "NGHE_EVT_HEAVY_RAIN",
+   "gold_label": "Heavy rain intensifies",
+   "pred": "EVT_HEAVY_RAIN_30",
+   "pred_label": "Heavy rain intensifies to 30 mm/h",
+   "score": 0.928
+  },
+  {
+   "type": "events",
+   "gold": "NGHE_EVT_PEDESTRIAN_DETECTED",
+   "gold_label": "Maintenance worker approach detected",
+   "pred": "EVT_WORKER_APPROACH",
+   "pred_label": "Maintenance worker approaches U-EEX Unit 2 with lens covered",
+   "score": 0.873
+  },
+  {
+   "type": "events",
+   "gold": "NGHE_EVT_RAIN_END",
+   "gold_label": "Heavy rain end confirmed",
+   "pred": "EVT_RAIN_ENDS",
+   "pred_label": "Heavy rain ends",
+   "score": 0.948
+  },
+  {
+   "type": "events",
+   "gold": "NGHE_EVT_STABLE_OPERATION",
+   "gold_label": "About 30 min of normal operation confirmed",
+   "pred": "EVT_NORMAL_30MIN",
+   "pred_label": "About 30 min of normal operation",
+   "score": 0.967
+  },
+  {
+   "type": "events",
+   "gold": "NGHE_EVT_HYDRAULIC_ANOMALY",
+   "gold_label": "U-EDT Unit 7 hydraulic system anomaly sign occurs",
+   "pred": "EVT_HYDRAULIC_ANOMALY",
+   "pred_label": "Anomaly sign in hydraulic pressure pattern of U-EDT Unit 7",
+   "score": 0.962
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_INSTALL_INFRA",
+   "gold_label": "Energy infrastructure installation and battery pack stockpiling",
+   "pred": "A_INSTALL_BSS",
+   "pred_label": "Install battery swap station, ESS, supplementary charging system and battery packs",
+   "score": 0.909
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_VERIFY_RTDD",
+   "gold_label": "RTDD latency and HSM authentication confirmation",
+   "pred": "A_CONFIRM_NETWORK",
+   "pred_label": "Confirm RTDD network latency, encryption latency and HSM authentication",
+   "score": 0.94
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SCAN_TERRAIN",
+   "gold_label": "Scan 3D point cloud terrain data",
+   "pred": "A_SCAN_TERRAIN",
+   "pred_label": "Scan 3D point cloud terrain data",
+   "score": 0.977
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_CALIBRATE_GCP",
+   "gold_label": "Correct GPS-RTK reference points",
+   "pred": "A_CORRECT_REF_POINTS",
+   "pred_label": "Correct GPS-RTK reference points",
+   "score": 0.996
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_BUILD_BIM",
+   "gold_label": "Create BIM and digital twin model",
+   "pred": "A_CREATE_DIGITAL_TWIN",
+   "pred_label": "Create BIM and digital twin model",
+   "score": 0.996
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_BATTERY_SWAP",
+   "gold_label": "Battery pack replacement",
+   "pred": "A_SWAP_BATTERY",
+   "pred_label": "Replace battery pack of U-EEX Unit 1",
+   "score": 0.901
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_OPTIMIZE_SWAP",
+   "gold_label": "Battery swap sequence optimization",
+   "pred": "A_OPTIMIZE_SWAP_SEQUENCE",
+   "pred_label": "Optimize battery swap sequence",
+   "score": 0.953
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_PERFORM_MAINTENANCE",
+   "gold_label": "U-EDT Unit 7 hydraulic module preventive maintenance",
+   "pred": "A_PREVENTIVE_MAINT",
+   "pred_label": "Perform preventive maintenance on hydraulic module of U-EDT Unit 7",
+   "score": 0.959
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_APPLY_OTA",
+   "gold_label": "OTA route optimization patch application",
+   "pred": "A_APPLY_OTA",
+   "pred_label": "Apply OTA route optimization patch",
+   "score": 0.956
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_DOWNGRADE_LEVEL3",
+   "gold_label": "Propose Level 3 downgrade",
+   "pred": "A_PROPOSE_DOWNGRADE",
+   "pred_label": "Propose downgrade to Level 3",
+   "score": 0.97
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_APPROVE_DOWNGRADE",
+   "gold_label": "Approve Level 3 downgrade",
+   "pred": "A_APPROVE_DOWNGRADE",
+   "pred_label": "Approve downgrade to Level 3",
+   "score": 0.99
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_ISOLATE_NETWORK",
+   "gold_label": "Block external public network",
+   "pred": "A_BLOCK_PUBLIC_NETWORK",
+   "pred_label": "Block external public network",
+   "score": 0.975
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_SWITCH_SECURE_NET",
+   "gold_label": "Switch to internal closed security network",
+   "pred": "A_SWITCH_CLOSED_NETWORK",
+   "pred_label": "Switch to internal closed security network",
+   "score": 0.997
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_LOG_THREAT",
+   "gold_label": "Generate security threat log",
+   "pred": "A_GENERATE_THREAT_LOG",
+   "pred_label": "Generate security threat log",
+   "score": 0.997
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_STOP_WORK",
+   "gold_label": "Issue forced work stop command",
+   "pred": "A_ISSUE_FORCED_STOP",
+   "pred_label": "Issue forced work stop command",
+   "score": 0.982
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_RESCAN_TERRAIN",
+   "gold_label": "Rescan terrain after heavy rain",
+   "pred": "A_RESCAN_TERRAIN",
+   "pred_label": "Rescan terrain",
+   "score": 0.898
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_RECALIBRATE",
+   "gold_label": "Re-correct reference points",
+   "pred": "A_RECORRECT_REF_POINTS",
+   "pred_label": "Re-correct reference points",
+   "score": 0.996
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_RECALC_ROUTE",
+   "gold_label": "Subsidence zone bypass route recalculation",
+   "pred": "A_RECALC_ROUTES",
+   "pred_label": "Recalculate routes to bypass subsidence zones",
+   "score": 0.939
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_RESUME_CONSTRUCTION",
+   "gold_label": "Resume construction in Level 3",
+   "pred": "A_RESUME_L3",
+   "pred_label": "Resume construction in Level 3",
+   "score": 0.979
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_RETURN_LEVEL4",
+   "gold_label": "Switch back to Level 4",
+   "pred": "A_SWITCH_L4",
+   "pred_label": "Switch back to Level 4",
+   "score": 0.996
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_GENERATE_FINAL_REPORT",
+   "gold_label": "Automatically generate comprehensive performance report",
+   "pred": "A_GENERATE_REPORT",
+   "pred_label": "Generate comprehensive performance report",
+   "score": 0.941
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_COMPLETE_MISSION",
+   "gold_label": "Mission completion",
+   "pred": "A_COMPLETE_MISSION",
+   "pred_label": "Complete the mission",
+   "score": 0.969
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_LOCAL_SAFETY_STOP",
+   "gold_label": "Local stop",
+   "pred": "A_LOCAL_STOP",
+   "pred_label": "Perform local stop",
+   "score": 0.95
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_DETECT_PEDESTRIAN",
+   "gold_label": "Pedestrian detection",
+   "pred": "A_DETECT_PEDESTRIAN",
+   "pred_label": "Detect pedestrian",
+   "score": 0.978
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_MONITOR_FLEET",
+   "gold_label": "Remote control of unmanned equipment fleet",
+   "pred": "A_SUPERVISE_FLEET",
+   "pred_label": "Control equipment fleet without direct operation",
+   "score": 0.886
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_APPROVE_LEVEL3",
+   "gold_label": "Approve start in Level 3 supervised autonomy mode",
+   "pred": "A_APPROVE_L3_START",
+   "pred_label": "Approve start in Level 3 supervised autonomy",
+   "score": 0.986
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_DETECT_HYDRAULIC",
+   "gold_label": "Detect hydraulic system pressure pattern anomaly sign",
+   "pred": "A_DETECT_HYDRAULIC_ANOMALY",
+   "pred_label": "Detect hydraulic pressure anomaly sign",
+   "score": 0.968
+  },
+  {
+   "type": "actions",
+   "gold": "NGHE_A_SG_DETECT_FORGERY",
+   "gold_label": "Detect forged digital signature of received command packet",
+   "pred": "A_DETECT_FORGED_SIGNATURE",
+   "pred_label": "Detect forged digital signature on command packet",
+   "score": 0.986
+  },
+  {
+   "type": "constraints",
+   "gold": "NGHE_C_RTDD_LATENCY",
+   "gold_label": "RTDD end-to-end latency within 20 ms",
+   "pred": "CN_E2E_LATENCY",
+   "pred_label": "RTDD end-to-end latency within 20 ms",
+   "score": 0.997
+  },
+  {
+   "type": "constraints",
+   "gold": "NGHE_C_ENCRYPTION_DELAY",
+   "gold_label": "Encryption latency 2 ms or less",
+   "pred": "CN_ENC_LATENCY",
+   "pred_label": "Encryption latency 2 ms or less",
+   "score": 0.996
+  },
+  {
+   "type": "constraints",
+   "gold": "NGHE_C_SWAP_TIME",
+   "gold_label": "Battery pack replacement within 5 min",
+   "pred": "CN_SWAP_5MIN",
+   "pred_label": "Battery swap within 5 min",
+   "score": 0.965
+  },
+  {
+   "type": "constraints",
+   "gold": "NGHE_C_NO_TWO_EQUIPMENT_OUT",
+   "gold_label": "Prevent 2 or more units leaving work simultaneously",
+   "pred": "CN_SWAP_NO_CONCURRENT",
+   "pred_label": "Two or more units do not leave work at the same time",
+   "score": 0.945
+  },
+  {
+   "type": "constraints",
+   "gold": "NGHE_C_SPEED_LIMIT_FOG",
+   "gold_label": "Speed 5 km/h or less during fog",
+   "pred": "CN_FOG_SPEED",
+   "pred_label": "Equipment speed 5 km/h or less",
+   "score": 0.925
+  },
+  {
+   "type": "constraints",
+   "gold": "NGHE_C_SAFETY_DISTANCE_X2",
+   "gold_label": "Safety distance expanded 2 times",
+   "pred": "CN_FOG_SAFETY_DISTANCE",
+   "pred_label": "Safety distance expanded 2 times",
+   "score": 1.0
+  },
+  {
+   "type": "constraints",
+   "gold": "NGHE_C_MTTR_1H",
+   "gold_label": "Preventive maintenance within 1 h",
+   "pred": "CN_MAINT_1H",
+   "pred_label": "Preventive maintenance within 1 h",
+   "score": 0.989
+  },
+  {
+   "type": "constraints",
+   "gold": "NGHE_C_NOISE_65DB",
+   "gold_label": "Night noise 65 dB or less",
+   "pred": "CN_NIGHT_NOISE",
+   "pred_label": "Night work noise 65 dB or less",
+   "score": 0.976
+  },
+  {
+   "type": "goals",
+   "gold": "NGHE_G_COMPLETE_VOLUME",
+   "gold_label": "Achieve 72 h target earthwork volume",
+   "pred": "G_EARTHWORK_38000",
+   "pred_label": "Complete at least 38,000 m3 of earthwork in the first 72 h",
+   "score": 0.931
+  },
+  {
+   "type": "goals",
+   "gold": "NGHE_G_KEEP_SAFE",
+   "gold_label": "Maintain zero-accident and safety conditions",
+   "pred": "G_ZERO_ACCIDENTS",
+   "pred_label": "Keep personnel accidents at zero",
+   "score": 0.929
+  },
+  {
+   "type": "reasons",
+   "gold": "NGHE_R_CYBER_ISOLATION",
+   "gold_label": "Network isolation because of the forged command packet",
+   "pred": "RSN_FORGED_INJECTION",
+   "pred_label": "Forged command packet injection attempt",
+   "score": 0.931
+  },
+  {
+   "type": "reasons",
+   "gold": "NGHE_R_PHM_MAINTENANCE",
+   "gold_label": "Preventive maintenance following hydraulic anomaly sign detection",
+   "pred": "RSN_HYDRAULIC_ANOMALY",
+   "pred_label": "Hydraulic anomaly sign as maintenance basis",
+   "score": 0.937
+  },
+  {
+   "type": "reasons",
+   "gold": "NGHE_R_SUBSIDENCE_REROUTE",
+   "gold_label": "Bypass route recalculation because of ground subsidence zones",
+   "pred": "RSN_BYPASS_SUBSIDENCE",
+   "pred_label": "Bypass the subsidence zones",
+   "score": 0.914
+  },
+  {
+   "type": "observations",
+   "gold": "NGHE_OBS_LATENCY_OK",
+   "gold_label": "Confirm RTDD latency within 20 ms",
+   "pred": "OBS_NETWORK_CHECK",
+   "pred_label": "RTDD network latency, encryption latency and HSM authentication confirmation",
+   "score": 0.905
+  },
+  {
+   "type": "observations",
+   "gold": "NGHE_OBS_PHM_WARNING",
+   "gold_label": "Detect hydraulic system anomaly sign",
+   "pred": "OBS_HYDRAULIC_ANOMALY",
+   "pred_label": "Hydraulic pressure anomaly sign detection",
+   "score": 0.967
+  },
+  {
+   "type": "observations",
+   "gold": "NGHE_OBS_FORGED_PACKET",
+   "gold_label": "Detect forged command packet",
+   "pred": "OBS_FORGED_SIGNATURE",
+   "pred_label": "Forged digital signature detection",
+   "score": 0.919
+  },
+  {
+   "type": "observations",
+   "gold": "NGHE_OBS_TERRAIN_SUBSIDENCE",
+   "gold_label": "Identify 2 ground subsidence zones",
+   "pred": "OBS_SUBSIDENCE",
+   "pred_label": "Ground subsidence zone identification",
+   "score": 0.942
+  },
+  {
+   "type": "observations",
+   "gold": "NGHE_OBS_SG_PEDESTRIAN",
+   "gold_label": "Pedestrian approach detection",
+   "pred": "OBS_PEDESTRIAN",
+   "pred_label": "Pedestrian detection",
+   "score": 0.956
+  },
+  {
+   "type": "transitions",
+   "gold": "NGHE_TR_LEVEL3_TO_LEVEL4",
+   "gold_label": "Transition from Level 3 to Level 4",
+   "pred": "TR_L3_TO_L4_RESUME",
+   "pred_label": "Switch back to Level 4",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "NGHE_TR_LEVEL4_TO_LEVEL3_FOG",
+   "gold_label": "Downgrade from Level 4 to Level 3 due to fog",
+   "pred": "TR_L4_TO_L3_FOG",
+   "pred_label": "Transition from Level 4 to Level 3 restricted operation in fog",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "NGHE_TR_LEVEL3_FOG_TO_LEVEL1_RAIN",
+   "gold_label": "Transition from Level 3 during fog to Level 1 emergency stop",
+   "pred": "TR_L3_FOG_TO_L1",
+   "pred_label": "Transition from Level 3 fog operation to Level 1 emergency stop",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "NGHE_TR_LEVEL1_TO_LEVEL3_RECOVERY",
+   "gold_label": "Resume construction in Level 3 after heavy rain",
+   "pred": "TR_L1_TO_L3",
+   "pred_label": "Resume construction in Level 3",
+   "score": 1.0
+  },
+  {
+   "type": "transitions",
+   "gold": "NGHE_TR_RECOVERY_LEVEL3_TO_LEVEL4",
+   "gold_label": "Re-transition from Level 3 to Level 4 after recovery",
+   "pred": "TR_L3_TO_L4",
+   "pred_label": "Transition from Level 3 to Level 4 full autonomy",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "NGHE_F_RAIN_RECOVERY",
+   "gold_label": "Rescan, route recalculation, and construction resumption after heavy rain ends",
+   "pred": "F_EVACUATE_TO_RESCAN",
+   "pred_label": "Rescan terrain after heavy rain ends",
+   "score": 0.932
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SCAN_TERRAIN_TO_SG_CALIBRATE_GCP",
+   "gold_label": "Correct GPS-RTK reference points after scanning 3D point cloud terrain data",
+   "pred": "F_SCAN_TO_CORRECT",
+   "pred_label": "Correct reference points after scan",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SG_CALIBRATE_GCP_TO_SG_BUILD_BIM",
+   "gold_label": "Create BIM and digital twin model after correcting GPS-RTK reference points",
+   "pred": "F_CORRECT_TO_CREATE",
+   "pred_label": "Create digital twin after correction",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_DOWNGRADE_LEVEL3_TO_SG_APPROVE_DOWNGRADE",
+   "gold_label": "Approve Level 3 downgrade after proposing Level 3 downgrade",
+   "pred": "F_PROPOSE_TO_APPROVE_DOWNGRADE",
+   "pred_label": "Approval after downgrade proposal",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_ISOLATE_NETWORK_TO_SG_SWITCH_SECURE_NET",
+   "gold_label": "Switch to internal closed security network after blocking external public network",
+   "pred": "F_BLOCK_TO_SWITCH",
+   "pred_label": "Switch to closed network after blocking",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SG_SWITCH_SECURE_NET_TO_SG_LOG_THREAT",
+   "gold_label": "Generate security threat log after switching to internal closed security network",
+   "pred": "F_SWITCH_TO_LOG",
+   "pred_label": "Generate threat log after network switch",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SG_DETECT_PEDESTRIAN_TO_LOCAL_SAFETY_STOP",
+   "gold_label": "Local stop after pedestrian detection",
+   "pred": "F_DETECT_PED_TO_STOP",
+   "pred_label": "Local stop after pedestrian detection",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_RESCAN_TERRAIN_TO_SG_RECALIBRATE",
+   "gold_label": "Re-correct reference points after rescanning terrain after heavy rain",
+   "pred": "F_RESCAN_TO_RECORRECT",
+   "pred_label": "Re-correct reference points after rescan",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_GENERATE_FINAL_REPORT_TO_SG_COMPLETE_MISSION",
+   "gold_label": "Mission completion after automatically generating comprehensive performance report",
+   "pred": "F_REPORT_TO_COMPLETE",
+   "pred_label": "Complete mission after report",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SG_DETECT_HYDRAULIC_TO_PERFORM_MAINTENANCE",
+   "gold_label": "Preventive maintenance after anomaly sign detection",
+   "pred": "F_DETECT_ANOMALY_TO_MAINT",
+   "pred_label": "Preventive maintenance after anomaly detection",
+   "score": 1.0
+  },
+  {
+   "type": "flows",
+   "gold": "SG_F_SG_DETECT_FORGERY_TO_ISOLATE_NETWORK",
+   "gold_label": "Network blocking after forgery detection",
+   "pred": "F_DETECT_FORGED_TO_BLOCK",
+   "pred_label": "Block public network after forged signature detection",
+   "score": 1.0
+  },
+  {
+   "type": "controls",
+   "gold": "NGHE_CTRL_PARALLEL_CALIBRATION",
+   "gold_label": "Simultaneous authentication and calibration of 19 units of equipment",
+   "pred": "C_AUTH_CAL_PARALLEL",
+   "pred_label": "Authentication and calibration in parallel",
+   "score": 0.891
+  },
+  {
+   "type": "controls",
+   "gold": "NGHE_CTRL_RAIN_STOP",
+   "gold_label": "Forced work stop during heavy rain",
+   "pred": "C_RAIN_30",
+   "pred_label": "Heavy rain intensity decision",
+   "score": 0.874
+  }
+ ],
+ "type_confusion": {
+  "flows->controls": 1,
+  "controls->state_values": 1,
+  "controls->episodes": 1,
+  "situations->items": 3,
+  "state_values->constraints": 2,
+  "state_values->items": 1,
+  "events->flows": 1,
+  "events->state_values": 1,
+  "constraints->actions": 1,
+  "goals->items": 1,
+  "reasons->flows": 1,
+  "reasons->situations": 1,
+  "observations->flows": 1,
+  "observations->state_values": 1
+ },
+ "source_ref_accuracy": {
+  "correct": 108,
+  "aligned_with_gold_ref": 115,
+  "accuracy": 0.9391
+ },
+ "relations": {
+  "strict": {
+   "tp": 128,
+   "pred": 284,
+   "gold": 224,
+   "precision": 0.4507,
+   "recall": 0.5714,
+   "f1": 0.5039,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 4,
+     "recalled": 2
+    },
+    "carries_item": {
+     "gold": 2,
+     "recalled": 0
+    },
+    "causes": {
+     "gold": 5,
+     "recalled": 2
+    },
+    "constrained_by": {
+     "gold": 10,
+     "recalled": 6
+    },
+    "contains_action": {
+     "gold": 30,
+     "recalled": 19
+    },
+    "controls_flow": {
+     "gold": 6,
+     "recalled": 0
+    },
+    "flow_source": {
+     "gold": 17,
+     "recalled": 10
+    },
+    "flow_target": {
+     "gold": 17,
+     "recalled": 10
+    },
+    "from_situation": {
+     "gold": 7,
+     "recalled": 5
+    },
+    "has_episode": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "has_evidence": {
+     "gold": 3,
+     "recalled": 2
+    },
+    "has_goal": {
+     "gold": 4,
+     "recalled": 2
+    },
+    "has_part": {
+     "gold": 8,
+     "recalled": 8
+    },
+    "has_reason": {
+     "gold": 7,
+     "recalled": 3
+    },
+    "has_situation": {
+     "gold": 8,
+     "recalled": 2
+    },
+    "has_state_value": {
+     "gold": 13,
+     "recalled": 4
+    },
+    "observes": {
+     "gold": 8,
+     "recalled": 3
+    },
+    "performed_by": {
+     "gold": 39,
+     "recalled": 33
+    },
+    "produces_item": {
+     "gold": 6,
+     "recalled": 5
+    },
+    "temporal_before": {
+     "gold": 6,
+     "recalled": 0
+    },
+    "temporal_during": {
+     "gold": 1,
+     "recalled": 0
+    },
+    "to_situation": {
+     "gold": 7,
+     "recalled": 5
+    },
+    "triggers": {
+     "gold": 8,
+     "recalled": 0
+    },
+    "uses_item": {
+     "gold": 3,
+     "recalled": 2
+    }
+   }
+  },
+  "normalized": {
+   "tp": 128,
+   "pred": 284,
+   "gold": 224,
+   "precision": 0.4507,
+   "recall": 0.5714,
+   "f1": 0.5039,
+   "recall_by_type": {
+    "acts_on": {
+     "gold": 4,
+     "recalled": 2
+    },
+    "carries_item": {
+     "gold": 2,
+     "recalled": 0
+    },
+    "causes": {
+     "gold": 5,
+     "recalled": 2
+    },
+    "constrained_by": {
+     "gold": 10,
+     "recalled": 6
+    },
+    "contains_action": {
+     "gold": 30,
+     "recalled": 19
+    },
+    "controls_flow": {
+     "gold": 6,
+     "recalled": 0
+    },
+    "flow_source": {
+     "gold": 17,
+     "recalled": 10
+    },
+    "flow_target": {
+     "gold": 17,
+     "recalled": 10
+    },
+    "from_situation": {
+     "gold": 7,
+     "recalled": 5
+    },
+    "has_episode": {
+     "gold": 5,
+     "recalled": 5
+    },
+    "has_evidence": {
+     "gold": 3,
+     "recalled": 2
+    },
+    "has_goal": {
+     "gold": 4,
+     "recalled": 2
+    },
+    "has_part": {
+     "gold": 8,
+     "recalled": 8
+    },
+    "has_reason": {
+     "gold": 7,
+     "recalled": 3
+    },
+    "has_situation": {
+     "gold": 8,
+     "recalled": 2
+    },
+    "has_state_value": {
+     "gold": 13,
+     "recalled": 4
+    },
+    "observes": {
+     "gold": 8,
+     "recalled": 3
+    },
+    "performed_by": {
+     "gold": 39,
+     "recalled": 33
+    },
+    "produces_item": {
+     "gold": 6,
+     "recalled": 5
+    },
+    "temporal_before": {
+     "gold": 6,
+     "recalled": 0
+    },
+    "temporal_during": {
+     "gold": 1,
+     "recalled": 0
+    },
+    "to_situation": {
+     "gold": 7,
+     "recalled": 5
+    },
+    "triggers": {
+     "gold": 8,
+     "recalled": 0
+    },
+    "uses_item": {
+     "gold": 3,
+     "recalled": 2
+    }
+   }
+  },
+  "untyped": {
+   "tp": 132,
+   "pred": 221,
+   "gold": 224,
+   "precision": 0.5973,
+   "recall": 0.5893,
+   "f1": 0.5933
+  }
+ },
+ "atomic_facts": {
+  "found": 30,
+  "total": 31,
+  "missing": [
+   "safety distance"
+  ]
+ },
+ "required_relations": {
+  "hit": 5,
+  "total": 7
+ },
+ "forbidden_relations": {
+  "violated": 0,
+  "total": 4
+ },
+ "structure": {
+  "actions": 40,
+  "actions_in_episode": 40,
+  "actions_allocated": 40,
+  "nested_mode": true,
+  "dangling_relations": 0,
+  "relations": 284
+ }
+}

@@ -1,0 +1,30 @@
+digraph S { rankdir=LR; newrank=true; nodesep=0.3; ranksep=0.55; bgcolor="white"; compound=true; pad=0.05;
+node [fontname="Arial", fontsize=10, shape=plain]; edge [fontname="Arial", fontsize=8, color="#1E6E8C", arrowsize=0.6];
+label=<<B>MUM-T attack operation under EW</B>>; labelloc=t; labeljust=l; fontname="Arial"; fontsize=11;
+subgraph "cluster_r2" { label=<<I>available_drone_count</I>>; labeljust=l; fontsize=9; fontcolor="#6F6C66"; style="dashed,rounded"; color="#8A8F96";
+"MUMT_SIT_DRONE_3" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Three drones available</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">available_drone_count = 3</FONT></TD></TR></TABLE>>];
+"MUMT_SIT_DRONE_2" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Two drones available</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">available_drone_count = 2</FONT></TD></TR></TABLE>>];
+"init_r2" [shape=circle, style=filled, fillcolor=black, label="", width=0.12, fixedsize=true];
+"init_r2" -> "MUMT_SIT_DRONE_3" [color=black];
+"MUMT_SIT_DRONE_3" -> "MUMT_SIT_DRONE_2" [label=<Drone 1 battery<BR/>depleted, lands>];
+}
+subgraph "cluster_r1" { label=<<I>combat_power</I>>; labeljust=l; fontsize=9; fontcolor="#6F6C66"; style="dashed,rounded"; color="#8A8F96";
+"MUMT_SIT_MISSION_SECURED" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Objective secured</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">combat_power = maintained</FONT></TD></TR></TABLE>>];
+"init_r1" [shape=circle, style=filled, fillcolor=black, label="", width=0.12, fixedsize=true];
+"init_r1" -> "MUMT_SIT_MISSION_SECURED" [color=black];
+}
+subgraph "cluster_r0" { label=<<I>communication_mode</I>>; labeljust=l; fontsize=9; fontcolor="#6F6C66"; style="dashed,rounded"; color="#8A8F96";
+"MUMT_SIT_COMM_NORMAL" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Comms normal</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">communication_mode = normal</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">data_mode = video_stream</FONT></TD></TR></TABLE>>];
+"MUMT_SIT_COMM_LIMITED" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Comms limited</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">communication_mode = limited</FONT></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">data_mode = track_summary</FONT></TD></TR></TABLE>>];
+"MUMT_SIT_COMM_DISCONNECTED" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="3" STYLE="ROUNDED" COLOR="#4B4F55"><TR><TD ALIGN="LEFT"><B>Comms disconnected</B></TD></TR><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="8" COLOR="#4B4F55">communication_mode = disconnected</FONT></TD></TR></TABLE>>];
+"init_r0" [shape=circle, style=filled, fillcolor=black, label="", width=0.12, fixedsize=true];
+"init_r0" -> "MUMT_SIT_COMM_NORMAL" [color=black];
+"MUMT_SIT_COMM_NORMAL" -> "MUMT_SIT_COMM_LIMITED" [label=<Packet loss above<BR/>threshold persists<BR/><FONT COLOR="#9a3c00">[packet_loss_rate &gt;<BR/>threshold for<BR/>configured_duration]</FONT>>];
+"MUMT_SIT_COMM_LIMITED" -> "MUMT_SIT_COMM_DISCONNECTED" [label=<Heartbeat loss persists<BR/><FONT COLOR="#9a3c00">[heartbeat_loss_duration &gt;=<BR/>configured_duration]</FONT>>];
+"MUMT_SIT_COMM_DISCONNECTED" -> "MUMT_SIT_COMM_LIMITED" [label=<Link remains stable<BR/><FONT COLOR="#9a3c00">[link_stable_duration &gt;=<BR/>configured_duration]</FONT>>];
+"MUMT_SIT_COMM_LIMITED" -> "MUMT_SIT_COMM_NORMAL" [label=<Bandwidth recovered>];
+}
+{ rank=same; "init_r2"; "init_r1"; "init_r0"; }
+"init_r2" -> "init_r1" [style=invis];
+"init_r1" -> "init_r0" [style=invis];
+}

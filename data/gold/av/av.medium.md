@@ -1,0 +1,17 @@
+# Autonomous Vehicle Autonomous Operation Scenario (medium)
+
+> Input text reverse-generated from all ground-truth information in Ground truth `av.gold.json`. The medium difficulty mixes demonstrative expressions, omitted subjects, and some qualitative time expressions at the level of real operational documents, while preserving all information.
+
+The autonomous vehicle is made up of a perception system, a path planning module, a vehicle control module, a drive actuator, a V2X communication module, a battery management system, and an HMI. Among these, the perception system is a subsystem that bundles the LiDAR, camera, and radar sensors. Outside the vehicle, the control center server watches the vehicle status, and the charging station refills the battery.
+
+When the driver asked to turn on autonomous driving, the vehicle control module turned on the autonomous driving mode, and a notice that the mode had changed appeared on the HMI. In this way, the vehicle moved from manual driving to normal autonomous driving.
+
+Once in normal autonomous driving, the perception system gathered and fused the raw data of the three sensors to make environment perception data, and repeated this process every 100 ms. The path planning module took the environment perception data made this way and laid out a driving path. The vehicle control module turned that path into steering/acceleration-deceleration control commands, and the drive actuator executed them. Meanwhile, the V2X communication module sent vehicle status reports up to the control center server, and the control center server kept monitoring them.
+
+While driving, the camera caught a pedestrian crossing ahead. Since a collision had to be avoided, the vehicle control module immediately applied emergency braking without exceeding 0.2 s.
+
+A while later, the perception system detected that the reliability of the LiDAR had dropped. To secure a safety margin, the vehicle control module switched to the degraded mode, and the vehicle moved from normal to degraded autonomous driving and held its speed below 30 km/h.
+
+Meanwhile, the battery management system had been measuring the SoC, and the value was confirmed to be 18%, falling below the 20%-or-less threshold. Because driving range had to be gained, the path planning module re-set the route to the charging station, and as the V2X communication module requested charging, the vehicle transitioned from degraded autonomous driving to the charging state.
+
+The charging station charged the vehicle. What this scenario ultimately aims to achieve is reaching the destination safely.

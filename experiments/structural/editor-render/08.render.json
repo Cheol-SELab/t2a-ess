@@ -1,0 +1,29 @@
+{
+  "in": "08.sysml",
+  "out": "08.png",
+  "expanded": [
+    "Coffee order scenario::Beverage preparation",
+    "Coffee order scenario::Order taking",
+    "Coffee order scenario::Order taking::Order entry"
+  ],
+  "nodeKinds": {
+    "FunctionNode": 8,
+    "StartConcurrencyNode": 1,
+    "EndConcurrencyNode": 1,
+    "ItemNode": 1,
+    "StartReferenceNode": 1,
+    "EndReferenceNode": 1
+  },
+  "edges": 13,
+  "metrics": [
+    "rootIds",
+    "topologyOf",
+    "step",
+    "lane",
+    "pathPointer",
+    "pair",
+    "slot",
+    "branchStates",
+    "clusterHierarchy"
+  ]
+}

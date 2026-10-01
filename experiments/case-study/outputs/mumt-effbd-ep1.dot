@@ -1,0 +1,11 @@
+digraph G { rankdir=LR; nodesep=0.22; ranksep=0.32; bgcolor="white"; compound=true;
+node [fontname="Arial", fontsize=10]; edge [fontname="Arial", fontsize=9, color="#444444", arrowsize=0.7];
+label=<<B>Lv.1 E1 Preparation under normal comms</B>>; labelloc=t; labeljust=l; fontname="Arial"; fontsize=12;
+"MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms" [shape=box, style="rounded", margin=0.04, label=<<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7" COLOR="#777777">Lv.2</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="7" COLOR="#777777">#Function</FONT></TD></TR><TR><TD COLSPAN="2"><B>Run TDSS self-test and<BR/>check comms</B></TD></TR><TR><TD COLSPAN="2"><FONT POINT-SIZE="8"><I>TDSS</I></FONT></TD></TR></TABLE>>];
+"MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance" [shape=box, style="rounded", margin=0.04, label=<<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7" COLOR="#777777">Lv.2</FONT></TD><TD ALIGN="RIGHT"><FONT POINT-SIZE="7" COLOR="#777777">#Function</FONT></TD></TR><TR><TD COLSPAN="2"><B>Launch drones and<BR/>deploy for<BR/>surveillance</B></TD></TR><TR><TD COLSPAN="2"><FONT POINT-SIZE="8"><I>Recon drone team</I></FONT></TD></TR></TABLE>>];
+"MUM-T attack operation under EW::E1 Preparation under normal comms::start" [shape=circle, style=filled, fillcolor=black, label="", width=0.16];
+"MUM-T attack operation under EW::E1 Preparation under normal comms::done" [shape=doublecircle, style=filled, fillcolor=black, label="", width=0.11];
+"MUM-T attack operation under EW::E1 Preparation under normal comms::start" -> "MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms";
+"MUM-T attack operation under EW::E1 Preparation under normal comms::Run TDSS self-test and check comms" -> "MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance";
+"MUM-T attack operation under EW::E1 Preparation under normal comms::Launch drones and deploy for surveillance" -> "MUM-T attack operation under EW::E1 Preparation under normal comms::done";
+}

@@ -1,0 +1,1755 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "G_GOLD",
+    "title": "Smart greenhouse cold-wave response",
+    "extraction_schema": "T2A-ESS",
+    "generation_mode": "manual_development_reference",
+    "source_units": [
+      {
+        "source_unit_id": "P1",
+        "unit_type": "paragraph",
+        "text": "The smart greenhouse operation system consists of a greenhouse management server (GMS), 2 heating boilers, a thermal curtain unit, 30 environmental sensors, and a nutrient solution supplier. The environmental sensors measure temperature, humidity, and CO2 concentration."
+      },
+      {
+        "source_unit_id": "P2",
+        "unit_type": "paragraph",
+        "text": "Externally, there are the meteorological agency forecast service and the power company; the cultivation manager handles equipment operation, and the equipment technician handles equipment repair."
+      },
+      {
+        "source_unit_id": "P3",
+        "unit_type": "paragraph",
+        "text": "At 10:00 p.m., the GMS receives a forecast of an early-morning minimum temperature of -12 °C from the meteorological agency forecast service. If the forecast temperature is -10 °C or less, the GMS issues the cold-wave alert mode. The GMS issues the cold-wave alert mode and sends a notification to the cultivation manager."
+      },
+      {
+        "source_unit_id": "P4",
+        "unit_type": "paragraph",
+        "text": "In the cold-wave alert mode, the thermal curtain unit closes the thermal curtain, and Boiler 1 maintains the greenhouse target temperature at 15 °C. The two measures start simultaneously."
+      },
+      {
+        "source_unit_id": "P5",
+        "unit_type": "paragraph",
+        "text": "The environmental sensors measure the indoor temperature every 10 min and transmit it to the GMS. If the indoor temperature drops below 12 °C, the GMS additionally operates Boiler 2."
+      },
+      {
+        "source_unit_id": "P6",
+        "unit_type": "paragraph",
+        "text": "At 2:00 a.m., when the environmental sensors measure an indoor temperature of 11.5 °C, the GMS operates Boiler 2."
+      },
+      {
+        "source_unit_id": "P7",
+        "unit_type": "paragraph",
+        "text": "At 3:00 a.m., Boiler 1 stops due to a combustion failure. The GMS detects the Boiler 1 stop and requests an emergency dispatch from the equipment technician."
+      },
+      {
+        "source_unit_id": "P8",
+        "unit_type": "paragraph",
+        "text": "After arriving, the equipment technician inspects the ignition device and replaces the clogged fuel filter. When the filter replacement is finished, the equipment technician reignites Boiler 1."
+      },
+      {
+        "source_unit_id": "P9",
+        "unit_type": "paragraph",
+        "text": "Until Boiler 1 is reignited, the cultivation manager stops the nutrient solution supply. This is because a low nutrient solution temperature causes root damage."
+      },
+      {
+        "source_unit_id": "P10",
+        "unit_type": "paragraph",
+        "text": "At 4:20 a.m., when Boiler 1 is reignited and the indoor temperature recovers to 15 °C, the cultivation manager resumes the nutrient solution supply."
+      },
+      {
+        "source_unit_id": "P11",
+        "unit_type": "paragraph",
+        "text": "At 7:00 a.m., when the outdoor temperature rises to -5 °C or more, the GMS releases the cold-wave alert mode and stops Boiler 2."
+      },
+      {
+        "source_unit_id": "P12",
+        "unit_type": "paragraph",
+        "text": "If the indoor humidity is 90% or more, the cultivation manager opens the vent window for 5 min. On this day, the humidity stayed at 85%, so the vent window was not opened."
+      },
+      {
+        "source_unit_id": "P13",
+        "unit_type": "paragraph",
+        "text": "The goal of this scenario is to maintain the indoor temperature at 12 °C or more without crop frost damage."
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "G_SCN",
+        "label": "Smart greenhouse cold-wave response",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "G_EP_DECLARE",
+        "label": "Cold-wave alert issuance",
+        "order_index": 1,
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "episode_id": "G_EP_MONITOR",
+        "label": "Indoor temperature monitoring and additional boiler operation",
+        "order_index": 2,
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "episode_id": "G_EP_FAULT",
+        "label": "Boiler 1 failure response",
+        "order_index": 3,
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "episode_id": "G_EP_RECOVER",
+        "label": "Recovery and cold-wave release",
+        "order_index": 4,
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "G_P_SYSTEM",
+        "label": "smart greenhouse operation system",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "G_P_GMS",
+        "label": "greenhouse management server (GMS)",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "G_P_BOILERS",
+        "label": "2 heating boilers",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "G_P_B1",
+        "label": "Boiler 1",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "performer_id": "G_P_B2",
+        "label": "Boiler 2",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "performer_id": "G_P_CURTAIN",
+        "label": "thermal curtain unit",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "G_P_SENSORS",
+        "label": "30 environmental sensors",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "G_P_NUTRIENT",
+        "label": "nutrient solution supplier",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "G_P_KMA",
+        "label": "meteorological agency forecast service",
+        "performer_kind": "external_system",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "G_P_POWER",
+        "label": "power company",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "G_P_MANAGER",
+        "label": "cultivation manager",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "G_P_TECH",
+        "label": "equipment technician",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "G_A_DECLARE",
+        "label": "Issue cold-wave alert mode",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "GMS",
+        "object_text": "cold-wave alert mode"
+      },
+      {
+        "action_id": "G_A_NOTIFY",
+        "label": "Send cold-wave notification to cultivation manager",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "GMS",
+        "object_text": "notification"
+      },
+      {
+        "action_id": "G_A_CLOSE_CURTAIN",
+        "label": "Close thermal curtain",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "thermal curtain unit",
+        "object_text": "thermal curtain"
+      },
+      {
+        "action_id": "G_A_B1_HOLD",
+        "label": "Maintain target temperature at 15 °C",
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "primary_actor_text": "Boiler 1",
+        "object_text": "greenhouse target temperature"
+      },
+      {
+        "action_id": "G_A_MEASURE",
+        "label": "Measure indoor temperature every 10 min",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "environmental sensors",
+        "object_text": "indoor temperature"
+      },
+      {
+        "action_id": "G_A_SEND_TEMP",
+        "label": "Transmit temperature measurement to GMS",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "environmental sensors",
+        "object_text": "indoor temperature measurement"
+      },
+      {
+        "action_id": "G_A_START_B2",
+        "label": "Additionally operate Boiler 2",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "GMS",
+        "object_text": "Boiler 2"
+      },
+      {
+        "action_id": "G_A_DETECT_B1",
+        "label": "Detect Boiler 1 stop",
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "primary_actor_text": "GMS",
+        "object_text": "Boiler 1 stop"
+      },
+      {
+        "action_id": "G_A_REQ_TECH",
+        "label": "Request emergency dispatch from equipment technician",
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "primary_actor_text": "GMS",
+        "object_text": "emergency dispatch"
+      },
+      {
+        "action_id": "G_A_CHECK_IGNITER",
+        "label": "Inspect ignition device",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "equipment technician",
+        "object_text": "ignition device"
+      },
+      {
+        "action_id": "G_A_REPLACE_FILTER",
+        "label": "Replace clogged fuel filter",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "equipment technician",
+        "object_text": "fuel filter"
+      },
+      {
+        "action_id": "G_A_RELIGHT",
+        "label": "Reignite Boiler 1",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "equipment technician",
+        "object_text": "Boiler 1"
+      },
+      {
+        "action_id": "G_A_STOP_FEED",
+        "label": "Stop nutrient solution supply",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "cultivation manager",
+        "object_text": "nutrient solution supply"
+      },
+      {
+        "action_id": "G_A_RESUME_FEED",
+        "label": "Resume nutrient solution supply",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "cultivation manager",
+        "object_text": "nutrient solution supply"
+      },
+      {
+        "action_id": "G_A_LIFT",
+        "label": "Release cold-wave alert mode",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "GMS",
+        "object_text": "cold-wave alert mode"
+      },
+      {
+        "action_id": "G_A_STOP_B2",
+        "label": "Stop Boiler 2",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "GMS",
+        "object_text": "Boiler 2"
+      },
+      {
+        "action_id": "G_A_OPEN_VENT",
+        "label": "Open vent window for 5 min",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "cultivation manager",
+        "object_text": "vent window"
+      }
+    ],
+    "items": [
+      {
+        "item_id": "G_I_FORECAST",
+        "label": "early-morning minimum temperature forecast",
+        "item_type": "data",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "item_id": "G_I_ALERT",
+        "label": "cold-wave notification",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "item_id": "G_I_TEMP",
+        "label": "indoor temperature measurement",
+        "item_type": "data",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "item_id": "G_I_FILTER",
+        "label": "fuel filter",
+        "item_type": "material",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "G_SIT_NORMAL",
+        "label": "normal mode",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "G_SIT_COLD",
+        "label": "cold-wave alert mode",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "G_SIT_B1_RUN",
+        "label": "Boiler 1 operating state",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "situation_id": "G_SIT_B1_STOP",
+        "label": "Boiler 1 stopped state",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "situation_id": "G_SIT_FEED_ON",
+        "label": "nutrient solution supply state",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "situation_id": "G_SIT_FEED_OFF",
+        "label": "nutrient solution supply stopped state",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "G_SV_NORMAL",
+        "subject_text": "greenhouse",
+        "variable": "cold-wave response mode",
+        "value": "normal",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "G_SV_COLD",
+        "subject_text": "greenhouse",
+        "variable": "cold-wave response mode",
+        "value": "cold-wave alert",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "G_SV_B1_RUN",
+        "subject_text": "Boiler 1",
+        "variable": "state",
+        "value": "operating",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "state_value_id": "G_SV_B1_STOP",
+        "subject_text": "Boiler 1",
+        "variable": "state",
+        "value": "stopped",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "state_value_id": "G_SV_FEED_ON",
+        "subject_text": "nutrient solution supply",
+        "variable": "state",
+        "value": "supplying",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "state_value_id": "G_SV_FEED_OFF",
+        "subject_text": "nutrient solution supply",
+        "variable": "state",
+        "value": "stopped",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "G_EVT_FORECAST",
+        "label": "Early-morning minimum temperature -12 °C forecast received",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "event_id": "G_EVT_115",
+        "label": "Indoor temperature 11.5 °C measured",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "event_id": "G_EVT_B1_STOP",
+        "label": "Boiler 1 stops due to combustion failure",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "event_id": "G_EVT_RECOVERED",
+        "label": "Indoor temperature recovers to 15 °C",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "event_id": "G_EVT_WARM",
+        "label": "Outdoor temperature rises to -5 °C or more",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "G_TR_COLD",
+        "label": "From normal mode to cold-wave alert mode",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "transition_id": "G_TR_B1_STOP",
+        "label": "Boiler 1 from operating to stopped",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "transition_id": "G_TR_FEED_OFF",
+        "label": "From nutrient solution supplying to supply stopped",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "transition_id": "G_TR_B1_RUN",
+        "label": "Boiler 1 from stopped to operating",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "transition_id": "G_TR_FEED_ON",
+        "label": "From nutrient solution supply stopped to supplying",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "transition_id": "G_TR_COLD_OFF",
+        "label": "From cold-wave alert mode to normal mode",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "G_OBS_TEMP",
+        "label": "Indoor temperature measurement",
+        "observer_text": "environmental sensors",
+        "observed_text": "indoor temperature",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "observation_id": "G_OBS_B1",
+        "label": "Detect Boiler 1 stop",
+        "observer_text": "GMS",
+        "observed_text": "Boiler 1 stop",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "observation_id": "G_OBS_IGNITER",
+        "label": "Inspect ignition device",
+        "observer_text": "equipment technician",
+        "observed_text": "ignition device state",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "G_F01",
+        "label": "Send notification after issuance",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "G_F02",
+        "label": "Close thermal curtain in cold-wave alert mode",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "G_F03",
+        "label": "Maintain target temperature in cold-wave alert mode",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "G_F04",
+        "label": "Transmit after measurement",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "G_F05",
+        "label": "Operate Boiler 2 when below 12 °C",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "G_F06",
+        "label": "Request dispatch after stop detection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "flow_id": "G_F07",
+        "label": "Inspect ignition device after dispatch request",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "G_F08",
+        "label": "Replace filter after inspection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "G_F09",
+        "label": "Reignite after filter replacement",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "G_F10",
+        "label": "Resume nutrient solution after reignition and temperature recovery",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "G_F11",
+        "label": "Stop Boiler 2 after mode release",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "G_C01",
+        "label": "Determine forecast temperature -10 °C or less",
+        "control_type": "decision",
+        "guard_texts": [
+          "Forecast minimum temperature -10 °C or less"
+        ],
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "control_id": "G_C02",
+        "label": "Simultaneous start of closing thermal curtain and maintaining target temperature",
+        "control_type": "fork",
+        "guard_texts": [],
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "control_id": "G_C03",
+        "label": "Measure indoor temperature every 10 min",
+        "control_type": "loop",
+        "guard_texts": [
+          "every 10 min"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "control_id": "G_C04",
+        "label": "Determine indoor temperature below 12 °C",
+        "control_type": "decision",
+        "guard_texts": [
+          "Indoor temperature below 12 °C"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "control_id": "G_C05",
+        "label": "Stop nutrient solution supply before reignition",
+        "control_type": "temporal_exclusion",
+        "guard_texts": [
+          "Stop nutrient solution supply until Boiler 1 is reignited"
+        ],
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "control_id": "G_C06",
+        "label": "Determine indoor humidity 90% or more",
+        "control_type": "decision",
+        "guard_texts": [
+          "Indoor humidity 90% or more"
+        ],
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "G_CN_M10",
+        "label": "Forecast minimum temperature -10 °C or less",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "parameter": "forecast minimum temperature",
+        "operator": "<=",
+        "value": -10,
+        "unit": "℃"
+      },
+      {
+        "constraint_id": "G_CN_15",
+        "label": "Greenhouse target temperature 15 °C",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "parameter": "target temperature",
+        "operator": "=",
+        "value": 15,
+        "unit": "℃"
+      },
+      {
+        "constraint_id": "G_CN_10MIN",
+        "label": "Indoor temperature measurement interval 10 min",
+        "constraint_kind": [
+          "period"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "parameter": "measurement interval",
+        "operator": "=",
+        "value": 10,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "G_CN_12",
+        "label": "Indoor temperature below 12 °C",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "parameter": "indoor temperature",
+        "operator": "<",
+        "value": 12,
+        "unit": "℃"
+      },
+      {
+        "constraint_id": "G_CN_M5",
+        "label": "Outdoor temperature -5 °C or more",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "parameter": "outdoor temperature",
+        "operator": ">=",
+        "value": -5,
+        "unit": "℃"
+      },
+      {
+        "constraint_id": "G_CN_90",
+        "label": "Indoor humidity 90% or more",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "parameter": "indoor humidity",
+        "operator": ">=",
+        "value": 90,
+        "unit": "%"
+      },
+      {
+        "constraint_id": "G_CN_5MIN",
+        "label": "Vent window opening 5 min",
+        "constraint_kind": [
+          "duration"
+        ],
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "parameter": "opening time",
+        "operator": "=",
+        "value": 5,
+        "unit": "min"
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "G_G_NO_FROST",
+        "label": "No crop frost damage",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      },
+      {
+        "goal_id": "G_G_TEMP12",
+        "label": "Maintain indoor temperature at 12 °C or more",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "G_R_ROOT",
+        "label": "Root damage due to low nutrient solution temperature",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "G_REL_001",
+        "relation_type": "has_episode",
+        "source_slot_id": "G_SCN",
+        "target_slot_id": "G_EP_DECLARE",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "G_REL_002",
+        "relation_type": "has_episode",
+        "source_slot_id": "G_SCN",
+        "target_slot_id": "G_EP_MONITOR",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "G_REL_003",
+        "relation_type": "has_episode",
+        "source_slot_id": "G_SCN",
+        "target_slot_id": "G_EP_FAULT",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "G_REL_004",
+        "relation_type": "has_episode",
+        "source_slot_id": "G_SCN",
+        "target_slot_id": "G_EP_RECOVER",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "G_REL_005",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_DECLARE",
+        "target_slot_id": "G_A_DECLARE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_006",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_DECLARE",
+        "target_slot_id": "G_A_NOTIFY",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_007",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_DECLARE",
+        "target_slot_id": "G_A_CLOSE_CURTAIN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_008",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_DECLARE",
+        "target_slot_id": "G_A_B1_HOLD",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_009",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_MONITOR",
+        "target_slot_id": "G_A_MEASURE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_010",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_MONITOR",
+        "target_slot_id": "G_A_SEND_TEMP",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_011",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_MONITOR",
+        "target_slot_id": "G_A_START_B2",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_012",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_FAULT",
+        "target_slot_id": "G_A_DETECT_B1",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_013",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_FAULT",
+        "target_slot_id": "G_A_REQ_TECH",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_014",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_FAULT",
+        "target_slot_id": "G_A_CHECK_IGNITER",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_015",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_FAULT",
+        "target_slot_id": "G_A_REPLACE_FILTER",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_016",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_FAULT",
+        "target_slot_id": "G_A_RELIGHT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_017",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_FAULT",
+        "target_slot_id": "G_A_STOP_FEED",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_018",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_RECOVER",
+        "target_slot_id": "G_A_RESUME_FEED",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_019",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_RECOVER",
+        "target_slot_id": "G_A_LIFT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_020",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_RECOVER",
+        "target_slot_id": "G_A_STOP_B2",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_021",
+        "relation_type": "custom",
+        "source_slot_id": "G_EP_RECOVER",
+        "target_slot_id": "G_A_OPEN_VENT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "G_REL_022",
+        "relation_type": "has_part",
+        "source_slot_id": "G_P_SYSTEM",
+        "target_slot_id": "G_P_GMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_023",
+        "relation_type": "has_part",
+        "source_slot_id": "G_P_SYSTEM",
+        "target_slot_id": "G_P_BOILERS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_024",
+        "relation_type": "has_part",
+        "source_slot_id": "G_P_SYSTEM",
+        "target_slot_id": "G_P_CURTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_025",
+        "relation_type": "has_part",
+        "source_slot_id": "G_P_SYSTEM",
+        "target_slot_id": "G_P_SENSORS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_026",
+        "relation_type": "has_part",
+        "source_slot_id": "G_P_SYSTEM",
+        "target_slot_id": "G_P_NUTRIENT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_027",
+        "relation_type": "has_part",
+        "source_slot_id": "G_P_BOILERS",
+        "target_slot_id": "G_P_B1",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "G_REL_028",
+        "relation_type": "has_part",
+        "source_slot_id": "G_P_BOILERS",
+        "target_slot_id": "G_P_B2",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "G_REL_029",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_DECLARE",
+        "target_slot_id": "G_P_GMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_030",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_NOTIFY",
+        "target_slot_id": "G_P_GMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_031",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_CLOSE_CURTAIN",
+        "target_slot_id": "G_P_CURTAIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_032",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_B1_HOLD",
+        "target_slot_id": "G_P_B1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_033",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_MEASURE",
+        "target_slot_id": "G_P_SENSORS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_034",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_SEND_TEMP",
+        "target_slot_id": "G_P_SENSORS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_035",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_START_B2",
+        "target_slot_id": "G_P_GMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_036",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_DETECT_B1",
+        "target_slot_id": "G_P_GMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_037",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_REQ_TECH",
+        "target_slot_id": "G_P_GMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_038",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_CHECK_IGNITER",
+        "target_slot_id": "G_P_TECH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_039",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_REPLACE_FILTER",
+        "target_slot_id": "G_P_TECH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_040",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_RELIGHT",
+        "target_slot_id": "G_P_TECH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_041",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_STOP_FEED",
+        "target_slot_id": "G_P_MANAGER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_042",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_RESUME_FEED",
+        "target_slot_id": "G_P_MANAGER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_043",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_LIFT",
+        "target_slot_id": "G_P_GMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_044",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_STOP_B2",
+        "target_slot_id": "G_P_GMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_045",
+        "relation_type": "performed_by",
+        "source_slot_id": "G_A_OPEN_VENT",
+        "target_slot_id": "G_P_MANAGER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_046",
+        "relation_type": "uses_item",
+        "source_slot_id": "G_A_DECLARE",
+        "target_slot_id": "G_I_FORECAST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_047",
+        "relation_type": "produces_item",
+        "source_slot_id": "G_A_NOTIFY",
+        "target_slot_id": "G_I_ALERT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_048",
+        "relation_type": "provided_to",
+        "source_slot_id": "G_A_NOTIFY",
+        "target_slot_id": "G_P_MANAGER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_049",
+        "relation_type": "produces_item",
+        "source_slot_id": "G_A_SEND_TEMP",
+        "target_slot_id": "G_I_TEMP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_050",
+        "relation_type": "provided_to",
+        "source_slot_id": "G_A_SEND_TEMP",
+        "target_slot_id": "G_P_GMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_051",
+        "relation_type": "acts_on",
+        "source_slot_id": "G_A_START_B2",
+        "target_slot_id": "G_P_B2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_052",
+        "relation_type": "provided_to",
+        "source_slot_id": "G_A_REQ_TECH",
+        "target_slot_id": "G_P_TECH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_053",
+        "relation_type": "uses_item",
+        "source_slot_id": "G_A_REPLACE_FILTER",
+        "target_slot_id": "G_I_FILTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_054",
+        "relation_type": "acts_on",
+        "source_slot_id": "G_A_RELIGHT",
+        "target_slot_id": "G_P_B1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_055",
+        "relation_type": "acts_on",
+        "source_slot_id": "G_A_STOP_FEED",
+        "target_slot_id": "G_P_NUTRIENT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_056",
+        "relation_type": "acts_on",
+        "source_slot_id": "G_A_RESUME_FEED",
+        "target_slot_id": "G_P_NUTRIENT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_057",
+        "relation_type": "acts_on",
+        "source_slot_id": "G_A_STOP_B2",
+        "target_slot_id": "G_P_B2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_058",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F01",
+        "target_slot_id": "G_A_DECLARE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_059",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F01",
+        "target_slot_id": "G_A_NOTIFY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_060",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F02",
+        "target_slot_id": "G_A_DECLARE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "G_REL_061",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F02",
+        "target_slot_id": "G_A_CLOSE_CURTAIN",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "G_REL_062",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F03",
+        "target_slot_id": "G_A_DECLARE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "G_REL_063",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F03",
+        "target_slot_id": "G_A_B1_HOLD",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "G_REL_064",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F04",
+        "target_slot_id": "G_A_MEASURE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_065",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F04",
+        "target_slot_id": "G_A_SEND_TEMP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_066",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F05",
+        "target_slot_id": "G_A_SEND_TEMP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_067",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F05",
+        "target_slot_id": "G_A_START_B2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_068",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F06",
+        "target_slot_id": "G_A_DETECT_B1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_069",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F06",
+        "target_slot_id": "G_A_REQ_TECH",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_070",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F07",
+        "target_slot_id": "G_A_REQ_TECH",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "G_REL_071",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F07",
+        "target_slot_id": "G_A_CHECK_IGNITER",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "G_REL_072",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F08",
+        "target_slot_id": "G_A_CHECK_IGNITER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_073",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F08",
+        "target_slot_id": "G_A_REPLACE_FILTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_074",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F09",
+        "target_slot_id": "G_A_REPLACE_FILTER",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_075",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F09",
+        "target_slot_id": "G_A_RELIGHT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_076",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F10",
+        "target_slot_id": "G_A_RELIGHT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_077",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F10",
+        "target_slot_id": "G_A_RESUME_FEED",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_078",
+        "relation_type": "flow_source",
+        "source_slot_id": "G_F11",
+        "target_slot_id": "G_A_LIFT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_079",
+        "relation_type": "flow_target",
+        "source_slot_id": "G_F11",
+        "target_slot_id": "G_A_STOP_B2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_080",
+        "relation_type": "controls_flow",
+        "source_slot_id": "G_C02",
+        "target_slot_id": "G_F02",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_081",
+        "relation_type": "controls_flow",
+        "source_slot_id": "G_C02",
+        "target_slot_id": "G_F03",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_082",
+        "relation_type": "controls_flow",
+        "source_slot_id": "G_C04",
+        "target_slot_id": "G_F05",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_083",
+        "relation_type": "has_state_value",
+        "source_slot_id": "G_SIT_NORMAL",
+        "target_slot_id": "G_SV_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_084",
+        "relation_type": "has_state_value",
+        "source_slot_id": "G_SIT_COLD",
+        "target_slot_id": "G_SV_COLD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_085",
+        "relation_type": "has_state_value",
+        "source_slot_id": "G_SIT_B1_RUN",
+        "target_slot_id": "G_SV_B1_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_086",
+        "relation_type": "has_state_value",
+        "source_slot_id": "G_SIT_B1_STOP",
+        "target_slot_id": "G_SV_B1_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_087",
+        "relation_type": "has_state_value",
+        "source_slot_id": "G_SIT_FEED_ON",
+        "target_slot_id": "G_SV_FEED_ON",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_088",
+        "relation_type": "has_state_value",
+        "source_slot_id": "G_SIT_FEED_OFF",
+        "target_slot_id": "G_SV_FEED_OFF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_089",
+        "relation_type": "from_situation",
+        "source_slot_id": "G_TR_COLD",
+        "target_slot_id": "G_SIT_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_090",
+        "relation_type": "to_situation",
+        "source_slot_id": "G_TR_COLD",
+        "target_slot_id": "G_SIT_COLD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_091",
+        "relation_type": "triggers",
+        "source_slot_id": "G_EVT_FORECAST",
+        "target_slot_id": "G_TR_COLD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_092",
+        "relation_type": "from_situation",
+        "source_slot_id": "G_TR_B1_STOP",
+        "target_slot_id": "G_SIT_B1_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_093",
+        "relation_type": "to_situation",
+        "source_slot_id": "G_TR_B1_STOP",
+        "target_slot_id": "G_SIT_B1_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_094",
+        "relation_type": "triggers",
+        "source_slot_id": "G_EVT_B1_STOP",
+        "target_slot_id": "G_TR_B1_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_095",
+        "relation_type": "from_situation",
+        "source_slot_id": "G_TR_FEED_OFF",
+        "target_slot_id": "G_SIT_FEED_ON",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_096",
+        "relation_type": "to_situation",
+        "source_slot_id": "G_TR_FEED_OFF",
+        "target_slot_id": "G_SIT_FEED_OFF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_097",
+        "relation_type": "from_situation",
+        "source_slot_id": "G_TR_B1_RUN",
+        "target_slot_id": "G_SIT_B1_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_098",
+        "relation_type": "to_situation",
+        "source_slot_id": "G_TR_B1_RUN",
+        "target_slot_id": "G_SIT_B1_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_099",
+        "relation_type": "from_situation",
+        "source_slot_id": "G_TR_FEED_ON",
+        "target_slot_id": "G_SIT_FEED_OFF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_100",
+        "relation_type": "to_situation",
+        "source_slot_id": "G_TR_FEED_ON",
+        "target_slot_id": "G_SIT_FEED_ON",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_101",
+        "relation_type": "triggers",
+        "source_slot_id": "G_EVT_RECOVERED",
+        "target_slot_id": "G_TR_FEED_ON",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_102",
+        "relation_type": "from_situation",
+        "source_slot_id": "G_TR_COLD_OFF",
+        "target_slot_id": "G_SIT_COLD",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_103",
+        "relation_type": "to_situation",
+        "source_slot_id": "G_TR_COLD_OFF",
+        "target_slot_id": "G_SIT_NORMAL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_104",
+        "relation_type": "triggers",
+        "source_slot_id": "G_EVT_WARM",
+        "target_slot_id": "G_TR_COLD_OFF",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_105",
+        "relation_type": "triggers",
+        "source_slot_id": "G_EVT_FORECAST",
+        "target_slot_id": "G_A_DECLARE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_106",
+        "relation_type": "triggers",
+        "source_slot_id": "G_EVT_115",
+        "target_slot_id": "G_A_START_B2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_107",
+        "relation_type": "triggers",
+        "source_slot_id": "G_EVT_RECOVERED",
+        "target_slot_id": "G_A_RESUME_FEED",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_108",
+        "relation_type": "triggers",
+        "source_slot_id": "G_EVT_WARM",
+        "target_slot_id": "G_A_LIFT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_109",
+        "relation_type": "observes",
+        "source_slot_id": "G_OBS_TEMP",
+        "target_slot_id": "G_EVT_115",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_110",
+        "relation_type": "observes",
+        "source_slot_id": "G_OBS_B1",
+        "target_slot_id": "G_EVT_B1_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_111",
+        "relation_type": "constrained_by",
+        "source_slot_id": "G_A_DECLARE",
+        "target_slot_id": "G_CN_M10",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_112",
+        "relation_type": "constrained_by",
+        "source_slot_id": "G_A_B1_HOLD",
+        "target_slot_id": "G_CN_15",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_113",
+        "relation_type": "constrained_by",
+        "source_slot_id": "G_A_MEASURE",
+        "target_slot_id": "G_CN_10MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_114",
+        "relation_type": "constrained_by",
+        "source_slot_id": "G_A_START_B2",
+        "target_slot_id": "G_CN_12",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_115",
+        "relation_type": "constrained_by",
+        "source_slot_id": "G_A_LIFT",
+        "target_slot_id": "G_CN_M5",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_116",
+        "relation_type": "constrained_by",
+        "source_slot_id": "G_A_OPEN_VENT",
+        "target_slot_id": "G_CN_90",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_117",
+        "relation_type": "constrained_by",
+        "source_slot_id": "G_A_OPEN_VENT",
+        "target_slot_id": "G_CN_5MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_118",
+        "relation_type": "has_goal",
+        "source_slot_id": "G_SCN",
+        "target_slot_id": "G_G_NO_FROST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_119",
+        "relation_type": "has_goal",
+        "source_slot_id": "G_SCN",
+        "target_slot_id": "G_G_TEMP12",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "G_REL_120",
+        "relation_type": "has_reason",
+        "source_slot_id": "G_A_STOP_FEED",
+        "target_slot_id": "G_R_ROOT",
+        "evidence_level": "explicit"
+      }
+    ]
+  }
+}

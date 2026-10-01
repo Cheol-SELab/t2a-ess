@@ -1,0 +1,2298 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "D_GOLD",
+    "title": "Data center cooling failure response",
+    "extraction_schema": "T2A-ESS",
+    "generation_mode": "manual_development_reference",
+    "source_units": [
+      {
+        "source_unit_id": "P1",
+        "unit_type": "paragraph",
+        "text": "The data center operation system consists of the integrated control room (NOC), the building automation control system (BMS), chillers CH-1, CH-2, and CH-3, and the uninterruptible power supply (UPS). The BMS collects the values of 40 server room temperature sensors every 1 min."
+      },
+      {
+        "source_unit_id": "P2",
+        "unit_type": "paragraph",
+        "text": "Server room B houses 300 customer servers; customer technical support is handled by the customer support team, and equipment repair by the facilities team. The chiller manufacturer's remote support center is located off-site."
+      },
+      {
+        "source_unit_id": "P3",
+        "unit_type": "paragraph",
+        "text": "At 2:10 a.m., when the compressor of CH-2 stops due to overcurrent, the BMS detects the CH-2 stop signal, sends an alarm to the NOC, and automatically starts CH-3, which was on standby."
+      },
+      {
+        "source_unit_id": "P4",
+        "unit_type": "paragraph",
+        "text": "After starting, CH-3 takes about 8 min to reach its rated cooling capacity, and during that time the average temperature of server room B keeps rising. When the average temperature exceeds 27 °C, the NOC operator moves the non-critical server load of server room B to another server room."
+      },
+      {
+        "source_unit_id": "P5",
+        "unit_type": "paragraph",
+        "text": "At 2:16 a.m., when the average temperature reaches 27.5 °C, the operator, in consultation with the customer support team, migrates the virtual machines of 80 non-critical servers to server room A, and at the same time turns off the lighting and humidifiers of server room B to reduce heat generation."
+      },
+      {
+        "source_unit_id": "P6",
+        "unit_type": "paragraph",
+        "text": "Virtual machine migration proceeds 10 servers at a time, and after each migration it is checked whether the service response time is 200 ms or less. If the response time exceeds the threshold, the operator stops the migration, identifies the cause, and then resumes."
+      },
+      {
+        "source_unit_id": "P7",
+        "unit_type": "paragraph",
+        "text": "At 2:18 a.m. CH-3 reached its rated capacity, and the average temperature fell below 25 °C at 2:30 a.m. Had the average temperature exceeded 30 °C, the operator would have started the planned shutdown procedure for the critical servers."
+      },
+      {
+        "source_unit_id": "P8",
+        "unit_type": "paragraph",
+        "text": "The facilities team, on receiving the NOC's call, arrives on site, inspects the CH-2 compressor, and confirms that the overcurrent relay has tripped. The team shares the symptoms with the manufacturer's remote support center via video call and receives a diagnosis of compressor motor winding damage."
+      },
+      {
+        "source_unit_id": "P9",
+        "unit_type": "paragraph",
+        "text": "Because a compressor with damaged windings cannot be repaired on site, the facilities team orders a replacement part from the manufacturer and marks CH-2 as inoperable until the part arrives. Part arrival takes about 3 days."
+      },
+      {
+        "source_unit_id": "P10",
+        "unit_type": "paragraph",
+        "text": "Since cooling must meanwhile be done with CH-1 and CH-3 only, the operator raises the setpoint temperature of server room B from 22 °C to 23 °C and establishes a contingency plan for the case where one more chiller stops."
+      },
+      {
+        "source_unit_id": "P11",
+        "unit_type": "paragraph",
+        "text": "According to the contingency plan, if only one chiller remains, the operator shuts down all non-critical servers in server room B, notifies the customers, and then keeps only the critical servers running. This plan is discarded once the part replacement is complete."
+      },
+      {
+        "source_unit_id": "P12",
+        "unit_type": "paragraph",
+        "text": "At 9:00 a.m. the operator sends the customers a report containing the course of the failure and the results of the actions taken, and the facilities team shares the CH-2 replacement schedule with the NOC."
+      },
+      {
+        "source_unit_id": "P13",
+        "unit_type": "paragraph",
+        "text": "The goal of this operation is to keep the server room temperature at 27 °C or less without service interruption and to secure a cooling margin of at least one unit."
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "D_SCN",
+        "label": "Data center cooling failure response",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "D_EP_FAIL",
+        "label": "Chiller stop and automatic backup",
+        "order_index": 1,
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "episode_id": "D_EP_HEAT",
+        "label": "Temperature rise response",
+        "order_index": 2,
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "episode_id": "D_EP_REPAIR",
+        "label": "Fault diagnosis and part order",
+        "order_index": 3,
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "episode_id": "D_EP_CONTINGENCY",
+        "label": "Reduced operation and contingency plan",
+        "order_index": 4,
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "episode_id": "D_EP_REPORT",
+        "label": "Reporting and schedule sharing",
+        "order_index": 5,
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "D_P_SYSTEM",
+        "label": "Data center operation system",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "D_P_NOC",
+        "label": "Integrated control room (NOC)",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "D_P_BMS",
+        "label": "Building automation control system (BMS)",
+        "performer_kind": "system",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "D_P_CH1",
+        "label": "Chiller CH-1",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "D_P_CH2",
+        "label": "Chiller CH-2",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "D_P_CH3",
+        "label": "Chiller CH-3",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "D_P_UPS",
+        "label": "Uninterruptible power supply (UPS)",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "D_P_SENSORS",
+        "label": "40 server room temperature sensors",
+        "performer_kind": "hardware_component",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "performer_id": "D_P_OPERATOR",
+        "label": "NOC operator",
+        "performer_kind": "role",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "performer_id": "D_P_SUPPORT",
+        "label": "Customer support team",
+        "performer_kind": "group",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "D_P_FACILITY",
+        "label": "Facilities team",
+        "performer_kind": "group",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "D_P_VENDOR",
+        "label": "Chiller manufacturer's remote support center",
+        "performer_kind": "external_system",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      },
+      {
+        "performer_id": "D_P_CUSTOMERS",
+        "label": "Customers",
+        "performer_kind": "organization",
+        "source_ref": {
+          "source_unit_id": "P2"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "D_A_COLLECT",
+        "label": "Collect temperature sensor values every 1 min",
+        "source_ref": {
+          "source_unit_id": "P1"
+        },
+        "primary_actor_text": "BMS",
+        "object_text": "Server room temperature"
+      },
+      {
+        "action_id": "D_A_DETECT_STOP",
+        "label": "Detect CH-2 stop signal",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "BMS",
+        "object_text": "CH-2 stop signal"
+      },
+      {
+        "action_id": "D_A_ALARM",
+        "label": "Send alarm to NOC",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "BMS",
+        "object_text": "Alarm"
+      },
+      {
+        "action_id": "D_A_START_CH3",
+        "label": "Automatically start CH-3",
+        "source_ref": {
+          "source_unit_id": "P3"
+        },
+        "primary_actor_text": "BMS",
+        "object_text": "CH-3"
+      },
+      {
+        "action_id": "D_A_MIGRATE",
+        "label": "Migrate non-critical server virtual machines to server room A",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Virtual machines of 80 non-critical servers"
+      },
+      {
+        "action_id": "D_A_LIGHTS_OFF",
+        "label": "Turn off lighting and humidifiers",
+        "source_ref": {
+          "source_unit_id": "P5"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Server room B lighting and humidifiers"
+      },
+      {
+        "action_id": "D_A_CHECK_RESP",
+        "label": "Check service response time",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "object_text": "Service response time"
+      },
+      {
+        "action_id": "D_A_PAUSE",
+        "label": "Stop migration",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Migration"
+      },
+      {
+        "action_id": "D_A_INVESTIGATE",
+        "label": "Identify cause",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Cause"
+      },
+      {
+        "action_id": "D_A_RESUME",
+        "label": "Resume migration",
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Migration"
+      },
+      {
+        "action_id": "D_A_PLANNED_SHUTDOWN",
+        "label": "Start planned shutdown procedure for critical servers",
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Critical servers"
+      },
+      {
+        "action_id": "D_A_CALL_FACILITY",
+        "label": "Call facilities team",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "NOC",
+        "object_text": "Facilities team"
+      },
+      {
+        "action_id": "D_A_ARRIVE",
+        "label": "Arrive on site",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "Facilities team"
+      },
+      {
+        "action_id": "D_A_INSPECT_COMP",
+        "label": "Inspect CH-2 compressor",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "Facilities team",
+        "object_text": "CH-2 compressor"
+      },
+      {
+        "action_id": "D_A_VIDEO_CALL",
+        "label": "Share symptoms via video call",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "Facilities team",
+        "object_text": "Symptoms"
+      },
+      {
+        "action_id": "D_A_DIAGNOSE",
+        "label": "Diagnose compressor motor winding damage",
+        "source_ref": {
+          "source_unit_id": "P8"
+        },
+        "primary_actor_text": "Manufacturer's remote support center",
+        "object_text": "Compressor motor winding"
+      },
+      {
+        "action_id": "D_A_ORDER_PART",
+        "label": "Order replacement part",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "Facilities team",
+        "object_text": "Replacement part"
+      },
+      {
+        "action_id": "D_A_MARK_UNAVAILABLE",
+        "label": "Mark CH-2 as inoperable",
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "primary_actor_text": "Facilities team",
+        "object_text": "CH-2"
+      },
+      {
+        "action_id": "D_A_RAISE_SETPOINT",
+        "label": "Raise setpoint temperature from 22 °C to 23 °C",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Server room B setpoint temperature"
+      },
+      {
+        "action_id": "D_A_PLAN",
+        "label": "Establish contingency plan",
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Contingency plan"
+      },
+      {
+        "action_id": "D_A_SHUTDOWN_NONCORE",
+        "label": "Shut down all non-critical servers",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Non-critical servers"
+      },
+      {
+        "action_id": "D_A_NOTIFY_CUST",
+        "label": "Notify customers",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Customers"
+      },
+      {
+        "action_id": "D_A_DISCARD_PLAN",
+        "label": "Discard contingency plan",
+        "source_ref": {
+          "source_unit_id": "P11"
+        },
+        "object_text": "Contingency plan"
+      },
+      {
+        "action_id": "D_A_SEND_REPORT",
+        "label": "Send failure report",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Operator",
+        "object_text": "Failure report"
+      },
+      {
+        "action_id": "D_A_SHARE_SCHEDULE",
+        "label": "Share CH-2 replacement schedule",
+        "source_ref": {
+          "source_unit_id": "P12"
+        },
+        "primary_actor_text": "Facilities team",
+        "object_text": "Replacement schedule"
+      }
+    ],
+    "items": [
+      {
+        "item_id": "D_I_ALARM",
+        "label": "CH-2 stop alarm",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "item_id": "D_I_VM",
+        "label": "Virtual machines of 80 non-critical servers",
+        "item_type": "data",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "item_id": "D_I_PART",
+        "label": "Replacement part",
+        "item_type": "material",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "item_id": "D_I_PLAN",
+        "label": "Contingency plan",
+        "item_type": "document",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "item_id": "D_I_REPORT",
+        "label": "Failure report",
+        "item_type": "document",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      },
+      {
+        "item_id": "D_I_SCHEDULE",
+        "label": "CH-2 replacement schedule",
+        "item_type": "data",
+        "source_ref": {
+          "source_unit_id": "P12"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "D_SIT_CH2_RUN",
+        "label": "CH-2 running state",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "D_SIT_CH2_DOWN",
+        "label": "CH-2 stopped/inoperable state",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "D_SIT_CH3_STANDBY",
+        "label": "CH-3 standby state",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "D_SIT_CH3_RUN",
+        "label": "CH-3 running state",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "situation_id": "D_SIT_ROOM_OK",
+        "label": "Server room B normal temperature state",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "situation_id": "D_SIT_ROOM_HOT",
+        "label": "Server room B overheated state",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "D_SV_CH2_RUN",
+        "subject_text": "CH-2",
+        "variable": "Operating state",
+        "value": "Running",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "D_SV_CH2_DOWN",
+        "subject_text": "CH-2",
+        "variable": "Operating state",
+        "value": "Stopped",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "D_SV_CH3_STANDBY",
+        "subject_text": "CH-3",
+        "variable": "Operating state",
+        "value": "Standby",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "D_SV_CH3_RUN",
+        "subject_text": "CH-3",
+        "variable": "Operating state",
+        "value": "Running",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "state_value_id": "D_SV_ROOM_OK",
+        "subject_text": "Server room B average temperature",
+        "variable": "Temperature",
+        "value": "27 °C or less",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "state_value_id": "D_SV_ROOM_HOT",
+        "subject_text": "Server room B average temperature",
+        "variable": "Temperature",
+        "value": "More than 27 °C",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "D_EVT_OVERCURRENT",
+        "label": "CH-2 compressor overcurrent stop",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "event_id": "D_EVT_27_5",
+        "label": "Average temperature reaches 27.5 °C",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "event_id": "D_EVT_CH3_RATED",
+        "label": "CH-3 reaches rated capacity",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "event_id": "D_EVT_BELOW25",
+        "label": "Average temperature falls below 25 °C",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "event_id": "D_EVT_WINDING",
+        "label": "Compressor motor winding damage",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "D_TR_CH2_DOWN",
+        "label": "CH-2 from running to stopped",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "transition_id": "D_TR_CH3_RUN",
+        "label": "CH-3 from standby to running",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "transition_id": "D_TR_ROOM_HOT",
+        "label": "Server room B from normal to overheated",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "transition_id": "D_TR_ROOM_OK",
+        "label": "Server room B from overheated to normal",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "D_OBS_TEMP",
+        "label": "Server room temperature collection",
+        "observer_text": "BMS",
+        "observed_text": "Server room temperature",
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "observation_id": "D_OBS_STOPSIG",
+        "label": "Detect CH-2 stop signal",
+        "observer_text": "BMS",
+        "observed_text": "CH-2 stop signal",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "observation_id": "D_OBS_RESP",
+        "label": "Check service response time",
+        "observer_text": "Operator",
+        "observed_text": "Service response time",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "observation_id": "D_OBS_CAUSE",
+        "label": "Identify cause of response delay",
+        "observer_text": "Operator",
+        "observed_text": "Cause",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "observation_id": "D_OBS_RELAY",
+        "label": "Confirm overcurrent relay tripped",
+        "observer_text": "Facilities team",
+        "observed_text": "Overcurrent relay",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "D_F01",
+        "label": "Send alarm after detecting stop signal",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "D_F02",
+        "label": "Start CH-3 after alarm",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P3"
+        }
+      },
+      {
+        "flow_id": "D_F03",
+        "label": "Migrate virtual machines when more than 27 °C",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "flow_id": "D_F04",
+        "label": "Turn off lighting and humidifiers at the same time as migration",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "flow_id": "D_F05",
+        "label": "Check response time after migration",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "D_F06",
+        "label": "Next migration if within threshold",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "D_F07",
+        "label": "Stop migration if threshold exceeded",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "D_F08",
+        "label": "Identify cause after stopping",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "D_F09",
+        "label": "Resume after identifying cause",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "flow_id": "D_F10",
+        "label": "Planned shutdown procedure when more than 30 °C",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "flow_id": "D_F11",
+        "label": "Arrive on site after call",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "D_F12",
+        "label": "Inspect compressor after arrival",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "D_F13",
+        "label": "Video call after inspection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "D_F14",
+        "label": "Diagnosis after sharing symptoms",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P8"
+        }
+      },
+      {
+        "flow_id": "D_F15",
+        "label": "Order part after diagnosis",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "flow_id": "D_F16",
+        "label": "Mark inoperable after order",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "flow_id": "D_F17",
+        "label": "Establish contingency plan after raising setpoint temperature",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      },
+      {
+        "flow_id": "D_F18",
+        "label": "Shut down non-critical servers if only one chiller remains",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "flow_id": "D_F19",
+        "label": "Notify customers after shutdown",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "D_C01",
+        "label": "Collect temperature every 1 min",
+        "control_type": "loop",
+        "guard_texts": [
+          "Every 1 min"
+        ],
+        "source_ref": {
+          "source_unit_id": "P1"
+        }
+      },
+      {
+        "control_id": "D_C02",
+        "label": "Determine average temperature more than 27 °C",
+        "control_type": "decision",
+        "guard_texts": [
+          "Average temperature more than 27 °C"
+        ],
+        "source_ref": {
+          "source_unit_id": "P4"
+        }
+      },
+      {
+        "control_id": "D_C03",
+        "label": "Perform virtual machine migration and turning off lights at the same time",
+        "control_type": "fork",
+        "guard_texts": [],
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "control_id": "D_C04",
+        "label": "Repeated migration 10 servers at a time",
+        "control_type": "loop",
+        "guard_texts": [
+          "10 servers at a time"
+        ],
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "control_id": "D_C05",
+        "label": "Determine response time 200 ms or less",
+        "control_type": "decision",
+        "guard_texts": [
+          "Service response time 200 ms or less"
+        ],
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "control_id": "D_C06",
+        "label": "Determine response time exceeds threshold",
+        "control_type": "decision",
+        "guard_texts": [
+          "Response time more than 200 ms"
+        ],
+        "source_ref": {
+          "source_unit_id": "P6"
+        }
+      },
+      {
+        "control_id": "D_C07",
+        "label": "Determine average temperature more than 30 °C",
+        "control_type": "decision",
+        "guard_texts": [
+          "Average temperature more than 30 °C"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        }
+      },
+      {
+        "control_id": "D_C08",
+        "label": "Remain inoperable until part arrives",
+        "control_type": "wait",
+        "guard_texts": [
+          "Replacement part arrives"
+        ],
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "control_id": "D_C09",
+        "label": "Determine only one chiller remains",
+        "control_type": "decision",
+        "guard_texts": [
+          "Only one chiller remains"
+        ],
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      },
+      {
+        "control_id": "D_C10",
+        "label": "Discard plan when part replacement is complete",
+        "control_type": "decision",
+        "guard_texts": [
+          "Part replacement complete"
+        ],
+        "source_ref": {
+          "source_unit_id": "P11"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "D_CN_1MIN",
+        "label": "Temperature collection interval 1 min",
+        "constraint_kind": [
+          "period"
+        ],
+        "source_ref": {
+          "source_unit_id": "P1"
+        },
+        "parameter": "Collection interval",
+        "operator": "=",
+        "value": 1,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "D_CN_8MIN",
+        "label": "CH-3 reaches rated capacity in about 8 min",
+        "constraint_kind": [
+          "duration"
+        ],
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "parameter": "Time to reach rated capacity",
+        "operator": "=",
+        "value": 8,
+        "unit": "min"
+      },
+      {
+        "constraint_id": "D_CN_27",
+        "label": "Average temperature 27 °C",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P4"
+        },
+        "parameter": "Average temperature",
+        "operator": ">",
+        "value": 27,
+        "unit": "°C"
+      },
+      {
+        "constraint_id": "D_CN_10VM",
+        "label": "Migrate 10 servers at a time",
+        "constraint_kind": [
+          "count"
+        ],
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "parameter": "Migration batch size",
+        "operator": "=",
+        "value": 10,
+        "unit": "units"
+      },
+      {
+        "constraint_id": "D_CN_200MS",
+        "label": "Service response time 200 ms or less",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P6"
+        },
+        "parameter": "Response time",
+        "operator": "<=",
+        "value": 200,
+        "unit": "ms"
+      },
+      {
+        "constraint_id": "D_CN_30",
+        "label": "Average temperature 30 °C",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P7"
+        },
+        "parameter": "Average temperature",
+        "operator": ">",
+        "value": 30,
+        "unit": "°C"
+      },
+      {
+        "constraint_id": "D_CN_3DAYS",
+        "label": "Part arrival about 3 days",
+        "constraint_kind": [
+          "duration"
+        ],
+        "source_ref": {
+          "source_unit_id": "P9"
+        },
+        "parameter": "Part arrival",
+        "operator": "=",
+        "value": 3,
+        "unit": "days"
+      },
+      {
+        "constraint_id": "D_CN_SET23",
+        "label": "Setpoint temperature 23 °C",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P10"
+        },
+        "parameter": "Setpoint temperature",
+        "operator": "=",
+        "value": 23,
+        "unit": "°C"
+      },
+      {
+        "constraint_id": "D_CN_KEEP27",
+        "label": "Keep server room temperature at 27 °C or less",
+        "constraint_kind": [
+          "threshold"
+        ],
+        "source_ref": {
+          "source_unit_id": "P13"
+        },
+        "parameter": "Server room temperature",
+        "operator": "<=",
+        "value": 27,
+        "unit": "°C"
+      },
+      {
+        "constraint_id": "D_CN_SPARE",
+        "label": "Cooling margin of at least one unit",
+        "constraint_kind": [
+          "count"
+        ],
+        "source_ref": {
+          "source_unit_id": "P13"
+        },
+        "parameter": "Cooling margin",
+        "operator": ">=",
+        "value": 1,
+        "unit": "units"
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "D_G_NO_OUTAGE",
+        "label": "Keep server room temperature at 27 °C or less without service interruption",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      },
+      {
+        "goal_id": "D_G_SPARE",
+        "label": "Secure a cooling margin of at least one unit",
+        "source_ref": {
+          "source_unit_id": "P13"
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "D_R_HEAT",
+        "label": "Reduce heat generation",
+        "source_ref": {
+          "source_unit_id": "P5"
+        }
+      },
+      {
+        "reason_id": "D_R_NOT_REPAIRABLE",
+        "label": "Compressor with damaged windings cannot be repaired on site",
+        "source_ref": {
+          "source_unit_id": "P9"
+        }
+      },
+      {
+        "reason_id": "D_R_TWO_CHILLERS",
+        "label": "Cooling with CH-1 and CH-3 only",
+        "source_ref": {
+          "source_unit_id": "P10"
+        }
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "D_REL_001",
+        "relation_type": "has_episode",
+        "source_slot_id": "D_SCN",
+        "target_slot_id": "D_EP_FAIL",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "D_REL_002",
+        "relation_type": "has_episode",
+        "source_slot_id": "D_SCN",
+        "target_slot_id": "D_EP_HEAT",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "D_REL_003",
+        "relation_type": "has_episode",
+        "source_slot_id": "D_SCN",
+        "target_slot_id": "D_EP_REPAIR",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "D_REL_004",
+        "relation_type": "has_episode",
+        "source_slot_id": "D_SCN",
+        "target_slot_id": "D_EP_CONTINGENCY",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "D_REL_005",
+        "relation_type": "has_episode",
+        "source_slot_id": "D_SCN",
+        "target_slot_id": "D_EP_REPORT",
+        "evidence_level": "derived"
+      },
+      {
+        "relation_id": "D_REL_006",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_FAIL",
+        "target_slot_id": "D_A_DETECT_STOP",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_007",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_FAIL",
+        "target_slot_id": "D_A_ALARM",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_008",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_FAIL",
+        "target_slot_id": "D_A_START_CH3",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_009",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_HEAT",
+        "target_slot_id": "D_A_COLLECT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_010",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_HEAT",
+        "target_slot_id": "D_A_MIGRATE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_011",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_HEAT",
+        "target_slot_id": "D_A_LIGHTS_OFF",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_012",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_HEAT",
+        "target_slot_id": "D_A_CHECK_RESP",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_013",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_HEAT",
+        "target_slot_id": "D_A_PAUSE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_014",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_HEAT",
+        "target_slot_id": "D_A_INVESTIGATE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_015",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_HEAT",
+        "target_slot_id": "D_A_RESUME",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_016",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_HEAT",
+        "target_slot_id": "D_A_PLANNED_SHUTDOWN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_017",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_REPAIR",
+        "target_slot_id": "D_A_CALL_FACILITY",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_018",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_REPAIR",
+        "target_slot_id": "D_A_ARRIVE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_019",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_REPAIR",
+        "target_slot_id": "D_A_INSPECT_COMP",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_020",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_REPAIR",
+        "target_slot_id": "D_A_VIDEO_CALL",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_021",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_REPAIR",
+        "target_slot_id": "D_A_DIAGNOSE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_022",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_REPAIR",
+        "target_slot_id": "D_A_ORDER_PART",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_023",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_REPAIR",
+        "target_slot_id": "D_A_MARK_UNAVAILABLE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_024",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_CONTINGENCY",
+        "target_slot_id": "D_A_RAISE_SETPOINT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_025",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_CONTINGENCY",
+        "target_slot_id": "D_A_PLAN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_026",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_CONTINGENCY",
+        "target_slot_id": "D_A_SHUTDOWN_NONCORE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_027",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_CONTINGENCY",
+        "target_slot_id": "D_A_NOTIFY_CUST",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_028",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_CONTINGENCY",
+        "target_slot_id": "D_A_DISCARD_PLAN",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_029",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_REPORT",
+        "target_slot_id": "D_A_SEND_REPORT",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_030",
+        "relation_type": "custom",
+        "source_slot_id": "D_EP_REPORT",
+        "target_slot_id": "D_A_SHARE_SCHEDULE",
+        "evidence_level": "derived",
+        "custom_relation_type": "contains_action"
+      },
+      {
+        "relation_id": "D_REL_031",
+        "relation_type": "has_part",
+        "source_slot_id": "D_P_SYSTEM",
+        "target_slot_id": "D_P_NOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_032",
+        "relation_type": "has_part",
+        "source_slot_id": "D_P_SYSTEM",
+        "target_slot_id": "D_P_BMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_033",
+        "relation_type": "has_part",
+        "source_slot_id": "D_P_SYSTEM",
+        "target_slot_id": "D_P_CH1",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_034",
+        "relation_type": "has_part",
+        "source_slot_id": "D_P_SYSTEM",
+        "target_slot_id": "D_P_CH2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_035",
+        "relation_type": "has_part",
+        "source_slot_id": "D_P_SYSTEM",
+        "target_slot_id": "D_P_CH3",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_036",
+        "relation_type": "has_part",
+        "source_slot_id": "D_P_SYSTEM",
+        "target_slot_id": "D_P_UPS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_037",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_COLLECT",
+        "target_slot_id": "D_P_BMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_038",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_DETECT_STOP",
+        "target_slot_id": "D_P_BMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_039",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_ALARM",
+        "target_slot_id": "D_P_BMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_040",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_START_CH3",
+        "target_slot_id": "D_P_BMS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_041",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_MIGRATE",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_042",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_LIGHTS_OFF",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_043",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_PAUSE",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_044",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_INVESTIGATE",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_045",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_RESUME",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_046",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_PLANNED_SHUTDOWN",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_047",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_CALL_FACILITY",
+        "target_slot_id": "D_P_NOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_048",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_ARRIVE",
+        "target_slot_id": "D_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_049",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_INSPECT_COMP",
+        "target_slot_id": "D_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_050",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_VIDEO_CALL",
+        "target_slot_id": "D_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_051",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_DIAGNOSE",
+        "target_slot_id": "D_P_VENDOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_052",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_ORDER_PART",
+        "target_slot_id": "D_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_053",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_MARK_UNAVAILABLE",
+        "target_slot_id": "D_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_054",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_RAISE_SETPOINT",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_055",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_PLAN",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_056",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_SHUTDOWN_NONCORE",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_057",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_NOTIFY_CUST",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_058",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_SEND_REPORT",
+        "target_slot_id": "D_P_OPERATOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_059",
+        "relation_type": "performed_by",
+        "source_slot_id": "D_A_SHARE_SCHEDULE",
+        "target_slot_id": "D_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_060",
+        "relation_type": "produces_item",
+        "source_slot_id": "D_A_ALARM",
+        "target_slot_id": "D_I_ALARM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_061",
+        "relation_type": "provided_to",
+        "source_slot_id": "D_A_ALARM",
+        "target_slot_id": "D_P_NOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_062",
+        "relation_type": "acts_on",
+        "source_slot_id": "D_A_START_CH3",
+        "target_slot_id": "D_P_CH3",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_063",
+        "relation_type": "uses_item",
+        "source_slot_id": "D_A_MIGRATE",
+        "target_slot_id": "D_I_VM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_064",
+        "relation_type": "acts_on",
+        "source_slot_id": "D_A_INSPECT_COMP",
+        "target_slot_id": "D_P_CH2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_065",
+        "relation_type": "provided_to",
+        "source_slot_id": "D_A_VIDEO_CALL",
+        "target_slot_id": "D_P_VENDOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_066",
+        "relation_type": "uses_item",
+        "source_slot_id": "D_A_ORDER_PART",
+        "target_slot_id": "D_I_PART",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_067",
+        "relation_type": "provided_to",
+        "source_slot_id": "D_A_ORDER_PART",
+        "target_slot_id": "D_P_VENDOR",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_068",
+        "relation_type": "acts_on",
+        "source_slot_id": "D_A_MARK_UNAVAILABLE",
+        "target_slot_id": "D_P_CH2",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_069",
+        "relation_type": "produces_item",
+        "source_slot_id": "D_A_PLAN",
+        "target_slot_id": "D_I_PLAN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_070",
+        "relation_type": "uses_item",
+        "source_slot_id": "D_A_DISCARD_PLAN",
+        "target_slot_id": "D_I_PLAN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_071",
+        "relation_type": "provided_to",
+        "source_slot_id": "D_A_NOTIFY_CUST",
+        "target_slot_id": "D_P_CUSTOMERS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_072",
+        "relation_type": "produces_item",
+        "source_slot_id": "D_A_SEND_REPORT",
+        "target_slot_id": "D_I_REPORT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_073",
+        "relation_type": "provided_to",
+        "source_slot_id": "D_A_SEND_REPORT",
+        "target_slot_id": "D_P_CUSTOMERS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_074",
+        "relation_type": "produces_item",
+        "source_slot_id": "D_A_SHARE_SCHEDULE",
+        "target_slot_id": "D_I_SCHEDULE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_075",
+        "relation_type": "provided_to",
+        "source_slot_id": "D_A_SHARE_SCHEDULE",
+        "target_slot_id": "D_P_NOC",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_076",
+        "relation_type": "provided_to",
+        "source_slot_id": "D_A_CALL_FACILITY",
+        "target_slot_id": "D_P_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_077",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F01",
+        "target_slot_id": "D_A_DETECT_STOP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_078",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F01",
+        "target_slot_id": "D_A_ALARM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_079",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F02",
+        "target_slot_id": "D_A_ALARM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_080",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F02",
+        "target_slot_id": "D_A_START_CH3",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_081",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F03",
+        "target_slot_id": "D_A_COLLECT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_082",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F03",
+        "target_slot_id": "D_A_MIGRATE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_083",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F04",
+        "target_slot_id": "D_A_COLLECT",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "D_REL_084",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F04",
+        "target_slot_id": "D_A_LIGHTS_OFF",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "D_REL_085",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F05",
+        "target_slot_id": "D_A_MIGRATE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_086",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F05",
+        "target_slot_id": "D_A_CHECK_RESP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_087",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F06",
+        "target_slot_id": "D_A_CHECK_RESP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_088",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F06",
+        "target_slot_id": "D_A_MIGRATE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_089",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F07",
+        "target_slot_id": "D_A_CHECK_RESP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_090",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F07",
+        "target_slot_id": "D_A_PAUSE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_091",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F08",
+        "target_slot_id": "D_A_PAUSE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_092",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F08",
+        "target_slot_id": "D_A_INVESTIGATE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_093",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F09",
+        "target_slot_id": "D_A_INVESTIGATE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_094",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F09",
+        "target_slot_id": "D_A_RESUME",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_095",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F10",
+        "target_slot_id": "D_A_COLLECT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_096",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F10",
+        "target_slot_id": "D_A_PLANNED_SHUTDOWN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_097",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F11",
+        "target_slot_id": "D_A_CALL_FACILITY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_098",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F11",
+        "target_slot_id": "D_A_ARRIVE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_099",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F12",
+        "target_slot_id": "D_A_ARRIVE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_100",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F12",
+        "target_slot_id": "D_A_INSPECT_COMP",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_101",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F13",
+        "target_slot_id": "D_A_INSPECT_COMP",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "D_REL_102",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F13",
+        "target_slot_id": "D_A_VIDEO_CALL",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "D_REL_103",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F14",
+        "target_slot_id": "D_A_VIDEO_CALL",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_104",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F14",
+        "target_slot_id": "D_A_DIAGNOSE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_105",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F15",
+        "target_slot_id": "D_A_DIAGNOSE",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "D_REL_106",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F15",
+        "target_slot_id": "D_A_ORDER_PART",
+        "evidence_level": "inferred"
+      },
+      {
+        "relation_id": "D_REL_107",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F16",
+        "target_slot_id": "D_A_ORDER_PART",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_108",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F16",
+        "target_slot_id": "D_A_MARK_UNAVAILABLE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_109",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F17",
+        "target_slot_id": "D_A_RAISE_SETPOINT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_110",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F17",
+        "target_slot_id": "D_A_PLAN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_111",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F18",
+        "target_slot_id": "D_A_PLAN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_112",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F18",
+        "target_slot_id": "D_A_SHUTDOWN_NONCORE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_113",
+        "relation_type": "flow_source",
+        "source_slot_id": "D_F19",
+        "target_slot_id": "D_A_SHUTDOWN_NONCORE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_114",
+        "relation_type": "flow_target",
+        "source_slot_id": "D_F19",
+        "target_slot_id": "D_A_NOTIFY_CUST",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_115",
+        "relation_type": "controls_flow",
+        "source_slot_id": "D_C02",
+        "target_slot_id": "D_F03",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_116",
+        "relation_type": "controls_flow",
+        "source_slot_id": "D_C03",
+        "target_slot_id": "D_F03",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_117",
+        "relation_type": "controls_flow",
+        "source_slot_id": "D_C03",
+        "target_slot_id": "D_F04",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_118",
+        "relation_type": "controls_flow",
+        "source_slot_id": "D_C04",
+        "target_slot_id": "D_F06",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_119",
+        "relation_type": "controls_flow",
+        "source_slot_id": "D_C05",
+        "target_slot_id": "D_F06",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_120",
+        "relation_type": "controls_flow",
+        "source_slot_id": "D_C06",
+        "target_slot_id": "D_F07",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_121",
+        "relation_type": "controls_flow",
+        "source_slot_id": "D_C07",
+        "target_slot_id": "D_F10",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_122",
+        "relation_type": "controls_flow",
+        "source_slot_id": "D_C09",
+        "target_slot_id": "D_F18",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_123",
+        "relation_type": "has_state_value",
+        "source_slot_id": "D_SIT_CH2_RUN",
+        "target_slot_id": "D_SV_CH2_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_124",
+        "relation_type": "has_state_value",
+        "source_slot_id": "D_SIT_CH2_DOWN",
+        "target_slot_id": "D_SV_CH2_DOWN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_125",
+        "relation_type": "has_state_value",
+        "source_slot_id": "D_SIT_CH3_STANDBY",
+        "target_slot_id": "D_SV_CH3_STANDBY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_126",
+        "relation_type": "has_state_value",
+        "source_slot_id": "D_SIT_CH3_RUN",
+        "target_slot_id": "D_SV_CH3_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_127",
+        "relation_type": "has_state_value",
+        "source_slot_id": "D_SIT_ROOM_OK",
+        "target_slot_id": "D_SV_ROOM_OK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_128",
+        "relation_type": "has_state_value",
+        "source_slot_id": "D_SIT_ROOM_HOT",
+        "target_slot_id": "D_SV_ROOM_HOT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_129",
+        "relation_type": "from_situation",
+        "source_slot_id": "D_TR_CH2_DOWN",
+        "target_slot_id": "D_SIT_CH2_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_130",
+        "relation_type": "to_situation",
+        "source_slot_id": "D_TR_CH2_DOWN",
+        "target_slot_id": "D_SIT_CH2_DOWN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_131",
+        "relation_type": "triggers",
+        "source_slot_id": "D_EVT_OVERCURRENT",
+        "target_slot_id": "D_TR_CH2_DOWN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_132",
+        "relation_type": "from_situation",
+        "source_slot_id": "D_TR_CH3_RUN",
+        "target_slot_id": "D_SIT_CH3_STANDBY",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_133",
+        "relation_type": "to_situation",
+        "source_slot_id": "D_TR_CH3_RUN",
+        "target_slot_id": "D_SIT_CH3_RUN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_134",
+        "relation_type": "from_situation",
+        "source_slot_id": "D_TR_ROOM_HOT",
+        "target_slot_id": "D_SIT_ROOM_OK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_135",
+        "relation_type": "to_situation",
+        "source_slot_id": "D_TR_ROOM_HOT",
+        "target_slot_id": "D_SIT_ROOM_HOT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_136",
+        "relation_type": "triggers",
+        "source_slot_id": "D_EVT_27_5",
+        "target_slot_id": "D_TR_ROOM_HOT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_137",
+        "relation_type": "from_situation",
+        "source_slot_id": "D_TR_ROOM_OK",
+        "target_slot_id": "D_SIT_ROOM_HOT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_138",
+        "relation_type": "to_situation",
+        "source_slot_id": "D_TR_ROOM_OK",
+        "target_slot_id": "D_SIT_ROOM_OK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_139",
+        "relation_type": "triggers",
+        "source_slot_id": "D_EVT_BELOW25",
+        "target_slot_id": "D_TR_ROOM_OK",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_140",
+        "relation_type": "triggers",
+        "source_slot_id": "D_EVT_27_5",
+        "target_slot_id": "D_A_MIGRATE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_141",
+        "relation_type": "triggers",
+        "source_slot_id": "D_EVT_WINDING",
+        "target_slot_id": "D_A_ORDER_PART",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_142",
+        "relation_type": "observes",
+        "source_slot_id": "D_OBS_TEMP",
+        "target_slot_id": "D_EVT_27_5",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_143",
+        "relation_type": "observes",
+        "source_slot_id": "D_OBS_STOPSIG",
+        "target_slot_id": "D_EVT_OVERCURRENT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_144",
+        "relation_type": "constrained_by",
+        "source_slot_id": "D_A_COLLECT",
+        "target_slot_id": "D_CN_1MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_145",
+        "relation_type": "constrained_by",
+        "source_slot_id": "D_TR_CH3_RUN",
+        "target_slot_id": "D_CN_8MIN",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_146",
+        "relation_type": "constrained_by",
+        "source_slot_id": "D_A_MIGRATE",
+        "target_slot_id": "D_CN_27",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_147",
+        "relation_type": "constrained_by",
+        "source_slot_id": "D_A_MIGRATE",
+        "target_slot_id": "D_CN_10VM",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_148",
+        "relation_type": "constrained_by",
+        "source_slot_id": "D_A_CHECK_RESP",
+        "target_slot_id": "D_CN_200MS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_149",
+        "relation_type": "constrained_by",
+        "source_slot_id": "D_A_PLANNED_SHUTDOWN",
+        "target_slot_id": "D_CN_30",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_150",
+        "relation_type": "constrained_by",
+        "source_slot_id": "D_A_ORDER_PART",
+        "target_slot_id": "D_CN_3DAYS",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_151",
+        "relation_type": "constrained_by",
+        "source_slot_id": "D_A_RAISE_SETPOINT",
+        "target_slot_id": "D_CN_SET23",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_152",
+        "relation_type": "constrained_by",
+        "source_slot_id": "D_A_MIGRATE",
+        "target_slot_id": "D_CN_KEEP27",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_153",
+        "relation_type": "constrained_by",
+        "source_slot_id": "D_A_PLAN",
+        "target_slot_id": "D_CN_SPARE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_154",
+        "relation_type": "has_goal",
+        "source_slot_id": "D_SCN",
+        "target_slot_id": "D_G_NO_OUTAGE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_155",
+        "relation_type": "has_goal",
+        "source_slot_id": "D_SCN",
+        "target_slot_id": "D_G_SPARE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_156",
+        "relation_type": "has_reason",
+        "source_slot_id": "D_A_LIGHTS_OFF",
+        "target_slot_id": "D_R_HEAT",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_157",
+        "relation_type": "has_reason",
+        "source_slot_id": "D_A_ORDER_PART",
+        "target_slot_id": "D_R_NOT_REPAIRABLE",
+        "evidence_level": "explicit"
+      },
+      {
+        "relation_id": "D_REL_158",
+        "relation_type": "has_reason",
+        "source_slot_id": "D_A_RAISE_SETPOINT",
+        "target_slot_id": "D_R_TWO_CHILLERS",
+        "evidence_level": "explicit"
+      }
+    ]
+  }
+}

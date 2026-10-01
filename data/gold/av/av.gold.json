@@ -1,0 +1,2973 @@
+{
+  "text2activity_extraction_model": {
+    "model_id": "GT_AUTONOMOUS_VEHICLE_001",
+    "title": "Autonomous vehicle design ground truth scenario",
+    "extraction_schema": "Text2Activity Extraction Slot Schema",
+    "schema_acronym": "T2A-ESS",
+    "generation_mode": "ground_truth_reverse",
+    "target_standard": [
+      "KerML",
+      "SysML v2"
+    ],
+    "domain": "automotive_autonomous_vehicle_design",
+    "source_units": [
+      {
+        "source_unit_id": "AV_L01",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 1,
+        "planned_content": "The autonomous vehicle consists of a perception system, a path planning module, a vehicle control module, a drive actuator, a V2X communication module, a battery management system, and an HMI, and the perception system includes LiDAR, camera, and radar sensors.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L02",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 2,
+        "planned_content": "Outside the vehicle, there are a control center server that monitors the vehicle status and a charging station that charges the battery.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L03",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 3,
+        "planned_content": "Upon the driver's autonomous driving activation request, the vehicle control module activates the autonomous driving mode, the HMI announces the mode transition, and the vehicle transitions from the manual driving state to the normal autonomous driving state.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L04",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 4,
+        "planned_content": "In the normal autonomous driving state, the driving loop in which the perception system collects and fuses sensor data to make environment perception data repeats at a 10 Hz cycle.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L05",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 5,
+        "planned_content": "The path planning module generates a driving path using the environment perception data.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L06",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 6,
+        "planned_content": "The vehicle control module generates control commands from the driving path, and the drive actuator executes them.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L07",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 7,
+        "planned_content": "The V2X communication module transmits the vehicle status report to the control center server, and the control center server monitors it.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L08",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 8,
+        "planned_content": "The camera-based perception system detects a pedestrian ahead, and a pedestrian detection event occurs.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L09",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 9,
+        "planned_content": "To avoid a collision, the vehicle control module performs emergency braking within 200 ms.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L10",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 10,
+        "planned_content": "The perception system detects a LiDAR reliability degradation, and a LiDAR fault event occurs.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L11",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 11,
+        "planned_content": "For safety, the vehicle control module switches to the degraded mode, transitioning from the normal autonomous driving state to the degraded autonomous driving state and limiting the speed to 30 km/h or less.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L12",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 12,
+        "planned_content": "The battery management system measures the battery SoC, the SoC is confirmed to be 18%, and a low-power event of 20% or less occurs.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L13",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 13,
+        "planned_content": "To secure driving range, the path planning module replans the route to the charging station, the V2X communication module requests charging, and the vehicle transitions from the degraded autonomous driving state to the charging state.",
+        "text": ""
+      },
+      {
+        "source_unit_id": "AV_L14",
+        "document": "DOC_GT_AV",
+        "unit_type": "paragraph",
+        "order_index": 14,
+        "planned_content": "The charging station charges the vehicle, and the goal of the scenario is to arrive safely at the destination.",
+        "text": ""
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario_id": "AV_SCN_AUTONOMOUS_OP",
+        "label": "Autonomous vehicle autonomous operation scenario",
+        "summary": "The autonomous vehicle starts autonomous driving at the driver's request, drives with a perception-planning-control loop, performs pedestrian avoidance, sensor degradation response, and return for battery charging, and arrives safely at the destination.",
+        "success_criteria_texts": [
+          "Safe arrival at destination",
+          "Collision avoidance",
+          "Maintain operation even when degraded"
+        ],
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "UseCase",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": "AV_EP_ACTIVATION",
+        "label": "Autonomous driving start",
+        "order_index": 1,
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "AV_EP_NORMAL_DRIVING",
+        "label": "Normal autonomous driving",
+        "order_index": 2,
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "AV_EP_PEDESTRIAN",
+        "label": "Pedestrian detection and avoidance",
+        "order_index": 3,
+        "source_ref": {
+          "source_unit_id": "AV_L08"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "AV_EP_DEGRADED",
+        "label": "Sensor degradation response",
+        "order_index": 4,
+        "source_ref": {
+          "source_unit_id": "AV_L11"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "episode_id": "AV_EP_CHARGING",
+        "label": "Return to charging station",
+        "order_index": 5,
+        "source_ref": {
+          "source_unit_id": "AV_L13"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "situations": [
+      {
+        "situation_id": "AV_SIT_MANUAL",
+        "label": "Manual driving state",
+        "description": "State in which the driver operates the vehicle directly",
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "AV_SIT_AUTO_NORMAL",
+        "label": "Normal autonomous driving state",
+        "description": "State in which all sensors are normal and the vehicle drives normally in autonomous driving",
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "AV_SIT_DEGRADED",
+        "label": "Degraded autonomous driving state",
+        "description": "Degraded autonomous driving state in which speed is limited due to sensor reliability degradation",
+        "source_ref": {
+          "source_unit_id": "AV_L11"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "AV_SIT_CHARGING",
+        "label": "Charging state",
+        "description": "State in which the vehicle is charging at the charging station",
+        "source_ref": {
+          "source_unit_id": "AV_L14"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "situation_id": "AV_SIT_BATTERY_LOW",
+        "label": "Battery low-power state",
+        "source_ref": {
+          "source_unit_id": "AV_L12"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateAction",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "state_values": [
+      {
+        "state_value_id": "AV_SV_MODE_MANUAL",
+        "label": "Driving mode is manual",
+        "subject_text": "Autonomous vehicle",
+        "variable": "driving_mode",
+        "value": "manual",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "AV_SV_MODE_AUTO",
+        "label": "Driving mode is autonomous",
+        "subject_text": "Autonomous vehicle",
+        "variable": "driving_mode",
+        "value": "autonomous",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "AV_SV_PERCEPTION_NORMAL",
+        "label": "Perception status is normal",
+        "subject_text": "Perception system",
+        "variable": "perception_status",
+        "value": "normal",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "AV_SV_PERCEPTION_DEGRADED",
+        "label": "Perception status is degraded",
+        "subject_text": "Perception system",
+        "variable": "perception_status",
+        "value": "degraded",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "AV_L11"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "AV_SV_SPEED_LIMIT_30",
+        "label": "Speed limit is 30 km/h",
+        "subject_text": "Autonomous vehicle",
+        "variable": "speed_limit",
+        "value": 30,
+        "unit": "km/h",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "AV_L11"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "AV_SV_BATTERY_LOW",
+        "label": "Battery SoC is 18%",
+        "subject_text": "Battery management system",
+        "variable": "battery_soc",
+        "value": 18,
+        "unit": "%",
+        "value_type": "quantity",
+        "source_ref": {
+          "source_unit_id": "AV_L12"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "state_value_id": "AV_SV_VEHICLE_CHARGING",
+        "label": "Vehicle status is charging",
+        "subject_text": "Autonomous vehicle",
+        "variable": "vehicle_state",
+        "value": "charging",
+        "value_type": "enum",
+        "source_ref": {
+          "source_unit_id": "AV_L14"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "AV_OBS_PEDESTRIAN",
+        "label": "Detect pedestrian ahead",
+        "observer_text": "Camera sensor",
+        "observed_text": "Pedestrian crossing ahead",
+        "source_ref": {
+          "source_unit_id": "AV_L08"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "AV_OBS_LIDAR_DEGRADED",
+        "label": "Detect LiDAR reliability degradation",
+        "observer_text": "Perception system",
+        "observed_text": "LiDAR point cloud reliability degradation",
+        "source_ref": {
+          "source_unit_id": "AV_L10"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "observation_id": "AV_OBS_BATTERY",
+        "label": "Measure battery SoC",
+        "observer_text": "Battery management system",
+        "observed_text": "Battery SoC 20% or less",
+        "source_ref": {
+          "source_unit_id": "AV_L12"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "events": [
+      {
+        "event_id": "AV_EVT_ACTIVATION_REQUEST",
+        "label": "Autonomous driving activation request",
+        "event_type": "operator_request",
+        "trigger_type": "external",
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "AV_EVT_PEDESTRIAN",
+        "label": "Pedestrian detection",
+        "event_type": "hazard_occurrence",
+        "trigger_type": "external",
+        "source_ref": {
+          "source_unit_id": "AV_L08"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "AV_EVT_LIDAR_FAULT",
+        "label": "LiDAR reliability degradation",
+        "event_type": "sensor_fault",
+        "trigger_type": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L10"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      },
+      {
+        "event_id": "AV_EVT_LOW_BATTERY",
+        "label": "Battery SoC at or below threshold",
+        "event_type": "trigger_condition",
+        "trigger_type": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L12"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": null,
+          "export_as": "usage"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "transition_id": "AV_TR_MANUAL_TO_AUTO",
+        "label": "Transition from manual to autonomous driving",
+        "from_situation_text": "Manual driving state",
+        "to_situation_text": "Normal autonomous driving state",
+        "change_kind": [
+          "mode_change"
+        ],
+        "trigger_text": "Autonomous driving activation request",
+        "guard": {
+          "text": "Activation conditions met and self-diagnosis normal"
+        },
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "AV_TR_NORMAL_TO_DEGRADED",
+        "label": "Transition from normal to degraded autonomous driving",
+        "from_situation_text": "Normal autonomous driving state",
+        "to_situation_text": "Degraded autonomous driving state",
+        "change_kind": [
+          "mode_change",
+          "capability_change"
+        ],
+        "trigger_text": "LiDAR reliability degradation",
+        "guard": {
+          "text": "LiDAR reliability degraded to at or below threshold"
+        },
+        "source_ref": {
+          "source_unit_id": "AV_L11"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      },
+      {
+        "transition_id": "AV_TR_AUTO_TO_CHARGING",
+        "label": "Transition from autonomous driving to charging",
+        "from_situation_text": "Degraded autonomous driving state",
+        "to_situation_text": "Charging state",
+        "change_kind": [
+          "mode_change"
+        ],
+        "trigger_text": "Battery SoC at or below threshold",
+        "guard": {
+          "text": "Battery SoC <= 20% and arrived at charging station"
+        },
+        "source_ref": {
+          "source_unit_id": "AV_L13"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "StateTransitionAction",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "performers": [
+      {
+        "performer_id": "AV_P1_VEHICLE",
+        "label": "Autonomous vehicle",
+        "performer_type": "autonomous_vehicle",
+        "performer_kind": "aggregate",
+        "part_structure": {
+          "role": "whole"
+        },
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P1_1_PERCEPTION",
+        "label": "Perception system",
+        "performer_type": "perception_system",
+        "performer_kind": "component",
+        "performer_scope": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P1_1_1_LIDAR",
+        "label": "LiDAR sensor",
+        "performer_type": "lidar_sensor",
+        "performer_kind": "component",
+        "performer_scope": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P1_1_2_CAMERA",
+        "label": "Camera sensor",
+        "performer_type": "camera_sensor",
+        "performer_kind": "component",
+        "performer_scope": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P1_1_3_RADAR",
+        "label": "Radar sensor",
+        "performer_type": "radar_sensor",
+        "performer_kind": "component",
+        "performer_scope": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P1_2_PLANNER",
+        "label": "Path planning module",
+        "performer_type": "path_planner",
+        "performer_kind": "component",
+        "performer_scope": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P1_3_CONTROLLER",
+        "label": "Vehicle control module",
+        "performer_type": "vehicle_controller",
+        "performer_kind": "component",
+        "performer_scope": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P1_4_ACTUATOR",
+        "label": "Drive actuator",
+        "performer_type": "actuator",
+        "performer_kind": "component",
+        "performer_scope": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P1_5_V2X",
+        "label": "V2X communication module",
+        "performer_type": "v2x_module",
+        "performer_kind": "component",
+        "performer_scope": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P1_6_BMS",
+        "label": "Battery management system",
+        "performer_type": "battery_management_system",
+        "performer_kind": "component",
+        "performer_scope": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P1_7_HMI",
+        "label": "HMI",
+        "performer_type": "human_machine_interface",
+        "performer_kind": "component",
+        "performer_scope": "internal",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P2_FLEET_SERVER",
+        "label": "Control center server",
+        "performer_type": "fleet_control_server",
+        "performer_kind": "individual",
+        "performer_scope": "external",
+        "source_ref": {
+          "source_unit_id": "AV_L02"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P3_CHARGER",
+        "label": "Charging station",
+        "performer_type": "charging_station",
+        "performer_kind": "individual",
+        "performer_scope": "external",
+        "source_ref": {
+          "source_unit_id": "AV_L02"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      },
+      {
+        "performer_id": "AV_P0_DRIVER",
+        "label": "Driver",
+        "performer_type": [
+          "human"
+        ],
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Part",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "AV_A_ACTIVATE_AUTO",
+        "label": "Activate autonomous driving mode",
+        "primary_actor_text": "Vehicle control module",
+        "verb": "activate",
+        "object_text": "Autonomous driving mode",
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_NOTIFY_MODE",
+        "label": "Display mode transition notification",
+        "primary_actor_text": "HMI",
+        "verb": "display",
+        "object_text": "Autonomous driving mode transition notification",
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_ACQUIRE_SENSOR",
+        "label": "Collect sensor data",
+        "primary_actor_text": "Perception system",
+        "verb": "collect",
+        "object_text": "LiDAR/camera/radar raw data",
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_FUSE_SENSOR",
+        "label": "Sensor fusion and environment perception",
+        "primary_actor_text": "Perception system",
+        "verb": "fuse",
+        "object_text": "Environment perception data",
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_PLAN_PATH",
+        "label": "Generate driving path",
+        "primary_actor_text": "Path planning module",
+        "verb": "generate",
+        "object_text": "Driving path",
+        "source_ref": {
+          "source_unit_id": "AV_L05"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_GENERATE_CONTROL",
+        "label": "Generate control commands",
+        "primary_actor_text": "Vehicle control module",
+        "verb": "generate",
+        "object_text": "Steering/acceleration-deceleration control commands",
+        "source_ref": {
+          "source_unit_id": "AV_L06"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_ACTUATE",
+        "label": "Execute control commands",
+        "primary_actor_text": "Drive actuator",
+        "verb": "execute",
+        "object_text": "Control commands",
+        "source_ref": {
+          "source_unit_id": "AV_L06"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_REPORT_STATUS",
+        "label": "Transmit vehicle status report",
+        "primary_actor_text": "V2X communication module",
+        "verb": "transmit",
+        "object_text": "Vehicle status report",
+        "target_text": "Control center server",
+        "source_ref": {
+          "source_unit_id": "AV_L07"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_MONITOR_FLEET",
+        "label": "Monitor vehicle status",
+        "primary_actor_text": "Control center server",
+        "verb": "monitor",
+        "object_text": "Vehicle status report",
+        "source_ref": {
+          "source_unit_id": "AV_L02"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_DETECT_PEDESTRIAN",
+        "label": "Detect pedestrian ahead",
+        "primary_actor_text": "Perception system",
+        "verb": "detect",
+        "object_text": "Pedestrian ahead",
+        "source_ref": {
+          "source_unit_id": "AV_L08"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_EMERGENCY_BRAKE",
+        "label": "Emergency braking",
+        "primary_actor_text": "Vehicle control module",
+        "verb": "brake",
+        "object_text": "Vehicle",
+        "source_ref": {
+          "source_unit_id": "AV_L09"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_MEASURE_BATTERY",
+        "label": "Measure battery SoC",
+        "primary_actor_text": "Battery management system",
+        "verb": "measure",
+        "object_text": "Battery SoC",
+        "source_ref": {
+          "source_unit_id": "AV_L12"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_DEGRADE_MODE",
+        "label": "Switch to degraded mode",
+        "primary_actor_text": "Vehicle control module",
+        "verb": "switch",
+        "object_text": "Degraded autonomous driving mode",
+        "source_ref": {
+          "source_unit_id": "AV_L11"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_REPLAN_TO_STATION",
+        "label": "Replan route to charging station",
+        "primary_actor_text": "Path planning module",
+        "verb": "replan",
+        "object_text": "Route to charging station",
+        "source_ref": {
+          "source_unit_id": "AV_L13"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_REQUEST_CHARGE",
+        "label": "Transmit charging request",
+        "primary_actor_text": "V2X communication module",
+        "verb": "request",
+        "object_text": "Charging request",
+        "target_text": "Charging station",
+        "source_ref": {
+          "source_unit_id": "AV_L13"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "action_id": "AV_A_CHARGE",
+        "label": "Charge vehicle",
+        "primary_actor_text": "Charging station",
+        "verb": "charge",
+        "object_text": "Autonomous vehicle battery",
+        "source_ref": {
+          "source_unit_id": "AV_L14"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "items": [
+      {
+        "item_id": "AV_I_SENSOR_DATA",
+        "label": "Raw sensor data",
+        "item_type": "sensor_stream",
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "AV_I_PERCEPTION_DATA",
+        "label": "Environment perception data",
+        "item_type": "perception_data",
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "AV_I_PATH",
+        "label": "Driving path",
+        "item_type": "trajectory",
+        "source_ref": {
+          "source_unit_id": "AV_L05"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "AV_I_CONTROL_CMD",
+        "label": "Control commands",
+        "item_type": "control_command",
+        "source_ref": {
+          "source_unit_id": "AV_L06"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "AV_I_STATUS_REPORT",
+        "label": "Vehicle status report",
+        "item_type": "telemetry_report",
+        "source_ref": {
+          "source_unit_id": "AV_L07"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "AV_I_CHARGE_REQUEST",
+        "label": "Charging request",
+        "item_type": "message",
+        "source_ref": {
+          "source_unit_id": "AV_L13"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      },
+      {
+        "item_id": "AV_I_PEDESTRIAN",
+        "label": "Pedestrian ahead",
+        "item_type": "road_user",
+        "source_ref": {
+          "source_unit_id": "AV_L08"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Object",
+          "sysml_element": "Item",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "flows": [
+      {
+        "flow_id": "AV_F_ACTIVATE_TO_LOOP",
+        "label": "Start driving loop after activation",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "AV_F_ACQUIRE_TO_FUSE",
+        "label": "Fusion after sensor collection",
+        "flow_kind": "object_flow",
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "AV_F_FUSE_TO_PLAN",
+        "label": "Path generation after environment perception",
+        "flow_kind": "object_flow",
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "AV_F_PLAN_TO_CONTROL",
+        "label": "Control command generation after path generation",
+        "flow_kind": "object_flow",
+        "source_ref": {
+          "source_unit_id": "AV_L05"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "AV_F_CONTROL_TO_ACTUATE",
+        "label": "Drive execution after control commands",
+        "flow_kind": "object_flow",
+        "source_ref": {
+          "source_unit_id": "AV_L06"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "AV_F_DETECT_TO_BRAKE",
+        "label": "Emergency braking after pedestrian detection",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "AV_L09"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "AV_F_STATUS_TO_SERVER",
+        "label": "Control center monitoring after status report",
+        "flow_kind": "message_flow",
+        "source_ref": {
+          "source_unit_id": "AV_L07"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "AV_F_REPLAN_TO_REQUEST",
+        "label": "Charging request after route replanning",
+        "flow_kind": "control_flow",
+        "source_ref": {
+          "source_unit_id": "AV_L13"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      },
+      {
+        "flow_id": "AV_F_REQUEST_TO_CHARGE",
+        "label": "Charging performed after charging request",
+        "flow_kind": "message_flow",
+        "source_ref": {
+          "source_unit_id": "AV_L13"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Occurrence",
+          "sysml_element": "FlowConnection",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "controls": [
+      {
+        "control_id": "AV_CTRL_DRIVING_LOOP",
+        "label": "Perception-planning-control driving loop",
+        "control_type": "loop",
+        "repeat_pattern": {
+          "kind": "periodic",
+          "period": "100ms"
+        },
+        "guard_texts": [
+          "While the autonomous driving state is maintained"
+        ],
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "control_id": "AV_CTRL_PED_DECISION",
+        "label": "Braking branch on pedestrian detection",
+        "control_type": "decision",
+        "guard_texts": [
+          "When a pedestrian ahead is detected"
+        ],
+        "source_ref": {
+          "source_unit_id": "AV_L09"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      },
+      {
+        "control_id": "AV_CTRL_MODE_GUARD",
+        "label": "Autonomous driving activation guard",
+        "control_type": "decision",
+        "guard_texts": [
+          "Activation request and self-diagnosis normal"
+        ],
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "Action",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "constraints": [
+      {
+        "constraint_id": "AV_C_BRAKE_LATENCY",
+        "label": "Emergency braking reaction time limit",
+        "constraint_kind": [
+          "deadline"
+        ],
+        "parameter": "Emergency braking reaction time",
+        "operator": "<=",
+        "value": 200,
+        "unit": "ms",
+        "expression_text": "brake_response_time <= 200 ms",
+        "source_ref": {
+          "source_unit_id": "AV_L09"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "AV_C_PERCEPTION_RATE",
+        "label": "Perception cycle 10 Hz",
+        "constraint_kind": [
+          "periodicity"
+        ],
+        "parameter": "Perception cycle",
+        "operator": ">=",
+        "value": 10,
+        "unit": "Hz",
+        "expression_text": "perception_rate >= 10 Hz",
+        "source_ref": {
+          "source_unit_id": "AV_L04"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "AV_C_BATTERY_THRESHOLD",
+        "label": "Battery charging threshold",
+        "constraint_kind": [
+          "guard_condition"
+        ],
+        "parameter": "battery_soc",
+        "operator": "<=",
+        "value": 20,
+        "unit": "%",
+        "expression_text": "battery_soc <= 20 %",
+        "source_ref": {
+          "source_unit_id": "AV_L12"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "constraint_id": "AV_C_SPEED_LIMIT_DEGRADED",
+        "label": "Degraded mode speed limit",
+        "constraint_kind": [
+          "quantitative_limit"
+        ],
+        "parameter": "vehicle_speed",
+        "operator": "<=",
+        "value": 30,
+        "unit": "km/h",
+        "expression_text": "vehicle_speed <= 30 km/h during degraded mode",
+        "source_ref": {
+          "source_unit_id": "AV_L11"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "ConstraintCheck",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "AV_G_SAFE_ARRIVAL",
+        "label": "Safe arrival at destination",
+        "goal_type": "mission_objective",
+        "desired_state_text": "State in which the vehicle has arrived safely at the destination",
+        "source_ref": {
+          "source_unit_id": "AV_L14"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "RequirementCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "goal_id": "AV_G_COLLISION_AVOIDANCE",
+        "label": "Collision avoidance",
+        "goal_type": "safety_objective",
+        "desired_state_text": "State with no collision with pedestrians or obstacles",
+        "source_ref": {
+          "source_unit_id": "AV_L09"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "RequirementCheck",
+          "export_as": "usage"
+        }
+      },
+      {
+        "goal_id": "AV_G_MAINTAIN_OPERATION",
+        "label": "Maintain operation when degraded",
+        "goal_type": "operational_objective",
+        "desired_state_text": "Maintain safe low-speed operation even under sensor degradation",
+        "source_ref": {
+          "source_unit_id": "AV_L11"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": "Performance",
+          "sysml_element": "RequirementCheck",
+          "export_as": "usage"
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "reason_id": "AV_R_SAFETY_BRAKE",
+        "label": "Emergency braking for pedestrian safety",
+        "reason_type": [
+          "purpose",
+          "requirement"
+        ],
+        "rationale_text": "Brake immediately to avoid a collision with the pedestrian ahead",
+        "source_ref": {
+          "source_unit_id": "AV_L09"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "reason_id": "AV_R_DEGRADE_FOR_SAFETY",
+        "label": "Degraded mode switch due to LiDAR reliability degradation",
+        "reason_type": [
+          "cause",
+          "rationale"
+        ],
+        "rationale_text": "Because LiDAR reliability is low, switch to the low-speed degraded mode to secure a safety margin",
+        "source_ref": {
+          "source_unit_id": "AV_L11"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "reason_id": "AV_R_CHARGE_FOR_RANGE",
+        "label": "Charging to secure driving range",
+        "reason_type": [
+          "purpose"
+        ],
+        "rationale_text": "Because the battery SoC has dropped to at or below the threshold, charge to secure driving range",
+        "source_ref": {
+          "source_unit_id": "AV_L13"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "domain_extension_rules": [
+      {
+        "domain_extension_rule_id": "AV_DER_AV_VOCAB",
+        "label": "Autonomous driving vocabulary",
+        "domain": "automotive_autonomous_driving",
+        "terms": [
+          "perception",
+          "sensor fusion",
+          "path planning",
+          "vehicle control",
+          "graceful degradation",
+          "state of charge"
+        ],
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "semantic_bindings": [
+      {
+        "semantic_binding_id": "AV_SB_VEHICLE_PART",
+        "label": "Autonomous vehicle to SysML Part",
+        "source_slot_text": "Autonomous vehicle",
+        "target_standard_element": "SysML Part",
+        "binding_kind": "performer_to_part",
+        "source_ref": {
+          "source_unit_id": "AV_L01"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "semantic_binding_id": "AV_SB_MODE_TRANSITIONS",
+        "label": "Binding mode transitions to StateTransitionAction",
+        "source_slot_text": "Manual/autonomous/degraded/charging mode transitions",
+        "target_standard_element": "SysML StateTransitionAction",
+        "binding_kind": "transition_to_state_transition",
+        "source_ref": {
+          "source_unit_id": "AV_L03"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      },
+      {
+        "semantic_binding_id": "AV_SB_PATH_ITEM",
+        "label": "Driving path to SysML Item",
+        "source_slot_text": "Driving path",
+        "target_standard_element": "SysML Item",
+        "binding_kind": "payload_to_item",
+        "source_ref": {
+          "source_unit_id": "AV_L05"
+        },
+        "confidence_by_llm": 1.0,
+        "standard_mapping": {
+          "kerml_base": null,
+          "sysml_element": null,
+          "export_as": "metadata"
+        }
+      }
+    ],
+    "slot_relations": [
+      {
+        "relation_id": "AV_REL_001",
+        "source_slot_id": "AV_P1_VEHICLE",
+        "relation_type": "has_part",
+        "target_slot_id": "AV_P1_1_PERCEPTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_002",
+        "source_slot_id": "AV_P1_VEHICLE",
+        "relation_type": "has_part",
+        "target_slot_id": "AV_P1_2_PLANNER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_003",
+        "source_slot_id": "AV_P1_VEHICLE",
+        "relation_type": "has_part",
+        "target_slot_id": "AV_P1_3_CONTROLLER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_004",
+        "source_slot_id": "AV_P1_VEHICLE",
+        "relation_type": "has_part",
+        "target_slot_id": "AV_P1_4_ACTUATOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_005",
+        "source_slot_id": "AV_P1_VEHICLE",
+        "relation_type": "has_part",
+        "target_slot_id": "AV_P1_5_V2X",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_006",
+        "source_slot_id": "AV_P1_VEHICLE",
+        "relation_type": "has_part",
+        "target_slot_id": "AV_P1_6_BMS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_007",
+        "source_slot_id": "AV_P1_VEHICLE",
+        "relation_type": "has_part",
+        "target_slot_id": "AV_P1_7_HMI",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_008",
+        "source_slot_id": "AV_P1_1_PERCEPTION",
+        "relation_type": "has_part",
+        "target_slot_id": "AV_P1_1_1_LIDAR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_009",
+        "source_slot_id": "AV_P1_1_PERCEPTION",
+        "relation_type": "has_part",
+        "target_slot_id": "AV_P1_1_2_CAMERA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_010",
+        "source_slot_id": "AV_P1_1_PERCEPTION",
+        "relation_type": "has_part",
+        "target_slot_id": "AV_P1_1_3_RADAR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_011",
+        "source_slot_id": "AV_SCN_AUTONOMOUS_OP",
+        "relation_type": "has_episode",
+        "target_slot_id": "AV_EP_ACTIVATION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_012",
+        "source_slot_id": "AV_SCN_AUTONOMOUS_OP",
+        "relation_type": "has_episode",
+        "target_slot_id": "AV_EP_NORMAL_DRIVING",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_013",
+        "source_slot_id": "AV_SCN_AUTONOMOUS_OP",
+        "relation_type": "has_episode",
+        "target_slot_id": "AV_EP_PEDESTRIAN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_014",
+        "source_slot_id": "AV_SCN_AUTONOMOUS_OP",
+        "relation_type": "has_episode",
+        "target_slot_id": "AV_EP_DEGRADED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_015",
+        "source_slot_id": "AV_SCN_AUTONOMOUS_OP",
+        "relation_type": "has_episode",
+        "target_slot_id": "AV_EP_CHARGING",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_016",
+        "source_slot_id": "AV_SIT_MANUAL",
+        "relation_type": "has_state_value",
+        "target_slot_id": "AV_SV_MODE_MANUAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_017",
+        "source_slot_id": "AV_SIT_AUTO_NORMAL",
+        "relation_type": "has_state_value",
+        "target_slot_id": "AV_SV_MODE_AUTO",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_018",
+        "source_slot_id": "AV_SIT_AUTO_NORMAL",
+        "relation_type": "has_state_value",
+        "target_slot_id": "AV_SV_PERCEPTION_NORMAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_019",
+        "source_slot_id": "AV_SIT_DEGRADED",
+        "relation_type": "has_state_value",
+        "target_slot_id": "AV_SV_PERCEPTION_DEGRADED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_020",
+        "source_slot_id": "AV_SIT_DEGRADED",
+        "relation_type": "has_state_value",
+        "target_slot_id": "AV_SV_SPEED_LIMIT_30",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_021",
+        "source_slot_id": "AV_SIT_CHARGING",
+        "relation_type": "has_state_value",
+        "target_slot_id": "AV_SV_VEHICLE_CHARGING",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_023",
+        "source_slot_id": "AV_TR_MANUAL_TO_AUTO",
+        "relation_type": "from_situation",
+        "target_slot_id": "AV_SIT_MANUAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_024",
+        "source_slot_id": "AV_TR_MANUAL_TO_AUTO",
+        "relation_type": "to_situation",
+        "target_slot_id": "AV_SIT_AUTO_NORMAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_025",
+        "source_slot_id": "AV_EVT_ACTIVATION_REQUEST",
+        "relation_type": "triggers",
+        "target_slot_id": "AV_TR_MANUAL_TO_AUTO",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_026",
+        "source_slot_id": "AV_TR_NORMAL_TO_DEGRADED",
+        "relation_type": "from_situation",
+        "target_slot_id": "AV_SIT_AUTO_NORMAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_027",
+        "source_slot_id": "AV_TR_NORMAL_TO_DEGRADED",
+        "relation_type": "to_situation",
+        "target_slot_id": "AV_SIT_DEGRADED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_028",
+        "source_slot_id": "AV_EVT_LIDAR_FAULT",
+        "relation_type": "triggers",
+        "target_slot_id": "AV_TR_NORMAL_TO_DEGRADED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_029",
+        "source_slot_id": "AV_TR_AUTO_TO_CHARGING",
+        "relation_type": "from_situation",
+        "target_slot_id": "AV_SIT_DEGRADED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_030",
+        "source_slot_id": "AV_TR_AUTO_TO_CHARGING",
+        "relation_type": "to_situation",
+        "target_slot_id": "AV_SIT_CHARGING",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_031",
+        "source_slot_id": "AV_EVT_LOW_BATTERY",
+        "relation_type": "triggers",
+        "target_slot_id": "AV_TR_AUTO_TO_CHARGING",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_032",
+        "source_slot_id": "AV_OBS_PEDESTRIAN",
+        "relation_type": "observes",
+        "target_slot_id": "AV_EVT_PEDESTRIAN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_033",
+        "source_slot_id": "AV_OBS_LIDAR_DEGRADED",
+        "relation_type": "observes",
+        "target_slot_id": "AV_EVT_LIDAR_FAULT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_034",
+        "source_slot_id": "AV_OBS_BATTERY",
+        "relation_type": "observes",
+        "target_slot_id": "AV_EVT_LOW_BATTERY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_035",
+        "source_slot_id": "AV_A_ACTIVATE_AUTO",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_3_CONTROLLER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_036",
+        "source_slot_id": "AV_A_NOTIFY_MODE",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_7_HMI",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_037",
+        "source_slot_id": "AV_A_ACQUIRE_SENSOR",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_1_PERCEPTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_038",
+        "source_slot_id": "AV_A_FUSE_SENSOR",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_1_PERCEPTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_039",
+        "source_slot_id": "AV_A_PLAN_PATH",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_2_PLANNER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_040",
+        "source_slot_id": "AV_A_GENERATE_CONTROL",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_3_CONTROLLER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_041",
+        "source_slot_id": "AV_A_ACTUATE",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_4_ACTUATOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_042",
+        "source_slot_id": "AV_A_REPORT_STATUS",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_5_V2X",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_043",
+        "source_slot_id": "AV_A_MONITOR_FLEET",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P2_FLEET_SERVER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_044",
+        "source_slot_id": "AV_A_DETECT_PEDESTRIAN",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_1_PERCEPTION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_045",
+        "source_slot_id": "AV_A_EMERGENCY_BRAKE",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_3_CONTROLLER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_046",
+        "source_slot_id": "AV_A_MEASURE_BATTERY",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_6_BMS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_047",
+        "source_slot_id": "AV_A_DEGRADE_MODE",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_3_CONTROLLER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_048",
+        "source_slot_id": "AV_A_REPLAN_TO_STATION",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_2_PLANNER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_049",
+        "source_slot_id": "AV_A_REQUEST_CHARGE",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P1_5_V2X",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_050",
+        "source_slot_id": "AV_A_CHARGE",
+        "relation_type": "performed_by",
+        "target_slot_id": "AV_P3_CHARGER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_051",
+        "source_slot_id": "AV_A_ACQUIRE_SENSOR",
+        "relation_type": "produces_item",
+        "target_slot_id": "AV_I_SENSOR_DATA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_052",
+        "source_slot_id": "AV_A_FUSE_SENSOR",
+        "relation_type": "uses_item",
+        "target_slot_id": "AV_I_SENSOR_DATA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_053",
+        "source_slot_id": "AV_A_FUSE_SENSOR",
+        "relation_type": "produces_item",
+        "target_slot_id": "AV_I_PERCEPTION_DATA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_054",
+        "source_slot_id": "AV_A_PLAN_PATH",
+        "relation_type": "uses_item",
+        "target_slot_id": "AV_I_PERCEPTION_DATA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_055",
+        "source_slot_id": "AV_A_PLAN_PATH",
+        "relation_type": "produces_item",
+        "target_slot_id": "AV_I_PATH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_056",
+        "source_slot_id": "AV_A_GENERATE_CONTROL",
+        "relation_type": "uses_item",
+        "target_slot_id": "AV_I_PATH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_057",
+        "source_slot_id": "AV_A_GENERATE_CONTROL",
+        "relation_type": "produces_item",
+        "target_slot_id": "AV_I_CONTROL_CMD",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_058",
+        "source_slot_id": "AV_A_ACTUATE",
+        "relation_type": "uses_item",
+        "target_slot_id": "AV_I_CONTROL_CMD",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_059",
+        "source_slot_id": "AV_A_REPORT_STATUS",
+        "relation_type": "produces_item",
+        "target_slot_id": "AV_I_STATUS_REPORT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_060",
+        "source_slot_id": "AV_A_REQUEST_CHARGE",
+        "relation_type": "produces_item",
+        "target_slot_id": "AV_I_CHARGE_REQUEST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_061",
+        "source_slot_id": "AV_A_REPLAN_TO_STATION",
+        "relation_type": "produces_item",
+        "target_slot_id": "AV_I_PATH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_062",
+        "source_slot_id": "AV_A_DETECT_PEDESTRIAN",
+        "relation_type": "acts_on",
+        "target_slot_id": "AV_I_PEDESTRIAN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_064",
+        "source_slot_id": "AV_A_REPORT_STATUS",
+        "relation_type": "provided_to",
+        "target_slot_id": "AV_P2_FLEET_SERVER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_065",
+        "source_slot_id": "AV_A_REQUEST_CHARGE",
+        "relation_type": "provided_to",
+        "target_slot_id": "AV_P3_CHARGER",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_066",
+        "source_slot_id": "AV_F_ACTIVATE_TO_LOOP",
+        "relation_type": "flow_source",
+        "target_slot_id": "AV_A_ACTIVATE_AUTO",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_067",
+        "source_slot_id": "AV_F_ACTIVATE_TO_LOOP",
+        "relation_type": "flow_target",
+        "target_slot_id": "AV_A_ACQUIRE_SENSOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_068",
+        "source_slot_id": "AV_F_ACQUIRE_TO_FUSE",
+        "relation_type": "flow_source",
+        "target_slot_id": "AV_A_ACQUIRE_SENSOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_069",
+        "source_slot_id": "AV_F_ACQUIRE_TO_FUSE",
+        "relation_type": "flow_target",
+        "target_slot_id": "AV_A_FUSE_SENSOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_070",
+        "source_slot_id": "AV_F_ACQUIRE_TO_FUSE",
+        "relation_type": "carries_item",
+        "target_slot_id": "AV_I_SENSOR_DATA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_071",
+        "source_slot_id": "AV_F_FUSE_TO_PLAN",
+        "relation_type": "flow_source",
+        "target_slot_id": "AV_A_FUSE_SENSOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_072",
+        "source_slot_id": "AV_F_FUSE_TO_PLAN",
+        "relation_type": "flow_target",
+        "target_slot_id": "AV_A_PLAN_PATH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_073",
+        "source_slot_id": "AV_F_FUSE_TO_PLAN",
+        "relation_type": "carries_item",
+        "target_slot_id": "AV_I_PERCEPTION_DATA",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_074",
+        "source_slot_id": "AV_F_PLAN_TO_CONTROL",
+        "relation_type": "flow_source",
+        "target_slot_id": "AV_A_PLAN_PATH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_075",
+        "source_slot_id": "AV_F_PLAN_TO_CONTROL",
+        "relation_type": "flow_target",
+        "target_slot_id": "AV_A_GENERATE_CONTROL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_076",
+        "source_slot_id": "AV_F_PLAN_TO_CONTROL",
+        "relation_type": "carries_item",
+        "target_slot_id": "AV_I_PATH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_077",
+        "source_slot_id": "AV_F_CONTROL_TO_ACTUATE",
+        "relation_type": "flow_source",
+        "target_slot_id": "AV_A_GENERATE_CONTROL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_078",
+        "source_slot_id": "AV_F_CONTROL_TO_ACTUATE",
+        "relation_type": "flow_target",
+        "target_slot_id": "AV_A_ACTUATE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_079",
+        "source_slot_id": "AV_F_CONTROL_TO_ACTUATE",
+        "relation_type": "carries_item",
+        "target_slot_id": "AV_I_CONTROL_CMD",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_080",
+        "source_slot_id": "AV_F_DETECT_TO_BRAKE",
+        "relation_type": "flow_source",
+        "target_slot_id": "AV_A_DETECT_PEDESTRIAN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_081",
+        "source_slot_id": "AV_F_DETECT_TO_BRAKE",
+        "relation_type": "flow_target",
+        "target_slot_id": "AV_A_EMERGENCY_BRAKE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_082",
+        "source_slot_id": "AV_F_STATUS_TO_SERVER",
+        "relation_type": "flow_source",
+        "target_slot_id": "AV_A_REPORT_STATUS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_083",
+        "source_slot_id": "AV_F_STATUS_TO_SERVER",
+        "relation_type": "flow_target",
+        "target_slot_id": "AV_A_MONITOR_FLEET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_084",
+        "source_slot_id": "AV_F_STATUS_TO_SERVER",
+        "relation_type": "carries_item",
+        "target_slot_id": "AV_I_STATUS_REPORT",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_085",
+        "source_slot_id": "AV_F_REPLAN_TO_REQUEST",
+        "relation_type": "flow_source",
+        "target_slot_id": "AV_A_REPLAN_TO_STATION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_086",
+        "source_slot_id": "AV_F_REPLAN_TO_REQUEST",
+        "relation_type": "flow_target",
+        "target_slot_id": "AV_A_REQUEST_CHARGE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_087",
+        "source_slot_id": "AV_F_REQUEST_TO_CHARGE",
+        "relation_type": "flow_source",
+        "target_slot_id": "AV_A_REQUEST_CHARGE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_088",
+        "source_slot_id": "AV_F_REQUEST_TO_CHARGE",
+        "relation_type": "flow_target",
+        "target_slot_id": "AV_A_CHARGE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_089",
+        "source_slot_id": "AV_F_REQUEST_TO_CHARGE",
+        "relation_type": "carries_item",
+        "target_slot_id": "AV_I_CHARGE_REQUEST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_090",
+        "source_slot_id": "AV_CTRL_DRIVING_LOOP",
+        "relation_type": "controls_flow",
+        "target_slot_id": "AV_F_ACQUIRE_TO_FUSE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_091",
+        "source_slot_id": "AV_CTRL_PED_DECISION",
+        "relation_type": "controls_flow",
+        "target_slot_id": "AV_F_DETECT_TO_BRAKE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_092",
+        "source_slot_id": "AV_CTRL_MODE_GUARD",
+        "relation_type": "controls_flow",
+        "target_slot_id": "AV_F_ACTIVATE_TO_LOOP",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_093",
+        "source_slot_id": "AV_A_EMERGENCY_BRAKE",
+        "relation_type": "constrained_by",
+        "target_slot_id": "AV_C_BRAKE_LATENCY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_094",
+        "source_slot_id": "AV_A_FUSE_SENSOR",
+        "relation_type": "constrained_by",
+        "target_slot_id": "AV_C_PERCEPTION_RATE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_095",
+        "source_slot_id": "AV_TR_AUTO_TO_CHARGING",
+        "relation_type": "constrained_by",
+        "target_slot_id": "AV_C_BATTERY_THRESHOLD",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_096",
+        "source_slot_id": "AV_TR_NORMAL_TO_DEGRADED",
+        "relation_type": "constrained_by",
+        "target_slot_id": "AV_C_SPEED_LIMIT_DEGRADED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_097",
+        "source_slot_id": "AV_SCN_AUTONOMOUS_OP",
+        "relation_type": "has_goal",
+        "target_slot_id": "AV_G_SAFE_ARRIVAL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_098",
+        "source_slot_id": "AV_A_EMERGENCY_BRAKE",
+        "relation_type": "has_goal",
+        "target_slot_id": "AV_G_COLLISION_AVOIDANCE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_099",
+        "source_slot_id": "AV_A_DEGRADE_MODE",
+        "relation_type": "has_goal",
+        "target_slot_id": "AV_G_MAINTAIN_OPERATION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_100",
+        "source_slot_id": "AV_A_EMERGENCY_BRAKE",
+        "relation_type": "has_reason",
+        "target_slot_id": "AV_R_SAFETY_BRAKE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_101",
+        "source_slot_id": "AV_A_DEGRADE_MODE",
+        "relation_type": "has_reason",
+        "target_slot_id": "AV_R_DEGRADE_FOR_SAFETY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_102",
+        "source_slot_id": "AV_A_REPLAN_TO_STATION",
+        "relation_type": "has_reason",
+        "target_slot_id": "AV_R_CHARGE_FOR_RANGE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_103",
+        "source_slot_id": "AV_SB_VEHICLE_PART",
+        "relation_type": "binds_to",
+        "target_slot_id": "AV_P1_VEHICLE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_104",
+        "source_slot_id": "AV_SB_MODE_TRANSITIONS",
+        "relation_type": "binds_to",
+        "target_slot_id": "AV_TR_MANUAL_TO_AUTO",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_105",
+        "source_slot_id": "AV_SB_PATH_ITEM",
+        "relation_type": "binds_to",
+        "target_slot_id": "AV_I_PATH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_106",
+        "source_slot_id": "AV_DER_AV_VOCAB",
+        "relation_type": "has_binding",
+        "target_slot_id": "AV_SB_VEHICLE_PART",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_107",
+        "source_slot_id": "AV_DER_AV_VOCAB",
+        "relation_type": "has_binding",
+        "target_slot_id": "AV_SB_MODE_TRANSITIONS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_108",
+        "source_slot_id": "AV_DER_AV_VOCAB",
+        "relation_type": "has_binding",
+        "target_slot_id": "AV_SB_PATH_ITEM",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_109",
+        "source_slot_id": "AV_TR_MANUAL_TO_AUTO",
+        "relation_type": "temporal_before",
+        "target_slot_id": "AV_TR_NORMAL_TO_DEGRADED",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_110",
+        "source_slot_id": "AV_TR_NORMAL_TO_DEGRADED",
+        "relation_type": "temporal_before",
+        "target_slot_id": "AV_TR_AUTO_TO_CHARGING",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_111",
+        "source_slot_id": "AV_EP_ACTIVATION",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_ACTIVATE_AUTO",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_112",
+        "source_slot_id": "AV_EP_ACTIVATION",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_NOTIFY_MODE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_113",
+        "source_slot_id": "AV_EP_NORMAL_DRIVING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_ACQUIRE_SENSOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_114",
+        "source_slot_id": "AV_EP_NORMAL_DRIVING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_FUSE_SENSOR",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_115",
+        "source_slot_id": "AV_EP_NORMAL_DRIVING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_PLAN_PATH",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_116",
+        "source_slot_id": "AV_EP_NORMAL_DRIVING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_GENERATE_CONTROL",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_117",
+        "source_slot_id": "AV_EP_NORMAL_DRIVING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_ACTUATE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_118",
+        "source_slot_id": "AV_EP_NORMAL_DRIVING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_REPORT_STATUS",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_119",
+        "source_slot_id": "AV_EP_NORMAL_DRIVING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_MONITOR_FLEET",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_120",
+        "source_slot_id": "AV_EP_PEDESTRIAN",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_DETECT_PEDESTRIAN",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_121",
+        "source_slot_id": "AV_EP_PEDESTRIAN",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_EMERGENCY_BRAKE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_122",
+        "source_slot_id": "AV_EP_DEGRADED",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_DEGRADE_MODE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_123",
+        "source_slot_id": "AV_EP_CHARGING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_MEASURE_BATTERY",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_124",
+        "source_slot_id": "AV_EP_CHARGING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_REPLAN_TO_STATION",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_125",
+        "source_slot_id": "AV_EP_CHARGING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_REQUEST_CHARGE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_126",
+        "source_slot_id": "AV_EP_CHARGING",
+        "relation_type": "contains_action",
+        "target_slot_id": "AV_A_CHARGE",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_127",
+        "source_slot_id": "AV_SIT_BATTERY_LOW",
+        "relation_type": "has_state_value",
+        "target_slot_id": "AV_SV_BATTERY_LOW",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_129",
+        "source_slot_id": "AV_P0_DRIVER",
+        "relation_type": "originates_event",
+        "target_slot_id": "AV_EVT_ACTIVATION_REQUEST",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_130",
+        "source_slot_id": "AV_EP_ACTIVATION",
+        "relation_type": "has_situation",
+        "target_slot_id": "AV_SIT_MANUAL",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_131",
+        "source_slot_id": "AV_EP_NORMAL_DRIVING",
+        "relation_type": "has_situation",
+        "target_slot_id": "AV_SIT_AUTO_NORMAL",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_132",
+        "source_slot_id": "AV_EP_DEGRADED",
+        "relation_type": "has_situation",
+        "target_slot_id": "AV_SIT_DEGRADED",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_133",
+        "source_slot_id": "AV_EP_DEGRADED",
+        "relation_type": "has_situation",
+        "target_slot_id": "AV_SIT_BATTERY_LOW",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_134",
+        "source_slot_id": "AV_EP_CHARGING",
+        "relation_type": "has_situation",
+        "target_slot_id": "AV_SIT_CHARGING",
+        "evidence_level": "derived",
+        "confidence": 1.0
+      },
+      {
+        "relation_id": "AV_REL_135",
+        "source_slot_id": "AV_OBS_BATTERY",
+        "relation_type": "observes",
+        "target_slot_id": "AV_SV_BATTERY_LOW",
+        "evidence_level": "explicit",
+        "confidence": 1.0
+      }
+    ],
+    "validation_issues": [],
+    "assumptions": [
+      "The gold slot graph is fixed first, and the easy, medium, and hard inputs express the same atomic information.",
+      "The difficulty changes only the expression complexity and does not delete numbers, units, individual actors, or state and transition information.",
+      "benchmark_realizations links the input paragraphs of each difficulty to the canonical source units."
+    ],
+    "extraction_scope": "ground_truth_relation_complete_semantic_audit",
+    "benchmark_realizations": [
+      {
+        "difficulty": "easy",
+        "document": "av.easy.md",
+        "source_unit_map": [
+          {
+            "source_unit_id": "AV_L01",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "AV_L02",
+            "paragraph_index": [
+              2
+            ]
+          },
+          {
+            "source_unit_id": "AV_L03",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "AV_L04",
+            "paragraph_index": [
+              4
+            ]
+          },
+          {
+            "source_unit_id": "AV_L05",
+            "paragraph_index": [
+              5
+            ]
+          },
+          {
+            "source_unit_id": "AV_L06",
+            "paragraph_index": [
+              6
+            ]
+          },
+          {
+            "source_unit_id": "AV_L07",
+            "paragraph_index": [
+              7
+            ]
+          },
+          {
+            "source_unit_id": "AV_L08",
+            "paragraph_index": [
+              8
+            ]
+          },
+          {
+            "source_unit_id": "AV_L09",
+            "paragraph_index": [
+              9
+            ]
+          },
+          {
+            "source_unit_id": "AV_L10",
+            "paragraph_index": [
+              10
+            ]
+          },
+          {
+            "source_unit_id": "AV_L11",
+            "paragraph_index": [
+              11
+            ]
+          },
+          {
+            "source_unit_id": "AV_L12",
+            "paragraph_index": [
+              12
+            ]
+          },
+          {
+            "source_unit_id": "AV_L13",
+            "paragraph_index": [
+              13
+            ]
+          },
+          {
+            "source_unit_id": "AV_L14",
+            "paragraph_index": [
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "document": "av.medium.md",
+        "source_unit_map": [
+          {
+            "source_unit_id": "AV_L01",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "AV_L02",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "AV_L03",
+            "paragraph_index": [
+              2
+            ]
+          },
+          {
+            "source_unit_id": "AV_L04",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "AV_L05",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "AV_L06",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "AV_L07",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "AV_L08",
+            "paragraph_index": [
+              4
+            ]
+          },
+          {
+            "source_unit_id": "AV_L09",
+            "paragraph_index": [
+              4
+            ]
+          },
+          {
+            "source_unit_id": "AV_L10",
+            "paragraph_index": [
+              5
+            ]
+          },
+          {
+            "source_unit_id": "AV_L11",
+            "paragraph_index": [
+              5
+            ]
+          },
+          {
+            "source_unit_id": "AV_L12",
+            "paragraph_index": [
+              6
+            ]
+          },
+          {
+            "source_unit_id": "AV_L13",
+            "paragraph_index": [
+              6
+            ]
+          },
+          {
+            "source_unit_id": "AV_L14",
+            "paragraph_index": [
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "document": "av.hard.md",
+        "source_unit_map": [
+          {
+            "source_unit_id": "AV_L01",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "AV_L02",
+            "paragraph_index": [
+              1
+            ]
+          },
+          {
+            "source_unit_id": "AV_L03",
+            "paragraph_index": [
+              2
+            ]
+          },
+          {
+            "source_unit_id": "AV_L04",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "AV_L05",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "AV_L06",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "AV_L07",
+            "paragraph_index": [
+              3
+            ]
+          },
+          {
+            "source_unit_id": "AV_L08",
+            "paragraph_index": [
+              4
+            ]
+          },
+          {
+            "source_unit_id": "AV_L09",
+            "paragraph_index": [
+              4
+            ]
+          },
+          {
+            "source_unit_id": "AV_L10",
+            "paragraph_index": [
+              5
+            ]
+          },
+          {
+            "source_unit_id": "AV_L11",
+            "paragraph_index": [
+              5
+            ]
+          },
+          {
+            "source_unit_id": "AV_L12",
+            "paragraph_index": [
+              6
+            ]
+          },
+          {
+            "source_unit_id": "AV_L13",
+            "paragraph_index": [
+              6
+            ]
+          },
+          {
+            "source_unit_id": "AV_L14",
+            "paragraph_index": [
+              7
+            ]
+          }
+        ]
+      }
+    ],
+    "source_documents": [
+      {
+        "document_id": "DOC_GT_AV",
+        "path": "4_researches/text2activity/data/ground-truth/av/av.gold.json",
+        "title": "Autonomous vehicle design canonical planned source",
+        "document_role": "canonical_ground_truth_plan"
+      }
+    ]
+  }
+}

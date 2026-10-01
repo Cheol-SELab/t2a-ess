@@ -1,0 +1,25 @@
+[P1] The high-rise building operation system consists of the disaster prevention center, the building energy management system (BEMS), 2 emergency generators, 24 elevators, and the emergency broadcast system. The BEMS monitors power usage by floor.
+
+[P2] Externally there are KEPCO and the fire station; facility operation is handled by the facility manager, and elevator rescue by the elevator maintenance team.
+
+[P3] At 6:10 p.m., when the external power supply is cut off, the BEMS detects the power outage and automatically starts emergency generator No. 1. The disaster prevention center inquires with KEPCO about the cause of the power outage.
+
+[P4] When emergency generator No. 1 is started, the BEMS switches power so that only emergency loads are supplied, and cuts off general lighting and air conditioning.
+
+[P5] The disaster prevention center queries the status of the 24 elevators and identifies 3 stopped elevators. The disaster prevention center requests rescue from the elevator maintenance team and makes a guidance announcement to the trapped passengers through the emergency broadcast system.
+
+[P6] The elevator maintenance team manually lowers the 3 elevators one after another to the nearest floor, opens the doors, and rescues the passengers. Each time a rescue is finished, the maintenance team reports the result to the disaster prevention center.
+
+[P7] If the load factor of emergency generator No. 1 is 90% or more, the BEMS additionally starts emergency generator No. 2. At 6:40 p.m., when the load factor rises to 92%, the BEMS starts emergency generator No. 2.
+
+[P8] KEPCO replies to the disaster prevention center that a circuit breaker failure at a nearby substation is the cause and that restoration will take about 1 h.
+
+[P9] If the power outage exceeds 1 h 30 min, the facility manager notifies the tenant companies of an advisory to leave work. On this day the power outage ended after 1 h 10 min, so the advisory to leave work was not issued.
+
+[P10] At 7:20 p.m., when external power is restored, the BEMS returns the load to external power and stops the 2 emergency generators.
+
+[P11] The facility manager restarts the 24 elevators one after another, and the disaster prevention center ends the emergency broadcast after confirming that all elevators are operating normally.
+
+[P12] The disaster prevention center compiles the power outage response record and submits it to the fire station.
+
+[P13] The goal of this scenario is to rescue all trapped passengers within 30 min without casualties.

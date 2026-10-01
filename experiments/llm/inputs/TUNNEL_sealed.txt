@@ -1,0 +1,25 @@
+[P1] The expressway tunnel management system consists of the tunnel control room, fire detectors, 12 jet fans, barriers, and an emergency broadcast system. The fire detectors monitor the temperature inside the tunnel.
+
+[P2] Outside are the fire station and the road corporation situation room; the control operator runs the equipment, and the patrol team handles on-site response.
+
+[P3] At 10:05 a.m., a fire detector detects a temperature of 70 °C at the middle point of the tunnel and sends a fire alarm to the tunnel control room. The tunnel control room confirms a vehicle fire through CCTV footage.
+
+[P4] When the fire is confirmed, the control operator lowers the tunnel entrance barrier and makes an evacuation guidance broadcast to drivers inside the tunnel through the emergency broadcast system. The two tasks proceed simultaneously.
+
+[P5] The control operator operates the 12 jet fans in smoke exhaust mode and requests dispatch from the fire station.
+
+[P6] The patrol team attempts initial fire suppression with fire extinguishers. The patrol team reports the suppression status to the control room every 10 min.
+
+[P7] If the smoke spreads to the evacuation passage, the control operator also lowers the opposite exit barrier. On this day, the smoke did not spread to the evacuation passage, so the opposite exit was left open.
+
+[P8] At 10:25 a.m., the fire station completely extinguishes the fire and notifies the control room of extinguishment completion.
+
+[P9] When extinguishment is complete, the control operator switches the jet fans to ventilation mode, and the patrol team tows the accident vehicle.
+
+[P10] When the carbon monoxide concentration inside the tunnel falls below 30 ppm, the control operator raises the entrance barrier and resumes traffic.
+
+[P11] The control operator notifies the road corporation situation room of traffic resumption and ends the emergency broadcast.
+
+[P12] The tunnel control room compiles the incident record and submits it to the road corporation situation room.
+
+[P13] The goal of this scenario is to extinguish the fire within 20 min without casualties.

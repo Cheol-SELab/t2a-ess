@@ -1,0 +1,25 @@
+[P1] The cold-storage logistics center operations system consists of a warehouse management system (WMS), 3 refrigeration units, 40 temperature sensors, a door controller, and an emergency generator. The temperature sensors measure the freezer room temperature every 5 min.
+
+[P2] Externally, there are the refrigeration unit manufacturer's service center and the shipper; facility operation is handled by the facility manager, and inventory management by the logistics manager.
+
+[P3] At 2:00 a.m., when Refrigeration Unit 2 stops due to compressor overheating, the WMS detects the refrigeration unit stop and sends an alarm to the facility manager.
+
+[P4] The facility manager raises the output of Refrigeration Units 1 and 3 to maximum and requests a repair from the refrigeration unit manufacturer's service center.
+
+[P5] When the freezer room temperature rises above -18 °C, the WMS restricts freezer room access through the door controller. At 3:00 a.m., when the freezer room temperature is measured at -17 °C, the WMS restricts freezer room access.
+
+[P6] While access is restricted, the logistics manager moves the cargo scheduled for shipment to the backup freezer room and notifies the shipper of the shipment delay. The two tasks proceed simultaneously.
+
+[P7] When the freezer room temperature rises above -15 °C, the logistics manager delivers the cargo temperature records to the shipper. On this day, the temperature did not rise to -15 °C, so the records were not delivered.
+
+[P8] At 5:00 a.m., the service center replaces the compressor cooling fan and restarts Refrigeration Unit 2.
+
+[P9] When Refrigeration Unit 2 is restarted, the facility manager returns the output of Refrigeration Units 1 and 3 to normal.
+
+[P10] At 6:00 a.m., when the freezer room temperature recovers to -20 °C, the WMS lifts the freezer room access restriction.
+
+[P11] The logistics manager returns the cargo in the backup freezer room to its original locations one after another and resumes shipment.
+
+[P12] The facility manager compiles the failure circumstances and reports them to the shipper.
+
+[P13] The goal of this scenario is to keep the freezer room temperature at -15 °C or less without cargo damage.
